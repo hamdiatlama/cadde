@@ -32,6 +32,7 @@ func NewRouter(cfg *config.Config, pool *pgxpool.Pool, cache *infra.Cache, osrm 
 	orderRepo := postgres.NewOrderRepo(pool)
 	courierRepo := postgres.NewCourierRepo(pool)
 	rideRepo := postgres.NewRideRepo(pool)
+	foodRepo := postgres.NewFoodRepo(pool)
 	supportRepo := postgres.NewSupportRepo(pool)
 
 	authH := handler.NewAuthHandler(userRepo, cfg.JWTSecret)
@@ -39,6 +40,7 @@ func NewRouter(cfg *config.Config, pool *pgxpool.Pool, cache *infra.Cache, osrm 
 	orderH := handler.NewOrderHandler(orderRepo)
 	courierH := handler.NewCourierHandler(courierRepo)
 	rideH := handler.NewRideHandler(rideRepo, osrm)
+	foodH := handler.NewFoodHandler(foodRepo)
 	supportH := handler.NewSupportHandler(supportRepo)
 
 	r.Route("/api/v1", func(r chi.Router) {
@@ -67,6 +69,26 @@ func NewRouter(cfg *config.Config, pool *pgxpool.Pool, cache *infra.Cache, osrm 
 			r.Post("/rides/estimate", rideH.Estimate)
 			r.Post("/rides", rideH.Create)
 			r.Get("/rides/{id}", rideH.Get)
+
+			// Food / Restaurants
+			r.Group(func(r chi.Router) {
+				r.Use(middleware.RequireRole("seller", "admin"))
+				r.Post("/food/restaurants", foodH.RegisterRestaurant)
+				r.Put("/food/restaurants/{rest_id}", foodH.UpdateRestaurant)
+				r.Put("/food/restaurants/{rest_id}/verify", foodH.VerifyRestaurant)
+				r.Post("/food/menu", foodH.CreateMenuItem)
+				r.Put("/food/menu/{item_id}", foodH.UpdateMenuItem)
+				r.Delete("/food/menu/{item_id}", foodH.DeleteMenuItem)
+				r.Post("/food/menu/{item_id}/modifiers", foodH.AddModifier)
+				r.Delete("/food/menu/{item_id}/modifiers/{mod_id}", foodH.DeleteModifier)
+				r.Post("/food/restaurants/{rest_id}/branches", foodH.AddBranch)
+				r.Post("/food/restaurants/{rest_id}/zones", foodH.AddZone)
+			})
+
+			r.Get("/food/restaurants", foodH.ListRestaurants)
+			r.Get("/food/menu/{rest_id}", foodH.GetMenu)
+			r.Get("/food/restaurants/{rest_id}/branches", foodH.ListBranches)
+			r.Get("/food/restaurants/{rest_id}/zones", foodH.ListZones)
 
 			// Support / Tickets
 			r.Post("/tickets", supportH.Create)
