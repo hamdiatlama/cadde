@@ -1,0 +1,97 @@
+{
+  "marka": "Cupra",
+  "modeller": [
+    {
+      "model": "Seat Cordoba WRC",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "SEAT Cordoba WRC Evo2",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Oriol Gómez",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Marc Duez",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Gwyndaf Evans",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Seat Cordoba WRC Evo2",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Marcus Grönholm",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "16",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "20",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "SEAT Córdoba WRC Evo3",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "SEAT Cordoba WRC Evo3",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "21",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "24",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    }
+  ],
+  "kaynak": "https://en.wikipedia.org/wiki/CUPRA"
+}

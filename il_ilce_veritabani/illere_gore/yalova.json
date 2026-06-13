@@ -1,0 +1,25 @@
+{
+  "il_id": 77,
+  "il": "Yalova",
+  "plaka": "77",
+  "ilceler": [
+    {
+      "ilce": "Altınova"
+    },
+    {
+      "ilce": "Armutlu"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Termal"
+    },
+    {
+      "ilce": "Çiftlikköy"
+    },
+    {
+      "ilce": "Çınarcık"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "marka": "BMW (Klasik)",
+  "modeller": [
+    {
+      "model": "2002 Turbo",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1968,
+      "uretim_bitis": 1975
+    },
+    {
+      "model": "E21 3 Serisi",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1975,
+      "uretim_bitis": 1983
+    },
+    {
+      "model": "E30 M3",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1986,
+      "uretim_bitis": 1991
+    },
+    {
+      "model": "E28 M5",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1985,
+      "uretim_bitis": 1988
+    },
+    {
+      "model": "E24 6 Serisi (CS)",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1976,
+      "uretim_bitis": 1989
+    },
+    {
+      "model": "Isetta",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1955,
+      "uretim_bitis": 1962
+    },
+    {
+      "model": "Z8",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 2000,
+      "uretim_bitis": 2003
+    }
+  ],
+  "kaynak": "manuel"
+}

@@ -1,0 +1,168 @@
+{
+  "marka": "Opel",
+  "modeller": [
+    {
+      "model": "Corsa",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 1982
+    },
+    {
+      "model": "Astra",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Hatchback",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 1991
+    },
+    {
+      "model": "Insignia",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Sedan",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2008
+    },
+    {
+      "model": "Mokka",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "Crossland",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Grandland",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Combo",
+      "segment": "V",
+      "kasa_tipleri": [
+        "Van",
+        "MPV"
+      ],
+      "uretim_baslangic": 2011
+    },
+    {
+      "model": "Vivaro",
+      "segment": "V",
+      "kasa_tipleri": [
+        "Van"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Movano",
+      "segment": "V",
+      "kasa_tipleri": [
+        "Van"
+      ],
+      "uretim_baslangic": 2010
+    },
+    {
+      "model": "Zafira",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Adam",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2012,
+      "uretim_bitis": 2019
+    },
+    {
+      "model": "Karl",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2014,
+      "uretim_bitis": 2019
+    },
+    {
+      "model": "Ampera",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2011,
+      "uretim_bitis": 2015
+    },
+    {
+      "model": "Ampera-e",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2017,
+      "uretim_bitis": 2019
+    },
+    {
+      "model": "Cascada",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2013,
+      "uretim_bitis": 2019
+    },
+    {
+      "model": "Meriva",
+      "segment": "B",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2010,
+      "uretim_bitis": 2017
+    },
+    {
+      "model": "Antara",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2006,
+      "uretim_bitis": 2015
+    },
+    {
+      "model": "Frontera",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2024
+    },
+    {
+      "model": "Grandland GSe",
+      "segment": "S",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2022
+    }
+  ],
+  "kaynak": "manuel"
+}

@@ -1,0 +1,48 @@
+{
+  "marka": "Hattat Traktör",
+  "modeller": [
+    {
+      "model": "60 Serisi",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "70 Serisi",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "80 Serisi",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "90 Serisi",
+      "kasa_tipleri": [
+        "Büyük Traktör"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "100 Serisi",
+      "kasa_tipleri": [
+        "Büyük Traktör"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "110 Serisi",
+      "kasa_tipleri": [
+        "Büyük Traktör"
+      ],
+      "uretim_baslangic": 2019
+    }
+  ],
+  "kaynak": "manuel"
+}

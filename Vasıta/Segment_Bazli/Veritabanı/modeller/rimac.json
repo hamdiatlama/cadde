@@ -1,0 +1,23 @@
+{
+  "marka": "Rimac",
+  "modeller": [
+    {
+      "model": "Nevera",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Concept_One",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2013,
+      "uretim_bitis": 2016
+    }
+  ],
+  "kaynak": "manuel"
+}

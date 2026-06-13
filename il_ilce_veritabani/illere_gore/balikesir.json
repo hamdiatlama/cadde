@@ -1,0 +1,67 @@
+{
+  "il_id": 10,
+  "il": "Balıkesir",
+  "plaka": "10",
+  "ilceler": [
+    {
+      "ilce": "Altıeylül"
+    },
+    {
+      "ilce": "Ayvalık"
+    },
+    {
+      "ilce": "Balya"
+    },
+    {
+      "ilce": "Bandırma"
+    },
+    {
+      "ilce": "Bigadiç"
+    },
+    {
+      "ilce": "Burhaniye"
+    },
+    {
+      "ilce": "Dursunbey"
+    },
+    {
+      "ilce": "Edremit"
+    },
+    {
+      "ilce": "Erdek"
+    },
+    {
+      "ilce": "Gömeç"
+    },
+    {
+      "ilce": "Gönen"
+    },
+    {
+      "ilce": "Havran"
+    },
+    {
+      "ilce": "Karesi"
+    },
+    {
+      "ilce": "Kepsut"
+    },
+    {
+      "ilce": "Manyas"
+    },
+    {
+      "ilce": "Marmara"
+    },
+    {
+      "ilce": "Savaştepe"
+    },
+    {
+      "ilce": "Susurluk"
+    },
+    {
+      "ilce": "Sındırgı"
+    },
+    {
+      "ilce": "İvrindi"
+    }
+  ]
+}

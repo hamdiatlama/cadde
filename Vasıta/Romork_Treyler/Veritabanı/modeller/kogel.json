@@ -1,0 +1,55 @@
+{
+  "marka": "Kögel",
+  "modeller": [
+    {
+      "model": "Cool",
+      "kasa_tipleri": [
+        "Soğutmalı Treyler"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Dry",
+      "kasa_tipleri": [
+        "Kapalı Treyler"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Curtain",
+      "kasa_tipleri": [
+        "Perde Treyler"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Mega",
+      "kasa_tipleri": [
+        "Kapalı Treyler"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Flat",
+      "kasa_tipleri": [
+        "Platform"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Container Chassis",
+      "kasa_tipleri": [
+        "Konteyner"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Tank",
+      "kasa_tipleri": [
+        "Tank"
+      ],
+      "uretim_baslangic": 2016
+    }
+  ],
+  "kaynak": "manuel"
+}

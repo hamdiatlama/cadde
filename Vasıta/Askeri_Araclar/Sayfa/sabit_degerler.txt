@@ -1,0 +1,35 @@
+=== Askeri Araçlar SABIT DEGERLER ===
+
+[Araç Tipi]
+- (deger listesi eklenecek)
+
+[Araç Durumu]
+- (deger listesi eklenecek)
+
+[Kimden]
+- (deger listesi eklenecek)
+
+[Renk]
+- (deger listesi eklenecek)
+
+[Garanti Durumu]
+- (deger listesi eklenecek)
+
+[Plaka / Uyruk]
+- (deger listesi eklenecek)
+
+[Döviz Cinsi]
+- (deger listesi eklenecek)
+
+[Yakıt Tipi]
+- (deger listesi eklenecek)
+
+[Vites Tipi]
+- (deger listesi eklenecek)
+
+[Çekiş Düzeni]
+- (deger listesi eklenecek)
+
+[Zırh Seviyesi]
+- (deger listesi eklenecek)
+

@@ -1,0 +1,71 @@
+{
+  "marka": "Bugatti",
+  "modeller": [
+    {
+      "model": "Chiron",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Divo",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "La Voiture Noire",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Centodieci",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Bolide",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Mistral",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Tourbillon",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2024
+    },
+    {
+      "model": "Veyron",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2005,
+      "uretim_bitis": 2015
+    }
+  ],
+  "kaynak": "manuel"
+}

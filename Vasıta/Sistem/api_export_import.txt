@@ -1,0 +1,146 @@
+=== API DİŞA / İÇE AKTARIM (Toplu İlan Yükleme) ===
+
+────────────────────────────────────────
+DESTEKLENEN FORMATLAR
+────────────────────────────────────────
+
+  - CSV (virgül veya noktalı virgül ayraçlı, UTF-8 BOM)
+  - JSON (dizi formatı)
+  - XLSX (Excel 2010+, tek sayfa)
+
+────────────────────────────────────────
+CSV FORMATI (ÖNERİLEN)
+────────────────────────────────────────
+
+1. SATIR: Başlıklar
+2. SATIR+: Veriler
+
+SABİT SÜTUNLAR (tüm tiplerde ortak):
+  tip              : "otomobil" | "suv_crossover" | "mpv" | ...
+  baslik           : ilan başlığı
+  aciklama         : ilan açıklaması
+  marka            : marka adı (Türkçe)
+  model            : model adı
+  yil              : yıl (4 haneli)
+  fiyat            : sayısal (nokta ondalık, bin ayracı yok)
+  doviz            : TRY | USD | EUR | GBP
+  araç_durumu      : 0 | 1  (0=ikinci el, 1=sıfır)
+  kimden           : sahibinden | galeriden
+  il               : il adı
+  ilce             : ilçe adı (isteğe bağlı)
+  telefon          : 05XX XXX XX XX (isteğe bağlı)
+  email            : e-posta (isteğe bağlı)
+  foto_url_1       : fotoğraf URL'si veya base64
+  foto_url_2       : (opsiyonel, maks 20)
+  video_url_1      : video URL'si (opsiyonel)
+  takas            : evet | hayır
+  krediye_uygun    : evet | hayır
+  sigorta          : yok | kasko | trafik | her_ikisi
+
+TİPE ÖZEL SÜTUNLAR:
+
+[otomobil, suv_crossover, mpv, segment_bazli]
+  yakit            : benzin | dizel | lpg | elektrik | hibrit
+  vites            : manuel | otomatik | yarı_otomatik
+  km               : sayısal
+  motor_gucu       : BG cinsinden
+  motor_hacmi      : cc cinsinden (sayısal)
+  cekis            : önden_çekiş | arkadan_itiş | dört_çeker
+  renk             : renk adı
+  kasa_tipi        : sedan | hatchback | suv | coupe | cabrio | station | mpv | pick-up | van
+  garanti          : evet | hayır
+  boya_degisen     : "boyasız" | "boyalı" | "değişenli" | "boyalı+değişenli"
+  plaka_uyruk      : 34 XXX 1234 (plaka)
+  lpg              : evet | hayır
+  koltuk_sayisi    : sayısal
+  kapı_sayisi      : sayısal
+  donanim_paketi   : paket adı
+  ortalama_yakit   : lt/100km
+  vin              : şasi no (isteğe bağlı)
+  emisyon          : euro_0 | euro_1 | euro_2 | euro_3 | euro_4 | euro_5 | euro_6
+
+[motosiklet]
+  motor_hacmi      : cc (sayısal)
+  motor_gucu       : BG
+  vites            : manuel | otomatik
+  cekis            : zincir | kayış | mil
+  renk             :
+  km               : sayısal
+  garanti          : evet | hayır
+  motosiklet_tipi  : sport | naked | adventure | cruiser | scooter | enduro | touring
+  abs              : evet | hayır
+  silindir_sayisi  : 1 | 2 | 3 | 4 | 6
+  sogutma          : hava | sıvı | yağ
+
+[traktor_tarim]
+  motor_gucu       : BG
+  motor_hacmi      : cc
+  cekis            : 2WD | 4WD
+  saat             : çalışma saati (sayısal)
+  kabin            : var | yok
+  kuyruk_mili      : var | yok
+  on_yukleyici     : var | yok
+
+[ticari hafif, ticari_agir, otobus, hafif_ticari_lcv]
+  yakit            :
+  vites            :
+  km               :
+  motor_gucu       :
+  yuk_hacmi        : m³
+  azami_yuk        : kg
+  kasa_tipi        : açık_kasa | kapalı_kasa | perde | soğutmalı | platform
+  dingil_sayisi    : 2 | 3 | 4 | 5
+  fren             : havalı | hidrolik
+
+[is_makineleri]
+  saat             : çalışma saati
+  calisma_agirligi : ton
+  makine_tipi      : ekskavatör | yükleyici | dozer | greyder | silindir | kazıcı_yükleyici
+  kova_kapasitesi  : m³
+  palet_lastik     : palet | lastik
+
+[deniz_araclari]
+  tekne_boyu       : metre
+  tekne_tipi       : motor_yat | yelkenli | sürat | katamaran
+  motor_sayisi     : sayısal
+  motor_gucu       : BG
+  max_hiz          : knot
+  yolcu_sayisi     : sayısal
+
+────────────────────────────────────────
+CSV ÖRNEK DOSYASI (otomobil)
+────────────────────────────────────────
+
+tip;baslik;marka;model;yil;fiyat;doviz;arac_durumu;kimden;il;yakit;vites;km;motor_gucu;motor_hacmi;renk;kasa_tipi;garanti;takas
+otomobil;BMW 3 Serisi 320i M Sport 2020;BMW;3 Serisi;2020;1250000;TRY;0;sahibinden;Bursa;benzin;otomatik;42000;184;1998;beyaz;sedan;hayir;hayir
+otomobil;Mercedes C180 2021 AMG;Mercedes-Benz;C Serisi;2021;1450000;TRY;0;galeriden;İstanbul;dizel;otomatik;35000;160;1598;siyah;sedan;evet;evet
+
+────────────────────────────────────────
+JSON FORMATI
+────────────────────────────────────────
+
+[
+  {
+    "tip": "otomobil",
+    "baslik": "BMW 3 Serisi 320i M Sport 2020",
+    "aciklama": "Hatasız, boyasız, 42.000 km\'de. Bakımları yetkili serviste yapıldı.",
+    "fiyat": 1250000,
+    "doviz": "TRY",
+    "marka": "BMW",
+    "model": "3 Serisi",
+    "yil": 2020,
+    "yakit": "benzin",
+    "vites": "otomatik",
+    "km": 42000,
+    "motor_gucu": 184,
+    "motor_hacmi": 1998,
+    "renk": "beyaz",
+    "kasa_tipi": "sedan",
+    "kimden": "sahibinden",
+    "il": "Bursa",
+    "fotograflar": [
+      "https://.../foto1.jpg",
+      "https://.../foto2.jpg"
+    ]
+  }
+]

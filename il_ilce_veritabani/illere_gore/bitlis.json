@@ -1,0 +1,28 @@
+{
+  "il_id": 13,
+  "il": "Bitlis",
+  "plaka": "13",
+  "ilceler": [
+    {
+      "ilce": "Adilcevaz"
+    },
+    {
+      "ilce": "Ahlat"
+    },
+    {
+      "ilce": "Güroymak"
+    },
+    {
+      "ilce": "Hizan"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Mutki"
+    },
+    {
+      "ilce": "Tatvan"
+    }
+  ]
+}

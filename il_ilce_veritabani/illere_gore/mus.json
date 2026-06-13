@@ -1,0 +1,25 @@
+{
+  "il_id": 49,
+  "il": "Muş",
+  "plaka": "49",
+  "ilceler": [
+    {
+      "ilce": "Bulanık"
+    },
+    {
+      "ilce": "Hasköy"
+    },
+    {
+      "ilce": "Korkut"
+    },
+    {
+      "ilce": "Malazgirt"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Varto"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "marka": "Yamaha Boats",
+  "modeller": [
+    {
+      "model": "190 FSH",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "222 FSH",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "252 X",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "AR 250",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "SR 230",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "SDX 210",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "275 SD",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2022
+    }
+  ],
+  "kaynak": "manuel"
+}

@@ -1,0 +1,62 @@
+{
+  "marka": "Deutz-Fahr",
+  "modeller": [
+    {
+      "model": "5D Serisi",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "6C Serisi",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "7C Serisi",
+      "kasa_tipleri": [
+        "Büyük Traktör"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "8C Serisi",
+      "kasa_tipleri": [
+        "Büyük Traktör"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "9C Serisi",
+      "kasa_tipleri": [
+        "Çok Büyük Traktör"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "6B Serisi",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "5G Serisi",
+      "kasa_tipleri": [
+        "Kompakt Traktör"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Agroplus",
+      "kasa_tipleri": [
+        "Kompakt Traktör"
+      ],
+      "uretim_baslangic": 2014
+    }
+  ],
+  "kaynak": "manuel"
+}

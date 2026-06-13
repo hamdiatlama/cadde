@@ -1,0 +1,55 @@
+{
+  "marka": "Derman Treyler",
+  "modeller": [
+    {
+      "model": "Dorito",
+      "kasa_tipleri": [
+        "Perde Treyler"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Dorise",
+      "kasa_tipleri": [
+        "Perde Treyler"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Dokum",
+      "kasa_tipleri": [
+        "Platform"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Doreks",
+      "kasa_tipleri": [
+        "Perde Treyler"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Doreks Mega",
+      "kasa_tipleri": [
+        "Kapalı Treyler"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Dokum Flat",
+      "kasa_tipleri": [
+        "Platform"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Dokum Step",
+      "kasa_tipleri": [
+        "Platform"
+      ],
+      "uretim_baslangic": 2021
+    }
+  ],
+  "kaynak": "manuel"
+}

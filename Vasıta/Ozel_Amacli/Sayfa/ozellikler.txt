@@ -1,0 +1,30 @@
+Fiyat
+İlan Başlığı
+Konum
+Marka
+Model
+Yıl
+Araç Durumu
+KM
+Araç Tipi (Ambulans/İtfaiye/Zırhlı)
+Yakıt Tipi
+Vites
+Motor Gücü
+Motor Hacmi
+Çekiş
+Renk
+Garanti
+Plaka / Uyruk
+Kimden
+Koltuk Sayısı
+Donanım Paketi
+Dönüşüm / Modifikasyon
+Yetkili Kurum Onayı
+Son Bakım Tarihi
+Video Linki
+İlan Açıklaması
+VIN / Şasi No
+Krediye Uygun
+Sigorta Durumu
+Pazarlık / İndirim
+İlk Tescil Tarihi

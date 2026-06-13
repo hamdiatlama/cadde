@@ -1,0 +1,62 @@
+{
+  "marka": "JCB",
+  "modeller": [
+    {
+      "model": "3CX",
+      "kasa_tipleri": [
+        "Kazıcı Yükleyici"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "4CX",
+      "kasa_tipleri": [
+        "Kazıcı Yükleyici"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "220X",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "JS220",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Hydradig",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "TM320",
+      "kasa_tipleri": [
+        "Yükleyici"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "457",
+      "kasa_tipleri": [
+        "Yükleyici"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Teleskobik 535-125",
+      "kasa_tipleri": [
+        "Teleskobik"
+      ],
+      "uretim_baslangic": 2016
+    }
+  ],
+  "kaynak": "manuel"
+}

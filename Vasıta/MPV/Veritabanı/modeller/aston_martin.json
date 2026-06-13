@@ -1,0 +1,402 @@
+{
+  "marka": "Aston Martin",
+  "modeller": [
+    {
+      "model": "1950",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1953",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1956",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1957",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1958",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1959",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1960",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1962",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Aston Martin DP214",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1974",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Aston Martin DPLM",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "EMKA Aston Martin",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1989",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1931",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "10",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1939",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1952",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1955",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1977",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1982",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1983",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1985",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Aston Martin DBRS9",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Aston Martin V8 Vantage GT2",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Aston Martin DBR1-2(Lola-Aston Martin B09/60)",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2011",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Aston Martin V8 Vantage GTE",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2018",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Aston Martin Vantage DTM",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2021",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2022",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2023",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Aston Martin AMR24",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Aston Martin AMR25",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2026",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2005",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2012",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Aston Martin DP215",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Nimrod NRA/C2",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Nimrod NRA/C2B",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Aston Martin Vantage N24",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Aston Martin Vantage V8 R-GT",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Aston Martin V8 Vantage GT4",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Aston Martin DBR9",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Aston Martin V12 Vantage GT3",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Aston Martin Vantage AMR GT3",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Aston Martin Vantage AMR GT4",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Aston Martin Vantage AMR GT3 Evo",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Aston Martin Vantage AMR GT4 Evo",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Aston Martin Valkyrie AMR-LMH",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "11",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "12",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "15",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "13",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    }
+  ],
+  "kaynak": "https://en.wikipedia.org/wiki/Aston_Martin"
+}

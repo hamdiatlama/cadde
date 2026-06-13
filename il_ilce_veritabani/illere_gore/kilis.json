@@ -1,0 +1,19 @@
+{
+  "il_id": 79,
+  "il": "Kilis",
+  "plaka": "79",
+  "ilceler": [
+    {
+      "ilce": "Elbeyli"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Musabeyli"
+    },
+    {
+      "ilce": "Polateli"
+    }
+  ]
+}

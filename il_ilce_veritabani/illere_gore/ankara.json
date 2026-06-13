@@ -1,0 +1,82 @@
+{
+  "il_id": 6,
+  "il": "Ankara",
+  "plaka": "06",
+  "ilceler": [
+    {
+      "ilce": "Akyurt"
+    },
+    {
+      "ilce": "Altındağ"
+    },
+    {
+      "ilce": "Ayaş"
+    },
+    {
+      "ilce": "Bala"
+    },
+    {
+      "ilce": "Beypazarı"
+    },
+    {
+      "ilce": "Elmadağ"
+    },
+    {
+      "ilce": "Etimesgut"
+    },
+    {
+      "ilce": "Evren"
+    },
+    {
+      "ilce": "Gölbaşı"
+    },
+    {
+      "ilce": "Güdül"
+    },
+    {
+      "ilce": "Haymana"
+    },
+    {
+      "ilce": "Kahramankazan"
+    },
+    {
+      "ilce": "Kalecik"
+    },
+    {
+      "ilce": "Keçiören"
+    },
+    {
+      "ilce": "Kızılcahamam"
+    },
+    {
+      "ilce": "Mamak"
+    },
+    {
+      "ilce": "Nallıhan"
+    },
+    {
+      "ilce": "Polatlı"
+    },
+    {
+      "ilce": "Pursaklar"
+    },
+    {
+      "ilce": "Sincan"
+    },
+    {
+      "ilce": "Yenimahalle"
+    },
+    {
+      "ilce": "Çamlıdere"
+    },
+    {
+      "ilce": "Çankaya"
+    },
+    {
+      "ilce": "Çubuk"
+    },
+    {
+      "ilce": "Şereflikoçhisar"
+    }
+  ]
+}

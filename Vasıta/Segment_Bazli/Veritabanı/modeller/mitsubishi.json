@@ -1,0 +1,103 @@
+{
+  "marka": "Mitsubishi",
+  "modeller": [
+    {
+      "model": "Mirage / Space Star",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "ASX",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2010
+    },
+    {
+      "model": "Eclipse Cross",
+      "segment": "J",
+      "kasa_tipleri": [
+        "Coupe",
+        "SUV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Outlander",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2005
+    },
+    {
+      "model": "Pajero / Montero",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2006,
+      "uretim_bitis": 2021
+    },
+    {
+      "model": "L200",
+      "segment": "P",
+      "kasa_tipleri": [
+        "Pick-up"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Colt",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback",
+        "Sedan"
+      ],
+      "uretim_baslangic": 2002,
+      "uretim_bitis": 2013
+    },
+    {
+      "model": "Lancer",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Sedan",
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2007,
+      "uretim_bitis": 2017
+    },
+    {
+      "model": "Lancer Evo",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2007,
+      "uretim_bitis": 2016
+    },
+    {
+      "model": "i-MiEV",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2009,
+      "uretim_bitis": 2020
+    },
+    {
+      "model": "Grandis",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2003,
+      "uretim_bitis": 2011
+    }
+  ],
+  "kaynak": "manuel"
+}

@@ -1,0 +1,34 @@
+{
+  "marka": "Jayco",
+  "modeller": [
+    {
+      "model": "Alante 27A",
+      "kasa_tipleri": [
+        "Motorhome"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Greyhawk 29MVP",
+      "kasa_tipleri": [
+        "Motorhome"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Jay Flight SLX 7",
+      "kasa_tipleri": [
+        "Çekme Karavan"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "White Hawk 28DS",
+      "kasa_tipleri": [
+        "Çekme Karavan"
+      ],
+      "uretim_baslangic": 2019
+    }
+  ],
+  "kaynak": "manuel"
+}

@@ -1,0 +1,69 @@
+{
+  "marka": "Polaris",
+  "modeller": [
+    {
+      "model": "Sportsman 570",
+      "kasa_tipleri": [
+        "ATV"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Sportsman 850",
+      "kasa_tipleri": [
+        "ATV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Sportsman XP 1000",
+      "kasa_tipleri": [
+        "ATV"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Outlaw 110",
+      "kasa_tipleri": [
+        "ATV"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Ranger 570",
+      "kasa_tipleri": [
+        "UTV"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Ranger XP 1000",
+      "kasa_tipleri": [
+        "UTV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "General XP 1000",
+      "kasa_tipleri": [
+        "UTV"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "RZR XP 1000",
+      "kasa_tipleri": [
+        "UTV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "RZR Pro R",
+      "kasa_tipleri": [
+        "UTV"
+      ],
+      "uretim_baslangic": 2021
+    }
+  ],
+  "kaynak": "manuel"
+}

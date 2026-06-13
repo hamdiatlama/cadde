@@ -1,0 +1,31 @@
+{
+  "il_id": 39,
+  "il": "Kırklareli",
+  "plaka": "39",
+  "ilceler": [
+    {
+      "ilce": "Babaeski"
+    },
+    {
+      "ilce": "Demirköy"
+    },
+    {
+      "ilce": "Kofçaz"
+    },
+    {
+      "ilce": "Lüleburgaz"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Pehlivanköy"
+    },
+    {
+      "ilce": "Pınarhisar"
+    },
+    {
+      "ilce": "Vize"
+    }
+  ]
+}

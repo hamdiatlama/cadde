@@ -1,0 +1,118 @@
+{
+  "marka": "McLaren",
+  "modeller": [
+    {
+      "model": "Artura",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "750S",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe",
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "GT",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Speedtail",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Senna",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "720S",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe",
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "P1",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2013,
+      "uretim_bitis": 2015
+    },
+    {
+      "model": "600LT",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe",
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "570S",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe",
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "540C",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "650S",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe",
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "12C",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe",
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2011
+    },
+    {
+      "model": "F1",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 1992,
+      "uretim_bitis": 1998
+    }
+  ],
+  "kaynak": "manuel"
+}

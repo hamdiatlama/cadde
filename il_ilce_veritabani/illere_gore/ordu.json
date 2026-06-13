@@ -1,0 +1,64 @@
+{
+  "il_id": 52,
+  "il": "Ordu",
+  "plaka": "52",
+  "ilceler": [
+    {
+      "ilce": "Akkuş"
+    },
+    {
+      "ilce": "Altınordu"
+    },
+    {
+      "ilce": "Aybastı"
+    },
+    {
+      "ilce": "Fatsa"
+    },
+    {
+      "ilce": "Gölköy"
+    },
+    {
+      "ilce": "Gülyalı"
+    },
+    {
+      "ilce": "Gürgentepe"
+    },
+    {
+      "ilce": "Kabadüz"
+    },
+    {
+      "ilce": "Kabataş"
+    },
+    {
+      "ilce": "Korgan"
+    },
+    {
+      "ilce": "Kumru"
+    },
+    {
+      "ilce": "Mesudiye"
+    },
+    {
+      "ilce": "Perşembe"
+    },
+    {
+      "ilce": "Ulubey"
+    },
+    {
+      "ilce": "Çamaş"
+    },
+    {
+      "ilce": "Çatalpınar"
+    },
+    {
+      "ilce": "Çaybaşı"
+    },
+    {
+      "ilce": "Ünye"
+    },
+    {
+      "ilce": "İkizce"
+    }
+  ]
+}

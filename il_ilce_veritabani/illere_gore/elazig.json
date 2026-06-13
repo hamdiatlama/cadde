@@ -1,0 +1,40 @@
+{
+  "il_id": 23,
+  "il": "Elazığ",
+  "plaka": "23",
+  "ilceler": [
+    {
+      "ilce": "Alacakaya"
+    },
+    {
+      "ilce": "Arıcak"
+    },
+    {
+      "ilce": "Ağın"
+    },
+    {
+      "ilce": "Baskil"
+    },
+    {
+      "ilce": "Karakoçan"
+    },
+    {
+      "ilce": "Keban"
+    },
+    {
+      "ilce": "Kovancılar"
+    },
+    {
+      "ilce": "Maden"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Palu"
+    },
+    {
+      "ilce": "Sivrice"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "marka": "Volvo CE",
+  "modeller": [
+    {
+      "model": "EC220E",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "EC350E",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "L120H",
+      "kasa_tipleri": [
+        "Yükleyici"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "L150H",
+      "kasa_tipleri": [
+        "Yükleyici"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "L260H",
+      "kasa_tipleri": [
+        "Yükleyici"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "A40G",
+      "kasa_tipleri": [
+        "Damperli Kamyon"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "A60H",
+      "kasa_tipleri": [
+        "Damperli Kamyon"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "G940",
+      "kasa_tipleri": [
+        "Greyder"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "SD115",
+      "kasa_tipleri": [
+        "Silindir"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "ECR145EL",
+      "kasa_tipleri": [
+        "Mini Ekskavatör"
+      ],
+      "uretim_baslangic": 2018
+    }
+  ],
+  "kaynak": "manuel"
+}

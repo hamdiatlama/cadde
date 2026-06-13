@@ -1,0 +1,40 @@
+Fiyat
+İlan Başlığı
+Konum
+Marka
+Seri
+Model
+Yıl
+Yakıt Tipi
+Vites
+Araç Durumu
+KM
+Otobüs Tipi (Şehir İçi/Şehirlerarası/Tur)
+Motor Gücü
+Motor Hacmi
+Çekiş
+Renk
+Garanti
+Plaka / Uyruk
+Kimden
+Koltuk Sayısı
+Yataklı / Yataksız
+Tuvalet Var mı?
+Mutfak Var mı?
+Klima
+TV / Multimedia Sistemi
+Yolcu Bilgilendirme Sistemi
+Kamera Sistemi
+Engelli Rampa
+Bagaj Hacmi
+Yakıt Deposu
+Son Bakım Tarihi
+Muayene Tarihi
+Video Linki
+İlan Açıklaması
+VIN / Şasi No
+Emisyon Sınıfı
+Krediye Uygun
+Sigorta Durumu
+Pazarlık / İndirim
+İlk Tescil Tarihi

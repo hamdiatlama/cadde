@@ -1,0 +1,83 @@
+{
+  "marka": "SEAT",
+  "modeller": [
+    {
+      "model": "Ibiza",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Leon",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Hatchback",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "Arona",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Ateca",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Tarraco",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Alhambra",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2010,
+      "uretim_bitis": 2020
+    },
+    {
+      "model": "Mii",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2011,
+      "uretim_bitis": 2020
+    },
+    {
+      "model": "Toledo",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2012,
+      "uretim_bitis": 2019
+    },
+    {
+      "model": "Altea",
+      "segment": "C",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2004,
+      "uretim_bitis": 2015
+    }
+  ],
+  "kaynak": "manuel"
+}

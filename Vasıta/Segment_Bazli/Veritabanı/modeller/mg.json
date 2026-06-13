@@ -1,0 +1,86 @@
+{
+  "marka": "MG",
+  "modeller": [
+    {
+      "model": "MG3",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2024
+    },
+    {
+      "model": "MG4",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "MG5",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "MG6",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "MG ZS",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "MG HS",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "MG EHS",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "MG Marvel R",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "MG Cyberster",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "MG One",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2021
+    }
+  ],
+  "kaynak": "manuel"
+}

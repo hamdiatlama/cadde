@@ -1,0 +1,54 @@
+{
+  "marka": "Ferrari (Klasik)",
+  "modeller": [
+    {
+      "model": "250 GT Berlinetta",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1957,
+      "uretim_bitis": 1960
+    },
+    {
+      "model": "250 GTO",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1962,
+      "uretim_bitis": 1964
+    },
+    {
+      "model": "Dino 246 GT",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1969,
+      "uretim_bitis": 1974
+    },
+    {
+      "model": "Testarossa",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1984,
+      "uretim_bitis": 1996
+    },
+    {
+      "model": "F40",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1987,
+      "uretim_bitis": 1992
+    },
+    {
+      "model": "288 GTO",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1984,
+      "uretim_bitis": 1987
+    }
+  ],
+  "kaynak": "manuel"
+}

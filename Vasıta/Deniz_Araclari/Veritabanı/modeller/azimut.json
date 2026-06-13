@@ -1,0 +1,83 @@
+{
+  "marka": "Azimut",
+  "modeller": [
+    {
+      "model": "Magellano 25 Metri",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Magellano 66",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Azimut 50",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Azimut 60",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Azimut 68",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Azimut 78",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Fly 62",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Fly 72",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "S7",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "S10",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "Verve 48",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2018
+    }
+  ],
+  "kaynak": "manuel"
+}

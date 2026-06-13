@@ -1,0 +1,90 @@
+{
+  "marka": "Mini",
+  "modeller": [
+    {
+      "model": "Cooper",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Cooper S",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Clubman",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Countryman",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Convertible",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "John Cooper Works",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Aceman",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2024
+    },
+    {
+      "model": "Paceman",
+      "segment": "J",
+      "kasa_tipleri": [
+        "Coupe",
+        "SUV"
+      ],
+      "uretim_baslangic": 2012,
+      "uretim_bitis": 2016
+    },
+    {
+      "model": "Coupe",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2011,
+      "uretim_bitis": 2015
+    },
+    {
+      "model": "Roadster",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2012,
+      "uretim_bitis": 2015
+    }
+  ],
+  "kaynak": "manuel"
+}

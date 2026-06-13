@@ -1,0 +1,31 @@
+{
+  "il_id": 4,
+  "il": "Ağrı",
+  "plaka": "04",
+  "ilceler": [
+    {
+      "ilce": "Diyadin"
+    },
+    {
+      "ilce": "Doğubayazıt"
+    },
+    {
+      "ilce": "Eleşkirt"
+    },
+    {
+      "ilce": "Hamur"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Patnos"
+    },
+    {
+      "ilce": "Taşlıçay"
+    },
+    {
+      "ilce": "Tutak"
+    }
+  ]
+}

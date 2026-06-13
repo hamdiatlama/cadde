@@ -1,0 +1,134 @@
+{
+  "marka": "BMW Motorrad",
+  "modeller": [
+    {
+      "model": "S1000RR",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "M1000R",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "M1000RR",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "R1300GS",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "R1250GS",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2019,
+      "uretim_bitis": 2023
+    },
+    {
+      "model": "R1250GS Adventure",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "R1250RT",
+      "kasa_tipleri": [
+        "Turizm"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "R1200GS",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2013,
+      "uretim_bitis": 2018
+    },
+    {
+      "model": "F900R",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "F900XR",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "F850GS",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "F850GS Adventure",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "F750GS",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "G310R",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "G310GS",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "K1600GTL",
+      "kasa_tipleri": [
+        "Turizm"
+      ],
+      "uretim_baslangic": 2011
+    },
+    {
+      "model": "K1600B",
+      "kasa_tipleri": [
+        "Turizm"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "CE 04",
+      "kasa_tipleri": [
+        "Elektrikli Scooter"
+      ],
+      "uretim_baslangic": 2022
+    }
+  ],
+  "kaynak": "manuel"
+}

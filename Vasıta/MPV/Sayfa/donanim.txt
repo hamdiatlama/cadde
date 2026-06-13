@@ -1,0 +1,22 @@
+[Güvenlik]
+
+[İç Donanım]
+
+[Dış Donanım]
+
+[Multimedya]
+
+[Performans & Motor]
+
+[Ölçüler & Ağırlık]
+
+[Lastik & Jant]
+
+[Bakım & Geçmiş]
+
+[İklimlendirme]
+
+[Koltuk Düzeni]
+
+[Çocuk Donanımı]
+

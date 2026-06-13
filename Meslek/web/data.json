@@ -1,0 +1,5782 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Sağlık ve Tıp",
+      "emoji": "🏥",
+      "sort_order": 1
+    },
+    {
+      "id": 2,
+      "name": "Mühendislik ve Teknik",
+      "emoji": "🏗️",
+      "sort_order": 2
+    },
+    {
+      "id": 3,
+      "name": "Bilişim ve Teknoloji",
+      "emoji": "💻",
+      "sort_order": 3
+    },
+    {
+      "id": 4,
+      "name": "Eğitim ve Akademi",
+      "emoji": "📚",
+      "sort_order": 4
+    },
+    {
+      "id": 5,
+      "name": "Hukuk ve Adalet",
+      "emoji": "⚖️",
+      "sort_order": 5
+    },
+    {
+      "id": 6,
+      "name": "İş ve Finans",
+      "emoji": "💰",
+      "sort_order": 6
+    },
+    {
+      "id": 7,
+      "name": "Sanat, Medya ve Eğlence",
+      "emoji": "🎨",
+      "sort_order": 7
+    },
+    {
+      "id": 8,
+      "name": "Sanayi ve Üretim",
+      "emoji": "🏭",
+      "sort_order": 8
+    },
+    {
+      "id": 9,
+      "name": "Tarım ve Hayvancılık",
+      "emoji": "🌾",
+      "sort_order": 9
+    },
+    {
+      "id": 10,
+      "name": "Gıda ve İçecek",
+      "emoji": "🍽️",
+      "sort_order": 10
+    },
+    {
+      "id": 11,
+      "name": "Ulaşım ve Lojistik",
+      "emoji": "🚚",
+      "sort_order": 11
+    },
+    {
+      "id": 12,
+      "name": "Kamu ve Yönetim",
+      "emoji": "🏛️",
+      "sort_order": 12
+    },
+    {
+      "id": 13,
+      "name": "Perakende ve Satış",
+      "emoji": "🛍️",
+      "sort_order": 13
+    },
+    {
+      "id": 14,
+      "name": "İnşaat ve Yapı",
+      "emoji": "🏗️",
+      "sort_order": 14
+    },
+    {
+      "id": 15,
+      "name": "Hizmet ve Bakım",
+      "emoji": "🧹",
+      "sort_order": 15
+    },
+    {
+      "id": 16,
+      "name": "Danışmanlık ve Profesyonel Hizmetler",
+      "emoji": "💼",
+      "sort_order": 16
+    }
+  ],
+  "professions": [
+    {
+      "id": 1,
+      "name": "Aile hekimi",
+      "category_id": 1
+    },
+    {
+      "id": 2,
+      "name": "Çocuk doktoru",
+      "category_id": 1
+    },
+    {
+      "id": 3,
+      "name": "Göz doktoru",
+      "category_id": 1
+    },
+    {
+      "id": 4,
+      "name": "Ürolog",
+      "category_id": 1
+    },
+    {
+      "id": 5,
+      "name": "Kardiyolog",
+      "category_id": 1
+    },
+    {
+      "id": 6,
+      "name": "Jinekolog",
+      "category_id": 1
+    },
+    {
+      "id": 7,
+      "name": "Nörolog",
+      "category_id": 1
+    },
+    {
+      "id": 8,
+      "name": "Endokrinolog",
+      "category_id": 1
+    },
+    {
+      "id": 9,
+      "name": "Hematolojist",
+      "category_id": 1
+    },
+    {
+      "id": 10,
+      "name": "Göğüs hastalıkları uzmanı",
+      "category_id": 1
+    },
+    {
+      "id": 11,
+      "name": "Patolog",
+      "category_id": 1
+    },
+    {
+      "id": 12,
+      "name": "Radyolog",
+      "category_id": 1
+    },
+    {
+      "id": 13,
+      "name": "Psikiyatr",
+      "category_id": 1
+    },
+    {
+      "id": 14,
+      "name": "Dermatolog",
+      "category_id": 1
+    },
+    {
+      "id": 15,
+      "name": "Ortopedist",
+      "category_id": 1
+    },
+    {
+      "id": 16,
+      "name": "Fizik tedavi uzmanı",
+      "category_id": 1
+    },
+    {
+      "id": 17,
+      "name": "Cerrah",
+      "category_id": 1
+    },
+    {
+      "id": 18,
+      "name": "Anestezi uzmanı",
+      "category_id": 1
+    },
+    {
+      "id": 19,
+      "name": "Diş hekimi",
+      "category_id": 1
+    },
+    {
+      "id": 20,
+      "name": "Diş teknisyeni",
+      "category_id": 1
+    },
+    {
+      "id": 21,
+      "name": "Veteriner hekim",
+      "category_id": 1
+    },
+    {
+      "id": 22,
+      "name": "Veteriner sağlık teknisyeni",
+      "category_id": 1
+    },
+    {
+      "id": 23,
+      "name": "Hemşire",
+      "category_id": 1
+    },
+    {
+      "id": 24,
+      "name": "Ebe",
+      "category_id": 1
+    },
+    {
+      "id": 25,
+      "name": "Acil tıp teknisyeni",
+      "category_id": 1
+    },
+    {
+      "id": 26,
+      "name": "Paramedik",
+      "category_id": 1
+    },
+    {
+      "id": 27,
+      "name": "Anestezi teknikeri",
+      "category_id": 1
+    },
+    {
+      "id": 28,
+      "name": "Radyoloji teknisyeni",
+      "category_id": 1
+    },
+    {
+      "id": 29,
+      "name": "Laborant",
+      "category_id": 1
+    },
+    {
+      "id": 30,
+      "name": "Dil ve Konuşma Terapisti",
+      "category_id": 1
+    },
+    {
+      "id": 31,
+      "name": "Fizyoterapist",
+      "category_id": 1
+    },
+    {
+      "id": 32,
+      "name": "İş ve Uğraşı Terapisti",
+      "category_id": 1
+    },
+    {
+      "id": 33,
+      "name": "Odyolog",
+      "category_id": 1
+    },
+    {
+      "id": 34,
+      "name": "Diyetisyen",
+      "category_id": 1
+    },
+    {
+      "id": 35,
+      "name": "Optometrist",
+      "category_id": 1
+    },
+    {
+      "id": 36,
+      "name": "Psikolog",
+      "category_id": 1
+    },
+    {
+      "id": 37,
+      "name": "Psikolojik danışman",
+      "category_id": 1
+    },
+    {
+      "id": 38,
+      "name": "İç Hastalıkları Uzmanı",
+      "category_id": 1
+    },
+    {
+      "id": 39,
+      "name": "Enfeksiyon Hastalıkları Uzmanı",
+      "category_id": 1
+    },
+    {
+      "id": 40,
+      "name": "Onkolog",
+      "category_id": 1
+    },
+    {
+      "id": 41,
+      "name": "Spor Hekimi",
+      "category_id": 1
+    },
+    {
+      "id": 42,
+      "name": "Nükleer Tıp Uzmanı",
+      "category_id": 1
+    },
+    {
+      "id": 43,
+      "name": "Adli Tıp Uzmanı",
+      "category_id": 1
+    },
+    {
+      "id": 44,
+      "name": "Genetik Uzmanı",
+      "category_id": 1
+    },
+    {
+      "id": 45,
+      "name": "Halk Sağlığı Uzmanı",
+      "category_id": 1
+    },
+    {
+      "id": 46,
+      "name": "Acil Tıp Uzmanı",
+      "category_id": 1
+    },
+    {
+      "id": 47,
+      "name": "Beyin Cerrahı",
+      "category_id": 1
+    },
+    {
+      "id": 48,
+      "name": "Kalp ve Damar Cerrahı",
+      "category_id": 1
+    },
+    {
+      "id": 49,
+      "name": "Plastik Cerrah",
+      "category_id": 1
+    },
+    {
+      "id": 50,
+      "name": "Çocuk Cerrahı",
+      "category_id": 1
+    },
+    {
+      "id": 51,
+      "name": "Eczacı",
+      "category_id": 1
+    },
+    {
+      "id": 52,
+      "name": "Eczane Teknisyeni",
+      "category_id": 1
+    },
+    {
+      "id": 53,
+      "name": "Biyomedikal Mühendisi",
+      "category_id": 1
+    },
+    {
+      "id": 54,
+      "name": "Perfüzyonist",
+      "category_id": 1
+    },
+    {
+      "id": 55,
+      "name": "Ameliyathane Teknikeri",
+      "category_id": 1
+    },
+    {
+      "id": 56,
+      "name": "Podolog",
+      "category_id": 1
+    },
+    {
+      "id": 57,
+      "name": "Sağlık Yöneticisi",
+      "category_id": 1
+    },
+    {
+      "id": 58,
+      "name": "Tıbbi Sekreter",
+      "category_id": 1
+    },
+    {
+      "id": 59,
+      "name": "Evde Bakım Hemşiresi",
+      "category_id": 1
+    },
+    {
+      "id": 60,
+      "name": "İnşaat mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 61,
+      "name": "Makine mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 62,
+      "name": "Elektrik mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 63,
+      "name": "Elektronik mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 64,
+      "name": "Bilgisayar mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 65,
+      "name": "Yazılım mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 66,
+      "name": "Kimya mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 67,
+      "name": "Gıda mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 68,
+      "name": "Çevre mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 69,
+      "name": "Endüstri mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 70,
+      "name": "Endüstri sistemleri mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 71,
+      "name": "İşletme mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 72,
+      "name": "Harita mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 73,
+      "name": "Jeoloji mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 74,
+      "name": "Jeofizik mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 75,
+      "name": "Metalurji mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 76,
+      "name": "Maden mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 77,
+      "name": "Havacılık ve Uzay mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 78,
+      "name": "Uzay mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 79,
+      "name": "Biyomedikal Mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 80,
+      "name": "Nanoteknoloji mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 81,
+      "name": "Genetik mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 82,
+      "name": "Elektrik-Elektronik mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 83,
+      "name": "Elektronik ve Haberleşme mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 84,
+      "name": "İç mimar",
+      "category_id": 2
+    },
+    {
+      "id": 85,
+      "name": "Peyzaj mimarı",
+      "category_id": 2
+    },
+    {
+      "id": 86,
+      "name": "Mimar",
+      "category_id": 2
+    },
+    {
+      "id": 87,
+      "name": "Tekniker",
+      "category_id": 2
+    },
+    {
+      "id": 88,
+      "name": "Teknisyen",
+      "category_id": 2
+    },
+    {
+      "id": 89,
+      "name": "Test mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 90,
+      "name": "Kalite kontrol mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 91,
+      "name": "Sistem mühendisi",
+      "category_id": 2
+    },
+    {
+      "id": 92,
+      "name": "Bilgisayar programcısı",
+      "category_id": 3
+    },
+    {
+      "id": 93,
+      "name": "Yazılım geliştirici",
+      "category_id": 3
+    },
+    {
+      "id": 94,
+      "name": "Veri bilimcisi / analisti",
+      "category_id": 3
+    },
+    {
+      "id": 95,
+      "name": "Veritabanı yöneticisi",
+      "category_id": 3
+    },
+    {
+      "id": 96,
+      "name": "Sistem yöneticisi",
+      "category_id": 3
+    },
+    {
+      "id": 97,
+      "name": "Ağ yöneticisi",
+      "category_id": 3
+    },
+    {
+      "id": 98,
+      "name": "Siber güvenlik uzmanı",
+      "category_id": 3
+    },
+    {
+      "id": 99,
+      "name": "Yapay zeka uzmanı",
+      "category_id": 3
+    },
+    {
+      "id": 100,
+      "name": "UX tasarımcısı",
+      "category_id": 3
+    },
+    {
+      "id": 101,
+      "name": "Web geliştirici",
+      "category_id": 3
+    },
+    {
+      "id": 102,
+      "name": "Mobil uygulama geliştirici",
+      "category_id": 3
+    },
+    {
+      "id": 103,
+      "name": "Bilgi işlemci",
+      "category_id": 3
+    },
+    {
+      "id": 104,
+      "name": "Veri hazırlama ve kontrol işletmeni",
+      "category_id": 3
+    },
+    {
+      "id": 105,
+      "name": "Uydu antenci",
+      "category_id": 3
+    },
+    {
+      "id": 106,
+      "name": "Telefon operatörü",
+      "category_id": 3
+    },
+    {
+      "id": 107,
+      "name": "Bilgisayar tamircisi",
+      "category_id": 3
+    },
+    {
+      "id": 108,
+      "name": "Telekomünikasyon uzmanı",
+      "category_id": 3
+    },
+    {
+      "id": 109,
+      "name": "IT danışmanı",
+      "category_id": 3
+    },
+    {
+      "id": 110,
+      "name": "Bulut mimarı",
+      "category_id": 3
+    },
+    {
+      "id": 111,
+      "name": "DevOps mühendisi",
+      "category_id": 3
+    },
+    {
+      "id": 112,
+      "name": "Öğretmen",
+      "category_id": 4
+    },
+    {
+      "id": 113,
+      "name": "Akademisyen",
+      "category_id": 4
+    },
+    {
+      "id": 114,
+      "name": "Profesör",
+      "category_id": 4
+    },
+    {
+      "id": 115,
+      "name": "Okutman",
+      "category_id": 4
+    },
+    {
+      "id": 116,
+      "name": "Araştırmacı",
+      "category_id": 4
+    },
+    {
+      "id": 117,
+      "name": "Bilim insanı",
+      "category_id": 4
+    },
+    {
+      "id": 118,
+      "name": "Eğitimci",
+      "category_id": 4
+    },
+    {
+      "id": 119,
+      "name": "Eğitmen",
+      "category_id": 4
+    },
+    {
+      "id": 120,
+      "name": "Okul müdürü",
+      "category_id": 4
+    },
+    {
+      "id": 121,
+      "name": "Rehber öğretmen",
+      "category_id": 4
+    },
+    {
+      "id": 122,
+      "name": "Özel eğitim öğretmeni",
+      "category_id": 4
+    },
+    {
+      "id": 123,
+      "name": "Kütüphaneci",
+      "category_id": 4
+    },
+    {
+      "id": 124,
+      "name": "Arşivci",
+      "category_id": 4
+    },
+    {
+      "id": 125,
+      "name": "Antropolog",
+      "category_id": 4
+    },
+    {
+      "id": 126,
+      "name": "Sosyolog",
+      "category_id": 4
+    },
+    {
+      "id": 127,
+      "name": "Psikolog",
+      "category_id": 4
+    },
+    {
+      "id": 128,
+      "name": "Filozof",
+      "category_id": 4
+    },
+    {
+      "id": 129,
+      "name": "Tarihçi",
+      "category_id": 4
+    },
+    {
+      "id": 130,
+      "name": "Coğrafyacı",
+      "category_id": 4
+    },
+    {
+      "id": 131,
+      "name": "Matematikçi",
+      "category_id": 4
+    },
+    {
+      "id": 132,
+      "name": "Fizikçi",
+      "category_id": 4
+    },
+    {
+      "id": 133,
+      "name": "Kimyager",
+      "category_id": 4
+    },
+    {
+      "id": 134,
+      "name": "Biyolog",
+      "category_id": 4
+    },
+    {
+      "id": 135,
+      "name": "Astronom",
+      "category_id": 4
+    },
+    {
+      "id": 136,
+      "name": "Astrofizikçi",
+      "category_id": 4
+    },
+    {
+      "id": 137,
+      "name": "Jeolog",
+      "category_id": 4
+    },
+    {
+      "id": 138,
+      "name": "Meteoroloji uzmanı",
+      "category_id": 4
+    },
+    {
+      "id": 139,
+      "name": "Klimatolog",
+      "category_id": 4
+    },
+    {
+      "id": 140,
+      "name": "Botanikçi",
+      "category_id": 4
+    },
+    {
+      "id": 141,
+      "name": "Zoolog",
+      "category_id": 4
+    },
+    {
+      "id": 142,
+      "name": "Mikrobiyolog",
+      "category_id": 4
+    },
+    {
+      "id": 143,
+      "name": "Genetikçi",
+      "category_id": 4
+    },
+    {
+      "id": 144,
+      "name": "Etimolog",
+      "category_id": 4
+    },
+    {
+      "id": 145,
+      "name": "Etnolog",
+      "category_id": 4
+    },
+    {
+      "id": 146,
+      "name": "Etolojist",
+      "category_id": 4
+    },
+    {
+      "id": 147,
+      "name": "Arkeolog",
+      "category_id": 4
+    },
+    {
+      "id": 148,
+      "name": "Halkbilimci",
+      "category_id": 4
+    },
+    {
+      "id": 149,
+      "name": "Edebiyatçı",
+      "category_id": 4
+    },
+    {
+      "id": 150,
+      "name": "Dilci",
+      "category_id": 4
+    },
+    {
+      "id": 151,
+      "name": "Gramer uzmanı",
+      "category_id": 4
+    },
+    {
+      "id": 152,
+      "name": "Avukat",
+      "category_id": 5
+    },
+    {
+      "id": 153,
+      "name": "Hakim",
+      "category_id": 5
+    },
+    {
+      "id": 154,
+      "name": "Savcı",
+      "category_id": 5
+    },
+    {
+      "id": 155,
+      "name": "Arabulucu",
+      "category_id": 5
+    },
+    {
+      "id": 156,
+      "name": "Noter",
+      "category_id": 5
+    },
+    {
+      "id": 157,
+      "name": "Hukukçu",
+      "category_id": 5
+    },
+    {
+      "id": 158,
+      "name": "Adli tabip",
+      "category_id": 5
+    },
+    {
+      "id": 159,
+      "name": "Adli tıp uzmanı",
+      "category_id": 5
+    },
+    {
+      "id": 160,
+      "name": "İcra memuru",
+      "category_id": 5
+    },
+    {
+      "id": 161,
+      "name": "Sorgu hâkimi",
+      "category_id": 5
+    },
+    {
+      "id": 162,
+      "name": "Sulh hâkimi",
+      "category_id": 5
+    },
+    {
+      "id": 163,
+      "name": "Yargıç",
+      "category_id": 5
+    },
+    {
+      "id": 164,
+      "name": "Bilirkişi",
+      "category_id": 5
+    },
+    {
+      "id": 165,
+      "name": "Hukuk danışmanı",
+      "category_id": 5
+    },
+    {
+      "id": 166,
+      "name": "İnsan hakları uzmanı",
+      "category_id": 5
+    },
+    {
+      "id": 167,
+      "name": "Vergi müfettişi",
+      "category_id": 5
+    },
+    {
+      "id": 168,
+      "name": "Vergi denetmeni",
+      "category_id": 5
+    },
+    {
+      "id": 169,
+      "name": "Bankacı",
+      "category_id": 6
+    },
+    {
+      "id": 170,
+      "name": "Banker",
+      "category_id": 6
+    },
+    {
+      "id": 171,
+      "name": "Finansör",
+      "category_id": 6
+    },
+    {
+      "id": 172,
+      "name": "Borsacı",
+      "category_id": 6
+    },
+    {
+      "id": 173,
+      "name": "Sigortacı",
+      "category_id": 6
+    },
+    {
+      "id": 174,
+      "name": "Muhasebeci",
+      "category_id": 6
+    },
+    {
+      "id": 175,
+      "name": "Serbest muhasebeci mali müşavir",
+      "category_id": 6
+    },
+    {
+      "id": 176,
+      "name": "Yeminli mali müşavir",
+      "category_id": 6
+    },
+    {
+      "id": 177,
+      "name": "Ekonomist",
+      "category_id": 6
+    },
+    {
+      "id": 178,
+      "name": "İktisatçı",
+      "category_id": 6
+    },
+    {
+      "id": 179,
+      "name": "Mali hizmetler uzmanı",
+      "category_id": 6
+    },
+    {
+      "id": 180,
+      "name": "Gelir uzmanı",
+      "category_id": 6
+    },
+    {
+      "id": 181,
+      "name": "Gelir uzman yardımcısı",
+      "category_id": 6
+    },
+    {
+      "id": 182,
+      "name": "Bütçe uzmanı",
+      "category_id": 6
+    },
+    {
+      "id": 183,
+      "name": "Fon yöneticisi",
+      "category_id": 6
+    },
+    {
+      "id": 184,
+      "name": "Yatırım uzmanı",
+      "category_id": 6
+    },
+    {
+      "id": 185,
+      "name": "Portföy yöneticisi",
+      "category_id": 6
+    },
+    {
+      "id": 186,
+      "name": "Risk analisti",
+      "category_id": 6
+    },
+    {
+      "id": 187,
+      "name": "Vergi danışmanı",
+      "category_id": 6
+    },
+    {
+      "id": 188,
+      "name": "Denetçi",
+      "category_id": 6
+    },
+    {
+      "id": 189,
+      "name": "İç denetçi",
+      "category_id": 6
+    },
+    {
+      "id": 190,
+      "name": "Mali müşavir",
+      "category_id": 6
+    },
+    {
+      "id": 191,
+      "name": "Broker",
+      "category_id": 6
+    },
+    {
+      "id": 192,
+      "name": "Dövizci",
+      "category_id": 6
+    },
+    {
+      "id": 193,
+      "name": "Sarraf",
+      "category_id": 6
+    },
+    {
+      "id": 194,
+      "name": "Ressam",
+      "category_id": 7
+    },
+    {
+      "id": 195,
+      "name": "Heykeltıraş",
+      "category_id": 7
+    },
+    {
+      "id": 196,
+      "name": "Müzisyen",
+      "category_id": 7
+    },
+    {
+      "id": 197,
+      "name": "Şarkıcı",
+      "category_id": 7
+    },
+    {
+      "id": 198,
+      "name": "Besteci",
+      "category_id": 7
+    },
+    {
+      "id": 199,
+      "name": "Şarkı sözü yazarı",
+      "category_id": 7
+    },
+    {
+      "id": 200,
+      "name": "Dansçı",
+      "category_id": 7
+    },
+    {
+      "id": 201,
+      "name": "Koreograf",
+      "category_id": 7
+    },
+    {
+      "id": 202,
+      "name": "Oyuncu",
+      "category_id": 7
+    },
+    {
+      "id": 203,
+      "name": "Aktör",
+      "category_id": 7
+    },
+    {
+      "id": 204,
+      "name": "Aktris",
+      "category_id": 7
+    },
+    {
+      "id": 205,
+      "name": "Film yönetmeni",
+      "category_id": 7
+    },
+    {
+      "id": 206,
+      "name": "Tiyatro yönetmeni",
+      "category_id": 7
+    },
+    {
+      "id": 207,
+      "name": "Senarist",
+      "category_id": 7
+    },
+    {
+      "id": 208,
+      "name": "Yazar",
+      "category_id": 7
+    },
+    {
+      "id": 209,
+      "name": "Şair",
+      "category_id": 7
+    },
+    {
+      "id": 210,
+      "name": "Gazeteci",
+      "category_id": 7
+    },
+    {
+      "id": 211,
+      "name": "Muhabir",
+      "category_id": 7
+    },
+    {
+      "id": 212,
+      "name": "Radyocu",
+      "category_id": 7
+    },
+    {
+      "id": 213,
+      "name": "Spiker",
+      "category_id": 7
+    },
+    {
+      "id": 214,
+      "name": "Sunucu",
+      "category_id": 7
+    },
+    {
+      "id": 215,
+      "name": "Fotoğrafçı",
+      "category_id": 7
+    },
+    {
+      "id": 216,
+      "name": "Kameraman",
+      "category_id": 7
+    },
+    {
+      "id": 217,
+      "name": "Video editörü",
+      "category_id": 7
+    },
+    {
+      "id": 218,
+      "name": "Ses teknisyeni",
+      "category_id": 7
+    },
+    {
+      "id": 219,
+      "name": "Grafik tasarımcısı",
+      "category_id": 7
+    },
+    {
+      "id": 220,
+      "name": "İllüstratör",
+      "category_id": 7
+    },
+    {
+      "id": 221,
+      "name": "Animatör",
+      "category_id": 7
+    },
+    {
+      "id": 222,
+      "name": "Karikatürist",
+      "category_id": 7
+    },
+    {
+      "id": 223,
+      "name": "Modacı",
+      "category_id": 7
+    },
+    {
+      "id": 224,
+      "name": "Stilist",
+      "category_id": 7
+    },
+    {
+      "id": 225,
+      "name": "Manken",
+      "category_id": 7
+    },
+    {
+      "id": 226,
+      "name": "Sanat yönetmeni",
+      "category_id": 7
+    },
+    {
+      "id": 227,
+      "name": "İçerik üretici",
+      "category_id": 7
+    },
+    {
+      "id": 228,
+      "name": "Influencer",
+      "category_id": 7
+    },
+    {
+      "id": 229,
+      "name": "Youtuber",
+      "category_id": 7
+    },
+    {
+      "id": 230,
+      "name": "Prodüktör",
+      "category_id": 7
+    },
+    {
+      "id": 231,
+      "name": "Yapımcı",
+      "category_id": 7
+    },
+    {
+      "id": 232,
+      "name": "Casting direktörü",
+      "category_id": 7
+    },
+    {
+      "id": 233,
+      "name": "Sahne tasarımcısı",
+      "category_id": 7
+    },
+    {
+      "id": 234,
+      "name": "Kostüm tasarımcısı",
+      "category_id": 7
+    },
+    {
+      "id": 235,
+      "name": "Makyaj sanatçısı",
+      "category_id": 7
+    },
+    {
+      "id": 236,
+      "name": "Kuaför",
+      "category_id": 7
+    },
+    {
+      "id": 237,
+      "name": "Manikürcü",
+      "category_id": 7
+    },
+    {
+      "id": 238,
+      "name": "Estetisyen",
+      "category_id": 7
+    },
+    {
+      "id": 239,
+      "name": "Masör",
+      "category_id": 7
+    },
+    {
+      "id": 240,
+      "name": "Masöz",
+      "category_id": 7
+    },
+    {
+      "id": 241,
+      "name": "Fabrika işçisi",
+      "category_id": 8
+    },
+    {
+      "id": 242,
+      "name": "Makinist",
+      "category_id": 8
+    },
+    {
+      "id": 243,
+      "name": "Kalıpçı",
+      "category_id": 8
+    },
+    {
+      "id": 244,
+      "name": "Tornacı",
+      "category_id": 8
+    },
+    {
+      "id": 245,
+      "name": "Kaynakçı",
+      "category_id": 8
+    },
+    {
+      "id": 246,
+      "name": "Dökümcü",
+      "category_id": 8
+    },
+    {
+      "id": 247,
+      "name": "Demirci",
+      "category_id": 8
+    },
+    {
+      "id": 248,
+      "name": "Marangoz",
+      "category_id": 8
+    },
+    {
+      "id": 249,
+      "name": "Mobilyacı",
+      "category_id": 8
+    },
+    {
+      "id": 250,
+      "name": "Kalaycı",
+      "category_id": 8
+    },
+    {
+      "id": 251,
+      "name": "Bakırcı",
+      "category_id": 8
+    },
+    {
+      "id": 252,
+      "name": "Terzi",
+      "category_id": 8
+    },
+    {
+      "id": 253,
+      "name": "Dokumacı",
+      "category_id": 8
+    },
+    {
+      "id": 254,
+      "name": "İplikçi",
+      "category_id": 8
+    },
+    {
+      "id": 255,
+      "name": "Çorapçı",
+      "category_id": 8
+    },
+    {
+      "id": 256,
+      "name": "Halıcı",
+      "category_id": 8
+    },
+    {
+      "id": 257,
+      "name": "Kumaşçı",
+      "category_id": 8
+    },
+    {
+      "id": 258,
+      "name": "Derici",
+      "category_id": 8
+    },
+    {
+      "id": 259,
+      "name": "Ayakkabıcı",
+      "category_id": 8
+    },
+    {
+      "id": 260,
+      "name": "Çanta imalatçısı",
+      "category_id": 8
+    },
+    {
+      "id": 261,
+      "name": "Camcı",
+      "category_id": 8
+    },
+    {
+      "id": 262,
+      "name": "Seramikçi",
+      "category_id": 8
+    },
+    {
+      "id": 263,
+      "name": "Çinicisi",
+      "category_id": 8
+    },
+    {
+      "id": 264,
+      "name": "Mermerci",
+      "category_id": 8
+    },
+    {
+      "id": 265,
+      "name": "Taşçı",
+      "category_id": 8
+    },
+    {
+      "id": 266,
+      "name": "Boyacı",
+      "category_id": 8
+    },
+    {
+      "id": 267,
+      "name": "Badanacı",
+      "category_id": 8
+    },
+    {
+      "id": 268,
+      "name": "Zımparacı",
+      "category_id": 8
+    },
+    {
+      "id": 269,
+      "name": "Polisajcı",
+      "category_id": 8
+    },
+    {
+      "id": 270,
+      "name": "Kaportacı",
+      "category_id": 8
+    },
+    {
+      "id": 271,
+      "name": "Karoserci",
+      "category_id": 8
+    },
+    {
+      "id": 272,
+      "name": "Oto tamircisi",
+      "category_id": 8
+    },
+    {
+      "id": 273,
+      "name": "Oto elektrikçisi",
+      "category_id": 8
+    },
+    {
+      "id": 274,
+      "name": "Motor tamircisi",
+      "category_id": 8
+    },
+    {
+      "id": 275,
+      "name": "Bisiklet tamircisi",
+      "category_id": 8
+    },
+    {
+      "id": 276,
+      "name": "Saat tamircisi",
+      "category_id": 8
+    },
+    {
+      "id": 277,
+      "name": "Bujici",
+      "category_id": 8
+    },
+    {
+      "id": 278,
+      "name": "Bobinajcı",
+      "category_id": 8
+    },
+    {
+      "id": 279,
+      "name": "Matkapçı",
+      "category_id": 8
+    },
+    {
+      "id": 280,
+      "name": "Vinç operatörü",
+      "category_id": 8
+    },
+    {
+      "id": 281,
+      "name": "Forklift operatörü",
+      "category_id": 8
+    },
+    {
+      "id": 282,
+      "name": "Buldozer operatörü",
+      "category_id": 8
+    },
+    {
+      "id": 283,
+      "name": "Greyder operatörü",
+      "category_id": 8
+    },
+    {
+      "id": 284,
+      "name": "Silindir operatörü",
+      "category_id": 8
+    },
+    {
+      "id": 285,
+      "name": "Konveyör operatörü",
+      "category_id": 8
+    },
+    {
+      "id": 286,
+      "name": "İstihkâmcı",
+      "category_id": 8
+    },
+    {
+      "id": 287,
+      "name": "İtfaiyeci",
+      "category_id": 8
+    },
+    {
+      "id": 288,
+      "name": "Çiftçi",
+      "category_id": 9
+    },
+    {
+      "id": 289,
+      "name": "Ziraat mühendisi",
+      "category_id": 9
+    },
+    {
+      "id": 290,
+      "name": "Bahçıvan",
+      "category_id": 9
+    },
+    {
+      "id": 291,
+      "name": "Peyzaj teknikeri",
+      "category_id": 9
+    },
+    {
+      "id": 292,
+      "name": "Orman mühendisi",
+      "category_id": 9
+    },
+    {
+      "id": 293,
+      "name": "Arıcı",
+      "category_id": 9
+    },
+    {
+      "id": 294,
+      "name": "Balıkçı",
+      "category_id": 9
+    },
+    {
+      "id": 295,
+      "name": "Tavukçu",
+      "category_id": 9
+    },
+    {
+      "id": 296,
+      "name": "Besici",
+      "category_id": 9
+    },
+    {
+      "id": 297,
+      "name": "Çoban",
+      "category_id": 9
+    },
+    {
+      "id": 298,
+      "name": "Seyis",
+      "category_id": 9
+    },
+    {
+      "id": 299,
+      "name": "Hayvan bakıcısı",
+      "category_id": 9
+    },
+    {
+      "id": 300,
+      "name": "Hayvan terbiyecisi",
+      "category_id": 9
+    },
+    {
+      "id": 301,
+      "name": "Veteriner",
+      "category_id": 9
+    },
+    {
+      "id": 302,
+      "name": "Tarım işçisi",
+      "category_id": 9
+    },
+    {
+      "id": 303,
+      "name": "Bahçe bitkileri uzmanı",
+      "category_id": 9
+    },
+    {
+      "id": 304,
+      "name": "Peyzaj mimarı",
+      "category_id": 9
+    },
+    {
+      "id": 305,
+      "name": "Sera işletmecisi",
+      "category_id": 9
+    },
+    {
+      "id": 306,
+      "name": "Zirai ilaç uzmanı",
+      "category_id": 9
+    },
+    {
+      "id": 307,
+      "name": "Tarım makineleri operatörü",
+      "category_id": 9
+    },
+    {
+      "id": 308,
+      "name": "Ormancı",
+      "category_id": 9
+    },
+    {
+      "id": 309,
+      "name": "Ağaç kesici",
+      "category_id": 9
+    },
+    {
+      "id": 310,
+      "name": "Fidan yetiştiricisi",
+      "category_id": 9
+    },
+    {
+      "id": 311,
+      "name": "Aşçı",
+      "category_id": 10
+    },
+    {
+      "id": 312,
+      "name": "Aşçıbaşı",
+      "category_id": 10
+    },
+    {
+      "id": 313,
+      "name": "Fırıncı",
+      "category_id": 10
+    },
+    {
+      "id": 314,
+      "name": "Pastacı",
+      "category_id": 10
+    },
+    {
+      "id": 315,
+      "name": "Tatlıcı",
+      "category_id": 10
+    },
+    {
+      "id": 316,
+      "name": "Börekçi",
+      "category_id": 10
+    },
+    {
+      "id": 317,
+      "name": "Pideci",
+      "category_id": 10
+    },
+    {
+      "id": 318,
+      "name": "Lahmacuncu",
+      "category_id": 10
+    },
+    {
+      "id": 319,
+      "name": "Kebapçı",
+      "category_id": 10
+    },
+    {
+      "id": 320,
+      "name": "Köfteci",
+      "category_id": 10
+    },
+    {
+      "id": 321,
+      "name": "Pilavcı",
+      "category_id": 10
+    },
+    {
+      "id": 322,
+      "name": "Mantarcı",
+      "category_id": 10
+    },
+    {
+      "id": 323,
+      "name": "Çikolatacı",
+      "category_id": 10
+    },
+    {
+      "id": 324,
+      "name": "Dondurmacı",
+      "category_id": 10
+    },
+    {
+      "id": 325,
+      "name": "Yoğurtçu",
+      "category_id": 10
+    },
+    {
+      "id": 326,
+      "name": "Sütçü",
+      "category_id": 10
+    },
+    {
+      "id": 327,
+      "name": "Peynirci",
+      "category_id": 10
+    },
+    {
+      "id": 328,
+      "name": "Turşucu",
+      "category_id": 10
+    },
+    {
+      "id": 329,
+      "name": "Tuzcu",
+      "category_id": 10
+    },
+    {
+      "id": 330,
+      "name": "Zeytinci",
+      "category_id": 10
+    },
+    {
+      "id": 331,
+      "name": "Şarap üreticisi",
+      "category_id": 10
+    },
+    {
+      "id": 332,
+      "name": "Biracı",
+      "category_id": 10
+    },
+    {
+      "id": 333,
+      "name": "Barmen",
+      "category_id": 10
+    },
+    {
+      "id": 334,
+      "name": "Barista",
+      "category_id": 10
+    },
+    {
+      "id": 335,
+      "name": "Garson",
+      "category_id": 10
+    },
+    {
+      "id": 336,
+      "name": "Komi",
+      "category_id": 10
+    },
+    {
+      "id": 337,
+      "name": "Lokantacı",
+      "category_id": 10
+    },
+    {
+      "id": 338,
+      "name": "Kahveci",
+      "category_id": 10
+    },
+    {
+      "id": 339,
+      "name": "Çaycı",
+      "category_id": 10
+    },
+    {
+      "id": 340,
+      "name": "Meyhaneci",
+      "category_id": 10
+    },
+    {
+      "id": 341,
+      "name": "Salepçi",
+      "category_id": 10
+    },
+    {
+      "id": 342,
+      "name": "Simitçi",
+      "category_id": 10
+    },
+    {
+      "id": 343,
+      "name": "Börekçi",
+      "category_id": 10
+    },
+    {
+      "id": 344,
+      "name": "Un fabrikası işçisi",
+      "category_id": 10
+    },
+    {
+      "id": 345,
+      "name": "Et işleme uzmanı",
+      "category_id": 10
+    },
+    {
+      "id": 346,
+      "name": "Kasap",
+      "category_id": 10
+    },
+    {
+      "id": 347,
+      "name": "Balıkçı",
+      "category_id": 10
+    },
+    {
+      "id": 348,
+      "name": "Deniz ürünleri işleyici",
+      "category_id": 10
+    },
+    {
+      "id": 349,
+      "name": "Gıda mühendisi",
+      "category_id": 10
+    },
+    {
+      "id": 350,
+      "name": "Gıda teknisyeni",
+      "category_id": 10
+    },
+    {
+      "id": 351,
+      "name": "Pastörizr",
+      "category_id": 10
+    },
+    {
+      "id": 352,
+      "name": "Fermentasyon işçisi",
+      "category_id": 10
+    },
+    {
+      "id": 353,
+      "name": "Pilot",
+      "category_id": 11
+    },
+    {
+      "id": 354,
+      "name": "Uçuş teknisyeni",
+      "category_id": 11
+    },
+    {
+      "id": 355,
+      "name": "Hostes",
+      "category_id": 11
+    },
+    {
+      "id": 356,
+      "name": "Kabin görevlisi",
+      "category_id": 11
+    },
+    {
+      "id": 357,
+      "name": "Kaptan",
+      "category_id": 11
+    },
+    {
+      "id": 358,
+      "name": "Gemici",
+      "category_id": 11
+    },
+    {
+      "id": 359,
+      "name": "Denizci",
+      "category_id": 11
+    },
+    {
+      "id": 360,
+      "name": "Tren makinisti",
+      "category_id": 11
+    },
+    {
+      "id": 361,
+      "name": "Vatman",
+      "category_id": 11
+    },
+    {
+      "id": 362,
+      "name": "Şoför",
+      "category_id": 11
+    },
+    {
+      "id": 363,
+      "name": "Taksici",
+      "category_id": 11
+    },
+    {
+      "id": 364,
+      "name": "Kamyoncu",
+      "category_id": 11
+    },
+    {
+      "id": 365,
+      "name": "Kurye",
+      "category_id": 11
+    },
+    {
+      "id": 366,
+      "name": "Nakliyeci",
+      "category_id": 11
+    },
+    {
+      "id": 367,
+      "name": "Ambulans şoförü",
+      "category_id": 11
+    },
+    {
+      "id": 368,
+      "name": "Özel şoför",
+      "category_id": 11
+    },
+    {
+      "id": 369,
+      "name": "Forklift operatörü",
+      "category_id": 11
+    },
+    {
+      "id": 370,
+      "name": "Vinç operatörü",
+      "category_id": 11
+    },
+    {
+      "id": 371,
+      "name": "Liman işçisi",
+      "category_id": 11
+    },
+    {
+      "id": 372,
+      "name": "Gümrük memuru",
+      "category_id": 11
+    },
+    {
+      "id": 373,
+      "name": "Gümrük müşaviri",
+      "category_id": 11
+    },
+    {
+      "id": 374,
+      "name": "Gümrük uzmanı",
+      "category_id": 11
+    },
+    {
+      "id": 375,
+      "name": "Lojistik uzmanı",
+      "category_id": 11
+    },
+    {
+      "id": 376,
+      "name": "Depocu",
+      "category_id": 11
+    },
+    {
+      "id": 377,
+      "name": "Sevkiyat sorumlusu",
+      "category_id": 11
+    },
+    {
+      "id": 378,
+      "name": "Ulaşım sorumlusu",
+      "category_id": 11
+    },
+    {
+      "id": 379,
+      "name": "Hava trafik kontrolörü",
+      "category_id": 11
+    },
+    {
+      "id": 380,
+      "name": "Demiryolu işçisi",
+      "category_id": 11
+    },
+    {
+      "id": 381,
+      "name": "Otobüs şoförü",
+      "category_id": 11
+    },
+    {
+      "id": 382,
+      "name": "Minibüs şoförü",
+      "category_id": 11
+    },
+    {
+      "id": 383,
+      "name": "Taksi dolmuş şoförü",
+      "category_id": 11
+    },
+    {
+      "id": 384,
+      "name": "Uçak bakım teknisyeni",
+      "category_id": 11
+    },
+    {
+      "id": 385,
+      "name": "Cumhurbaşkanı",
+      "category_id": 12
+    },
+    {
+      "id": 386,
+      "name": "Başbakan",
+      "category_id": 12
+    },
+    {
+      "id": 387,
+      "name": "Bakan",
+      "category_id": 12
+    },
+    {
+      "id": 388,
+      "name": "Milletvekili",
+      "category_id": 12
+    },
+    {
+      "id": 389,
+      "name": "Belediye başkanı",
+      "category_id": 12
+    },
+    {
+      "id": 390,
+      "name": "Belediye meclisi üyesi",
+      "category_id": 12
+    },
+    {
+      "id": 391,
+      "name": "Vali",
+      "category_id": 12
+    },
+    {
+      "id": 392,
+      "name": "Kaymakam",
+      "category_id": 12
+    },
+    {
+      "id": 393,
+      "name": "Muhtar",
+      "category_id": 12
+    },
+    {
+      "id": 394,
+      "name": "Büyükelçi",
+      "category_id": 12
+    },
+    {
+      "id": 395,
+      "name": "Konsolos",
+      "category_id": 12
+    },
+    {
+      "id": 396,
+      "name": "Diplomat",
+      "category_id": 12
+    },
+    {
+      "id": 397,
+      "name": "Devlet memuru",
+      "category_id": 12
+    },
+    {
+      "id": 398,
+      "name": "Memur",
+      "category_id": 12
+    },
+    {
+      "id": 399,
+      "name": "Müdür",
+      "category_id": 12
+    },
+    {
+      "id": 400,
+      "name": "Genel müdür",
+      "category_id": 12
+    },
+    {
+      "id": 401,
+      "name": "İcra kurulu başkanı",
+      "category_id": 12
+    },
+    {
+      "id": 402,
+      "name": "Yönetici",
+      "category_id": 12
+    },
+    {
+      "id": 403,
+      "name": "İşletmeci",
+      "category_id": 12
+    },
+    {
+      "id": 404,
+      "name": "Müteahhit",
+      "category_id": 12
+    },
+    {
+      "id": 405,
+      "name": "Müfettiş",
+      "category_id": 12
+    },
+    {
+      "id": 406,
+      "name": "Denetçi",
+      "category_id": 12
+    },
+    {
+      "id": 407,
+      "name": "Denetleyici",
+      "category_id": 12
+    },
+    {
+      "id": 408,
+      "name": "Kontrolör",
+      "category_id": 12
+    },
+    {
+      "id": 409,
+      "name": "Sicil memuru",
+      "category_id": 12
+    },
+    {
+      "id": 410,
+      "name": "İcra memuru",
+      "category_id": 12
+    },
+    {
+      "id": 411,
+      "name": "Tahsildar",
+      "category_id": 12
+    },
+    {
+      "id": 412,
+      "name": "Veznedar",
+      "category_id": 12
+    },
+    {
+      "id": 413,
+      "name": "Zabıt katibi",
+      "category_id": 12
+    },
+    {
+      "id": 414,
+      "name": "Zabıta memuru",
+      "category_id": 12
+    },
+    {
+      "id": 415,
+      "name": "Emniyet amiri",
+      "category_id": 12
+    },
+    {
+      "id": 416,
+      "name": "Emniyet genel müdürü",
+      "category_id": 12
+    },
+    {
+      "id": 417,
+      "name": "Komiser",
+      "category_id": 12
+    },
+    {
+      "id": 418,
+      "name": "Komiser yardımcısı",
+      "category_id": 12
+    },
+    {
+      "id": 419,
+      "name": "Polis memuru",
+      "category_id": 12
+    },
+    {
+      "id": 420,
+      "name": "Polis şefi",
+      "category_id": 12
+    },
+    {
+      "id": 421,
+      "name": "Jandarma",
+      "category_id": 12
+    },
+    {
+      "id": 422,
+      "name": "Asker",
+      "category_id": 12
+    },
+    {
+      "id": 423,
+      "name": "Subay",
+      "category_id": 12
+    },
+    {
+      "id": 424,
+      "name": "Astsubay",
+      "category_id": 12
+    },
+    {
+      "id": 425,
+      "name": "Teğmen",
+      "category_id": 12
+    },
+    {
+      "id": 426,
+      "name": "Yüzbaşı",
+      "category_id": 12
+    },
+    {
+      "id": 427,
+      "name": "Binbaşı",
+      "category_id": 12
+    },
+    {
+      "id": 428,
+      "name": "Yarbay",
+      "category_id": 12
+    },
+    {
+      "id": 429,
+      "name": "Albay",
+      "category_id": 12
+    },
+    {
+      "id": 430,
+      "name": "Tuğgeneral",
+      "category_id": 12
+    },
+    {
+      "id": 431,
+      "name": "Tümgeneral",
+      "category_id": 12
+    },
+    {
+      "id": 432,
+      "name": "Korgeneral",
+      "category_id": 12
+    },
+    {
+      "id": 433,
+      "name": "Orgeneral",
+      "category_id": 12
+    },
+    {
+      "id": 434,
+      "name": "Amiral",
+      "category_id": 12
+    },
+    {
+      "id": 435,
+      "name": "Koramiral",
+      "category_id": 12
+    },
+    {
+      "id": 436,
+      "name": "Tümamiral",
+      "category_id": 12
+    },
+    {
+      "id": 437,
+      "name": "Savunma uzmanı",
+      "category_id": 12
+    },
+    {
+      "id": 438,
+      "name": "İstihbarat görevlisi",
+      "category_id": 12
+    },
+    {
+      "id": 439,
+      "name": "Satış elemanı",
+      "category_id": 13
+    },
+    {
+      "id": 440,
+      "name": "Mağaza müdürü",
+      "category_id": 13
+    },
+    {
+      "id": 441,
+      "name": "Mağaza sorumlusu",
+      "category_id": 13
+    },
+    {
+      "id": 442,
+      "name": "Tezgahtar",
+      "category_id": 13
+    },
+    {
+      "id": 443,
+      "name": "Kasiyer",
+      "category_id": 13
+    },
+    {
+      "id": 444,
+      "name": "Manav",
+      "category_id": 13
+    },
+    {
+      "id": 445,
+      "name": "Kasap",
+      "category_id": 13
+    },
+    {
+      "id": 446,
+      "name": "Şarküter",
+      "category_id": 13
+    },
+    {
+      "id": 447,
+      "name": "Balıkçı",
+      "category_id": 13
+    },
+    {
+      "id": 448,
+      "name": "Fırıncı",
+      "category_id": 13
+    },
+    {
+      "id": 449,
+      "name": "Pastacı",
+      "category_id": 13
+    },
+    {
+      "id": 450,
+      "name": "Çiçekçi",
+      "category_id": 13
+    },
+    {
+      "id": 451,
+      "name": "Kitapçı",
+      "category_id": 13
+    },
+    {
+      "id": 452,
+      "name": "Kırtasiyeci",
+      "category_id": 13
+    },
+    {
+      "id": 453,
+      "name": "Züccaciye satıcısı",
+      "category_id": 13
+    },
+    {
+      "id": 454,
+      "name": "Mobilyacı",
+      "category_id": 13
+    },
+    {
+      "id": 455,
+      "name": "Beyaz eşya satıcısı",
+      "category_id": 13
+    },
+    {
+      "id": 456,
+      "name": "Elektronik mağaza satıcısı",
+      "category_id": 13
+    },
+    {
+      "id": 457,
+      "name": "Oto yedek parçacı",
+      "category_id": 13
+    },
+    {
+      "id": 458,
+      "name": "Araba satıcısı",
+      "category_id": 13
+    },
+    {
+      "id": 459,
+      "name": "Emlakçı",
+      "category_id": 13
+    },
+    {
+      "id": 460,
+      "name": "Sigorta acentesi",
+      "category_id": 13
+    },
+    {
+      "id": 461,
+      "name": "Seyahat acentesi",
+      "category_id": 13
+    },
+    {
+      "id": 462,
+      "name": "Turizmci",
+      "category_id": 13
+    },
+    {
+      "id": 463,
+      "name": "Rehber",
+      "category_id": 13
+    },
+    {
+      "id": 464,
+      "name": "Acentacı",
+      "category_id": 13
+    },
+    {
+      "id": 465,
+      "name": "Komisyoncu",
+      "category_id": 13
+    },
+    {
+      "id": 466,
+      "name": "Tuhafiyeci",
+      "category_id": 13
+    },
+    {
+      "id": 467,
+      "name": "Manifaturacı",
+      "category_id": 13
+    },
+    {
+      "id": 468,
+      "name": "Kumaşçı",
+      "category_id": 13
+    },
+    {
+      "id": 469,
+      "name": "Halıcı",
+      "category_id": 13
+    },
+    {
+      "id": 470,
+      "name": "Ayakkabı satıcısı",
+      "category_id": 13
+    },
+    {
+      "id": 471,
+      "name": "Giyim mağazası satıcısı",
+      "category_id": 13
+    },
+    {
+      "id": 472,
+      "name": "Kozmetik satıcısı",
+      "category_id": 13
+    },
+    {
+      "id": 473,
+      "name": "Parfümeri satıcısı",
+      "category_id": 13
+    },
+    {
+      "id": 474,
+      "name": "Mücevher satıcısı",
+      "category_id": 13
+    },
+    {
+      "id": 475,
+      "name": "Antika satıcısı",
+      "category_id": 13
+    },
+    {
+      "id": 476,
+      "name": "İkinci el eşya satıcısı",
+      "category_id": 13
+    },
+    {
+      "id": 477,
+      "name": "Bit pazarı satıcısı",
+      "category_id": 13
+    },
+    {
+      "id": 478,
+      "name": "Sokak satıcısı",
+      "category_id": 13
+    },
+    {
+      "id": 479,
+      "name": "Pazar tezgâhtarı",
+      "category_id": 13
+    },
+    {
+      "id": 480,
+      "name": "Online satış uzmanı",
+      "category_id": 13
+    },
+    {
+      "id": 481,
+      "name": "E-ticaret uzmanı",
+      "category_id": 13
+    },
+    {
+      "id": 482,
+      "name": "Pazarlama uzmanı",
+      "category_id": 13
+    },
+    {
+      "id": 483,
+      "name": "Marka yöneticisi",
+      "category_id": 13
+    },
+    {
+      "id": 484,
+      "name": "Ürün yöneticisi",
+      "category_id": 13
+    },
+    {
+      "id": 485,
+      "name": "CRM uzmanı",
+      "category_id": 13
+    },
+    {
+      "id": 486,
+      "name": "İnşaat mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 487,
+      "name": "Makine mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 488,
+      "name": "Elektrik mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 489,
+      "name": "Elektronik mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 490,
+      "name": "Bilgisayar mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 491,
+      "name": "Yazılım mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 492,
+      "name": "Kimya mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 493,
+      "name": "Gıda mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 494,
+      "name": "Çevre mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 495,
+      "name": "Endüstri mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 496,
+      "name": "Endüstri sistemleri mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 497,
+      "name": "İşletme mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 498,
+      "name": "Harita mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 499,
+      "name": "Jeoloji mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 500,
+      "name": "Jeofizik mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 501,
+      "name": "Metalurji mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 502,
+      "name": "Maden mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 503,
+      "name": "Havacılık ve Uzay mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 504,
+      "name": "Uzay mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 505,
+      "name": "Biyomedikal Mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 506,
+      "name": "Nanoteknoloji mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 507,
+      "name": "Genetik mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 508,
+      "name": "Elektrik-Elektronik mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 509,
+      "name": "Elektronik ve Haberleşme mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 510,
+      "name": "İç mimar",
+      "category_id": 14
+    },
+    {
+      "id": 511,
+      "name": "Peyzaj mimarı",
+      "category_id": 14
+    },
+    {
+      "id": 512,
+      "name": "Mimar",
+      "category_id": 14
+    },
+    {
+      "id": 513,
+      "name": "Tekniker",
+      "category_id": 14
+    },
+    {
+      "id": 514,
+      "name": "Teknisyen",
+      "category_id": 14
+    },
+    {
+      "id": 515,
+      "name": "Test mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 516,
+      "name": "Kalite kontrol mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 517,
+      "name": "Sistem mühendisi",
+      "category_id": 14
+    },
+    {
+      "id": 518,
+      "name": "Temizlikçi",
+      "category_id": 15
+    },
+    {
+      "id": 519,
+      "name": "Ev hanımı / ev işleri yöneticisi",
+      "category_id": 15
+    },
+    {
+      "id": 520,
+      "name": "Dadı",
+      "category_id": 15
+    },
+    {
+      "id": 521,
+      "name": "Bebek bakıcısı",
+      "category_id": 15
+    },
+    {
+      "id": 522,
+      "name": "Hasta bakıcısı",
+      "category_id": 15
+    },
+    {
+      "id": 523,
+      "name": "Yaşlı bakıcısı",
+      "category_id": 15
+    },
+    {
+      "id": 524,
+      "name": "Engelli bakıcısı",
+      "category_id": 15
+    },
+    {
+      "id": 525,
+      "name": "Ev yardımcısı",
+      "category_id": 15
+    },
+    {
+      "id": 526,
+      "name": "Hizmetçi",
+      "category_id": 15
+    },
+    {
+      "id": 527,
+      "name": "Gündelikçi",
+      "category_id": 15
+    },
+    {
+      "id": 528,
+      "name": "Apartman görevlisi",
+      "category_id": 15
+    },
+    {
+      "id": 529,
+      "name": "Kapıcı",
+      "category_id": 15
+    },
+    {
+      "id": 530,
+      "name": "Site yöneticisi",
+      "category_id": 15
+    },
+    {
+      "id": 531,
+      "name": "Güvenlik görevlisi",
+      "category_id": 15
+    },
+    {
+      "id": 532,
+      "name": "Özel güvenlik",
+      "category_id": 15
+    },
+    {
+      "id": 533,
+      "name": "Bekçi",
+      "category_id": 15
+    },
+    {
+      "id": 534,
+      "name": "Park bekçisi",
+      "category_id": 15
+    },
+    {
+      "id": 535,
+      "name": "Valet",
+      "category_id": 15
+    },
+    {
+      "id": 536,
+      "name": "Vale",
+      "category_id": 15
+    },
+    {
+      "id": 537,
+      "name": "Otopark görevlisi",
+      "category_id": 15
+    },
+    {
+      "id": 538,
+      "name": "Otopark yöneticisi",
+      "category_id": 15
+    },
+    {
+      "id": 539,
+      "name": "Otel görevlisi",
+      "category_id": 15
+    },
+    {
+      "id": 540,
+      "name": "Kat görevlisi",
+      "category_id": 15
+    },
+    {
+      "id": 541,
+      "name": "Oda görevlisi",
+      "category_id": 15
+    },
+    {
+      "id": 542,
+      "name": "Resepsiyon memuru",
+      "category_id": 15
+    },
+    {
+      "id": 543,
+      "name": "Ön büro elemanı",
+      "category_id": 15
+    },
+    {
+      "id": 544,
+      "name": "Bellboy",
+      "category_id": 15
+    },
+    {
+      "id": 545,
+      "name": "Komi",
+      "category_id": 15
+    },
+    {
+      "id": 546,
+      "name": "Bulaşıkçı",
+      "category_id": 15
+    },
+    {
+      "id": 547,
+      "name": "Garson",
+      "category_id": 15
+    },
+    {
+      "id": 548,
+      "name": "Barista",
+      "category_id": 15
+    },
+    {
+      "id": 549,
+      "name": "Şef garson",
+      "category_id": 15
+    },
+    {
+      "id": 550,
+      "name": "Restoran müdürü",
+      "category_id": 15
+    },
+    {
+      "id": 551,
+      "name": "Otel müdürü",
+      "category_id": 15
+    },
+    {
+      "id": 552,
+      "name": "Tur rehberi",
+      "category_id": 15
+    },
+    {
+      "id": 553,
+      "name": "Seyahat acentesi çalışanı",
+      "category_id": 15
+    },
+    {
+      "id": 554,
+      "name": "Spa terapisti",
+      "category_id": 15
+    },
+    {
+      "id": 555,
+      "name": "Masör",
+      "category_id": 15
+    },
+    {
+      "id": 556,
+      "name": "Masöz",
+      "category_id": 15
+    },
+    {
+      "id": 557,
+      "name": "Güzellik uzmanı",
+      "category_id": 15
+    },
+    {
+      "id": 558,
+      "name": "Estetisyen",
+      "category_id": 15
+    },
+    {
+      "id": 559,
+      "name": "Manikürcü",
+      "category_id": 15
+    },
+    {
+      "id": 560,
+      "name": "Pedikürcü",
+      "category_id": 15
+    },
+    {
+      "id": 561,
+      "name": "Kuaför",
+      "category_id": 15
+    },
+    {
+      "id": 562,
+      "name": "Berber",
+      "category_id": 15
+    },
+    {
+      "id": 563,
+      "name": "Tıraşçı",
+      "category_id": 15
+    },
+    {
+      "id": 564,
+      "name": "Sakal uzmanı",
+      "category_id": 15
+    },
+    {
+      "id": 565,
+      "name": "Dövme sanatçısı",
+      "category_id": 15
+    },
+    {
+      "id": 566,
+      "name": "Piercing uzmanı",
+      "category_id": 15
+    },
+    {
+      "id": 567,
+      "name": "Solaryum uzmanı",
+      "category_id": 15
+    },
+    {
+      "id": 568,
+      "name": "SPA yöneticisi",
+      "category_id": 15
+    },
+    {
+      "id": 569,
+      "name": "Fitness eğitmeni",
+      "category_id": 15
+    },
+    {
+      "id": 570,
+      "name": "Yoga eğitmeni",
+      "category_id": 15
+    },
+    {
+      "id": 571,
+      "name": "Pilates eğitmeni",
+      "category_id": 15
+    },
+    {
+      "id": 572,
+      "name": "Dans eğitmeni",
+      "category_id": 15
+    },
+    {
+      "id": 573,
+      "name": "Yüzme eğitmeni",
+      "category_id": 15
+    },
+    {
+      "id": 574,
+      "name": "Spor eğitmeni",
+      "category_id": 15
+    },
+    {
+      "id": 575,
+      "name": "Antrenör",
+      "category_id": 15
+    },
+    {
+      "id": 576,
+      "name": "Spor yöneticisi",
+      "category_id": 15
+    },
+    {
+      "id": 577,
+      "name": "Kulüp yöneticisi",
+      "category_id": 15
+    },
+    {
+      "id": 578,
+      "name": "Stadyum görevlisi",
+      "category_id": 15
+    },
+    {
+      "id": 579,
+      "name": "Spor salonu görevlisi",
+      "category_id": 15
+    },
+    {
+      "id": 580,
+      "name": "Danışman",
+      "category_id": 16
+    },
+    {
+      "id": 581,
+      "name": "Yönetim danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 582,
+      "name": "İK danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 583,
+      "name": "Finans danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 584,
+      "name": "Hukuk danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 585,
+      "name": "Eğitim danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 586,
+      "name": "Kariyer danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 587,
+      "name": "Psikolojik danışman",
+      "category_id": 16
+    },
+    {
+      "id": 588,
+      "name": "Aile danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 589,
+      "name": "Evlilik danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 590,
+      "name": "Çocuk gelişimi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 591,
+      "name": "Beslenme danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 592,
+      "name": "Spor beslenme danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 593,
+      "name": "Moda danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 594,
+      "name": "İmage danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 595,
+      "name": "Sosyal medya danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 596,
+      "name": "Dijital pazarlama danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 597,
+      "name": "SEO uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 598,
+      "name": "SEM uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 599,
+      "name": "İçerik stratejisti",
+      "category_id": 16
+    },
+    {
+      "id": 600,
+      "name": "Marka danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 601,
+      "name": "Kurumsal iletişim danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 602,
+      "name": "Kriz yönetimi danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 603,
+      "name": "İtibar yönetimi danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 604,
+      "name": "Çevre danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 605,
+      "name": "Enerji danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 606,
+      "name": "Gayrimenkul danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 607,
+      "name": "Emlak danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 608,
+      "name": "Sigorta danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 609,
+      "name": "Vergi danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 610,
+      "name": "Mali müşavir",
+      "category_id": 16
+    },
+    {
+      "id": 611,
+      "name": "Yeminli mali müşavir",
+      "category_id": 16
+    },
+    {
+      "id": 612,
+      "name": "Serbest muhasebeci",
+      "category_id": 16
+    },
+    {
+      "id": 613,
+      "name": "Denetçi",
+      "category_id": 16
+    },
+    {
+      "id": 614,
+      "name": "İç denetçi",
+      "category_id": 16
+    },
+    {
+      "id": 615,
+      "name": "Sertifikalı iç denetçi",
+      "category_id": 16
+    },
+    {
+      "id": 616,
+      "name": "Risk yönetimi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 617,
+      "name": "Uyum uzmanı ( compliance )",
+      "category_id": 16
+    },
+    {
+      "id": 618,
+      "name": "Kalite yönetimi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 619,
+      "name": "Süreç iyileştirme uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 620,
+      "name": "İş analisti",
+      "category_id": 16
+    },
+    {
+      "id": 621,
+      "name": "Proje yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 622,
+      "name": "Program yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 623,
+      "name": "Portföy yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 624,
+      "name": "Ürün yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 625,
+      "name": "Scrum master",
+      "category_id": 16
+    },
+    {
+      "id": 626,
+      "name": "Agile koçu",
+      "category_id": 16
+    },
+    {
+      "id": 627,
+      "name": "İş geliştirme uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 628,
+      "name": "Strateji uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 629,
+      "name": "Operasyon yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 630,
+      "name": "Tedarik zinciri yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 631,
+      "name": "Lojistik yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 632,
+      "name": "Depo yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 633,
+      "name": "Satın alma uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 634,
+      "name": "İhale uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 635,
+      "name": "Sözleşme uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 636,
+      "name": "Hukuk müşaviri",
+      "category_id": 16
+    },
+    {
+      "id": 637,
+      "name": "İnsan kaynakları uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 638,
+      "name": "İK yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 639,
+      "name": "Eğitim ve gelişim uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 640,
+      "name": "Performans yönetimi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 641,
+      "name": "Ücret ve yan haklar uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 642,
+      "name": "İşe alım uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 643,
+      "name": "Yetenek yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 644,
+      "name": "Kurumsal kültür uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 645,
+      "name": "Çeşitlilik ve kapsayıcılık uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 646,
+      "name": "İş sağlığı ve güvenliği uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 647,
+      "name": "İş yeri hekimi",
+      "category_id": 16
+    },
+    {
+      "id": 648,
+      "name": "İş güvenliği uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 649,
+      "name": "Ergonomist",
+      "category_id": 16
+    },
+    {
+      "id": 650,
+      "name": "Çevre mühendisi",
+      "category_id": 16
+    },
+    {
+      "id": 651,
+      "name": "Sürdürülebilirlik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 652,
+      "name": "Sosyal sorumluluk uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 653,
+      "name": "Kurumsal sosyal sorumluluk uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 654,
+      "name": "Gönüllü yönetimi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 655,
+      "name": "Sivil toplum uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 656,
+      "name": "Kamu ilişkileri uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 657,
+      "name": "Lobicist",
+      "category_id": 16
+    },
+    {
+      "id": 658,
+      "name": "Siyasi danışman",
+      "category_id": 16
+    },
+    {
+      "id": 659,
+      "name": "Seçim danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 660,
+      "name": "Kamuoyu araştırmacısı",
+      "category_id": 16
+    },
+    {
+      "id": 661,
+      "name": "Anketör",
+      "category_id": 16
+    },
+    {
+      "id": 662,
+      "name": "Araştırma uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 663,
+      "name": "Veri analisti",
+      "category_id": 16
+    },
+    {
+      "id": 664,
+      "name": "İstatistikçi",
+      "category_id": 16
+    },
+    {
+      "id": 665,
+      "name": "Matematikçi",
+      "category_id": 16
+    },
+    {
+      "id": 666,
+      "name": "Fizikçi",
+      "category_id": 16
+    },
+    {
+      "id": 667,
+      "name": "Kimyager",
+      "category_id": 16
+    },
+    {
+      "id": 668,
+      "name": "Biyolog",
+      "category_id": 16
+    },
+    {
+      "id": 669,
+      "name": "Jeolog",
+      "category_id": 16
+    },
+    {
+      "id": 670,
+      "name": "Meteorolog",
+      "category_id": 16
+    },
+    {
+      "id": 671,
+      "name": "Astronom",
+      "category_id": 16
+    },
+    {
+      "id": 672,
+      "name": "Coğrafyacı",
+      "category_id": 16
+    },
+    {
+      "id": 673,
+      "name": "Tarihçi",
+      "category_id": 16
+    },
+    {
+      "id": 674,
+      "name": "Arkeolog",
+      "category_id": 16
+    },
+    {
+      "id": 675,
+      "name": "Antropolog",
+      "category_id": 16
+    },
+    {
+      "id": 676,
+      "name": "Sosyolog",
+      "category_id": 16
+    },
+    {
+      "id": 677,
+      "name": "Psikolog",
+      "category_id": 16
+    },
+    {
+      "id": 678,
+      "name": "Filozof",
+      "category_id": 16
+    },
+    {
+      "id": 679,
+      "name": "Edebiyatçı",
+      "category_id": 16
+    },
+    {
+      "id": 680,
+      "name": "Dilbilimci",
+      "category_id": 16
+    },
+    {
+      "id": 681,
+      "name": "Çevirmen",
+      "category_id": 16
+    },
+    {
+      "id": 682,
+      "name": "Tercüman",
+      "category_id": 16
+    },
+    {
+      "id": 683,
+      "name": "Yeminli tercüman",
+      "category_id": 16
+    },
+    {
+      "id": 684,
+      "name": "Simultane çevirmen",
+      "category_id": 16
+    },
+    {
+      "id": 685,
+      "name": "Konferans çevirmeni",
+      "category_id": 16
+    },
+    {
+      "id": 686,
+      "name": "Yazılı çevirmen",
+      "category_id": 16
+    },
+    {
+      "id": 687,
+      "name": "Yerelleştirme uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 688,
+      "name": "Teknik çevirmen",
+      "category_id": 16
+    },
+    {
+      "id": 689,
+      "name": "Tıbbi çevirmen",
+      "category_id": 16
+    },
+    {
+      "id": 690,
+      "name": "Hukuki çevirmen",
+      "category_id": 16
+    },
+    {
+      "id": 691,
+      "name": "Finansal çevirmen",
+      "category_id": 16
+    },
+    {
+      "id": 692,
+      "name": "Edebi çevirmen",
+      "category_id": 16
+    },
+    {
+      "id": 693,
+      "name": "Redaktör",
+      "category_id": 16
+    },
+    {
+      "id": 694,
+      "name": "Editör",
+      "category_id": 16
+    },
+    {
+      "id": 695,
+      "name": "Yayıncı",
+      "category_id": 16
+    },
+    {
+      "id": 696,
+      "name": "Kitap editörü",
+      "category_id": 16
+    },
+    {
+      "id": 697,
+      "name": "Dergi editörü",
+      "category_id": 16
+    },
+    {
+      "id": 698,
+      "name": "Gazete editörü",
+      "category_id": 16
+    },
+    {
+      "id": 699,
+      "name": "Web editörü",
+      "category_id": 16
+    },
+    {
+      "id": 700,
+      "name": "İçerik editörü",
+      "category_id": 16
+    },
+    {
+      "id": 701,
+      "name": "Video editörü",
+      "category_id": 16
+    },
+    {
+      "id": 702,
+      "name": "Ses editörü",
+      "category_id": 16
+    },
+    {
+      "id": 703,
+      "name": "Görsel editör",
+      "category_id": 16
+    },
+    {
+      "id": 704,
+      "name": "Fotoğraf editörü",
+      "category_id": 16
+    },
+    {
+      "id": 705,
+      "name": "Grafik editörü",
+      "category_id": 16
+    },
+    {
+      "id": 706,
+      "name": "Sayfa düzenleyici",
+      "category_id": 16
+    },
+    {
+      "id": 707,
+      "name": "Dizgici",
+      "category_id": 16
+    },
+    {
+      "id": 708,
+      "name": "Matbaacı",
+      "category_id": 16
+    },
+    {
+      "id": 709,
+      "name": "Baskı teknisyeni",
+      "category_id": 16
+    },
+    {
+      "id": 710,
+      "name": "Dijital baskı operatörü",
+      "category_id": 16
+    },
+    {
+      "id": 711,
+      "name": "3D baskı operatörü",
+      "category_id": 16
+    },
+    {
+      "id": 712,
+      "name": "Lazer kesim operatörü",
+      "category_id": 16
+    },
+    {
+      "id": 713,
+      "name": "CNC operatörü",
+      "category_id": 16
+    },
+    {
+      "id": 714,
+      "name": "CAD/CAM uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 715,
+      "name": "Teknik ressam",
+      "category_id": 16
+    },
+    {
+      "id": 716,
+      "name": "Maketçi",
+      "category_id": 16
+    },
+    {
+      "id": 717,
+      "name": "Prototip uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 718,
+      "name": "Ürün tasarımcısı",
+      "category_id": 16
+    },
+    {
+      "id": 719,
+      "name": "Endüstriyel tasarımcı",
+      "category_id": 16
+    },
+    {
+      "id": 720,
+      "name": "Moda tasarımcısı",
+      "category_id": 16
+    },
+    {
+      "id": 721,
+      "name": "Tekstil tasarımcısı",
+      "category_id": 16
+    },
+    {
+      "id": 722,
+      "name": "Mobilya tasarımcısı",
+      "category_id": 16
+    },
+    {
+      "id": 723,
+      "name": "Aydınlatma tasarımcısı",
+      "category_id": 16
+    },
+    {
+      "id": 724,
+      "name": "Ambalaj tasarımcısı",
+      "category_id": 16
+    },
+    {
+      "id": 725,
+      "name": "Grafik tasarımcısı",
+      "category_id": 16
+    },
+    {
+      "id": 726,
+      "name": "Web tasarımcısı",
+      "category_id": 16
+    },
+    {
+      "id": 727,
+      "name": "UI tasarımcısı",
+      "category_id": 16
+    },
+    {
+      "id": 728,
+      "name": "UX tasarımcısı",
+      "category_id": 16
+    },
+    {
+      "id": 729,
+      "name": "Oyun tasarımcısı",
+      "category_id": 16
+    },
+    {
+      "id": 730,
+      "name": "Karakter tasarımcısı",
+      "category_id": 16
+    },
+    {
+      "id": 731,
+      "name": "Çevre tasarımcısı",
+      "category_id": 16
+    },
+    {
+      "id": 732,
+      "name": "Peyzaj tasarımcısı",
+      "category_id": 16
+    },
+    {
+      "id": 733,
+      "name": "Şehir plancısı",
+      "category_id": 16
+    },
+    {
+      "id": 734,
+      "name": "Bölge plancısı",
+      "category_id": 16
+    },
+    {
+      "id": 735,
+      "name": "Ulaşım plancısı",
+      "category_id": 16
+    },
+    {
+      "id": 736,
+      "name": "Altyapı plancısı",
+      "category_id": 16
+    },
+    {
+      "id": 737,
+      "name": "Afet yönetimi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 738,
+      "name": "Acil durum yönetmeni",
+      "category_id": 16
+    },
+    {
+      "id": 739,
+      "name": "Arama kurtarma uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 740,
+      "name": "İtfaiyeci",
+      "category_id": 16
+    },
+    {
+      "id": 741,
+      "name": "İstihkâmcı",
+      "category_id": 16
+    },
+    {
+      "id": 742,
+      "name": "Bomba imhacı",
+      "category_id": 16
+    },
+    {
+      "id": 743,
+      "name": "Güvenlik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 744,
+      "name": "Özel dedektif",
+      "category_id": 16
+    },
+    {
+      "id": 745,
+      "name": "Özel araştırmacı",
+      "category_id": 16
+    },
+    {
+      "id": 746,
+      "name": "Kriminalist",
+      "category_id": 16
+    },
+    {
+      "id": 747,
+      "name": "Kriminoloji uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 748,
+      "name": "Adli psikolog",
+      "category_id": 16
+    },
+    {
+      "id": 749,
+      "name": "Adli tabip",
+      "category_id": 16
+    },
+    {
+      "id": 750,
+      "name": "Adli tıp uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 751,
+      "name": "Adli kimya uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 752,
+      "name": "Adli balistik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 753,
+      "name": "Adli dijital uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 754,
+      "name": "Adli bilişim uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 755,
+      "name": "Siber suç uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 756,
+      "name": "Terörle mücadele uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 757,
+      "name": "İstihbarat analisti",
+      "category_id": 16
+    },
+    {
+      "id": 758,
+      "name": "İstihbarat görevlisi",
+      "category_id": 16
+    },
+    {
+      "id": 759,
+      "name": "Güvenlik analisti",
+      "category_id": 16
+    },
+    {
+      "id": 760,
+      "name": "Risk analisti",
+      "category_id": 16
+    },
+    {
+      "id": 761,
+      "name": "Kredi analisti",
+      "category_id": 16
+    },
+    {
+      "id": 762,
+      "name": "Finansal analist",
+      "category_id": 16
+    },
+    {
+      "id": 763,
+      "name": "Yatırım analisti",
+      "category_id": 16
+    },
+    {
+      "id": 764,
+      "name": "Hisse senedi analisti",
+      "category_id": 16
+    },
+    {
+      "id": 765,
+      "name": "Tahvil analisti",
+      "category_id": 16
+    },
+    {
+      "id": 766,
+      "name": "Emtia analisti",
+      "category_id": 16
+    },
+    {
+      "id": 767,
+      "name": "Gayrimenkul analisti",
+      "category_id": 16
+    },
+    {
+      "id": 768,
+      "name": "Pazar analisti",
+      "category_id": 16
+    },
+    {
+      "id": 769,
+      "name": "Sektör analisti",
+      "category_id": 16
+    },
+    {
+      "id": 770,
+      "name": "Rekabet analisti",
+      "category_id": 16
+    },
+    {
+      "id": 771,
+      "name": "Müşteri analisti",
+      "category_id": 16
+    },
+    {
+      "id": 772,
+      "name": "Davranış analisti",
+      "category_id": 16
+    },
+    {
+      "id": 773,
+      "name": "Veri analisti",
+      "category_id": 16
+    },
+    {
+      "id": 774,
+      "name": "İş zekası uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 775,
+      "name": "Veri ambarı uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 776,
+      "name": "ETL uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 777,
+      "name": "Veri modelleme uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 778,
+      "name": "Veri yönetimi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 779,
+      "name": "Veri kalitesi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 780,
+      "name": "Veri gizliliği uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 781,
+      "name": "Veri güvenliği uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 782,
+      "name": "Bilgi güvenliği uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 783,
+      "name": "Ağ güvenliği uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 784,
+      "name": "Uygulama güvenliği uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 785,
+      "name": "Bulut güvenliği uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 786,
+      "name": "Mobil güvenlik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 787,
+      "name": "IoT güvenliği uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 788,
+      "name": "Blockchain güvenliği uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 789,
+      "name": "Kripto para uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 790,
+      "name": "Blockchain geliştiricisi",
+      "category_id": 16
+    },
+    {
+      "id": 791,
+      "name": "Akıllı sözleşme geliştiricisi",
+      "category_id": 16
+    },
+    {
+      "id": 792,
+      "name": "DeFi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 793,
+      "name": "NFT uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 794,
+      "name": "Metaverse uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 795,
+      "name": "Sanal gerçeklik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 796,
+      "name": "Artırılmış gerçeklik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 797,
+      "name": "Karma gerçeklik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 798,
+      "name": "Oyun geliştiricisi",
+      "category_id": 16
+    },
+    {
+      "id": 799,
+      "name": "Oyun tasarımcısı",
+      "category_id": 16
+    },
+    {
+      "id": 800,
+      "name": "Oyun sanatçısı",
+      "category_id": 16
+    },
+    {
+      "id": 801,
+      "name": "Oyun animatörü",
+      "category_id": 16
+    },
+    {
+      "id": 802,
+      "name": "Oyun test uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 803,
+      "name": "Oyun yayıncısı",
+      "category_id": 16
+    },
+    {
+      "id": 804,
+      "name": "E-spor oyuncusu",
+      "category_id": 16
+    },
+    {
+      "id": 805,
+      "name": "E-spor koçu",
+      "category_id": 16
+    },
+    {
+      "id": 806,
+      "name": "E-spor menajeri",
+      "category_id": 16
+    },
+    {
+      "id": 807,
+      "name": "E-spor yorumcusu",
+      "category_id": 16
+    },
+    {
+      "id": 808,
+      "name": "Canlı yayıncı",
+      "category_id": 16
+    },
+    {
+      "id": 809,
+      "name": "İçerik üretici",
+      "category_id": 16
+    },
+    {
+      "id": 810,
+      "name": "Sosyal medya yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 811,
+      "name": "Sosyal medya uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 812,
+      "name": "Topluluk yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 813,
+      "name": "Dijital pazarlama uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 814,
+      "name": "SEO uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 815,
+      "name": "SEM uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 816,
+      "name": "E-posta pazarlama uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 817,
+      "name": "İçerik pazarlama uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 818,
+      "name": "Video pazarlama uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 819,
+      "name": "Influencer pazarlama uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 820,
+      "name": "Affiliate pazarlama uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 821,
+      "name": "Growth hacker",
+      "category_id": 16
+    },
+    {
+      "id": 822,
+      "name": "Dönüşüm optimizasyonu uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 823,
+      "name": "Kullanıcı edinme uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 824,
+      "name": "Müşteri deneyimi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 825,
+      "name": "Müşteri başarı uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 826,
+      "name": "Müşteri destek uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 827,
+      "name": "Teknik destek uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 828,
+      "name": "Yardım masası uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 829,
+      "name": "Uzaktan destek uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 830,
+      "name": "Alan destek uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 831,
+      "name": "Saha destek uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 832,
+      "name": "Sistem destek uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 833,
+      "name": "Ağ destek uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 834,
+      "name": "Uygulama destek uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 835,
+      "name": "Veritabanı destek uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 836,
+      "name": "Bulut destek uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 837,
+      "name": "ERP destek uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 838,
+      "name": "CRM destek uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 839,
+      "name": "SAP uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 840,
+      "name": "Oracle uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 841,
+      "name": "Microsoft uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 842,
+      "name": "Linux uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 843,
+      "name": "Windows uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 844,
+      "name": "Mac uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 845,
+      "name": "iOS uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 846,
+      "name": "Android uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 847,
+      "name": "Web geliştirici",
+      "category_id": 16
+    },
+    {
+      "id": 848,
+      "name": "Frontend geliştirici",
+      "category_id": 16
+    },
+    {
+      "id": 849,
+      "name": "Backend geliştirici",
+      "category_id": 16
+    },
+    {
+      "id": 850,
+      "name": "Full stack geliştirici",
+      "category_id": 16
+    },
+    {
+      "id": 851,
+      "name": "Mobil geliştirici",
+      "category_id": 16
+    },
+    {
+      "id": 852,
+      "name": "Oyun geliştirici",
+      "category_id": 16
+    },
+    {
+      "id": 853,
+      "name": "Gömülü sistem geliştiricisi",
+      "category_id": 16
+    },
+    {
+      "id": 854,
+      "name": "Firmware geliştiricisi",
+      "category_id": 16
+    },
+    {
+      "id": 855,
+      "name": "Donanım geliştiricisi",
+      "category_id": 16
+    },
+    {
+      "id": 856,
+      "name": "FPGA geliştiricisi",
+      "category_id": 16
+    },
+    {
+      "id": 857,
+      "name": "ASIC geliştiricisi",
+      "category_id": 16
+    },
+    {
+      "id": 858,
+      "name": "Devre tasarımcısı",
+      "category_id": 16
+    },
+    {
+      "id": 859,
+      "name": "PCB tasarımcısı",
+      "category_id": 16
+    },
+    {
+      "id": 860,
+      "name": "RF mühendisi",
+      "category_id": 16
+    },
+    {
+      "id": 861,
+      "name": "Telekomünikasyon mühendisi",
+      "category_id": 16
+    },
+    {
+      "id": 862,
+      "name": "Optik mühendisi",
+      "category_id": 16
+    },
+    {
+      "id": 863,
+      "name": "Biyomedikal mühendisi",
+      "category_id": 16
+    },
+    {
+      "id": 864,
+      "name": "Tıbbi cihaz mühendisi",
+      "category_id": 16
+    },
+    {
+      "id": 865,
+      "name": "Protez uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 866,
+      "name": "Ortez uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 867,
+      "name": "Tıbbi görüntüleme uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 868,
+      "name": "Radyasyon güvenliği uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 869,
+      "name": "Nükleer tıp uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 870,
+      "name": "Radyofarmasötik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 871,
+      "name": "Tıbbi fizik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 872,
+      "name": "Biyofizikçi",
+      "category_id": 16
+    },
+    {
+      "id": 873,
+      "name": "Biyokimyager",
+      "category_id": 16
+    },
+    {
+      "id": 874,
+      "name": "Biyoteknoloji uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 875,
+      "name": "Genetik mühendisi",
+      "category_id": 16
+    },
+    {
+      "id": 876,
+      "name": "Biyoinformatikçi",
+      "category_id": 16
+    },
+    {
+      "id": 877,
+      "name": "Farmakolog",
+      "category_id": 16
+    },
+    {
+      "id": 878,
+      "name": "Toksikolog",
+      "category_id": 16
+    },
+    {
+      "id": 879,
+      "name": "Eczacı",
+      "category_id": 16
+    },
+    {
+      "id": 880,
+      "name": "Eczane teknisyeni",
+      "category_id": 16
+    },
+    {
+      "id": 881,
+      "name": "Eczane kalfası",
+      "category_id": 16
+    },
+    {
+      "id": 882,
+      "name": "İlaç temsilcisi",
+      "category_id": 16
+    },
+    {
+      "id": 883,
+      "name": "Tıbbi mümessil",
+      "category_id": 16
+    },
+    {
+      "id": 884,
+      "name": "Medikal satış temsilcisi",
+      "category_id": 16
+    },
+    {
+      "id": 885,
+      "name": "Tıbbi cihaz satış temsilcisi",
+      "category_id": 16
+    },
+    {
+      "id": 886,
+      "name": "Laboratuvar cihazları uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 887,
+      "name": "Laboratuvar yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 888,
+      "name": "Klinik araştırma uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 889,
+      "name": "Klinik deney koordinatörü",
+      "category_id": 16
+    },
+    {
+      "id": 890,
+      "name": "Biyoistatistikçi",
+      "category_id": 16
+    },
+    {
+      "id": 891,
+      "name": "Epidemiyolog",
+      "category_id": 16
+    },
+    {
+      "id": 892,
+      "name": "Halk sağlığı uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 893,
+      "name": "Çevre sağlığı uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 894,
+      "name": "Gıda güvenliği uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 895,
+      "name": "Su kalitesi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 896,
+      "name": "Hava kalitesi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 897,
+      "name": "Toprak bilimci",
+      "category_id": 16
+    },
+    {
+      "id": 898,
+      "name": "Jeomorfolog",
+      "category_id": 16
+    },
+    {
+      "id": 899,
+      "name": "Hidrolog",
+      "category_id": 16
+    },
+    {
+      "id": 900,
+      "name": "Oşinograf",
+      "category_id": 16
+    },
+    {
+      "id": 901,
+      "name": "Paleontolog",
+      "category_id": 16
+    },
+    {
+      "id": 902,
+      "name": "Mineralog",
+      "category_id": 16
+    },
+    {
+      "id": 903,
+      "name": "Petrograf",
+      "category_id": 16
+    },
+    {
+      "id": 904,
+      "name": "Petrolog",
+      "category_id": 16
+    },
+    {
+      "id": 905,
+      "name": "Jeokimyager",
+      "category_id": 16
+    },
+    {
+      "id": 906,
+      "name": "Jeofizikçi",
+      "category_id": 16
+    },
+    {
+      "id": 907,
+      "name": "Sismolog",
+      "category_id": 16
+    },
+    {
+      "id": 908,
+      "name": "Volkanolog",
+      "category_id": 16
+    },
+    {
+      "id": 909,
+      "name": "Meteorolog",
+      "category_id": 16
+    },
+    {
+      "id": 910,
+      "name": "Klimatolog",
+      "category_id": 16
+    },
+    {
+      "id": 911,
+      "name": "Hava tahmin uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 912,
+      "name": "Uydu görüntüleme uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 913,
+      "name": "Uzay bilimci",
+      "category_id": 16
+    },
+    {
+      "id": 914,
+      "name": "Uzay mühendisi",
+      "category_id": 16
+    },
+    {
+      "id": 915,
+      "name": "Roket mühendisi",
+      "category_id": 16
+    },
+    {
+      "id": 916,
+      "name": "Uçak mühendisi",
+      "category_id": 16
+    },
+    {
+      "id": 917,
+      "name": "Helikopter mühendisi",
+      "category_id": 16
+    },
+    {
+      "id": 918,
+      "name": "İHA mühendisi",
+      "category_id": 16
+    },
+    {
+      "id": 919,
+      "name": "SİHA mühendisi",
+      "category_id": 16
+    },
+    {
+      "id": 920,
+      "name": "Uzay aracı mühendisi",
+      "category_id": 16
+    },
+    {
+      "id": 921,
+      "name": "Uydu mühendisi",
+      "category_id": 16
+    },
+    {
+      "id": 922,
+      "name": "Uydu operatörü",
+      "category_id": 16
+    },
+    {
+      "id": 923,
+      "name": "Uzay istasyonu uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 924,
+      "name": "Astronot",
+      "category_id": 16
+    },
+    {
+      "id": 925,
+      "name": "Kozmonot",
+      "category_id": 16
+    },
+    {
+      "id": 926,
+      "name": "Taikonaut",
+      "category_id": 16
+    },
+    {
+      "id": 927,
+      "name": "Uzay turizmi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 928,
+      "name": "Uzay hukuku uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 929,
+      "name": "Uzay politikası uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 930,
+      "name": "Uzay güvenliği uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 931,
+      "name": "Uzay çöpü uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 932,
+      "name": "Uzay madenciliği uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 933,
+      "name": "Uzay kaynakları uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 934,
+      "name": "Uzay tarımı uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 935,
+      "name": "Uzay biyolojisi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 936,
+      "name": "Uzay tıbbı uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 937,
+      "name": "Uzay psikolojisi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 938,
+      "name": "Uzay eğitimi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 939,
+      "name": "Uzay turizmi rehberi",
+      "category_id": 16
+    },
+    {
+      "id": 940,
+      "name": "Uzay fotoğrafçısı",
+      "category_id": 16
+    },
+    {
+      "id": 941,
+      "name": "Uzay sanatçısı",
+      "category_id": 16
+    },
+    {
+      "id": 942,
+      "name": "Uzay yazarlığı uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 943,
+      "name": "Uzay gazeteciliği uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 944,
+      "name": "Uzay iletişim uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 945,
+      "name": "Uzay diplomasisi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 946,
+      "name": "Uzay savunma uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 947,
+      "name": "Uzay istihbarat uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 948,
+      "name": "Uzay gözlem uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 949,
+      "name": "Uzay keşif uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 950,
+      "name": "Uzay kolonizasyonu uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 951,
+      "name": "Uzay yerleşim uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 952,
+      "name": "Uzay mimarı",
+      "category_id": 16
+    },
+    {
+      "id": 953,
+      "name": "Uzay inşaat mühendisi",
+      "category_id": 16
+    },
+    {
+      "id": 954,
+      "name": "Uzay tesisatçısı",
+      "category_id": 16
+    },
+    {
+      "id": 955,
+      "name": "Uzay elektrikçisi",
+      "category_id": 16
+    },
+    {
+      "id": 956,
+      "name": "Uzay doktoru",
+      "category_id": 16
+    },
+    {
+      "id": 957,
+      "name": "Uzay cerrahı",
+      "category_id": 16
+    },
+    {
+      "id": 958,
+      "name": "Uzay diş hekimi",
+      "category_id": 16
+    },
+    {
+      "id": 959,
+      "name": "Uzay psikologu",
+      "category_id": 16
+    },
+    {
+      "id": 960,
+      "name": "Uzay beslenme uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 961,
+      "name": "Uzay egzersiz uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 962,
+      "name": "Uzay fizyoterapisti",
+      "category_id": 16
+    },
+    {
+      "id": 963,
+      "name": "Uzay hemşiresi",
+      "category_id": 16
+    },
+    {
+      "id": 964,
+      "name": "Uzay eczacısı",
+      "category_id": 16
+    },
+    {
+      "id": 965,
+      "name": "Uzay laboratuvar teknisyeni",
+      "category_id": 16
+    },
+    {
+      "id": 966,
+      "name": "Uzay araştırmacısı",
+      "category_id": 16
+    },
+    {
+      "id": 967,
+      "name": "Uzay bilim insanı",
+      "category_id": 16
+    },
+    {
+      "id": 968,
+      "name": "Uzay mühendisi",
+      "category_id": 16
+    },
+    {
+      "id": 969,
+      "name": "Uzay teknisyeni",
+      "category_id": 16
+    },
+    {
+      "id": 970,
+      "name": "Uzay operatörü",
+      "category_id": 16
+    },
+    {
+      "id": 971,
+      "name": "Uzay kontrolörü",
+      "category_id": 16
+    },
+    {
+      "id": 972,
+      "name": "Uzay navigasyon uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 973,
+      "name": "Uzay haberleşme uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 974,
+      "name": "Uzay radar uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 975,
+      "name": "Uzay optik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 976,
+      "name": "Uzay lazer uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 977,
+      "name": "Uzay enerjisi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 978,
+      "name": "Uzay güneş enerjisi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 979,
+      "name": "Uzay nükleer enerjisi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 980,
+      "name": "Uzay batarya uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 981,
+      "name": "Uzay yakıt uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 982,
+      "name": "Uzay itki uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 983,
+      "name": "Uzay roket motoru uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 984,
+      "name": "Uzay hipersonik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 985,
+      "name": "Uzay hipersonik araç mühendisi",
+      "category_id": 16
+    },
+    {
+      "id": 986,
+      "name": "Uzay hipersonik aerodinamik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 987,
+      "name": "Uzay termal uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 988,
+      "name": "Uzay ısı kalkanı uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 989,
+      "name": "Uzay malzeme uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 990,
+      "name": "Uzay kompozit uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 991,
+      "name": "Uzay seramik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 992,
+      "name": "Uzay metal uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 993,
+      "name": "Uzay alaşım uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 994,
+      "name": "Uzay nanoteknoloji uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 995,
+      "name": "Uzay biyomimetik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 996,
+      "name": "Uzay robotik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 997,
+      "name": "Uzay yapay zeka uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 998,
+      "name": "Uzay otonom sistem uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 999,
+      "name": "Uzay insansız sistem uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1000,
+      "name": "Uzay dron uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1001,
+      "name": "Uzay robot uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1002,
+      "name": "Uzay exoskeleton uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1003,
+      "name": "Uzay protez uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1004,
+      "name": "Uzay 3D baskı uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1005,
+      "name": "Uzay üretim uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1006,
+      "name": "Uzay fabrikasyon uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1007,
+      "name": "Uzay montaj uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1008,
+      "name": "Uzay bakım uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1009,
+      "name": "Uzay onarım uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1010,
+      "name": "Uzay geri dönüşüm uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1011,
+      "name": "Uzay yaşam destek uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1012,
+      "name": "Uzay atmosfer uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1013,
+      "name": "Uzay basınç uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1014,
+      "name": "Uzay sıcaklık uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1015,
+      "name": "Uzay nem uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1016,
+      "name": "Uzay hava kalitesi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1017,
+      "name": "Uzay su geri dönüşüm uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1018,
+      "name": "Uzay atık yönetimi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1019,
+      "name": "Uzay gıda üretimi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1020,
+      "name": "Uzay hidroponik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1021,
+      "name": "Uzay aeroponik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1022,
+      "name": "Uzay topraksız tarım uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1023,
+      "name": "Uzay bitki yetiştiricisi",
+      "category_id": 16
+    },
+    {
+      "id": 1024,
+      "name": "Uzay hayvan yetiştiricisi",
+      "category_id": 16
+    },
+    {
+      "id": 1025,
+      "name": "Uzay balık yetiştiricisi",
+      "category_id": 16
+    },
+    {
+      "id": 1026,
+      "name": "Uzay mikrobiyal sistem uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1027,
+      "name": "Uzay biyoreaktör uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1028,
+      "name": "Uzay sentetik biyoloji uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1029,
+      "name": "Uzay genetik mühendisliği uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1030,
+      "name": "Uzay klonlama uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1031,
+      "name": "Uzay doku mühendisliği uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1032,
+      "name": "Uzay organ yetiştirme uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1033,
+      "name": "Uzay kan üretimi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1034,
+      "name": "Uzay ilaç üretimi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1035,
+      "name": "Uzay vaksin üretimi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1036,
+      "name": "Uzay antibiyotik üretimi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1037,
+      "name": "Uzay enzim üretimi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1038,
+      "name": "Uzay hormon üretimi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1039,
+      "name": "Uzay protein üretimi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1040,
+      "name": "Uzay besin takviyesi üretimi uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1041,
+      "name": "Uzay fonksiyonel gıda uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1042,
+      "name": "Uzay uzun ömürlü gıda uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1043,
+      "name": "Uzay dondurulmuş gıda uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1044,
+      "name": "Uzay liyofilize gıda uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1045,
+      "name": "Uzay radyasyon işlenmiş gıda uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1046,
+      "name": "Uzay uzay mutfağı şefi",
+      "category_id": 16
+    },
+    {
+      "id": 1047,
+      "name": "Uzay uzay gıda teknisyeni",
+      "category_id": 16
+    },
+    {
+      "id": 1048,
+      "name": "Uzay uzay beslenme danışmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1049,
+      "name": "Uzay uzay diyetisyeni",
+      "category_id": 16
+    },
+    {
+      "id": 1050,
+      "name": "Uzay uzay spor hekimi",
+      "category_id": 16
+    },
+    {
+      "id": 1051,
+      "name": "Uzay uzay spor psikologu",
+      "category_id": 16
+    },
+    {
+      "id": 1052,
+      "name": "Uzay uzay spor antrenörü",
+      "category_id": 16
+    },
+    {
+      "id": 1053,
+      "name": "Uzay uzay spor fizyoterapisti",
+      "category_id": 16
+    },
+    {
+      "id": 1054,
+      "name": "Uzay uzay spor masörü",
+      "category_id": 16
+    },
+    {
+      "id": 1055,
+      "name": "Uzay uzay spor masözü",
+      "category_id": 16
+    },
+    {
+      "id": 1056,
+      "name": "Uzay uzay spor beslenme uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1057,
+      "name": "Uzay uzay spor ekipmanı uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1058,
+      "name": "Uzay uzay spor kıyafeti uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1059,
+      "name": "Uzay uzay spor ayakkabısı uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1060,
+      "name": "Uzay uzay spor güvenliği uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1061,
+      "name": "Uzay uzay spor yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 1062,
+      "name": "Uzay uzay spor menajeri",
+      "category_id": 16
+    },
+    {
+      "id": 1063,
+      "name": "Uzay uzay spor hukuku uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1064,
+      "name": "Uzay uzay spor iletişim uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1065,
+      "name": "Uzay uzay spor pazarlama uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1066,
+      "name": "Uzay uzay spor sponsorluk uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1067,
+      "name": "Uzay uzay spor etkinlik yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 1068,
+      "name": "Uzay uzay spor stadyum yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 1069,
+      "name": "Uzay uzay spor tesis yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 1070,
+      "name": "Uzay uzay spor kulüp yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 1071,
+      "name": "Uzay uzay spor federasyonu uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1072,
+      "name": "Uzay uzay spor olimpiyat uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1073,
+      "name": "Uzay uzay spor paralimpik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1074,
+      "name": "Uzay uzay spor özel olimpiyat uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1075,
+      "name": "Uzay uzay spor e-spor uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1076,
+      "name": "Uzay uzay spor sanal spor uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1077,
+      "name": "Uzay uzay spor uzay spor uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1078,
+      "name": "Uzay uzay spor yerçekimsiz spor uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1079,
+      "name": "Uzay uzay spor yerçekimli spor uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1080,
+      "name": "Uzay uzay spor uzay yürüyüşü uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1081,
+      "name": "Uzay uzay spor uzay koşusu uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1082,
+      "name": "Uzay uzay spor uzay yüzme uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1083,
+      "name": "Uzay uzay spor uzay jimnastik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1084,
+      "name": "Uzay uzay spor uzay güreş uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1085,
+      "name": "Uzay uzay spor uzay boks uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1086,
+      "name": "Uzay uzay spor uzay judo uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1087,
+      "name": "Uzay uzay spor uzay karate uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1088,
+      "name": "Uzay uzay spor uzay taekwondo uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1089,
+      "name": "Uzay uzay spor uzay cimnastik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1090,
+      "name": "Uzay uzay spor uzay atletizm uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1091,
+      "name": "Uzay uzay spor uzay atıcılık uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1092,
+      "name": "Uzay uzay spor uzay okçuluk uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1093,
+      "name": "Uzay uzay spor uzay binicilik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1094,
+      "name": "Uzay uzay spor uzay binicilik at yetiştiricisi",
+      "category_id": 16
+    },
+    {
+      "id": 1095,
+      "name": "Uzay uzay spor uzay binicilik at bakıcısı",
+      "category_id": 16
+    },
+    {
+      "id": 1096,
+      "name": "Uzay uzay spor uzay binicilik at terbiyecisi",
+      "category_id": 16
+    },
+    {
+      "id": 1097,
+      "name": "Uzay uzay spor uzay binicilik at eğitmeni",
+      "category_id": 16
+    },
+    {
+      "id": 1098,
+      "name": "Uzay uzay spor uzay binicilik at veterineri",
+      "category_id": 16
+    },
+    {
+      "id": 1099,
+      "name": "Uzay uzay spor uzay binicilik at diş hekimi",
+      "category_id": 16
+    },
+    {
+      "id": 1100,
+      "name": "Uzay uzay spor uzay binicilik at masörü",
+      "category_id": 16
+    },
+    {
+      "id": 1101,
+      "name": "Uzay uzay spor uzay binicilik at beslenme uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1102,
+      "name": "Uzay uzay spor uzay binicilik at ekipmanı uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1103,
+      "name": "Uzay uzay spor uzay binicilik at güvenliği uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1104,
+      "name": "Uzay uzay spor uzay binicilik at yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 1105,
+      "name": "Uzay uzay spor uzay binicilik at menajeri",
+      "category_id": 16
+    },
+    {
+      "id": 1106,
+      "name": "Uzay uzay spor uzay binicilik at hukuku uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1107,
+      "name": "Uzay uzay spor uzay binicilik at iletişim uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1108,
+      "name": "Uzay uzay spor uzay binicilik at pazarlama uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1109,
+      "name": "Uzay uzay spor uzay binicilik at sponsorluk uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1110,
+      "name": "Uzay uzay spor uzay binicilik at etkinlik yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 1111,
+      "name": "Uzay uzay spor uzay binicilik at stadyum yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 1112,
+      "name": "Uzay uzay spor uzay binicilik at tesis yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 1113,
+      "name": "Uzay uzay spor uzay binicilik at kulüp yöneticisi",
+      "category_id": 16
+    },
+    {
+      "id": 1114,
+      "name": "Uzay uzay spor uzay binicilik at federasyonu uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1115,
+      "name": "Uzay uzay spor uzay binicilik at olimpiyat uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1116,
+      "name": "Uzay uzay spor uzay binicilik at paralimpik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1117,
+      "name": "Uzay uzay spor uzay binicilik at özel olimpiyat uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1118,
+      "name": "Uzay uzay spor uzay binicilik at e-spor uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1119,
+      "name": "Uzay uzay spor uzay binicilik at sanal spor uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1120,
+      "name": "Uzay uzay spor uzay binicilik at uzay spor uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1121,
+      "name": "Uzay uzay spor uzay binicilik at yerçekimsiz spor uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1122,
+      "name": "Uzay uzay spor uzay binicilik at yerçekimli spor uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1123,
+      "name": "Uzay uzay spor uzay binicilik at uzay yürüyüşü uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1124,
+      "name": "Uzay uzay spor uzay binicilik at uzay koşusu uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1125,
+      "name": "Uzay uzay spor uz ay binicilik at uzay yüzme uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1126,
+      "name": "Uzay uzay spor uzay binicilik at uzay jimnastik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1127,
+      "name": "Uzay uzay spor uzay binicilik at uzay güreş uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1128,
+      "name": "Uzay uzay spor uzay binicilik at uzay boks uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1129,
+      "name": "Uzay uzay spor uzay binicilik at uzay judo uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1130,
+      "name": "Uzay uzay spor uzay binicilik at uzay karate uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1131,
+      "name": "Uzay uzay spor uzay binicilik at uzay taekwondo uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1132,
+      "name": "Uzay uzay spor uzay binicilik at uzay cimnastik uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1133,
+      "name": "Uzay uzay spor uzay binicilik at uzay atletizm uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1134,
+      "name": "Uzay uzay spor uzay binicilik at uzay atıcılık uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1135,
+      "name": "Uzay uzay spor uzay binicilik at uzay okçuluk uzmanı",
+      "category_id": 16
+    },
+    {
+      "id": 1136,
+      "name": "Uzay uzay spor uzay binicilik at uzay binicilik uzmanı",
+      "category_id": 16
+    }
+  ]
+}

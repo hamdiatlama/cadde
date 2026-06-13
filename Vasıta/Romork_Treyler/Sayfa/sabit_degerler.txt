@@ -1,0 +1,29 @@
+=== Römork & Treyler SABIT DEGERLER ===
+
+[Araç Durumu]
+- (deger listesi eklenecek)
+
+[Kimden]
+- (deger listesi eklenecek)
+
+[Renk]
+- (deger listesi eklenecek)
+
+[Garanti Durumu]
+- (deger listesi eklenecek)
+
+[Plaka / Uyruk]
+- (deger listesi eklenecek)
+
+[Döviz Cinsi]
+- (deger listesi eklenecek)
+
+[Römork Tipi]
+- (deger listesi eklenecek)
+
+[Fren Sistemi Tipi]
+- (deger listesi eklenecek)
+
+[Aks Sayısı]
+- (deger listesi eklenecek)
+

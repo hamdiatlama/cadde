@@ -1,0 +1,29 @@
+=== Elektrikli Scooter & Bisiklet SABIT DEGERLER ===
+
+[Araç Tipi (Scooter/Bisiklet/Kaykay)]
+- (deger listesi eklenecek)
+
+[Araç Durumu]
+- (deger listesi eklenecek)
+
+[Kimden]
+- (deger listesi eklenecek)
+
+[Renk]
+- (deger listesi eklenecek)
+
+[Garanti Durumu]
+- (deger listesi eklenecek)
+
+[Döviz Cinsi]
+- (deger listesi eklenecek)
+
+[Motor Tipi]
+- (deger listesi eklenecek)
+
+[Batarya Türü]
+- (deger listesi eklenecek)
+
+[Fren Tipi]
+- (deger listesi eklenecek)
+

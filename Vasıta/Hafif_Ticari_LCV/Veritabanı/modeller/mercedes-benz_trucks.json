@@ -1,0 +1,91 @@
+{
+  "marka": "Mercedes-Benz Trucks",
+  "modeller": [
+    {
+      "model": "Atego",
+      "kasa_tipleri": [
+        "Orta Kamyon"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "Actros",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2011
+    },
+    {
+      "model": "Arocs",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "Antos",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2012,
+      "uretim_bitis": 2020
+    },
+    {
+      "model": "Econic",
+      "kasa_tipleri": [
+        "Orta Kamyon"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Unimog",
+      "kasa_tipleri": [
+        "Özel Amaçlı"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "Zetros",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "eActros",
+      "kasa_tipleri": [
+        "Elektrikli Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "eEconic",
+      "kasa_tipleri": [
+        "Elektrikli Orta Kamyon"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Sprinter",
+      "kasa_tipleri": [
+        "Hafif Ticari"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Vito",
+      "kasa_tipleri": [
+        "Hafif Ticari"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Citan",
+      "kasa_tipleri": [
+        "Hafif Ticari"
+      ],
+      "uretim_baslangic": 2019
+    }
+  ],
+  "kaynak": "manuel"
+}

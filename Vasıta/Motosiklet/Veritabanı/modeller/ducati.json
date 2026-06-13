@@ -1,0 +1,111 @@
+{
+  "marka": "Ducati",
+  "modeller": [
+    {
+      "model": "Panigale V4 R",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Panigale V4 S",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Panigale V2",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Streetfighter V4 S",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Streetfighter V2",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Monster SP",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Monster 937",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Multistrada V4 S",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Multistrada V4 Rally",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Multistrada V2",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Diavel V4",
+      "kasa_tipleri": [
+        "Power Cruiser"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "Supersport 950",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Scrambler Full Throttle",
+      "kasa_tipleri": [
+        "Scrambler"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Scrambler Icon",
+      "kasa_tipleri": [
+        "Scrambler"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Hypermotard 950",
+      "kasa_tipleri": [
+        "Motard"
+      ],
+      "uretim_baslangic": 2019
+    }
+  ],
+  "kaynak": "manuel"
+}

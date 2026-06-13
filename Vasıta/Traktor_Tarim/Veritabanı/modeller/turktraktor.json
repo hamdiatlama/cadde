@@ -1,0 +1,62 @@
+{
+  "marka": "TürkTraktör",
+  "modeller": [
+    {
+      "model": "New Holland TT4.55",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "New Holland T4.85",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "New Holland T5.95",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "New Holland T6.150",
+      "kasa_tipleri": [
+        "Büyük Traktör"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Case IH Farmall 75C",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Case IH Farmall 90U",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Case IH Farmall 110U",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Case IH Puma 165",
+      "kasa_tipleri": [
+        "Büyük Traktör"
+      ],
+      "uretim_baslangic": 2020
+    }
+  ],
+  "kaynak": "manuel"
+}

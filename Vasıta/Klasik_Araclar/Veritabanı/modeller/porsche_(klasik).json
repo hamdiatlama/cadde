@@ -1,0 +1,54 @@
+{
+  "marka": "Porsche (Klasik)",
+  "modeller": [
+    {
+      "model": "356",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1949,
+      "uretim_bitis": 1965
+    },
+    {
+      "model": "911 (930) Turbo",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1975,
+      "uretim_bitis": 1989
+    },
+    {
+      "model": "911 (964)",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1989,
+      "uretim_bitis": 1994
+    },
+    {
+      "model": "914",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1970,
+      "uretim_bitis": 1976
+    },
+    {
+      "model": "928",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1978,
+      "uretim_bitis": 1995
+    },
+    {
+      "model": "959",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1987,
+      "uretim_bitis": 1989
+    }
+  ],
+  "kaynak": "manuel"
+}

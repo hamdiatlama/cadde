@@ -1,0 +1,259 @@
+{
+  "marka": "Mercedes-Benz",
+  "modeller": [
+    {
+      "model": "A Serisi",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Hatchback",
+        "Sedan"
+      ],
+      "uretim_baslangic": 1997
+    },
+    {
+      "model": "B Serisi",
+      "segment": "C",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2005
+    },
+    {
+      "model": "C Serisi",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Sedan",
+        "Station Wagon",
+        "Coupe",
+        "Cabrio"
+      ],
+      "uretim_baslangic": 1993
+    },
+    {
+      "model": "CLA",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Coupe",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "CLS",
+      "segment": "E",
+      "kasa_tipleri": [
+        "Coupe",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2004
+    },
+    {
+      "model": "E Serisi",
+      "segment": "E",
+      "kasa_tipleri": [
+        "Sedan",
+        "Station Wagon",
+        "Coupe",
+        "Cabrio"
+      ],
+      "uretim_baslangic": 1993
+    },
+    {
+      "model": "S Serisi",
+      "segment": "F",
+      "kasa_tipleri": [
+        "Sedan",
+        "Coupe",
+        "Cabrio"
+      ],
+      "uretim_baslangic": 1972
+    },
+    {
+      "model": "GLA",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "GLB",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "GLC",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV",
+        "Coupe"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "GLE",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV",
+        "Coupe"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "GLS",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "G Serisi",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 1979
+    },
+    {
+      "model": "EQA",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "EQB",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "EQC",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "EQE",
+      "segment": "E",
+      "kasa_tipleri": [
+        "Sedan",
+        "SUV"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "EQS",
+      "segment": "F",
+      "kasa_tipleri": [
+        "Sedan",
+        "SUV"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "EQV",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "AMG GT",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe",
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "AMG SL",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "AMG One",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "V Serisi",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Citan",
+      "segment": "V",
+      "kasa_tipleri": [
+        "Van"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "Sprinter",
+      "segment": "V",
+      "kasa_tipleri": [
+        "Van"
+      ],
+      "uretim_baslangic": 1995
+    },
+    {
+      "model": "SL",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2001,
+      "uretim_bitis": 2020
+    },
+    {
+      "model": "SLC",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2016,
+      "uretim_bitis": 2020
+    },
+    {
+      "model": "CLK",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Coupe",
+        "Cabrio"
+      ],
+      "uretim_baslangic": 1997,
+      "uretim_bitis": 2009
+    },
+    {
+      "model": "CLC",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2008,
+      "uretim_bitis": 2011
+    }
+  ],
+  "kaynak": "manuel"
+}

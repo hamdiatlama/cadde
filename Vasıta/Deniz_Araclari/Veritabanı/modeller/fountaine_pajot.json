@@ -1,0 +1,55 @@
+{
+  "marka": "Fountaine Pajot",
+  "modeller": [
+    {
+      "model": "Isla 40",
+      "kasa_tipleri": [
+        "Katamaran"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Saba 50",
+      "kasa_tipleri": [
+        "Katamaran"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Alegria 67",
+      "kasa_tipleri": [
+        "Katamaran"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Samana 59",
+      "kasa_tipleri": [
+        "Katamaran"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "MY 37",
+      "kasa_tipleri": [
+        "Motor Katamaran"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "MY 44",
+      "kasa_tipleri": [
+        "Motor Katamaran"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "MY 60",
+      "kasa_tipleri": [
+        "Motor Katamaran"
+      ],
+      "uretim_baslangic": 2019
+    }
+  ],
+  "kaynak": "manuel"
+}

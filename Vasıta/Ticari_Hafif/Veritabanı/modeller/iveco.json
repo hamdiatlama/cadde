@@ -1,0 +1,63 @@
+{
+  "marka": "Iveco",
+  "modeller": [
+    {
+      "model": "Daily",
+      "kasa_tipleri": [
+        "Hafif Ticari"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Daily Hi-Matic",
+      "kasa_tipleri": [
+        "Hafif Ticari"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Eurocargo",
+      "kasa_tipleri": [
+        "Orta Kamyon"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Stralis",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2012,
+      "uretim_bitis": 2021
+    },
+    {
+      "model": "S-Way",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "X-Way",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "T-Way",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Astra HD9",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2015
+    }
+  ],
+  "kaynak": "manuel"
+}

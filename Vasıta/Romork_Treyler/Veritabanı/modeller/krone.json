@@ -1,0 +1,62 @@
+{
+  "marka": "Krone",
+  "modeller": [
+    {
+      "model": "Cool Liner",
+      "kasa_tipleri": [
+        "Perde Treyler"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Dry Liner",
+      "kasa_tipleri": [
+        "Kapalı Treyler"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Mega Liner",
+      "kasa_tipleri": [
+        "Kapalı Treyler"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Tautliner",
+      "kasa_tipleri": [
+        "Perde Treyler"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Platform",
+      "kasa_tipleri": [
+        "Platform"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Flatbed",
+      "kasa_tipleri": [
+        "Kamyonet Römork"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Sattelit",
+      "kasa_tipleri": [
+        "Yarı Römork"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Tipper",
+      "kasa_tipleri": [
+        "Damperli"
+      ],
+      "uretim_baslangic": 2016
+    }
+  ],
+  "kaynak": "manuel"
+}

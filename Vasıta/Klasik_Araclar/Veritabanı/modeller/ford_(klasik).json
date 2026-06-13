@@ -1,0 +1,54 @@
+{
+  "marka": "Ford (Klasik)",
+  "modeller": [
+    {
+      "model": "Model T",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1908,
+      "uretim_bitis": 1927
+    },
+    {
+      "model": "Mustang (1965-1969)",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1965,
+      "uretim_bitis": 1969
+    },
+    {
+      "model": "Mustang Mach 1",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1969,
+      "uretim_bitis": 1973
+    },
+    {
+      "model": "Escort RS2000",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1975,
+      "uretim_bitis": 1981
+    },
+    {
+      "model": "Capri",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1969,
+      "uretim_bitis": 1986
+    },
+    {
+      "model": "Taunus",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1970,
+      "uretim_bitis": 1982
+    }
+  ],
+  "kaynak": "manuel"
+}

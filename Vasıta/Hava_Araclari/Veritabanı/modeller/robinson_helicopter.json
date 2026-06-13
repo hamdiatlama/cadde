@@ -1,0 +1,34 @@
+{
+  "marka": "Robinson Helicopter",
+  "modeller": [
+    {
+      "model": "R22 Beta II",
+      "kasa_tipleri": [
+        "Helikopter"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "R44 Raven II",
+      "kasa_tipleri": [
+        "Helikopter"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "R44 Clipper II",
+      "kasa_tipleri": [
+        "Helikopter"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "R66 Turbine",
+      "kasa_tipleri": [
+        "Helikopter"
+      ],
+      "uretim_baslangic": 2015
+    }
+  ],
+  "kaynak": "manuel"
+}

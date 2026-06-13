@@ -1,0 +1,191 @@
+{
+  "marka": "Honda Motorcycle",
+  "modeller": [
+    {
+      "model": "CBR1000RR-R Fireblade",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "CBR650R",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "CB650R",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "CB500F",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "CB125F",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Africa Twin CRF1100L",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "CRF300L",
+      "kasa_tipleri": [
+        "Enduro"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "CRF450R",
+      "kasa_tipleri": [
+        "Motokros"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Gold Wing GL1800",
+      "kasa_tipleri": [
+        "Touring"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "NC750X",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "X-ADV 750",
+      "kasa_tipleri": [
+        "Scooter",
+        "Adventure"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Forza 750",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Forza 350",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Forza 125",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "PCX 125",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2010
+    },
+    {
+      "model": "SH 125",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "CB1000R",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "CBR600RR",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2003,
+      "uretim_bitis": 2024
+    },
+    {
+      "model": "VFR800F",
+      "kasa_tipleri": [
+        "Sport Turizm"
+      ],
+      "uretim_baslangic": 2014,
+      "uretim_bitis": 2020
+    },
+    {
+      "model": "NT1100",
+      "kasa_tipleri": [
+        "Turizm"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "CB300R",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "MONKEY 125",
+      "kasa_tipleri": [
+        "Mini"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "GROM MSX125",
+      "kasa_tipleri": [
+        "Mini"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "CBR500R",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "CB500X",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "XL750 Transalp",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2023
+    }
+  ],
+  "kaynak": "manuel"
+}

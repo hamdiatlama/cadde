@@ -1,0 +1,90 @@
+{
+  "marka": "Komatsu",
+  "modeller": [
+    {
+      "model": "PC210",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "PC300",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "PC400",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "PC490",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "PC800",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "D155",
+      "kasa_tipleri": [
+        "Dozer"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "D375",
+      "kasa_tipleri": [
+        "Dozer"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "WA380",
+      "kasa_tipleri": [
+        "Yükleyici"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "WA500",
+      "kasa_tipleri": [
+        "Yükleyici"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "HD325",
+      "kasa_tipleri": [
+        "Damperli Kamyon"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "HM300",
+      "kasa_tipleri": [
+        "Damperli Kamyon"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "GD655",
+      "kasa_tipleri": [
+        "Greyder"
+      ],
+      "uretim_baslangic": 2017
+    }
+  ],
+  "kaynak": "manuel"
+}

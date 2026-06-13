@@ -1,0 +1,55 @@
+{
+  "marka": "Hitachi CE",
+  "modeller": [
+    {
+      "model": "ZX130",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "ZX210",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "ZX330",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "ZX490",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "ZW180",
+      "kasa_tipleri": [
+        "Yükleyici"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "ZW220",
+      "kasa_tipleri": [
+        "Yükleyici"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "EH3500",
+      "kasa_tipleri": [
+        "Maden Kamyonu"
+      ],
+      "uretim_baslangic": 2015
+    }
+  ],
+  "kaynak": "manuel"
+}

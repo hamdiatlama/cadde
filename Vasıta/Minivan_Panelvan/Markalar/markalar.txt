@@ -1,0 +1,32 @@
+=== Minivan & Panelvan MARKALARI ===
+
+[Avrupa]
+- Volkswagen
+- Mercedes-Benz Vans
+- Ford
+- Renault
+- Peugeot
+- Citroën
+- Opel
+- Fiat Professional
+- Iveco
+
+[Japonya]
+- Toyota (Proace)
+- Nissan (Townstar)
+- Mitsubishi (Delica)
+- Suzuki (Carry)
+
+[Güney Kore]
+- Hyundai (Staria/H-1)
+- Kia (Carnival/Bongo)
+- Ssangyong
+
+[Türkiye]
+- Fiat (Doblo/Fiorino)
+- Ford Otosan (Transit)
+- Renault (Kangoo/Trafic)
+- Peugeot (Partner/Expert)
+- Citroën (Berlingo/Jumpy)
+- Opel (Combo/Vivaro)
+

@@ -1,0 +1,111 @@
+=== İLAN DURUM AKIŞI (STATE MACHINE) ===
+
+Bir ilan, oluşturulduğu andan yayından kalkana kadar
+şu durumlardan geçer:
+
+                         ┌──────────┐
+                         │  TASLAK  │
+                         │  (Draft) │
+                         └────┬─────┘
+                              │ kullanıcı yayınlar
+                              ▼
+                         ┌──────────┐
+                    ┌───►│  AKTİF   │◄────────────┐
+                    │    │ (Active) │              │
+                    │    └────┬─────┘              │
+                    │         │                    │
+          süre bitiminde      │ kullanıcı          │ kullanıcı
+          otomatik            │ durdurur           │ tekrar aktif eder
+                    │         ▼                    │
+                    │    ┌──────────┐              │
+                    │    │  PASİF   ├──────────────┘
+                    │    │ (Passive)│
+                    │    └────┬─────┘
+                    │         │
+                    │         │ kullanıcı "Satıldı" işaretler
+                    │         ▼
+                    │    ┌──────────┐
+                    │    │ SATILDI  │
+                    │    │  (Sold)  │
+                    │    └──────────┘
+                    │
+                    │ süre bitiminde +15 gün
+                    ▼
+               ┌──────────┐
+               │  SÜRESİ  │
+               │  DOLDU   │  ← pasif kalan ilanlar da
+               │(Expired) │     süre sonunda buraya düşer
+               └────┬─────┘
+                    │ kullanıcı veya admin siler
+                    ▼
+               ┌──────────┐
+               │  SİLİNDİ │
+               │ (Deleted)│
+               └──────────┘
+
+────────────────────────────────────────
+DURUM GEÇİŞ KURALLARI
+────────────────────────────────────────
+
+1. Taslak → Aktif
+   - Kullanıcı "Yayınla" butonuna basar
+   - Zorunlu alanların tümü dolu olmalı
+   - En az 1 fotoğraf yüklenmiş olmalı
+   - Kullanıcı e-posta/telefon doğrulaması yapmış olmalı
+
+2. Aktif → Pasif
+   - Kullanıcı "İlanı Durdur" derse
+   - Admin tarafından geçici olarak askıya alınırsa (şikayet/kural ihlali)
+
+3. Aktif → Satıldı
+   - Kullanıcı "Satıldı" olarak işaretler
+   - İlan artık yayında görünmez, arşivde kalır
+
+4. Aktif → Süresi Doldu
+   - İlan yayın süresi (ör: 30/60/90 gün) bittiğinde otomatik
+   - Kullanıcıya bildirim gönderilir, yenileyebilir
+
+5. Pasif → Aktif
+   - Kullanıcı "Tekrar Yayınla" derse
+   - Süre kaldığı yerden devam eder
+
+6. Taslak → Silindi
+   - Kullanıcı taslağı siler (veritabanından gerçekten silinir)
+
+7. Satıldı / Süresi Doldu → kapalı durumlar
+   - Kullanıcı ilanı kopyalayarak yeni ilan oluşturabilir
+   - Veritabanında saklanır, silinemez (denetim/istatistik için)
+
+────────────────────────────────────────
+ZAMAN ÇİZELGESİ
+────────────────────────────────────────
+
+- Varsayılan yayın süresi: 30 gün
+- Ücretli paketler: 60 gün, 90 gün
+- VIP / Öne Çıkan: 7/15/30 gün (normal süreden bağımsız)
+- Pasif kalma süresi: 30 gün (sonra Süresi Doldu'ya düşer)
+- Süresi Doldu + 30 gün sonra otomatik silinmeye işaretlenir
+
+────────────────────────────────────────
+ADMİN DURUMLARI (Kullanıcıya özel ekstra)
+────────────────────────────────────────
+
+- Şikayet edildi (reported) — kullanıcıya bildirim, inceleme süreci
+- İnceleniyor (under_review) — admin kontrolünde
+- Reddedildi (rejected) — sebep belirtilir
+- Öne çıkarıldı (featured) — normal akışa ek, bitiş süresi var
+
+────────────────────────────────────────
+VERİTABANI ALANLARI (ilan tablosu)
+────────────────────────────────────────
+
+- id
+- status: enum(draft, active, passive, sold, expired, deleted, reported, under_review, rejected)
+- created_at
+- updated_at
+- published_at
+- expires_at
+- sold_at
+- featured_until
+- rejection_reason (nullable)
+- is_deleted (soft delete flag)

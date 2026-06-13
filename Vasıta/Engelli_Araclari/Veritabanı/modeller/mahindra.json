@@ -1,0 +1,192 @@
+{
+  "marka": "Mahindra",
+  "modeller": [
+    {
+      "model": "SUV",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Crossover SUV",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Pick-up truck",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "UTV",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Engines plant",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Tool & Die plant",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Multi-purpose units",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Aggregate + Assembly",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Vehicle Assembly plant",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Durban,South Africa[115]",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Sousse,Tunisia",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Mombasa,Kenya",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Mutugama,Sri Lanka",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Detroit, USA",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Jaipur, IndiaZaheerabad, (Hyderabad) IndiaMumbai, IndiaMohali, IndiaNagpur, IndiaRudrapur, IndiaVadodara, IndiaMajri, district Kurali",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Brisbane,Australia",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Houston,Texas, USOlivehurst,California, USBloomsburg,Pennsylvania, US",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Algeria",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Benin",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Gambia",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Ghana",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Nigeria",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Chad",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Mali",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "South Africa",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Pithampur(Indore), India",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    }
+  ],
+  "kaynak": "https://en.wikipedia.org/wiki/Mahindra_%26_Mahindra"
+}

@@ -1,0 +1,58 @@
+{
+  "il_id": 9,
+  "il": "Aydın",
+  "plaka": "09",
+  "ilceler": [
+    {
+      "ilce": "Bozdoğan"
+    },
+    {
+      "ilce": "Buharkent"
+    },
+    {
+      "ilce": "Didim"
+    },
+    {
+      "ilce": "Efeler"
+    },
+    {
+      "ilce": "Germencik"
+    },
+    {
+      "ilce": "Karacasu"
+    },
+    {
+      "ilce": "Karpuzlu"
+    },
+    {
+      "ilce": "Koçarlı"
+    },
+    {
+      "ilce": "Kuyucak"
+    },
+    {
+      "ilce": "Kuşadası"
+    },
+    {
+      "ilce": "Köşk"
+    },
+    {
+      "ilce": "Nazilli"
+    },
+    {
+      "ilce": "Sultanhisar"
+    },
+    {
+      "ilce": "Söke"
+    },
+    {
+      "ilce": "Yenipazar"
+    },
+    {
+      "ilce": "Çine"
+    },
+    {
+      "ilce": "İncirliova"
+    }
+  ]
+}

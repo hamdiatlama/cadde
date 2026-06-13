@@ -1,0 +1,343 @@
+{
+  "marka": "Bentley",
+  "modeller": [
+    {
+      "model": "1998",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1999",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "3 Litre",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "3.5 Litre",
+      "segment": "F",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "4 Litre",
+      "segment": "F",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "4 1/2 Litre",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Speed Six",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "8 Litre",
+      "segment": "F",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Arnage",
+      "segment": "F",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "Azure",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "Brooklands",
+      "segment": "F",
+      "kasa_tipleri": [
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "Continental",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Eight",
+      "segment": "F",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Mark V",
+      "segment": "F",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Mark VI",
+      "segment": "F",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Mulsanne",
+      "segment": "F",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "R Type",
+      "segment": "F",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "S1",
+      "segment": "F",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "S2",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "S3",
+      "segment": "F",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "T-Series",
+      "segment": "F",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Turbo R",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2000",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2001",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2002",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2003",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2004",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2005",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2006",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2007",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2008",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2009",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2010",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2011",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2012",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2013",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2014",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2015",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2016",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2017",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2018",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2019",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2020",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Bentayga",
+      "segment": "F",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Continental GT",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Flying Spur",
+      "segment": "F",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "State Limousine",
+      "segment": "F",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    }
+  ],
+  "kaynak": "https://en.wikipedia.org/wiki/List_of_Bentley_vehicles"
+}

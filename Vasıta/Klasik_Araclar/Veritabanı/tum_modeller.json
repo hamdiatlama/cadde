@@ -1,0 +1,698 @@
+[
+  {
+    "marka": "Anadol",
+    "modeller": [
+      {
+        "model": "A1",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1966,
+        "uretim_bitis": 1975
+      },
+      {
+        "model": "A2",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1970,
+        "uretim_bitis": 1980
+      },
+      {
+        "model": "SV-1",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1973,
+        "uretim_bitis": 1977
+      },
+      {
+        "model": "STC-16",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1973,
+        "uretim_bitis": 1975
+      },
+      {
+        "model": "Otosan HF",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1971,
+        "uretim_bitis": 1977
+      },
+      {
+        "model": "A8-16",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1984,
+        "uretim_bitis": 1990
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "BMW (Klasik)",
+    "modeller": [
+      {
+        "model": "2002 Turbo",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1968,
+        "uretim_bitis": 1975
+      },
+      {
+        "model": "E21 3 Serisi",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1975,
+        "uretim_bitis": 1983
+      },
+      {
+        "model": "E30 M3",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1986,
+        "uretim_bitis": 1991
+      },
+      {
+        "model": "E28 M5",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1985,
+        "uretim_bitis": 1988
+      },
+      {
+        "model": "E24 6 Serisi (CS)",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1976,
+        "uretim_bitis": 1989
+      },
+      {
+        "model": "Isetta",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1955,
+        "uretim_bitis": 1962
+      },
+      {
+        "model": "Z8",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 2000,
+        "uretim_bitis": 2003
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Britanya Klasikleri",
+    "modeller": [
+      {
+        "model": "Aston Martin DB5",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1963,
+        "uretim_bitis": 1965
+      },
+      {
+        "model": "Aston Martin DB6",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1965,
+        "uretim_bitis": 1970
+      },
+      {
+        "model": "Bentley Continental S1",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1955,
+        "uretim_bitis": 1959
+      },
+      {
+        "model": "Bentley Mulsanne (Klasik)",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1980,
+        "uretim_bitis": 1992
+      },
+      {
+        "model": "Rolls-Royce Silver Cloud",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1955,
+        "uretim_bitis": 1966
+      },
+      {
+        "model": "Rolls-Royce Silver Shadow",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1965,
+        "uretim_bitis": 1980
+      },
+      {
+        "model": "MG B",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1962,
+        "uretim_bitis": 1980
+      },
+      {
+        "model": "Triumph TR6",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1969,
+        "uretim_bitis": 1976
+      },
+      {
+        "model": "Triumph Spitfire",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1962,
+        "uretim_bitis": 1980
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Chevrolet (Klasik)",
+    "modeller": [
+      {
+        "model": "Bel Air",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1950,
+        "uretim_bitis": 1975
+      },
+      {
+        "model": "Camaro (1967-1969)",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1967,
+        "uretim_bitis": 1969
+      },
+      {
+        "model": "Impala (1960s)",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1960,
+        "uretim_bitis": 1969
+      },
+      {
+        "model": "Chevelle SS",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1964,
+        "uretim_bitis": 1973
+      },
+      {
+        "model": "Corvette C1",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1953,
+        "uretim_bitis": 1962
+      },
+      {
+        "model": "Corvette C2",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1963,
+        "uretim_bitis": 1967
+      },
+      {
+        "model": "Corvette C3",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1968,
+        "uretim_bitis": 1982
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Ferrari (Klasik)",
+    "modeller": [
+      {
+        "model": "250 GT Berlinetta",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1957,
+        "uretim_bitis": 1960
+      },
+      {
+        "model": "250 GTO",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1962,
+        "uretim_bitis": 1964
+      },
+      {
+        "model": "Dino 246 GT",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1969,
+        "uretim_bitis": 1974
+      },
+      {
+        "model": "Testarossa",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1984,
+        "uretim_bitis": 1996
+      },
+      {
+        "model": "F40",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1987,
+        "uretim_bitis": 1992
+      },
+      {
+        "model": "288 GTO",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1984,
+        "uretim_bitis": 1987
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Fiat (Klasik)",
+    "modeller": [
+      {
+        "model": "124 Spider",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1966,
+        "uretim_bitis": 1985
+      },
+      {
+        "model": "500 (Nuova)",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1957,
+        "uretim_bitis": 1975
+      },
+      {
+        "model": "131 Abarth",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1974,
+        "uretim_bitis": 1980
+      },
+      {
+        "model": "Dino Spider",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1966,
+        "uretim_bitis": 1973
+      },
+      {
+        "model": "X1/9",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1972,
+        "uretim_bitis": 1988
+      },
+      {
+        "model": "Topolino",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1936,
+        "uretim_bitis": 1955
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Ford (Klasik)",
+    "modeller": [
+      {
+        "model": "Model T",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1908,
+        "uretim_bitis": 1927
+      },
+      {
+        "model": "Mustang (1965-1969)",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1965,
+        "uretim_bitis": 1969
+      },
+      {
+        "model": "Mustang Mach 1",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1969,
+        "uretim_bitis": 1973
+      },
+      {
+        "model": "Escort RS2000",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1975,
+        "uretim_bitis": 1981
+      },
+      {
+        "model": "Capri",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1969,
+        "uretim_bitis": 1986
+      },
+      {
+        "model": "Taunus",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1970,
+        "uretim_bitis": 1982
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Jaguar (Klasik)",
+    "modeller": [
+      {
+        "model": "E-Type",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1961,
+        "uretim_bitis": 1974
+      },
+      {
+        "model": "XK120",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1948,
+        "uretim_bitis": 1954
+      },
+      {
+        "model": "XK140",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1954,
+        "uretim_bitis": 1957
+      },
+      {
+        "model": "Mark 2",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1959,
+        "uretim_bitis": 1967
+      },
+      {
+        "model": "XJS",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1975,
+        "uretim_bitis": 1996
+      },
+      {
+        "model": "D-Type",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1954,
+        "uretim_bitis": 1957
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Mercedes-Benz (Klasik)",
+    "modeller": [
+      {
+        "model": "300 SL Gullwing",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1954,
+        "uretim_bitis": 1957
+      },
+      {
+        "model": "W108/W109",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1965,
+        "uretim_bitis": 1972
+      },
+      {
+        "model": "W114/W115",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1968,
+        "uretim_bitis": 1976
+      },
+      {
+        "model": "Pagoda 230/250/280 SL",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1963,
+        "uretim_bitis": 1971
+      },
+      {
+        "model": "190E 2.5-16 Evolution",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1988,
+        "uretim_bitis": 1990
+      },
+      {
+        "model": "W123",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1976,
+        "uretim_bitis": 1985
+      },
+      {
+        "model": "W126",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1979,
+        "uretim_bitis": 1991
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Porsche (Klasik)",
+    "modeller": [
+      {
+        "model": "356",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1949,
+        "uretim_bitis": 1965
+      },
+      {
+        "model": "911 (930) Turbo",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1975,
+        "uretim_bitis": 1989
+      },
+      {
+        "model": "911 (964)",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1989,
+        "uretim_bitis": 1994
+      },
+      {
+        "model": "914",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1970,
+        "uretim_bitis": 1976
+      },
+      {
+        "model": "928",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1978,
+        "uretim_bitis": 1995
+      },
+      {
+        "model": "959",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1987,
+        "uretim_bitis": 1989
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Volkswagen (Klasik)",
+    "modeller": [
+      {
+        "model": "Beetle (Kaplumbağa)",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1938,
+        "uretim_bitis": 2003
+      },
+      {
+        "model": "T1 (Minibüs)",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1950,
+        "uretim_bitis": 1967
+      },
+      {
+        "model": "T2",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1967,
+        "uretim_bitis": 1979
+      },
+      {
+        "model": "Karmann Ghia",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1955,
+        "uretim_bitis": 1974
+      },
+      {
+        "model": "Golf GTI (Mk1)",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1976,
+        "uretim_bitis": 1983
+      },
+      {
+        "model": "Scirocco Mk1",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1974,
+        "uretim_bitis": 1981
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "İtalyan Klasikleri",
+    "modeller": [
+      {
+        "model": "Alfa Romeo Giulia (105)",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1962,
+        "uretim_bitis": 1977
+      },
+      {
+        "model": "Alfa Romeo Spider",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1966,
+        "uretim_bitis": 1994
+      },
+      {
+        "model": "Lancia Stratos",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1973,
+        "uretim_bitis": 1978
+      },
+      {
+        "model": "Lancia Delta Integrale",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1986,
+        "uretim_bitis": 1994
+      },
+      {
+        "model": "Maserati Ghibli (Klasik)",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1967,
+        "uretim_bitis": 1973
+      },
+      {
+        "model": "Maserati Bora",
+        "kasa_tipleri": [
+          "Klasik"
+        ],
+        "uretim_baslangic": 1971,
+        "uretim_bitis": 1978
+      }
+    ],
+    "kaynak": "manuel"
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "marka": "Kaksan",
+  "modeller": [
+    {
+      "model": "Tanker",
+      "kasa_tipleri": [
+        "Tank"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Silobas",
+      "kasa_tipleri": [
+        "Silobas"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Flatbed",
+      "kasa_tipleri": [
+        "Platform"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Konteyner",
+      "kasa_tipleri": [
+        "Konteyner"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Dorse",
+      "kasa_tipleri": [
+        "Yarı Römork"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Lowbed",
+      "kasa_tipleri": [
+        "Düşük Yataklı"
+      ],
+      "uretim_baslangic": 2016
+    }
+  ],
+  "kaynak": "manuel"
+}

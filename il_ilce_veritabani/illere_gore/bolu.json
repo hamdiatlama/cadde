@@ -1,0 +1,34 @@
+{
+  "il_id": 14,
+  "il": "Bolu",
+  "plaka": "14",
+  "ilceler": [
+    {
+      "ilce": "Dörtdivan"
+    },
+    {
+      "ilce": "Gerede"
+    },
+    {
+      "ilce": "Göynük"
+    },
+    {
+      "ilce": "Kıbrıscık"
+    },
+    {
+      "ilce": "Mengen"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Mudurnu"
+    },
+    {
+      "ilce": "Seben"
+    },
+    {
+      "ilce": "Yeniçağa"
+    }
+  ]
+}

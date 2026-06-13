@@ -1,0 +1,99 @@
+=== İLETİŞİM TERCİHLERİ ===
+
+────────────────────────────────────────
+KULLANICI İLETİŞİM BİLGİLERİ
+────────────────────────────────────────
+
+Her kullanıcının profilinde aşağıdaki iletişim kanalları tanımlanır:
+
+ZORUNLU:
+  - e-posta (doğrulanmış olmalı)
+
+OPSİYONEL (en az 1 tanesi zorunlu - ilan yayını için):
+  - cep telefonu (doğrulanmış olmalı — SMS kodu ile)
+  - sabit hat telefonu
+  - WhatsApp numarası (cep telefonu ile aynı olabilir)
+
+────────────────────────────────────────
+GİZLİLİK AYARLARI (ilan bazında)
+────────────────────────────────────────
+
+Her ilan için kullanıcı aşağıdaki tercihleri belirleyebilir:
+
+1. TELEFON GÖSTERİMİ
+   - herkese_açık: telefon numarası herkese gösterilir
+   - sadece_giriş_yapan: sadece üye girişi yapan kullanıcılar görür
+   - gizli: telefon hiç gösterilmez (sadece mesaj/posta iletişim)
+   - (varsayılan: sadece_giriş_yapan)
+
+2. WHATSAPP
+   - whatsap_ile_iletisim: boolean
+   - whatsapp_goster: boolean (Telefon gösteriminden bağımsız)
+   - whatsapp_butonu: true ise "Whatsapp'tan Yaz" butonu çıkar
+
+3. E-POSTA
+   - eposta_goster: boolean (varsayılan: false)
+   - (Kullanıcılar birbirine site içi mesaj atar, eposta gizli kalır)
+
+4. İLETİŞİM FORMU
+   - anonim_mesaj: boolean (varsayılan: true)
+     "İlan sahibine soru sor" formu ile kullanıcı epostası açığa çıkmadan
+     mesaj iletilir. False ise form gösterilmez.
+
+────────────────────────────────────────
+MESAJLAŞMA
+────────────────────────────────────────
+
+- Site içi mesaj sistemi (özel mesaj / PM)
+- Kullanıcılar birbirine doğrudan e-posta göremez
+- İlan üzerinden gelen mesajlarda ilan bilgisi otomatik eklenir
+- Mesaj bildirimleri:
+  · E-posta ile bildirim (günlük özet veya anlık)
+  · SMS ile bildirim (opsiyonel, ücretli paketlerde)
+  · Push notification (mobil uygulama varsa)
+
+────────────────────────────────────────
+ARAMA İZİN SAATLERİ
+────────────────────────────────────────
+
+- arama_baslangic_saat: time (08:00 varsayılan)
+- arama_bitis_saat: time (22:00 varsayılan)
+- Bu saatler dışında telefon numarası gizlenir
+
+────────────────────────────────────────
+HESAP TÜRÜNE GÖRE İLETİŞİM
+────────────────────────────────────────
+
+Bireysel hesap:
+  - 1 cep telefonu gösterebilir
+  - Gizlilik ayarlarına tam erişim
+
+Kurumsal / Galeri hesabı:
+  - 1 sabit hat + 1 cep telefonu gösterebilir
+  - 1 e-posta adresi gösterebilir (opsiyonel)
+  - Tüm iletişim kanalları açık gösterilebilir
+  - Çalışma saatleri belirtilebilir
+
+────────────────────────────────────────
+VERİTABANI ALANLARI (kullanici_iletisim tablosu + ilan_gorunurluk)
+────────────────────────────────────────
+
+kullanici_iletisim {
+  kullanici_id        PK
+  eposta              string
+  eposta_dogrulandi   boolean
+  cep_telefon         string
+  cep_dogrulandi      boolean
+  sabit_telefon       string  (nullable)
+  whatsapp            string  (nullable)
+  arama_baslangic     time    (default 08:00)
+  arama_bitis         time    (default 22:00)
+}
+
+ilan_gorunurluk {
+  ilan_id                PK
+  telefon_gorunurlugu    enum(herkese_acik, sadece_giris, gizli)
+  eposta_goster          boolean
+  whatsapp_goster        boolean
+  anonim_mesaj_acik      boolean
+}

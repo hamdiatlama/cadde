@@ -1,0 +1,22 @@
+{
+  "il_id": 30,
+  "il": "Hakkari",
+  "plaka": "30",
+  "ilceler": [
+    {
+      "ilce": "Derecik"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Yüksekova"
+    },
+    {
+      "ilce": "Çukurca"
+    },
+    {
+      "ilce": "Şemdinli"
+    }
+  ]
+}

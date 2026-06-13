@@ -1,0 +1,83 @@
+{
+  "marka": "CFMoto",
+  "modeller": [
+    {
+      "model": "700CL-X Heritage",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "700CL-X Sport",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "800MT",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "650MT",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "650NK",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "450NK",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "450SR",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "300NK",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "300SR",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "250CL-X",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Papio",
+      "kasa_tipleri": [
+        "Mini"
+      ],
+      "uretim_baslangic": 2019
+    }
+  ],
+  "kaynak": "manuel"
+}

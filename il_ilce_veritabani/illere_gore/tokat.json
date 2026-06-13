@@ -1,0 +1,43 @@
+{
+  "il_id": 60,
+  "il": "Tokat",
+  "plaka": "60",
+  "ilceler": [
+    {
+      "ilce": "Almus"
+    },
+    {
+      "ilce": "Artova"
+    },
+    {
+      "ilce": "Başçiftlik"
+    },
+    {
+      "ilce": "Erbaa"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Niksar"
+    },
+    {
+      "ilce": "Pazar"
+    },
+    {
+      "ilce": "Reşadiye"
+    },
+    {
+      "ilce": "Sulusaray"
+    },
+    {
+      "ilce": "Turhal"
+    },
+    {
+      "ilce": "Yeşilyurt"
+    },
+    {
+      "ilce": "Zile"
+    }
+  ]
+}

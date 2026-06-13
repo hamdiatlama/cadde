@@ -1,0 +1,62 @@
+{
+  "marka": "Scania",
+  "modeller": [
+    {
+      "model": "P Serisi",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "G Serisi",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "R Serisi",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "S Serisi",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "PXT",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Super",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Scania Citywide",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Scania Interlink",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2016
+    }
+  ],
+  "kaynak": "manuel"
+}

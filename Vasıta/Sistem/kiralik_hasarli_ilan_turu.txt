@@ -1,0 +1,66 @@
+=== İLAN TÜRÜ / KİRALIK & HASARLI AYRIMI ===
+
+Bu sistemde araç tipleri ayrı ayrı ele alınmıştır.
+Ancak aşağıdaki kategoriler araç tipi DEĞİL, ilan türüdür:
+
+────────────────────────────────────────
+1. KİRALIK ARAÇLAR
+────────────────────────────────────────
+
+Her araç tipinin "kiralık" versiyonu vardır.
+Örnek: Otomobil Kiralık, Motosiklet Kiralık, Deniz Aracı Kiralık
+
+Yöntem: Her ilana bir alan eklenir
+  ilan_turu: enum(satilik, kiralik, gunluk_kiralik)
+
+Kiralık ilanlara özel alanlar:
+  - kira_suresi: enum(gunluk, haftalik, aylik, yillik)
+  - kira_depozito: decimal(12,2)
+  - kira_ucreti: decimal(12,2)
+  - kira_birimi: enum(ay, gun, hafta, km)
+  - ehliyet_yas_siniri: int (nullable)
+  - surucu_yas_siniri: int (nullable)
+  - ek_surucu_ucreti: decimal(12,2)
+  - sinirsiz_km: boolean
+  - km_siniri: int (nullable)
+  - teslim_yeri: string
+  - havaalani_teslim: boolean
+  - kasko_dahil: boolean
+  - yol_yardimi: boolean
+
+Filtreleme:
+  /otomobil?ilan_turu=kiralik
+  /motosiklet?ilan_turu=gunluk_kiralik
+
+────────────────────────────────────────
+2. HASARLI ARAÇLAR
+────────────────────────────────────────
+
+Hasarlı araçlar da bir alt kategori / durumdur:
+  hasar_durumu: enum(hasarsiz, hasarli, pert, hafif_hasarli, agir_hasarli)
+
+Hasarlı ilanlara özel alanlar:
+  - hasar_turu: enum(kaza, sel, yangin, dolu, darbe, diger)
+  - hasar_tarihi: date
+  - hasar_aciklama: text
+  - pert_kaydi: boolean
+  - tramer_kaydi: boolean
+  - tramer_tutari: decimal(12,2)
+  - ekspertiz_raporu: boolean
+  - onarim_tahmini: decimal(12,2)
+  - parca_durumu: enum(orijinal, yan_sanayi, komple)
+
+Filtreleme:
+  /otomobil?hasar_durumu=hasarli
+  /otomobil?hasar_durumu=pert
+
+────────────────────────────────────────
+KULLANIM
+────────────────────────────────────────
+
+- "Satılık" varsayılan ilan türüdür
+- Kiralık ve Hasarlı ayrımı her araç tipinde çalışır
+- URL'de filtre olarak kullanılır: /otomobil?ilan_turu=kiralik
+- Ana menüde "Kiralık Araçlar" ayrı bir link olabilir
+  (arka planda ilan_turu=kiralik filtresi uygulanır)
+- "Hasarlı Araçlar" da aynı şekilde ana menü linki olabilir

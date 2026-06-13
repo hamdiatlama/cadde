@@ -1,0 +1,54 @@
+{
+  "marka": "Jaguar (Klasik)",
+  "modeller": [
+    {
+      "model": "E-Type",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1961,
+      "uretim_bitis": 1974
+    },
+    {
+      "model": "XK120",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1948,
+      "uretim_bitis": 1954
+    },
+    {
+      "model": "XK140",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1954,
+      "uretim_bitis": 1957
+    },
+    {
+      "model": "Mark 2",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1959,
+      "uretim_bitis": 1967
+    },
+    {
+      "model": "XJS",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1975,
+      "uretim_bitis": 1996
+    },
+    {
+      "model": "D-Type",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1954,
+      "uretim_bitis": 1957
+    }
+  ],
+  "kaynak": "manuel"
+}

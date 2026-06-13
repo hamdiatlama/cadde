@@ -1,0 +1,242 @@
+[
+  {
+    "marka": "BMC (Askeri)",
+    "modeller": [
+      {
+        "model": "Amazon (4x4)",
+        "kasa_tipleri": [
+          "Askeri Cip"
+        ],
+        "uretim_baslangic": 2015
+      },
+      {
+        "model": "Kirpi",
+        "kasa_tipleri": [
+          "Zırhlı"
+        ],
+        "uretim_baslangic": 2014
+      },
+      {
+        "model": "Afyon",
+        "kasa_tipleri": [
+          "Zırhlı"
+        ],
+        "uretim_baslangic": 2016
+      },
+      {
+        "model": "Kıraç",
+        "kasa_tipleri": [
+          "Zırhlı"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Altuğ 8x8",
+        "kasa_tipleri": [
+          "Askeri Kamyon"
+        ],
+        "uretim_baslangic": 2020
+      },
+      {
+        "model": "380-26",
+        "kasa_tipleri": [
+          "Askeri Kamyon"
+        ],
+        "uretim_baslangic": 2018
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "FNSS",
+    "modeller": [
+      {
+        "model": "ACV-15",
+        "kasa_tipleri": [
+          "ZMA (Zırhlı Muharebe)"
+        ],
+        "uretim_baslangic": 2014
+      },
+      {
+        "model": "Kaplan-10",
+        "kasa_tipleri": [
+          "Zırhlı"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Kaplan-20",
+        "kasa_tipleri": [
+          "Zırhlı"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "Pars 8x8",
+        "kasa_tipleri": [
+          "Zırhlı"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "Kunduz",
+        "kasa_tipleri": [
+          "ZMA"
+        ],
+        "uretim_baslangic": 2016
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Nurol Makina",
+    "modeller": [
+      {
+        "model": "Ejder Yalçın",
+        "kasa_tipleri": [
+          "Zırhlı"
+        ],
+        "uretim_baslangic": 2017
+      },
+      {
+        "model": "Ejder TOMA",
+        "kasa_tipleri": [
+          "Zırhlı (Toplumsal Olay)"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "Ejder Kama",
+        "kasa_tipleri": [
+          "Zırhlı"
+        ],
+        "uretim_baslangic": 2020
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Oshkosh Defense",
+    "modeller": [
+      {
+        "model": "JLTV",
+        "kasa_tipleri": [
+          "Zırhlı"
+        ],
+        "uretim_baslangic": 2016
+      },
+      {
+        "model": "L-ATV",
+        "kasa_tipleri": [
+          "Zırhlı"
+        ],
+        "uretim_baslangic": 2017
+      },
+      {
+        "model": "M-ATV",
+        "kasa_tipleri": [
+          "Zırhlı"
+        ],
+        "uretim_baslangic": 2012,
+        "uretim_bitis": 2020
+      },
+      {
+        "model": "MTVR MK23",
+        "kasa_tipleri": [
+          "Askeri Kamyon"
+        ],
+        "uretim_baslangic": 2014
+      },
+      {
+        "model": "HEMTT M977",
+        "kasa_tipleri": [
+          "Askeri Kamyon"
+        ],
+        "uretim_baslangic": 2013
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Otokar (Askeri)",
+    "modeller": [
+      {
+        "model": "Cobra",
+        "kasa_tipleri": [
+          "Zırhlı"
+        ],
+        "uretim_baslangic": 2014
+      },
+      {
+        "model": "Cobra II",
+        "kasa_tipleri": [
+          "Zırhlı"
+        ],
+        "uretim_baslangic": 2017
+      },
+      {
+        "model": "Arma 8x8",
+        "kasa_tipleri": [
+          "Zırhlı"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Akrep II",
+        "kasa_tipleri": [
+          "Zırhlı"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "Ural",
+        "kasa_tipleri": [
+          "Askeri Kamyon"
+        ],
+        "uretim_baslangic": 2015
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Rheinmetall",
+    "modeller": [
+      {
+        "model": "Yak",
+        "kasa_tipleri": [
+          "Zırhlı"
+        ],
+        "uretim_baslangic": 2015
+      },
+      {
+        "model": "Boxer",
+        "kasa_tipleri": [
+          "ZMA"
+        ],
+        "uretim_baslangic": 2016
+      },
+      {
+        "model": "Lynx KF41",
+        "kasa_tipleri": [
+          "ZMA"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Wiesel 2",
+        "kasa_tipleri": [
+          "Zırhlı"
+        ],
+        "uretim_baslangic": 2014
+      },
+      {
+        "model": "GTK Boxer",
+        "kasa_tipleri": [
+          "ZMA"
+        ],
+        "uretim_baslangic": 2017
+      }
+    ],
+    "kaynak": "manuel"
+  }
+]

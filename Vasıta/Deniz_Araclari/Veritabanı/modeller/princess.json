@@ -1,0 +1,62 @@
+{
+  "marka": "Princess",
+  "modeller": [
+    {
+      "model": "V40",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "V50",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "V65",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Y72",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Y80",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Y85",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "X95",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "F55",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2021
+    }
+  ],
+  "kaynak": "manuel"
+}

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Tasarim Numunesi</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{--bg:#f9fafb;--card:#fff;--card2:#f3f4f6;--border:#e5e7eb;--text1:#111;--text2:#374151;--text3:#6b7280;--text4:#9ca3af;--btn-bg:#111;--btn-text:#fff;--radius:4px}
+html.dark{--bg:#111;--card:#1a1a2e;--card2:#222;--border:#333;--text1:#fff;--text2:#e5e7eb;--text3:#9ca3af;--text4:#6b7280;--btn-bg:#fff;--btn-text:#111}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text1);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:40px 16px;transition:background .2s}
+.toggle{position:fixed;top:16px;right:16px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:6px;z-index:99;cursor:pointer;display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text2);font-family:'Inter',sans-serif}
+.toggle .material-icons{font-size:18px}
+
+.container{max-width:380px;width:100%}
+.page-title{font-size:20px;font-weight:600;margin-bottom:4px;color:var(--text1)}
+.page-sub{font-size:13px;color:var(--text3);margin-bottom:24px}
+.bolum{font-size:11px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin:24px 0 10px}
+
+.cell{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;margin-bottom:6px;display:flex;align-items:center;gap:12px;transition:background .15s}
+.cell:active{background:var(--card2)}
+.cell .avatar{width:36px;height:36px;border-radius:50%;background:var(--card2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;color:var(--text1);flex-shrink:0}
+.cell .info{flex:1;min-width:0}
+.cell .info .up{font-size:14px;font-weight:500;color:var(--text1)}
+.cell .info .down{font-size:12px;color:var(--text3);margin-top:1px}
+.cell .right{font-size:12px;color:var(--text3);text-align:right;flex-shrink:0}
+.cell .right .price{font-size:16px;font-weight:600;color:var(--text1)}
+
+.row-2{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.service{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:10px;text-align:center;cursor:pointer;transition:.15s}
+.service:active{background:var(--card2)}
+.service .material-icons{font-size:28px;color:var(--text1);margin-bottom:2px}
+.service .s-name{font-size:12px;font-weight:500;color:var(--text1)}
+.service .s-sub{font-size:11px;color:var(--text3);margin-top:1px}
+
+.btn{display:block;width:100%;padding:10px;background:var(--btn-bg);color:var(--btn-text);border:none;border-radius:var(--radius);font-family:'Inter',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:opacity .1s;text-align:center}
+.btn:active{opacity:.8}
+.btn-out{display:block;width:100%;padding:10px;background:transparent;color:var(--text2);border:1px solid var(--border);border-radius:var(--radius);font-family:'Inter',sans-serif;font-size:13px;font-weight:500;cursor:pointer;text-align:center}
+.btn-out:active{background:var(--card2)}
+
+.input{width:100%;padding:8px 10px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);font-family:'Inter',sans-serif;font-size:13px;color:var(--text1);outline:none}
+.input::placeholder{color:var(--text4)}
+.input:focus{border-color:var(--text1)}
+
+.satir{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px}
+.satir:last-child{border:none}
+.satir .sol{color:var(--text3)}
+.satir .sag{color:var(--text1);font-weight:500}
+
+.nav{display:flex;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.nav .item{flex:1;padding:8px;text-align:center;font-size:12px;color:var(--text3);cursor:pointer;transition:.15s}
+.nav .item:not(:last-child){border-right:1px solid var(--border)}
+.nav .item.aktif{background:var(--btn-bg);color:var(--btn-text)}
+
+.chip{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px;color:var(--text2);background:var(--card);margin:2px}
+.chip.aktif{border-color:var(--text1);color:var(--text1)}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px}
+.card .c-title{font-size:13px;font-weight:600;color:var(--text1);margin-bottom:2px}
+.card .c-sub{font-size:12px;color:var(--text3);margin-bottom:8px}
+.card .c-price{font-size:22px;font-weight:700;color:var(--text1)}
+.card .c-row{display:flex;justify-content:space-between;font-size:12px;color:var(--text3);padding:4px 0}
+
+.header-row{display:flex;align-items:center;gap:10px;padding:4px 0}
+.header-row .material-icons{font-size:20px;color:var(--text3)}
+.header-row h2{font-size:15px;font-weight:600;flex:1;color:var(--text1)}
+.header-row .right-icon{font-size:18px;color:var(--text3)}
+
+.sep{height:1px;background:var(--border);margin:16px 0}
+
+.ornek-alani{display:flex;flex-direction:column;gap:6px}
+</style>
+</head>
+<body>
+<button class="toggle" id="themeBtn" onclick="gece()">
+  <span class="material-icons">dark_mode</span> Gece
+</button>
+
+<div class="container">
+  <div class="page-title">Tasarım Nümunesi</div>
+  <div class="page-sub">Minimalist gri tema • 4px radius • ince çizgiler</div>
+
+  <!-- STATIK NUMUNE - etkilesimsiz, sadece gosterim -->
+  <div class="ornek-alani">
+
+    <!-- NAVIGASYON -->
+    <div class="bolum">Navigasyon</div>
+    <div class="nav">
+      <div class="item aktif">Taksi</div>
+      <div class="item">Yemek</div>
+      <div class="item">Çiçek</div>
+    </div>
+
+    <!-- ADRES -->
+    <div class="bolum">Adres Seçimi</div>
+    <div class="cell">
+      <span class="material-icons" style="font-size:18px;color:var(--text3)">search</span>
+      <div class="info">
+        <div class="up" style="color:var(--text3)">Nereye gitmek istiyorsunuz?</div>
+        <div class="down">Kadıköy, İstanbul</div>
+      </div>
+    </div>
+
+    <!-- SERVIS SECIMI -->
+    <div class="bolum">Servis Seçimi</div>
+    <div class="row-2">
+      <div class="service">
+        <span class="material-icons">directions_car</span>
+        <div class="s-name">Economy</div>
+        <div class="s-sub">~₺124</div>
+      </div>
+      <div class="service">
+        <span class="material-icons">car_rental</span>
+        <div class="s-name">Comfort</div>
+        <div class="s-sub">~₺189</div>
+      </div>
+      <div class="service">
+        <span class="material-icons">airport_shuttle</span>
+        <div class="s-name">Premium</div>
+        <div class="s-sub">~₺295</div>
+      </div>
+      <div class="service">
+        <span class="material-icons">local_taxi</span>
+        <div class="s-name">Taksi</div>
+        <div class="s-sub">Taksimetre</div>
+      </div>
+    </div>
+
+    <!-- FIYAT -->
+    <div class="bolum">Fiyat Bilgisi</div>
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div class="c-title">Kadıköy → Taksim</div>
+          <div class="c-sub">6.2 km • 18 dk</div>
+        </div>
+        <div class="c-price">₺124</div>
+      </div>
+      <div class="sep"></div>
+      <div class="c-row"><span>Mesafe</span><span>6.2 km</span></div>
+      <div class="c-row"><span>Süre</span><span>18 dk</span></div>
+      <div class="c-row"><span>Ödeme</span><span>Kart</span></div>
+    </div>
+
+    <!-- SOHBET LISTESI -->
+    <div class="bolum">Sohbet Listesi</div>
+    <div class="cell">
+      <div class="avatar">A</div>
+      <div class="info">
+        <div class="up">Ahmet Yılmaz</div>
+        <div class="down">Merhaba, neredesiniz?</div>
+      </div>
+      <div class="right">14:32<span style="display:block;margin-top:2px;background:#111;color:#fff;border-radius:50%;width:16px;height:16px;font-size:9px;display:flex;align-items:center;justify-content:center;margin-left:auto">2</span></div>
+    </div>
+    <div class="cell">
+      <div class="avatar">M</div>
+      <div class="info">
+        <div class="up">Mehmet Demir</div>
+        <div class="down">Tamam geliyorum</div>
+      </div>
+      <div class="right">14:15</div>
+    </div>
+    <div class="cell">
+      <div class="avatar">Z</div>
+      <div class="info">
+        <div class="up">Zeynep Kaya</div>
+        <div class="down" style="color:var(--text1);font-weight:500">Yola çıktım ✓</div>
+      </div>
+      <div class="right">13:58</div>
+    </div>
+
+    <!-- SURUCU -->  
+    <div class="bolum">Sürücü Bilgisi</div>
+    <div class="card">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="avatar" style="width:40px;height:40px;font-size:16px">A</div>
+        <div style="flex:1">
+          <div class="c-title">Ahmet Yılmaz</div>
+          <div class="c-sub">34 TKS 123 • Toyota Corolla</div>
+        </div>
+        <div style="display:flex;gap:4px">
+          <span class="material-icons" style="font-size:20px;color:var(--text3)">call</span>
+          <span class="material-icons" style="font-size:20px;color:var(--text3)">chat</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHIP -->
+    <div class="bolum">Durum & Filtre</div>
+    <div>
+      <span class="chip">📍 Kadıköy</span>
+      <span class="chip aktif">📍 Taksim</span>
+      <span class="chip">⭐ 4.9</span>
+      <span class="chip">💳 Kart</span>
+    </div>
+
+    <!-- INPUT -->
+    <div class="bolum">Input</div>
+    <input class="input" placeholder="Adres ara..." value="Kadıköy">
+
+    <!-- BUTONLAR -->
+    <div class="bolum">Buton</div>
+    <div style="display:flex;gap:6px">
+      <button class="btn" style="width:auto;padding:8px 20px">Taksi Çağır</button>
+      <button class="btn-out" style="width:auto;padding:8px 20px">İptal</button>
+    </div>
+
+    <!-- BADGE -->
+    <div class="bolum">Badge</div>
+    <div style="display:flex;gap:6px">
+      <span style="background:#f3f4f6;border:1px solid var(--border);border-radius:var(--radius);padding:2px 8px;font-size:11px;color:#374151">Tamamlandı</span>
+      <span style="background:#fef2f2;border:1px solid #fecaca;border-radius:var(--radius);padding:2px 8px;font-size:11px;color:#dc2626">İptal</span>
+      <span style="background:#f3f4f6;border:1px solid var(--border);border-radius:var(--radius);padding:2px 8px;font-size:11px;color:#6b7280">Bekliyor</span>
+    </div>
+  </div>
+
+  <div style="margin-top:24px;font-size:12px;color:var(--text3);text-align:center;padding-bottom:20px">
+    Tasarım: Inter • Material Icons • Gri ton • 4px radius • 1px border<br>
+    Gündüz: açık zemin • Gece: koyu zemin
+  </div>
+</div>
+
+<script>
+function gece(){
+  const h=document.documentElement;
+  const b=document.getElementById('themeBtn');
+  h.classList.toggle('dark');
+  const d=h.classList.contains('dark');
+  b.innerHTML=d?'<span class="material-icons">light_mode</span> Gündüz':'<span class="material-icons">dark_mode</span> Gece';
+}
+</script>
+</body>
+</html>

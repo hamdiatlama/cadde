@@ -1,0 +1,55 @@
+{
+  "marka": "Peugeot",
+  "modeller": [
+    {
+      "model": "Expert Panelvan",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Expert Combi",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Boxer Panelvan",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2006
+    },
+    {
+      "model": "Boxer Minibus",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2006
+    },
+    {
+      "model": "Rifter",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Partner Panelvan",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Traveller",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2015
+    }
+  ],
+  "kaynak": "manuel"
+}

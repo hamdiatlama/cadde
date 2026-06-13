@@ -1,0 +1,74 @@
+{
+  "marka": "Dacia",
+  "modeller": [
+    {
+      "model": "Sandero",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "Logan",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Sedan",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "Duster",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Jogger",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Spring",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Bigster",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2024
+    },
+    {
+      "model": "Lodgy",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2012,
+      "uretim_bitis": 2021
+    },
+    {
+      "model": "Dokker",
+      "segment": "V",
+      "kasa_tipleri": [
+        "Van"
+      ],
+      "uretim_baslangic": 2012,
+      "uretim_bitis": 2021
+    }
+  ],
+  "kaynak": "manuel"
+}

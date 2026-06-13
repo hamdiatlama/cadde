@@ -1,0 +1,71 @@
+{
+  "marka": "Tata",
+  "modeller": [
+    {
+      "model": "Nexon",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Harrier",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Safari",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Altroz",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Tiago",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Tigor",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Punch",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Curvv",
+      "segment": "J",
+      "kasa_tipleri": [
+        "Coupe",
+        "SUV"
+      ],
+      "uretim_baslangic": 2024
+    }
+  ],
+  "kaynak": "manuel"
+}

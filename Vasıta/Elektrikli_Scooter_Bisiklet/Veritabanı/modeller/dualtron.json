@@ -1,0 +1,41 @@
+{
+  "marka": "Dualtron",
+  "modeller": [
+    {
+      "model": "Thunder",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Storm",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Spider",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Eagle Pro",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "X Limited",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2021
+    }
+  ],
+  "kaynak": "manuel"
+}

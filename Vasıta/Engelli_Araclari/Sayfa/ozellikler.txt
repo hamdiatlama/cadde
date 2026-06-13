@@ -1,0 +1,34 @@
+Fiyat
+İlan Başlığı
+Konum
+Marka
+Model
+Yıl
+Yakıt Tipi
+Vites
+Araç Durumu
+KM
+Motor Gücü
+Motor Hacmi
+Çekiş
+Renk
+LPG
+Garanti
+Plaka / Uyruk
+Kimden
+Takas
+Engelli Plaka Türü
+Engelli Raporu Var mı?
+Modifikasyon Tipi
+Manuel Gaz/ Fren
+Sürücü Koltuğu Dönüşüm
+Koltuk Sayısı
+Kapı Sayısı
+Rampa / Asansör
+Donanım Paketi
+Video Linki
+İlan Açıklaması
+VIN / Şasi No
+Krediye Uygun
+Sigorta Durumu
+Pazarlık / İndirim

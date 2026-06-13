@@ -1,0 +1,97 @@
+{
+  "il_id": 35,
+  "il": "İzmir",
+  "plaka": "35",
+  "ilceler": [
+    {
+      "ilce": "Aliağa"
+    },
+    {
+      "ilce": "Balçova"
+    },
+    {
+      "ilce": "Bayraklı"
+    },
+    {
+      "ilce": "Bayındır"
+    },
+    {
+      "ilce": "Bergama"
+    },
+    {
+      "ilce": "Beydağ"
+    },
+    {
+      "ilce": "Bornova"
+    },
+    {
+      "ilce": "Buca"
+    },
+    {
+      "ilce": "Dikili"
+    },
+    {
+      "ilce": "Foça"
+    },
+    {
+      "ilce": "Gaziemir"
+    },
+    {
+      "ilce": "Güzelbahçe"
+    },
+    {
+      "ilce": "Karabağlar"
+    },
+    {
+      "ilce": "Karaburun"
+    },
+    {
+      "ilce": "Karşıyaka"
+    },
+    {
+      "ilce": "Kemalpaşa"
+    },
+    {
+      "ilce": "Kiraz"
+    },
+    {
+      "ilce": "Konak"
+    },
+    {
+      "ilce": "Kınık"
+    },
+    {
+      "ilce": "Menderes"
+    },
+    {
+      "ilce": "Menemen"
+    },
+    {
+      "ilce": "Narlıdere"
+    },
+    {
+      "ilce": "Seferihisar"
+    },
+    {
+      "ilce": "Selçuk"
+    },
+    {
+      "ilce": "Tire"
+    },
+    {
+      "ilce": "Torbalı"
+    },
+    {
+      "ilce": "Urla"
+    },
+    {
+      "ilce": "Çeşme"
+    },
+    {
+      "ilce": "Çiğli"
+    },
+    {
+      "ilce": "Ödemiş"
+    }
+  ]
+}

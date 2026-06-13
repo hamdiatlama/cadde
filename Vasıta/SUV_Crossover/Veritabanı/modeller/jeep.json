@@ -1,0 +1,106 @@
+{
+  "marka": "Jeep",
+  "modeller": [
+    {
+      "model": "Compass",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Cherokee",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2014,
+      "uretim_bitis": 2023
+    },
+    {
+      "model": "Grand Cherokee",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2010
+    },
+    {
+      "model": "Wrangler",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Renegade",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Avenger",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "Gladiator",
+      "segment": "P",
+      "kasa_tipleri": [
+        "Pick-up"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Commander",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2021,
+      "uretim_bitis": 2023
+    },
+    {
+      "model": "Wagoneer",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Grand Wagoneer",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Compass (KK)",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2006,
+      "uretim_bitis": 2010
+    },
+    {
+      "model": "Liberty",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2001,
+      "uretim_bitis": 2012
+    }
+  ],
+  "kaynak": "manuel"
+}

@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Ticari Panel - Cüzdan & Ödeme Sistemi</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f9fafb;--card:#fff;--card2:#f3f4f6;--border:#e5e7eb;--text1:#111;--text2:#374151;--text3:#6b7280;--text4:#9ca3af;--radius:4px;--green:#059669;--red:#dc2626;--blue:#2563eb;--orange:#d97706;--purple:#7c3aed}
+body{font-family:'Inter',sans-serif;background:var(--bg);min-height:100vh;display:flex;flex-direction:column}
+.topbar{display:flex;align-items:center;gap:12px;padding:10px 20px;border-bottom:1px solid var(--border);background:var(--card);flex-shrink:0}
+.topbar .tb-badge{font-size:11px;color:var(--text3);font-weight:500;background:var(--card2);padding:2px 8px;border-radius:var(--radius)}
+.topbar .tb-title{font-size:16px;font-weight:600;color:var(--text1)}
+.topbar .tb-spacer{flex:1}
+.topbar .menu-btn{width:38px;height:38px;display:flex;align-items:center;justify-content:center;border:none;background:none;color:var(--text1);cursor:pointer;border-radius:var(--radius);font-size:24px}
+.topbar .menu-btn:active{background:var(--card2)}
+.main-content{flex:1;display:flex;flex-direction:column;overflow:hidden;position:relative}
+.map-area{flex:1;background:var(--card2);display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--text3);gap:4px}
+.map-area .material-icons{font-size:64px;color:var(--text4)}
+.map-overlay{position:absolute;top:0;left:0;right:0;padding:12px 20px}
+.map-overlay .search-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);z-index:10}
+.search-box .sb-input{display:flex;align-items:center;gap:10px;padding:12px 16px}
+.search-box .sb-input input{flex:1;border:none;outline:none;font-size:14px;font-family:'Inter',sans-serif;color:var(--text1);background:transparent}
+.search-box .sb-input input::placeholder{color:var(--text4)}
+.search-box .sb-input .sb-clear{display:none;font-size:18px;color:var(--text4);cursor:pointer}
+.search-results{display:none;border-top:1px solid var(--border);padding:6px 0}
+.search-results.open{display:block}
+.sr-item{display:flex;align-items:center;gap:12px;padding:10px 16px;cursor:pointer}
+.sr-item:active{background:var(--card2)}
+.sr-item .sr-icon{width:32px;height:32px;border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;background:var(--card2)}
+.sr-item .sr-label{font-size:13px;font-weight:500;color:var(--text1);flex:1}
+.phone-bottom{margin:0 auto;width:390px;flex-shrink:0;border-top:1px solid var(--border);background:var(--card)}
+.phone-nav{display:flex;border-top:1px solid var(--border);background:var(--card)}
+.phone-nav .bn-item{flex:1;text-align:center;padding:6px 0 8px;cursor:pointer}
+.phone-nav .bn-item .material-icons{font-size:22px;color:var(--text4);display:block}
+.phone-nav .bn-item .bn-label{font-size:10px;color:var(--text4);margin-top:1px}
+.phone-nav .bn-item.aktif .material-icons{color:var(--text1)}
+.phone-nav .bn-item.aktif .bn-label{color:var(--text1);font-weight:500}
+.service-panel{display:none;margin:0 auto;width:390px;flex-shrink:0;border-top:1px solid var(--border);background:var(--card)}
+.service-panel.open{display:block}
+.sp-section{padding:16px}
+.sp-section+.sp-section{border-top:1px solid var(--border)}
+.sp-label{font-size:10px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.sp-row{display:flex;gap:8px}
+.sp-btn{width:100%;padding:12px;border:none;background:var(--text1);color:var(--bg);font-size:14px;font-weight:600;border-radius:var(--radius);cursor:pointer;font-family:'Inter',sans-serif}
+.sp-btn:active{opacity:.8}
+.sp-btn-out{background:var(--card);color:var(--text1);border:1px solid var(--border)}
+.sp-btn-sm{font-size:12px;padding:8px 16px;width:auto;display:inline-block}
+.sp-input{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:6px}
+.sp-input .material-icons{font-size:18px;color:var(--text3)}
+.sp-input input{flex:1;border:none;outline:none;font-size:13px;font-family:'Inter',sans-serif;color:var(--text1);background:transparent}
+.sp-input input::placeholder{color:var(--text4)}
+.sp-input span{font-size:12px;color:var(--text3)}
+.sp-badge{display:inline-flex;align-items:center;gap:4px;font-size:10px;padding:2px 8px;border-radius:8px;font-weight:600}
+.sp-badge.green{background:#ecfdf5;color:var(--green)}
+.sp-badge.gray{background:var(--card2);color:var(--text3)}
+.sp-badge.blue{background:#dbeafe;color:var(--blue)}
+.sp-badge.red{background:#fef2f2;color:var(--red)}
+.sp-badge.orange{background:#fffbeb;color:#92400e}
+
+/* Cuzdan ozel stiller */
+.wallet-card{display:flex;align-items:center;gap:14px;padding:16px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:12px}
+.wallet-card .wc-icon{width:44px;height:44px;border-radius:50%;background:var(--card2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--text1)}
+.wallet-card .wc-info{flex:1}
+.wallet-card .wc-info .wc-label{font-size:11px;color:var(--text3)}
+.wallet-card .wc-info .wc-value{font-size:18px;font-weight:700;color:var(--text1);margin-top:1px}
+.wallet-card .wc-info .wc-sub{font-size:10px;color:var(--text4);margin-top:1px}
+.wallet-card .wc-action{font-size:12px;font-weight:500;color:var(--blue);cursor:pointer}
+.wallet-card .wc-action:active{opacity:.7}
+
+.wallet-card.wc-positive{border-color:var(--green)}
+.wallet-card.wc-positive .wc-info .wc-value{color:var(--green)}
+.wallet-card.wc-locked .wc-info .wc-value{color:var(--orange)}
+.wallet-card.wc-negative{border-color:var(--red)}
+.wallet-card.wc-negative .wc-info .wc-value{color:var(--red)}
+
+.wallet-actions{display:flex;gap:8px;margin-bottom:16px}
+.wallet-actions .wa-btn{flex:1;text-align:center;padding:10px;border:1px solid var(--border);border-radius:var(--radius);cursor:pointer}
+.wallet-actions .wa-btn:active{background:var(--card2)}
+.wallet-actions .wa-btn .material-icons{font-size:22px;color:var(--text3);display:block}
+.wallet-actions .wa-btn .wa-label{font-size:10px;color:var(--text2);margin-top:2px;font-weight:500}
+
+.tx-item{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)}
+.tx-item:last-child{border:none}
+.tx-item .tx-icon{width:32px;height:32px;border-radius:50%;background:var(--card2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--text3)}
+.tx-item .tx-icon.green{background:#ecfdf5;border-color:var(--green);color:var(--green)}
+.tx-item .tx-icon.red{background:#fef2f2;border-color:var(--red);color:var(--red)}
+.tx-item .tx-icon.blue{background:#dbeafe;border-color:var(--blue);color:var(--blue)}
+.tx-item .tx-info{flex:1}
+.tx-item .tx-info .tx-title{font-size:12px;font-weight:500;color:var(--text1)}
+.tx-item .tx-info .tx-sub{font-size:10px;color:var(--text4);margin-top:1px}
+.tx-item .tx-amount{font-size:13px;font-weight:700;text-align:right}
+.tx-item .tx-amount.positive{color:var(--green)}
+.tx-item .tx-amount.negative{color:var(--red)}
+.tx-item .tx-amount .tx-date{display:block;font-size:9px;font-weight:400;color:var(--text4);margin-top:1px}
+
+.s-cycle{display:flex;align-items:center;gap:12px;padding:14px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:6px;cursor:pointer}
+.s-cycle:active{background:var(--card2)}
+.s-cycle .sc-icon{width:36px;height:36px;border-radius:var(--radius);background:var(--card2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--text3)}
+.s-cycle .sc-info{flex:1}
+.s-cycle .sc-info .sc-title{font-size:12px;font-weight:600;color:var(--text1)}
+.s-cycle .sc-info .sc-sub{font-size:10px;color:var(--text4)}
+.s-cycle .sc-amount{font-size:13px;font-weight:700;color:var(--text1)}
+.s-cycle .sc-amount .sc-status{display:block;font-size:9px;font-weight:500}
+
+.service-amount{display:flex;align-items:center;gap:8px;padding:8px;border-bottom:1px solid var(--border)}
+.service-amount:last-child{border:none}
+.service-amount .sa-icon{font-size:20px;color:var(--text3);width:26px}
+.service-amount .sa-name{flex:1;font-size:12px;color:var(--text1)}
+.service-amount .sa-earn{font-size:12px;font-weight:600;color:var(--green)}
+
+.drawer-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.3);z-index:99;display:none}
+.drawer-overlay.open{display:block}
+.drawer{position:fixed;top:0;right:-390px;width:390px;height:100vh;background:var(--card);border-left:1px solid var(--border);z-index:100;transition:right .25s;display:flex;flex-direction:column}
+.drawer.open{right:0}
+.drawer-header{display:flex;align-items:center;gap:8px;padding:14px 20px;border-bottom:1px solid var(--border);flex-shrink:0}
+.drawer-header .close-btn{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:none;background:none;color:var(--text1);cursor:pointer;border-radius:var(--radius);font-size:22px}
+.drawer-header h2{font-size:16px;font-weight:600;flex:1;color:var(--text1)}
+.drawer-scroll{flex:1;overflow-y:auto;padding:8px 0}
+.d-item{display:flex;align-items:center;gap:14px;padding:14px 20px;cursor:pointer;color:var(--text1)}
+.d-item:active{background:var(--card2)}
+.d-item .material-icons{font-size:22px;color:var(--text3);width:22px}
+.d-item .li-label{font-size:14px;font-weight:500;flex:1}
+.d-item .di-badge{font-size:10px;background:var(--red);color:#fff;padding:1px 6px;border-radius:8px;font-weight:600}
+.d-item .di-num{font-size:12px;color:var(--text4)}
+.d-item.d-wallet .material-icons,.d-item.d-wallet .li-label{color:var(--green)}
+@media(max-width:480px){
+  .map-overlay{padding:12px}
+  .phone-bottom{width:100%}
+  .service-panel{width:100%}
+  .drawer{width:100%;right:-100%}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="tb-badge" id="topHesapTipi">Bireysel</span>
+  <div class="tb-title">Ticari Panel</div>
+  <div class="tb-spacer"></div>
+  <button class="menu-btn" onclick="toggleDrawer()"><span class="material-icons">menu</span></button>
+</div>
+
+<div class="main-content">
+  <div class="map-area">
+    <span class="material-icons">account_balance_wallet</span>
+    <span style="font-size:14px">Cüzdan ve ticari panel</span>
+  </div>
+  <div class="map-overlay">
+    <div class="search-box">
+      <div class="sb-input">
+        <span class="material-icons">search</span>
+        <input type="text" id="searchInput" placeholder="Cüzdan, ödeme, bakiye, fatura..." oninput="searchChange(this.value)" autocomplete="off">
+        <span class="material-icons sb-clear" id="clearBtn" onclick="clearSearch()">close</span>
+      </div>
+      <div class="search-results" id="searchResults">
+        <div class="sr-item" onclick="openPanel('cuzdanPanel')"><div class="sr-icon"><span class="material-icons">account_balance_wallet</span></div><div class="sr-label">Cüzdan</div></div>
+        <div class="sr-item" onclick="openPanel('odemeYontemiPanel')"><div class="sr-icon"><span class="material-icons">credit_card</span></div><div class="sr-label">Ödeme Yöntemleri</div></div>
+        <div class="sr-item" onclick="openPanel('paraYuklePanel')"><div class="sr-icon"><span class="material-icons">add_circle</span></div><div class="sr-label">Para Yükle</div></div>
+        <div class="sr-item" onclick="openPanel('odemeDonguPanel')"><div class="sr-icon"><span class="material-icons">sync_alt</span></div><div class="sr-label">Ödeme Döngüsü</div></div>
+        <div class="sr-item" onclick="openPanel('hareketPanel')"><div class="sr-icon"><span class="material-icons">receipt_long</span></div><div class="sr-label">Hesap Hareketleri</div></div>
+        <div class="sr-item" onclick="openPanel('servisPanel')"><div class="sr-icon"><span class="material-icons">donut_large</span></div><div class="sr-label">Servis Gelir/Gider</div></div>
+        <div class="sr-item" onclick="openPanel('bankaPanel')"><div class="sr-icon"><span class="material-icons">account_balance</span></div><div class="sr-label">Banka Hesapları</div></div>
+        <div class="sr-item" onclick="openPanel('faturaPanel')"><div class="sr-icon"><span class="material-icons">description</span></div><div class="sr-label">Faturalar</div></div>
+        <div class="sr-item" onclick="openPanel('vergiPanel')"><div class="sr-icon"><span class="material-icons">receipt</span></div><div class="sr-label">Vergi & Komisyon</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="phone-bottom" id="mainBottom">
+  <div class="phone-nav">
+    <div class="bn-item"><span class="material-icons">home</span><div class="bn-label">Ana Sayfa</div></div>
+    <div class="bn-item"><span class="material-icons">search</span><div class="bn-label">Arama</div></div>
+    <div class="bn-item"><span class="material-icons">more_horiz</span><div class="bn-label">—</div></div>
+    <div class="bn-item aktif"><span class="material-icons">account_balance_wallet</span><div class="bn-label">Cüzdan</div></div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- CUZDAN PANELI -->
+<!-- ============================================ -->
+<div class="service-panel" id="cuzdanPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Cüzdan</div>
+      <span class="sp-badge gray" id="cuzdanHesapTipi" style="margin-left:auto">Bireysel</span>
+    </div>
+
+    <div class="wallet-card wc-positive">
+      <div class="wc-icon"><span class="material-icons">account_balance_wallet</span></div>
+      <div class="wc-info">
+        <div class="wc-label">Kullanılabilir Bakiye</div>
+        <div class="wc-value">₺2.847,50</div>
+        <div class="wc-sub">Anlık kullanıma hazır</div>
+      </div>
+      <div class="wc-action" onclick="openPanel('paraYuklePanel')">Para Yükle</div>
+    </div>
+
+    <div class="wallet-card wc-locked">
+      <div class="wc-icon"><span class="material-icons">lock</span></div>
+      <div class="wc-info">
+        <div class="wc-label">Bloke Bakiye (Ödeme Döngüsünde)</div>
+        <div class="wc-value">₺890,00</div>
+        <div class="wc-sub">Havale/EFT ile 3 iş günü içinde çözülür</div>
+      </div>
+    </div>
+
+    <div class="wallet-card" style="border-color:var(--blue)">
+      <div class="wc-icon" style="border-color:var(--blue);color:var(--blue)"><span class="material-icons">trending_up</span></div>
+      <div class="wc-info">
+        <div class="wc-label">Toplam Kazanç (Tüm Zamanlar)</div>
+        <div class="wc-value" style="color:var(--blue)">₺12.490,00</div>
+        <div class="wc-sub">24 teslimat, 8 taksi yolculuğu, 12 yemek siparişi</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sp-section">
+    <div class="sp-label">Hızlı İşlemler</div>
+    <div class="wallet-actions">
+      <div class="wa-btn" onclick="openPanel('paraYuklePanel')"><span class="material-icons">add_circle</span><div class="wa-label">Para Yükle</div></div>
+      <div class="wa-btn"><span class="material-icons">arrow_circle_down</span><div class="wa-label">Para Çek</div></div>
+      <div class="wa-btn" onclick="openPanel('odemeYontemiPanel')"><span class="material-icons">credit_card</span><div class="wa-label">Ödeme Yöntemleri</div></div>
+      <div class="wa-btn" onclick="openPanel('odemeDonguPanel')"><span class="material-icons">sync_alt</span><div class="wa-label">Ödeme Döngüsü</div></div>
+    </div>
+  </div>
+
+  <div class="sp-section">
+    <div class="sp-label">Servis Bazlı Bakiye</div>
+    <div class="service-amount"><span class="material-icons sa-icon">motorcycle</span><div class="sa-name">Kurye</div><div class="sa-earn">₺1.240</div></div>
+    <div class="service-amount"><span class="material-icons sa-icon">directions_car</span><div class="sa-name">Taksi</div><div class="sa-earn">₺890</div></div>
+    <div class="service-amount"><span class="material-icons sa-icon">restaurant</span><div class="sa-name">Yemek</div><div class="sa-earn">₺520</div></div>
+    <div class="service-amount"><span class="material-icons sa-icon">local_florist</span><div class="sa-name">Çiçek</div><div class="sa-earn">₺197,50</div></div>
+  </div>
+
+  <div class="sp-section">
+    <div class="sp-label">Son Hareketler</div>
+    <div class="tx-item">
+      <div class="tx-icon green"><span class="material-icons">motorcycle</span></div>
+      <div class="tx-info"><div class="tx-title">Kurye teslimatı ücreti</div><div class="tx-sub">Kadıköy → Maltepe</div></div>
+      <div class="tx-amount positive">+₺39,00<span class="tx-date">Bugün 14:30</span></div>
+    </div>
+    <div class="tx-item">
+      <div class="tx-icon green"><span class="material-icons">directions_car</span></div>
+      <div class="tx-info"><div class="tx-title">Taksi yolculuğu ücreti</div><div class="tx-sub">Kadıköy → Beşiktaş</div></div>
+      <div class="tx-amount positive">+₺185,00<span class="tx-date">Bugün 11:20</span></div>
+    </div>
+    <div class="tx-item">
+      <div class="tx-icon red"><span class="material-icons">send</span></div>
+      <div class="tx-info"><div class="tx-title">Havale çıkışı</div><div class="tx-sub">Banka hesabına transfer</div></div>
+      <div class="tx-amount negative">-₺500,00<span class="tx-date">Dün</span></div>
+    </div>
+    <div style="text-align:center;margin-top:10px">
+      <span class="sp-badge blue" style="cursor:pointer" onclick="openPanel('hareketPanel')">Tümünü Gör</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- ODEME YONTEMLERI / ENTEGRASYON -->
+<!-- ============================================ -->
+<div class="service-panel" id="odemeYontemiPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1);flex:1">Ödeme Yöntemleri</div>
+      <span class="sp-badge gray">5 yöntem</span>
+    </div>
+  </div>
+
+  <!-- Kredi Karti -->
+  <div class="sp-section">
+    <div class="sp-label">Kredi / Banka Kartları</div>
+    <div style="padding:12px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:4px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="width:40px;height:28px;background:linear-gradient(135deg,#1a1f71,#1a1f71);border-radius:3px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:8px;font-weight:700">MC</div>
+        <div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text1)">Mastercard • 4976 **** 1234</div><div style="font-size:10px;color:var(--text4)">Son kullanma: 08/27 • Ahmet Yılmaz</div></div>
+        <span class="sp-badge green">Varsayılan</span>
+      </div>
+    </div>
+    <div style="padding:12px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:4px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="width:40px;height:28px;background:linear-gradient(135deg,#0047ab,#0047ab);border-radius:3px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:8px;font-weight:700">V</div>
+        <div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text1)">Visa • 4929 **** 5678</div><div style="font-size:10px;color:var(--text4)">Son kullanma: 03/26 • Ahmet Yılmaz</div></div>
+        <span class="sp-badge gray">Bireysel</span>
+      </div>
+    </div>
+    <div style="padding:12px;border:1px solid var(--border);border-radius:var(--radius)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="width:40px;height:28px;background:linear-gradient(135deg,#005f8c,#005f8c);border-radius:3px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:8px;font-weight:700">T</div>
+        <div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text1)">Troy • 4976 **** 9012</div><div style="font-size:10px;color:var(--text4)">Son kullanma: 12/26 • Kurumsal A.Ş.</div></div>
+        <span class="sp-badge green">Kurumsal</span>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;padding:10px;border:1px dashed var(--border);border-radius:var(--radius);cursor:pointer;color:var(--text3);margin-top:4px">
+      <span class="material-icons" style="font-size:18px">add</span>
+      <span style="font-size:12px;font-weight:500">Yeni Kart Ekle</span>
+    </div>
+  </div>
+
+  <!-- Dijital Cuzdanlar -->
+  <div class="sp-section">
+    <div class="sp-label">Dijital Cüzdanlar</div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap">
+      <div style="flex:0 0 calc(50% - 3px);padding:12px;border:1px solid var(--border);border-radius:var(--radius);text-align:center;cursor:pointer;background:var(--card2)">
+        <div style="font-size:22px;margin-bottom:4px;color:#003087">P</div>
+        <div style="font-size:11px;font-weight:600;color:var(--text1)">PayPal</div>
+        <div style="font-size:9px;color:var(--green);margin-top:2px">Bağlı • ahmet@email.com</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 3px);padding:12px;border:1px solid var(--border);border-radius:var(--radius);text-align:center;cursor:pointer">
+        <div style="font-size:22px;margin-bottom:4px;color:#000">G</div>
+        <div style="font-size:11px;font-weight:600;color:var(--text1)">Google Pay</div>
+        <div style="font-size:9px;color:var(--text4);margin-top:2px">Bağlı değil</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 3px);padding:12px;border:1px solid var(--border);border-radius:var(--radius);text-align:center;cursor:pointer">
+        <div style="font-size:22px;margin-bottom:4px;color:#555">A</div>
+        <div style="font-size:11px;font-weight:600;color:var(--text1)">Apple Pay</div>
+        <div style="font-size:9px;color:var(--text4);margin-top:2px">Bağlı değil</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 3px);padding:12px;border:1px solid var(--border);border-radius:var(--radius);text-align:center;cursor:pointer">
+        <div style="font-size:22px;margin-bottom:4px;color:var(--blue)">I</div>
+        <div style="font-size:11px;font-weight:600;color:var(--text1)">iPara / Iyzico</div>
+        <div style="font-size:9px;color:var(--text4);margin-top:2px">Entegre değil</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Banka Havale -->
+  <div class="sp-section">
+    <div class="sp-label">Havale / EFT</div>
+    <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:4px">
+      <div style="display:flex;align-items:center;gap:8px">
+        <div style="width:32px;height:32px;background:#dbeafe;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:#1e40af;font-weight:700;font-size:11px">İB</div>
+        <div style="flex:1"><div style="font-size:12px;font-weight:500;color:var(--text1)">İş Bankası • TR12 0006 **** 5678</div><div style="font-size:10px;color:var(--text4)">Bireysel • Varsayılan havale hesabı</div></div>
+        <span class="sp-badge green">Doğrulandı</span>
+      </div>
+    </div>
+    <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius)">
+      <div style="display:flex;align-items:center;gap:8px">
+        <div style="width:32px;height:32px;background:#fef2f2;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:#991b1b;font-weight:700;font-size:11px">GA</div>
+        <div style="flex:1"><div style="font-size:12px;font-weight:500;color:var(--text1)">Garanti BBVA • TR12 0006 **** 5432</div><div style="font-size:10px;color:var(--text4)">Kurumsal • Kurumsal A.Ş.</div></div>
+        <span class="sp-badge green">Doğrulandı</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobil Odeme ve Diger -->
+  <div class="sp-section">
+    <div class="sp-label">Mobil Ödeme & Diğer</div>
+    <div style="display:flex;gap:6px">
+      <div style="flex:1;padding:10px;border:1px solid var(--border);border-radius:var(--radius);text-align:center;cursor:pointer">
+        <span class="material-icons" style="font-size:22px;color:#e60000;display:block">smartphone</span>
+        <span style="font-size:10px;font-weight:500;color:var(--text1)">Turkcell</span>
+        <span style="font-size:8px;color:var(--green);display:block">Onaylı</span>
+      </div>
+      <div style="flex:1;padding:10px;border:1px solid var(--border);border-radius:var(--radius);text-align:center;cursor:pointer">
+        <span class="material-icons" style="font-size:22px;color:#e60000;display:block">smartphone</span>
+        <span style="font-size:10px;font-weight:500;color:var(--text1)">Vodafone</span>
+        <span style="font-size:8px;color:var(--green);display:block">Onaylı</span>
+      </div>
+      <div style="flex:1;padding:10px;border:1px solid var(--border);border-radius:var(--radius);text-align:center;cursor:pointer">
+        <span class="material-icons" style="font-size:22px;color:#0047ab;display:block">smartphone</span>
+        <span style="font-size:10px;font-weight:500;color:var(--text1)">Türk Telekom</span>
+        <span style="font-size:8px;color:var(--text4);display:block">Bağlı değil</span>
+      </div>
+      <div style="flex:1;padding:10px;border:1px solid var(--border);border-radius:var(--radius);text-align:center;cursor:pointer">
+        <span class="material-icons" style="font-size:22px;color:var(--green);display:block">qr_code</span>
+        <span style="font-size:10px;font-weight:500;color:var(--text1)">QR Kod</span>
+        <span style="font-size:8px;color:var(--text4);display:block">Hazır</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- PARA YUKLE -->
+<!-- ============================================ -->
+<div class="service-panel" id="paraYuklePanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Para Yükle</div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Tutar Seç</div>
+    <div class="sp-row" style="flex-wrap:wrap;gap:6px">
+      <div class="sp-option secili" style="flex:0 0 calc(33% - 6px);padding:14px 4px"><div class="so-title">₺50</div></div>
+      <div class="sp-option" style="flex:0 0 calc(33% - 6px);padding:14px 4px"><div class="so-title">₺100</div></div>
+      <div class="sp-option" style="flex:0 0 calc(33% - 6px);padding:14px 4px"><div class="so-title">₺200</div></div>
+      <div class="sp-option" style="flex:0 0 calc(33% - 6px);padding:14px 4px"><div class="so-title">₺500</div></div>
+      <div class="sp-option" style="flex:0 0 calc(33% - 6px);padding:14px 4px"><div class="so-title">₺1.000</div></div>
+      <div class="sp-option" style="flex:0 0 calc(33% - 6px);padding:14px 4px"><div class="so-title">Özel</div></div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Ödeme Yöntemi Seç</div>
+    <div class="delivery-option secili" onclick="odemeYontemiSec(this)" style="cursor:pointer">
+      <div class="do-icon" style="background:linear-gradient(135deg,#1a1f71,#1a1f71);color:#fff;border-color:#1a1f71"><span style="font-size:12px;font-weight:700">MC</span></div>
+      <div class="do-info"><div class="do-title">Mastercard • 4976 **** 1234</div><div class="do-sub">Kredi kartı ile hemen yükle</div></div>
+      <span class="material-icons do-check">radio_button_checked</span>
+    </div>
+    <div class="delivery-option" onclick="odemeYontemiSec(this)" style="cursor:pointer">
+      <div class="do-icon" style="background:#003087;color:#fff;border-color:#003087"><span style="font-size:14px;font-weight:700">P</span></div>
+      <div class="do-info"><div class="do-title">PayPal</div><div class="do-sub">ahmet@email.com ile öde</div></div>
+      <span class="material-icons do-check">radio_button_unchecked</span>
+    </div>
+    <div class="delivery-option" onclick="odemeYontemiSec(this)" style="cursor:pointer">
+      <div class="do-icon" style="background:#ecfdf5;color:var(--green);border-color:var(--green)"><span class="material-icons" style="font-size:18px">account_balance</span></div>
+      <div class="do-info"><div class="do-title">Havale / EFT</div><div class="do-sub">İş Bankası • TR12 0006 **** 5678</div></div>
+      <span class="material-icons do-check">radio_button_unchecked</span>
+    </div>
+    <div class="delivery-option" onclick="odemeYontemiSec(this)" style="cursor:pointer">
+      <div class="do-icon" style="background:#fffbeb;color:#92400e;border-color:#fde68a"><span class="material-icons" style="font-size:18px">smartphone</span></div>
+      <div class="do-info"><div class="do-title">Mobil Ödeme</div><div class="do-sub">Turkcell • 0555 *** 1212</div></div>
+      <span class="material-icons do-check">radio_button_unchecked</span>
+    </div>
+    <div class="delivery-option" onclick="odemeYontemiSec(this)" style="cursor:pointer">
+      <div class="do-icon" style="background:#f3e8ff;color:var(--purple);border-color:#d8b4fe"><span class="material-icons" style="font-size:18px">language</span></div>
+      <div class="do-info"><div class="do-title">Sanal POS</div><div class="do-sub">Iyzico / iPara ile karttan çekim</div></div>
+      <span class="material-icons do-check">radio_button_unchecked</span>
+    </div>
+    <div style="font-size:10px;color:var(--text4);text-align:center;margin-top:6px">
+      <span style="cursor:pointer;color:var(--blue)" onclick="openPanel('odemeYontemiPanel')">Ödeme yöntemlerini yönet</span>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div style="display:flex;justify-content:space-between;padding:4px 0;font-size:13px"><span>Yüklenecek Tutar</span><span style="font-weight:700">₺50,00</span></div>
+    <div style="display:flex;justify-content:space-between;padding:4px 0;font-size:11px;color:var(--text4)"><span>İşlem Ücreti</span><span>₺0,00</span></div>
+    <button class="sp-btn" style="margin-top:8px">Ödeme Yap</button>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- ODEME DONGUSU -->
+<!-- ============================================ -->
+<div class="service-panel" id="odemeDonguPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Ödeme Döngüsü</div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Döngü Durumu</div>
+    <div class="wallet-card wc-positive" style="margin:0">
+      <div class="wc-icon"><span class="material-icons">sync_alt</span></div>
+      <div class="wc-info">
+        <div class="wc-label">Mevcut Dönem</div>
+        <div class="wc-value">3 - 9 Haziran</div>
+        <div class="wc-sub">Haftalık otomatik ödeme döngüsü</div>
+      </div>
+      <span class="sp-badge green">Aktif</span>
+    </div>
+  </div>
+
+  <div class="sp-section">
+    <div class="sp-label">Bu Dönem Özeti</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
+      <div style="text-align:center;padding:12px;border:1px solid var(--border);border-radius:var(--radius)">
+        <div style="font-size:18px;font-weight:700;color:var(--green)">+₺624</div>
+        <div style="font-size:10px;color:var(--text3)">Gelir (servislerden)</div>
+      </div>
+      <div style="text-align:center;padding:12px;border:1px solid var(--border);border-radius:var(--radius)">
+        <div style="font-size:18px;font-weight:700;color:var(--red)">-₺210</div>
+        <div style="font-size:10px;color:var(--text3)">Gider (kurye ödemeleri)</div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;padding:10px;background:var(--card2);border-radius:var(--radius);font-size:13px;font-weight:600">
+      <span>Dönem Net</span>
+      <span style="color:var(--green)">+₺414,00</span>
+    </div>
+  </div>
+
+  <div class="sp-section">
+    <div class="sp-label">Döngü Ayarları</div>
+    <div class="s-cycle">
+      <div class="sc-icon"><span class="material-icons">calendar_today</span></div>
+      <div class="sc-info"><div class="sc-title">Ödeme Periyodu</div><div class="sc-sub">Haftalık (Pazartesi)</div></div>
+      <span class="material-icons" style="color:var(--text4);font-size:18px">chevron_right</span>
+    </div>
+    <div class="s-cycle">
+      <div class="sc-icon"><span class="material-icons">percent</span></div>
+      <div class="sc-info"><div class="sc-title">Platform Komisyonu</div><div class="sc-sub">Kurye %15 • Taksi %12 • Yemek %18 • Çiçek %10</div></div>
+      <span class="material-icons" style="color:var(--text4);font-size:18px">chevron_right</span>
+    </div>
+    <div class="s-cycle">
+      <div class="sc-icon"><span class="material-icons">account_balance</span></div>
+      <div class="sc-info"><div class="sc-title">Ödeme Yöntemi</div><div class="sc-sub">Havale/EFT • XXX Bank TR12 3456 7890</div></div>
+      <span class="material-icons" style="color:var(--text4);font-size:18px">chevron_right</span>
+    </div>
+    <div class="s-cycle">
+      <div class="sc-icon"><span class="material-icons">lock</span></div>
+      <div class="sc-info"><div class="sc-title">Bloke Süresi</div><div class="sc-sub">Ödemeler 3 iş günü blokede bekler</div></div>
+      <span class="material-icons" style="color:var(--text4);font-size:18px">chevron_right</span>
+    </div>
+  </div>
+
+  <div class="sp-section">
+    <div class="sp-label">Geçmiş Döngüler</div>
+    <div class="s-cycle">
+      <div class="sc-icon"><span class="material-icons">check_circle</span></div>
+      <div class="sc-info"><div class="sc-title">27 May - 2 Haz</div><div class="sc-sub">₺520 net • Ödendi</div></div>
+      <span class="sp-badge green">Ödendi</span>
+    </div>
+    <div class="s-cycle">
+      <div class="sc-icon"><span class="material-icons">check_circle</span></div>
+      <div class="sc-info"><div class="sc-title">20 May - 26 May</div><div class="sc-sub">₺890 net • Ödendi</div></div>
+      <span class="sp-badge green">Ödendi</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- HESAP HAREKETLERI -->
+<!-- ============================================ -->
+<div class="service-panel" id="hareketPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Hesap Hareketleri</div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Filtrele</div>
+    <div class="sp-row" style="flex-wrap:wrap;gap:4px">
+      <span class="sp-badge" style="background:var(--text1);color:var(--bg);cursor:pointer">Tümü</span>
+      <span class="sp-badge gray" style="cursor:pointer">Gelir</span>
+      <span class="sp-badge gray" style="cursor:pointer">Gider</span>
+      <span class="sp-badge gray" style="cursor:pointer">Kurye</span>
+      <span class="sp-badge gray" style="cursor:pointer">Taksi</span>
+      <span class="sp-badge gray" style="cursor:pointer">Havale</span>
+    </div>
+  </div>
+  <div class="sp-section" style="max-height:400px;overflow-y:auto">
+    <div class="tx-item">
+      <div class="tx-icon green"><span class="material-icons">motorcycle</span></div>
+      <div class="tx-info"><div class="tx-title">Kurye gönderi ücreti</div><div class="tx-sub">Kadıköy → Maltepe • #KR-2024-001</div></div>
+      <div class="tx-amount positive">+₺39,00<span class="tx-date">9 Haz 14:30</span></div>
+    </div>
+    <div class="tx-item">
+      <div class="tx-icon green"><span class="material-icons">directions_car</span></div>
+      <div class="tx-info"><div class="tx-title">Taksi yolculuğu ücreti</div><div class="tx-sub">Kadıköy → Beşiktaş • #TX-2024-042</div></div>
+      <div class="tx-amount positive">+₺185,00<span class="tx-date">9 Haz 11:20</span></div>
+    </div>
+    <div class="tx-item">
+      <div class="tx-icon green"><span class="material-icons">restaurant</span></div>
+      <div class="tx-info"><div class="tx-title">Yemek siparişi ücreti</div><div class="tx-sub">Köfteci Ramiz • #YM-2024-218</div></div>
+      <div class="tx-amount positive">+₺94,50<span class="tx-date">8 Haz 19:45</span></div>
+    </div>
+    <div class="tx-item">
+      <div class="tx-icon red"><span class="material-icons">send</span></div>
+      <div class="tx-info"><div class="tx-title">Havale - Banka hesabına</div><div class="tx-sub">XXX Bank • TR12 3456 **** 7890</div></div>
+      <div class="tx-amount negative">-₺500,00<span class="tx-date">7 Haz 10:00</span></div>
+    </div>
+    <div class="tx-item">
+      <div class="tx-icon red"><span class="material-icons">commute</span></div>
+      <div class="tx-info"><div class="tx-title">Kurye ödemesi (gönderi ücreti)</div><div class="tx-sub">Kurye Ahmet Y. • #KR-2024-001</div></div>
+      <div class="tx-amount negative">-₺27,30<span class="tx-date">6 Haz 15:00</span></div>
+    </div>
+    <div class="tx-item">
+      <div class="tx-icon green"><span class="material-icons">local_florist</span></div>
+      <div class="tx-info"><div class="tx-title">Çiçek siparişi ücreti</div><div class="tx-sub">Gül Buketi • #CC-2024-089</div></div>
+      <div class="tx-amount positive">+₺120,00<span class="tx-date">5 Haz 13:10</span></div>
+    </div>
+    <div class="tx-item">
+      <div class="tx-icon blue"><span class="material-icons">add_circle</span></div>
+      <div class="tx-info"><div class="tx-title">Kredi kartı ile yükleme</div><div class="tx-sub">Visa • 4976 **** **** 1234</div></div>
+      <div class="tx-amount positive">+₺200,00<span class="tx-date">4 Haz 09:30</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SERVIS GELIR/GIDER -->
+<!-- ============================================ -->
+<div class="service-panel" id="servisPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Servis Gelir/Gider</div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <!-- Kurye -->
+    <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:8px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+        <span class="material-icons" style="font-size:22px;color:var(--text3)">motorcycle</span>
+        <div style="flex:1;font-size:13px;font-weight:600;color:var(--text1)">Kurye</div>
+        <span style="font-size:13px;font-weight:700;color:var(--green)">+₺1.240</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text3)"><span>Toplam gönderi: 24</span><span>Komisyon: -₺186 (%15)</span><span>Net: ₺1.054</span></div>
+    </div>
+    <!-- Taksi -->
+    <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:8px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+        <span class="material-icons" style="font-size:22px;color:var(--text3)">directions_car</span>
+        <div style="flex:1;font-size:13px;font-weight:600;color:var(--text1)">Taksi</div>
+        <span style="font-size:13px;font-weight:700;color:var(--green)">+₺890</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text3)"><span>Toplam yolculuk: 8</span><span>Komisyon: -₺106,80 (%12)</span><span>Net: ₺783,20</span></div>
+    </div>
+    <!-- Yemek -->
+    <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:8px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+        <span class="material-icons" style="font-size:22px;color:var(--text3)">restaurant</span>
+        <div style="flex:1;font-size:13px;font-weight:600;color:var(--text1)">Yemek</div>
+        <span style="font-size:13px;font-weight:700;color:var(--green)">+₺520</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text3)"><span>Toplam sipariş: 12</span><span>Komisyon: -₺93,60 (%18)</span><span>Net: ₺426,40</span></div>
+    </div>
+    <!-- Cicek -->
+    <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius)">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+        <span class="material-icons" style="font-size:22px;color:var(--text3)">local_florist</span>
+        <div style="flex:1;font-size:13px;font-weight:600;color:var(--text1)">Çiçek</div>
+        <span style="font-size:13px;font-weight:700;color:var(--green)">+₺197,50</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text3)"><span>Toplam sipariş: 5</span><span>Komisyon: -₺19,75 (%10)</span><span>Net: ₺177,75</span></div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div style="display:flex;justify-content:space-between;padding:10px;background:var(--card2);border-radius:var(--radius);font-size:13px;font-weight:600">
+      <span>Tüm Servisler Net</span>
+      <span style="color:var(--green)">+₺2.441,35</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- BANKA HESAPLARI -->
+<!-- ============================================ -->
+<div class="service-panel" id="bankaPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Banka Hesapları</div>
+      <span class="sp-badge gray" style="margin-left:auto">2 hesap</span>
+    </div>
+  </div>
+
+  <!-- Bireysel banka hesaplari -->
+  <div class="sp-section">
+    <div class="sp-label">Bireysel Hesaplar</div>
+    <div style="padding:12px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:4px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="width:36px;height:36px;background:#dbeafe;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:#1e40af;font-weight:700;font-size:12px">İB</div>
+        <div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text1)">İş Bankası</div><div style="font-size:11px;color:var(--text3)">TR12 0006 7000 0000 1234 5678</div><div style="font-size:10px;color:var(--text4)">Ahmet Yılmaz</div></div>
+        <div><span class="sp-badge green">Doğrulandı</span><br><span class="sp-badge gray" style="margin-top:2px">Varsayılan</span></div>
+      </div>
+    </div>
+    <div style="padding:12px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:4px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="width:36px;height:36px;background:#fef2f2;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:#991b1b;font-weight:700;font-size:12px">AK</div>
+        <div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text1)">Akbank</div><div style="font-size:11px;color:var(--text3)">TR12 0004 6000 0000 5555 1111</div><div style="font-size:10px;color:var(--text4)">Ahmet Yılmaz</div></div>
+        <span class="sp-badge green">Doğrulandı</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kurumsal banka hesaplari -->
+  <div class="sp-section">
+    <div class="sp-label">Kurumsal Hesaplar</div>
+    <div style="padding:12px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:4px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="width:36px;height:36px;background:#fef2f2;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:#991b1b;font-weight:700;font-size:12px">GA</div>
+        <div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text1)">Garanti BBVA</div><div style="font-size:11px;color:var(--text3)">TR12 0006 2000 0000 9876 5432</div><div style="font-size:10px;color:var(--text4)">Kurumsal A.Ş. • Kurumsal</div></div>
+        <div><span class="sp-badge green">Doğrulandı</span><br><span class="sp-badge gray" style="margin-top:2px">Varsayılan</span></div>
+      </div>
+    </div>
+    <div style="padding:12px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:4px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="width:36px;height:36px;background:#dbeafe;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:#1e40af;font-weight:700;font-size:12px">ZB</div>
+        <div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text1)">Ziraat Bankası</div><div style="font-size:11px;color:var(--text3)">TR12 0001 0000 0000 3333 4444</div><div style="font-size:10px;color:var(--text4)">Kurumsal A.Ş. • Kurumsal</div></div>
+        <span class="sp-badge" style="background:#fffbeb;color:#92400e">Doğrulanacak</span>
+      </div>
+    </div>
+    <div style="padding:12px;border:1px solid var(--border);border-radius:var(--radius)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="width:36px;height:36px;background:#fef2f2;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:#991b1b;font-weight:700;font-size:12px">YK</div>
+        <div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text1)">Yapı Kredi</div><div style="font-size:11px;color:var(--text3)">TR12 0006 7000 0000 7777 8888</div><div style="font-size:10px;color:var(--text4)">Yemek Ltd. Şti. • Kurumsal</div></div>
+        <span class="sp-badge green">Doğrulandı</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Her iki hesap turu icin de ekleme -->
+  <div class="sp-section">
+    <div class="sp-label">Hesap Türü Seçerek Ekle</div>
+    <div style="display:flex;gap:6px">
+      <div style="flex:1;display:flex;align-items:center;gap:8px;padding:10px;border:1px dashed var(--border);border-radius:var(--radius);cursor:pointer;color:var(--text3)">
+        <span class="material-icons" style="font-size:18px">add</span>
+        <span style="font-size:11px;font-weight:500">Bireysel Hesap Ekle</span>
+      </div>
+      <div style="flex:1;display:flex;align-items:center;gap:8px;padding:10px;border:1px dashed var(--border);border-radius:var(--radius);cursor:pointer;color:var(--green)">
+        <span class="material-icons" style="font-size:18px">add</span>
+        <span style="font-size:11px;font-weight:500">Kurumsal Hesap Ekle</span>
+      </div>
+    </div>
+    <div style="margin-top:8px;font-size:10px;color:var(--text4);text-align:center">
+      Her hesap türünde sınırsız banka hesabı tanımlanabilir
+    </div>
+  </div>
+
+  <div class="sp-section" style="text-align:center">
+    <span class="sp-badge gray" style="cursor:pointer">Hesap Doğrulama Nedir?</span>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- FATURALAR -->
+<!-- ============================================ -->
+<div class="service-panel" id="faturaPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1);flex:1">Faturalar</div>
+      <span class="sp-badge gray" id="faturaHesapTipi">Bireysel</span>
+    </div>
+  </div>
+  <div class="sp-section">
+    <!-- Kurumsal uyarisi -->
+    <div style="padding:10px;background:#fffbeb;border:1px solid #fde68a;border-radius:var(--radius);margin-bottom:12px;font-size:11px;color:#92400e">
+      <span class="material-icons" style="font-size:16px;vertical-align:middle;margin-right:4px">info</span>
+      Fatura, yalnızca kurumsal hesaplar için oluşturulur. Bireysel hesaplarda harcama belgesi sunulur.
+    </div>
+    <div class="sp-label">Bu Dönem Faturaları</div>
+    <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:6px">
+      <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:var(--text1)"><span>FAT-2024-06/001</span><span style="color:var(--green)">₺624,00</span></div>
+      <div style="font-size:10px;color:var(--text3);margin-top:2px">3-9 Haziran döngüsü • Kurye, Taksi, Yemek</div>
+      <div style="font-size:10px;color:var(--text4);margin-top:1px">Oluşturulma: 9 Haz 2024</div>
+    </div>
+    <div class="sp-label">Geçmiş Faturalar</div>
+    <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:6px">
+      <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:var(--text1)"><span>FAT-2024-05/004</span><span style="color:var(--green)">₺520,00</span></div>
+      <div style="font-size:10px;color:var(--text3)">27 May - 2 Haz döngüsü</div>
+      <div style="display:flex;gap:8px;margin-top:4px"><span class="sp-badge green">Ödendi</span><span class="sp-badge blue">PDF</span></div>
+    </div>
+    <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius)">
+      <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:var(--text1)"><span>FAT-2024-05/003</span><span style="color:var(--green)">₺890,00</span></div>
+      <div style="font-size:10px;color:var(--text3)">20 May - 26 May döngüsü</div>
+      <div style="display:flex;gap:8px;margin-top:4px"><span class="sp-badge green">Ödendi</span><span class="sp-badge blue">PDF</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- VERGI & KOMISYON -->
+<!-- ============================================ -->
+<div class="service-panel" id="vergiPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Vergi & Komisyon</div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Platform Komisyon Oranları</div>
+    <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:6px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span class="material-icons" style="font-size:20px;color:var(--text3)">motorcycle</span>
+        <span style="flex:1;font-size:12px;color:var(--text1)">Kurye</span>
+        <span style="font-size:12px;font-weight:600;color:var(--text1)">%15</span>
+      </div>
+    </div>
+    <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:6px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span class="material-icons" style="font-size:20px;color:var(--text3)">directions_car</span>
+        <span style="flex:1;font-size:12px;color:var(--text1)">Taksi</span>
+        <span style="font-size:12px;font-weight:600;color:var(--text1)">%12</span>
+      </div>
+    </div>
+    <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:6px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span class="material-icons" style="font-size:20px;color:var(--text3)">restaurant</span>
+        <span style="flex:1;font-size:12px;color:var(--text1)">Yemek</span>
+        <span style="font-size:12px;font-weight:600;color:var(--text1)">%18</span>
+      </div>
+    </div>
+    <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span class="material-icons" style="font-size:20px;color:var(--text3)">local_florist</span>
+        <span style="flex:1;font-size:12px;color:var(--text1)">Çiçek</span>
+        <span style="font-size:12px;font-weight:600;color:var(--text1)">%10</span>
+      </div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Vergi Bilgileri</div>
+    <div class="sp-input"><span class="material-icons">badge</span><input type="text" value="Ahmet Yılmaz" placeholder="Ad Soyad / Firma Adı"></div>
+    <div class="sp-input"><span class="material-icons">pin</span><input type="text" value="1234567890" placeholder="TC Kimlik / Vergi No"></div>
+    <div class="sp-input"><span class="material-icons">home</span><input type="text" value="Kadıköy, İstanbul" placeholder="Vergi Dairesi / Adres"></div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Bu Dönem Vergi Özeti</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px">
+      <div style="text-align:center;padding:10px;border:1px solid var(--border);border-radius:var(--radius)"><div style="font-size:16px;font-weight:700;color:var(--text1)">₺624</div><div style="font-size:9px;color:var(--text3)">Brüt Gelir</div></div>
+      <div style="text-align:center;padding:10px;border:1px solid var(--border);border-radius:var(--radius)"><div style="font-size:16px;font-weight:700;color:var(--orange)">₺93,60</div><div style="font-size:9px;color:var(--text3)">Platform Komisyon</div></div>
+      <div style="text-align:center;padding:10px;border:1px solid var(--border);border-radius:var(--radius)"><div style="font-size:16px;font-weight:700;color:var(--green)">₺530,40</div><div style="font-size:9px;color:var(--text3)">Net Gelir</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- DRAWER -->
+<!-- ============================================ -->
+<div class="drawer-overlay" id="overlay" onclick="toggleDrawer()"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-header"><span style="flex:1"></span><h2>Ticari Panel</h2><button class="close-btn" onclick="toggleDrawer()"><span class="material-icons">close</span></button></div>
+  <div class="drawer-scroll">
+    <div class="d-item" onclick="toggleDrawer();goHome()"><span class="material-icons">home</span><div class="li-label">Ana Sayfa</div></div>
+    <div class="d-item d-wallet" onclick="toggleDrawer();openPanel('cuzdanPanel')"><span class="material-icons">account_balance_wallet</span><div class="li-label">Cüzdan</div><div class="di-num">₺2.847</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('paraYuklePanel')"><span class="material-icons">add_circle</span><div class="li-label">Para Yükle</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('odemeYontemiPanel')"><span class="material-icons">credit_card</span><div class="li-label">Ödeme Yöntemleri</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('odemeDonguPanel')"><span class="material-icons">sync_alt</span><div class="li-label">Ödeme Döngüsü</div><span class="sp-badge green" style="font-size:9px">Aktif</span></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('hareketPanel')"><span class="material-icons">receipt_long</span><div class="li-label">Hesap Hareketleri</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('servisPanel')"><span class="material-icons">donut_large</span><div class="li-label">Servis Gelir/Gider</div></div>
+    <div class="d-item" style="border-top:1px solid var(--border);margin-top:8px;padding-top:14px" onclick="toggleDrawer();openPanel('bankaPanel')"><span class="material-icons">account_balance</span><div class="li-label">Banka Hesapları</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('faturaPanel')"><span class="material-icons">description</span><div class="li-label">Faturalar</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('vergiPanel')"><span class="material-icons">receipt</span><div class="li-label">Vergi & Komisyon</div></div>
+    <div class="d-item" style="border-top:1px solid var(--border);margin-top:8px;padding-top:14px"><span class="material-icons">settings</span><div class="li-label">Ayarlar</div></div>
+  </div>
+</div>
+
+<script>
+function toggleDrawer(){document.getElementById('drawer').classList.toggle('open');document.getElementById('overlay').classList.toggle('open')}
+function odemeYontemiSec(el){document.querySelectorAll('#paraYuklePanel .delivery-option.secili').forEach(function(e){e.classList.remove('secili')});el.classList.add('secili')}
+function searchChange(v){
+  var r=document.getElementById('searchResults');var c=document.getElementById('clearBtn');
+  if(v.length>0){r.classList.add('open');c.style.display='block';
+    var q=v.toLowerCase();
+    if(q==='cüzdan'||q==='cuzdan'||q==='bakiye'){clearSearch();openPanel('cuzdanPanel');return}
+    if(q==='para'||q==='yükle'||q==='yukle'){clearSearch();openPanel('paraYuklePanel');return}
+    if(q==='ödeme'||q==='odeme'||q==='döngü'||q==='dongu'||q==='döngüsü'){clearSearch();openPanel('odemeDonguPanel');return}
+    if(q==='kart'||q==='kredi'||q==='kredi kartı'||q==='kredi karti'||q==='paypal'||q==='sanal pos'||q==='sanalpos'||q==='mobil ödeme'||q==='mobilodeme'){clearSearch();openPanel('odemeYontemiPanel');return}
+    if(q==='hareket'||q==='hareketleri'||q==='işlem'||q==='islem'||q==='geçmiş'){clearSearch();openPanel('hareketPanel');return}
+    if(q==='gelir'||q==='gider'||q==='servis'||q==='kazanç'){clearSearch();openPanel('servisPanel');return}
+    if(q==='banka'||q==='hesap'||q==='iban'){clearSearch();openPanel('bankaPanel');return}
+    if(q==='fatura'||q==='faturalar'){clearSearch();openPanel('faturaPanel');return}
+    if(q==='vergi'||q==='komisyon'||q==='vergi'){clearSearch();openPanel('vergiPanel');return}
+  }else{r.classList.remove('open');c.style.display='none'}
+}
+function clearSearch(){document.getElementById('searchInput').value='';document.getElementById('searchResults').classList.remove('open');document.getElementById('clearBtn').style.display='none'}
+function openPanel(id){
+  cls();clearSearch();
+  document.getElementById('mainBottom').style.display='none';
+  var el=document.getElementById(id);if(el)el.classList.add('open');
+}
+function cls(){document.querySelectorAll('.service-panel.open').forEach(function(p){p.classList.remove('open')})}
+function goHome(){cls();document.getElementById('mainBottom').style.display='block'}
+</script>
+</body>
+</html>

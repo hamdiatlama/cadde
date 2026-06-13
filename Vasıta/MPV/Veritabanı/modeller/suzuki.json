@@ -1,0 +1,103 @@
+{
+  "marka": "Suzuki",
+  "modeller": [
+    {
+      "model": "Swift",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2004
+    },
+    {
+      "model": "Vitara",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "S-Cross",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "Ignis",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Jimny",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 1998
+    },
+    {
+      "model": "Baleno",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Celerio",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Alto",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2009
+    },
+    {
+      "model": "Swace",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Grand Vitara",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Splash",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2008
+    },
+    {
+      "model": "Kizashi",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2009,
+      "uretim_bitis": 2014
+    }
+  ],
+  "kaynak": "manuel"
+}

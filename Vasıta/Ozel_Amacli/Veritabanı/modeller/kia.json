@@ -1,0 +1,315 @@
+{
+  "marka": "Kia",
+  "modeller": [
+    {
+      "model": "Avella",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Brisa",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Concord/Capital",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Credos",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "Enterprise",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "Elan/Vigato",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Joice",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "Mentor",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "Potentia",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "Pregio",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "Pride",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "Retona",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "Rio",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "Sephia",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "Ceed hatchback",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Ceed Sportswagon",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Forte/K3/Cerato",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "K4 (China)",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "K7/Cadenza",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "KX3",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "KX5",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "KX7",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Mohave",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Niro Plus",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Opirus/Amanti",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Proceed",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Qianlima",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Rondo",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Spectra",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Stinger",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Soul",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Soul EV",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Venga",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Visto",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Combi",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Hatchback",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Sedan/liftback",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Sedan",
+        "Fastback"
+      ],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Station wagon",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Station Wagon"
+      ],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "SUV/crossover",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Pickup truck/Ute",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Minivan/MPV",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Introduced",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    }
+  ],
+  "kaynak": "https://en.wikipedia.org/wiki/List_of_Kia_vehicles"
+}

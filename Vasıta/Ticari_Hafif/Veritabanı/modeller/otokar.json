@@ -1,0 +1,62 @@
+{
+  "marka": "Otokar",
+  "modeller": [
+    {
+      "model": "Doruk",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Naviga",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Kentin",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Territo",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Centro",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Sultan",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "M-3000",
+      "kasa_tipleri": [
+        "Hafif Ticari"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "Ares",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2022
+    }
+  ],
+  "kaynak": "manuel"
+}

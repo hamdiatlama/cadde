@@ -1,0 +1,205 @@
+{
+  "marka": "Peugeot",
+  "modeller": [
+    {
+      "model": "108",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "208",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "308",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Hatchback",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2007
+    },
+    {
+      "model": "408",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Coupe",
+        "SUV"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "508",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Sedan",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "2008",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "3008",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2009
+    },
+    {
+      "model": "5008",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Rifter",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV",
+        "Van"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Traveler",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Boxer",
+      "segment": "V",
+      "kasa_tipleri": [
+        "Van"
+      ],
+      "uretim_baslangic": 2006
+    },
+    {
+      "model": "Expert",
+      "segment": "V",
+      "kasa_tipleri": [
+        "Van"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Partner",
+      "segment": "V",
+      "kasa_tipleri": [
+        "Van"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "e-208",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "e-308",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "e-2008",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "RCZ",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2010,
+      "uretim_bitis": 2015
+    },
+    {
+      "model": "iOn",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2010,
+      "uretim_bitis": 2020
+    },
+    {
+      "model": "107",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2005,
+      "uretim_bitis": 2014
+    },
+    {
+      "model": "207",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback",
+        "Sedan"
+      ],
+      "uretim_baslangic": 2006,
+      "uretim_bitis": 2014
+    },
+    {
+      "model": "307",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Hatchback",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2001,
+      "uretim_bitis": 2008
+    },
+    {
+      "model": "407",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Sedan",
+        "Station Wagon",
+        "Coupe"
+      ],
+      "uretim_baslangic": 2004,
+      "uretim_bitis": 2011
+    },
+    {
+      "model": "607",
+      "segment": "E",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2000,
+      "uretim_bitis": 2010
+    }
+  ],
+  "kaynak": "manuel"
+}

@@ -1,0 +1,55 @@
+{
+  "marka": "Böckmann",
+  "modeller": [
+    {
+      "model": "Timber 2000",
+      "kasa_tipleri": [
+        "Araba Römorku"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Timber 2700",
+      "kasa_tipleri": [
+        "Araba Römorku"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Timber 3200",
+      "kasa_tipleri": [
+        "Araba Römorku"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Alpin",
+      "kasa_tipleri": [
+        "Motorsiklet Römorku"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Topline",
+      "kasa_tipleri": [
+        "Kapalı Römork"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "TipLine",
+      "kasa_tipleri": [
+        "Damperli Römork"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Pony",
+      "kasa_tipleri": [
+        "Mini Römork"
+      ],
+      "uretim_baslangic": 2016
+    }
+  ],
+  "kaynak": "manuel"
+}

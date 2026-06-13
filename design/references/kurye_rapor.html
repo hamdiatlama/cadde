@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Kurye Sistemi - Eksik Özellikler Raporu</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f9fafb;--card:#fff;--card2:#f3f4f6;--border:#e5e7eb;--text1:#111;--text2:#374151;--text3:#6b7280;--text4:#9ca3af;--radius:4px;--green:#059669;--red:#dc2626;--blue:#2563eb}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text1);padding:40px;max-width:900px;margin:0 auto}
+h1{font-size:24px;font-weight:700;margin-bottom:4px}
+.sub{font-size:14px;color:var(--text3);margin-bottom:32px}
+h2{font-size:18px;font-weight:600;margin:28px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.card{border:1px solid var(--border);border-radius:var(--radius);padding:20px;background:var(--card);margin-bottom:12px}
+.card .card-title{font-size:15px;font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.card .card-title .material-icons{font-size:20px}
+.card .card-desc{font-size:12px;color:var(--text3)}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{text-align:left;padding:8px 10px;font-weight:600;color:var(--text1);border-bottom:2px solid var(--border)}
+td{padding:8px 10px;border-bottom:1px solid var(--border);color:var(--text2);vertical-align:top}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:8px;font-weight:600}
+.tag.var{background:#d1fae5;color:var(--green)}
+.tag.yok{background:#fef2f2;color:var(--red)}
+.tag.kismi{background:#fef3c7;color:#92400e}
+.status{display:flex;align-items:center;gap:4px}
+.status .material-icons{font-size:16px}
+.ok{color:var(--green)}
+.no{color:var(--red)}
+.warn{color:#d97706}
+</style>
+</head>
+<body>
+
+<h1>Kurye Sistemi Raporu</h1>
+<div class="sub">Mevcut durum + eklenmesi gereken özellikler (sektör araştırmasına göre)</div>
+
+<h2>✅ Mevcut Özellikler</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px">
+  <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px">
+    <span class="status"><span class="material-icons ok">check_circle</span> <strong>3 Teslimat Seçeneği</strong></span>
+    <div style="margin-left:22px;color:var(--text3)">Bireysel kurye, kendi sistemi, kurye firması</div>
+  </div>
+  <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px">
+    <span class="status"><span class="material-icons ok">check_circle</span> <strong>Kurye Kayıt + Araç Tanımlama</strong></span>
+    <div style="margin-left:22px;color:var(--text3)">Ad, araç türü, plaka, hız limiti, menzil</div>
+  </div>
+  <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px">
+    <span class="status"><span class="material-icons ok">check_circle</span> <strong>Gerçek Zamanlı Takip</strong></span>
+    <div style="margin-left:22px;color:var(--text3)">Adım adım teslimat durumu</div>
+  </div>
+  <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px">
+    <span class="status"><span class="material-icons ok">check_circle</span> <strong>Fotoğraflı Teslimat Kanıtı</strong></span>
+    <div style="margin-left:22px;color:var(--text3)">Teslimat anı fotoğrafı</div>
+  </div>
+  <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px">
+    <span class="status"><span class="material-icons ok">check_circle</span> <strong>Sigorta Seçenekleri</strong></span>
+    <div style="margin-left:22px;color:var(--text3)">Standart, ek, tam sigorta</div>
+  </div>
+  <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px">
+    <span class="status"><span class="material-icons ok">check_circle</span> <strong>Teslimat Şekilleri</strong></span>
+    <div style="margin-left:22px;color:var(--text3)">Kapıya, PIN kodlu, kurye dolabı</div>
+  </div>
+  <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px">
+    <span class="status"><span class="material-icons ok">check_circle</span> <strong>Şikayet / Tazminat Süreci</strong></span>
+    <div style="margin-left:22px;color:var(--text3)">7 gün talep, fotoğraf kanıtı</div>
+  </div>
+  <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px">
+    <span class="status"><span class="material-icons ok">check_circle</span> <strong>Şehir İçi Hız Limitleri</strong></span>
+    <div style="margin-left:22px;color:var(--text3)">Araç türüne göre otomatik</div>
+  </div>
+</div>
+
+<h2>⚠️ Eksik / Eklenmesi Gereken Özellikler</h2>
+<p style="font-size:13px;color:var(--text3);margin-bottom:16px">Araştırma sonucu derlenen, sektörde olmazsa olmaz görülen özellikler:</p>
+
+<table>
+  <tr>
+    <th style="width:40px">#</th>
+    <th style="width:180px">Özellik</th>
+    <th style="width:60px">Durum</th>
+    <th>Açıklama</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td><strong>Mobil Kurye Uygulaması</strong></td>
+    <td><span class="tag yok">Eksik</span></td>
+    <td>Kuryeler için ayrı mobil app (iOS/Android) — görevleri görme, navigasyon, teslimat onayı, müşteri ara</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td><strong>Otomatik Kurye Atama</strong></td>
+    <td><span class="tag yok">Eksik</span></td>
+    <td>Akıllı algoritma ile en uygun kuryeyi otomatik ata (mesafe, yük, trafik, hız limiti bazlı)</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td><strong>Rota Optimizasyonu</strong></td>
+    <td><span class="tag yok">Eksik</span></td>
+    <td>Tek rotada birden fazla teslimatı sırala, yakıt/zaman tasarrufu sağla</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td><strong>Barkod / Etiket Sistemi</strong></td>
+    <td><span class="tag yok">Eksik</span></td>
+    <td>Her gönderiye benzersiz barkod + AWB no, paket takip ve sort işlemleri için</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td><strong>Müşteri Bildirimleri</strong></td>
+    <td><span class="tag yok">Eksik</span></td>
+    <td>SMS/Push/Email ile: "Kurye yolda", "30 dk içinde teslim", "Teslim edildi"</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td><strong>Online Ödeme Entegrasyonu</strong></td>
+    <td><span class="tag yok">Eksik</span></td>
+    <td>Kredi kartı, kapıda ödeme, cüzdan bakiyesi ile ödeme</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td><strong>Puan / Değerlendirme</strong></td>
+    <td><span class="tag yok">Eksik</span></td>
+    <td>Kurye puanlama (1-5 yıldız), müşteri yorumu, performans raporu</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td><strong>Vardiya / Mola Yönetimi</strong></td>
+    <td><span class="tag yok">Eksik</span></td>
+    <td>Kurye çalışma saatleri, mola süreleri, prim sistemi</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td><strong>Gelişmiş Raporlama</strong></td>
+    <td><span class="tag yok">Eksik</span></td>
+    <td>Günlük/haftalık/aylık teslimat raporu, kurye performans, maliyet analizi</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td><strong>Harita Üzerinde Canlı Kurye Takibi</strong></td>
+    <td><span class="tag kismi">Kısmi</span></td>
+    <td>Adım adım durum var ama canlı harita (GPS) entegrasyonu yok</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td><strong>Bölge / Alan Yönetimi</strong></td>
+    <td><span class="tag yok">Eksik</span></td>
+    <td>Servis bölgeleri tanımlama, hangi kurye hangi bölgede çalışır belirtme</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td><strong>API / Entegrasyon</strong></td>
+    <td><span class="tag yok">Eksik</span></td>
+    <td>E-ticaret siteleri, pos sistemleri, market entegrasyonu için API</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td><strong>Çoklu Dil / Çoklu Para Birimi</strong></td>
+    <td><span class="tag yok">Eksik</span></td>
+    <td>İleride uluslararası genişleme için gerekli</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td><strong>Kurye Kazanç / Hakediş Paneli</strong></td>
+    <td><span class="tag yok">Eksik</span></td>
+    <td>Kurye kendi kazancını görsün, günlük/haftalık hesap özeti</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td><strong>WhatsApp / Canlı Destek</strong></td>
+    <td><span class="tag yok">Eksik</span></td>
+    <td>Müşteri ve kurye arasında gizli iletişim, destek hattı</td>
+  </tr>
+</table>
+
+<h2>Öncelik Sırası</h2>
+<div style="display:flex;flex-direction:column;gap:8px">
+  <div style="display:flex;align-items:center;gap:10px;padding:10px;border:1px solid var(--border);border-radius:var(--radius)">
+    <span style="width:28px;height:28px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0">1</span>
+    <div style="flex:1;font-size:13px"><strong>Mobil Kurye Uygulaması</strong> — Kuryelerin sahadaki ana aracı, olmazsa olmaz</div>
+  </div>
+  <div style="display:flex;align-items:center;gap:10px;padding:10px;border:1px solid var(--border);border-radius:var(--radius)">
+    <span style="width:28px;height:28px;border-radius:50%;background:#d97706;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0">2</span>
+    <div style="flex:1;font-size:13px"><strong>Otomatik Kurye Atama + Rota Optimizasyonu</strong> — Operasyon hızı için kritik</div>
+  </div>
+  <div style="display:flex;align-items:center;gap:10px;padding:10px;border:1px solid var(--border);border-radius:var(--radius)">
+    <span style="width:28px;height:28px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0">3</span>
+    <div style="flex:1;font-size:13px"><strong>Müşteri Bildirimleri + Canlı Harita</strong> — Müşteri memnuniyeti için</div>
+  </div>
+  <div style="display:flex;align-items:center;gap:10px;padding:10px;border:1px solid var(--border);border-radius:var(--radius)">
+    <span style="width:28px;height:28px;border-radius:50%;background:var(--text3);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0">4</span>
+    <div style="flex:1;font-size:13px"><strong>Online Ödeme + Puan Sistemi + Raporlama</strong> — Sonraki faz</div>
+  </div>
+</div>
+
+<h2>Kurye Mobil Uygulaması İçin Gerekli Ekranlar</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+  <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px">
+    <span class="material-icons ok" style="font-size:16px;vertical-align:middle">check_circle</span> Giriş / Kimlik Doğrulama
+  </div>
+  <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px">
+    <span class="material-icons ok" style="font-size:16px;vertical-align:middle">check_circle</span> Atanan Görevler Listesi
+  </div>
+  <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px">
+    <span class="material-icons ok" style="font-size:16px;vertical-align:middle">check_circle</span> Navigasyon / Rota
+  </div>
+  <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px">
+    <span class="material-icons ok" style="font-size:16px;vertical-align:middle">check_circle</span> Teslimat Onayı + Fotoğraf
+  </div>
+  <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px">
+    <span class="material-icons ok" style="font-size:16px;vertical-align:middle">check_circle</span> Müşteri Ara / Mesaj
+  </div>
+  <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px">
+    <span class="material-icons ok" style="font-size:16px;vertical-align:middle">check_circle</span> Kazanç / Hakediş Görüntüle
+  </div>
+  <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px">
+    <span class="material-icons ok" style="font-size:16px;vertical-align:middle">check_circle</span> Vardiya / Mola Yönetimi
+  </div>
+  <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px">
+    <span class="material-icons ok" style="font-size:16px;vertical-align:middle">check_circle</span> Performans / Puan
+  </div>
+  <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px">
+    <span class="material-icons ok" style="font-size:16px;vertical-align:middle">check_circle</span> Geçmiş Gönderiler
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+{
+  "marka": "Renault",
+  "modeller": [
+    {
+      "model": "Clio",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 1990
+    },
+    {
+      "model": "Captur",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "Megane",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Hatchback",
+        "Sedan",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 1995
+    },
+    {
+      "model": "Talisman",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Sedan",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Arkana",
+      "segment": "J",
+      "kasa_tipleri": [
+        "Coupe",
+        "SUV"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Austral",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Rafale",
+      "segment": "J",
+      "kasa_tipleri": [
+        "Coupe",
+        "SUV"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "Symbioz",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2024
+    },
+    {
+      "model": "Kadjar",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2015,
+      "uretim_bitis": 2022
+    },
+    {
+      "model": "Koleos",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2008
+    },
+    {
+      "model": "Espace",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV",
+        "SUV"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Scenic",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV",
+        "SUV"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Zoe",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2012,
+      "uretim_bitis": 2024
+    },
+    {
+      "model": "Twizy",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "Kangoo",
+      "segment": "V",
+      "kasa_tipleri": [
+        "Van",
+        "MPV"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Trafic",
+      "segment": "V",
+      "kasa_tipleri": [
+        "Van"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Master",
+      "segment": "V",
+      "kasa_tipleri": [
+        "Van"
+      ],
+      "uretim_baslangic": 2010
+    },
+    {
+      "model": "5 E-Tech",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2024
+    },
+    {
+      "model": "Scenic E-Tech",
+      "segment": "C",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2024
+    },
+    {
+      "model": "Laguna",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Sedan",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2001,
+      "uretim_bitis": 2015
+    },
+    {
+      "model": "Fluence",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2009,
+      "uretim_bitis": 2016
+    },
+    {
+      "model": "Modus",
+      "segment": "B",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2004,
+      "uretim_bitis": 2012
+    },
+    {
+      "model": "Wind",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2010,
+      "uretim_bitis": 2013
+    }
+  ],
+  "kaynak": "manuel"
+}

@@ -1,0 +1,31 @@
+{
+  "il_id": 50,
+  "il": "Nevşehir",
+  "plaka": "50",
+  "ilceler": [
+    {
+      "ilce": "Acıgöl"
+    },
+    {
+      "ilce": "Avanos"
+    },
+    {
+      "ilce": "Derinkuyu"
+    },
+    {
+      "ilce": "Gülşehir"
+    },
+    {
+      "ilce": "Hacıbektaş"
+    },
+    {
+      "ilce": "Kozaklı"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Ürgüp"
+    }
+  ]
+}

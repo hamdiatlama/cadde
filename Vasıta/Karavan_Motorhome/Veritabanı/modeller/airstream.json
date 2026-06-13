@@ -1,0 +1,41 @@
+{
+  "marka": "Airstream",
+  "modeller": [
+    {
+      "model": "International 25",
+      "kasa_tipleri": [
+        "Çekme Karavan"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Flying Cloud 23",
+      "kasa_tipleri": [
+        "Çekme Karavan"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Globetrotter 27",
+      "kasa_tipleri": [
+        "Çekme Karavan"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Bambi 16",
+      "kasa_tipleri": [
+        "Çekme Karavan"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Atlas Touring Coach",
+      "kasa_tipleri": [
+        "Motorhome"
+      ],
+      "uretim_baslangic": 2021
+    }
+  ],
+  "kaynak": "manuel"
+}

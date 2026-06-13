@@ -1,0 +1,64 @@
+{
+  "il_id": 20,
+  "il": "Denizli",
+  "plaka": "20",
+  "ilceler": [
+    {
+      "ilce": "Acıpayam"
+    },
+    {
+      "ilce": "Babadağ"
+    },
+    {
+      "ilce": "Baklan"
+    },
+    {
+      "ilce": "Bekilli"
+    },
+    {
+      "ilce": "Beyağaç"
+    },
+    {
+      "ilce": "Bozkurt"
+    },
+    {
+      "ilce": "Buldan"
+    },
+    {
+      "ilce": "Güney"
+    },
+    {
+      "ilce": "Honaz"
+    },
+    {
+      "ilce": "Kale"
+    },
+    {
+      "ilce": "Merkezefendi"
+    },
+    {
+      "ilce": "Pamukkale"
+    },
+    {
+      "ilce": "Sarayköy"
+    },
+    {
+      "ilce": "Serinhisar"
+    },
+    {
+      "ilce": "Tavas"
+    },
+    {
+      "ilce": "Çal"
+    },
+    {
+      "ilce": "Çameli"
+    },
+    {
+      "ilce": "Çardak"
+    },
+    {
+      "ilce": "Çivril"
+    }
+  ]
+}

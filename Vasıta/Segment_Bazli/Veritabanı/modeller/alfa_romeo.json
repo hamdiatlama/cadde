@@ -1,0 +1,321 @@
+{
+  "marka": "Alfa Romeo",
+  "modeller": [
+    {
+      "model": "1934",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1935",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1936",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1937",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1938",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1939",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1998",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1999",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1910",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1920",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1930",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1940",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1950",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1960",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "1970",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1980",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1990",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2000",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2001",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2002",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2003",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2004",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2005",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2006",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2007",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2008",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2009",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2010",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2011",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2012",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2013",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2014",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2015",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2016",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2017",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2018",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2019",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2020",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2021",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2022",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2023",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Plant",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Cassino",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Pomigliano",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Tychy",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    }
+  ],
+  "kaynak": "https://en.wikipedia.org/wiki/List_of_Alfa_Romeo_vehicles"
+}

@@ -1,0 +1,48 @@
+{
+  "marka": "Opel",
+  "modeller": [
+    {
+      "model": "Combo Panelvan",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2011
+    },
+    {
+      "model": "Combo Life",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Vivaro Panelvan",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Vivaro Life",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Movano Panelvan",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2010
+    },
+    {
+      "model": "Zafira Life",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2019
+    }
+  ],
+  "kaynak": "manuel"
+}

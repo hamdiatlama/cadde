@@ -1,0 +1,58 @@
+{
+  "il_id": 45,
+  "il": "Manisa",
+  "plaka": "45",
+  "ilceler": [
+    {
+      "ilce": "Ahmetli"
+    },
+    {
+      "ilce": "Akhisar"
+    },
+    {
+      "ilce": "Alaşehir"
+    },
+    {
+      "ilce": "Demirci"
+    },
+    {
+      "ilce": "Gölmarmara"
+    },
+    {
+      "ilce": "Gördes"
+    },
+    {
+      "ilce": "Kula"
+    },
+    {
+      "ilce": "Köprübaşı"
+    },
+    {
+      "ilce": "Kırkağaç"
+    },
+    {
+      "ilce": "Salihli"
+    },
+    {
+      "ilce": "Saruhanlı"
+    },
+    {
+      "ilce": "Sarıgöl"
+    },
+    {
+      "ilce": "Selendi"
+    },
+    {
+      "ilce": "Soma"
+    },
+    {
+      "ilce": "Turgutlu"
+    },
+    {
+      "ilce": "Yunusemre"
+    },
+    {
+      "ilce": "Şehzadeler"
+    }
+  ]
+}

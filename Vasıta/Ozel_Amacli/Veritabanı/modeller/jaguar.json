@@ -1,0 +1,94 @@
+{
+  "marka": "Jaguar",
+  "modeller": [
+    {
+      "model": "XE",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "XF",
+      "segment": "E",
+      "kasa_tipleri": [
+        "Sedan",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2007
+    },
+    {
+      "model": "XJ",
+      "segment": "F",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2009,
+      "uretim_bitis": 2019
+    },
+    {
+      "model": "E-Pace",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "F-Pace",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "I-Pace",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "F-Type",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe",
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "XK",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe",
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2006,
+      "uretim_bitis": 2014
+    },
+    {
+      "model": "S-Type",
+      "segment": "E",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 1999,
+      "uretim_bitis": 2007
+    },
+    {
+      "model": "X-Type",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Sedan",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2001,
+      "uretim_bitis": 2009
+    }
+  ],
+  "kaynak": "manuel"
+}

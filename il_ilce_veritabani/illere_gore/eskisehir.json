@@ -1,0 +1,49 @@
+{
+  "il_id": 26,
+  "il": "Eskişehir",
+  "plaka": "26",
+  "ilceler": [
+    {
+      "ilce": "Alpu"
+    },
+    {
+      "ilce": "Beylikova"
+    },
+    {
+      "ilce": "Günyüzü"
+    },
+    {
+      "ilce": "Han"
+    },
+    {
+      "ilce": "Mahmudiye"
+    },
+    {
+      "ilce": "Mihalgazi"
+    },
+    {
+      "ilce": "Mihalıççık"
+    },
+    {
+      "ilce": "Odunpazarı"
+    },
+    {
+      "ilce": "Sarıcakaya"
+    },
+    {
+      "ilce": "Seyitgazi"
+    },
+    {
+      "ilce": "Sivrihisar"
+    },
+    {
+      "ilce": "Tepebaşı"
+    },
+    {
+      "ilce": "Çifteler"
+    },
+    {
+      "ilce": "İnönü"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "marka": "Ferretti",
+  "modeller": [
+    {
+      "model": "Ferretti Yachts 500",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Ferretti Yachts 550",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Ferretti Yachts 670",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Ferretti Yachts 720",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Ferretti Yachts 850",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Ferretti Yachts 920",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Infynito 80",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Riva 130 Bellissima",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Riva 90 Argo",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Riva Aquarama",
+      "kasa_tipleri": [
+        "Klasik Tekne"
+      ],
+      "uretim_baslangic": 2010
+    },
+    {
+      "model": "Pershing 5X",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Pershing 8X",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Pershing 140",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2018
+    }
+  ],
+  "kaynak": "manuel"
+}

@@ -1,0 +1,69 @@
+{
+  "marka": "Mercedes-Benz Vans",
+  "modeller": [
+    {
+      "model": "Vito Tourer",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Vito Panelvan",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Sprinter Panelvan",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Sprinter Tourer",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "EQV",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Citan Tourer",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Citan Panelvan",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "V-Class",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Marco Polo",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2016
+    }
+  ],
+  "kaynak": "manuel"
+}

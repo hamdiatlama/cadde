@@ -1,0 +1,41 @@
+{
+  "marka": "Karsan",
+  "modeller": [
+    {
+      "model": "Jest",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Atak",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Menarinibus",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "e-Jest",
+      "kasa_tipleri": [
+        "Elektrikli Otobüs"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "e-Atak",
+      "kasa_tipleri": [
+        "Elektrikli Otobüs"
+      ],
+      "uretim_baslangic": 2022
+    }
+  ],
+  "kaynak": "manuel"
+}

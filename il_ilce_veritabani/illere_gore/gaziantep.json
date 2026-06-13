@@ -1,0 +1,34 @@
+{
+  "il_id": 27,
+  "il": "Gaziantep",
+  "plaka": "27",
+  "ilceler": [
+    {
+      "ilce": "Araban"
+    },
+    {
+      "ilce": "Karkamış"
+    },
+    {
+      "ilce": "Nizip"
+    },
+    {
+      "ilce": "Nurdağı"
+    },
+    {
+      "ilce": "Oğuzeli"
+    },
+    {
+      "ilce": "Yavuzeli"
+    },
+    {
+      "ilce": "İslahiye"
+    },
+    {
+      "ilce": "Şahinbey"
+    },
+    {
+      "ilce": "Şehitkamil"
+    }
+  ]
+}

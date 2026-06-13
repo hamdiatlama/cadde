@@ -1,0 +1,46 @@
+{
+  "il_id": 65,
+  "il": "Van",
+  "plaka": "65",
+  "ilceler": [
+    {
+      "ilce": "Bahçesaray"
+    },
+    {
+      "ilce": "Başkale"
+    },
+    {
+      "ilce": "Edremit"
+    },
+    {
+      "ilce": "Erciş"
+    },
+    {
+      "ilce": "Gevaş"
+    },
+    {
+      "ilce": "Gürpınar"
+    },
+    {
+      "ilce": "Muradiye"
+    },
+    {
+      "ilce": "Saray"
+    },
+    {
+      "ilce": "Tuşba"
+    },
+    {
+      "ilce": "Çaldıran"
+    },
+    {
+      "ilce": "Çatak"
+    },
+    {
+      "ilce": "Özalp"
+    },
+    {
+      "ilce": "İpekyolu"
+    }
+  ]
+}

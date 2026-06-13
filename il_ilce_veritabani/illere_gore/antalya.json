@@ -1,0 +1,64 @@
+{
+  "il_id": 7,
+  "il": "Antalya",
+  "plaka": "07",
+  "ilceler": [
+    {
+      "ilce": "Akseki"
+    },
+    {
+      "ilce": "Aksu"
+    },
+    {
+      "ilce": "Alanya"
+    },
+    {
+      "ilce": "Demre"
+    },
+    {
+      "ilce": "Döşemealtı"
+    },
+    {
+      "ilce": "Elmalı"
+    },
+    {
+      "ilce": "Finike"
+    },
+    {
+      "ilce": "Gazipaşa"
+    },
+    {
+      "ilce": "Gündoğmuş"
+    },
+    {
+      "ilce": "Kaş"
+    },
+    {
+      "ilce": "Kemer"
+    },
+    {
+      "ilce": "Kepez"
+    },
+    {
+      "ilce": "Konyaaltı"
+    },
+    {
+      "ilce": "Korkuteli"
+    },
+    {
+      "ilce": "Kumluca"
+    },
+    {
+      "ilce": "Manavgat"
+    },
+    {
+      "ilce": "Muratpaşa"
+    },
+    {
+      "ilce": "Serik"
+    },
+    {
+      "ilce": "İbradı"
+    }
+  ]
+}

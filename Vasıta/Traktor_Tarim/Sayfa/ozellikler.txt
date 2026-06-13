@@ -1,0 +1,32 @@
+Fiyat
+İlan Başlığı
+Konum
+Marka
+Model
+Yıl
+Araç Durumu
+Motor Gücü (BG)
+Motor Hacmi
+Silindir Sayısı
+Şanzıman Tipi
+Çekiş (2WD/4WD)
+Renk
+Garanti
+Plaka / Uyruk
+Kimden
+Takas
+Çeki Demiri / Askı Sistemi
+Kuyruk Mili (PTO)
+Hidrolik Kapasite
+Lastik Ebadı
+Kabin / Açık
+Klima
+Ön Yükleyici Var mı?
+Römork Var mı?
+Saat
+Son Bakım Tarihi
+Video Linki
+İlan Açıklaması
+Emisyon Sınıfı
+Krediye Uygun
+Pazarlık / İndirim

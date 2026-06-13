@@ -1,0 +1,28 @@
+Fiyat
+İlan Başlığı
+Konum
+Marka
+Model
+Yıl
+Araç Durumu
+Makine Tipi (Ekskavatör/Kepçe/Dozer)
+Motor Gücü (BG/kW)
+Motor Hacmi
+Çalışma Ağırlığı (ton)
+Garanti
+Plaka / Uyruk
+Kimden
+Takas
+Saat (Çalışma Süresi)
+Kova Kapasitesi (m³)
+Maksimum Erişim (m)
+Palet / Lastik
+Kabin / Açık
+Klima
+Hidrolik Bom
+Hızlı Ataşman
+Son Bakım Tarihi
+Video Linki
+İlan Açıklaması
+Krediye Uygun
+Pazarlık / İndirim

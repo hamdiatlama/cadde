@@ -1,0 +1,40 @@
+{
+  "il_id": 15,
+  "il": "Burdur",
+  "plaka": "15",
+  "ilceler": [
+    {
+      "ilce": "Altınyayla"
+    },
+    {
+      "ilce": "Ağlasun"
+    },
+    {
+      "ilce": "Bucak"
+    },
+    {
+      "ilce": "Gölhisar"
+    },
+    {
+      "ilce": "Karamanlı"
+    },
+    {
+      "ilce": "Kemer"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Tefenni"
+    },
+    {
+      "ilce": "Yeşilova"
+    },
+    {
+      "ilce": "Çavdır"
+    },
+    {
+      "ilce": "Çeltikçi"
+    }
+  ]
+}

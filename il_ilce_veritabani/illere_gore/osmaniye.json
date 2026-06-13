@@ -1,0 +1,28 @@
+{
+  "il_id": 80,
+  "il": "Osmaniye",
+  "plaka": "80",
+  "ilceler": [
+    {
+      "ilce": "Bahçe"
+    },
+    {
+      "ilce": "Düziçi"
+    },
+    {
+      "ilce": "Hasanbeyli"
+    },
+    {
+      "ilce": "Kadirli"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Sumbas"
+    },
+    {
+      "ilce": "Toprakkale"
+    }
+  ]
+}

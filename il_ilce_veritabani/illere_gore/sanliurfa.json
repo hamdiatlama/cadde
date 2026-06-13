@@ -1,0 +1,46 @@
+{
+  "il_id": 63,
+  "il": "Şanlıurfa",
+  "plaka": "63",
+  "ilceler": [
+    {
+      "ilce": "Akçakale"
+    },
+    {
+      "ilce": "Birecik"
+    },
+    {
+      "ilce": "Bozova"
+    },
+    {
+      "ilce": "Ceylanpınar"
+    },
+    {
+      "ilce": "Eyyübiye"
+    },
+    {
+      "ilce": "Halfeti"
+    },
+    {
+      "ilce": "Haliliye"
+    },
+    {
+      "ilce": "Harran"
+    },
+    {
+      "ilce": "Hilvan"
+    },
+    {
+      "ilce": "Karaköprü"
+    },
+    {
+      "ilce": "Siverek"
+    },
+    {
+      "ilce": "Suruç"
+    },
+    {
+      "ilce": "Viranşehir"
+    }
+  ]
+}

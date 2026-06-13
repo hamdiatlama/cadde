@@ -1,0 +1,55 @@
+{
+  "marka": "CFMoto",
+  "modeller": [
+    {
+      "model": "CForce 400",
+      "kasa_tipleri": [
+        "ATV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "CForce 500",
+      "kasa_tipleri": [
+        "ATV"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "CForce 600",
+      "kasa_tipleri": [
+        "ATV"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "CForce 800",
+      "kasa_tipleri": [
+        "ATV"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "ZForce 800",
+      "kasa_tipleri": [
+        "UTV"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "ZForce 1000",
+      "kasa_tipleri": [
+        "UTV"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "UForce 1000",
+      "kasa_tipleri": [
+        "UTV"
+      ],
+      "uretim_baslangic": 2020
+    }
+  ],
+  "kaynak": "manuel"
+}

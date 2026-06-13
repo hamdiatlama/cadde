@@ -1,0 +1,46 @@
+{
+  "il_id": 48,
+  "il": "Muğla",
+  "plaka": "48",
+  "ilceler": [
+    {
+      "ilce": "Bodrum"
+    },
+    {
+      "ilce": "Dalaman"
+    },
+    {
+      "ilce": "Datça"
+    },
+    {
+      "ilce": "Fethiye"
+    },
+    {
+      "ilce": "Kavaklıdere"
+    },
+    {
+      "ilce": "Köyceğiz"
+    },
+    {
+      "ilce": "Marmaris"
+    },
+    {
+      "ilce": "Menteşe"
+    },
+    {
+      "ilce": "Milas"
+    },
+    {
+      "ilce": "Ortaca"
+    },
+    {
+      "ilce": "Seydikemer"
+    },
+    {
+      "ilce": "Ula"
+    },
+    {
+      "ilce": "Yatağan"
+    }
+  ]
+}

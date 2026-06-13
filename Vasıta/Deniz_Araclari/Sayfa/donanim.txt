@@ -1,0 +1,18 @@
+[Motor & Tahrik]
+
+[Seyir & Navigasyon]
+
+[Güverte Ekipmanı]
+
+[İç Donanım]
+
+[Elektrik & Elektronik]
+
+[Güvenlik Ekipmanı]
+
+[Balıkçılık Ekipmanı]
+
+[Yelken Donanımı]
+
+[Bakım & Geçmiş]
+

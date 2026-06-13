@@ -1,0 +1,76 @@
+{
+  "marka": "Aprilia",
+  "modeller": [
+    {
+      "model": "RSV4 Factory",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "RSV4 1100 Factory",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "RS 660",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Tuono V4 Factory",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Tuono 660",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "RS 457",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "Tuono 457",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2024
+    },
+    {
+      "model": "RS 125",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "SX 125",
+      "kasa_tipleri": [
+        "Supermoto"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "RX 125",
+      "kasa_tipleri": [
+        "Enduro"
+      ],
+      "uretim_baslangic": 2019
+    }
+  ],
+  "kaynak": "manuel"
+}

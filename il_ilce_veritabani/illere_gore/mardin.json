@@ -1,0 +1,37 @@
+{
+  "il_id": 47,
+  "il": "Mardin",
+  "plaka": "47",
+  "ilceler": [
+    {
+      "ilce": "Artuklu"
+    },
+    {
+      "ilce": "Dargeçit"
+    },
+    {
+      "ilce": "Derik"
+    },
+    {
+      "ilce": "Kızıltepe"
+    },
+    {
+      "ilce": "Mazıdağı"
+    },
+    {
+      "ilce": "Midyat"
+    },
+    {
+      "ilce": "Nusaybin"
+    },
+    {
+      "ilce": "Savur"
+    },
+    {
+      "ilce": "Yeşilli"
+    },
+    {
+      "ilce": "Ömerli"
+    }
+  ]
+}

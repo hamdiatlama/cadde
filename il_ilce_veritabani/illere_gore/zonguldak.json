@@ -1,0 +1,31 @@
+{
+  "il_id": 67,
+  "il": "Zonguldak",
+  "plaka": "67",
+  "ilceler": [
+    {
+      "ilce": "Alaplı"
+    },
+    {
+      "ilce": "Devrek"
+    },
+    {
+      "ilce": "Ereğli"
+    },
+    {
+      "ilce": "Gökçebey"
+    },
+    {
+      "ilce": "Kilimli"
+    },
+    {
+      "ilce": "Kozlu"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Çaycuma"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "marka": "Volvo Buses",
+  "modeller": [
+    {
+      "model": "7900",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "8900",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "8900 LE",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "9700",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "9900",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "7400",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "7700",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "7900 Electric",
+      "kasa_tipleri": [
+        "Elektrikli Otobüs"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "8900 Electric",
+      "kasa_tipleri": [
+        "Elektrikli Otobüs"
+      ],
+      "uretim_baslangic": 2021
+    }
+  ],
+  "kaynak": "manuel"
+}

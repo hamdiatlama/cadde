@@ -1,0 +1,54 @@
+{
+  "marka": "Perodua",
+  "modeller": [
+    {
+      "model": "Myvi",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2005
+    },
+    {
+      "model": "Axia",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Bezza",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Alza",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Aruz",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Ativa",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2020
+    }
+  ],
+  "kaynak": "manuel"
+}

@@ -1,0 +1,46 @@
+{
+  "il_id": 44,
+  "il": "Malatya",
+  "plaka": "44",
+  "ilceler": [
+    {
+      "ilce": "Akçadağ"
+    },
+    {
+      "ilce": "Arapgir"
+    },
+    {
+      "ilce": "Arguvan"
+    },
+    {
+      "ilce": "Battalgazi"
+    },
+    {
+      "ilce": "Darende"
+    },
+    {
+      "ilce": "Doğanyol"
+    },
+    {
+      "ilce": "Doğanşehir"
+    },
+    {
+      "ilce": "Hekimhan"
+    },
+    {
+      "ilce": "Kale"
+    },
+    {
+      "ilce": "Kuluncak"
+    },
+    {
+      "ilce": "Pütürge"
+    },
+    {
+      "ilce": "Yazıhan"
+    },
+    {
+      "ilce": "Yeşilyurt"
+    }
+  ]
+}

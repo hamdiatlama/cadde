@@ -1,0 +1,69 @@
+{
+  "marka": "Sunseeker",
+  "modeller": [
+    {
+      "model": "65 Sport Yacht",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "75 Sport Yacht",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "90 Ocean",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "100 Ocean",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "116 Yacht",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Predator 50",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Predator 65",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Manhattan 68",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Manhattan 55",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2020
+    }
+  ],
+  "kaynak": "manuel"
+}

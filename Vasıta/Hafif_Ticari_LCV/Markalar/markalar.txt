@@ -1,0 +1,101 @@
+=== Hafif Ticari (LCV) MARKALARI ===
+
+=== HAFİF TİCARİ (LCV) MARKALARI ===
+
+[Türkiye]
+- Ford Otosan (Ford Transit, Courier)
+- Fiat Professional (Fiat Doblo, Fiorino)
+- Renault (Kangoo, Express)
+- Peugeot (Partner, Expert, Boxer)
+- Citroën (Berlingo, Jumpy, Jumper)
+- Opel (Combo, Vivaro, Movano)
+- Mercedes-Benz (Sprinter, Vito, Citan)
+- Volkswagen (Caddy, Transporter, Crafter)
+- Hyundai (H100, Staria, Porter)
+- Kia (Pregio, Bongo)
+- Isuzu (D-Max, N-Series)
+- Toyota (Hilux, Proace, Proace City)
+- Nissan (Navara, Townstar, Primastar)
+- Mitsubishi (L200)
+- Dacia/Dacia Dokker
+- Iveco (Daily)
+- Peugeot (Ticari)
+- Citroën (Ticari)
+- Opel
+
+[Almanya]
+- Volkswagen Commercial Vehicles (VWN)
+- Mercedes-Benz Vans
+- Opel-Vauxhall (Stellantis)
+- Ford-Werke (Ford Transit)
+
+[Fransa]
+- Renault (ticari)
+- Peugeot (Expert, Partner, Boxer)
+- Citroën (Jumpy, Jumpy, Berlingo)
+- Fiat Professional (Fransa)
+
+[İtalya]
+- Fiat Professional
+- Iveco
+
+[İspanya]
+- SEAT (ticari)
+
+[İsveç]
+- Volvo (ticari)
+
+[Japonya]
+- Toyota (Hilux, Proace, Dyna)
+- Nissan (Navara, Townstar)
+- Isuzu (D-Max, Elf)
+- Mitsubishi (Delica, L200, Colt)
+- Mazda (BT-50)
+- Suzuki (Carry, Super Carry, Jimny ticari)
+- Daihatsu (Hijet)
+
+[ABD]
+- Ford Motor Company (Transit Connect, Transit)
+- Ram Trucks (Promaster)
+- General Motors (Chevrolet Express, GMC Savana)
+- Freightliner (Sprinter)
+
+[Çin]
+- SAIC Maxus (Deliver v, Deliver 9, Deliver 3)
+- JMC (Jiangling Motors)
+- Foton (View, Tunland)
+- BYD (Ticari)
+- Dongfeng
+- Geely (Farizon)
+- Great Wall (Poer, Wingle)
+- DFSK (Glory, Fengon)
+
+[Güney Kore]
+- Hyundai (H1-Starex, Porter, H100, County)
+- Kia (Pregio, Bongo, Carnival)
+- GM Korea (Damas, Labo)
+
+[Hindistan]
+- Mahindra & Mahindra (Scorpio Getaway, Bolero Pickup)
+- Tata Motors (Ace, Super Ace, Xenon, Intra)
+- Ashok Leyland (Dost, Bada Dost)
+- Force Motors (Traveller, Gurkha Ticari)
+- Maruti Suzuki (Omni, Eeco, Super Carry)
+
+[Romanya]
+- Dacia (Dokker, Solentis)
+
+[Polonya]
+- Solaris
+
+[İran]
+- Iran Khodro (Bardo, Aris)
+- SAIPA (Pickup)
+
+[Rusya]
+- GAZ (Gazelle, Sobol)
+- UAZ (Patriot Ticari, Bukhanka)
+
+[Brezilya]
+- Agrale
+- Marcopolo (mini otobüs)

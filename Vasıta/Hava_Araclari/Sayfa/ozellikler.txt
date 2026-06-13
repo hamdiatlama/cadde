@@ -1,0 +1,29 @@
+Fiyat
+İlan Başlığı
+Konum
+Marka / Üretici
+Model
+Yıl
+Araç Durumu
+Uçuş Saati
+Motor Sayısı
+Motor Gücü (BG/kW)
+Motor Tipi (Piston/Turboprop/Jet/Elektrik)
+Yakıt Tipi
+Maksimum Hız (knot)
+Seyir Hızı (knot)
+Menzil (km)
+Maksimum İrtifa (ft)
+Yolcu Kapasitesi
+Kabin / Açık Kokpit
+Renk
+Garanti
+Tescil / Kuyruk No
+Kimden
+Alet Uçuş Sertifikası (IFR/VFR)
+Avionik Sistemi
+Krediye Uygun
+Sigorta Durumu
+Video Linki
+İlan Açıklaması
+Şasi / Üretim No

@@ -1,0 +1,76 @@
+{
+  "marka": "MAN",
+  "modeller": [
+    {
+      "model": "TGL",
+      "kasa_tipleri": [
+        "Orta Kamyon"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "TGM",
+      "kasa_tipleri": [
+        "Orta Kamyon"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "TGS",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "TGX",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "TGE",
+      "kasa_tipleri": [
+        "Hafif Ticari"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "eTGE",
+      "kasa_tipleri": [
+        "Elektrikli Hafif Ticari"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Lions City",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Lions Intercity",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Lions Coach",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Lions TopCoach",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2018
+    }
+  ],
+  "kaynak": "manuel"
+}

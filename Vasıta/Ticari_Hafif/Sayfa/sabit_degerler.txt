@@ -1,0 +1,41 @@
+=== Ticari Hafif SABIT DEGERLER ===
+
+[Yakıt Tipi]
+- (deger listesi eklenecek)
+
+[Vites Tipi]
+- (deger listesi eklenecek)
+
+[Kasa Tipi]
+- (deger listesi eklenecek)
+
+[Çekiş Tipi]
+- (deger listesi eklenecek)
+
+[Araç Durumu]
+- (deger listesi eklenecek)
+
+[Kimden]
+- (deger listesi eklenecek)
+
+[Renk]
+- (deger listesi eklenecek)
+
+[Garanti Durumu]
+- (deger listesi eklenecek)
+
+[Plaka / Uyruk]
+- (deger listesi eklenecek)
+
+[Döviz Cinsi]
+- (deger listesi eklenecek)
+
+[Emisyon Sınıfı]
+- (deger listesi eklenecek)
+
+[Kasa Malzemesi]
+- (deger listesi eklenecek)
+
+[Soğutma Tipi]
+- (deger listesi eklenecek)
+

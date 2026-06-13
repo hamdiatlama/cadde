@@ -1,0 +1,55 @@
+{
+  "marka": "Isuzu",
+  "modeller": [
+    {
+      "model": "D-Max",
+      "kasa_tipleri": [
+        "Pick-up"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "N-Serisi (NPR/NQR/NRR)",
+      "kasa_tipleri": [
+        "Orta Kamyon"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "F-Serisi (FRR/FSR/FRD)",
+      "kasa_tipleri": [
+        "Orta Kamyon"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Turkuaz",
+      "kasa_tipleri": [
+        "Hafif Ticari"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Saiph",
+      "kasa_tipleri": [
+        "Hafif Ticari"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Novo",
+      "kasa_tipleri": [
+        "Hafif Ticari"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "MU-X",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2021
+    }
+  ],
+  "kaynak": "manuel"
+}

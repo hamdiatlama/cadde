@@ -1,0 +1,43 @@
+{
+  "il_id": 53,
+  "il": "Rize",
+  "plaka": "53",
+  "ilceler": [
+    {
+      "ilce": "Ardeşen"
+    },
+    {
+      "ilce": "Derepazarı"
+    },
+    {
+      "ilce": "Fındıklı"
+    },
+    {
+      "ilce": "Güneysu"
+    },
+    {
+      "ilce": "Hemşin"
+    },
+    {
+      "ilce": "Kalkandere"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Pazar"
+    },
+    {
+      "ilce": "Çamlıhemşin"
+    },
+    {
+      "ilce": "Çayeli"
+    },
+    {
+      "ilce": "İkizdere"
+    },
+    {
+      "ilce": "İyidere"
+    }
+  ]
+}

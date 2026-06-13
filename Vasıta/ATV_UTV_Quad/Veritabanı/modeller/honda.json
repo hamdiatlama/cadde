@@ -1,0 +1,55 @@
+{
+  "marka": "Honda",
+  "modeller": [
+    {
+      "model": "TRX450R",
+      "kasa_tipleri": [
+        "ATV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "TRX420FM FourTrax",
+      "kasa_tipleri": [
+        "ATV"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "TRX520 FourTrax",
+      "kasa_tipleri": [
+        "ATV"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Rancher 420",
+      "kasa_tipleri": [
+        "ATV"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Foreman 520",
+      "kasa_tipleri": [
+        "ATV"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Talon 1000",
+      "kasa_tipleri": [
+        "UTV"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Pioneer 700",
+      "kasa_tipleri": [
+        "UTV"
+      ],
+      "uretim_baslangic": 2017
+    }
+  ],
+  "kaynak": "manuel"
+}

@@ -1,0 +1,26 @@
+=== Hava Araçları SABIT DEGERLER ===
+
+[Araç Tipi (Uçak/Helikopter/Ultralight/Drone/Yamaç Paraşütü)]
+- (deger listesi eklenecek)
+
+[Araç Durumu]
+- (deger listesi eklenecek)
+
+[Kimden]
+- (deger listesi eklenecek)
+
+[Renk]
+- (deger listesi eklenecek)
+
+[Döviz Cinsi]
+- (deger listesi eklenecek)
+
+[Motor Tipi]
+- (deger listesi eklenecek)
+
+[Yakıt Tipi]
+- (deger listesi eklenecek)
+
+[Tescil Durumu]
+- (deger listesi eklenecek)
+

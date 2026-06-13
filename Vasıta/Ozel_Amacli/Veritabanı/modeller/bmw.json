@@ -1,0 +1,301 @@
+{
+  "marka": "BMW",
+  "modeller": [
+    {
+      "model": "1 Serisi",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Hatchback",
+        "Sedan"
+      ],
+      "uretim_baslangic": 2004
+    },
+    {
+      "model": "2 Serisi",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Coupe",
+        "Cabrio",
+        "Gran Coupe"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "3 Serisi",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Sedan",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 1975
+    },
+    {
+      "model": "4 Serisi",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Coupe",
+        "Cabrio",
+        "Gran Coupe"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "5 Serisi",
+      "segment": "E",
+      "kasa_tipleri": [
+        "Sedan",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 1972
+    },
+    {
+      "model": "6 Serisi",
+      "segment": "E",
+      "kasa_tipleri": [
+        "Coupe",
+        "Cabrio",
+        "Gran Coupe"
+      ],
+      "uretim_baslangic": 2011
+    },
+    {
+      "model": "7 Serisi",
+      "segment": "F",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 1977
+    },
+    {
+      "model": "8 Serisi",
+      "segment": "F",
+      "kasa_tipleri": [
+        "Coupe",
+        "Cabrio",
+        "Gran Coupe"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "X1",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2009
+    },
+    {
+      "model": "X2",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "X3",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2003
+    },
+    {
+      "model": "X4",
+      "segment": "J",
+      "kasa_tipleri": [
+        "Coupe",
+        "SUV"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "X5",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 1999
+    },
+    {
+      "model": "X6",
+      "segment": "J",
+      "kasa_tipleri": [
+        "Coupe",
+        "SUV"
+      ],
+      "uretim_baslangic": 2008
+    },
+    {
+      "model": "X7",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "XM",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Z4",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2002
+    },
+    {
+      "model": "i4",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Gran Coupe"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "i5",
+      "segment": "E",
+      "kasa_tipleri": [
+        "Sedan",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "i7",
+      "segment": "F",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "iX",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "iX1",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "iX3",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "M2",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "M3",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Sedan",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 1986
+    },
+    {
+      "model": "M4",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe",
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "M5",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Sedan",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 1984
+    },
+    {
+      "model": "M8",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe",
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "X3 M",
+      "segment": "S",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "X4 M",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe",
+        "SUV"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "X5 M",
+      "segment": "S",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2009
+    },
+    {
+      "model": "X6 M",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe",
+        "SUV"
+      ],
+      "uretim_baslangic": 2009
+    },
+    {
+      "model": "i3",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2013,
+      "uretim_bitis": 2022
+    },
+    {
+      "model": "i8",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe",
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2014,
+      "uretim_bitis": 2020
+    }
+  ],
+  "kaynak": "manuel"
+}

@@ -1,0 +1,48 @@
+{
+  "marka": "Winnebago",
+  "modeller": [
+    {
+      "model": "Solis",
+      "kasa_tipleri": [
+        "Motorhome"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Travato",
+      "kasa_tipleri": [
+        "Motorhome"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "View",
+      "kasa_tipleri": [
+        "Motorhome"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Voyage",
+      "kasa_tipleri": [
+        "Motorhome"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Minnie Plus",
+      "kasa_tipleri": [
+        "Çekme Karavan"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Micro Minnie",
+      "kasa_tipleri": [
+        "Çekme Karavan"
+      ],
+      "uretim_baslangic": 2019
+    }
+  ],
+  "kaynak": "manuel"
+}

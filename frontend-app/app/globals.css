@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.cat-card:hover {
+  background: #4A7FD4 !important;
+  border-color: #4A7FD4 !important;
+}
+
+.cat-card:hover .cat-icon-wrap {
+  background: rgba(255,255,255,0.2) !important;
+}
+
+.cat-card:hover i {
+  color: #fff !important;
+}
+
+.cat-card:hover .cn {
+  color: #fff !important;
+}
+
+.cat-card:hover .cs {
+  color: rgba(255,255,255,0.7) !important;
+}
+
+.biz-card:hover {
+  border-color: #4A7FD4 !important;
+}
+
+.qtag:hover {
+  background: #4A7FD4 !important;
+  color: #fff !important;
+  border-color: #4A7FD4 !important;
+}
+
+.nav-link:hover {
+  color: #4A7FD4 !important;
+}
+span.nav-link:hover {
+  color: #4A7FD4 !important;
+  transition: color 0.15s;
+}
+
+span.qtag {
+  transition: all 0.15s;
+}
+
+span.qtag:hover {
+  background: #4A7FD4 !important;
+  color: #fff !important;
+  border-color: #4A7FD4 !important;
+}
+
+span.qtag:hover i {
+  color: #fff !important;
+}

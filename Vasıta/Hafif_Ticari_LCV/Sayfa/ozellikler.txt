@@ -1,0 +1,42 @@
+Fiyat
+İlan Başlığı
+Konum
+Marka
+Seri
+Model
+Yıl
+Yakıt Tipi
+Vites
+Araç Durumu
+KM
+Kasa Tipi
+Motor Gücü
+Motor Hacmi
+Çekiş
+Renk
+LPG
+Garanti
+Plaka / Uyruk
+Kimden
+Takas
+Donanım Paketi
+Koltuk Sayısı
+Kapı Sayısı
+Yük Hacmi (m³)
+Azami Yük (kg)
+Boş Ağırlık
+Kasa Boyu (cm)
+Kasa Tipi (Tente/Perdeli/Kapalı)
+Soğutma Sistemi
+Çekme Kapasitesi (kg)
+Son Bakım Tarihi
+Muayene Tarihi
+Video Linki
+İlan Açıklaması
+VIN / Şasi No
+Emisyon Sınıfı
+Krediye Uygun
+Sigorta Durumu
+Pazarlık / İndirim
+İlk Tescil Tarihi
+Fatura Türü

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Meslekler Rehberi{% endblock %}
+{% block content %}
+<div class="stats">
+    <span>{{ total }}</span> meslek • <span>{{ categories|length }}</span> kategori
+</div>
+<div class="grid">
+    {% for c in categories %}
+    <div class="card">
+        <a href="/kategori/{{ c.id }}">
+            <h3>{{ c.emoji }} {{ c.name }}</h3>
+            <div class="count">{{ c.count }} meslek</div>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

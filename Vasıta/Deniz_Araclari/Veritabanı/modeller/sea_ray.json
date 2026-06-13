@@ -1,0 +1,69 @@
+{
+  "marka": "Sea Ray",
+  "modeller": [
+    {
+      "model": "SPX 210",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "SPX 260",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "SPX 310",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "SDX 250",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Sundancer 320",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Sundancer 370",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "SLX 400",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "SLX 350",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "L 650",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2022
+    }
+  ],
+  "kaynak": "manuel"
+}

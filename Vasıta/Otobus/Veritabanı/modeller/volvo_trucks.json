@@ -1,0 +1,62 @@
+{
+  "marka": "Volvo Trucks",
+  "modeller": [
+    {
+      "model": "FH",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "FH16",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "FM",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "FMX",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "FE",
+      "kasa_tipleri": [
+        "Orta Kamyon"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "FL",
+      "kasa_tipleri": [
+        "Orta Kamyon"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "VNR",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "VHD",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2014
+    }
+  ],
+  "kaynak": "manuel"
+}

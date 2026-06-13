@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Renk Sistemi - Gece & Gündüz</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#f9fafb;color:#111;padding:30px;max-width:900px;margin:0 auto}
+h1{font-size:28px;font-weight:700;margin-bottom:4px}
+.sub{font-size:14px;color:#6b7280;margin-bottom:28px}
+
+.theme-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+.theme{background:#fff;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden}
+.theme .header{display:flex;align-items:center;gap:8px;padding:14px 16px;border-bottom:1px solid #e5e7eb;font-weight:600;font-size:14px}
+.theme .content{padding:16px}
+.theme .content .gri{display:flex;align-items:center;gap:12px;padding:6px 0}
+.theme .content .gri .kutu{width:24px;height:24px;border-radius:4px;flex-shrink:0}
+.theme .content .gri .info{flex:1}
+.theme .content .gri .info .r-name{font-size:13px;font-weight:500}
+.theme .content .gri .info .r-code{font-size:11px;color:#9ca3af}
+.theme .content .gri .info .r-use{font-size:11px;color:#6b7280}
+
+.dark-theme{background:#111;color:#eee;border-color:#333}
+.dark-theme .header{border-color:#333;color:#eee}
+.dark-theme .content .gri .info .r-name{color:#eee}
+.dark-theme .content .gri .info .r-code{color:#6b7280}
+.dark-theme .content .gri .info .r-use{color:#6b7280}
+
+table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0}
+td{padding:8px 12px;border-bottom:1px solid #e5e7eb;vertical-align:top;width:33%}
+td:first-child{font-weight:600;width:120px}
+
+.preview-row{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0}
+.preview-box{width:180px;border-radius:8px;padding:14px;font-size:13px}
+.preview-box .pb-title{font-weight:600;font-size:14px;margin-bottom:4px}
+.preview-box .pb-sub{font-size:12px;margin-bottom:8px;opacity:.7}
+.preview-box .pb-btn{display:inline-block;padding:6px 14px;border-radius:6px;font-size:12px;font-weight:600;margin-top:4px}
+
+.code-block{background:#111;color:#fff;border-radius:8px;padding:16px;font-family:monospace;font-size:13px;line-height:1.8;overflow-x:auto;margin-top:8px}
+.code-block .cm{color:#6b7280}
+.code-block .kw{color:#22c55e}
+.code-block .str{color:#fbbf24}
+</style>
+</head>
+<body>
+<h1>🌓 Renk Sistemi — Gece & Gündüz</h1>
+<p class="sub">İki tema: Gündüz (açık) + Gece (koyu). Gri tonları, 4px radius, ince border (1px).</p>
+
+<div class="theme-row">
+  <!-- GÜNDÜZ -->
+  <div class="theme">
+    <div class="header">☀️ Gündüz Teması</div>
+    <div class="content">
+      <div class="gri"><div class="kutu" style="background:#fff;border:1px solid #e5e7eb"></div><div class="info"><div class="r-name">Arkaplan</div><div class="r-code">#f9fafb</div><div class="r-use">Sayfa zemini</div></div></div>
+      <div class="gri"><div class="kutu" style="background:#fff;border:1px solid #e5e7eb"></div><div class="info"><div class="r-name">Kart</div><div class="r-code">#ffffff</div><div class="r-use">İçerik kartları</div></div></div>
+      <div class="gri"><div class="kutu" style="background:#f3f4f6;border:1px solid #e5e7eb"></div><div class="info"><div class="r-name">İkincil Kart</div><div class="r-code">#f3f4f6</div><div class="r-use">Hover, basılı</div></div></div>
+      <div class="gri"><div class="kutu" style="background:#e5e7eb"></div><div class="info"><div class="r-name">Border</div><div class="r-code">#e5e7eb</div><div class="r-use">Çizgiler</div></div></div>
+      <div class="gri"><div class="kutu" style="background:#111"></div><div class="info"><div class="r-name">Yazı (birincil)</div><div class="r-code">#111111</div><div class="r-use">Başlık, buton</div></div></div>
+      <div class="gri"><div class="kutu" style="background:#374151"></div><div class="info"><div class="r-name">Yazı (gövde)</div><div class="r-code">#374151</div><div class="r-use">İçerik metni</div></div></div>
+      <div class="gri"><div class="kutu" style="background:#6b7280"></div><div class="info"><div class="r-name">Yazı (alt)</div><div class="r-code">#6b7280</div><div class="r-use">Alt yazı, label</div></div></div>
+      <div class="gri"><div class="kutu" style="background:#9ca3af"></div><div class="info"><div class="r-name">Yazı (pasif)</div><div class="r-code">#9ca3af</div><div class="r-use">Placeholder</div></div></div>
+    </div>
+  </div>
+
+  <!-- GECE -->
+  <div class="theme dark-theme">
+    <div class="header">🌙 Gece Teması</div>
+    <div class="content">
+      <div class="gri"><div class="kutu" style="background:#111;border:1px solid #333"></div><div class="info"><div class="r-name">Arkaplan</div><div class="r-code">#111111</div><div class="r-use">Sayfa zemini</div></div></div>
+      <div class="gri"><div class="kutu" style="background:#1a1a2e;border:1px solid #333"></div><div class="info"><div class="r-name">Kart</div><div class="r-code">#1a1a2e</div><div class="r-use">İçerik kartları</div></div></div>
+      <div class="gri"><div class="kutu" style="background:#222;border:1px solid #333"></div><div class="info"><div class="r-name">İkincil Kart</div><div class="r-code">#222222</div><div class="r-use">Hover, basılı</div></div></div>
+      <div class="gri"><div class="kutu" style="background:#333"></div><div class="info"><div class="r-name">Border</div><div class="r-code">#333333</div><div class="r-use">Çizgiler</div></div></div>
+      <div class="gri"><div class="kutu" style="background:#fff"></div><div class="info"><div class="r-name">Yazı (birincil)</div><div class="r-code">#ffffff</div><div class="r-use">Başlık, buton</div></div></div>
+      <div class="gri"><div class="kutu" style="background:#e5e7eb"></div><div class="info"><div class="r-name">Yazı (gövde)</div><div class="r-code">#e5e7eb</div><div class="r-use">İçerik metni</div></div></div>
+      <div class="gri"><div class="kutu" style="background:#9ca3af"></div><div class="info"><div class="r-name">Yazı (alt)</div><div class="r-code">#9ca3af</div><div class="r-use">Alt yazı, label</div></div></div>
+      <div class="gri"><div class="kutu" style="background:#6b7280"></div><div class="info"><div class="r-name">Yazı (pasif)</div><div class="r-code">#6b7280</div><div class="r-use">Placeholder</div></div></div>
+    </div>
+  </div>
+</div>
+
+<h2 style="font-size:15px;font-weight:600;margin:24px 0 12px">Önizleme</h2>
+<div class="preview-row">
+  <div class="preview-box" style="background:#fff;border:1px solid #e5e7eb">
+    <div class="pb-title" style="color:#111">Gündüz</div>
+    <div class="pb-sub" style="color:#6b7280">6.2 km • 18 dk</div>
+    <div style="font-weight:700;font-size:22px;color:#111">₺124</div>
+    <div class="pb-btn" style="background:#111;color:#fff">Çağır</div>
+  </div>
+  <div class="preview-box" style="background:#1a1a2e;border:1px solid #333">
+    <div class="pb-title" style="color:#fff">Gece</div>
+    <div class="pb-sub" style="color:#9ca3af">6.2 km • 18 dk</div>
+    <div style="font-weight:700;font-size:22px;color:#fff">₺124</div>
+    <div class="pb-btn" style="background:#fff;color:#111">Çağır</div>
+  </div>
+</div>
+
+<h2 style="font-size:15px;font-weight:600;margin:24px 0 12px">CSS Değişkenleri</h2>
+<div class="code-block">
+<span class="cm">/* GÜNDÜZ (varsayılan) */</span><br>
+--bg: #f9fafb;<br>
+--card: #ffffff;<br>
+--card-secondary: #f3f4f6;<br>
+--border: #e5e7eb;<br>
+--text-primary: #111111;<br>
+--text-body: #374151;<br>
+--text-muted: #6b7280;<br>
+--text-placeholder: #9ca3af;<br>
+--button-bg: #111111;<br>
+--button-text: #ffffff;<br>
+--radius: 8px;<br>
+<br>
+<span class="cm">/* GECE (data-theme="dark") */</span><br>
+<span class="kw">[data-theme="dark"]</span> {<br>
+&nbsp;&nbsp;--bg: #111111;<br>
+&nbsp;&nbsp;--card: #1a1a2e;<br>
+&nbsp;&nbsp;--card-secondary: #222222;<br>
+&nbsp;&nbsp;--border: #333333;<br>
+&nbsp;&nbsp;--text-primary: #ffffff;<br>
+&nbsp;&nbsp;--text-body: #e5e7eb;<br>
+&nbsp;&nbsp;--text-muted: #9ca3af;<br>
+&nbsp;&nbsp;--text-placeholder: #6b7280;<br>
+&nbsp;&nbsp;--button-bg: #ffffff;<br>
+&nbsp;&nbsp;--button-text: #111111;<br>
+}
+</div>
+
+<p style="margin-top:24px;font-size:13px;color:#9ca3af">📁 design/references/renk_sistemi.html</p>
+</body>
+</html>

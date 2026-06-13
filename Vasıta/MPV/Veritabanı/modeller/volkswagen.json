@@ -1,0 +1,277 @@
+{
+  "marka": "Volkswagen",
+  "modeller": [
+    {
+      "model": "Golf",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Hatchback",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 1974
+    },
+    {
+      "model": "Passat",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Sedan",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 1973
+    },
+    {
+      "model": "Polo",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 1975
+    },
+    {
+      "model": "Tiguan",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2007
+    },
+    {
+      "model": "T-Roc",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "T-Cross",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Taigo",
+      "segment": "J",
+      "kasa_tipleri": [
+        "Coupe",
+        "SUV"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "ID.3",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "ID.4",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "ID.5",
+      "segment": "J",
+      "kasa_tipleri": [
+        "Coupe",
+        "SUV"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "ID.6",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "ID.7",
+      "segment": "E",
+      "kasa_tipleri": [
+        "Sedan",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "ID.Buzz",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Arteon",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Coupe",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Touran",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2003
+    },
+    {
+      "model": "Sharan",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2010
+    },
+    {
+      "model": "Caddy",
+      "segment": "V",
+      "kasa_tipleri": [
+        "Van",
+        "MPV"
+      ],
+      "uretim_baslangic": 2003
+    },
+    {
+      "model": "Multivan",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2003
+    },
+    {
+      "model": "California",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2004
+    },
+    {
+      "model": "Amarok",
+      "segment": "P",
+      "kasa_tipleri": [
+        "Pick-up"
+      ],
+      "uretim_baslangic": 2010
+    },
+    {
+      "model": "Touareg",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2002
+    },
+    {
+      "model": "Up!",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2011
+    },
+    {
+      "model": "Lupo",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 1998,
+      "uretim_bitis": 2005
+    },
+    {
+      "model": "Fox",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2004,
+      "uretim_bitis": 2011
+    },
+    {
+      "model": "Beetle",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Coupe",
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2011,
+      "uretim_bitis": 2019
+    },
+    {
+      "model": "Eos",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2006,
+      "uretim_bitis": 2015
+    },
+    {
+      "model": "Scirocco",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2008,
+      "uretim_bitis": 2017
+    },
+    {
+      "model": "Phaeton",
+      "segment": "F",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2003,
+      "uretim_bitis": 2016
+    },
+    {
+      "model": "Jetta",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 1979
+    },
+    {
+      "model": "Vento",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2011,
+      "uretim_bitis": 2018
+    },
+    {
+      "model": "Santana",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "Lavida",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2008
+    }
+  ],
+  "kaynak": "manuel"
+}

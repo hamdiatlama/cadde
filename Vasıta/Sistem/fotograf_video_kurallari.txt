@@ -1,0 +1,84 @@
+=== FOTOĞRAF & VİDEO YÜKLEME KURALLARI ===
+
+────────────────────────────────────────
+FOTOĞRAF
+────────────────────────────────────────
+
+KABUL EDİLEN FORMATLAR:
+  - JPEG/JPG  (öncelikli)
+  - PNG
+  - WebP
+
+YASAK FORMATLAR:
+  - BMP, TIFF, GIF (animasyonlu), SVG, RAW, HEIC/HEIF
+
+MAKSİMUM BOYUT:
+  - Her bir fotoğraf: 10 MB
+  - Toplam ilan başına: 100 MB
+
+ÖNERİLEN ÇÖZÜNÜRLÜK:
+  - Minimum: 800 x 600 px
+  - Maksimum: 4096 x 4096 px
+  - En-boy oranı: 4:3 veya 16:9 tercih edilir
+
+FOTOĞRAF SAYISI:
+  - Minimum: 1 (ilan yayınlamak için zorunlu)
+  - Maksimum: 20 (ücretsiz)
+  - Ücretli paketlerde: 30-50 arası
+
+FOTOĞRAF SIRALAMASI:
+  - Kullanıcı sıralamayı belirleyebilir (drag & drop)
+  - 1. fotoğraf: kapak/küçük resim olarak kullanılır
+
+OTOMATİK İŞLEMLER (yükleme sonrası):
+  1. Orijinal dosya korunur
+  2. Büyük boy (1200 px) — galeri/slider
+  3. Orta boy (600 px) — liste görünümü
+  4. Küçük boy (300 px) — thumbnail / ön izleme
+  5. WebP formatına dönüştürülür (opsiyonel)
+  6. EXIF verileri temizlenir (konum bilgisi gizlilik)
+  7. Filigran eklenir (site adı + logo, sağ alt köşe)
+
+DOSYA ADI FORMATI:
+  - {ilan_id}_{sira}_{hash}.{format}
+  - Örnek: 12345_01_aB3xK9.jpg
+
+KISITLAMALAR:
+  - Araba / Motosiklet alanında en az 1 fotoğraf zorunludur
+  - Deniz araçları için en az 3 fotoğraf zorunlu (tekne, motor, iç görünüm)
+  - Emlak/araç dışı kategorilerde fotoğrafsız ilana izin verilebilir
+  - Şiddet, çıplaklık, reklam içeren fotoğraflar reddedilir (AI + admin)
+
+────────────────────────────────────────
+VİDEO
+────────────────────────────────────────
+
+KABUL EDİLEN FORMATLAR:
+  - MP4 (H.264 codec)
+  - MOV (yalnızca H.264)
+
+YASAK FORMATLAR:
+  - AVI, MKV, FLV, WEBM, WMV
+
+MAKSİMUM BOYUT:
+  - Her bir video: 100 MB
+  - Süre: 15 saniye - 3 dakika
+
+ÇÖZÜNÜRLÜK:
+  - Minimum: 720p (1280x720)
+  - Maksimum: 4K (3840x2160)
+  - Önerilen: 1080p (1920x1080), 30 fps
+
+VİDEO SAYISI:
+  - Maksimum: 3 (ücretsiz)
+  - Ücretli paketlerde: 5-10
+
+OTOMATİK İŞLEMLER:
+  1. 1080p'ye sıkıştırılır (düşükse atlanır)
+  2. Küçük resim (thumbnail) otomatik çekilir (3. saniye)
+  3. İlk 3 saniye GIF ön izleme oluşturulur
+  4. WebM yedeği (opsiyonel)
+
+DEPOLAMA:
+  - CDN üzerinden yayın (Cloudflare / bunny.net)
+  - Dosyalar 2 yıl sonra otomatik temizlenir (pasif ilanlar)

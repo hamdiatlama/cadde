@@ -1,0 +1,84 @@
+{
+  "marka": "John Deere",
+  "modeller": [
+    {
+      "model": "5E Serisi",
+      "kasa_tipleri": [
+        "Kompakt Traktör"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "5M Serisi",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "6M Serisi",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "6R Serisi",
+      "kasa_tipleri": [
+        "Büyük Traktör"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "7R Serisi",
+      "kasa_tipleri": [
+        "Büyük Traktör"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "8R Serisi",
+      "kasa_tipleri": [
+        "Çok Büyük Traktör"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "8RX Serisi",
+      "kasa_tipleri": [
+        "Paletli Traktör"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "9R Serisi",
+      "kasa_tipleri": [
+        "Çok Büyük Traktör"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "9RX Serisi",
+      "kasa_tipleri": [
+        "Paletli Traktör"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "XUV Serisi",
+      "kasa_tipleri": [
+        "Yanlısız Traktör"
+      ],
+      "uretim_baslangic": 2010
+    },
+    {
+      "model": "T Serisi",
+      "kasa_tipleri": [
+        "Büyük Traktör"
+      ],
+      "uretim_baslangic": 2010,
+      "uretim_bitis": 2020
+    }
+  ],
+  "kaynak": "manuel"
+}

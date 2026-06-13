@@ -1,0 +1,112 @@
+=== FİYAT MODELİ ===
+
+────────────────────────────────────────
+TEMEL FİYAT YAPISI
+────────────────────────────────────────
+
+Her ilanın bir ana fiyatı vardır:
+
+- fiyat: decimal(12,2)
+- döviz: enum(TRY, USD, EUR, GBP, --- diğer seçenekler)
+- pazarlik_var_mi: boolean (varsayılan: true)
+- fiyat_gizli_mi: boolean (varsayılan: false — "Fiyat Sorunuz" modu)
+
+Varsayılan döviz: TRY
+Fiyat alanı boş bırakılamaz (0 girilebilir, "Fiyat Sorunuz" işaretlenir)
+
+────────────────────────────────────────
+DÖVİZ DESTEĞİ
+────────────────────────────────────────
+
+Desteklenen dövizler:
+  - TRY  (Türk Lirası)
+  - USD  (ABD Doları)
+  - EUR  (Euro)
+  - GBP  (İngiliz Sterlini)
+  - AED  (BAE Dirhemi)
+  - RUB  (Rus Rublesi)
+  - NOK  (Norveç Kronu) — deniz araçları için
+  - CHF  (İsviçre Frangı)
+
+Dönüşüm:
+  - İlan listelemede fiyat otomatik olarak TRY'ye çevrilir (güncel kur ile)
+  - Kullanıcıya kendi seçtiği döviz gösterilir
+  - Kur API: TCMB + OpenExchangeRates (yedek)
+
+────────────────────────────────────────
+TAKAS
+────────────────────────────────────────
+
+- takas_mumkun: enum(hayir, takas_sonucu, takas_arti_nakit, takas_eksilti_nakit)
+- takas_aciklama: text (ör: "Araba + 50.000 TL" veya "Araba karşılığı takas")
+- Sadece Araç kategorilerinde gösterilir
+
+────────────────────────────────────────
+KREDİ / FİNANSMAN
+────────────────────────────────────────
+
+- krediye_uygun: boolean
+- kredi_turu: enum(bireysel_kredi, tasit_kredisi, dask_kredisi) | nullable
+- kredi_vade_aylari: int (12, 24, 36, 48, 60)
+- kredi_peşinat: decimal(12,2) | nullable
+
+Araba, Motosiklet, Ticari araçlar için kredi sorgulama butonu
+gösterilir (entegre banka API'si veya yönlendirme).
+
+────────────────────────────────────────
+SİGORTA
+────────────────────────────────────────
+
+- sigorta_durumu: enum(yok, kaskolu, trafik_sigortasi, her_ikisi_de_var) | nullable
+- sigorta_bitis_tarihi: date | nullable
+- kasko_değeri: decimal(12,2) | nullable
+
+Araba, Motosiklet için zorunlu alan.
+Diğer tiplerde opsiyonel.
+
+────────────────────────────────────────
+İNDİRİM / PAZARLIK
+────────────────────────────────────────
+
+- pazarlik_var_mi: boolean
+- indirim_yuzde: int (0-100) | nullable
+- indirim_aciklama: string | nullable (ör: "Peşin alıma %5 indirim")
+- son_fiyat: decimal(12,2) (hesaplanan: fiyat - indirim)
+
+────────────────────────────────────────
+FİYAT GEÇMİŞİ (opsiyonel)
+────────────────────────────────────────
+
+- original_fiyat: decimal (ilk yayın fiyatı)
+- fiyat_dususleri: JSON array [{tarih:..., eski:..., yeni:...}]
+- en_dusuk_fiyat: decimal
+- ortalama_fiyat: decimal (market karşılaştırma için)
+
+────────────────────────────────────────
+DURUM & FİYAT İLİŞKİSİ
+────────────────────────────────────────
+
+- "Satıldı" statüsündeki ilanlarda fiyat gösterilmez
+- "Fiyat Sorunuz" işaretli ilanlarda fiyat alanı gizlenir,
+  iletişim butonu gösterilir
+
+────────────────────────────────────────
+VERİTABANI ŞEMASI (ornek)
+────────────────────────────────────────
+
+ilan_fiyati {
+  ilan_id          FK
+  fiyat            decimal(12,2)
+  döviz            varchar(3)    -- "TRY", "USD", "EUR"
+  pazarlik_var_mi  boolean
+  fiyat_gizli_mi   boolean
+  takas_mumkun     varchar(20)   -- null | "sadece_takas" | "takas_arti" | "takas_eksilti"
+  takas_aciklama   text
+  krediye_uygun    boolean
+  sigorta_durumu   varchar(30)
+  sigorta_bitis    date
+  indirim_yuzde    smallint
+  indirim_aciklama text
+  created_at       timestamp
+  updated_at       timestamp
+}

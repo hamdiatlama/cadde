@@ -1,0 +1,52 @@
+{
+  "il_id": 1,
+  "il": "Adana",
+  "plaka": "01",
+  "ilceler": [
+    {
+      "ilce": "Aladağ"
+    },
+    {
+      "ilce": "Ceyhan"
+    },
+    {
+      "ilce": "Feke"
+    },
+    {
+      "ilce": "Karaisalı"
+    },
+    {
+      "ilce": "Karataş"
+    },
+    {
+      "ilce": "Kozan"
+    },
+    {
+      "ilce": "Pozantı"
+    },
+    {
+      "ilce": "Saimbeyli"
+    },
+    {
+      "ilce": "Sarıçam"
+    },
+    {
+      "ilce": "Seyhan"
+    },
+    {
+      "ilce": "Tufanbeyli"
+    },
+    {
+      "ilce": "Yumurtalık"
+    },
+    {
+      "ilce": "Yüreğir"
+    },
+    {
+      "ilce": "Çukurova"
+    },
+    {
+      "ilce": "İmamoğlu"
+    }
+  ]
+}

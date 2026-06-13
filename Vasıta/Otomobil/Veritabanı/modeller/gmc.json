@@ -1,0 +1,71 @@
+{
+  "marka": "GMC",
+  "modeller": [
+    {
+      "model": "Terrain",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Acadia",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Yukon",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Sierra 1500",
+      "segment": "P",
+      "kasa_tipleri": [
+        "Pick-up"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Sierra HD",
+      "segment": "P",
+      "kasa_tipleri": [
+        "Pick-up"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Hummer EV",
+      "segment": "P",
+      "kasa_tipleri": [
+        "Pick-up",
+        "SUV"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Canyon",
+      "segment": "P",
+      "kasa_tipleri": [
+        "Pick-up"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "Savana",
+      "segment": "V",
+      "kasa_tipleri": [
+        "Van"
+      ],
+      "uretim_baslangic": 2020
+    }
+  ],
+  "kaynak": "manuel"
+}

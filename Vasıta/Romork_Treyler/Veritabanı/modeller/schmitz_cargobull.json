@@ -1,0 +1,55 @@
+{
+  "marka": "Schmitz Cargobull",
+  "modeller": [
+    {
+      "model": "S.CS",
+      "kasa_tipleri": [
+        "Perde Treyler"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "S.KO",
+      "kasa_tipleri": [
+        "Soğutmalı Treyler"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "S.BO",
+      "kasa_tipleri": [
+        "Kapalı Treyler"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "S.DS",
+      "kasa_tipleri": [
+        "Perde Treyler"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "S.MG",
+      "kasa_tipleri": [
+        "Platform"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "EcoFLEX",
+      "kasa_tipleri": [
+        "Perde Treyler"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "S.KOe",
+      "kasa_tipleri": [
+        "Elektrikli Soğutmalı"
+      ],
+      "uretim_baslangic": 2022
+    }
+  ],
+  "kaynak": "manuel"
+}

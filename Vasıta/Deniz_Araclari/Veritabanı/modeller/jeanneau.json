@@ -1,0 +1,83 @@
+{
+  "marka": "Jeanneau",
+  "modeller": [
+    {
+      "model": "Sun Odyssey 380",
+      "kasa_tipleri": [
+        "Yelkenli"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Sun Odyssey 440",
+      "kasa_tipleri": [
+        "Yelkenli"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Sun Odyssey 490",
+      "kasa_tipleri": [
+        "Yelkenli"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Sun Fast 3300",
+      "kasa_tipleri": [
+        "Yelkenli"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Sun Fast 3600",
+      "kasa_tipleri": [
+        "Yelkenli"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Leader 10.5",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Leader 12.5",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Merry Fisher 795",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Merry Fisher 1095",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "NC 37",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "DB/37",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2022
+    }
+  ],
+  "kaynak": "manuel"
+}

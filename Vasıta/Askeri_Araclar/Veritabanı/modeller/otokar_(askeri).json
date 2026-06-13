@@ -1,0 +1,41 @@
+{
+  "marka": "Otokar (Askeri)",
+  "modeller": [
+    {
+      "model": "Cobra",
+      "kasa_tipleri": [
+        "Zırhlı"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Cobra II",
+      "kasa_tipleri": [
+        "Zırhlı"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Arma 8x8",
+      "kasa_tipleri": [
+        "Zırhlı"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Akrep II",
+      "kasa_tipleri": [
+        "Zırhlı"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Ural",
+      "kasa_tipleri": [
+        "Askeri Kamyon"
+      ],
+      "uretim_baslangic": 2015
+    }
+  ],
+  "kaynak": "manuel"
+}

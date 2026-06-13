@@ -1,0 +1,566 @@
+[
+  {
+    "marka": "Citroën",
+    "modeller": [
+      {
+        "model": "Berlingo Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "Berlingo Combi",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "Jumpy Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2016
+      },
+      {
+        "model": "Jumpy Combi",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2016
+      },
+      {
+        "model": "Jumper Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2006
+      },
+      {
+        "model": "Jumper Minibus",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2006
+      },
+      {
+        "model": "SpaceTourer",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2016
+      },
+      {
+        "model": "Grand C4 Picasso",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2013
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Fiat",
+    "modeller": [
+      {
+        "model": "Doblo Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2010
+      },
+      {
+        "model": "Doblo Combi",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2010
+      },
+      {
+        "model": "Fiorino Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2007
+      },
+      {
+        "model": "Fiorino Combi",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2007
+      },
+      {
+        "model": "Ducato Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2006
+      },
+      {
+        "model": "Ducato Minibus",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2006
+      },
+      {
+        "model": "500L",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2012
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Ford",
+    "modeller": [
+      {
+        "model": "Tourneo Custom",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2012
+      },
+      {
+        "model": "Tourneo Courier",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2014
+      },
+      {
+        "model": "Transit Custom Kombi",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2012
+      },
+      {
+        "model": "Transit Custom Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2012
+      },
+      {
+        "model": "Transit Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2014
+      },
+      {
+        "model": "Transit Courier Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2014
+      },
+      {
+        "model": "E-Transit",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2022
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Hyundai",
+    "modeller": [
+      {
+        "model": "Staria",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "Staria Load",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "H-1",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2007
+      },
+      {
+        "model": "H-1 Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2007
+      },
+      {
+        "model": "Porter",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2015
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Mercedes-Benz Vans",
+    "modeller": [
+      {
+        "model": "Vito Tourer",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2014
+      },
+      {
+        "model": "Vito Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2014
+      },
+      {
+        "model": "Sprinter Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "Sprinter Tourer",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "EQV",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2020
+      },
+      {
+        "model": "Citan Tourer",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Citan Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "V-Class",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2014
+      },
+      {
+        "model": "Marco Polo",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2016
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Opel",
+    "modeller": [
+      {
+        "model": "Combo Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2011
+      },
+      {
+        "model": "Combo Life",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "Vivaro Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2014
+      },
+      {
+        "model": "Vivaro Life",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2014
+      },
+      {
+        "model": "Movano Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2010
+      },
+      {
+        "model": "Zafira Life",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2019
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Peugeot",
+    "modeller": [
+      {
+        "model": "Expert Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2016
+      },
+      {
+        "model": "Expert Combi",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2016
+      },
+      {
+        "model": "Boxer Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2006
+      },
+      {
+        "model": "Boxer Minibus",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2006
+      },
+      {
+        "model": "Rifter",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "Partner Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "Traveller",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2015
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Renault",
+    "modeller": [
+      {
+        "model": "Trafic Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2014
+      },
+      {
+        "model": "Trafic Passenger",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2014
+      },
+      {
+        "model": "Kangoo Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "Master Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2010
+      },
+      {
+        "model": "Master Minibus",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2010
+      },
+      {
+        "model": "Espace",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2015
+      },
+      {
+        "model": "Scenic",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2016
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Toyota",
+    "modeller": [
+      {
+        "model": "Proace City Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Proace City Combi",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Proace Panelvan",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2016
+      },
+      {
+        "model": "Proace Verso",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2016
+      },
+      {
+        "model": "Hiace",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Granvia",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2019
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Volkswagen",
+    "modeller": [
+      {
+        "model": "Multivan T7",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "California T7",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2022
+      },
+      {
+        "model": "Caddy Maxi",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2020
+      },
+      {
+        "model": "Caddy",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2003
+      },
+      {
+        "model": "Transporter",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2015
+      },
+      {
+        "model": "Transporter Shuttle",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2015
+      },
+      {
+        "model": "Crafter",
+        "kasa_tipleri": [
+          "Panelvan"
+        ],
+        "uretim_baslangic": 2016
+      },
+      {
+        "model": "ID.Buzz",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2022
+      },
+      {
+        "model": "Touran",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2015
+      },
+      {
+        "model": "Sharan",
+        "kasa_tipleri": [
+          "Minivan"
+        ],
+        "uretim_baslangic": 2010
+      }
+    ],
+    "kaynak": "manuel"
+  }
+]

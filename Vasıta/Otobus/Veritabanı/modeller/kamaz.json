@@ -1,0 +1,48 @@
+{
+  "marka": "KamAZ",
+  "modeller": [
+    {
+      "model": "54901",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "6520",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2010
+    },
+    {
+      "model": "65115",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2010
+    },
+    {
+      "model": "43118",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2005
+    },
+    {
+      "model": "5350",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2005
+    },
+    {
+      "model": "6282",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2019
+    }
+  ],
+  "kaynak": "manuel"
+}

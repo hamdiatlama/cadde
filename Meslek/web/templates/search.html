@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Meslek Ara{% endblock %}
+{% block content %}
+<a href="/" class="back">← Ana Sayfa</a>
+<h1 class="page-title">🔍 Arama Sonuçları</h1>
+{% if query %}
+<p class="result-count">"<strong>{{ query }}</strong>" için <strong>{{ results|length }}</strong> sonuç bulundu</p>
+{% if results %}
+    {% for r in results %}
+    <div class="result-item">
+        <a href="/kategori/{{ r.category_id }}">{{ r.name }}</a>
+        <span class="cat-tag">{{ r.emoji }} {{ r.cat_name }}</span>
+    </div>
+    {% endfor %}
+{% else %}
+<p style="color:#888;">Sonuç bulunamadı.</p>
+{% endif %}
+{% else %}
+<p style="color:#888;">Aramak için yukarıdaki kutuyu kullanın.</p>
+{% endif %}
+{% endblock %}

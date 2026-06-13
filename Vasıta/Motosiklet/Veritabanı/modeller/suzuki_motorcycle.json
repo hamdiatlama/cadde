@@ -1,0 +1,112 @@
+{
+  "marka": "Suzuki Motorcycle",
+  "modeller": [
+    {
+      "model": "GSX-R1000R",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "GSX-R750",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2011
+    },
+    {
+      "model": "GSX-R600",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2011,
+      "uretim_bitis": 2020
+    },
+    {
+      "model": "GSX-S1000",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "GSX-S750",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "GSX-8S",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "GSX-8R",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2024
+    },
+    {
+      "model": "Hayabusa",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "V-Strom 1050",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "V-Strom 800DE",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "V-Strom 650XT",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Address 125",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "Burgman Street 125",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "SV650",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Katana",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2019
+    }
+  ],
+  "kaynak": "manuel"
+}

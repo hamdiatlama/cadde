@@ -1,0 +1,28 @@
+{
+  "il_id": 5,
+  "il": "Amasya",
+  "plaka": "05",
+  "ilceler": [
+    {
+      "ilce": "Göynücek"
+    },
+    {
+      "ilce": "Gümüşhacıköy"
+    },
+    {
+      "ilce": "Hamamözü"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Merzifon"
+    },
+    {
+      "ilce": "Suluova"
+    },
+    {
+      "ilce": "Taşova"
+    }
+  ]
+}

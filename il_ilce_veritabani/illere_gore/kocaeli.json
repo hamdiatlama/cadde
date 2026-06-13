@@ -1,0 +1,43 @@
+{
+  "il_id": 41,
+  "il": "Kocaeli",
+  "plaka": "41",
+  "ilceler": [
+    {
+      "ilce": "Başiskele"
+    },
+    {
+      "ilce": "Darıca"
+    },
+    {
+      "ilce": "Derince"
+    },
+    {
+      "ilce": "Dilovası"
+    },
+    {
+      "ilce": "Gebze"
+    },
+    {
+      "ilce": "Gölcük"
+    },
+    {
+      "ilce": "Kandıra"
+    },
+    {
+      "ilce": "Karamürsel"
+    },
+    {
+      "ilce": "Kartepe"
+    },
+    {
+      "ilce": "Körfez"
+    },
+    {
+      "ilce": "Çayırova"
+    },
+    {
+      "ilce": "İzmit"
+    }
+  ]
+}

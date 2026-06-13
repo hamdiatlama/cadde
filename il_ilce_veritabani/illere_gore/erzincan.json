@@ -1,0 +1,34 @@
+{
+  "il_id": 24,
+  "il": "Erzincan",
+  "plaka": "24",
+  "ilceler": [
+    {
+      "ilce": "Kemah"
+    },
+    {
+      "ilce": "Kemaliye"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Otlukbeli"
+    },
+    {
+      "ilce": "Refahiye"
+    },
+    {
+      "ilce": "Tercan"
+    },
+    {
+      "ilce": "Çayırlı"
+    },
+    {
+      "ilce": "Üzümlü"
+    },
+    {
+      "ilce": "İliç"
+    }
+  ]
+}

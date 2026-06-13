@@ -1,0 +1,125 @@
+{
+  "marka": "Triumph",
+  "modeller": [
+    {
+      "model": "Street Triple RS 765",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "Street Triple 765 R",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Speed Triple 1200 RS",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Speed Triple 1200 RR",
+      "kasa_tipleri": [
+        "Naked Klasik"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Trident 660",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Tiger 1200 Rally Explorer",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Tiger 900 Rally Pro",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Tiger 900 GT",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Tiger Sport 660",
+      "kasa_tipleri": [
+        "Sport Turizm"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Bonneville T120",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Bonneville T100",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Bonneville Speedmaster",
+      "kasa_tipleri": [
+        "Klasik Cruiser"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Street Twin / Speed 400",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 2024
+    },
+    {
+      "model": "Scrambler 900",
+      "kasa_tipleri": [
+        "Scrambler"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Scrambler 1200 XE",
+      "kasa_tipleri": [
+        "Scrambler"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Rocket 3 Storm R",
+      "kasa_tipleri": [
+        "Power Cruiser"
+      ],
+      "uretim_baslangic": 2024
+    },
+    {
+      "model": "Thruxton 1200 RS",
+      "kasa_tipleri": [
+        "Klasik Sport"
+      ],
+      "uretim_baslangic": 2020
+    }
+  ],
+  "kaynak": "manuel"
+}

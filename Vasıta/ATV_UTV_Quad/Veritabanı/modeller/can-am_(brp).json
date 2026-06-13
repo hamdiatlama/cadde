@@ -1,0 +1,62 @@
+{
+  "marka": "Can-Am (BRP)",
+  "modeller": [
+    {
+      "model": "Outlander 450",
+      "kasa_tipleri": [
+        "ATV"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Outlander 850",
+      "kasa_tipleri": [
+        "ATV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Outlander XT 1000",
+      "kasa_tipleri": [
+        "ATV"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Renegade 850",
+      "kasa_tipleri": [
+        "ATV"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Maverick X3",
+      "kasa_tipleri": [
+        "UTV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Maverick Trail 800",
+      "kasa_tipleri": [
+        "UTV"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Defender Max XT",
+      "kasa_tipleri": [
+        "UTV"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Commander XT",
+      "kasa_tipleri": [
+        "UTV"
+      ],
+      "uretim_baslangic": 2017
+    }
+  ],
+  "kaynak": "manuel"
+}

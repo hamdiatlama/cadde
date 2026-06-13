@@ -1,0 +1,83 @@
+{
+  "marka": "TEMSA",
+  "modeller": [
+    {
+      "model": "MD7",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "MD9",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "HD12",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "HD13",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "HD14",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Safari",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Opalin",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Prestij",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Tourmalin",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "LD SB",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "LD MB",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2019
+    }
+  ],
+  "kaynak": "manuel"
+}

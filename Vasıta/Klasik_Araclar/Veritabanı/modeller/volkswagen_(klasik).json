@@ -1,0 +1,54 @@
+{
+  "marka": "Volkswagen (Klasik)",
+  "modeller": [
+    {
+      "model": "Beetle (Kaplumbağa)",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1938,
+      "uretim_bitis": 2003
+    },
+    {
+      "model": "T1 (Minibüs)",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1950,
+      "uretim_bitis": 1967
+    },
+    {
+      "model": "T2",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1967,
+      "uretim_bitis": 1979
+    },
+    {
+      "model": "Karmann Ghia",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1955,
+      "uretim_bitis": 1974
+    },
+    {
+      "model": "Golf GTI (Mk1)",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1976,
+      "uretim_bitis": 1983
+    },
+    {
+      "model": "Scirocco Mk1",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1974,
+      "uretim_bitis": 1981
+    }
+  ],
+  "kaynak": "manuel"
+}

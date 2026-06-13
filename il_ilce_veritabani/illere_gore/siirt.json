@@ -1,0 +1,28 @@
+{
+  "il_id": 56,
+  "il": "Siirt",
+  "plaka": "56",
+  "ilceler": [
+    {
+      "ilce": "Baykan"
+    },
+    {
+      "ilce": "Eruh"
+    },
+    {
+      "ilce": "Kurtalan"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Pervari"
+    },
+    {
+      "ilce": "Tillo"
+    },
+    {
+      "ilce": "Şirvan"
+    }
+  ]
+}

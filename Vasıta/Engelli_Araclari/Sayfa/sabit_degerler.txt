@@ -1,0 +1,32 @@
+=== Engelli Plakalı Araçlar SABIT DEGERLER ===
+
+[Yakıt Tipi]
+- (deger listesi eklenecek)
+
+[Vites Tipi]
+- (deger listesi eklenecek)
+
+[Araç Durumu]
+- (deger listesi eklenecek)
+
+[Kimden]
+- (deger listesi eklenecek)
+
+[Renk]
+- (deger listesi eklenecek)
+
+[Garanti Durumu]
+- (deger listesi eklenecek)
+
+[Plaka / Uyruk]
+- (deger listesi eklenecek)
+
+[Döviz Cinsi]
+- (deger listesi eklenecek)
+
+[Engelli Plaka Türü]
+- (deger listesi eklenecek)
+
+[Modifikasyon Tipi]
+- (deger listesi eklenecek)
+

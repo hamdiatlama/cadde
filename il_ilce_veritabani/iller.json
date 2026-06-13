@@ -1,0 +1,731 @@
+[
+  {
+    "id": 1,
+    "ad": "Adana",
+    "plaka": "01",
+    "telefon_kodu": "322",
+    "bolge": "Akdeniz",
+    "nufus": 2.27,
+    "slug": "adana"
+  },
+  {
+    "id": 2,
+    "ad": "Adıyaman",
+    "plaka": "02",
+    "telefon_kodu": "416",
+    "bolge": "Güneydoğu",
+    "nufus": 0.63,
+    "slug": "adiyaman"
+  },
+  {
+    "id": 3,
+    "ad": "Afyonkarahisar",
+    "plaka": "03",
+    "telefon_kodu": "272",
+    "bolge": "Ege",
+    "nufus": 0.75,
+    "slug": "afyonkarahisar"
+  },
+  {
+    "id": 4,
+    "ad": "Ağrı",
+    "plaka": "04",
+    "telefon_kodu": "472",
+    "bolge": "Doğu",
+    "nufus": 0.52,
+    "slug": "agri"
+  },
+  {
+    "id": 5,
+    "ad": "Amasya",
+    "plaka": "05",
+    "telefon_kodu": "358",
+    "bolge": "Karadeniz",
+    "nufus": 0.34,
+    "slug": "amasya"
+  },
+  {
+    "id": 6,
+    "ad": "Ankara",
+    "plaka": "06",
+    "telefon_kodu": "312",
+    "bolge": "İç Anadolu",
+    "nufus": 5.8,
+    "slug": "ankara"
+  },
+  {
+    "id": 7,
+    "ad": "Antalya",
+    "plaka": "07",
+    "telefon_kodu": "242",
+    "bolge": "Akdeniz",
+    "nufus": 2.69,
+    "slug": "antalya"
+  },
+  {
+    "id": 8,
+    "ad": "Artvin",
+    "plaka": "08",
+    "telefon_kodu": "466",
+    "bolge": "Karadeniz",
+    "nufus": 0.17,
+    "slug": "artvin"
+  },
+  {
+    "id": 9,
+    "ad": "Aydın",
+    "plaka": "09",
+    "telefon_kodu": "256",
+    "bolge": "Ege",
+    "nufus": 1.15,
+    "slug": "aydin"
+  },
+  {
+    "id": 10,
+    "ad": "Balıkesir",
+    "plaka": "10",
+    "telefon_kodu": "266",
+    "bolge": "Marmara",
+    "nufus": 1.27,
+    "slug": "balikesir"
+  },
+  {
+    "id": 11,
+    "ad": "Bilecik",
+    "plaka": "11",
+    "telefon_kodu": "228",
+    "bolge": "Marmara",
+    "nufus": 0.22,
+    "slug": "bilecik"
+  },
+  {
+    "id": 12,
+    "ad": "Bingöl",
+    "plaka": "12",
+    "telefon_kodu": "426",
+    "bolge": "Doğu",
+    "nufus": 0.29,
+    "slug": "bingol"
+  },
+  {
+    "id": 13,
+    "ad": "Bitlis",
+    "plaka": "13",
+    "telefon_kodu": "434",
+    "bolge": "Doğu",
+    "nufus": 0.35,
+    "slug": "bitlis"
+  },
+  {
+    "id": 14,
+    "ad": "Bolu",
+    "plaka": "14",
+    "telefon_kodu": "374",
+    "bolge": "Karadeniz",
+    "nufus": 0.32,
+    "slug": "bolu"
+  },
+  {
+    "id": 15,
+    "ad": "Burdur",
+    "plaka": "15",
+    "telefon_kodu": "248",
+    "bolge": "Akdeniz",
+    "nufus": 0.27,
+    "slug": "burdur"
+  },
+  {
+    "id": 16,
+    "ad": "Bursa",
+    "plaka": "16",
+    "telefon_kodu": "224",
+    "bolge": "Marmara",
+    "nufus": 3.15,
+    "slug": "bursa"
+  },
+  {
+    "id": 17,
+    "ad": "Çanakkale",
+    "plaka": "17",
+    "telefon_kodu": "286",
+    "bolge": "Marmara",
+    "nufus": 0.56,
+    "slug": "canakkale"
+  },
+  {
+    "id": 18,
+    "ad": "Çankırı",
+    "plaka": "18",
+    "telefon_kodu": "376",
+    "bolge": "İç Anadolu",
+    "nufus": 0.2,
+    "slug": "cankiri"
+  },
+  {
+    "id": 19,
+    "ad": "Çorum",
+    "plaka": "19",
+    "telefon_kodu": "364",
+    "bolge": "Karadeniz",
+    "nufus": 0.53,
+    "slug": "corum"
+  },
+  {
+    "id": 20,
+    "ad": "Denizli",
+    "plaka": "20",
+    "telefon_kodu": "258",
+    "bolge": "Ege",
+    "nufus": 1.06,
+    "slug": "denizli"
+  },
+  {
+    "id": 21,
+    "ad": "Diyarbakır",
+    "plaka": "21",
+    "telefon_kodu": "412",
+    "bolge": "Güneydoğu",
+    "nufus": 1.82,
+    "slug": "diyarbakir"
+  },
+  {
+    "id": 22,
+    "ad": "Edirne",
+    "plaka": "22",
+    "telefon_kodu": "284",
+    "bolge": "Marmara",
+    "nufus": 0.42,
+    "slug": "edirne"
+  },
+  {
+    "id": 23,
+    "ad": "Elazığ",
+    "plaka": "23",
+    "telefon_kodu": "424",
+    "bolge": "Doğu",
+    "nufus": 0.6,
+    "slug": "elazig"
+  },
+  {
+    "id": 24,
+    "ad": "Erzincan",
+    "plaka": "24",
+    "telefon_kodu": "446",
+    "bolge": "Doğu",
+    "nufus": 0.24,
+    "slug": "erzincan"
+  },
+  {
+    "id": 25,
+    "ad": "Erzurum",
+    "plaka": "25",
+    "telefon_kodu": "442",
+    "bolge": "Doğu",
+    "nufus": 0.75,
+    "slug": "erzurum"
+  },
+  {
+    "id": 26,
+    "ad": "Eskişehir",
+    "plaka": "26",
+    "telefon_kodu": "222",
+    "bolge": "İç Anadolu",
+    "nufus": 0.91,
+    "slug": "eskisehir"
+  },
+  {
+    "id": 27,
+    "ad": "Gaziantep",
+    "plaka": "27",
+    "telefon_kodu": "342",
+    "bolge": "Güneydoğu",
+    "nufus": 2.15,
+    "slug": "gaziantep"
+  },
+  {
+    "id": 28,
+    "ad": "Giresun",
+    "plaka": "28",
+    "telefon_kodu": "454",
+    "bolge": "Karadeniz",
+    "nufus": 0.46,
+    "slug": "giresun"
+  },
+  {
+    "id": 29,
+    "ad": "Gümüşhane",
+    "plaka": "29",
+    "telefon_kodu": "456",
+    "bolge": "Karadeniz",
+    "nufus": 0.15,
+    "slug": "gumushane"
+  },
+  {
+    "id": 30,
+    "ad": "Hakkari",
+    "plaka": "30",
+    "telefon_kodu": "438",
+    "bolge": "Doğu",
+    "nufus": 0.28,
+    "slug": "hakkari"
+  },
+  {
+    "id": 31,
+    "ad": "Hatay",
+    "plaka": "31",
+    "telefon_kodu": "326",
+    "bolge": "Akdeniz",
+    "nufus": 1.69,
+    "slug": "hatay"
+  },
+  {
+    "id": 32,
+    "ad": "Isparta",
+    "plaka": "32",
+    "telefon_kodu": "246",
+    "bolge": "Akdeniz",
+    "nufus": 0.45,
+    "slug": "isparta"
+  },
+  {
+    "id": 33,
+    "ad": "Mersin",
+    "plaka": "33",
+    "telefon_kodu": "324",
+    "bolge": "Akdeniz",
+    "nufus": 1.93,
+    "slug": "mersin"
+  },
+  {
+    "id": 34,
+    "ad": "İstanbul",
+    "plaka": "34",
+    "telefon_kodu": "212/216",
+    "bolge": "Marmara",
+    "nufus": 15.66,
+    "slug": "i̇stanbul"
+  },
+  {
+    "id": 35,
+    "ad": "İzmir",
+    "plaka": "35",
+    "telefon_kodu": "232",
+    "bolge": "Ege",
+    "nufus": 4.48,
+    "slug": "i̇zmir"
+  },
+  {
+    "id": 36,
+    "ad": "Kars",
+    "plaka": "36",
+    "telefon_kodu": "474",
+    "bolge": "Doğu",
+    "nufus": 0.28,
+    "slug": "kars"
+  },
+  {
+    "id": 37,
+    "ad": "Kastamonu",
+    "plaka": "37",
+    "telefon_kodu": "366",
+    "bolge": "Karadeniz",
+    "nufus": 0.38,
+    "slug": "kastamonu"
+  },
+  {
+    "id": 38,
+    "ad": "Kayseri",
+    "plaka": "38",
+    "telefon_kodu": "352",
+    "bolge": "İç Anadolu",
+    "nufus": 1.44,
+    "slug": "kayseri"
+  },
+  {
+    "id": 39,
+    "ad": "Kırklareli",
+    "plaka": "39",
+    "telefon_kodu": "288",
+    "bolge": "Marmara",
+    "nufus": 0.37,
+    "slug": "kirklareli"
+  },
+  {
+    "id": 40,
+    "ad": "Kırşehir",
+    "plaka": "40",
+    "telefon_kodu": "386",
+    "bolge": "İç Anadolu",
+    "nufus": 0.24,
+    "slug": "kirsehir"
+  },
+  {
+    "id": 41,
+    "ad": "Kocaeli",
+    "plaka": "41",
+    "telefon_kodu": "262",
+    "bolge": "Marmara",
+    "nufus": 2.06,
+    "slug": "kocaeli"
+  },
+  {
+    "id": 42,
+    "ad": "Konya",
+    "plaka": "42",
+    "telefon_kodu": "332",
+    "bolge": "İç Anadolu",
+    "nufus": 2.3,
+    "slug": "konya"
+  },
+  {
+    "id": 43,
+    "ad": "Kütahya",
+    "plaka": "43",
+    "telefon_kodu": "274",
+    "bolge": "Ege",
+    "nufus": 0.58,
+    "slug": "kutahya"
+  },
+  {
+    "id": 44,
+    "ad": "Malatya",
+    "plaka": "44",
+    "telefon_kodu": "422",
+    "bolge": "Doğu",
+    "nufus": 0.81,
+    "slug": "malatya"
+  },
+  {
+    "id": 45,
+    "ad": "Manisa",
+    "plaka": "45",
+    "telefon_kodu": "236",
+    "bolge": "Ege",
+    "nufus": 1.46,
+    "slug": "manisa"
+  },
+  {
+    "id": 46,
+    "ad": "Kahramanmaraş",
+    "plaka": "46",
+    "telefon_kodu": "344",
+    "bolge": "Akdeniz",
+    "nufus": 1.19,
+    "slug": "kahramanmaras"
+  },
+  {
+    "id": 47,
+    "ad": "Mardin",
+    "plaka": "47",
+    "telefon_kodu": "482",
+    "bolge": "Güneydoğu",
+    "nufus": 0.87,
+    "slug": "mardin"
+  },
+  {
+    "id": 48,
+    "ad": "Muğla",
+    "plaka": "48",
+    "telefon_kodu": "252",
+    "bolge": "Ege",
+    "nufus": 1.07,
+    "slug": "mugla"
+  },
+  {
+    "id": 49,
+    "ad": "Muş",
+    "plaka": "49",
+    "telefon_kodu": "436",
+    "bolge": "Doğu",
+    "nufus": 0.4,
+    "slug": "mus"
+  },
+  {
+    "id": 50,
+    "ad": "Nevşehir",
+    "plaka": "50",
+    "telefon_kodu": "384",
+    "bolge": "İç Anadolu",
+    "nufus": 0.31,
+    "slug": "nevsehir"
+  },
+  {
+    "id": 51,
+    "ad": "Niğde",
+    "plaka": "51",
+    "telefon_kodu": "388",
+    "bolge": "İç Anadolu",
+    "nufus": 0.37,
+    "slug": "nigde"
+  },
+  {
+    "id": 52,
+    "ad": "Ordu",
+    "plaka": "52",
+    "telefon_kodu": "452",
+    "bolge": "Karadeniz",
+    "nufus": 0.77,
+    "slug": "ordu"
+  },
+  {
+    "id": 53,
+    "ad": "Rize",
+    "plaka": "53",
+    "telefon_kodu": "464",
+    "bolge": "Karadeniz",
+    "nufus": 0.35,
+    "slug": "rize"
+  },
+  {
+    "id": 54,
+    "ad": "Sakarya",
+    "plaka": "54",
+    "telefon_kodu": "264",
+    "bolge": "Marmara",
+    "nufus": 1.08,
+    "slug": "sakarya"
+  },
+  {
+    "id": 55,
+    "ad": "Samsun",
+    "plaka": "55",
+    "telefon_kodu": "362",
+    "bolge": "Karadeniz",
+    "nufus": 1.38,
+    "slug": "samsun"
+  },
+  {
+    "id": 56,
+    "ad": "Siirt",
+    "plaka": "56",
+    "telefon_kodu": "484",
+    "bolge": "Güneydoğu",
+    "nufus": 0.34,
+    "slug": "siirt"
+  },
+  {
+    "id": 57,
+    "ad": "Sinop",
+    "plaka": "57",
+    "telefon_kodu": "368",
+    "bolge": "Karadeniz",
+    "nufus": 0.22,
+    "slug": "sinop"
+  },
+  {
+    "id": 58,
+    "ad": "Sivas",
+    "plaka": "58",
+    "telefon_kodu": "346",
+    "bolge": "İç Anadolu",
+    "nufus": 0.64,
+    "slug": "sivas"
+  },
+  {
+    "id": 59,
+    "ad": "Tekirdağ",
+    "plaka": "59",
+    "telefon_kodu": "282",
+    "bolge": "Marmara",
+    "nufus": 1.17,
+    "slug": "tekirdag"
+  },
+  {
+    "id": 60,
+    "ad": "Tokat",
+    "plaka": "60",
+    "telefon_kodu": "356",
+    "bolge": "Karadeniz",
+    "nufus": 0.61,
+    "slug": "tokat"
+  },
+  {
+    "id": 61,
+    "ad": "Trabzon",
+    "plaka": "61",
+    "telefon_kodu": "462",
+    "bolge": "Karadeniz",
+    "nufus": 0.82,
+    "slug": "trabzon"
+  },
+  {
+    "id": 62,
+    "ad": "Tunceli",
+    "plaka": "62",
+    "telefon_kodu": "428",
+    "bolge": "Doğu",
+    "nufus": 0.08,
+    "slug": "tunceli"
+  },
+  {
+    "id": 63,
+    "ad": "Şanlıurfa",
+    "plaka": "63",
+    "telefon_kodu": "414",
+    "bolge": "Güneydoğu",
+    "nufus": 2.21,
+    "slug": "sanliurfa"
+  },
+  {
+    "id": 64,
+    "ad": "Uşak",
+    "plaka": "64",
+    "telefon_kodu": "276",
+    "bolge": "Ege",
+    "nufus": 0.38,
+    "slug": "usak"
+  },
+  {
+    "id": 65,
+    "ad": "Van",
+    "plaka": "65",
+    "telefon_kodu": "432",
+    "bolge": "Doğu",
+    "nufus": 1.15,
+    "slug": "van"
+  },
+  {
+    "id": 66,
+    "ad": "Yozgat",
+    "plaka": "66",
+    "telefon_kodu": "354",
+    "bolge": "İç Anadolu",
+    "nufus": 0.42,
+    "slug": "yozgat"
+  },
+  {
+    "id": 67,
+    "ad": "Zonguldak",
+    "plaka": "67",
+    "telefon_kodu": "372",
+    "bolge": "Karadeniz",
+    "nufus": 0.59,
+    "slug": "zonguldak"
+  },
+  {
+    "id": 68,
+    "ad": "Aksaray",
+    "plaka": "68",
+    "telefon_kodu": "382",
+    "bolge": "İç Anadolu",
+    "nufus": 0.43,
+    "slug": "aksaray"
+  },
+  {
+    "id": 69,
+    "ad": "Bayburt",
+    "plaka": "69",
+    "telefon_kodu": "458",
+    "bolge": "Karadeniz",
+    "nufus": 0.09,
+    "slug": "bayburt"
+  },
+  {
+    "id": 70,
+    "ad": "Karaman",
+    "plaka": "70",
+    "telefon_kodu": "338",
+    "bolge": "İç Anadolu",
+    "nufus": 0.26,
+    "slug": "karaman"
+  },
+  {
+    "id": 71,
+    "ad": "Kırıkkale",
+    "plaka": "71",
+    "telefon_kodu": "318",
+    "bolge": "İç Anadolu",
+    "nufus": 0.28,
+    "slug": "kirikkale"
+  },
+  {
+    "id": 72,
+    "ad": "Batman",
+    "plaka": "72",
+    "telefon_kodu": "488",
+    "bolge": "Güneydoğu",
+    "nufus": 0.63,
+    "slug": "batman"
+  },
+  {
+    "id": 73,
+    "ad": "Şırnak",
+    "plaka": "73",
+    "telefon_kodu": "486",
+    "bolge": "Güneydoğu",
+    "nufus": 0.56,
+    "slug": "sirnak"
+  },
+  {
+    "id": 74,
+    "ad": "Bartın",
+    "plaka": "74",
+    "telefon_kodu": "378",
+    "bolge": "Karadeniz",
+    "nufus": 0.2,
+    "slug": "bartin"
+  },
+  {
+    "id": 75,
+    "ad": "Ardahan",
+    "plaka": "75",
+    "telefon_kodu": "478",
+    "bolge": "Doğu",
+    "nufus": 0.1,
+    "slug": "ardahan"
+  },
+  {
+    "id": 76,
+    "ad": "Iğdır",
+    "plaka": "76",
+    "telefon_kodu": "476",
+    "bolge": "Doğu",
+    "nufus": 0.2,
+    "slug": "igdir"
+  },
+  {
+    "id": 77,
+    "ad": "Yalova",
+    "plaka": "77",
+    "telefon_kodu": "226",
+    "bolge": "Marmara",
+    "nufus": 0.3,
+    "slug": "yalova"
+  },
+  {
+    "id": 78,
+    "ad": "Karabük",
+    "plaka": "78",
+    "telefon_kodu": "370",
+    "bolge": "Karadeniz",
+    "nufus": 0.25,
+    "slug": "karabuk"
+  },
+  {
+    "id": 79,
+    "ad": "Kilis",
+    "plaka": "79",
+    "telefon_kodu": "348",
+    "bolge": "Güneydoğu",
+    "nufus": 0.15,
+    "slug": "kilis"
+  },
+  {
+    "id": 80,
+    "ad": "Osmaniye",
+    "plaka": "80",
+    "telefon_kodu": "328",
+    "bolge": "Akdeniz",
+    "nufus": 0.56,
+    "slug": "osmaniye"
+  },
+  {
+    "id": 81,
+    "ad": "Düzce",
+    "plaka": "81",
+    "telefon_kodu": "380",
+    "bolge": "Karadeniz",
+    "nufus": 0.4,
+    "slug": "duzce"
+  }
+]

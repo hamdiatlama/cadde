@@ -1,0 +1,90 @@
+{
+  "marka": "Beneteau",
+  "modeller": [
+    {
+      "model": "Oceanis 30.1",
+      "kasa_tipleri": [
+        "Yelkenli"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Oceanis 40.1",
+      "kasa_tipleri": [
+        "Yelkenli"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Oceanis 46.1",
+      "kasa_tipleri": [
+        "Yelkenli"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Oceanis 51.1",
+      "kasa_tipleri": [
+        "Yelkenli"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "First 27",
+      "kasa_tipleri": [
+        "Yelkenli"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "First 36",
+      "kasa_tipleri": [
+        "Yelkenli"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "Antares 9",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Antares 11",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Gran Turismo 32",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Gran Turismo 45",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Swift Trawler 30",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Swift Trawler 48",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2023
+    }
+  ],
+  "kaynak": "manuel"
+}

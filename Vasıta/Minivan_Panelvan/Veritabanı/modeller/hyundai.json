@@ -1,0 +1,41 @@
+{
+  "marka": "Hyundai",
+  "modeller": [
+    {
+      "model": "Staria",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Staria Load",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "H-1",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2007
+    },
+    {
+      "model": "H-1 Panelvan",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2007
+    },
+    {
+      "model": "Porter",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2015
+    }
+  ],
+  "kaynak": "manuel"
+}

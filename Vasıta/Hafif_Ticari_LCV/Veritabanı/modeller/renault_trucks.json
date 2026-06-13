@@ -1,0 +1,69 @@
+{
+  "marka": "Renault Trucks",
+  "modeller": [
+    {
+      "model": "Master",
+      "kasa_tipleri": [
+        "Hafif Ticari"
+      ],
+      "uretim_baslangic": 2010
+    },
+    {
+      "model": "Trafic",
+      "kasa_tipleri": [
+        "Hafif Ticari"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Kangoo",
+      "kasa_tipleri": [
+        "Hafif Ticari"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "D",
+      "kasa_tipleri": [
+        "Orta Kamyon"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "C",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "K",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "T",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "E-Tech D",
+      "kasa_tipleri": [
+        "Elektrikli Orta Kamyon"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "E-Tech T",
+      "kasa_tipleri": [
+        "Elektrikli Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2023
+    }
+  ],
+  "kaynak": "manuel"
+}

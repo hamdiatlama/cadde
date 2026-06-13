@@ -1,0 +1,55 @@
+{
+  "marka": "Sirena Marine",
+  "modeller": [
+    {
+      "model": "Sirena 48",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Sirena 58",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Sirena 68",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Sirena 88",
+      "kasa_tipleri": [
+        "Motor Yat"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Dufour 360",
+      "kasa_tipleri": [
+        "Yelkenli"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Dufour 390",
+      "kasa_tipleri": [
+        "Yelkenli"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Dufour 470",
+      "kasa_tipleri": [
+        "Yelkenli"
+      ],
+      "uretim_baslangic": 2020
+    }
+  ],
+  "kaynak": "manuel"
+}

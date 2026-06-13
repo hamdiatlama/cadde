@@ -1,0 +1,41 @@
+{
+  "marka": "Rheinmetall",
+  "modeller": [
+    {
+      "model": "Yak",
+      "kasa_tipleri": [
+        "Zırhlı"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Boxer",
+      "kasa_tipleri": [
+        "ZMA"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Lynx KF41",
+      "kasa_tipleri": [
+        "ZMA"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Wiesel 2",
+      "kasa_tipleri": [
+        "Zırhlı"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "GTK Boxer",
+      "kasa_tipleri": [
+        "ZMA"
+      ],
+      "uretim_baslangic": 2017
+    }
+  ],
+  "kaynak": "manuel"
+}

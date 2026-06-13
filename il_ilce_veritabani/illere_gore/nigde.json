@@ -1,0 +1,25 @@
+{
+  "il_id": 51,
+  "il": "Niğde",
+  "plaka": "51",
+  "ilceler": [
+    {
+      "ilce": "Altunhisar"
+    },
+    {
+      "ilce": "Bor"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Ulukışla"
+    },
+    {
+      "ilce": "Çamardı"
+    },
+    {
+      "ilce": "Çiftlik"
+    }
+  ]
+}

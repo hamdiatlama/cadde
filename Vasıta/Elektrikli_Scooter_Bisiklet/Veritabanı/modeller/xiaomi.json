@@ -1,0 +1,41 @@
+{
+  "marka": "Xiaomi",
+  "modeller": [
+    {
+      "model": "Mi Electric Scooter 1S",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Mi Electric Scooter 3",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Mi Electric Scooter Pro 2",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Mi Electric Scooter 4 Pro",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Mi Electric Scooter 4 Lite",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2022
+    }
+  ],
+  "kaynak": "manuel"
+}

@@ -1,0 +1,34 @@
+{
+  "il_id": 71,
+  "il": "Kırıkkale",
+  "plaka": "71",
+  "ilceler": [
+    {
+      "ilce": "Bahşılı"
+    },
+    {
+      "ilce": "Balışeyh"
+    },
+    {
+      "ilce": "Delice"
+    },
+    {
+      "ilce": "Karakeçili"
+    },
+    {
+      "ilce": "Keskin"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Sulakyurt"
+    },
+    {
+      "ilce": "Yahşihan"
+    },
+    {
+      "ilce": "Çelebi"
+    }
+  ]
+}

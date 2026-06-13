@@ -1,0 +1,54 @@
+{
+  "marka": "Anadol",
+  "modeller": [
+    {
+      "model": "A1",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1966,
+      "uretim_bitis": 1975
+    },
+    {
+      "model": "A2",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1970,
+      "uretim_bitis": 1980
+    },
+    {
+      "model": "SV-1",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1973,
+      "uretim_bitis": 1977
+    },
+    {
+      "model": "STC-16",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1973,
+      "uretim_bitis": 1975
+    },
+    {
+      "model": "Otosan HF",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1971,
+      "uretim_bitis": 1977
+    },
+    {
+      "model": "A8-16",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1984,
+      "uretim_bitis": 1990
+    }
+  ],
+  "kaynak": "manuel"
+}

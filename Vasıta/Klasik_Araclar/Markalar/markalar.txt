@@ -1,0 +1,66 @@
+=== Klasik Araçlar MARKALARI ===
+
+[Amerikan Klasikleri]
+- Ford
+- Chevrolet
+- Dodge
+- Cadillac
+- Buick
+- Pontiac
+- Plymouth
+- Oldsmobile
+- Lincoln
+
+[İtalyan Klasikleri]
+- Fiat
+- Ferrari
+- Lamborghini
+- Maserati
+- Alfa Romeo
+- Lancia
+- Abarth
+- De Tomaso
+
+[Alman Klasikleri]
+- Mercedes-Benz
+- BMW
+- Porsche
+- Volkswagen
+- Audi
+- Opel
+
+[İngiliz Klasikleri]
+- Jaguar
+- Aston Martin
+- Bentley
+- Rolls-Royce
+- MG
+- Triumph
+- Austin-Healey
+- Morgan
+- Lotus
+- AC Cars
+
+[Fransız Klasikleri]
+- Citroën
+- Peugeot
+- Renault
+- Bugatti
+- Delahaye
+- Facel Vega
+
+[Japon Klasikleri]
+- Toyota
+- Nissan
+- Datsun
+- Mazda
+- Honda
+- Mitsubishi
+- Subaru
+
+[Türk Klasikleri]
+- Anadol
+- Tofaş (Murat/Serçe/Doğan/Şahin)
+- Devrim
+- Etox
+

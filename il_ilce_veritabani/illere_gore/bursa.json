@@ -1,0 +1,58 @@
+{
+  "il_id": 16,
+  "il": "Bursa",
+  "plaka": "16",
+  "ilceler": [
+    {
+      "ilce": "Büyükorhan"
+    },
+    {
+      "ilce": "Gemlik"
+    },
+    {
+      "ilce": "Gürsu"
+    },
+    {
+      "ilce": "Harmancık"
+    },
+    {
+      "ilce": "Karacabey"
+    },
+    {
+      "ilce": "Keles"
+    },
+    {
+      "ilce": "Kestel"
+    },
+    {
+      "ilce": "Mudanya"
+    },
+    {
+      "ilce": "Mustafakemalpaşa"
+    },
+    {
+      "ilce": "Nilüfer"
+    },
+    {
+      "ilce": "Orhaneli"
+    },
+    {
+      "ilce": "Orhangazi"
+    },
+    {
+      "ilce": "Osmangazi"
+    },
+    {
+      "ilce": "Yenişehir"
+    },
+    {
+      "ilce": "Yıldırım"
+    },
+    {
+      "ilce": "İnegöl"
+    },
+    {
+      "ilce": "İznik"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "marka": "Massey Ferguson",
+  "modeller": [
+    {
+      "model": "MF 4700 Serisi",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "MF 5700 Serisi",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "MF 6700 Serisi",
+      "kasa_tipleri": [
+        "Büyük Traktör"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "MF 7700 Serisi",
+      "kasa_tipleri": [
+        "Büyük Traktör"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "MF 8700 Serisi",
+      "kasa_tipleri": [
+        "Çok Büyük Traktör"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "MF 8S Serisi",
+      "kasa_tipleri": [
+        "Çok Büyük Traktör"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "MF 1700M Serisi",
+      "kasa_tipleri": [
+        "Kompakt Traktör"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "MF GC1700 Serisi",
+      "kasa_tipleri": [
+        "Bahçe Traktörü"
+      ],
+      "uretim_baslangic": 2015
+    }
+  ],
+  "kaynak": "manuel"
+}

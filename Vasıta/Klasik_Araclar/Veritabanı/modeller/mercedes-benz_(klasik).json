@@ -1,0 +1,62 @@
+{
+  "marka": "Mercedes-Benz (Klasik)",
+  "modeller": [
+    {
+      "model": "300 SL Gullwing",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1954,
+      "uretim_bitis": 1957
+    },
+    {
+      "model": "W108/W109",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1965,
+      "uretim_bitis": 1972
+    },
+    {
+      "model": "W114/W115",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1968,
+      "uretim_bitis": 1976
+    },
+    {
+      "model": "Pagoda 230/250/280 SL",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1963,
+      "uretim_bitis": 1971
+    },
+    {
+      "model": "190E 2.5-16 Evolution",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1988,
+      "uretim_bitis": 1990
+    },
+    {
+      "model": "W123",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1976,
+      "uretim_bitis": 1985
+    },
+    {
+      "model": "W126",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1979,
+      "uretim_bitis": 1991
+    }
+  ],
+  "kaynak": "manuel"
+}

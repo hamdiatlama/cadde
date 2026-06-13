@@ -1,0 +1,40 @@
+{
+  "il_id": 59,
+  "il": "Tekirdağ",
+  "plaka": "59",
+  "ilceler": [
+    {
+      "ilce": "Ergene"
+    },
+    {
+      "ilce": "Hayrabolu"
+    },
+    {
+      "ilce": "Kapaklı"
+    },
+    {
+      "ilce": "Malkara"
+    },
+    {
+      "ilce": "Marmara Ereğlisi"
+    },
+    {
+      "ilce": "Muratlı"
+    },
+    {
+      "ilce": "Saray"
+    },
+    {
+      "ilce": "Süleymanpaşa"
+    },
+    {
+      "ilce": "Çerkezköy"
+    },
+    {
+      "ilce": "Çorlu"
+    },
+    {
+      "ilce": "Şarköy"
+    }
+  ]
+}

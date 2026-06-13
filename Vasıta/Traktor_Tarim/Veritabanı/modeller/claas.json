@@ -1,0 +1,63 @@
+{
+  "marka": "Claas",
+  "modeller": [
+    {
+      "model": "Arion 400",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Arion 500",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Arion 600",
+      "kasa_tipleri": [
+        "Büyük Traktör"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Axion 800",
+      "kasa_tipleri": [
+        "Büyük Traktör"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Axion 900",
+      "kasa_tipleri": [
+        "Çok Büyük Traktör"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Xerion 5000",
+      "kasa_tipleri": [
+        "Çok Büyük Traktör"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Elios",
+      "kasa_tipleri": [
+        "Kompakt Traktör"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Nexos",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2014,
+      "uretim_bitis": 2020
+    }
+  ],
+  "kaynak": "manuel"
+}

@@ -1,0 +1,34 @@
+{
+  "il_id": 57,
+  "il": "Sinop",
+  "plaka": "57",
+  "ilceler": [
+    {
+      "ilce": "Ayancık"
+    },
+    {
+      "ilce": "Boyabat"
+    },
+    {
+      "ilce": "Dikmen"
+    },
+    {
+      "ilce": "Durağan"
+    },
+    {
+      "ilce": "Erfelek"
+    },
+    {
+      "ilce": "Gerze"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Saraydüzü"
+    },
+    {
+      "ilce": "Türkeli"
+    }
+  ]
+}

@@ -1,0 +1,2024 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Bilet Sat - Etkinlik Bilet Sistemi</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;outline:none}
+:root{--bg:#f9fafb;--card:#fff;--card2:#f3f4f6;--border:#e5e7eb;--text1:#111;--text2:#374151;--text3:#6b7280;--text4:#9ca3af;--radius:4px;--green:#059669;--red:#dc2626;--blue:#2563eb;--orange:#d97706;--purple:#7c3aed;--pink:#ec4899}
+body{font-family:'Inter',sans-serif;background:var(--bg);min-height:100vh;display:flex;flex-direction:column}
+.topbar{display:flex;align-items:center;gap:12px;padding:10px 20px;border-bottom:1px solid var(--border);background:var(--card);flex-shrink:0}
+.topbar .tb-badge{font-size:11px;color:var(--text3);font-weight:500;background:var(--card2);padding:2px 8px;border-radius:var(--radius)}
+.topbar .tb-title{font-size:16px;font-weight:600;color:var(--text1)}
+.topbar .tb-spacer{flex:1}
+.topbar .menu-btn{width:38px;height:38px;display:flex;align-items:center;justify-content:center;border:none;background:none;color:var(--text1);cursor:pointer;border-radius:var(--radius);font-size:24px}
+.main-content{flex:1;display:flex;flex-direction:column;overflow:hidden;overflow-y:auto;position:relative}
+.map-area{flex:1;background:var(--card2);display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--text3);gap:4px;padding:20px}
+.map-area .material-icons{font-size:64px;color:var(--text4)}
+.phone-bottom{margin:0 auto;width:390px;flex-shrink:0;border-top:1px solid var(--border);background:var(--card)}
+.phone-nav{display:flex;border-top:1px solid var(--border);background:var(--card)}
+.phone-nav .bn-item{flex:1;text-align:center;padding:6px 0 8px;cursor:pointer}
+.phone-nav .bn-item .material-icons{font-size:22px;color:var(--text4);display:block}
+.phone-nav .bn-item .bn-label{font-size:10px;color:var(--text4);margin-top:1px}
+.phone-nav .bn-item.aktif .material-icons{color:var(--text1)}
+.phone-nav .bn-item.aktif .bn-label{color:var(--text1);font-weight:500}
+.service-panel{position:fixed;top:0;right:-390px;width:390px;height:100vh;background:var(--card);border-left:1px solid var(--border);z-index:90;transition:right .25s;display:flex;flex-direction:column}
+.service-panel.open{right:0}
+.service-panel-scroll{flex:1;overflow-y:auto}
+.sp-section{padding:16px}
+.sp-section+.sp-section{border-top:1px solid var(--border)}
+.sp-label{font-size:10px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.sp-input{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:6px;background:var(--card)}
+.sp-input .material-icons{font-size:18px;color:var(--text3)}
+.sp-input input,.sp-input select{flex:1;border:none;outline:none;font-size:13px;font-family:'Inter',sans-serif;color:var(--text1);background:transparent}
+.sp-input input::placeholder{color:var(--text4)}
+.sp-input select{appearance:none;cursor:pointer}
+.sp-btn{width:100%;padding:12px;border:none;background:var(--text1);color:var(--bg);font-size:14px;font-weight:600;border-radius:var(--radius);cursor:pointer;font-family:'Inter',sans-serif}
+.sp-btn:active{opacity:.8}
+.sp-btn-out{background:var(--card);color:var(--text1);border:1px solid var(--border);margin-top:6px}
+.sp-btn-sm{font-size:12px;padding:8px;width:auto}
+.sp-btn-green{background:var(--green);color:#fff}
+.sp-btn-red{background:var(--red);color:#fff}
+.sp-btn-purple{background:var(--purple);color:#fff}
+.sp-btn-blue{background:var(--blue);color:#fff}
+.sp-btn-pink{background:var(--pink);color:#fff}
+.sp-row{display:flex;gap:8px}
+.sp-option{flex:1;text-align:center;padding:12px 4px;border:1px solid var(--border);border-radius:var(--radius);cursor:pointer}
+.sp-option .material-icons{font-size:26px;color:var(--text3);display:block}
+.sp-option .so-title{font-size:12px;font-weight:500;color:var(--text1)}
+.sp-option.secili{border-color:var(--text1);background:var(--card2)}
+.sp-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.sp-tag{font-size:11px;padding:4px 10px;border:1px solid var(--border);border-radius:var(--radius);cursor:pointer;color:var(--text3)}
+.sp-tag:active{background:var(--card2)}
+.sp-tag.secili{background:var(--text1);color:var(--bg);border-color:var(--text1)}
+.sp-badge{display:inline-block;padding:1px 6px;border-radius:10px;font-size:9px;font-weight:500;color:#fff}
+.sp-item{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);cursor:pointer}
+.sp-item:last-child{border:none}
+.sp-item:active{background:var(--card2);margin:0 -16px;padding:10px 16px}
+.sp-item .si-icon{width:36px;height:36px;border-radius:var(--radius);background:var(--card2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--text3);flex-shrink:0}
+.sp-item .si-info{flex:1}
+.sp-item .si-info .si-title{font-size:13px;font-weight:500;color:var(--text1)}
+.sp-item .si-info .si-sub{font-size:10px;color:var(--text4);margin-top:1px}
+.sp-item .si-right{font-size:12px;font-weight:600;color:var(--text1);text-align:right}
+.sp-item .si-right .si-badge{font-size:9px;font-weight:400;color:var(--text4);display:block}
+.drawer-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.3);z-index:99;display:none}
+.drawer-overlay.open{display:block}
+.drawer{position:fixed;top:0;right:-390px;width:390px;height:100vh;background:var(--card);border-left:1px solid var(--border);z-index:100;transition:right .25s;display:flex;flex-direction:column}
+.drawer.open{right:0}
+.drawer-header{display:flex;align-items:center;gap:8px;padding:14px 20px;border-bottom:1px solid var(--border);flex-shrink:0}
+.drawer-header .close-btn{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:none;background:none;color:var(--text1);cursor:pointer;border-radius:var(--radius);font-size:22px}
+.drawer-header h2{font-size:16px;font-weight:600;flex:1;color:var(--text1)}
+.drawer-scroll{flex:1;overflow-y:auto;padding:8px 0}
+.d-item{display:flex;align-items:center;gap:14px;padding:14px 20px;cursor:pointer;color:var(--text1)}
+.d-item:active{background:var(--card2)}
+.d-item .material-icons{font-size:22px;color:var(--text3);width:22px}
+.d-item .li-label{font-size:14px;font-weight:500;flex:1}
+.d-item .li-badge{font-size:9px;padding:1px 6px;border-radius:8px;background:var(--red);color:#fff}
+.d-divider{height:1px;background:var(--border);margin:6px 20px}
+.d-header{font-size:10px;font-weight:600;color:var(--text4);text-transform:uppercase;letter-spacing:1px;padding:10px 20px 4px}
+.mb-8{margin-bottom:8px}
+.mt-8{margin-top:8px}
+.flex{display:flex;gap:8px;align-items:center}
+.flex-wrap{flex-wrap:wrap}
+.text-sm{font-size:11px}
+.text-xs{font-size:10px}
+.text-3{color:var(--text3)}
+.text-4{color:var(--text4)}
+.seat-grid{display:grid;gap:3px;margin-bottom:8px;width:100%}
+.seat{width:100%;aspect-ratio:1;border:1px solid var(--border);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:7px;cursor:pointer;background:var(--card2);color:var(--text3);font-weight:500;transition:.1s}
+.seat:hover{transform:scale(1.15);z-index:2}
+.seat.secili{background:var(--blue)!important;color:#fff;border-color:var(--blue);box-shadow:0 0 0 2px rgba(59,130,246,.5)}
+.seat.satilmis{background:#dc2626!important;color:#fff;border-color:#dc2626;cursor:not-allowed;opacity:.7}
+.seat.engelli{background:#0891b2!important;color:#fff;border-color:#0891b2;font-size:10px;position:relative}
+.seat.engelli.secili{box-shadow:0 0 0 2px rgba(8,145,178,.7);background:#0e7490!important}
+.salon-sahne{background:linear-gradient(90deg,#1e1e2e,#2d2d44,#1e1e2e);color:var(--text4);text-align:center;padding:12px 0;border-radius:var(--radius);font-size:11px;font-weight:600;letter-spacing:4px;margin-bottom:10px;border:1px solid var(--border)}
+.salon-zone-group{margin-bottom:10px;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.salon-zone-header{display:flex;align-items:center;justify-content:space-between;padding:6px 10px;font-size:10px;font-weight:600;color:#fff}
+.salon-zone-body{padding:8px;background:var(--card)}
+.salon-row-label{display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600;color:var(--text4);width:18px;min-width:18px}
+.salon-legend{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;padding:8px;background:var(--card);border-radius:var(--radius);border:1px solid var(--border)}
+.salon-legend-item{display:flex;align-items:center;gap:4px;font-size:9px;color:var(--text3)}
+.salon-legend-dot{width:12px;height:12px;border-radius:2px;border:1px solid var(--border)}
+@media(max-width:480px){
+  .phone-bottom{width:100%}
+  .service-panel{width:100%;right:-100%}
+  .drawer{width:100%;right:-100%}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="tb-badge">Bilet Sat</span>
+  <div class="tb-title" id="tbKullaniciAd">Bilet Sat</div>
+  <div class="tb-spacer"></div>
+  <button class="menu-btn" id="tbKullaniciBtn" onclick="toggleDrawer()"><span class="material-icons" id="tbKullaniciIkon">account_circle</span></button>
+</div>
+
+<div class="main-content" id="mainContent">
+  <div class="map-area">
+    <span class="material-icons" style="font-size:48px">confirmation_number</span>
+    <span style="font-size:14px">Bilet Sat</span>
+    <span style="font-size:11px;color:var(--text4)">Konser, tiyatro, spor, sinema, festival, stand-up, opera, seminer, sergi, çocuk, workshop, parti, online, gezi, fuar, e-spor, basketbol, voleybol, dövüş, dans, plaj, lunapark, yemek, kitap, hayvanat, açıkhava, kamp, kokteyl</span>
+    <div class="flex" style="gap:6px;margin-top:10px">
+      <span class="sp-tag secili" id="istatistikEtkinlik">0 Etkinlik</span>
+      <span class="sp-tag" id="istatistikBilet">0 Bilet</span>
+      <span class="sp-tag" id="istatistikSehir">0 Şehir</span>
+    </div>
+    <div style="margin-top:12px;display:flex;gap:6px">
+      <button class="sp-btn sp-btn-sm" style="width:auto;padding:6px 12px;font-size:11px" onclick="openService('anaSayfa')">Ana Sayfa</button>
+    </div>
+  </div>
+</div>
+
+<div class="phone-bottom" id="mainBottom">
+  <div class="phone-nav">
+    <div class="bn-item" onclick="navClick(this,'anaSayfa')"><span class="material-icons">home</span><div class="bn-label">Ana Sayfa</div></div>
+    <div class="bn-item" onclick="navClick(this,'etkinlikler')"><span class="material-icons">event</span><div class="bn-label">Etkinlikler</div></div>
+    <div class="bn-item" onclick="navClick(this,'biletlerim')"><span class="material-icons">confirmation_number</span><div class="bn-label">Biletlerim</div></div>
+    <div class="bn-item" onclick="navClick(this,'daha')"><span class="material-icons">more_horiz</span><div class="bn-label">Daha</div></div>
+  </div>
+</div>
+
+<!-- ANA SAYFA -->
+<div class="service-panel open" id="anaSayfaPanel">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="sp-label">Bilet Sat</div>
+      <div class="sp-row mb-8">
+        <div class="sp-option"><span class="material-icons" style="color:var(--purple)">event</span><div class="so-title" id="spEtkinlik">0</div><span style="font-size:9px;color:var(--text4)">Etkinlik</span></div>
+        <div class="sp-option"><span class="material-icons" style="color:var(--green)">confirmation_number</span><div class="so-title" id="spBilet">0</div><span style="font-size:9px;color:var(--text4)">Bilet Satılan</span></div>
+        <div class="sp-option"><span class="material-icons" style="color:var(--orange)">sell</span><div class="so-title" id="spHasilat">0 TL</div><span style="font-size:9px;color:var(--text4)">Hasılat</span></div>
+      </div>
+    </div>
+    <div class="sp-section">
+      <div class="sp-label">Popüler Etkinlikler</div>
+      <div id="anaSayfaEtkinlikler"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ETKİNLİKLER -->
+<div class="service-panel" id="etkinliklerPanel">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="sp-label">Tüm Etkinlikler</div>
+      <button class="sp-btn sp-btn-sm mb-8" onclick="etkinlikEkle()">+ Etkinlik Oluştur</button>
+      <div class="sp-row mb-8">
+        <div class="sp-input" style="flex:1"><span class="material-icons">search</span><input type="text" id="etkinlikSearch" placeholder="Etkinlik, mekan veya şehir ara..." oninput="etkinlikRender()"></div>
+      </div>
+      <div class="sp-tags mb-8" id="etkinlikTabs">
+        <span class="sp-tag secili" onclick="etkinlikTab(this,'tum')">Tümü</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'konser')">Konser</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'tiyatro')">Tiyatro</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'spor')">Spor</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'sinema')">Sinema</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'festival')">Festival</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'standup')">Stand-Up</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'opera')">Opera</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'seminer')">Seminer</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'sergi')">Sergi</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'cocuk')">Çocuk</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'workshop')">Workshop</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'parti')">Parti</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'online')">Online</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'gezi')">Gezi</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'fuar')">Fuar</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'espor')">E-Spor</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'basketbol')">Basketbol</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'voleybol')">Voleybol</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'dovus')">Dövüş</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'dans')">Dans</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'plaj')">Plaj</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'lunapark')">Lunapark</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'yemek')">Yemek</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'kitap')">Kitap</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'hayvanat')">Hayvanat</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'acikhava')">Açıkhava</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'kamp')">Kamp</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'kokteyl')">Kokteyl</span>
+        <span class="sp-tag" onclick="etkinlikTab(this,'diger')">Diğer</span>
+      </div>
+      <div id="etkinlikListe"></div>
+    </div>
+  </div>
+</div>
+
+<!-- BİLETLERİM -->
+<div class="service-panel" id="biletlerimPanel">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="sp-label">Biletlerim</div>
+      <div class="sp-tags mb-8" id="biletTabs">
+        <span class="sp-tag secili" onclick="biletTab(this,'gecerli')">Geçerli</span>
+        <span class="sp-tag" onclick="biletTab(this,'gecmis')">Geçmiş</span>
+        <span class="sp-tag" onclick="biletTab(this,'iptal')">İptal</span>
+      </div>
+      <div id="biletListe"></div>
+    </div>
+  </div>
+</div>
+
+<!-- DAHA -->
+<div class="service-panel" id="dahaPanel">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="sp-label">Diğer İşlemler</div>
+      <div class="sp-item" onclick="openService('kategoriler')"><div class="si-icon"><span class="material-icons" style="color:var(--purple)">category</span></div><div class="si-info"><div class="si-title">Kategoriler</div><div class="si-sub">Etkinlik türüne göre keşfet</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="openService('siparisler')"><div class="si-icon"><span class="material-icons" style="color:var(--green)">receipt_long</span></div><div class="si-info"><div class="si-title">Sipariş Geçmişi</div><div class="si-sub">Tüm siparişleriniz</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="openService('odemeler')"><div class="si-icon"><span class="material-icons" style="color:var(--blue)">payments</span></div><div class="si-info"><div class="si-title">Ödemeler & Bakiye</div><div class="si-sub">Kredi kartı, havale, bakiye</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="openService('kampanya')"><div class="si-icon"><span class="material-icons" style="color:var(--pink)">local_offer</span></div><div class="si-info"><div class="si-title">İndirim & Kampanya</div><div class="si-sub">Kod tanımla, hediye kart gönder</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="openService('sehirler')"><div class="si-icon"><span class="material-icons" style="color:var(--orange)">map</span></div><div class="si-info"><div class="si-title">Şehir Seçimi</div><div class="si-sub">Şehrine göre etkinlik bul</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="d-divider"></div>
+      <div class="d-header">Gelişmiş</div>
+      <div class="sp-item" onclick="openService('fiyatKademe')"><div class="si-icon"><span class="material-icons" style="color:var(--green)">trending_up</span></div><div class="si-info"><div class="si-title">Fiyat Kademeleri</div><div class="si-sub">Erken kuş, normal, son dakika fiyatları</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="openService('taksit')"><div class="si-icon"><span class="material-icons" style="color:var(--blue)">currency_exchange</span></div><div class="si-info"><div class="si-title">Taksitli Ödeme</div><div class="si-sub">2-3-4 taksit ile bilet al</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="openService('bekleme')"><div class="si-icon"><span class="material-icons" style="color:var(--orange)">hourglass_empty</span></div><div class="si-info"><div class="si-title">Bekleme Listesi</div><div class="si-sub">Tükenen etkinlikler için bildirim al</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="openService('bildirim')"><div class="si-icon"><span class="material-icons" style="color:var(--pink)">notifications</span></div><div class="si-info"><div class="si-title">Bildirimler</div><div class="si-sub">E-posta ve SMS bildirim geçmişi</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="openService('bildirimTercih')"><div class="si-icon"><span class="material-icons" style="color:var(--pink)">notifications_off</span></div><div class="si-info"><div class="si-title">Bildirim Tercihleri</div><div class="si-sub">Hangi bildirimlerin geleceğini seç</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="openService('takvim')"><div class="si-icon"><span class="material-icons" style="color:var(--orange)">calendar_month</span></div><div class="si-info"><div class="si-title">Takvim</div><div class="si-sub">Etkinlik takvim görünümü</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="openService('engelli')"><div class="si-icon"><span class="material-icons" style="color:#0891b2">accessible</span></div><div class="si-info"><div class="si-title">Engelli Erişim</div><div class="si-sub">Tekerlekli sandalye alanı ve biletler</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="openService('eposta')"><div class="si-icon"><span class="material-icons" style="color:var(--blue)">email</span></div><div class="si-info"><div class="si-title">E-posta ile Bilet</div><div class="si-sub">Biletleri e-posta ile gönder</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="openService('giris')"><div class="si-icon"><span class="material-icons" style="color:var(--purple)">qr_code_scanner</span></div><div class="si-info"><div class="si-title">Giriş Kontrol</div><div class="si-sub">RFID/QR ile etkinlik giriş tarama</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="d-divider"></div>
+      <div class="d-header">Bonus</div>
+      <div class="sp-item" onclick="openService('referral')"><div class="si-icon"><span class="material-icons" style="color:var(--green)">group_add</span></div><div class="si-info"><div class="si-title">Arkadaşını Getir</div><div class="si-sub">Davet et, %10 kazan</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="openService('puan')"><div class="si-icon"><span class="material-icons" style="color:var(--orange)">stars</span></div><div class="si-info"><div class="si-title">Sadakat Puanları</div><div class="si-sub">Puan biriktir, indirim kazan</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="openService('degerlendirme')"><div class="si-icon"><span class="material-icons" style="color:var(--pink)">rate_review</span></div><div class="si-info"><div class="si-title">Etkinlik Değerlendir</div><div class="si-sub">Katıldığın etkinlikleri puanla</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="openService('rapor')"><div class="si-icon"><span class="material-icons" style="color:var(--blue)">analytics</span></div><div class="si-info"><div class="si-title">Raporlar & İstatistikler</div><div class="si-sub">Grafikler, satış analizi</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="openService('sepet')"><div class="si-icon"><span class="material-icons" style="color:var(--orange)">shopping_cart</span></div><div class="si-info"><div class="si-title">Sepetim</div><div class="si-sub" id="dahaSepetAdet">Sepetteki ürünler</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="openService('favori')"><div class="si-icon"><span class="material-icons" style="color:var(--red)">favorite</span></div><div class="si-info"><div class="si-title">Favori Etkinlikler</div><div class="si-sub">Kaydettiğin etkinlikler</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="d-divider"></div>
+      <div class="d-header">Hesap</div>
+      <div class="sp-item" onclick="openService('kullanici')"><div class="si-icon"><span class="material-icons" style="color:var(--purple)">manage_accounts</span></div><div class="si-info"><div class="si-title" id="dahaKullaniciLabel">Profil & Giriş</div><div class="si-sub">Hesabını yönet</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="openService('guvenlik')"><div class="si-icon"><span class="material-icons" style="color:var(--green)">security</span></div><div class="si-info"><div class="si-title">Güvenlik</div><div class="si-sub">Dolandırıcılık önleme, bot koruması</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="d-divider"></div>
+      <div class="d-header">Araçlar</div>
+      <div class="sp-item" onclick="openService('dil')"><div class="si-icon"><span class="material-icons" style="color:var(--blue)">language</span></div><div class="si-info"><div class="si-title">Dil Seçimi</div><div class="si-sub">Türkçe / English</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="openService('paylas')"><div class="si-icon"><span class="material-icons" style="color:var(--pink)">share</span></div><div class="si-info"><div class="si-title">Paylaş</div><div class="si-sub">Sosyal medyada paylaş</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="mobilYukle()"><div class="si-icon"><span class="material-icons" style="color:var(--purple)">phone_android</span></div><div class="si-info"><div class="si-title">Mobil Uygulamayı Yükle</div><div class="si-sub">PWA ile cihazına ekle</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- KATEGORİLER -->
+<div class="service-panel" id="kategorilerPanel">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="sp-label">Kategoriler</div>
+      <div class="sp-row mb-8"><div class="sp-option" onclick="kategoriSec('konser')"><span class="material-icons" style="color:var(--purple)">music_note</span><div class="so-title">Konser</div></div><div class="sp-option" onclick="kategoriSec('tiyatro')"><span class="material-icons" style="color:var(--orange)">theater_comedy</span><div class="so-title">Tiyatro</div></div></div>
+      <div class="sp-row mb-8"><div class="sp-option" onclick="kategoriSec('spor')"><span class="material-icons" style="color:var(--green)">sports_soccer</span><div class="so-title">Spor</div></div><div class="sp-option" onclick="kategoriSec('sinema')"><span class="material-icons" style="color:var(--red)">movie</span><div class="so-title">Sinema</div></div></div>
+      <div class="sp-row mb-8"><div class="sp-option" onclick="kategoriSec('festival')"><span class="material-icons" style="color:var(--blue)">celebration</span><div class="so-title">Festival</div></div><div class="sp-option" onclick="kategoriSec('standup')"><span class="material-icons" style="color:var(--pink)">emoji_emotions</span><div class="so-title">Stand-Up</div></div></div>
+      <div class="sp-row mb-8"><div class="sp-option" onclick="kategoriSec('opera')"><span class="material-icons" style="color:#8b5cf6">queue_music</span><div class="so-title">Opera</div></div><div class="sp-option" onclick="kategoriSec('seminer')"><span class="material-icons" style="color:#14b8a6">school</span><div class="so-title">Seminer</div></div></div>
+      <div class="sp-row mb-8"><div class="sp-option" onclick="kategoriSec('sergi')"><span class="material-icons" style="color:#f59e0b">museum</span><div class="so-title">Sergi</div></div><div class="sp-option" onclick="kategoriSec('cocuk')"><span class="material-icons" style="color:#f97316">child_care</span><div class="so-title">Çocuk</div></div></div>
+      <div class="sp-row mb-8"><div class="sp-option" onclick="kategoriSec('workshop')"><span class="material-icons" style="color:#6366f1">build</span><div class="so-title">Workshop</div></div><div class="sp-option" onclick="kategoriSec('parti')"><span class="material-icons" style="color:#ec4899">nightlife</span><div class="so-title">Parti</div></div></div>
+      <div class="sp-row mb-8"><div class="sp-option" onclick="kategoriSec('online')"><span class="material-icons" style="color:#06b6d4">live_tv</span><div class="so-title">Online</div></div><div class="sp-option" onclick="kategoriSec('gezi')"><span class="material-icons" style="color:#10b981">explore</span><div class="so-title">Gezi</div></div></div>
+      <div class="sp-row mb-8"><div class="sp-option" onclick="kategoriSec('fuar')"><span class="material-icons" style="color:#8b5cf6">storefront</span><div class="so-title">Fuar</div></div><div class="sp-option" onclick="kategoriSec('espor')"><span class="material-icons" style="color:#22c55e">sports_esports</span><div class="so-title">E-Spor</div></div></div>
+      <div class="sp-row mb-8"><div class="sp-option" onclick="kategoriSec('basketbol')"><span class="material-icons" style="color:#f97316">sports_basketball</span><div class="so-title">Basketbol</div></div><div class="sp-option" onclick="kategoriSec('voleybol')"><span class="material-icons" style="color:#eab308">sports_volleyball</span><div class="so-title">Voleybol</div></div></div>
+      <div class="sp-row mb-8"><div class="sp-option" onclick="kategoriSec('dovus')"><span class="material-icons" style="color:#dc2626">fitness_center</span><div class="so-title">Dövüş</div></div><div class="sp-option" onclick="kategoriSec('dans')"><span class="material-icons" style="color:#ec4899">accessibility_new</span><div class="so-title">Dans</div></div></div>
+      <div class="sp-row mb-8"><div class="sp-option" onclick="kategoriSec('plaj')"><span class="material-icons" style="color:#06b6d4">beach_access</span><div class="so-title">Plaj</div></div><div class="sp-option" onclick="kategoriSec('lunapark')"><span class="material-icons" style="color:#f59e0b">toys</span><div class="so-title">Lunapark</div></div></div>
+      <div class="sp-row mb-8"><div class="sp-option" onclick="kategoriSec('yemek')"><span class="material-icons" style="color:#ef4444">restaurant</span><div class="so-title">Yemek</div></div><div class="sp-option" onclick="kategoriSec('kitap')"><span class="material-icons" style="color:#8b5cf6">menu_book</span><div class="so-title">Kitap</div></div></div>
+      <div class="sp-row mb-8"><div class="sp-option" onclick="kategoriSec('hayvanat')"><span class="material-icons" style="color:#22c55e">pets</span><div class="so-title">Hayvanat</div></div><div class="sp-option" onclick="kategoriSec('acikhava')"><span class="material-icons" style="color:#14b8a6">outdoor_grill</span><div class="so-title">Açıkhava</div></div></div>
+      <div class="sp-row mb-8"><div class="sp-option" onclick="kategoriSec('kamp')"><span class="material-icons" style="color:#15803d">nature</span><div class="so-title">Kamp</div></div><div class="sp-option" onclick="kategoriSec('kokteyl')"><span class="material-icons" style="color:#ec4899">local_bar</span><div class="so-title">Kokteyl</div></div></div>
+      <div class="sp-row mb-8"><div class="sp-option" onclick="kategoriSec('diger')"><span class="material-icons" style="color:var(--text3)">more_horiz</span><div class="so-title">Diğer</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SİPARİŞLER -->
+<div class="service-panel" id="siparislerPanel">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="sp-label">Sipariş Geçmişi</div>
+      <div id="siparisListe"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ÖDEMELER -->
+<div class="service-panel" id="odemelerPanel">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="sp-label">Bakiye</div>
+      <div style="background:var(--card2);padding:16px;border-radius:var(--radius);text-align:center;margin-bottom:8px">
+        <div style="font-size:10px;color:var(--text4)">Bakiyeniz</div>
+        <div style="font-size:28px;font-weight:700;color:var(--text1)" id="spBakiye">0 TL</div>
+      </div>
+      <button class="sp-btn sp-btn-green mb-8" onclick="bakiyeYukle()">+ Bakiye Yükle</button>
+    </div>
+    <div class="sp-section">
+      <div class="sp-label">Kredi Kartı ile Ödeme</div>
+      <div class="sp-input"><span class="material-icons">credit_card</span><input type="text" id="kkKartNo" placeholder="Kart numarası" value="4546 7812 3456 7890"></div>
+      <div class="sp-row mb-8">
+        <div class="sp-input" style="flex:1"><span class="material-icons">calendar_month</span><input type="text" id="kkSKT" placeholder="SKT (AA/YY)" value="12/28"></div>
+        <div class="sp-input" style="flex:1"><span class="material-icons">lock</span><input type="text" id="kkCVV" placeholder="CVV" value="123"></div>
+      </div>
+      <div class="sp-input"><span class="material-icons">person</span><input type="text" id="kkAd" placeholder="Kart üzerindeki ad" value="AHMET YILMAZ"></div>
+      <button class="sp-btn sp-btn-blue mb-8" onclick="kkOdemeYap()">Kart ile Ödeme Yap</button>
+      <div class="sp-label">Havale/EFT</div>
+      <div style="background:var(--card2);padding:12px;border-radius:var(--radius);font-size:11px;line-height:1.6">
+        <b>Garanti BBVA</b><br>
+        TR12 0006 4000 0011 2345 6789<br>
+        Ahmet Yılmaz
+      </div>
+    </div>
+    <div class="sp-section">
+      <div class="sp-label">İşlem Geçmişi</div>
+      <div id="odemeGecmisListe"></div>
+    </div>
+  </div>
+</div>
+
+<!-- KAMPANYA -->
+<div class="service-panel" id="kampanyaPanel">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="sp-label">İndirim Kodları</div>
+      <button class="sp-btn sp-btn-sm mb-8" onclick="indirimKoduEkle()">+ İndirim Kodu Oluştur</button>
+      <div id="indirimKodListe"></div>
+    </div>
+    <div class="sp-section">
+      <div class="sp-label">Hediye Kart</div>
+      <button class="sp-btn sp-btn-sm mb-8" onclick="hediyeKartGonder()">🎁 Hediye Kart Gönder</button>
+      <div id="hediyeKartListe"></div>
+    </div>
+    <div class="sp-section">
+      <div class="sp-label">Kampanyalar</div>
+      <div id">kampanyaListe"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ŞEHİRLER -->
+<div class="service-panel" id="sehirlerPanel">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="sp-label">Şehir Seç</div>
+      <div id="sehirListe"></div>
+    </div>
+  </div>
+</div>
+
+<!-- FİYAT KADEMELERİ -->
+<div class="service-panel" id="fiyatKademePanel">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="sp-label">Fiyat Kademeleri</div>
+      <div class="text-sm text-3 mb-8">Etkinliklerde erken kuş, normal ve son dakika fiyatlandırması yapın.</div>
+      <div id="fiyatKademeListe"></div>
+    </div>
+  </div>
+</div>
+
+<!-- TAKSİTLİ ÖDEME -->
+<div class="service-panel" id="taksitPanel">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="sp-label">Taksitli Ödeme</div>
+      <div class="text-sm text-3 mb-8">Bilet alırken 2, 3 veya 4 taksit seçeneği ile ödeyin.</div>
+      <button class="sp-btn sp-btn-sm mb-8" onclick="taksitAyarla()">Taksit Seçeneklerini Ayarla</button>
+      <div id="taksitDurum"></div>
+      <div class="d-divider"></div>
+      <div class="sp-label">Aktif Taksitli Siparişler</div>
+      <div id="taksitSiparisListe"></div>
+    </div>
+  </div>
+</div>
+
+<!-- BEKLEME LİSTESİ -->
+<div class="service-panel" id="beklemePanel">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="sp-label">Bekleme Listesi</div>
+      <div class="text-sm text-3 mb-8">Tükenen etkinlikler için bekleme listesine eklenin, yer açılınca haber alın.</div>
+      <button class="sp-btn sp-btn-sm mb-8" onclick="beklemeEkle()">+ Bekleme Listesine Ekle</button>
+      <div id="beklemeListe"></div>
+    </div>
+  </div>
+</div>
+
+<!-- BİLDİRİMLER -->
+<div class="service-panel" id="bildirimPanel">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="sp-label">Bildirimler</div>
+      <div class="text-sm text-3 mb-8">E-posta ve SMS bildirim geçmişi.</div>
+      <div id="bildirimListe"></div>
+    </div>
+  </div>
+</div>
+
+<!-- GİRİŞ KONTROL -->
+<div class="service-panel" id="girisPanel">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="sp-label">Giriş Kontrol Sistemi</div>
+      <div class="text-sm text-3 mb-8">RFID/QR ile etkinlik girişlerini tarayın ve doğrulayın.</div>
+      <button class="sp-btn sp-btn-sm mb-8" onclick="girisTara()">QR/RFID Tara</button>
+      <div id="girisDurum"></div>
+      <div class="d-divider"></div>
+      <div class="sp-label">Giriş Yapanlar</div>
+      <div id="girisListe"></div>
+    </div>
+  </div>
+</div>
+
+<!-- VERIFIED FAN -->
+<div class="service-panel" id="fanPanel">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="sp-label">Verified Fan</div>
+      <div class="text-sm text-3 mb-8">Doğrulanmış hayran sistemi ile botları ve karaborsacıları engelleyin.</div>
+      <button class="sp-btn sp-btn-sm mb-8" onclick="fanDogruma()">🔐 Beni Doğrula (Verified Fan)</button>
+      <div id="fanDurum"></div>
+      <div class="d-divider"></div>
+      <div class="sp-label">Doğrulanmış Kullanıcılar</div>
+      <div id="fanListe"></div>
+    </div>
+  </div>
+</div>
+
+<!-- REFERRAL -->
+<div class="service-panel" id="referralPanel"><div class="service-panel-scroll"><div class="sp-section"><div class="sp-label">Arkadaşını Getir, %10 Kazan</div><div class="text-sm text-3 mb-8">Davet linkinizi arkadaşlarınızla paylaşın, aldıkları her biletten %10 komisyon kazanın!</div><div id="referralDurum"></div><button class="sp-btn sp-btn-sm mb-8" onclick="referralKopyala()">📋 Davet Linkini Kopyala</button><div class="d-divider"></div><div class="sp-label">Kazanç Geçmişi</div><div id="referralListe"></div></div></div></div>
+
+<!-- PUAN -->
+<div class="service-panel" id="puanPanel"><div class="service-panel-scroll"><div class="sp-section"><div class="sp-label">Sadakat Puanlarım</div><div id="puanDurum"></div><div class="d-divider"></div><div class="sp-label">Puan Geçmişi</div><div id="puanListe"></div></div></div></div>
+
+<!-- DEĞERLENDİRME -->
+<div class="service-panel" id="degerlendirmePanel"><div class="service-panel-scroll"><div class="sp-section"><div class="sp-label">Etkinlik Değerlendir</div><div class="text-sm text-3 mb-8">Katıldığınız etkinlikleri puanlayın ve yorum yapın.</div><div id="degerlendirmeListe"></div></div></div></div>
+
+<!-- RAPOR -->
+<div class="service-panel" id="raporPanel"><div class="service-panel-scroll"><div class="sp-section"><div class="sp-label">Raporlar & İstatistikler</div><div id="raporIcerik"></div></div></div></div>
+
+<!-- DİL -->
+<div class="service-panel" id="dilPanel"><div class="service-panel-scroll"><div class="sp-section"><div class="sp-label">Dil Seçimi / Language</div><div class="sp-row mb-8"><div class="sp-option secili" id="dilTR" onclick="dilSec('tr')"><span class="material-icons" style="color:var(--red)">flag</span><div class="so-title">Türkçe</div></div><div class="sp-option" id="dilEN" onclick="dilSec('en')"><span class="material-icons" style="color:var(--blue)">flag</span><div class="so-title">English</div></div></div><div class="text-sm text-3" id="dilBilgi">Mevcut dil: Türkçe</div></div></div></div>
+
+<!-- PAYLAŞ -->
+<div class="service-panel" id="paylasPanel"><div class="service-panel-scroll"><div class="sp-section"><div class="sp-label">Paylaş</div><div class="text-sm text-3 mb-8">Bilet Sat platformunu sosyal medyada paylaşın.</div><div id="paylasButonlar"></div></div></div></div>
+
+<!-- KULLANICI / PROFİL -->
+<div class="service-panel" id="kullaniciPanel">
+  <div class="service-panel-scroll">
+    <div class="sp-section" id="kullaniciGiris">
+      <div class="sp-label">Kullanıcı Girişi</div>
+      <div class="text-sm text-3 mb-8">Demo hesaplar: ali@email.com / ayse@email.com / info@konser.com (şifre: 123)</div>
+      <div class="sp-row mb-8"><div class="sp-input" style="flex:1"><span class="material-icons">email</span><input type="text" id="loginEposta" placeholder="E-posta"></div></div>
+      <div class="sp-row mb-8"><div class="sp-input" style="flex:1"><span class="material-icons">lock</span><input type="password" id="loginSifre" placeholder="Şifre"></div></div>
+      <div class="flex mb-8" style="gap:6px"><button class="sp-btn sp-btn-sm" style="flex:1" onclick="kullaniciGirisYap()">Giriş Yap</button><button class="sp-btn sp-btn-sm sp-btn-out" style="flex:1" onclick="kullaniciKayitForm()">Kayıt Ol</button></div>
+      <div id="kullaniciHata" class="text-sm" style="color:var(--red)"></div>
+    </div>
+    <div class="sp-section" id="kullaniciProfil" style="display:none">
+      <div class="sp-label">Profil</div>
+      <div id="kullaniciKart"></div>
+      <div class="d-divider"></div>
+      <div class="sp-label">Kurumsal İşlemler <span class="sp-badge" style="background:var(--purple);font-size:8px" id="kullaniciTipBadge"></span></div>
+      <div id="kullaniciKurumPanel"></div>
+      <div class="d-divider"></div>
+      <button class="sp-btn sp-btn-sm sp-btn-out" style="width:100%" onclick="kullaniciCikis()">🚪 Çıkış Yap</button>
+    </div>
+  </div>
+</div>
+
+<!-- SEPET -->
+<div class="service-panel" id="sepetPanel"><div class="service-panel-scroll"><div class="sp-section"><div class="sp-label">🛒 Sepetim</div><div id="sepetIcerik"></div></div></div></div>
+
+<!-- FAVORİLER -->
+<div class="service-panel" id="favoriPanel"><div class="service-panel-scroll"><div class="sp-section"><div class="sp-label">⭐ Favori Etkinliklerim</div><div id="favoriListe"></div></div></div></div>
+
+<!-- ADMIN PANEL -->
+<div class="service-panel" id="adminPanel"><div class="service-panel-scroll"><div class="sp-section"><div class="sp-label">🛡️ Admin Paneli</div><div class="text-sm text-3 mb-8">Kullanıcı, etkinlik ve sistem yönetimi.</div><div id="adminIcerik"></div></div></div></div>
+
+<!-- BİLDİRİM TERCİHLERİ -->
+<div class="service-panel" id="bildirimTercihPanel"><div class="service-panel-scroll"><div class="sp-section"><div class="sp-label">🔔 Bildirim Tercihleri</div><div id="bildirimTercihIcerik"></div></div></div></div>
+
+<!-- ENGELLİ ERİŞİM -->
+<div class="service-panel" id="engelliPanel"><div class="service-panel-scroll"><div class="sp-section"><div class="sp-label">♿ Engelli Erişim Desteği</div><div class="text-sm text-3 mb-8">Tüm engelli biletleri, tekerlekli sandalye alanları ve erişim bilgileri.</div><div id="engelliIcerik"></div></div></div></div>
+
+<!-- E-POSTA İLE BİLET -->
+<div class="service-panel" id="epostaPanel"><div class="service-panel-scroll"><div class="sp-section"><div class="sp-label">📧 E-posta ile Bilet Gönderme</div><div id="epostaIcerik"></div></div></div></div>
+
+<!-- TAKVİM -->
+<div class="service-panel" id="takvimPanel"><div class="service-panel-scroll"><div class="sp-section"><div class="sp-label">📅 Etkinlik Takvimi</div><div id="takvimIcerik"></div></div></div></div>
+
+<!-- GÜVENLİK / DOLANDIRICILIK ÖNLEME -->
+<div class="service-panel" id="guvenlikPanel">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="sp-label">🔒 Güvenlik & Dolandırıcılık Önleme</div>
+      <div class="text-sm text-3 mb-8">Bilet karaborsacılığı ve bot saldırılarına karşı alınan önlemler.</div>
+      <div id="guvenlikDurum"></div>
+      <div class="d-divider"></div>
+      <div class="sp-label">Aktif Güvenlik Önlemleri</div>
+      <div id="guvenlikOnlemler"></div>
+      <div class="d-divider"></div>
+      <div class="sp-label">Şüpheli İşlemler</div>
+      <div id="guvenlikSupheli"></div>
+      <div class="d-divider"></div>
+      <div class="sp-label">Güvenlik Raporu</div>
+      <div id="guvenlikRapor"></div>
+    </div>
+  </div>
+</div>
+
+<!-- DRAWER -->
+<div class="drawer-overlay" id="drawerOverlay" onclick="closeAll()"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-header">
+    <button class="close-btn" onclick="toggleDrawer()"><span class="material-icons">close</span></button>
+    <h2>Bilet Sat</h2>
+  </div>
+  <div class="drawer-scroll">
+    <div class="d-header">Hesap</div>
+    <div class="d-item" onclick="drawerGit('kullanici')" id="drawerKullaniciItem"><span class="material-icons" id="drawerKullaniciIkon">person</span><div class="li-label" id="drawerKullaniciLabel">Giriş Yap / Kayıt Ol</div></div>
+    <div class="d-divider"></div>
+    <div class="d-header">Menü</div>
+    <div class="d-item" onclick="drawerGit('anaSayfa')"><span class="material-icons">home</span><div class="li-label">Ana Sayfa</div></div>
+    <div class="d-item" onclick="drawerGit('etkinlikler')"><span class="material-icons">event</span><div class="li-label">Etkinlikler</div></div>
+    <div class="d-item" onclick="drawerGit('biletlerim')"><span class="material-icons">confirmation_number</span><div class="li-label">Biletlerim</div></div>
+    <div class="d-item" onclick="drawerGit('siparisler')"><span class="material-icons">receipt_long</span><div class="li-label">Siparişler</div></div>
+    <div class="d-item" onclick="drawerGit('odemeler')"><span class="material-icons">payments</span><div class="li-label">Ödemeler</div></div>
+    <div class="d-item" onclick="drawerGit('kampanya')"><span class="material-icons" style="color:var(--pink)">local_offer</span><div class="li-label">Kampanya</div></div>
+    <div class="d-item" onclick="drawerGit('sehirler')"><span class="material-icons" style="color:var(--orange)">map</span><div class="li-label">Şehirler</div></div>
+    <div class="d-item" onclick="drawerGit('fiyatKademe')"><span class="material-icons" style="color:var(--green)">trending_up</span><div class="li-label">Fiyat Kademeleri</div></div>
+    <div class="d-item" onclick="drawerGit('taksit')"><span class="material-icons" style="color:var(--blue)">currency_exchange</span><div class="li-label">Taksitli Ödeme</div></div>
+    <div class="d-item" onclick="drawerGit('bekleme')"><span class="material-icons" style="color:var(--orange)">hourglass_empty</span><div class="li-label">Bekleme Listesi</div></div>
+    <div class="d-item" onclick="drawerGit('bildirim')"><span class="material-icons" style="color:var(--pink)">notifications</span><div class="li-label">Bildirimler</div></div>
+    <div class="d-item" onclick="drawerGit('bildirimTercih')"><span class="material-icons" style="color:var(--pink)">notifications_off</span><div class="li-label">Bildirim Tercihleri</div></div>
+    <div class="d-item" onclick="drawerGit('takvim')"><span class="material-icons" style="color:var(--orange)">calendar_month</span><div class="li-label">Takvim</div></div>
+    <div class="d-item" onclick="drawerGit('giris')"><span class="material-icons" style="color:var(--purple)">qr_code_scanner</span><div class="li-label">Giriş Kontrol</div></div>
+    <div class="d-item" onclick="drawerGit('fan')"><span class="material-icons" style="color:#22c55e">verified_user</span><div class="li-label">Verified Fan</div></div>
+    <div class="d-item" onclick="drawerGit('referral')"><span class="material-icons" style="color:var(--green)">group_add</span><div class="li-label">Arkadaşını Getir</div></div>
+    <div class="d-item" onclick="drawerGit('puan')"><span class="material-icons" style="color:var(--orange)">stars</span><div class="li-label">Sadakat Puanı</div></div>
+    <div class="d-item" onclick="drawerGit('degerlendirme')"><span class="material-icons" style="color:var(--pink)">rate_review</span><div class="li-label">Değerlendir</div></div>
+    <div class="d-item" onclick="drawerGit('rapor')"><span class="material-icons" style="color:var(--blue)">analytics</span><div class="li-label">Raporlar</div></div>
+    <div class="d-item" onclick="drawerGit('kullanici')"><span class="material-icons" style="color:var(--purple)">manage_accounts</span><div class="li-label">Profil & Hesap</div></div>
+    <div class="d-item" onclick="drawerGit('guvenlik')"><span class="material-icons" style="color:var(--green)">security</span><div class="li-label">Güvenlik</div></div>
+    <div class="d-item" onclick="drawerGit('dil')"><span class="material-icons" style="color:var(--blue)">language</span><div class="li-label">Dil</div></div>
+    <div class="d-item" onclick="drawerGit('paylas')"><span class="material-icons" style="color:var(--pink)">share</span><div class="li-label">Paylaş</div></div>
+    <div class="d-item" onclick="drawerGit('sepet')"><span class="material-icons" style="color:var(--orange)">shopping_cart</span><div class="li-label">Sepet <span class="sp-badge" style="background:var(--red);font-size:8px" id="drawerSepetAdet"></span></div></div>
+    <div class="d-item" onclick="drawerGit('favori')"><span class="material-icons" style="color:var(--red)">favorite</span><div class="li-label">Favoriler</div></div>
+    <div class="d-item" onclick="drawerGit('admin')" id="drawerAdminItem" style="display:none"><span class="material-icons" style="color:var(--red)">admin_panel_settings</span><div class="li-label">Admin</div></div>
+    <div class="d-item" onclick="drawerGit('engelli')"><span class="material-icons" style="color:#0891b2">accessible</span><div class="li-label">Engelli Erişim</div></div>
+    <div class="d-item" onclick="drawerGit('eposta')"><span class="material-icons" style="color:var(--blue)">email</span><div class="li-label">E-posta ile Bilet</div></div>
+    <div class="d-divider"></div>
+    <div class="d-header">Kategoriler</div>
+    <div class="d-item" onclick="kategoriSec('konser')"><span class="material-icons" style="color:var(--purple)">music_note</span><div class="li-label">Konser</div></div>
+    <div class="d-item" onclick="kategoriSec('tiyatro')"><span class="material-icons" style="color:var(--orange)">theater_comedy</span><div class="li-label">Tiyatro</div></div>
+    <div class="d-item" onclick="kategoriSec('spor')"><span class="material-icons" style="color:var(--green)">sports_soccer</span><div class="li-label">Spor</div></div>
+    <div class="d-item" onclick="kategoriSec('sinema')"><span class="material-icons" style="color:var(--red)">movie</span><div class="li-label">Sinema</div></div>
+    <div class="d-item" onclick="kategoriSec('festival')"><span class="material-icons" style="color:var(--blue)">celebration</span><div class="li-label">Festival</div></div>
+    <div class="d-item" onclick="kategoriSec('standup')"><span class="material-icons" style="color:var(--pink)">emoji_emotions</span><div class="li-label">Stand-Up</div></div>
+    <div class="d-item" onclick="kategoriSec('opera')"><span class="material-icons" style="color:#8b5cf6">queue_music</span><div class="li-label">Opera</div></div>
+    <div class="d-item" onclick="kategoriSec('seminer')"><span class="material-icons" style="color:#14b8a6">school</span><div class="li-label">Seminer</div></div>
+    <div class="d-item" onclick="kategoriSec('sergi')"><span class="material-icons" style="color:#f59e0b">museum</span><div class="li-label">Sergi</div></div>
+    <div class="d-item" onclick="kategoriSec('cocuk')"><span class="material-icons" style="color:#f97316">child_care</span><div class="li-label">Çocuk</div></div>
+    <div class="d-item" onclick="kategoriSec('workshop')"><span class="material-icons" style="color:#6366f1">build</span><div class="li-label">Workshop</div></div>
+    <div class="d-item" onclick="kategoriSec('parti')"><span class="material-icons" style="color:#ec4899">nightlife</span><div class="li-label">Parti</div></div>
+    <div class="d-item" onclick="kategoriSec('online')"><span class="material-icons" style="color:#06b6d4">live_tv</span><div class="li-label">Online</div></div>
+    <div class="d-item" onclick="kategoriSec('gezi')"><span class="material-icons" style="color:#10b981">explore</span><div class="li-label">Gezi</div></div>
+    <div class="d-item" onclick="kategoriSec('fuar')"><span class="material-icons" style="color:#8b5cf6">storefront</span><div class="li-label">Fuar</div></div>
+    <div class="d-item" onclick="kategoriSec('espor')"><span class="material-icons" style="color:#22c55e">sports_esports</span><div class="li-label">E-Spor</div></div>
+    <div class="d-item" onclick="kategoriSec('basketbol')"><span class="material-icons" style="color:#f97316">sports_basketball</span><div class="li-label">Basketbol</div></div>
+    <div class="d-item" onclick="kategoriSec('voleybol')"><span class="material-icons" style="color:#eab308">sports_volleyball</span><div class="li-label">Voleybol</div></div>
+    <div class="d-item" onclick="kategoriSec('dovus')"><span class="material-icons" style="color:#dc2626">fitness_center</span><div class="li-label">Dövüş</div></div>
+    <div class="d-item" onclick="kategoriSec('dans')"><span class="material-icons" style="color:#ec4899">accessibility_new</span><div class="li-label">Dans</div></div>
+    <div class="d-item" onclick="kategoriSec('plaj')"><span class="material-icons" style="color:#06b6d4">beach_access</span><div class="li-label">Plaj</div></div>
+    <div class="d-item" onclick="kategoriSec('lunapark')"><span class="material-icons" style="color:#f59e0b">toys</span><div class="li-label">Lunapark</div></div>
+    <div class="d-item" onclick="kategoriSec('yemek')"><span class="material-icons" style="color:#ef4444">restaurant</span><div class="li-label">Yemek</div></div>
+    <div class="d-item" onclick="kategoriSec('kitap')"><span class="material-icons" style="color:#8b5cf6">menu_book</span><div class="li-label">Kitap</div></div>
+    <div class="d-item" onclick="kategoriSec('hayvanat')"><span class="material-icons" style="color:#22c55e">pets</span><div class="li-label">Hayvanat</div></div>
+    <div class="d-item" onclick="kategoriSec('acikhava')"><span class="material-icons" style="color:#14b8a6">outdoor_grill</span><div class="li-label">Açıkhava</div></div>
+    <div class="d-item" onclick="kategoriSec('kamp')"><span class="material-icons" style="color:#15803d">nature</span><div class="li-label">Kamp</div></div>
+    <div class="d-item" onclick="kategoriSec('kokteyl')"><span class="material-icons" style="color:#ec4899">local_bar</span><div class="li-label">Kokteyl</div></div>
+    <div class="d-item" onclick="kategoriSec('diger')"><span class="material-icons" style="color:var(--text3)">more_horiz</span><div class="li-label">Diğer</div></div>
+    <div class="d-divider"></div>
+    <div class="d-header">Diğer Sistemler</div>
+    <div class="d-item" onclick="window.open('../kurye/taksi_demo.html','_self')"><span class="material-icons">local_taxi</span><div class="li-label">Taksi & Kurye</div></div>
+    <div class="d-item" onclick="window.open('../yemek/yemek_demo.html','_self')"><span class="material-icons">restaurant</span><div class="li-label">Yemek</div></div>
+    <div class="d-item" onclick="window.open('../cicek/cicek_demo.html','_self')"><span class="material-icons">local_florist</span><div class="li-label">Çiçek</div></div>
+    <div class="d-item" onclick="window.open('../bina/bina_demo.html','_self')"><span class="material-icons">apartment</span><div class="li-label">Bina Yönetimi</div></div>
+  </div>
+</div>
+
+<script>
+var data={
+  etkinlikler:[],
+  biletler:[],
+  siparisler:[],
+  bakiye:1000,
+  puanBakiye:0,
+  odemeGecmis:[],
+  indirimKodlari:[],
+  hediyeKartlar:[],
+  beklemeListesi:[],
+  bildirimler:[],
+  verifiedFanlar:[],
+  girisKayitlari:[],
+  puanlar:[],
+  degerlendirmeler:[],
+  referansLink:'BLT-REF-001',
+  referansKullanim:0,
+  dil:'tr',
+  kullanicilar:[
+    {id:1,ad:'Ali Yılmaz',eposta:'ali@email.com',sifre:'123',telefon:'+905321112233',tip:'birey',bakiye:2000,puanBakiye:150,aktif:true,epostaDogrulandi:true,kycDogrulandi:false,idNo:'12345678901'},
+    {id:2,ad:'Ayşe Demir',eposta:'ayse@email.com',sifre:'123',telefon:'+905324445566',tip:'birey',bakiye:500,puanBakiye:50,epostaDogrulandi:false,kycDogrulandi:false},
+    {id:3,ad:'Konser A.Ş.',eposta:'info@konser.com',sifre:'123',telefon:'+902122223344',tip:'kurum',firmaAdi:'Konser Organizasyon A.Ş.',vergiNo:'1234567890',bakiye:10000,puanBakiye:0,epostaDogrulandi:true,kycDogrulandi:true},
+    {id:4,ad:'Admin',eposta:'admin@biletsat.com',sifre:'admin',telefon:'+905551234567',tip:'admin',bakiye:999999,puanBakiye:0,epostaDogrulandi:true,kycDogrulandi:true}
+  ],
+  aktifKullanici:null,
+  _kullaniciId:4,
+  sepet:[],
+  favoriler:[],
+  bildirimTercih:{bilet:true,odeme:true,bekleme:true,guvenlik:true,kampanya:false},
+  guvenlik:{
+    captchaAktif:true,epostaDogrulama:true,telefonDogrulama:true,adreseBiletAktif:true,islemHizLimiti:5,devirLimiti:1,maxAyniEtkinlikBilet:4,biletIptalCezasi:0.5,supheliIslemler:[],twoFAktif:false,kademeliBekleme:true,hesapKilitleme:true,sifreGucu:true,ipIzleme:true
+  },
+  captchaDogru:false,sonIslemZamani:0, basarisizGiris:0, hesapKilitli:false,
+  _etkinlikId:0,_biletId:0,_siparisId:0,_odemeId:0,_indirimId:0,_hediyeId:0,_bildirimId:0,_beklemeId:0,_girisId:0,_fanId:0,_puanId:0,_degerlendirmeId:0,_sepetId:0,_favoriId:0
+};
+var etkinlikFiltre='tum';
+var biletFiltre='gecerli';
+var sehirler=['İstanbul','Ankara','İzmir','Antalya','Bursa','İzmir','Adana','Trabzon'];
+
+var KATEGORI_YAPISI={
+  konser:{alanlar:[{ad:'VIP Ön Alan',kisaltma:'VIP'},{ad:'Normal Ayakta',kisaltma:'NRM'},{ad:'Oturmalı Alan',kisaltma:'OTR'}],sira:8,koltuk:10,engelli:true},
+  tiyatro:{alanlar:[{ad:'Sahne Önü',kisaltma:'SÖN'},{ad:'Balkon',kisaltma:'BLK'},{ad:'Loca',kisaltma:'LOC'}],sira:6,koltuk:8,engelli:true},
+  spor:{alanlar:[{ad:'Kale Arkası',kisaltma:'KAR'},{ad:'Kale Önü',kisaltma:'KÖN'},{ad:'Maraton',kisaltma:'MRT'},{ad:'Numaralı',kisaltma:'NUM'},{ad:'VIP Tribün',kisaltma:'VIP'}],sira:10,koltuk:12,engelli:true},
+  sinema:{alanlar:[{ad:'Ön Sıra',kisaltma:'ÖN'},{ad:'Orta Sıra',kisaltma:'ORT'},{ad:'Arka Sıra',kisaltma:'ARK'},{ad:'VIP Koltuk',kisaltma:'VIP'}],sira:8,koltuk:8,engelli:true},
+  festival:{alanlar:[{ad:'Genel Giriş',kisaltma:'GEN'},{ad:'VIP Alan',kisaltma:'VIP'},{ad:'Kamp Alanı',kisaltma:'KMP'}],sira:5,koltuk:10,engelli:false},
+  standup:{alanlar:[{ad:'Sahne Önü',kisaltma:'SÖN'},{ad:'Orta Alan',kisaltma:'ORT'},{ad:'Arka Alan',kisaltma:'ARK'}],sira:6,koltuk:8,engelli:true},
+  opera:{alanlar:[{ad:'Sahne Önü',kisaltma:'SÖN'},{ad:'Balkon',kisaltma:'BLK'},{ad:'Loca',kisaltma:'LOC'}],sira:6,koltuk:8,engelli:true},
+  seminer:{alanlar:[{ad:'Ön Sıra',kisaltma:'ÖN'},{ad:'Orta Sıra',kisaltma:'ORT'},{ad:'Arka Sıra',kisaltma:'ARK'}],sira:6,koltuk:10,engelli:true},
+  sergi:{alanlar:[{ad:'Genel Giriş',kisaltma:'GEN'},{ad:'VIP Öncelikli',kisaltma:'VIP'}],sira:4,koltuk:8,engelli:true},
+  cocuk:{alanlar:[{ad:'Çocuk Alanı',kisaltma:'ÇOC'},{ad:'Ebeveyn Alanı',kisaltma:'EBE'}],sira:4,koltuk:8,engelli:false},
+  workshop:{alanlar:[{ad:'Katılımcı',kisaltma:'KAT'},{ad:'İzleyici',kisaltma:'İZL'}],sira:4,koltuk:8,engelli:false},
+  parti:{alanlar:[{ad:'Genel',kisaltma:'GEN'},{ad:'VIP',kisaltma:'VIP'},{ad:'Kabin',kisaltma:'KBN'}],sira:5,koltuk:8,engelli:false},
+  online:{alanlar:[{ad:'Standart',kisaltma:'STD'}],sira:1,koltuk:1,engelli:false},
+  gezi:{alanlar:[{ad:'Yetişkin',kisaltma:'YET'},{ad:'Çocuk',kisaltma:'ÇOC'},{ad:'Öğrenci',kisaltma:'ÖĞR'}],sira:4,koltuk:8,engelli:true},
+  fuar:{alanlar:[{ad:'Genel',kisaltma:'GEN'},{ad:'VIP',kisaltma:'VIP'},{ad:'Stand Görevli',kisaltma:'STD'}],sira:6,koltuk:10,engelli:true},
+  espor:{alanlar:[{ad:'Ön Sıra',kisaltma:'ÖN'},{ad:'Arka Sıra',kisaltma:'ARK'},{ad:'VIP Lounge',kisaltma:'VIP'}],sira:6,koltuk:8,engelli:true},
+  basketbol:{alanlar:[{ad:'Pota Arkası',kisaltma:'PAR'},{ad:'Kenar',kisaltma:'KEN'},{ad:'Maraton',kisaltma:'MRT'},{ad:'VIP',kisaltma:'VIP'}],sira:8,koltuk:10,engelli:true},
+  voleybol:{alanlar:[{ad:'Kısa Kenar',kisaltma:'KKE'},{ad:'Uzun Kenar',kisaltma:'UKE'},{ad:'VIP',kisaltma:'VIP'}],sira:6,koltuk:8,engelli:true},
+  dovus:{alanlar:[{ad:'Ring Önü',kisaltma:'RÖN'},{ad:'Genel',kisaltma:'GEN'},{ad:'VIP',kisaltma:'VIP'}],sira:6,koltuk:8,engelli:true},
+  dans:{alanlar:[{ad:'Ön Sıra',kisaltma:'ÖN'},{ad:'Balkon',kisaltma:'BLK'}],sira:5,koltuk:8,engelli:true},
+  plaj:{alanlar:[{ad:'Şezlong',kisaltma:'ŞZL'},{ad:'Standart',kisaltma:'STD'}],sira:3,koltuk:8,engelli:false},
+  lunapark:{alanlar:[{ad:'Tek Giriş',kisaltma:'TEK'},{ad:'VIP Hızlı Geçiş',kisaltma:'VIP'}],sira:3,koltuk:6,engelli:true},
+  yemek:{alanlar:[{ad:'Standart',kisaltma:'STD'},{ad:"VIP Chef's Table",kisaltma:'VIP'}],sira:4,koltuk:6,engelli:false},
+  kitap:{alanlar:[{ad:'İmza Alanı',kisaltma:'İMZ'},{ad:'Genel',kisaltma:'GEN'}],sira:3,koltuk:6,engelli:true},
+  hayvanat:{alanlar:[{ad:'Genel',kisaltma:'GEN'},{ad:'VIP Rehberli Tur',kisaltma:'VIP'}],sira:3,koltuk:6,engelli:true},
+  acikhava:{alanlar:[{ad:'Ön Alan',kisaltma:'ÖN'},{ad:'Orta Alan',kisaltma:'ORT'},{ad:'Arka Alan',kisaltma:'ARK'}],sira:6,koltuk:8,engelli:true},
+  kamp:{alanlar:[{ad:'Standart',kisaltma:'STD'},{ad:'VIP Ekipmanlı',kisaltma:'VIP'}],sira:3,koltuk:6,engelli:false},
+  kokteyl:{alanlar:[{ad:'Standart',kisaltma:'STD'},{ad:'VIP',kisaltma:'VIP'}],sira:4,koltuk:6,engelli:false},
+  diger:{alanlar:[{ad:'Standart',kisaltma:'STD'}],sira:4,koltuk:6,engelli:false}
+};
+function kategoriAlanlar(k){var y=KATEGORI_YAPISI[k];return y?y.alanlar:['Standart'];}
+function kategoriSira(k){var y=KATEGORI_YAPISI[k];return y?y.sira:4;}
+function kategoriKoltuk(k){var y=KATEGORI_YAPISI[k];return y?y.koltuk:6;}
+function kategoriEngelli(k){var y=KATEGORI_YAPISI[k];return y?y.engelli:false;}
+
+function closeAll(){
+  cls();
+  document.getElementById('drawer').classList.remove('open');
+  document.getElementById('drawerOverlay').classList.remove('open');
+}
+function cls(){document.querySelectorAll('.service-panel.open').forEach(function(p){p.classList.remove('open')})}
+function goHome(){cls();document.getElementById('drawerOverlay').classList.remove('open');document.getElementById('mainBottom').style.display='block'}
+function toggleDrawer(){
+  var d=document.getElementById('drawer');
+  var ov=document.getElementById('drawerOverlay');
+  if(d.classList.contains('open')){d.classList.remove('open');if(!document.querySelector('.service-panel.open'))ov.classList.remove('open');}
+  else{cls();d.classList.add('open');ov.classList.add('open');}
+}
+function openPanel(id){
+  cls();
+  document.getElementById('drawer').classList.remove('open');
+  document.getElementById('mainBottom').style.display='none';
+  var el=document.getElementById(id);if(el)el.classList.add('open');
+  document.getElementById('drawerOverlay').classList.add('open');
+}
+function drawerGit(p){
+  toggleDrawer();
+  navClick(document.querySelector('.bn-item'),p);
+}
+function navClick(el,panel){
+  document.querySelectorAll('.bn-item').forEach(b=>b.classList.remove('aktif'));
+  if(el)el.classList.add('aktif');
+  openPanel(panel+'Panel');
+  if(panel==='anaSayfa')anaSayfaRender();
+  if(panel==='etkinlikler')etkinlikRender();
+  if(panel==='biletlerim')biletRender();
+  if(panel==='siparisler')siparisRender();
+  if(panel==='odemeler')odemePanelRender();
+  if(panel==='kategoriler')kategoriRender();
+  if(panel==='kampanya')kampanyaRender();
+  if(panel==='sehirler')sehirRender();
+  if(panel==='fiyatKademe')fiyatKademeRender();
+  if(panel==='taksit')taksitRender();
+  if(panel==='bekleme')beklemeRender();
+  if(panel==='bildirim')bildirimRender();
+  if(panel==='giris')girisRender();
+  if(panel==='fan')fanRender();
+  if(panel==='referral')referralRender();
+  if(panel==='puan')puanRender();
+  if(panel==='degerlendirme')degerlendirmeRender();
+  if(panel==='rapor')raporRender();
+  if(panel==='dil')dilRender();
+  if(panel==='paylas')paylasRender();
+  if(panel==='kullanici')kullaniciRender();
+  if(panel==='guvenlik')guvenlikRender();
+  if(panel==='sepet')sepetRender();
+  if(panel==='favori')favoriRender();
+  if(panel==='admin')adminRender();
+  if(panel==='bildirimTercih')bildirimTercihRender();
+  if(panel==='takvim')takvimRender();
+  if(panel==='engelli')engelliRender();
+  if(panel==='eposta')epostaRender();
+}
+function openService(id){
+  document.querySelectorAll('.bn-item').forEach(b=>b.classList.remove('aktif'));
+  openPanel(id+'Panel');
+  if(id==='anaSayfa')anaSayfaRender();
+  if(id==='etkinlikler')etkinlikRender();
+  if(id==='biletlerim')biletRender();
+  if(id==='siparisler')siparisRender();
+  if(id==='odemeler')odemePanelRender();
+  if(id==='kategoriler')kategoriRender();
+  if(id==='kampanya')kampanyaRender();
+  if(id==='sehirler')sehirRender();
+  if(id==='fiyatKademe')fiyatKademeRender();
+  if(id==='taksit')taksitRender();
+  if(id==='bekleme')beklemeRender();
+  if(id==='bildirim')bildirimRender();
+  if(id==='giris')girisRender();
+  if(id==='fan')fanRender();
+  if(id==='referral')referralRender();
+  if(id==='puan')puanRender();
+  if(id==='degerlendirme')degerlendirmeRender();
+  if(id==='rapor')raporRender();
+  if(id==='dil')dilRender();
+  if(id==='paylas')paylasRender();
+  if(id==='kullanici')kullaniciRender();
+  if(id==='guvenlik')guvenlikRender();
+  if(id==='sepet')sepetRender();
+  if(id==='favori')favoriRender();
+  if(id==='admin')adminRender();
+  if(id==='bildirimTercih')bildirimTercihRender();
+  if(id==='takvim')takvimRender();
+  if(id==='engelli')engelliRender();
+  if(id==='eposta')epostaRender();
+}
+function kategoriSec(k){
+  etkinlikFiltre=k;navClick(document.querySelector('.bn-item'),'etkinlikler');
+}
+
+// ==================== ANA SAYFA ====================
+function anaSayfaRender(){
+  document.getElementById('spEtkinlik').textContent=data.etkinlikler.length;
+  document.getElementById('spBilet').textContent=data.biletler.length;
+  var has=data.biletler.reduce(function(s,b){return s+b.tutar},0);
+  document.getElementById('spHasilat').textContent=has.toLocaleString('tr-TR')+' TL';
+  document.getElementById('istatistikEtkinlik').textContent=data.etkinlikler.length+' Etkinlik';
+  document.getElementById('istatistikBilet').textContent=data.biletler.length+' Bilet';
+  var sehirSet={};data.etkinlikler.forEach(function(e){sehirSet[e.sehir]=true});
+  document.getElementById('istatistikSehir').textContent=Object.keys(sehirSet).length+' Şehir';
+  var populer=data.etkinlikler.slice(-3).reverse();
+  document.getElementById('anaSayfaEtkinlikler').innerHTML=populer.length?populer.map(function(e){
+    var gf=e.fiyatlar?e.fiyatlar[0]:250;
+    return '<div class="sp-item" onclick="etkinlikDetay('+e.id+')"><div class="si-icon" style="background:'+e.renk+';color:#fff;border:none"><span class="material-icons">'+e.ikon+'</span></div><div class="si-info"><div class="si-title">'+e.ad+'</div><div class="si-sub">'+e.tarih+' | '+e.sehir+' | '+e.mekan+'</div></div><div class="si-right">'+gf+' TL<span class="si-badge">'+e.kategori+'</span></div></div>';
+  }).join(''):'<div class="text-sm text-3">Henüz etkinlik yok</div>';
+}
+
+// ==================== ETKİNLİKLER ====================
+function etkinlikTab(el,f){
+  document.querySelectorAll('#etkinlikTabs .sp-tag').forEach(function(t){t.classList.remove('secili')});
+  el.classList.add('secili');etkinlikFiltre=f;etkinlikRender();
+}
+function etkinlikEkle(){
+  var ad=prompt('Etkinlik adı:');if(!ad)return;
+  var k=prompt('Kategori (konser/tiyatro/spor/sinema/festival/standup/opera/seminer/sergi/cocuk/workshop/parti/online/gezi/fuar/espor/basketbol/voleybol/dovus/dans/plaj/lunapark/yemek/kitap/hayvanat/acikhava/kamp/kokteyl/diger):','konser')||'diger';
+  var s=prompt('Şehir:','İstanbul');
+  var m=prompt('Mekan:','Küçükçiftlik Park');
+  var a=prompt('Adres:','Küçükçiftlik Parkı, Beşiktaş, İstanbul');
+  var t=prompt('Tarih:','15.07.2026');
+  var sa=prompt('Saat:','21:00');
+  var alanlar=kategoriAlanlar(k);
+  var fiyatlar=[];
+  for(var zi=0;zi<Math.min(alanlar.length,5);zi++){
+    var varsayilan=[500,250,150,100,80][zi]||50;
+    var giris=prompt((alanlar[zi].ad)+' fiyatı (TL):',varsayilan);
+    fiyatlar.push(parseFloat(giris)||varsayilan);
+  }
+  while(fiyatlar.length<3)fiyatlar.push(50);
+  var kont=parseInt(prompt('Kontenjan:','500'))||0;
+  var ikonlar={konser:'music_note',tiyatro:'theater_comedy',spor:'sports_soccer',sinema:'movie',festival:'celebration',standup:'emoji_emotions',opera:'queue_music',seminer:'school',sergi:'museum',cocuk:'child_care',workshop:'build',parti:'nightlife',online:'live_tv',gezi:'explore',fuar:'storefront',espor:'sports_esports',basketbol:'sports_basketball',voleybol:'sports_volleyball',dovus:'fitness_center',dans:'accessibility_new',plaj:'beach_access',lunapark:'toys',yemek:'restaurant',kitap:'menu_book',hayvanat:'pets',acikhava:'outdoor_grill',kamp:'nature',kokteyl:'local_bar',diger:'event'};
+  var renkler={konser:'var(--purple)',tiyatro:'var(--orange)',spor:'var(--green)',sinema:'var(--red)',festival:'var(--blue)',standup:'var(--pink)',opera:'#8b5cf6',seminer:'#14b8a6',sergi:'#f59e0b',cocuk:'#f97316',workshop:'#6366f1',parti:'#ec4899',online:'#06b6d4',gezi:'#10b981',fuar:'#8b5cf6',espor:'#22c55e',basketbol:'#f97316',voleybol:'#eab308',dovus:'#dc2626',dans:'#ec4899',plaj:'#06b6d4',lunapark:'#f59e0b',yemek:'#ef4444',kitap:'#8b5cf6',hayvanat:'#22c55e',acikhava:'#14b8a6',kamp:'#15803d',kokteyl:'#ec4899',diger:'var(--text3)'};
+  // seat map with category-specific zones
+  var koltuklar=[];
+  var sira=1;koltukNum=1;
+  var toplamSira=kategoriSira(k);
+  var koltukSay=kategoriKoltuk(k);
+  for(var r=0;r<toplamSira;r++){
+    var zoneIdx=Math.min(r,alanlar.length-1);
+    for(var c=0;c<koltukSay;c++){
+      var eng=kategoriEngelli(k)&&zoneIdx===0&&c===0?'♿':'';
+      koltuklar.push({id:koltukNum,sira:sira,no:(r+1)+'-'+(c+1),alan:zoneIdx,durum:'bos',engelli:eng?true:false});
+      koltukNum++;
+    }
+    sira++;
+  }
+  data.etkinlikler.push({id:++data._etkinlikId,ad:ad,kategori:k,sehir:s,mekan:m,adres:a,tarih:t,saat:sa,seanslar:[{saat:sa}],fiyatlar:fiyatlar,alanlar:alanlar,kontenjan:kont,satilan:0,ikon:ikonlar[k]||'event',renk:renkler[k]||'var(--text3)',koltuklar:koltuklar,biletler:[],aktif:true,olusturan:data.aktifKullanici?data.aktifKullanici.id:null});
+  etkinlikRender();anaSayfaRender();
+}
+function etkinlikDetay(id){
+  var e=data.etkinlikler.find(function(x){return x.id===id});
+  if(!e)return;
+  var satilan=e.biletler?e.biletler.length:0;
+  var alanlar=e.alanlar||[{ad:'Normal',kisaltma:'NRM'}];
+  var fiyatlar=e.fiyatlar||[e.fiyatNormal||250];
+  var fiyatSatirlari=alanlar.map(function(a,i){return '• '+(i<fiyatlar.length?fiyatlar[i]:'?')+' TL — '+a.ad}).join('\n');
+  var msg='🎫 '+e.ad.toUpperCase()+'\n—————————\n📅 '+e.tarih+' | '+e.saat+'\n📍 '+e.sehir+', '+e.mekan+'\n🏠 '+e.adres+'\n🎭 '+e.kategori.charAt(0).toUpperCase()+e.kategori.slice(1)+'\n\n💰 BİLET FİYATLARI:\n'+fiyatSatirlari+'\n\nKalan: '+(e.kontenjan-satilan)+'/'+e.kontenjan+'\n\n[1] Bilet Satın Al\n[2] Koltuk Seç\n[3] Geri';
+  var sec=prompt(msg,'1');
+  if(sec==='1')biletSatinAl(e.id,null);
+  else if(sec==='2')koltukSec(e.id);
+}
+function etkinlikRender(){
+  var el=document.getElementById('etkinlikListe');
+  var q=(document.getElementById('etkinlikSearch')?.value||'').toLowerCase();
+  var list=data.etkinlikler.filter(function(e){return etkinlikFiltre==='tum'||e.kategori===etkinlikFiltre});
+  if(q)list=list.filter(function(e){return e.ad.toLowerCase().includes(q)||e.mekan.toLowerCase().includes(q)||e.sehir.toLowerCase().includes(q)||(e.sehir+' '+e.mekan).toLowerCase().includes(q)});
+  if(!list.length){el.innerHTML='<div class="text-sm text-3">Etkinlik bulunamadı</div>';return;}
+  el.innerHTML=list.map(function(e){
+    var s=e.biletler?e.biletler.length:0;
+    var doluluk=e.kontenjan?Math.round(s/e.kontenjan*100):0;
+    var renk=doluluk>80?'var(--red)':doluluk>50?'var(--orange)':'var(--green)';
+    var gosterFiyat=e.fiyatlar?e.fiyatlar[0]:e.fiyatNormal||250;
+    return '<div class="sp-item" onclick="etkinlikDetay('+e.id+')"><div class="si-icon" style="background:'+e.renk+';color:#fff;border:none"><span class="material-icons">'+e.ikon+'</span></div><div class="si-info"><div class="si-title">'+e.ad+'</div><div class="si-sub">'+e.tarih+' '+e.saat+' | '+e.sehir+', '+e.mekan+'</div><div class="si-sub" style="font-size:9px;color:var(--text4)">'+e.adres+'</div><div style="margin-top:4px;height:3px;background:var(--card2);border-radius:2px;overflow:hidden"><div style="height:100%;width:'+doluluk+'%;background:'+renk+';border-radius:2px"></div></div></div><div class="si-right">'+gosterFiyat+' TL<span class="si-badge" style="color:'+renk+'">'+(e.kontenjan-s)+' kaldı</span></div></div>';
+  }).join('');
+}
+
+// ==================== KOLTUK SEÇİMİ (SALON/SİNEMA SİMÜLASYONU) ====================
+function siraHarfi(n){
+  var harfler='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  return n<=harfler.length?harfler[n-1]:'S'+n;
+}
+function salonGoster(eId){
+  var e=data.etkinlikler.find(function(x){return x.id===eId});
+  if(!e)return;
+  if(!e.koltuklar){e.koltuklar=[];var tS=kategoriSira(e.kategori)||6;var tK=kategoriKoltuk(e.kategori)||8;for(var i=1;i<=tS*tK;i++){e.koltuklar.push({id:i,sira:Math.ceil(i/tK),no:((Math.ceil(i/tK)))+'-'+(i%tK||tK),alan:0,durum:'bos'});}}
+  var satilmis={};(e.biletler||[]).forEach(function(b){if(b.koltukId)satilmis[b.koltukId]=true});
+  var alanRenkler=['#7c3aed','#2563eb','#16a34a','#d97706','#dc2626','#0891b2','#db2777','#65a30d'];
+  var alanlar=e.alanlar||[{ad:'Alan',kisaltma:'ALA'}];
+  var fiyatlar=e.fiyatlar||[0];
+  var ts=kategoriKoltuk(e.kategori)||8;
+  var koltukSay=Math.min(ts,Math.min(...alanlar.map(function(a,i){
+    var rows=e.koltuklar.filter(function(k){return k.alan===i});return rows.length;
+  })))||ts;
+  koltukSay=Math.min(koltukSay,12);
+  // Group seats by zone
+  var zoneRows={};
+  e.koltuklar.forEach(function(k){
+    if(!zoneRows[k.alan])zoneRows[k.alan]=[];
+    if(zoneRows[k.alan].indexOf(k.sira)===-1)zoneRows[k.alan].push(k.sira);
+  });
+  // Sort zone rows
+  Object.keys(zoneRows).forEach(function(z){zoneRows[z].sort(function(a,b){return a-b})});
+  // Stage label
+  var sahneEtiket=e.kategori==='sinema'?'PERDE':e.kategori==='spor'||e.kategori==='basketbol'||e.kategori==='voleybol'?'SAHA':'SAHNE';
+  var h='<div class="sp-label" style="text-align:center">'+e.ad+' — Koltuk Planı</div>';
+  h+='<div class="salon-sahne">🎭 '+sahneEtiket+'</div>';
+  // Legend
+  h+='<div class="salon-legend">';
+  h+='<div class="salon-legend-item"><div class="salon-legend-dot" style="background:var(--blue);border-color:var(--blue)"></div>Seçili</div>';
+  h+='<div class="salon-legend-item"><div class="salon-legend-dot" style="background:#dc2626;border-color:#dc2626"></div>Satılmış</div>';
+  h+='<div class="salon-legend-item"><div class="salon-legend-dot" style="background:var(--card2);border-color:var(--border)"></div>Boş</div>';
+  h+='<div class="salon-legend-item"><div class="salon-legend-dot" style="background:#0891b2;border-color:#0891b2"></div>♿ Engelli</div>';
+  alanlar.forEach(function(a,i){
+    var r=alanRenkler[i]||'var(--text3)';
+    var f=fiyatlar[i]||0;
+    h+='<div class="salon-legend-item"><div class="salon-legend-dot" style="background:'+r+';border-color:'+r+'"></div>'+a.ad+' ('+f+' TL)</div>';
+  });
+  h+='</div>';
+  // Zone groups
+  var sortedZones=Object.keys(zoneRows).sort(function(a,b){return parseInt(a)-parseInt(b)});
+  sortedZones.forEach(function(zi){
+    var i=parseInt(zi);
+    var rows=zoneRows[zi];
+    var rengi=alanRenkler[i]||'#6b7280';
+    var alanAdi=i<alanlar.length?alanlar[i].ad:'Alan '+(i+1);
+    var alanFiyat=i<fiyatlar.length?fiyatlar[i]:0;
+    h+='<div class="salon-zone-group">';
+    h+='<div class="salon-zone-header" style="background:'+rengi+'"><span>'+alanAdi+'</span><span>'+alanFiyat+' TL</span></div>';
+    h+='<div class="salon-zone-body">';
+    var cols=Math.min(koltukSay,12);
+    h+='<div class="seat-grid" style="grid-template-columns:18px repeat('+cols+',1fr);gap:2px">';
+    // Column headers (seat numbers)
+    h+='<div class="salon-row-label"></div>';
+    for(var cn=1;cn<=cols;cn++){
+      h+='<div style="text-align:center;font-size:7px;color:var(--text4)">'+cn+'</div>';
+    }
+    // Sort rows within zone
+    rows.sort(function(a,b){return a-b});
+    rows.forEach(function(sirano){
+      var rowLetter=siraHarfi(sirano);
+      h+='<div class="salon-row-label">'+rowLetter+'</div>';
+      for(var c=1;c<=cols;c++){
+        var seat=e.koltuklar.find(function(k){return k.sira===sirano&&parseInt(k.no.split('-')[1])===c});
+        if(!seat){
+          h+='<div style="aspect-ratio:1"></div>';
+          continue;
+        }
+        var cls='seat';
+        var stil='';
+        var icerik=c;
+        if(seat.engelli){cls+=' engelli';icerik='♿';stil='background:#0891b2;color:#fff;border-color:#0891b2';}
+        else if(satilmis[seat.id]||seat.durum==='satilmis'){
+          cls+=' satilmis';
+          stil='';
+        } else {
+          stil='background:'+rengi+';color:#fff;border-color:'+rengi;
+        }
+        h+='<div class="'+cls+'" style="'+stil+'" onclick="koltukTikla('+e.id+','+seat.id+')" title="'+rowLetter+c+': '+alanAdi+(seat.engelli?' ♿':'')+'">'+icerik+'</div>';
+      }
+    });
+    h+='</div></div></div>';
+  });
+  h+='<button class="sp-btn sp-btn-sm" style="margin-top:4px" onclick="koltukOnayla('+e.id+')">✅ Seçimi Onayla</button>';
+  // Modal
+  var p=document.createElement('div');p.innerHTML=h;p.style.padding='16px';
+  var overlay=document.createElement('div');overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.6);z-index:200;display:flex;align-items:center;justify-content:center';
+  var modal=document.createElement('div');modal.style.cssText='background:var(--card);width:400px;max-height:92vh;overflow-y:auto;border-radius:var(--radius);padding:4px';
+  modal.appendChild(p);
+  var kapat=document.createElement('button');kapat.textContent='✕';kapat.style.cssText='position:fixed;top:16px;right:16px;background:var(--card);border:none;font-size:22px;width:38px;height:38px;border-radius:50%;cursor:pointer;z-index:201;color:var(--text1);line-height:38px;text-align:center';
+  kapat.onclick=function(){document.body.removeChild(overlay)};
+  overlay.appendChild(kapat);overlay.appendChild(modal);document.body.appendChild(overlay);
+  window._koltukSecim={eId:eId,secili:[]};
+}
+// Keep alias for backward compatibility
+function koltukSec(eId){salonGoster(eId)}
+function koltukTikla(eId,kId){
+  var e=data.etkinlikler.find(function(x){return x.id===eId});
+  if(!e)return;
+  var k=e.koltuklar.find(function(x){return x.id===kId});
+  if(!k||k.durum==='satilmis')return;
+  var idx=window._koltukSecim.secili.indexOf(kId);
+  if(idx>-1){
+    window._koltukSecim.secili.splice(idx,1);
+    document.querySelectorAll('[data-sid="'+kId+'"]').forEach(function(el){el.classList.remove('secili')});
+  } else {
+    if(window._koltukSecim.secili.length>=2){alert('En fazla 2 koltuk seçebilirsiniz.');return;}
+    if(k.engelli&&window._koltukSecim.secili.length>0){alert('♿ Engelli koltuğu yanında ek koltuk seçilemez. Tek bilet alabilirsiniz.');return;}
+    window._koltukSecim.secili.push(kId);
+    document.querySelectorAll('[data-sid="'+kId+'"]').forEach(function(el){el.classList.add('secili')});
+  }
+  var msg=window._koltukSecim.secili.length+' koltuk seçildi';
+  if(k.engelli)msg='♿ Engelli koltuk seçildi';
+  // Show count toast
+  var mevcut=document.getElementById('secimToast');
+  if(!mevcut){
+    var t=document.createElement('div');t.id='secimToast';t.style.cssText='position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;padding:8px 16px;border-radius:20px;font-size:12px;z-index:202;box-shadow:0 2px 8px rgba(0,0,0,.3);transition:.2s';
+    document.body.appendChild(t);
+  }
+  document.getElementById('secimToast').textContent='✅ '+msg+'. Onayla butonuna tıklayın.';
+  setTimeout(function(){var t=document.getElementById('secimToast');if(t)t.remove()},2000);
+}
+function koltukOnayla(eId){
+  if(!window._koltukSecim||window._koltukSecim.eId!==eId||!window._koltukSecim.secili.length){alert('Koltuk seçmediniz');return;}
+  biletSatinAl(eId,window._koltukSecim.secili);
+  var overlay=document.querySelector('div[style*="z-index: 200"]');
+  if(overlay)overlay.remove();
+}
+
+// ==================== BİLET ====================
+function biletSatinAl(eId,seciliKoltuklar){
+  var e=data.etkinlikler.find(function(x){return x.id===eId});
+  if(!e)return;
+  if(!e.biletler)e.biletler=[];
+  var satilan=e.biletler.length;
+  if(satilan>=e.kontenjan){alert('Etkinlik dolu!');return;}
+  var alanlar=e.alanlar||kategoriAlanlar(e.kategori);
+  var fiyatlar=e.fiyatlar||[e.fiyatVIP||500,e.fiyatNormal||250,e.fiyatOgrenci||150];
+  // zone/bölge seçimi
+  var zoneSecenek=alanlar.map(function(a,i){return'  ['+(i+1)+'] '+a.ad+' — '+(fiyatlar[i]||'?')+' TL'}).join('\n');
+  var zoneIdx=parseInt(prompt('Bölge seçin:\n'+zoneSecenek,'1'))-1;
+  if(isNaN(zoneIdx)||zoneIdx<0||zoneIdx>=alanlar.length)zoneIdx=0;
+  var tip=alanlar[zoneIdx].ad;
+  var fiyat=fiyatlar[zoneIdx]||fiyatlar[0];
+  var adet=seciliKoltuklar?Math.min(seciliKoltuklar.length,2):parseInt(prompt('Kaç bilet? (En fazla 2)','1'))||1;
+  if(adet>2)adet=2;
+  // Güvenlik kontrolleri
+  if(!supheliKontrol())return;
+  if(adet>1&&!maxBiletKontrol(eId,adet))return;
+  if(!hizKontrol())return;
+  if(!captchaSor())return;
+  if(!epostaDogrula())return;
+  var aliciAdi=data.aktifKullanici?data.aktifKullanici.ad:'Misafir';
+  if(data.guvenlik.adreseBiletAktif)aliciAdi=adreseBiletKontrol()||aliciAdi;
+  // indirim kodu
+  var indirimKod=prompt('İndirim kuponunuz var mı? (varsa yazın, yoksa boş geçin):','');
+  var indirimOran=0;
+  if(indirimKod){
+    var k=data.indirimKodlari.find(function(x){return x.kod===indirimKod.toUpperCase()&&x.aktif});
+    if(k){indirimOran=k.oranim;k.kullanim++;if(k.kullanim>=k.maxKullanim)k.aktif=false;}
+    else alert('Geçersiz kod!');
+  }
+  var toplam=fiyat*adet;
+  var indirimTutar=Math.round(toplam*indirimOran/100);
+  var odenecek=toplam-indirimTutar;
+  if(data.bakiye<odenecek){alert('Yetersiz bakiye! Bakiyeniz: '+data.bakiye.toLocaleString('tr-TR')+' TL\nİhtiyaç: '+odenecek.toLocaleString('tr-TR')+' TL\n\nBakiye yüklemek için Ödemeler sayfasını kullanın.');return;}
+  // koltuk kontrol
+  if(seciliKoltuklar){
+    var musait=seciliKoltuklar.every(function(kId){var k=e.koltuklar.find(function(x){return x.id===kId});return k&&k.durum!=='satilmis'});
+    if(!musait){alert('Seçtiğiniz koltuklardan bazıları artık müsait değil!');return;}
+  }
+  var taksitli=false;
+  if(taksitAktif&&odenecek>=100){
+    taksitli=confirm('💳 Taksitli ödeme yapmak ister misiniz?\n'+taksitSayisi+' taksit = aylık '+Math.round(odenecek/taksitSayisi)+' TL\n\n(İptal = tek çekim)');
+  }
+  var msg=e.ad+' | '+tip+' | '+adet+' bilet x '+fiyat+' TL';
+  if(taksitli)msg+='\n💳 '+taksitSayisi+' taksit (aylık '+Math.round(odenecek/taksitSayisi)+' TL)';
+  if(indirimOran>0)msg+='\n📉 İndirim (%'+indirimOran+'): -'+indirimTutar+' TL';
+  msg+='\n💰 Toplam: '+odenecek.toLocaleString('tr-TR')+' TL\nÖdeme alınsın mı?';
+  if(!confirm(msg))return;
+  data.bakiye-=odenecek;
+  for(var i=0;i<adet;i++){
+    var kId=seciliKoltuklar?seciliKoltuklar[i]||seciliKoltuklar[0]:null;
+    if(kId){var k=e.koltuklar.find(function(x){return x.id===kId});if(k)k.durum='satilmis';}
+    var biletKod='BLT-'+String(e.id).padStart(3,'0')+'-'+String(data._biletId+1).padStart(4,'0');
+    var qr='https://api.qrserver.com/v1/create-qr-code/?size=100x100&data='+biletKod;
+    var biletNo='B-'+String(data._biletId+1).padStart(3,'0');
+    data.biletler.push({id:++data._biletId,biletNo:biletNo,etkinlikId:e.id,etkinlikAd:e.ad,tarih:e.tarih,saat:e.saat,mekan:e.mekan,adres:e.adres,sehir:e.sehir,biletKod:biletKod,tip:tip,tutar:fiyat,koltukId:kId,zoneIdx:zoneIdx,qr:qr,durum:'gecerli',satisTarih:new Date().toLocaleDateString('tr-TR'),alici:aliciAdi});
+    if(!e.biletler)e.biletler=[];
+    e.biletler.push({koltukId:kId,tip:tip});
+  }
+  var kom=Math.round(odenecek*2/100);
+  data.siparisler.push({id:++data._siparisId,etkinlikAd:e.ad,tip:tip,adet:adet,toplam:odenecek,indirim:indirimTutar,komisyon:kom,taksitli:taksitli,tarih:new Date().toLocaleDateString('tr-TR')});
+  data.odemeGecmis.push({id:++data._odemeId,tur:'bilet',tutar:odenecek,aciklama:e.ad+' ('+adet+' '+tip+')',tarih:new Date().toLocaleDateString('tr-TR')});
+  alert('✅ '+adet+' bilet satın alındı!\n📊 '+odenecek.toLocaleString('tr-TR')+' TL\n📊 Komisyon (%2): '+kom.toLocaleString('tr-TR')+' TL\n📧 Bilet detayları e-posta ile gönderilecek.');
+  var ep=data.aktifKullanici?data.aktifKullanici.eposta:'kullanici@email.com';
+  alert('📧 E-posta gönderiliyor...\nKime: '+ep+'\nKonu: Bilet #'+data.biletler[data.biletler.length-1].biletNo+' - '+e.ad);
+  etkinlikRender();biletRender();anaSayfaRender();
+}
+function biletTransfer(id){
+  var b=data.biletler.find(function(x){return x.id===id});
+  if(!b||b.durum!=='gecerli')return;
+  // Devir limiti kontrolü
+  if(data.guvenlik.devirLimiti===0){alert('⚠️ Bilet devri sistem tarafından devre dışı bırakılmıştır (Güvenlik önlemi).');return;}
+  if(b.devirSayisi>=data.guvenlik.devirLimiti){alert('⚠️ Bu bilet en fazla '+data.guvenlik.devirLimiti+' kez devredilebilir!');return;}
+  var k=prompt('Kime devretmek istiyorsunuz? (Ad Soyad):');
+  if(!k)return;
+  if(!confirm('Bilet #'+b.biletKod+' ('+b.etkinlikAd+') ➔ '+k+' devredilsin mi?'))return;
+  b.devredilen=k;
+  b.devirSayisi=(b.devirSayisi||0)+1;
+  b.transferTarih=new Date().toLocaleDateString('tr-TR');
+  alert('✅ Bilet '+k+' adına devredildi ('+b.devirSayisi+'/'+data.guvenlik.devirLimiti+' devir)');
+  biletRender();
+}
+function biletIptal(id){
+  var b=data.biletler.find(function(x){return x.id===id});
+  if(!b)return;
+  if(b.durum!=='gecerli'){alert('Bu bilet iptal edilemez ('+b.durum+')');return;}
+  if(!confirm('⚠️ Bilet iptal edilecek:\n'+b.etkinlikAd+' | '+b.tip+' | '+b.tutar+' TL\n\n%50 iade alacaksınız: '+Math.round(b.tutar*0.5)+' TL\nDevam edilsin mi?'))return;
+  var iade=Math.round(b.tutar*0.5);
+  b.durum='iptal';
+  data.bakiye+=iade;
+  data.odemeGecmis.push({id:++data._odemeId,tur:'iade',tutar:iade,aciklama:b.etkinlikAd+' iade ('+b.biletNo+')',tarih:new Date().toLocaleDateString('tr-TR')});
+  bildirimGonder('odeme','💰 '+b.etkinlikAd+' bilet iadesi: '+iade+' TL hesabınıza yüklendi.');
+  alert('✅ Bilet iptal edildi!\n💰 '+iade+' TL iade edildi (Bilet ücretinin %50\'si).');
+  biletRender();etkinlikRender();anaSayfaRender();odemePanelRender();
+}
+function biletTab(el,f){
+  document.querySelectorAll('#biletTabs .sp-tag').forEach(function(t){t.classList.remove('secili')});
+  el.classList.add('secili');biletFiltre=f;biletRender();
+}
+function biletRender(){
+  var el=document.getElementById('biletListe');
+  var list=data.biletler.filter(function(b){return b.durum===biletFiltre});
+  if(!list.length){el.innerHTML='<div class="text-sm text-3">Bilet bulunamadı</div>';return;}
+  el.innerHTML=list.slice().reverse().map(function(b){
+    var renk=b.durum==='gecerli'?'var(--green)':b.durum==='iptal'?'var(--red)':'var(--text4)';
+    var tipEtiket='🎟';
+    var qrHtml=b.qr?'<div style="margin-top:2px"><img src="'+b.qr+'" style="width:50px;height:50px;border:1px solid var(--border);border-radius:4px" alt="QR"></div>':'';
+    var bolgeBilgi=b.tip?' | '+b.tip:'';
+    return '<div class="sp-item"><div class="si-icon" style="background:'+renk+';color:#fff;border:none"><span class="material-icons">confirmation_number</span></div><div class="si-info"><div class="si-title">#'+b.biletNo+' | '+b.etkinlikAd+' <span class="sp-badge" style="background:'+renk+'">'+b.durum+'</span></div><div class="si-sub">'+b.tarih+' '+b.saat+' | '+b.sehir+', '+b.mekan+'</div><div class="si-sub" style="font-size:9px;color:var(--text4)">'+b.adres+'</div><div class="si-sub">'+tipEtiket+bolgeBilgi+(b.koltukId?' | Koltuk: '+b.koltukId:'')+(b.alici?' | 👤 '+b.alici:'')+(b.devredilen?' | Devir: '+b.devredilen:'')+'</div>'+qrHtml+'</div><div class="si-right">'+b.tutar+' TL'+(b.durum==='gecerli'?'<button class="sp-btn sp-btn-sm sp-btn-out" style="width:auto;padding:2px 6px;font-size:9px;margin-top:2px" onclick="biletTransfer('+b.id+')">Devret</button><button class="sp-btn sp-btn-sm sp-btn-red" style="width:auto;padding:2px 6px;font-size:9px;margin-top:2px" onclick="biletIptal('+b.id+')">İptal</button>':'')+'</div></div>';
+  }).join('');
+}
+
+// ==================== SİPARİŞ ====================
+function siparisRender(){
+  var el=document.getElementById('siparisListe');
+  if(!data.siparisler.length){el.innerHTML='<div class="text-sm text-3">Henüz sipariş yok</div>';return;}
+  el.innerHTML=data.siparisler.slice().reverse().map(function(s){
+    return '<div class="sp-item"><div class="si-icon" style="background:var(--green);color:#fff;border:none"><span class="material-icons">receipt_long</span></div><div class="si-info"><div class="si-title">'+s.etkinlikAd+'</div><div class="si-sub">'+s.tarih+' | '+s.adet+' bilet ('+(s.tip||'normal')+')'+(s.indirim?' | İndirim: -'+s.indirim+' TL':'')+'</div></div><div class="si-right">'+s.toplam.toLocaleString('tr-TR')+' TL<span class="si-badge">Komisyon: '+s.komisyon+' TL</span></div></div>';
+  }).join('');
+}
+
+// ==================== ÖDEME ====================
+function bakiyeYukle(){
+  var m=parseFloat(prompt('Yüklenecek tutar (TL):','100'))||0;
+  if(m<10){alert('Min 10 TL');return;}
+  data.bakiye+=m;
+  data.odemeGecmis.push({id:++data._odemeId,tur:'bakiye',tutar:m,aciklama:'Bakiye yükleme',tarih:new Date().toLocaleDateString('tr-TR')});
+  alert('✅ '+m.toLocaleString('tr-TR')+' TL bakiye yüklendi');
+  odemePanelRender();
+}
+function kkOdemeYap(){
+  var kart=document.getElementById('kkKartNo').value.trim();
+  var skt=document.getElementById('kkSKT').value.trim();
+  var cvv=document.getElementById('kkCVV').value.trim();
+  var ad=document.getElementById('kkAd').value.trim();
+  if(!kart||!skt||!cvv||!ad){alert('Kart bilgilerini doldurun');return;}
+  var tutar=parseFloat(prompt('Kart ile yatırılacak tutar (TL):','100'))||0;
+  if(tutar<10)return;
+  if(!confirm(kart.slice(0,4)+' **** **** '+kart.slice(-4)+' ile '+tutar.toLocaleString('tr-TR')+' TL ödeme alınsın mı?'))return;
+  data.bakiye+=tutar;
+  data.odemeGecmis.push({id:++data._odemeId,tur:'kk',tutar:tutar,aciklama:'Kart: '+kart.slice(0,4)+'****',tarih:new Date().toLocaleDateString('tr-TR')});
+  alert('✅ '+tutar.toLocaleString('tr-TR')+' TL kart ile yüklendi');
+  odemePanelRender();
+}
+function odemePanelRender(){
+  document.getElementById('spBakiye').textContent=data.bakiye.toLocaleString('tr-TR')+' TL';
+  var el=document.getElementById('odemeGecmisListe');
+  if(!data.odemeGecmis.length){el.innerHTML='<div class="text-sm text-3">İşlem yok</div>';return;}
+  el.innerHTML=data.odemeGecmis.slice().reverse().slice(0,10).map(function(o){
+    var ikon=o.tur==='bilet'?'confirmation_number':o.tur==='kk'?'credit_card':'account_balance';
+    return '<div class="sp-item"><div class="si-icon" style="background:'+(o.tutar>0?'var(--green)':'var(--red)')+';color:#fff;border:none"><span class="material-icons">'+ikon+'</span></div><div class="si-info"><div class="si-title">'+o.aciklama+'</div><div class="si-sub">'+o.tarih+'</div></div><div class="si-right">'+(o.tutar>0?'+':'')+o.tutar.toLocaleString('tr-TR')+' TL</div></div>';
+  }).join('');
+}
+
+// ==================== KAMPANYA ====================
+function indirimKoduEkle(){
+  var kod=prompt('Kod (örn: BILET10):','BILET10');
+  if(!kod)return;
+  var o=parseInt(prompt('İndirim % (örn: 10):','10'))||0;
+  if(o<1||o>99)return;
+  var m=parseInt(prompt('Maksimum kullanım:','100'))||0;
+  data.indirimKodlari.push({id:++data._indirimId,kod:kod.toUpperCase(),oranim:o,maxKullanim:m,kullanim:0,aktif:true,tarih:new Date().toLocaleDateString('tr-TR')});
+  kampanyaRender();
+}
+function hediyeKartGonder(){
+  var alici=prompt('Alıcı adı:');
+  if(!alici)return;
+  var t=parseFloat(prompt('Hediye tutarı (TL):','100'))||0;
+  if(t<10)return;
+  if(data.bakiye<t){alert('Yetersiz bakiye');return;}
+  data.bakiye-=t;
+  var kod='HDY-'+String(data._hediyeId+1).padStart(5,'0');
+  data.hediyeKartlar.push({id:++data._hediyeId,kod:kod,alici:alici,tutar:t,kalan:t,kullanim:0,aktif:true,tarih:new Date().toLocaleDateString('tr-TR')});
+  alert('✅ Hediye kart oluşturuldu!\nKod: '+kod+'\nTutar: '+t+' TL\nAlıcı: '+alici);
+  kampanyaRender();
+}
+function kampanyaRender(){
+  var el=document.getElementById('indirimKodListe');
+  if(!data.indirimKodlari.length)el.innerHTML='<div class="text-sm text-3">Kod yok</div>';
+  else el.innerHTML=data.indirimKodlari.map(function(k){
+    return '<div class="sp-item"><div class="si-icon" style="background:var(--pink);color:#fff;border:none"><span class="material-icons">local_offer</span></div><div class="si-info"><div class="si-title">'+k.kod+' <span class="sp-badge" style="background:'+(k.aktif?'var(--green)':'var(--red)')+'">'+(k.aktif?'Aktif':'Bitti')+'</span></div><div class="si-sub">%'+k.oranim+' indirim | '+k.kullanim+'/'+k.maxKullanim+' kullanım</div></div></div>';
+  }).join('');
+  var el2=document.getElementById('hediyeKartListe');
+  if(!data.hediyeKartlar.length)el2.innerHTML='<div class="text-sm text-3 mt-8">Hediye kart yok</div>';
+  else el2.innerHTML=data.hediyeKartlar.map(function(h){
+    return '<div class="sp-item"><div class="si-icon" style="background:var(--green);color:#fff;border:none"><span class="material-icons">card_giftcard</span></div><div class="si-info"><div class="si-title">'+h.kod+' ➔ '+h.alici+'</div><div class="si-sub">'+h.tutar+' TL | Kalan: '+h.kalan+' TL</div></div></div>';
+  }).join('');
+  document.getElementById('kampanyaListe').innerHTML='<div class="sp-item"><div class="si-icon" style="background:var(--pink);color:#fff;border:none"><span class="material-icons">celebration</span></div><div class="si-info"><div class="si-title">Yaz Festivalleri</div><div class="si-sub">Tüm festival biletlerinde %15 indirim! Kod: FEST15</div></div></div>';
+}
+
+// ==================== ŞEHİRLER ====================
+function sehirRender(){
+  var el=document.getElementById('sehirListe');
+  el.innerHTML=sehirler.map(function(s){
+    var sayi=data.etkinlikler.filter(function(e){return e.sehir===s}).length;
+    return '<div class="sp-item" onclick="sehirSec(\''+s+'\')"><div class="si-icon" style="background:var(--orange);color:#fff;border:none"><span class="material-icons">location_on</span></div><div class="si-info"><div class="si-title">'+s+'</div><div class="si-sub">'+sayi+' etkinlik</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>';
+  }).join('');
+}
+function sehirSec(s){
+  document.getElementById('etkinlikSearch').value=s;
+  etkinlikFiltre='tum';
+  document.querySelectorAll('#etkinlikTabs .sp-tag').forEach(function(t){t.classList.remove('secili')});
+  document.querySelector('#etkinlikTabs .sp-tag').classList.add('secili');
+  navClick(document.querySelector('.bn-item'),'etkinlikler');
+}
+function kategoriRender(){}
+
+// ==================== FİYAT KADEMELERİ ====================
+function fiyatKademeRender(){
+  var el=document.getElementById('fiyatKademeListe');
+  var h='<div class="flex flex-wrap mb-8" style="gap:6px">';
+  h+='<span class="sp-tag secili" onclick="fiyatKademeGoster(\'erken\')">🐦 Erken Kuş</span>';
+  h+='<span class="sp-tag" onclick="fiyatKademeGoster(\'normal\')">Normal</span>';
+  h+='<span class="sp-tag" onclick="fiyatKademeGoster(\'son\')">⏳ Son Dakika</span>';
+  h+='</div><div id="fiyatKademeDetay"></div>';
+  el.innerHTML=h;
+  fiyatKademeGoster('erken');
+}
+function fiyatKademeGoster(k){
+  document.querySelectorAll('#fiyatKademeListe .sp-tag').forEach(function(t){t.classList.remove('secili')});
+  event.target.classList.add('secili');
+  var oranlar={erken:'%20 indirim',normal:'Normal fiyat',son:'%15 zam'};
+  var aciklamalar={erken:'Erken rezervasyon avantajı ile en düşük fiyattan bilet alın.',normal:'Standart etkinlik fiyatı.',son:'Etkinliğe yakın kalan son biletler.'};
+  var list=data.etkinlikler.filter(function(e){return e.aktif!==false});
+  var h='<div class="text-sm text-3 mb-8">'+aciklamalar[k]+'</div>';
+  if(!list.length){h+='<div class="text-sm text-3">Henüz etkinlik yok</div>';document.getElementById('fiyatKademeDetay').innerHTML=h;return;}
+  h+='<div class="sp-label">Etkinlikler</div>';
+  list.forEach(function(e){
+    var f0=e.fiyatlar?e.fiyatlar[0]:e.fiyatVIP||500;
+    var f1=e.fiyatlar?e.fiyatlar[1]:e.fiyatNormal||250;
+    var f2=e.fiyatlar?e.fiyatlar[2]:e.fiyatOgrenci||150;
+    var fiyatStr=k==='erken'?Math.round(f0*0.8)+' TL (normalde '+f0+' TL)':k==='son'?Math.round(f0*1.15)+' TL':f0+' TL';
+    h+='<div class="sp-item"><div class="si-icon" style="background:var(--green);color:#fff;border:none"><span class="material-icons">event</span></div><div class="si-info"><div class="si-title">'+e.ad+'</div><div class="si-sub">'+oranlar[k]+' | '+fiyatStr+'</div></div></div>';
+  });
+  document.getElementById('fiyatKademeDetay').innerHTML=h;
+}
+
+// ==================== TAKSİTLİ ÖDEME ====================
+var taksitAktif=true;
+var taksitSayisi=3;
+function taksitRender(){
+  var el=document.getElementById('taksitDurum');
+  el.innerHTML='<div class="text-sm" style="background:var(--card2);padding:12px;border-radius:var(--radius)">📊 Taksit Durumu: <b>'+(taksitAktif?'Aktif':'Pasif')+'</b> | Taksit Sayısı: <b>'+taksitSayisi+'</b></div>';
+  var list=data.siparisler.filter(function(s){return s.taksitli});
+  var lel=document.getElementById('taksitSiparisListe');
+  if(!list.length){lel.innerHTML='<div class="text-sm text-3">Taksitli sipariş yok</div>';return;}
+  lel.innerHTML=list.slice().reverse().map(function(s){
+    var odeme=s.toplam/taksitSayisi;
+    return '<div class="sp-item"><div class="si-icon" style="background:var(--blue);color:#fff;border:none"><span class="material-icons">currency_exchange</span></div><div class="si-info"><div class="si-title">'+s.etkinlikAd+'</div><div class="si-sub">'+taksitSayisi+' taksit | Aylık '+Math.round(odeme)+' TL | Toplam '+s.toplam+' TL</div></div></div>';
+  }).join('');
+}
+function taksitAyarla(){
+  var s=prompt('Taksit sayısı (2, 3 veya 4):','3');
+  if(s==='2'||s==='3'||s==='4'){taksitSayisi=parseInt(s);taksitAktif=true;taksitRender();alert('✅ '+s+' taksit seçeneği aktif edildi.');}
+  else alert('Geçersiz seçim!');
+}
+
+// ==================== BEKLEME LİSTESİ ====================
+function beklemeRender(){
+  var el=document.getElementById('beklemeListe');
+  var list=data.beklemeListesi||[];
+  if(!list.length){el.innerHTML='<div class="text-sm text-3">Bekleme listeniz boş</div>';return;}
+  el.innerHTML=list.slice().reverse().map(function(b){
+    var durum=b.aktif?'<span class="sp-badge" style="background:var(--green)">Bekliyor</span>':'<span class="sp-badge" style="background:var(--text4)">Kapandı</span>';
+    return '<div class="sp-item"><div class="si-icon" style="background:var(--orange);color:#fff;border:none"><span class="material-icons">hourglass_empty</span></div><div class="si-info"><div class="si-title">'+b.etkinlikAd+' '+durum+'</div><div class="si-sub">'+b.tarih+' | '+b.eposta+'</div></div></div>';
+  }).join('');
+}
+function beklemeEkle(){
+  var list=data.etkinlikler.filter(function(e){return e.aktif!==false});
+  if(!list.length){alert('Hiç etkinlik yok');return;}
+  var sec=prompt('Hangi etkinlik için bekleme? (ID girin):\n'+list.map(function(e,i){return '['+e.id+'] '+e.ad}).join('\n'),list[0].id);
+  var e=list.find(function(x){return x.id==sec});
+  if(!e){alert('Geçersiz etkinlik');return;}
+  var ep=prompt('E-posta adresiniz:','ornek@email.com');
+  if(!ep)return;
+  data.beklemeListesi.push({id:++data._beklemeId,etkinlikAd:e.ad,tarih:e.tarih,eposta:ep,aktif:true});
+  data.bildirimler.push({id:++data._bildirimId,tur:'bekleme',mesaj:e.ad+' için bekleme listesine eklendiniz.',tarih:new Date().toLocaleDateString('tr-TR'),saat:new Date().toLocaleTimeString('tr-TR').slice(0,5)});
+  alert('✅ '+e.ad+' için bekleme listesine eklendiniz.\nYer açılınca '+ep+' adresine bildirim gönderilecek.');
+  beklemeRender();
+}
+
+// ==================== BİLDİRİMLER ====================
+function bildirimRender(){
+  var el=document.getElementById('bildirimListe');
+  var list=data.bildirimler||[];
+  if(!list.length){el.innerHTML='<div class="text-sm text-3">Henüz bildirim yok</div>';return;}
+  el.innerHTML=list.slice().reverse().map(function(b){
+    var ikon=b.tur==='bekleme'?'hourglass_empty':b.tur==='bilet'?'confirmation_number':b.tur==='odeme'?'payments':'notifications';
+    var r=b.tur==='bekleme'?'var(--orange)':b.tur==='bilet'?'var(--green)':b.tur==='odeme'?'var(--blue)':'var(--pink)';
+    return '<div class="sp-item"><div class="si-icon" style="background:'+r+';color:#fff;border:none"><span class="material-icons">'+ikon+'</span></div><div class="si-info"><div class="si-title">'+b.mesaj+'</div><div class="si-sub">📅 '+b.tarih+' ⏰ '+b.saat+'</div></div></div>';
+  }).join('');
+}
+function bildirimGonder(tur,mesaj){
+  // Bildirim tercihi kontrolü
+  if(data.bildirimTercih&&data.bildirimTercih[tur]===false)return;
+  data.bildirimler.push({id:++data._bildirimId,tur:tur,mesaj:mesaj,tarih:new Date().toLocaleDateString('tr-TR'),saat:new Date().toLocaleTimeString('tr-TR').slice(0,5)});
+}
+
+// ==================== GİRİŞ KONTROL (RFID/QR) ====================
+function girisRender(){
+  var el=document.getElementById('girisListe');
+  var list=data.girisKayitlari||[];
+  if(!list.length){el.innerHTML='<div class="text-sm text-3">Henüz giriş yapılmadı</div>';return;}
+  el.innerHTML=list.slice().reverse().map(function(g){
+    return '<div class="sp-item"><div class="si-icon" style="background:var(--green);color:#fff;border:none"><span class="material-icons">check_circle</span></div><div class="si-info"><div class="si-title">#'+g.biletNo+' | '+g.etkinlikAd+'</div><div class="si-sub">✅ Giriş: '+g.tarih+' '+g.saat+' | '+g.ad+'</div></div></div>';
+  }).join('');
+}
+function girisTara(){
+  var kod=prompt('Bilet kodu (QR/RFID) girin veya tarayın:','BLT-001-0001');
+  if(!kod)return;
+  var b=data.biletler.find(function(x){return x.biletKod===kod||x.id==kod});
+  if(!b){alert('❌ Geçersiz bilet kodu!');return;}
+  if(b.durum!=='gecerli'){alert('❌ Bu bilet '+b.durum+' durumunda!');return;}
+  var girisKontrol=data.girisKayitlari.find(function(x){return x.biletId===b.id});
+  if(girisKontrol){alert('⚠️ Bu bilet ile daha önce giriş yapılmış!');return;}
+  data.girisKayitlari.push({id:++data._girisId,biletId:b.id,biletNo:b.biletNo,etkinlikAd:b.etkinlikAd,kod:kod,ad:b.ad||'Kullanıcı',tarih:new Date().toLocaleDateString('tr-TR'),saat:new Date().toLocaleTimeString('tr-TR').slice(0,5)});
+  b.durum='kullanildi';
+  document.getElementById('girisDurum').innerHTML='<div style="background:var(--green);color:#fff;padding:12px;border-radius:var(--radius);margin-bottom:8px">✅ Giriş başarılı! '+b.etkinlikAd+' | Koltuk: '+(b.koltukId||'Belirtilmemiş')+' | Bilet #'+b.biletNo+'</div>';
+  bildirimGonder('bilet','🎫 '+b.etkinlikAd+' biletiniz kullanıldı. Giriş yapıldı: '+(new Date().toLocaleDateString('tr-TR')+' '+new Date().toLocaleTimeString('tr-TR').slice(0,5)));
+  girisRender();
+}
+
+// ==================== VERIFIED FAN ====================
+function fanRender(){
+  var el=document.getElementById('fanListe');
+  var list=data.verifiedFanlar||[];
+  document.getElementById('fanDurum').innerHTML='<div class="text-sm" style="background:var(--card2);padding:12px;border-radius:var(--radius)">🔐 Toplam doğrulanmış kullanıcı: <b>'+list.length+'</b></div>';
+  if(!list.length){el.innerHTML='<div class="text-sm text-3">Henüz doğrulanmış kullanıcı yok</div>';return;}
+  el.innerHTML=list.slice().reverse().map(function(f){
+    return '<div class="sp-item"><div class="si-icon" style="background:#22c55e;color:#fff;border:none"><span class="material-icons">verified_user</span></div><div class="si-info"><div class="si-title">'+f.ad+' <span class="sp-badge" style="background:var(--green)">✓ Doğrulanmış</span></div><div class="si-sub">📧 '+f.eposta+' | Tel: '+f.telefon+'</div></div></div>';
+  }).join('');
+}
+function fanDogruma(){
+  if(data.verifiedFanlar.length>=1){alert('✅ Zaten doğrulanmış kullanıcısınız!');return;}
+  var ad=prompt('Adınız:','Ahmet Yılmaz');
+  if(!ad)return;
+  var ep=prompt('E-posta:','ahmet@email.com');
+  if(!ep)return;
+  var tel=prompt('Telefon:','+905321234567');
+  if(!tel)return;
+  var kod=prompt('📱 Telefonunuza SMS ile 6 haneli doğrulama kodu gönderildi.\nKodu girin:','123456');
+  if(!kod||kod.length<4){alert('❌ Geçersiz kod!');return;}
+  data.verifiedFanlar.push({id:++data._fanId,ad:ad,eposta:ep,telefon:tel,tarih:new Date().toLocaleDateString('tr-TR')});
+  document.getElementById('fanDurum').innerHTML='<div style="background:#22c55e;color:#fff;padding:12px;border-radius:var(--radius);margin-bottom:8px">✅ Tebrikler '+ad+'! Verified Fan olarak doğrulandınız. Artık botların ve karaborsacıların olmadığı güvenli bilet alışverişi yapabilirsiniz.</div>';
+  bildirimGonder('bilet','🔐 Verified Fan olarak doğrulandınız: '+ad);
+  fanRender();
+}
+
+// ==================== REFERRAL ====================
+function referralRender(){
+  var link='https://biletsat.example.com/davet/'+data.referansLink;
+  document.getElementById('referralDurum').innerHTML='<div class="text-sm" style="background:var(--card2);padding:12px;border-radius:var(--radius)">🔗 Davet Linkiniz:<br><b style="font-size:11px;word-break:break-all">'+link+'</b><br><br>👥 <b>'+data.referansKullanim+'</b> arkadaşınız katıldı<br>💰 <b>'+(data.referansKullanim*25)+' TL</b> komisyon kazandınız</div>';
+  var el=document.getElementById('referralListe');
+  if(!data.referansKullanim){el.innerHTML='<div class="text-sm text-3">Henüz davet edilen yok</div>';return;}
+  el.innerHTML='<div class="sp-item"><div class="si-icon" style="background:var(--green);color:#fff;border:none"><span class="material-icons">group_add</span></div><div class="si-info"><div class="si-title">'+data.referansKullanim+' davet</div><div class="si-sub">Toplam kazanç: '+(data.referansKullanim*25)+' TL</div></div></div>';
+}
+function referralKopyala(){
+  var link='https://biletsat.example.com/davet/'+data.referansLink;
+  navigator.clipboard.writeText(link).then(function(){alert('✅ Davet linki kopyalandı:\n'+link);}).catch(function(){prompt('Kopyalamak için seçin:',link);});
+}
+
+// ==================== PUAN / SADAKAT ====================
+function puanEkle(miktar,sebep){
+  data.puanBakiye=(data.puanBakiye||0)+miktar;
+  data.puanlar.push({id:++data._puanId,miktar:miktar,sebep:sebep,tarih:new Date().toLocaleDateString('tr-TR')});
+}
+function puanRender(){
+  document.getElementById('puanDurum').innerHTML='<div style="background:var(--card2);padding:16px;border-radius:var(--radius);text-align:center"><div style="font-size:10px;color:var(--text4)">Puan Bakiyeniz</div><div style="font-size:28px;font-weight:700;color:var(--orange)">'+(data.puanBakiye||0)+' Puan</div><div style="font-size:11px;color:var(--text3)">100 puan = 10 TL indirim</div></div><div class="flex mb-8" style="gap:6px;margin-top:8px"><button class="sp-btn sp-btn-sm" style="width:auto;flex:1" onclick="puanKullan()">🎯 Puan Kullan</button></div>';
+  var el=document.getElementById('puanListe');
+  var list=data.puanlar||[];
+  if(!list.length){el.innerHTML='<div class="text-sm text-3">Henüz puan kazanılmadı</div>';return;}
+  el.innerHTML=list.slice().reverse().map(function(p){
+    var r=p.miktar>0?'var(--green)':'var(--red)';
+    var ik=p.miktar>0?'+':'';
+    return '<div class="sp-item"><div class="si-icon" style="background:'+r+';color:#fff;border:none"><span class="material-icons">stars</span></div><div class="si-info"><div class="si-title">'+p.sebep+'</div><div class="si-sub">📅 '+p.tarih+'</div></div><div class="si-right" style="color:'+r+'">'+ik+p.miktar+' P</div></div>';
+  }).join('');
+}
+function puanKullan(){
+  var p=(data.puanBakiye||0);
+  if(p<50){alert('En az 50 puanınız olmalı');return;}
+  var tl=Math.floor(p/10)*1;
+  var k=confirm('🎯 '+p+' puanınızı kullanmak istiyor musunuz?\n💰 '+tl+' TL bakiye yüklenecek.');
+  if(!k)return;
+  data.bakiye+=tl;
+  data.puanBakiye-=p;
+  puanEkle(-p,'Puan bozdurma -> '+tl+' TL');
+  alert('✅ '+p+' puan karşılığı '+tl+' TL bakiyenize eklendi!');
+  anaSayfaRender();puanRender();odemePanelRender();
+}
+
+// ==================== DEĞERLENDİRME ====================
+function degerlendirmeRender(){
+  var el=document.getElementById('degerlendirmeListe');
+  var etkinlikler=data.etkinlikler.filter(function(e){return e.aktif!==false});
+  if(!etkinlikler.length){el.innerHTML='<div class="text-sm text-3">Henüz etkinlik yok</div>';return;}
+  el.innerHTML=etkinlikler.map(function(e){
+    var d=data.degerlendirmeler?data.degerlendirmeler.find(function(x){return x.etkinlikId===e.id}):null;
+    var yildiz=d?'⭐'.repeat(d.puan):'Henüz puanlanmadı';
+    var yorum=d?'"'+d.yorum+'"':'';
+    return '<div class="sp-item"><div class="si-icon" style="background:'+e.renk+';color:#fff;border:none"><span class="material-icons">'+e.ikon+'</span></div><div class="si-info"><div class="si-title">'+e.ad+'</div><div class="si-sub">'+yildiz+' '+yorum+'</div></div><div class="si-right"><button class="sp-btn sp-btn-sm sp-btn-out" style="width:auto;padding:2px 6px;font-size:9px" onclick="degerlendir('+e.id+')">Puanla</button></div></div>';
+  }).join('');
+}
+function degerlendir(eId){
+  var e=data.etkinlikler.find(function(x){return x.id===eId});
+  if(!e)return;
+  var p=parseInt(prompt(e.ad+' puanı (1-5):','5'));
+  if(isNaN(p)||p<1||p>5){alert('1-5 arası puan girin');return;}
+  var y=prompt('Yorumunuz (isteğe bağlı):','');
+  if(!y)y='';
+  data.degerlendirmeler=data.degerlendirmeler||[];
+  var mevcut=data.degerlendirmeler.findIndex(function(x){return x.etkinlikId===eId});
+  if(mevcut>-1)data.degerlendirmeler[mevcut]={etkinlikId:eId,puan:p,yorum:y,tarih:new Date().toLocaleDateString('tr-TR')};
+  else data.degerlendirmeler.push({id:++data._degerlendirmeId,etkinlikId:eId,puan:p,yorum:y,tarih:new Date().toLocaleDateString('tr-TR')});
+  puanEkle(10,e.ad+' değerlendirme');
+  alert('✅ '+e.ad+' puanlandı! ⭐'.repeat(p)+'\n10 puan kazandınız!');
+  degerlendirmeRender();
+}
+
+// ==================== RAPORLAR ====================
+function raporRender(){
+  var tSatis=data.siparisler.reduce(function(s,x){return s+x.toplam},0);
+  var tBilet=data.biletler.length;
+  var tEtkinlik=data.etkinlikler.length;
+  var tKom=data.siparisler.reduce(function(s,x){return s+(x.komisyon||0)},0);
+  var kategoriSay={};
+  data.etkinlikler.forEach(function(e){kategoriSay[e.kategori]=(kategoriSay[e.kategori]||0)+1});
+  var kategoriHtml=Object.keys(kategoriSay).map(function(k){return '<span class="sp-tag">'+k.toUpperCase()+': '+kategoriSay[k]+'</span>'}).join('');
+  var h='<div class="sp-row mb-8"><div class="sp-option"><span class="material-icons" style="color:var(--green)">payments</span><div class="so-title">'+tSatis.toLocaleString('tr-TR')+' TL</div><span style="font-size:9px;color:var(--text4)">Toplam Satış</span></div><div class="sp-option"><span class="material-icons" style="color:var(--blue)">confirmation_number</span><div class="so-title">'+tBilet+'</div><span style="font-size:9px;color:var(--text4)">Toplam Bilet</span></div></div>';
+  h+='<div class="sp-row mb-8"><div class="sp-option"><span class="material-icons" style="color:var(--orange)">event</span><div class="so-title">'+tEtkinlik+'</div><span style="font-size:9px;color:var(--text4)">Etkinlik</span></div><div class="sp-option"><span class="material-icons" style="color:var(--red)">percent</span><div class="so-title">'+tKom.toLocaleString('tr-TR')+' TL</div><span style="font-size:9px;color:var(--text4)">Komisyon (%2)</span></div></div>';
+  h+='<div class="d-divider"></div><div class="sp-label">Kategorilere Göre Etkinlikler</div><div class="sp-tags mb-8">'+kategoriHtml+'</div>';
+  h+='<div class="d-divider"></div><div class="sp-label">Güncel İstatistikler</div>';
+  h+='<div class="text-sm text-3 mb-8">📊 Bakiye: '+data.bakiye+' TL | Puan: '+(data.puanBakiye||0)+' | Bildirim: '+data.bildirimler.length+'</div>';
+  document.getElementById('raporIcerik').innerHTML=h;
+}
+
+// ==================== DİL ====================
+function dilRender(){
+  document.getElementById('dilBilgi').textContent=data.dil==='tr'?'Mevcut dil: Türkçe':'Current language: English';
+  document.getElementById('dilTR').classList.toggle('secili',data.dil==='tr');
+  document.getElementById('dilEN').classList.toggle('secili',data.dil==='en');
+}
+function dilSec(d){
+  data.dil=d;
+  dilRender();
+  alert(d==='tr'?'✅ Dil Türkçe olarak değiştirildi':'✅ Language changed to English');
+}
+
+// ==================== PAYLAŞ ====================
+function paylasRender(){
+  var url=encodeURIComponent('https://biletsat.example.com');
+  var text=encodeURIComponent('🎫 Bilet Sat - En iyi etkinlik biletleri burada! Konser, tiyatro, spor ve daha fazlası.');
+  document.getElementById('paylasButonlar').innerHTML=
+    '<div class="sp-row mb-8"><div class="sp-option" onclick="window.open(\'https://wa.me/?text='+text+'%20'+url+'\',\'_blank\')"><span class="material-icons" style="color:var(--green)">whatsapp</span><div class="so-title">WhatsApp</div></div><div class="sp-option" onclick="window.open(\'https://www.facebook.com/sharer/sharer.php?u='+url+'\',\'_blank\')"><span class="material-icons" style="color:var(--blue)">facebook</span><div class="so-title">Facebook</div></div></div>'+
+    '<div class="sp-row mb-8"><div class="sp-option" onclick="window.open(\'https://twitter.com/intent/tweet?text='+text+'&url='+url+'\',\'_blank\')"><span class="material-icons" style="color:var(--blue)">x</span><div class="so-title">Twitter / X</div></div><div class="sp-option" onclick="window.open(\'https://www.linkedin.com/sharing/share-offsite/?url='+url+'\',\'_blank\')"><span class="material-icons" style="color:var(--blue)">linkedin</span><div class="so-title">LinkedIn</div></div></div>'+
+    '<div class="sp-row mb-8"><div class="sp-option" onclick="navigator.clipboard.writeText(\'https://biletsat.example.com\').then(function(){alert(\'✅ Link kopyalandı!\')})"><span class="material-icons" style="color:var(--text1)">link</span><div class="so-title">Link Kopyala</div></div><div class="sp-option" onclick="paylasEposta()"><span class="material-icons" style="color:var(--red)">email</span><div class="so-title">E-posta</div></div></div>';
+}
+function paylasEposta(){
+  window.open('mailto:?subject='+encodeURIComponent('Bilet Sat - Etkinlik Biletleri')+'&body='+encodeURIComponent('En iyi etkinlik biletleri burada! Konser, tiyatro, spor ve daha fazlası için hemen göz at:\n\nhttps://biletsat.example.com'));
+}
+
+// ==================== KULLANICI / HESAP SİSTEMİ ====================
+function kullaniciRender(){
+  var k=data.aktifKullanici;
+  document.getElementById('kullaniciGiris').style.display=k?'none':'';
+  document.getElementById('kullaniciProfil').style.display=k?'':'none';
+  document.getElementById('kullaniciHata').textContent='';
+  if(k){
+    var kart=document.getElementById('kullaniciKart');
+    var tipEtiket=k.tip==='kurum'?'🏢 Kurum':k.tip==='admin'?'🛡️ Admin':'👤 Birey';
+    var firma=k.tip==='kurum'?'<div class="text-xs text-3">'+k.firmaAdi+' | VD: '+k.vergiNo+'</div>':'';
+    var kyc=k.kycDogrulandi?'✅ KYC Onaylı':'<button class="sp-btn sp-btn-sm" style="width:auto;padding:2px 6px;font-size:9px;margin-top:4px" onclick="kycRender()">📋 KYC Doğrula</button>';
+    kart.innerHTML='<div style="background:var(--card2);padding:12px;border-radius:var(--radius)"><div style="display:flex;align-items:center;gap:10px"><div style="width:40px;height:40px;border-radius:50%;background:var(--purple);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px">'+k.ad.charAt(0).toUpperCase()+'</div><div><div style="font-weight:600;font-size:13px">'+k.ad+'</div><div style="font-size:10px;color:var(--text4)">'+k.eposta+' | '+k.telefon+'</div>'+firma+'</div></div><div class="text-xs text-3 mt-8">💰 Bakiye: '+k.bakiye+' TL | ⭐ Puan: '+(k.puanBakiye||0)+' | '+tipEtiket+'<br>'+kyc+'</div></div>';
+    document.getElementById('kullaniciTipBadge').textContent=k.tip==='kurum'?'ORGANİZASYON':'BİREYSEL';
+    // Kurum paneli - etkinlik yönetimi
+    var kp=document.getElementById('kullaniciKurumPanel');
+    if(k.tip==='kurum'){
+      var kurumEtkinlikler=data.etkinlikler.filter(function(e){return e.olusturan===k.id});
+      var eh=kurumEtkinlikler.length?'<div class="text-xs text-3 mb-8">Toplam '+kurumEtkinlikler.length+' etkinlik</div>':'<div class="text-xs text-3 mb-8">Henüz etkinlik oluşturmadınız</div>';
+      eh+='<button class="sp-btn sp-btn-sm mb-8" onclick="etkinlikEkle()">➕ Yeni Etkinlik Oluştur</button>';
+      eh+='<div style="max-height:200px;overflow-y:auto">'+kurumEtkinlikler.map(function(e){
+        var s=e.biletler?e.biletler.length:0;
+        return '<div class="sp-item" onclick="etkinlikDetay('+e.id+')"><div class="si-icon" style="background:'+e.renk+';color:#fff;border:none;width:28px;height:28px;font-size:14px"><span class="material-icons" style="font-size:14px">'+e.ikon+'</span></div><div class="si-info"><div class="si-title" style="font-size:10px">'+e.ad+'</div><div class="si-sub" style="font-size:9px">'+e.tarih+' | '+s+' bilet satıldı</div></div></div>';
+      }).join('')+'</div>';
+      kp.innerHTML=eh;
+    } else {
+      kp.innerHTML='<div class="text-xs text-3 mb-8">Bireysel hesap. Etkinlik oluşturmak için kurum hesabına geçin.</div><button class="sp-btn sp-btn-sm" onclick="kullaniciKayitForm(\'kurum\')">🏢 Kurum/Kuruluş Hesabı Oluştur</button>';
+    }
+  }
+  // Update topbar
+  if(k){document.getElementById('tbKullaniciAd').textContent=k.ad;document.getElementById('tbKullaniciIkon').textContent='person';}
+  else {document.getElementById('tbKullaniciAd').textContent='Bilet Sat';document.getElementById('tbKullaniciIkon').textContent='account_circle';}
+  // Update drawer
+  document.getElementById('drawerKullaniciLabel').textContent=k?k.ad:(kullaniciVarMi()?'Hesap Seç':'Giriş Yap / Kayıt Ol');
+  document.getElementById('drawerKullaniciIkon').textContent=k?'person':'person_add';
+  document.getElementById('dahaKullaniciLabel').textContent=k?k.ad:'Profil & Giriş';
+}
+function kullaniciVarMi(){return data.kullanicilar&&data.kullanicilar.length>0;}
+function kullaniciGirisYap(){
+  var ep=document.getElementById('loginEposta').value.trim();
+  var sfr=document.getElementById('loginSifre').value.trim();
+  if(!ep||!sfr){document.getElementById('kullaniciHata').textContent='E-posta ve şifre girin';return;}
+  if(!hesapKilitKontrol())return;
+  if(!kademeliBekle())return;
+  var k=data.kullanicilar.find(function(u){return u.eposta===ep&&u.sifre===sfr});
+  if(!k){
+    data.basarisizGiris++;
+    document.getElementById('kullaniciHata').textContent='❌ Hatalı e-posta veya şifre ('+data.basarisizGiris+' deneme)';
+    if(data.guvenlik.hesapKilitleme&&data.basarisizGiris>=5){data.hesapKilitli=true;document.getElementById('kullaniciHata').textContent='🔒 Hesap kilitlendi! Yönetici ile iletişime geçin.';}
+    return;
+  }
+  data.basarisizGiris=0;
+  if(!twoFADogrula())return;
+  if(!ipIzlemeKontrol())return;
+  data.aktifKullanici=k;
+  document.getElementById('loginEposta').value='';
+  document.getElementById('loginSifre').value='';
+  // Admin drawer göster
+  if(k.tip==='admin')document.getElementById('drawerAdminItem').style.display='';else document.getElementById('drawerAdminItem').style.display='none';
+  bildirimGonder('guvenlik','🔐 '+k.ad+' hesabınıza giriş yaptı.');
+  kullaniciRender();
+  alert('✅ Hoş geldin, '+k.ad+'!');
+}
+function kullaniciKayitForm(tip){
+  tip=tip||prompt('Hesap türü:\n[1] Bireysel\n[2] Kurum/Kuruluş\n\nSeçin (1 veya 2):','1');
+  if(tip==='1'||tip==='birey')kullaniciKaydet('birey');
+  else if(tip==='2'||tip==='kurum')kullaniciKaydet('kurum');
+}
+function kullaniciKaydet(tip){
+  var ad=prompt('Ad Soyad / Firma Adı:','');
+  if(!ad)return;
+  var ep=prompt('E-posta:','');
+  if(!ep)return;
+  var tel=prompt('Telefon:','');
+  if(!tel)return;
+  var sfr=prompt('Şifre (en az 3 karakter, büyük/küçük harf + rakam):','');
+  if(!sfr||sfr.length<3){alert('Şifre en az 3 karakter olmalı');return;}
+  if(!sifreGucuKontrol(sfr))return;
+  if(data.kullanicilar.find(function(u){return u.eposta===ep})){alert('Bu e-posta zaten kayıtlı!');return;}
+  var k={id:++data._kullaniciId,ad:ad,eposta:ep,sifre:sfr,telefon:tel,tip:tip,bakiye:tip==='kurum'?0:500,puanBakiye:0};
+  if(tip==='kurum'){
+    k.firmaAdi=prompt('Firma Adı (resmi):',ad)||ad;
+    k.vergiNo=prompt('Vergi No / TC Kimlik:','');
+    if(!k.vergiNo)k.vergiNo='-';
+  }
+  data.kullanicilar.push(k);
+  data.aktifKullanici=k;
+  bildirimGonder('bilet','🎉 Yeni '+(tip==='kurum'?'kurum':'bireysel')+' hesap oluşturuldu: '+ad);
+  alert('✅ Hesap oluşturuldu! Hoş geldin, '+ad);
+  kullaniciRender();
+}
+function kullaniciCikis(){
+  if(!confirm('Çıkış yapılsın mı?'))return;
+  data.aktifKullanici=null;
+  kullaniciRender();
+  alert('Çıkış yapıldı.');
+}
+
+// ==================== GÜVENLİK / DOLANDIRICILIK ÖNLEME ====================
+function guvenlikRender(){
+  var g=data.guvenlik;
+  // Durum özeti
+  var aktifSay=[g.captchaAktif,g.epostaDogrulama,g.telefonDogrulama,g.adreseBiletAktif,g.twoFAktif,g.kademeliBekleme,g.hesapKilitleme,g.sifreGucu,g.ipIzleme].filter(Boolean).length;
+  document.getElementById('guvenlikDurum').innerHTML='<div style="background:var(--card2);padding:12px;border-radius:var(--radius)"><div style="display:flex;gap:8px;align-items:center"><span class="material-icons" style="color:var(--green);font-size:24px">security</span><div><div style="font-weight:600;font-size:13px">Güvenlik Seviyesi: YÜKSEK</div><div style="font-size:10px;color:var(--text4)">'+aktifSay+'/9 önlem aktif | '+(g.supheliIslemler||[]).length+' şüpheli işlem</div></div></div><button class="sp-btn sp-btn-sm mt-8" style="width:auto" onclick="if(confirm(\'2FA etkinleştirilsin mi? (Google Authenticator simülasyonu)\')){data.guvenlik.twoFAktif=!data.guvenlik.twoFAktif;guvenlikRender();alert(data.guvenlik.twoFAktif?\'✅ 2FA etkinleştirildi\':\'⛔ 2FA devre dışı\');}">🔐 2FA: '+(g.twoFAktif?'✅ Aktif':'⛔ Pasif')+'</button></div>';
+  // Önlem listesi
+  var onlemler=[
+    {id:'captcha',ad:'CAPTCHA Doğrulama',aciklama:'Bot saldırılarını önlemek için işlem öncesi matematik sorusu',aktif:g.captchaAktif,ikon:'smart_toy'},
+    {id:'eposta',ad:'E-posta Doğrulama',aciklama:'Hesap oluştururken e-posta doğrulama zorunluluğu',aktif:g.epostaDogrulama,ikon:'email'},
+    {id:'telefon',ad:'Telefon SMS Doğrulama',aciklama:'Telefon numarasına SMS ile doğrulama kodu',aktif:g.telefonDogrulama,ikon:'sms'},
+    {id:'adrese',ad:"Adrese Kayıtlı Bilet (İsim Bazlı)",aciklama:'Her bilet alıcı adına düzenlenir, girişte kimlik kontrolü',aktif:g.adreseBiletAktif,ikon:'badge'},
+    {id:'hiz',ad:'İşlem Hız Limiti',aciklama:'Aynı hesaptan '+g.islemHizLimiti+' saniyede birden fazla işlem engellenir',aktif:true,ikon:'speed'},
+    {id:'devir',ad:'Bilet Devir Sınırı',aciklama:'Her bilet en fazla '+g.devirLimiti+' kez devredilebilir',aktif:true,ikon:'swap_horiz'},
+    {id:'iptal',ad:'Bilet İptal Cezası',aciklama:'İptallerde %'+(g.biletIptalCezasi*100)+' kesinti uygulanır',aktif:true,ikon:'gavel'},
+    {id:'max',ad:'Aynı Etkinlikte Bilet Sınırı',aciklama:'Aynı etkinlikten en fazla '+g.maxAyniEtkinlikBilet+' bilet alınabilir',aktif:true,ikon:'confirmation_number'},
+    {id:'2fa',ad:'2FA (İki Faktörlü Doğrulama)',aciklama:'Google Authenticator / SMS ile ek doğrulama',aktif:g.twoFAktif,ikon:'lock'},
+    {id:'kademeli',ad:'Kademeli Bekleme',aciklama:'Başarısız girişlerde bekleme süresi artar',aktif:g.kademeliBekleme,ikon:'hourglass_bottom'},
+    {id:'kilitleme',ad:'Hesap Kilitleme',aciklama:'5 başarısız girişte hesap otomatik kilitlenir',aktif:g.hesapKilitleme,ikon:'lock_person'},
+    {id:'sifre',ad:'Şifre Gücü Kontrolü',aciklama:'Kayıtta büyük/küçük harf ve rakam zorunluluğu',aktif:g.sifreGucu,ikon:'password'},
+    {id:'ip',ad:'IP / Cihaz İzleme',aciklama:'Aynı IP\'den çoklu hesap tespiti',aktif:g.ipIzleme,ikon:'monitor'}
+  ];
+  document.getElementById('guvenlikOnlemler').innerHTML=onlemler.map(function(o){
+    var r=o.aktif?'var(--green)':'var(--text4)';
+    var a=o.aktif?'✅ Aktif':'⛔ Pasif';
+    return '<div class="sp-item"><div class="si-icon" style="background:'+r+';color:#fff;border:none;width:28px;height:28px;font-size:14px"><span class="material-icons" style="font-size:14px">'+o.ikon+'</span></div><div class="si-info"><div class="si-title" style="font-size:10px">'+o.ad+'</div><div class="si-sub" style="font-size:8px;color:var(--text4)">'+o.aciklama+'</div></div><div class="si-right" style="font-size:9px;color:'+r+'">'+a+'</div></div>';
+  }).join('');
+  // Şüpheli işlemler
+  var sup=(g.supheliIslemler||[]);
+  document.getElementById('guvenlikSupheli').innerHTML=sup.length?sup.slice().reverse().map(function(s){
+    return '<div class="sp-item"><div class="si-icon" style="background:var(--red);color:#fff;border:none;width:28px;height:28px;font-size:14px"><span class="material-icons" style="font-size:14px">warning</span></div><div class="si-info"><div class="si-title" style="font-size:10px">'+s.sebep+'</div><div class="si-sub" style="font-size:8px;color:var(--text4)">'+s.tarih+' | Kullanıcı: '+s.kullanici+'</div></div></div>';
+  }).join(''):'<div class="text-sm text-3">Henüz şüpheli işlem yok ✅</div>';
+  // Rapor
+  document.getElementById('guvenlikRapor').innerHTML='<div class="text-sm" style="background:var(--card2);padding:10px;border-radius:var(--radius)">📊 Toplam engellenen bot: '+Math.floor(Math.random()*50)+' | Şüpheli IP: '+Math.floor(Math.random()*20)+' | Karaborsa tespit: '+Math.floor(Math.random()*5)+'<br>🛡️ Sistem güvende. Tüm önlemler aktif.</div>';
+}
+function captchaSor(){
+  if(!data.guvenlik.captchaAktif||data.captchaDogru){data.captchaDogru=true;return true;}
+  var a=Math.floor(Math.random()*20)+1,b=Math.floor(Math.random()*20)+1;
+  var c=parseInt(prompt('🤖 Bot doğrulama: '+a+' + '+b+' = ?',''));
+  if(c===a+b){data.captchaDogru=true;return true;}
+  var sup=data.guvenlik.supheliIslemler||[];
+  sup.push({sebep:'CAPTCHA başarısız ('+a+'+'+b+'!)',tarih:new Date().toLocaleDateString('tr-TR'),kullanici:data.aktifKullanici?data.aktifKullanici.ad:'Misafir'});
+  data.guvenlik.supheliIslemler=sup;
+  alert('❌ Yanlış cevap! Bot olarak işaretlendiniz.');
+  return false;
+}
+function hizKontrol(){
+  if(!data.guvenlik.islemHizLimiti)return true;
+  var simdi=Date.now();
+  if(data.sonIslemZamani>0&&simdi-data.sonIslemZamani<data.guvenlik.islemHizLimiti*1000){
+    var sup=data.guvenlik.supheliIslemler||[];
+    sup.push({sebep:'İşlem hız limiti aşıldı ('+Math.round((simdi-data.sonIslemZamani)/1000)+'s)',tarih:new Date().toLocaleDateString('tr-TR'),kullanici:data.aktifKullanici?data.aktifKullanici.ad:'Misafir'});
+    data.guvenlik.supheliIslemler=sup;
+    alert('⚠️ Çok hızlı işlem yapıyorsunuz. Lütfen '+data.guvenlik.islemHizLimiti+' saniye bekleyin.');
+    return false;
+  }
+  data.sonIslemZamani=simdi;
+  return true;
+}
+function adreseBiletKontrol(){
+  if(!data.guvenlik.adreseBiletAktif||!data.aktifKullanici)return true;
+  return prompt('👤 Bilet kime düzenlenecek?\n(Ad Soyad):',data.aktifKullanici.ad)||data.aktifKullanici.ad;
+}
+function epostaDogrula(){
+  if(!data.guvenlik.epostaDogrulama||!data.aktifKullanici||data.aktifKullanici.epostaDogrulandi)return true;
+  var kod=prompt('📧 E-posta adresinize ('+data.aktifKullanici.eposta+') 6 haneli doğrulama kodu gönderildi.\nKodu girin:','123456');
+  if(!kod||kod.length<4){alert('❌ Doğrulama başarısız!');return false;}
+  data.aktifKullanici.epostaDogrulandi=true;
+  alert('✅ E-posta doğrulandı!');
+  return true;
+}
+function maxBiletKontrol(eId,adet){
+  if(!data.guvenlik.maxAyniEtkinlikBilet||!data.aktifKullanici)return true;
+  var e=data.etkinlikler.find(function(x){return x.id===eId});
+  if(!e)return true;
+  var mevcut=data.biletler.filter(function(b){return b.etkinlikId===eId}).length;
+  if(mevcut+adet>data.guvenlik.maxAyniEtkinlikBilet){
+    alert('⚠️ Bu etkinlikten en fazla '+data.guvenlik.maxAyniEtkinlikBilet+' bilet alabilirsiniz. Mevcut: '+mevcut);
+    return false;
+  }
+  return true;
+}
+function supheliKontrol(){
+  if(!data.aktifKullanici)return true;
+  var sup=data.guvenlik.supheliIslemler||[];
+  var kSup=sup.filter(function(s){return s.kullanici===data.aktifKullanici.ad});
+  if(kSup.length>=3){
+    if(!confirm('⚠️ Hesabınızda '+kSup.length+' şüpheli işlem tespit edildi. Devam etmek istediğinize emin misiniz?'))return false;
+  }
+  return true;
+}
+
+// ==================== YENİ GÜVENLİK ÖNLEMLERİ ====================
+function sifreGucuKontrol(s){
+  if(!data.guvenlik.sifreGucu)return true;
+  if(s.length<3){alert('Şifre en az 3 karakter olmalı');return false;}
+  if(!/[A-Z]/.test(s)||!/[a-z]/.test(s)||!/\d/.test(s)){return confirm('⚠️ Zayıf şifre! Büyük/küçük harf ve rakam içermeli. Yine de devam et?');}
+  return true;
+}
+function kademeliBekle(){
+  if(!data.guvenlik.kademeliBekleme)return true;
+  if(data.basarisizGiris>0){
+    var bekle=data.basarisizGiris*2;
+    alert('⏳ Güvenlik önlemi: '+(data.basarisizGiris)+' başarısız deneme. '+(bekle)+' saniye bekleyin.');
+    var bas=Date.now();
+    while(Date.now()-bas<bekle*1000){}
+  }
+  return true;
+}
+function hesapKilitKontrol(){
+  if(!data.guvenlik.hesapKilitleme||!data.aktifKullanici)return true;
+  if(data.hesapKilitli){alert('🔒 Hesabınız çok fazla başarısız giriş nedeniyle kilitlendi. Yöneticinize başvurun.');return false;}
+  return true;
+}
+function twoFADogrula(){
+  if(!data.guvenlik.twoFAktif||!data.aktifKullanici)return true;
+  var kod=prompt('🔐 Google Authenticator kodu (6 haneli):\n(Simülasyon: 123456)','123456');
+  if(kod!=='123456'){alert('❌ 2FA kodu hatalı!');data.basarisizGiris++;return false;}
+  return true;
+}
+function ipIzlemeKontrol(){
+  if(!data.guvenlik.ipIzleme)return true;
+  // Simülasyon: aynı IP'den çok hesap kontrolü
+  var aktif=data.aktifKullanici;
+  if(!aktif)return true;
+  var ayniIP=data.kullanicilar.filter(function(u){return u.id!==aktif.id&&u.eposta.split('@')[1]===aktif.eposta.split('@')[1]}).length;
+  if(ayniIP>2){var sup=data.guvenlik.supheliIslemler||[];sup.push({sebep:'Aynı domain\'den '+(ayniIP+1)+' hesap (çoklu hesap şüphesi)',tarih:new Date().toLocaleDateString('tr-TR'),kullanici:aktif.ad});data.guvenlik.supheliIslemler=sup;}
+  return true;
+}
+
+// ==================== KYC (KİMLİK DOĞRULAMA) ====================
+function kycRender(){
+  if(!data.aktifKullanici){alert('Önce giriş yapın');return;}
+  var k=data.aktifKullanici;
+  if(k.kycDogrulandi){alert('✅ KYC zaten doğrulanmış: '+k.ad);return;}
+  var idNo=prompt('📋 TC Kimlik No / Vergi No girin:','12345678901');
+  if(!idNo||idNo.length<10){alert('Geçersiz numara');return;}
+  var ad=prompt('Ad Soyad (kimlikteki gibi):',k.ad);
+  if(!ad)return;
+  var dogTarih=prompt('Doğum Tarihi (GG.AA.YYYY):','01.01.1990');
+  if(!dogTarih)return;
+  k.kycDogrulandi=true;k.idNo=idNo;
+  puanEkle(50,'KYC doğrulama');
+  bildirimGonder('guvenlik','✅ KYC (Kimlik) doğrulamanız tamamlandı: '+ad);
+  alert('✅ KYC doğrulandı! 50 puan kazandınız.\nKimlik: '+idNo+'\nAd: '+ad);
+  kullaniciRender();
+}
+
+// ==================== SEPET SİSTEMİ ====================
+function sepetEkle(eId,adet,tip,zoneIdx,fiyat){
+  adet=adet||1;
+  var e=data.etkinlikler.find(function(x){return x.id===eId});
+  if(!e)return;
+  data.sepet.push({id:++data._sepetId,etkinlikId:eId,etkinlikAd:e.ad,tarih:e.tarih,mekan:e.mekan,sehir:e.sehir,adet:adet,tip:tip,zoneIdx:zoneIdx,fiyat:fiyat,toplam:fiyat*adet});
+  document.getElementById('drawerSepetAdet').textContent=data.sepet.length;
+  document.getElementById('dahaSepetAdet').textContent=data.sepet.length+' ürün';
+  alert('✅ Sepete eklendi: '+e.ad+' ('+adet+'x '+tip+' = '+(fiyat*adet)+' TL)');
+}
+function sepetSil(id){
+  data.sepet=data.sepet.filter(function(s){return s.id!==id});
+  document.getElementById('drawerSepetAdet').textContent=data.sepet.length||'';
+  document.getElementById('dahaSepetAdet').textContent=data.sepet.length?data.sepet.length+' ürün':'Sepetteki ürünler';
+  sepetRender();
+}
+function sepetRender(){
+  var el=document.getElementById('sepetIcerik');
+  if(!data.sepet.length){el.innerHTML='<div class="text-sm text-3">Sepetiniz boş</div>';return;}
+  var toplam=data.sepet.reduce(function(s,x){return s+x.toplam},0);
+  var h='<div class="text-sm text-3 mb-8">Toplam: <b>'+toplam+' TL</b> | '+data.sepet.length+' kalem</div>';
+  h+=data.sepet.map(function(s){
+    return '<div class="sp-item"><div class="si-icon" style="background:var(--orange);color:#fff;border:none"><span class="material-icons">shopping_cart</span></div><div class="si-info"><div class="si-title">'+s.etkinlikAd+'</div><div class="si-sub">'+s.tarih+' | '+s.sehir+', '+s.mekan+' | '+s.tip+' x'+s.adet+' = '+s.toplam+' TL</div></div><div class="si-right"><button class="sp-btn sp-btn-sm sp-btn-red" style="width:auto;padding:2px 6px;font-size:9px" onclick="sepetSil('+s.id+')">Sil</button></div></div>';
+  }).join('');
+  h+='<button class="sp-btn sp-btn-sm mt-8" style="width:100%" onclick="sepetOnayla()">✅ Sepeti Onayla ('+toplam+' TL)</button>';
+  el.innerHTML=h;
+}
+function sepetOnayla(){
+  if(!data.aktifKullanici){alert('Önce giriş yapın');return;}
+  if(!data.sepet.length){alert('Sepet boş');return;}
+  var toplam=data.sepet.reduce(function(s,x){return s+x.toplam},0);
+  if(data.aktifKullanici.bakiye<toplam){alert('Yetersiz bakiye! İhtiyaç: '+toplam+' TL\nBakiyeniz: '+data.aktifKullanici.bakiye+' TL');return;}
+  if(!confirm('🛒 Sepeti onaylıyor musunuz?\nToplam: '+toplam+' TL'))return;
+  if(!captchaSor())return;
+  if(!hizKontrol())return;
+  data.aktifKullanici.bakiye-=toplam;
+  data.sepet.forEach(function(s){
+    var e=data.etkinlikler.find(function(x){return x.id===s.etkinlikId});
+    if(!e)return;
+    if(!e.biletler)e.biletler=[];
+    var biletKod='BLT-'+String(s.etkinlikId).padStart(3,'0')+'-'+String(data._biletId+1).padStart(4,'0');
+    var biletNo='B-'+String(data.biletler.length+1).padStart(3,'0');
+    var qr='https://api.qrserver.com/v1/create-qr-code/?size=100x100&data='+biletKod;
+    var kId=s.zoneIdx!==undefined?s.zoneIdx:null;
+    data.biletler.push({id:++data._biletId,biletNo:biletNo,etkinlikId:s.etkinlikId,etkinlikAd:s.etkinlikAd,tarih:s.tarih,saat:e.saat,mekan:s.mekan,adres:e.adres,sehir:s.sehir,biletKod:biletKod,tip:s.tip,tutar:s.fiyat,koltukId:kId,zoneIdx:s.zoneIdx,qr:qr,durum:'gecerli',satisTarih:new Date().toLocaleDateString('tr-TR'),alici:data.aktifKullanici.ad});
+    if(kId!==null&&e.koltuklar){var k=e.koltuklar.find(function(x){return x.id===kId});if(k)k.durum='satilmis';}
+    e.biletler.push({koltukId:kId,tip:s.tip});
+    var kom=Math.round(s.toplam*0.02);
+    data.siparisler.push({id:++data._siparisId,etkinlikAd:s.etkinlikAd,tip:s.tip,adet:s.adet,toplam:s.toplam,indirim:0,komisyon:kom,tarih:new Date().toLocaleDateString('tr-TR')});
+    data.odemeGecmis.push({id:++data._odemeId,tur:'bilet',tutar:s.toplam,aciklama:s.etkinlikAd+' ('+s.adet+'x '+s.tip+')',tarih:new Date().toLocaleDateString('tr-TR')});
+    puanEkle(Math.round(s.toplam/10),s.etkinlikAd+' satın alma');
+    bildirimGonder('bilet','🎫 '+s.etkinlikAd+' bilet(ler)i başarıyla satın alındı.');
+  });
+  data.sepet=[];
+  document.getElementById('drawerSepetAdet').textContent='';
+  document.getElementById('dahaSepetAdet').textContent='Sepetteki ürünler';
+  alert('✅ Tüm biletler satın alındı! Toplam: '+toplam+' TL\nPuan kazandınız!\n📧 Bilet detayları e-posta ile gönderilecek.');
+  var ep=data.aktifKullanici?data.aktifKullanici.eposta:'kullanici@email.com';
+  alert('📧 E-posta gönderiliyor...\nKime: '+ep+'\n'+data.biletler.length+' adet bilet');
+  sepetRender();anaSayfaRender();biletRender();
+}
+
+// ==================== FAVORİ ETKİNLİKLER ====================
+function favoriToggle(eId){
+  var idx=data.favoriler.indexOf(eId);
+  if(idx>-1)data.favoriler.splice(idx,1);
+  else data.favoriler.push(eId);
+  favoriRender();
+}
+function favoriRender(){
+  var el=document.getElementById('favoriListe');
+  var list=data.etkinlikler.filter(function(e){return data.favoriler.indexOf(e.id)>-1});
+  if(!list.length){el.innerHTML='<div class="text-sm text-3">Henüz favori etkinlik yok. Etkinlik detayında ♥ ile ekleyin.</div>';return;}
+  el.innerHTML=list.map(function(e){
+    return '<div class="sp-item" onclick="etkinlikDetay('+e.id+')"><div class="si-icon" style="background:'+e.renk+';color:#fff;border:none"><span class="material-icons">'+e.ikon+'</span></div><div class="si-info"><div class="si-title">'+e.ad+'</div><div class="si-sub">'+e.tarih+' | '+e.sehir+', '+e.mekan+'</div></div><div class="si-right"><button class="sp-btn sp-btn-sm sp-btn-red" style="width:auto;padding:2px 6px;font-size:9px" onclick="event.stopPropagation();favoriToggle('+e.id+')">♥ Çıkar</button></div></div>';
+  }).join('');
+}
+
+// ==================== ADMIN PANEL ====================
+function adminRender(){
+  if(!data.aktifKullanici||data.aktifKullanici.tip!=='admin'){document.getElementById('adminIcerik').innerHTML='<div class="text-sm text-3">🚫 Bu panel yalnızca admin kullanıcılarına açıktır.<br>Admin girişi: admin@biletsat.com / admin</div>';return;}
+  var h='<div class="sp-row mb-8"><div class="sp-option"><span class="material-icons" style="color:var(--blue)">people</span><div class="so-title">'+data.kullanicilar.length+'</div><span style="font-size:9px;color:var(--text4)">Kullanıcı</span></div><div class="sp-option"><span class="material-icons" style="color:var(--green)">event</span><div class="so-title">'+data.etkinlikler.length+'</div><span style="font-size:9px;color:var(--text4)">Etkinlik</span></div></div>';
+  h+='<div class="sp-row mb-8"><div class="sp-option"><span class="material-icons" style="color:var(--purple)">confirmation_number</span><div class="so-title">'+data.biletler.length+'</div><span style="font-size:9px;color:var(--text4)">Bilet</span></div><div class="sp-option"><span class="material-icons" style="color:var(--orange)">report</span><div class="so-title">'+(data.guvenlik.supheliIslemler||[]).length+'</div><span style="font-size:9px;color:var(--text4)">Şüpheli</span></div></div>';
+  h+='<div class="d-divider"></div><div class="sp-label">Kullanıcılar</div>';
+  h+=data.kullanicilar.map(function(u){
+    var tipEtik=u.tip==='admin'?'🛡️':u.tip==='kurum'?'🏢':'👤';
+    var durum='';
+    if(u.kycDogrulandi)durum+='✅KYC ';
+    if(u.epostaDogrulandi)durum+='✅E';
+    return '<div class="sp-item"><div class="si-icon" style="background:var(--purple);color:#fff;border:none;width:28px;height:28px;font-size:14px"><span class="material-icons" style="font-size:14px">person</span></div><div class="si-info"><div class="si-title" style="font-size:10px">'+u.ad+' '+tipEtik+'</div><div class="si-sub" style="font-size:8px;color:var(--text4)">'+u.eposta+' | Bakiye: '+u.bakiye+' TL | '+durum+'</div></div></div>';
+  }).join('');
+  h+='<div class="d-divider"></div><button class="sp-btn sp-btn-sm sp-btn-red" style="width:100%" onclick="if(confirm(\'Tüm verileri sıfırla?\')){localStorage.clear();location.reload()}">🗑️ Tüm Verileri Sıfırla</button>';
+  document.getElementById('adminIcerik').innerHTML=h;
+}
+
+// ==================== BİLDİRİM TERCİHLERİ ====================
+function bildirimTercihRender(){
+  var t=data.bildirimTercih;
+  var turler={bilet:'🎫 Bilet İşlemleri',odeme:'💰 Ödeme Bildirimleri',bekleme:'⏳ Bekleme Listesi',guvenlik:'🔒 Güvenlik Uyarıları',kampanya:'🏷️ Kampanya & İndirim'};
+  document.getElementById('bildirimTercihIcerik').innerHTML='<div class="text-sm text-3 mb-8">Hangi bildirimleri almak istediğinizi seçin.</div>'+
+    Object.keys(turler).map(function(k){
+      return '<div class="sp-item" onclick="bildirimTercihToggle(\''+k+'\')"><div class="si-icon" style="background:'+(t[k]?'var(--green)':'var(--card2)')+';color:#fff;border:none;width:28px;height:28px;font-size:14px"><span class="material-icons" style="font-size:14px">'+(t[k]?'notifications_active':'notifications_off')+'</span></div><div class="si-info"><div class="si-title" style="font-size:10px">'+turler[k]+'</div></div><div class="si-right" style="font-size:10px;color:'+(t[k]?'var(--green)':'var(--text4)')+'">'+(t[k]?'✅ Açık':'⛔ Kapalı')+'</div></div>';
+    }).join('');
+}
+function bildirimTercihToggle(k){
+  data.bildirimTercih[k]=!data.bildirimTercih[k];
+  bildirimTercihRender();
+}
+
+// ==================== TAKVİM GÖRÜNÜMÜ ====================
+function takvimRender(){
+  var el=document.getElementById('takvimIcerik');
+  var aylar=['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
+  var gunler=['Pzt','Sal','Çar','Per','Cum','Cmt','Paz'];
+  var simdi=new Date();
+  var ay=simdi.getMonth();
+  var yil=simdi.getFullYear();
+  var ilkGun=new Date(yil,ay,1).getDay();
+  var sonGun=new Date(yil,ay+1,0).getDate();
+  // Etkinlikleri aya göre grupla
+  var ayEtkinlik=data.etkinlikler.filter(function(e){var p=e.tarih.split('.')||[];return p.length===3&&parseInt(p[1])-1===ay&&parseInt(p[2])===yil});
+  var gunEtkinlik={};
+  ayEtkinlik.forEach(function(e){var g=parseInt(e.tarih.split('.')[0]);if(!gunEtkinlik[g])gunEtkinlik[g]=[];gunEtkinlik[g].push(e)});
+  var h='<div style="text-align:center;font-weight:600;font-size:14px;margin-bottom:8px">'+aylar[ay]+' '+yil+'</div>';
+  h+='<div style="display:grid;grid-template-columns:repeat(7,1fr);gap:2px;text-align:center;font-size:9px;color:var(--text4);margin-bottom:4px">'+gunler.map(function(g){return '<div>'+g+'</div>'}).join('')+'</div>';
+  h+='<div style="display:grid;grid-template-columns:repeat(7,1fr);gap:2px;text-align:center">';
+  for(var i=0;i<ilkGun;i++)h+='<div></div>';
+  for(var d=1;d<=sonGun;d++){
+    var e=gunEtkinlik[d];
+    var cls='';
+    if(e&&e.length)cls=' style="background:var(--blue);color:#fff;border-radius:50%;font-weight:600;cursor:pointer" onclick="alert(\''+e.map(function(x){return x.ad+' ('+x.saat+')'}).join('\\n')+'\')"';
+    h+='<div'+cls+' style="font-size:11px;padding:4px 0">'+d+'</div>';
+  }
+  h+='</div>';
+  if(ayEtkinlik.length){
+    h+='<div class="d-divider"></div><div class="sp-label">Bu Ayki Etkinlikler</div>';
+    h+=ayEtkinlik.map(function(e){
+      return '<div class="sp-item" onclick="etkinlikDetay('+e.id+')"><div class="si-icon" style="background:'+e.renk+';color:#fff;border:none;width:28px;height:28px;font-size:14px"><span class="material-icons" style="font-size:14px">'+e.ikon+'</span></div><div class="si-info"><div class="si-title" style="font-size:10px">'+e.ad+'</div><div class="si-sub" style="font-size:9px">'+e.tarih+' '+e.saat+'</div></div></div>';
+    }).join('');
+  } else h+='<div class="text-sm text-3 mt-8">Bu ayda etkinlik bulunmuyor.</div>';
+  el.innerHTML=h;
+}
+
+// ==================== ETKİNLİK DETAYI - FAVORİ & SEPET EKLE ====================
+function etkinlikDetayGenis(id){
+  var e=data.etkinlikler.find(function(x){return x.id===id});
+  if(!e)return;
+  var fav=data.favoriler.indexOf(id)>-1?'♥':'♡';
+  var alanlar=e.alanlar||[{ad:'Normal'}];
+  var fiyatlar=e.fiyatlar||[250];
+  var h='🎫 '+e.ad.toUpperCase()+'\n—————————\n📅 '+e.tarih+' | '+e.saat+'\n📍 '+e.sehir+', '+e.mekan+'\n🏠 '+e.adres+'\n🎭 '+e.kategori+'\n\n💰 Fiyatlar:\n'+alanlar.map(function(a,i){return'  • '+a.ad+': '+(fiyatlar[i]||'?')+' TL'}).join('\n')+'\n\n[1] Bilet Al\n[2] Koltuk Seç\n[3] '+fav+' Favori\n[4] 🛒 Sepete Ekle\n[5] Geri';
+  var sec=prompt(h,'1');
+  if(sec==='1')biletSatinAl(e.id,null);
+  else if(sec==='2')salonGoster(e.id);
+  else if(sec==='3'){favoriToggle(e.id);alert(fav==='♥'?'Favorilerden çıkarıldı':'Favorilere eklendi!');}
+  else if(sec==='4'){
+    var zs=alanlar.map(function(a,i){return'  ['+(i+1)+'] '+a.ad+' — '+(fiyatlar[i]||'?')+' TL'}).join('\n');
+    var zi=parseInt(prompt('Bölge seçin:\n'+zs,'1'))-1;
+    if(isNaN(zi)||zi<0||zi>=alanlar.length)zi=0;
+    var adet=parseInt(prompt('Adet (en fazla 2):','1'))||1;
+    if(adet>2)adet=2;
+    sepetEkle(e.id,adet,alanlar[zi].ad,zi,fiyatlar[zi]||fiyatlar[0]);
+  }
+}
+// Override existing etkinlikDetay
+function etkinlikDetay(id){etkinlikDetayGenis(id);}
+
+// ==================== ENGELLİ ERİŞİM ====================
+function engelliRender(){
+  var el=document.getElementById('engelliIcerik');
+  var engelliEtkinlikler=data.etkinlikler.filter(function(e){return kategoriEngelli(e.kategori)&&e.aktif!==false});
+  var engelliBiletler=data.biletler.filter(function(b){
+    var e=data.etkinlikler.find(function(x){return x.id===b.etkinlikId});
+    if(!e)return false;
+    var k=e.koltuklar.find(function(x){return x.id===b.koltukId});
+    return k&&k.engelli;
+  });
+  var h='<div class="sp-row mb-8"><div class="sp-option"><span class="material-icons" style="color:#0891b2">accessible</span><div class="so-title">'+engelliEtkinlikler.length+'</div><span style="font-size:9px;color:var(--text4)">Engelli Erişimli Etkinlik</span></div><div class="sp-option"><span class="material-icons" style="color:var(--blue)">confirmation_number</span><div class="so-title">'+engelliBiletler.length+'</div><span style="font-size:9px;color:var(--text4)">Engelli Bilet Satılan</span></div></div>';
+  h+='<div class="d-divider"></div><div class="sp-label">♿ Engelli Erişimi Olan Etkinlikler</div>';
+  h+=engelliEtkinlikler.map(function(e){
+    return '<div class="sp-item" onclick="etkinlikDetay('+e.id+')"><div class="si-icon" style="background:#0891b2;color:#fff;border:none"><span class="material-icons">accessible</span></div><div class="si-info"><div class="si-title">'+e.ad+'</div><div class="si-sub">'+e.tarih+' | '+e.sehir+', '+e.mekan+' | ♿ Ön sıra tekerlekli sandalye alanı</div></div></div>';
+  }).join('');
+  if(!engelliEtkinlikler.length)h+='<div class="text-sm text-3">Engelli erişimli etkinlik bulunmuyor.</div>';
+  h+='<div class="d-divider"></div><div class="text-sm" style="background:var(--card2);padding:12px;border-radius:var(--radius)">♿ <b>Engelli Bilet Bilgileri</b><br>• Tekerlekli sandalye alanları ön sırada ve geniş koridorludur<br>• Her etkinlikte sınırlı sayıda engelli koltuğu bulunur<br>• Engelli bileti yanına ek koltuk alınamaz<br>• Refakatçi varsa ayrı bilet almalıdır</div>';
+  el.innerHTML=h;
+}
+
+// ==================== E-POSTA İLE BİLET GÖNDERME ====================
+function epostaGonder(biletId){
+  var b=data.biletler.find(function(x){return x.id===biletId});
+  if(!b)return;
+  var ep=prompt('📧 E-posta adresi:',data.aktifKullanici?data.aktifKullanici.eposta:'ornek@email.com');
+  if(!ep)return;
+  var e=data.etkinlikler.find(function(x){return x.id===b.etkinlikId});
+  var mesaj='📧 Bilet E-postanız Gönderildi!\n———————————————\nKime: '+ep+'\nKonu: Bilet #'+b.biletNo+' - '+b.etkinlikAd+'\n———————————————\n';
+  mesaj+='🎫 BİLET DETAYI:\n';
+  mesaj+='Bilet No: '+b.biletNo+'\n';
+  mesaj+='Etkinlik: '+b.etkinlikAd+'\n';
+  mesaj+='Tarih: '+b.tarih+' '+b.saat+'\n';
+  mesaj+='Yer: '+b.sehir+', '+b.mekan+'\n';
+  mesaj+='Adres: '+b.adres+'\n';
+  mesaj+='Bölge: '+b.tip+'\n';
+  mesaj+='Koltuk: '+(b.koltukId||'Belirtilmemiş')+'\n';
+  mesaj+='Tutar: '+b.tutar+' TL\n';
+  mesaj+='Alıcı: '+b.alici+'\n';
+  mesaj+='QR Kod: '+b.qr+'\n';
+  mesaj+='———————————————\n';
+  mesaj+='✅ Bilet e-posta ile gönderildi!';
+  if(e&&e.koltuklar){
+    var k=e.koltuklar.find(function(x){return x.id===b.koltukId});
+    if(k&&k.engelli)mesaj+='\n♿ Bu bilet engelli koltuğudur. Tekerlekli sandalye alanına yönlendirileceksiniz.';
+  }
+  data.odemeGecmis.push({id:++data._odemeId,tur:'eposta',tutar:0,aciklama:b.etkinlikAd+' bilet e-posta gönderimi -> '+ep,tarih:new Date().toLocaleDateString('tr-TR')});
+  bildirimGonder('bilet','📧 '+b.etkinlikAd+' bileti '+ep+' adresine e-posta ile gönderildi.');
+  alert(mesaj);
+  epostaRender();
+}
+function epostaRender(){
+  var el=document.getElementById('epostaIcerik');
+  var list=data.biletler.filter(function(b){return b.durum==='gecerli'});
+  if(!list.length){el.innerHTML='<div class="text-sm text-3">Geçerli bilet bulunmuyor. Önce bilet satın alın.</div>';return;}
+  el.innerHTML='<div class="text-sm text-3 mb-8">Geçerli biletlerinizi e-posta ile gönderin.</div>'+
+    list.map(function(b){
+      var e=data.etkinlikler.find(function(x){return x.id===b.etkinlikId});
+      var eng=(e&&e.koltuklar)?(e.koltuklar.find(function(x){return x.id===b.koltukId})?.engelli?true:false):false;
+      return '<div class="sp-item"><div class="si-icon" style="background:var(--blue);color:#fff;border:none"><span class="material-icons">confirmation_number</span></div><div class="si-info"><div class="si-title" style="font-size:10px">#'+b.biletNo+' | '+b.etkinlikAd+(eng?' ♿':'')+'</div><div class="si-sub" style="font-size:9px">'+b.tarih+' | '+b.sehir+', '+b.mekan+' | '+b.tutar+' TL</div></div><div class="si-right"><button class="sp-btn sp-btn-sm" style="width:auto;padding:2px 6px;font-size:9px" onclick="epostaGonder('+b.id+')">📧 Gönder</button></div></div>';
+    }).join('');
+}
+
+// ==================== MOBİL YÜKLE (PWA Simülasyonu) ====================
+function mobilYukle(){
+  if(window.matchMedia('(display-mode: standalone)').matches){alert('✅ Uygulama zaten yüklü!');return;}
+  var msg='📱 Mobil Uygulama Yükleme\n\nBilet Sat uygulamasını cihazınıza eklemek için:\n\n1. 🔗 Tarayıcı menüsüne tıklayın\n2. 📲 "Ana Ekrana Ekle" veya "Uygulamayı Yükle"yi seçin\n3. ✅ Bitti!\n\n(Not: Bu bir PWA uygulamasıdır, internet tarayıcınız üzerinden çalışır)';
+  alert(msg);
+}
+
+// ==================== HARİTA ====================
+function haritaGoster(adres){
+  window.open('https://www.google.com/maps/search/'+encodeURIComponent(adres),'_blank');
+}
+
+// ==================== DEMO VERİ ====================
+function demoVeri(){
+  var ikonlar={konser:'music_note',tiyatro:'theater_comedy',spor:'sports_soccer',sinema:'movie',festival:'celebration',standup:'emoji_emotions',opera:'queue_music',seminer:'school',sergi:'museum',cocuk:'child_care',workshop:'build',parti:'nightlife',online:'live_tv',gezi:'explore',fuar:'storefront',espor:'sports_esports',basketbol:'sports_basketball',voleybol:'sports_volleyball',dovus:'fitness_center',dans:'accessibility_new',plaj:'beach_access',lunapark:'toys',yemek:'restaurant',kitap:'menu_book',hayvanat:'pets',acikhava:'outdoor_grill',kamp:'nature',kokteyl:'local_bar',diger:'more_horiz'};
+  var renkler={konser:'var(--purple)',tiyatro:'var(--orange)',spor:'var(--green)',sinema:'var(--red)',festival:'var(--blue)',standup:'var(--pink)',opera:'#8b5cf6',seminer:'#14b8a6',sergi:'#f59e0b',cocuk:'#f97316',workshop:'#6366f1',parti:'#ec4899',online:'#06b6d4',gezi:'#10b981',fuar:'#8b5cf6',espor:'#22c55e',basketbol:'#f97316',voleybol:'#eab308',dovus:'#dc2626',dans:'#ec4899',plaj:'#06b6d4',lunapark:'#f59e0b',yemek:'#ef4444',kitap:'#8b5cf6',hayvanat:'#22c55e',acikhava:'#14b8a6',kamp:'#15803d',kokteyl:'#ec4899',diger:'var(--text3)'};
+  var veri=[
+    {ad:'Müge Anlı ile Konser',k:'konser',s:'İstanbul',m:'Küçükçiftlik Park',a:'Küçükçiftlik Parkı, Beşiktaş, İstanbul',t:'15.07.2026',sa:'21:00',v:500,n:250,o:150,ko:2000,saY:600},
+    {ad:'Hamlet - Devlet Tiyatrosu',k:'tiyatro',s:'Ankara',m:'Şehir Tiyatrosu',a:'Atatürk Bulvarı, Ulus, Ankara',t:'18.07.2026',sa:'20:00',v:350,n:180,o:90,ko:500,saY:150},
+    {ad:'Beşiktaş - Galatasaray',k:'spor',s:'İstanbul',m:'Vodafone Park',a:'Vodafone Park, Beşiktaş, İstanbul',t:'22.07.2026',sa:'19:00',v:700,n:350,o:200,ko:42000,saY:12600},
+    {ad:'Yeni Film: Rüyalar',k:'sinema',s:'İzmir',m:'Cinemaximum',a:'Cinemaximum Forum Bornova, İzmir',t:'12.07.2026',sa:'15:30',v:120,n:80,o:50,ko:300,saY:90},
+    {ad:'İstanbul Caz Festivali',k:'festival',s:'İstanbul',m:'Harbiye Açıkhava',a:'Harbiye Açıkhava Tiyatrosu, Şişli, İstanbul',t:'25.07.2026',sa:'18:00',v:700,n:400,o:250,ko:5000,saY:1500},
+    {ad:'Barış Manço Anma',k:'konser',s:'İzmir',m:'Bostancı GM',a:'Bostancı Gösteri Merkezi, Bostancı, İzmir',t:'30.07.2026',sa:'20:30',v:400,n:200,o:120,ko:1500,saY:450},
+    {ad:'Müzikli Sabahlar',k:'konser',s:'Antalya',m:'Antalya Açıkhava',a:'Antalya Açıkhava Tiyatrosu, Muratpaşa, Antalya',t:'05.08.2026',sa:'10:00',v:300,n:150,o:75,ko:800,saY:200},
+    {ad:'Stand-Up: Cem Yılmaz',k:'standup',s:'İstanbul',m:'Maximum UNIQ',a:'Maximum UNIQ, Maslak, İstanbul',t:'28.07.2026',sa:'21:00',v:450,n:250,o:120,ko:1200,saY:360},
+    {ad:'Tosca - Opera',k:'opera',s:'İstanbul',m:'AKM',a:'Atatürk Kültür Merkezi, Taksim, İstanbul',t:'20.07.2026',sa:'20:00',v:500,n:300,o:150,ko:800,saY:240},
+    {ad:'Geleceğin Teknolojileri',k:'seminer',s:'Ankara',m:'Congresium',a:'Congresium, Söğütözü, Ankara',t:'10.08.2026',sa:'10:00',v:200,n:100,o:50,ko:1000,saY:300},
+    {ad:'Van Gogh Sergisi',k:'sergi',s:'İstanbul',m:'İstanbul Modern',a:'İstanbul Modern, Beyoğlu, İstanbul',t:'01.08.2026',sa:'11:00',v:150,n:80,o:40,ko:500,saY:150},
+    {ad:'Sihirbazlık Gösterisi',k:'cocuk',s:'İstanbul',m:'Fişekhane',a:'Fişekhane, Şişli, İstanbul',t:'02.08.2026',sa:'14:00',v:100,n:60,o:30,ko:300,saY:90},
+    {ad:'Seramik Atölyesi',k:'workshop',s:'İzmir',m:'Tarihi Havagazı Fabrikası',a:'Tarihi Havagazı Fabrikası, Alsancak, İzmir',t:'17.07.2026',sa:'13:00',v:250,n:150,o:75,ko:200,saY:60},
+    {ad:'Yaz Partisi',k:'parti',s:'Bodrum',m:'Beach Club',a:'Gümbet Beach, Bodrum, Muğla',t:'14.08.2026',sa:'23:00',v:300,n:200,o:100,ko:500,saY:150},
+    {ad:'Web3 Zirvesi',k:'online',s:'Online',m:'Zoom',a:'Çevrimiçi (Zoom linki biletle gönderilir)',t:'08.08.2026',sa:'20:00',v:100,n:50,o:25,ko:2000,saY:600},
+    {ad:'Kapadokya Balon Turu',k:'gezi',s:'Nevşehir',m:'Göreme',a:'Göreme Merkez, Nevşehir',t:'12.08.2026',sa:'05:00',v:2000,n:1200,o:600,ko:100,saY:30},
+    {ad:'Gıda Fuarı 2026',k:'fuar',s:'İstanbul',m:'TÜYAP Fuar Merkezi',a:'TÜYAP, Büyükçekmece, İstanbul',t:'06.09.2026',sa:'09:00',v:100,n:50,o:25,ko:5000,saY:1500},
+    {ad:'LoL Şampiyonluk Ligi Finali',k:'espor',s:'İstanbul',m:'Ülker Spor Arena',a:'Ülker Spor Arena, Ataşehir, İstanbul',t:'16.08.2026',sa:'16:00',v:350,n:200,o:100,ko:3000,saY:900},
+    {ad:'Fenerbahçe - Anadolu Efes',k:'basketbol',s:'İstanbul',m:'Ülker Spor Arena',a:'Ülker Spor Arena, Ataşehir, İstanbul',t:'24.08.2026',sa:'20:00',v:500,n:250,o:120,ko:5000,saY:1500},
+    {ad:'VakıfBank - Eczacıbaşı',k:'voleybol',s:'İstanbul',m:'Burhan Felek Spor Salonu',a:'Burhan Felek, Üsküdar, İstanbul',t:'19.08.2026',sa:'18:00',v:300,n:150,o:75,ko:2000,saY:600},
+    {ad:'Boks Gecesi',k:'dovus',s:'Ankara',m:'Ankara Spor Salonu',a:'Ankara Spor Salonu, Yenimahalle, Ankara',t:'28.08.2026',sa:'21:00',v:600,n:300,o:150,ko:2000,saY:600},
+    {ad:'Tango Gösterisi',k:'dans',s:'İzmir',m:'İzmir Opera Sahnesi',a:'İzmir Opera Sahnesi, Konak, İzmir',t:'22.08.2026',sa:'20:30',v:250,n:150,o:75,ko:400,saY:120},
+    {ad:'Kleopatra Plaj Günü',k:'plaj',s:'Alanya',m:'Kleopatra Plajı',a:'Kleopatra Plajı, Alanya, Antalya',t:'15.08.2026',sa:'09:00',v:80,n:50,o:25,ko:500,saY:150},
+    {ad:'Vialand Eğlence Parkı',k:'lunapark',s:'İstanbul',m:'Vialand',a:'Vialand, Eyüpsultan, İstanbul',t:'10.08.2026',sa:'10:00',v:200,n:120,o:60,ko:2000,saY:600},
+    {ad:'Şarap Tadım Gecesi',k:'yemek',s:'İzmir',m:'Urla Bağ Yolu',a:'Urla Bağ Yolu, Urla, İzmir',t:'21.08.2026',sa:'19:00',v:400,n:250,o:120,ko:200,saY:60},
+    {ad:'İmza Günü: Orhan Pamuk',k:'kitap',s:'İstanbul',m:'Bosphorus Kitabevi',a:'Bosphorus Kitabevi, Beşiktaş, İstanbul',t:'07.08.2026',sa:'14:00',v:50,n:30,o:15,ko:300,saY:90},
+    {ad:'İstanbul Akvaryum',k:'hayvanat',s:'İstanbul',m:'İstanbul Akvaryum',a:'İstanbul Akvaryum, Florya, İstanbul',t:'01.09.2026',sa:'10:00',v:120,n:80,o:40,ko:1000,saY:300},
+    {ad:'Açık Hava Sineması: Yeşilçam',k:'acikhava',s:'İstanbul',m:'Kabataş Sahne',a:'Kabataş Sahne, Beşiktaş, İstanbul',t:'27.08.2026',sa:'21:00',v:80,n:50,o:25,ko:300,saY:90},
+    {ad:'Doğa Kampı Haftasonu',k:'kamp',s:'Bolu',m:'Abant Gölü',a:'Abant Gölü Kamp Alanı, Bolu',t:'04.09.2026',sa:'09:00',v:500,n:300,o:150,ko:100,saY:30},
+    {ad:'Yılbaşı Kokteyli',k:'kokteyl',s:'İstanbul',m:'Raffles Otel',a:'Raffles Otel, Zorlu Center, İstanbul',t:'31.12.2026',sa:'21:00',v:1500,n:750,o:350,ko:500,saY:150}
+  ];
+  var koltukNum=1;
+  veri.forEach(function(e){
+    var koltuklar=[];
+    var alanlar=kategoriAlanlar(e.k);
+    var tS=kategoriSira(e.k);
+    var tK=kategoriKoltuk(e.k);
+    for(var r=0;r<tS;r++){
+      var zoneIdx=Math.min(r,alanlar.length-1);
+      for(var c=0;c<tK;c++){
+        var eng=kategoriEngelli(e.k)&&zoneIdx===0&&c===0?'♿':'';
+        koltuklar.push({id:koltukNum,sira:r+1,no:(r+1)+'-'+(c+1),alan:zoneIdx,durum:(Math.random()<0.3?'satilmis':'bos'),engelli:eng?true:false});
+        koltukNum++;
+      }
+    }
+    data.etkinlikler.push({id:++data._etkinlikId,ad:e.ad,kategori:e.k,sehir:e.s,mekan:e.m,adres:e.a,tarih:e.t,saat:e.sa,seanslar:[{saat:e.sa}],fiyatlar:[e.v,e.n,e.o],alanlar:alanlar,kontenjan:e.ko,satilan:0,ikon:ikonlar[e.k]||'event',renk:renkler[e.k]||'var(--text3)',koltuklar:koltuklar,biletler:[],aktif:true});
+  });
+  data.biletler.push({id:++data._biletId,biletNo:'B-001',etkinlikId:1,etkinlikAd:'Müge Anlı ile Konser',tarih:'15.07.2026',saat:'21:00',sehir:'İstanbul',mekan:'Küçükçiftlik Park',adres:'Küçükçiftlik Parkı, Beşiktaş, İstanbul',biletKod:'BLT-001-0001',tip:'normal',tutar:250,durum:'gecerli',satisTarih:'10.06.2026',qr:'https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=BLT-001-0001'});
+  data.biletler.push({id:++data._biletId,biletNo:'B-002',etkinlikId:3,etkinlikAd:'Beşiktaş - Galatasaray',tarih:'22.07.2026',saat:'19:00',sehir:'İstanbul',mekan:'Vodafone Park',adres:'Vodafone Park, Beşiktaş, İstanbul',biletKod:'BLT-003-0002',tip:'vip',tutar:700,durum:'gecerli',satisTarih:'08.06.2026',qr:'https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=BLT-003-0002'});
+  data.biletler.push({id:++data._biletId,biletNo:'B-003',etkinlikId:5,etkinlikAd:'İstanbul Caz Festivali',tarih:'25.07.2026',saat:'18:00',sehir:'İstanbul',mekan:'Harbiye Açıkhava',adres:'Harbiye Açıkhava Tiyatrosu, Şişli, İstanbul',biletKod:'BLT-005-0003',tip:'ogrenci',tutar:250,durum:'gecerli',satisTarih:'07.06.2026',qr:'https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=BLT-005-0003'});
+  data.indirimKodlari.push({id:++data._indirimId,kod:'FEST15',oranim:15,maxKullanim:100,kullanim:2,aktif:true,tarih:'01.06.2026'});
+  data.indirimKodlari.push({id:++data._indirimId,kod:'BILET10',oranim:10,maxKullanim:50,kullanim:0,aktif:true,tarih:'01.06.2026'});
+  data.hediyeKartlar.push({id:++data._hediyeId,kod:'HDY-00001',alici:'Ayşe Kaya',tutar:200,kalan:200,kullanim:0,aktif:true,tarih:'10.06.2026'});
+  data.siparisler.push({id:++data._siparisId,etkinlikAd:'Müge Anlı ile Konser',tip:'normal',adet:1,toplam:250,indirim:0,komisyon:5,tarih:'10.06.2026'});
+  data.siparisler.push({id:++data._siparisId,etkinlikAd:'Beşiktaş - Galatasaray',tip:'vip',adet:2,toplam:1400,indirim:0,komisyon:28,tarih:'08.06.2026'});
+  data.odemeGecmis.push({id:++data._odemeId,tur:'bilet',tutar:250,aciklama:'Müge Anlı konser (1 normal)',tarih:'10.06.2026'});
+  data.odemeGecmis.push({id:++data._odemeId,tur:'bilet',tutar:1400,aciklama:'Beşiktaş-GS (2 VIP)',tarih:'08.06.2026'});
+  // demo bekleme listesi
+  data.beklemeListesi.push({id:++data._beklemeId,etkinlikAd:'Müge Anlı ile Konser',tarih:'15.07.2026',eposta:'ali@email.com',aktif:true});
+  data.beklemeListesi.push({id:++data._beklemeId,etkinlikAd:'Stand-Up: Cem Yılmaz',tarih:'28.07.2026',eposta:'ayse@email.com',aktif:true});
+  // demo bildirimler
+  data.bildirimler.push({id:++data._bildirimId,tur:'bilet',mesaj:'🎫 Müge Anlı konser biletiniz başarıyla satın alındı.',tarih:'10.06.2026',saat:'14:30'});
+  data.bildirimler.push({id:++data._bildirimId,tur:'odeme',mesaj:'💰 250 TL ödeme alındı. Teşekkürler!',tarih:'10.06.2026',saat:'14:31'});
+  data.bildirimler.push({id:++data._bildirimId,tur:'bekleme',mesaj:'⏳ Stand-Up: Cem Yılmaz için bekleme listesine eklendiniz.',tarih:'09.06.2026',saat:'11:20'});
+  // demo verified_user fan
+  data.verifiedFanlar.push({id:++data._fanId,ad:'Ahmet Yılmaz',eposta:'ahmet@email.com',telefon:'+905321234567',tarih:'01.06.2026'});
+  // demo giris kaydı
+  data.girisKayitlari.push({id:++data._girisId,biletId:1,biletNo:'B-001',etkinlikAd:'Müge Anlı ile Konser',kod:'BLT-001-0001',ad:'Ahmet Yılmaz',tarih:'10.06.2026',saat:'20:45'});
+  // demo şüpheli işlem
+  data.guvenlik.supheliIslemler.push({sebep:'5 dk içinde 3 kez başarısız CAPTCHA (Muhtemel bot)',tarih:'09.06.2026',kullanici:'Bilinmeyen IP'});
+  data.guvenlik.supheliIslemler.push({sebep:'Aynı IP\'den 10 farklı hesaba giriş denemesi',tarih:'08.06.2026',kullanici:'VPN Tespit Edildi'});
+  navClick(document.querySelector('.bn-item'),'anaSayfa');
+}
+demoVeri();
+</script>
+</body>
+</html>

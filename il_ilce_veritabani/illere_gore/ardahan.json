@@ -1,0 +1,25 @@
+{
+  "il_id": 75,
+  "il": "Ardahan",
+  "plaka": "75",
+  "ilceler": [
+    {
+      "ilce": "Damal"
+    },
+    {
+      "ilce": "Göle"
+    },
+    {
+      "ilce": "Hanak"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Posof"
+    },
+    {
+      "ilce": "Çıldır"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "il_id": 2,
+  "il": "Adıyaman",
+  "plaka": "02",
+  "ilceler": [
+    {
+      "ilce": "Besni"
+    },
+    {
+      "ilce": "Gerger"
+    },
+    {
+      "ilce": "Gölbaşı"
+    },
+    {
+      "ilce": "Kâhta"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Samsat"
+    },
+    {
+      "ilce": "Sincik"
+    },
+    {
+      "ilce": "Tut"
+    },
+    {
+      "ilce": "Çelikhan"
+    }
+  ]
+}

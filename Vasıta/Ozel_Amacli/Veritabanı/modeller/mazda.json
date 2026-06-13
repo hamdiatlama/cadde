@@ -1,0 +1,121 @@
+{
+  "marka": "Mazda",
+  "modeller": [
+    {
+      "model": "Mazda2",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback",
+        "Sedan"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Mazda3",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Hatchback",
+        "Sedan"
+      ],
+      "uretim_baslangic": 2003
+    },
+    {
+      "model": "Mazda6",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Sedan",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2002
+    },
+    {
+      "model": "CX-3",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "CX-30",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "CX-5",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "CX-50",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "CX-60",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "CX-70",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2024
+    },
+    {
+      "model": "CX-80",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2024
+    },
+    {
+      "model": "CX-90",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "MX-5",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "MX-30",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "BT-50",
+      "segment": "P",
+      "kasa_tipleri": [
+        "Pick-up"
+      ],
+      "uretim_baslangic": 2020
+    }
+  ],
+  "kaynak": "manuel"
+}

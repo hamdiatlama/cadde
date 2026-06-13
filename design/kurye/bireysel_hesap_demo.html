@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Bireysel Hesap - Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f9fafb;--card:#fff;--card2:#f3f4f6;--border:#e5e7eb;--text1:#111;--text2:#374151;--text3:#6b7280;--text4:#9ca3af;--radius:4px;--green:#059669;--red:#dc2626;--blue:#2563eb;--orange:#d97706}
+body{font-family:'Inter',sans-serif;background:var(--bg);min-height:100vh;display:flex;flex-direction:column}
+.topbar{display:flex;align-items:center;gap:12px;padding:10px 16px;border-bottom:1px solid var(--border);background:var(--card);flex-shrink:0}
+.topbar .tb-title{font-size:16px;font-weight:600;color:var(--text1);flex:1}
+.topbar .menu-btn{width:38px;height:38px;display:flex;align-items:center;justify-content:center;border:none;background:none;color:var(--text1);cursor:pointer;border-radius:var(--radius);font-size:24px}
+.topbar .menu-btn:active{background:var(--card2)}
+.panel{display:block;margin:0 auto;width:100%;max-width:420px;background:var(--card);overflow-y:auto;flex:1}
+.section{padding:16px}
+.section+.section{border-top:1px solid var(--border)}
+.label{font-size:10px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.input{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:6px}
+.input .material-icons{font-size:18px;color:var(--text3)}
+.input input{flex:1;border:none;outline:none;font-size:13px;font-family:'Inter',sans-serif;color:var(--text1);background:transparent}
+.input input::placeholder{color:var(--text4)}
+.btn{width:100%;padding:12px;border:none;background:var(--text1);color:var(--bg);font-size:14px;font-weight:600;border-radius:var(--radius);cursor:pointer;font-family:'Inter',sans-serif}
+.btn:active{opacity:.8}
+.btn-sm{font-size:12px;padding:8px}
+.btn-out{background:var(--card);color:var(--text1);border:1px solid var(--border);margin-top:6px}
+.btn-green{background:var(--green);color:#fff}
+.badge{display:inline-flex;align-items:center;gap:4px;font-size:10px;padding:2px 8px;border-radius:8px;font-weight:600;cursor:pointer}
+.badge.green{background:#ecfdf5;color:var(--green)}
+.badge.gray{background:var(--card2);color:var(--text3)}
+.badge.blue{background:#dbeafe;color:var(--blue)}
+.badge.yellow{background:#fffbeb;color:#92400e}
+.row{display:flex;gap:6px}
+.row>.input{flex:1}
+.note{font-size:10px;color:var(--text4)}
+.drawer-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.3);z-index:99;display:none}
+.drawer-overlay.open{display:block}
+.drawer{position:fixed;top:0;right:-300px;width:300px;height:100vh;background:var(--card);border-left:1px solid var(--border);z-index:100;transition:right .25s;display:flex;flex-direction:column}
+.drawer.open{right:0}
+.drawer-header{display:flex;align-items:center;gap:8px;padding:14px 16px;border-bottom:1px solid var(--border);flex-shrink:0}
+.drawer-header h2{font-size:16px;font-weight:600;flex:1;color:var(--text1)}
+.drawer-header .close-btn{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:none;background:none;color:var(--text1);cursor:pointer;border-radius:var(--radius)}
+.drawer-scroll{flex:1;overflow-y:auto;padding:8px 0}
+.d-item{display:flex;align-items:center;gap:14px;padding:14px 16px;cursor:pointer;color:var(--text1);font-size:14px;font-weight:500}
+.d-item:active{background:var(--card2)}
+.d-item .material-icons{font-size:20px;color:var(--text3);width:20px}
+.d-item .di-badge{font-size:10px;background:var(--blue);color:#fff;padding:1px 6px;border-radius:8px}
+.d-item.d-red{color:var(--red)}
+.d-item.d-red .material-icons{color:var(--red)}
+.drawer-pages{position:relative;overflow:hidden;flex:1}
+.drawer-page{position:absolute;top:0;left:0;right:0;bottom:0;background:var(--card);z-index:2;transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column;overflow:hidden}
+.drawer-page.active{transform:translateX(0)}
+.drawer-page-header{display:flex;align-items:center;gap:8px;padding:14px 16px;border-bottom:1px solid var(--border);flex-shrink:0;background:var(--card)}
+.drawer-page-header .back-btn{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:none;background:none;color:var(--text1);cursor:pointer;border-radius:var(--radius);font-size:22px}
+.drawer-page-header h3{font-size:15px;font-weight:600;flex:1;color:var(--text1)}
+.drawer-page-scroll{flex:1;overflow-y:auto;padding:8px 0}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="tb-title">Bireysel Hesap</div>
+  <button class="menu-btn" onclick="toggleDrawer()"><span class="material-icons">menu</span></button>
+</div>
+
+<!-- CV -->
+<div class="panel" id="cvPanel">
+  <div class="section" style="text-align:center">
+    <div style="width:72px;height:72px;border-radius:50%;background:var(--card2);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;margin:0 auto 8px;overflow:hidden">
+      <span class="material-icons" style="font-size:40px;color:var(--text3)" id="cvAvatarIkon">person</span>
+      <img id="cvAvatarImg" style="display:none;width:100%;height:100%;object-fit:cover">
+    </div>
+    <div style="font-size:18px;font-weight:700;color:var(--text1);display:flex;align-items:center;justify-content:center;gap:4px">
+      Ahmet Yılmaz
+      <span class="material-icons" style="font-size:18px;color:var(--blue)" title="Kimlik Doğrulandı • Sistemde iş yapma hakkı var">verified</span>
+    </div>
+    <div style="font-size:11px;color:var(--green);font-weight:600">Durak Sahibi / Şoför</div>
+    <div style="font-size:9px;color:var(--text4);margin-top:2px;letter-spacing:1px">🇹🇷 TR·344·02·0000000000000042</div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-top:6px">
+      <div style="width:60px;height:60px;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;align-items:center;justify-content:center;background:#fff">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=TR·344·02·0000000000000042" style="width:52px;height:52px" alt="QR" title="Kullanıcı Numarası QR Kodu">
+      </div>
+      <button style="display:flex;align-items:center;gap:6px;padding:8px 12px;border:1px solid var(--border);border-radius:var(--radius);background:var(--card);cursor:pointer;font-size:11px;font-family:'Inter',sans-serif;color:var(--text1)" onclick="paylas()">
+        <span class="material-icons" style="font-size:16px">share</span> Paylaş
+      </button>
+      <button style="display:flex;align-items:center;gap:6px;padding:8px 12px;border:1px solid var(--border);border-radius:var(--radius);background:var(--card);cursor:pointer;font-size:11px;font-family:'Inter',sans-serif;color:var(--text1)" onclick="copynumber()">
+        <span class="material-icons" style="font-size:16px">content_copy</span> Kopyala
+      </button>
+      <button style="display:flex;align-items:center;gap:6px;padding:8px 12px;border:1px solid var(--border);border-radius:var(--radius);background:var(--green);cursor:pointer;font-size:11px;font-family:'Inter',sans-serif;color:#fff" onclick="alert('Arkadaşlık isteği gönderildi ✓')">
+        <span class="material-icons" style="font-size:16px">person_add</span> Arkadaş Ekle
+      </button>
+    </div>
+    <div style="font-size:10px;color:var(--text3);margin-top:2px">+90 532 123 45 67 • ahmet@example.com</div>
+    <div style="font-size:10px;color:var(--text3)">Kadıköy, İstanbul</div>
+    <div style="font-size:10px;color:var(--text3);margin-top:4px"><span style="color:var(--text4)">Yaşadığı İl:</span> İstanbul · <span style="color:var(--text4)">Çalıştığı Yer:</span> Kadıköy Merkez Durak</div>
+    <div style="display:flex;justify-content:center;gap:16px;margin-top:4px;font-size:10px;color:var(--text4)">
+      <span><span style="color:var(--text3)">Doğum:</span> 15.03.1990</span>
+      <span><span style="color:var(--text3)">Doğum Yeri:</span> Kahramanmaraş</span>
+      <span><span style="color:var(--text3)">Cinsiyet:</span> Erkek (02)</span>
+    </div>
+  </div>
+  <div class="section" style="background:var(--card2);text-align:center;font-size:10px;color:var(--text4)">
+    10 yıllık taksi şoförü, Kadıköy Merkez Durak kurucusu. İstanbul trafiğine hakim, müşteri memnuniyeti odaklı.
+  </div>
+
+  <div class="section">
+    <div class="label">İş Deneyimi</div>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;justify-content:space-between"><span style="font-weight:600;color:var(--text1)">Kadıköy Merkez Durak</span><span style="color:var(--text3)">2023 - Devam</span></div>
+        <div style="color:var(--green);font-size:10px;font-weight:500">Durak Sahibi</div>
+        <div style="color:var(--text3);font-size:10px;margin-top:2px">Durak yönetimi, taksi kayıtları, sıra sistemi, çağrı yönlendirme.</div>
+      </div>
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;justify-content:space-between"><span style="font-weight:600;color:var(--text1)">İstanbul Taksiciler Odası</span><span style="color:var(--text3)">2022 - 2023</span></div>
+        <div style="color:var(--text2);font-size:10px;font-weight:500">Oda Temsilcisi</div>
+        <div style="color:var(--text3);font-size:10px;margin-top:2px">Şoför kayıtları, evrak takibi, üye iletişimi.</div>
+      </div>
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;justify-content:space-between"><span style="font-weight:600;color:var(--text1)">Serbest Taksi Şoförü</span><span style="color:var(--text3)">2015 - 2022</span></div>
+        <div style="color:var(--text2);font-size:10px;font-weight:500">34 ABC 123</div>
+        <div style="color:var(--text3);font-size:10px;margin-top:2px">İstanbul geneli taksi hizmeti, çağrı üzeri çalışma.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Eğitim</div>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;justify-content:space-between"><span style="font-weight:600;color:var(--text1)">Anadolu Lisesi</span><span style="color:var(--text3)">2010 - 2014</span></div>
+        <div style="color:var(--text2);font-size:10px">Sayısal Bölüm</div>
+      </div>
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;justify-content:space-between"><span style="font-weight:600;color:var(--text1)">Sürücü Kursu</span><span style="color:var(--text3)">2014</span></div>
+        <div style="color:var(--text2);font-size:10px">Sınıf B</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Başarılar</div>
+    <div style="display:flex;flex-direction:column;gap:4px">
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px"><span class="material-icons" style="font-size:16px;color:var(--orange)">emoji_events</span><span style="font-weight:500;color:var(--text1)">Ayın Şoförü - Mart 2025</span></div>
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px"><span class="material-icons" style="font-size:16px;color:var(--orange)">emoji_events</span><span style="font-weight:500;color:var(--text1)">100.000 km Kazasız Sürüş</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Sertifikalar</div>
+    <div style="display:flex;flex-direction:column;gap:4px">
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px"><span class="material-icons" style="font-size:16px;color:var(--green)">verified</span><span style="flex:1;font-weight:500;color:var(--text1)">Taksi Plakası 34 ABC 123</span><span class="badge green">Aktif</span></div>
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px"><span class="material-icons" style="font-size:16px;color:var(--green)">verified</span><span style="flex:1;font-weight:500;color:var(--text1)">Durak İşletme Ruhsatı</span><span class="badge green">Aktif</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Yetenekler</div>
+    <div style="display:flex;gap:4px;flex-wrap:wrap">
+      <span class="badge" style="background:var(--card2);color:var(--text1);font-size:10px;cursor:default">İstanbul Trafik</span>
+      <span class="badge" style="background:var(--card2);color:var(--text1);font-size:10px;cursor:default">Müşteri İletişimi</span>
+      <span class="badge" style="background:var(--card2);color:var(--text1);font-size:10px;cursor:default">Durak Yönetimi</span>
+      <span class="badge" style="background:var(--card2);color:var(--text1);font-size:10px;cursor:default">Navigasyon</span>
+      <span class="badge" style="background:var(--card2);color:var(--text1);font-size:10px;cursor:default">Araç Bakımı</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Meslek</div>
+    <div style="display:flex;flex-direction:column;gap:4px">
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px"><span class="material-icons" style="font-size:16px;color:var(--text1)">work</span><span style="font-weight:500;color:var(--text1)">Taksi Şoförü</span></div>
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px"><span class="material-icons" style="font-size:16px;color:var(--text1)">work</span><span style="font-weight:500;color:var(--text1)">Durak İşletmecisi</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Dil</div>
+    <div style="display:flex;flex-direction:column;gap:4px;font-size:11px">
+      <div style="display:flex;padding:6px 0"><span style="flex:1;font-weight:500;color:var(--text1)">Türkçe</span><span style="color:var(--green);font-size:10px">Ana Dil</span></div>
+      <div style="display:flex;padding:6px 0"><span style="flex:1;font-weight:500;color:var(--text1)">İngilizce</span><span style="color:var(--text3);font-size:10px">Orta</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Sosyal Medya</div>
+    <div style="display:flex;flex-direction:column;gap:4px">
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px"><span class="material-icons" style="font-size:16px;color:var(--blue)">alternate_email</span><span style="font-weight:500;color:var(--text1)">Instagram</span><span style="font-size:10px;color:var(--text3);margin-left:auto">@ahmetyilmaz</span></div>
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px"><span class="material-icons" style="font-size:16px;color:var(--green)">alternate_email</span><span style="font-weight:500;color:var(--text1)">WhatsApp</span><span style="font-size:10px;color:var(--text3);margin-left:auto">+90 532 123 45 67</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Hesaplar</div>
+    <div style="display:flex;flex-direction:column;gap:4px" id="cvHesaplar">
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;justify-content:space-between"><span style="font-weight:600;color:var(--text1)">🏦 Türkiye İş Bankası</span><span class="badge blue">Banka</span></div>
+        <div style="font-size:10px;color:var(--text2);margin-top:4px">TR12 0006 4000 0011 2345 6789</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">Ahmet Yılmaz · TL Vadesiz</div>
+      </div>
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;justify-content:space-between"><span style="font-weight:600;color:var(--text1)">💳 PayPal</span><span class="badge blue">PayPal</span></div>
+        <div style="font-size:10px;color:var(--text2);margin-top:4px">ahmet.yilmaz@paypal.com</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">Doğrulandı</div>
+      </div>
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;justify-content:space-between"><span style="font-weight:600;color:var(--text1)">₿ Troy Hesabı</span><span class="badge yellow">Kripto</span></div>
+        <div style="font-size:10px;color:var(--text2);margin-top:4px">0x742d35Cc6634C0532925a3b844Bc4aB27c5c9f1</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">USDT · ETH</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Mülkler</div>
+    <div style="display:flex;flex-direction:column;gap:4px" id="cvMulklar">
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span style="font-weight:600;color:var(--text1)">🏍️ Honda CBR 650R</span>
+          <span class="badge yellow">Satılık</span>
+        </div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">34 FFT 789 · 2022 · 15.000 km</div>
+      </div>
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span style="font-weight:600;color:var(--text1)">🚗 2019 Volkswagen Passat</span>
+          <span class="badge yellow">Satılık</span>
+        </div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">34 ABC 123 · 120.000 km · Benzin</div>
+      </div>
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span style="font-weight:600;color:var(--text1)">🏠 Kadıköy 3+1 Daire</span>
+          <span class="badge green">Kirada</span>
+        </div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">Caferağa Mah. · 120 m² · 4. kat</div>
+      </div>
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span style="font-weight:600;color:var(--text1)">🌿 Kahramanmaraş Bağ Evi</span>
+          <span class="badge" style="background:var(--card2);color:var(--text3);font-size:9px">Muhafaza</span>
+        </div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">10 dönüm · Organik üzüm bağı</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">İşletmeler</div>
+    <div style="display:flex;flex-direction:column;gap:4px" id="cvIsletmeler">
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span style="font-weight:600;color:var(--text1)">🏢 Kadıköy Merkez Taksi Durağı</span>
+          <span class="badge green">Aktif</span>
+        </div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">Taksi Durağı · 2015 · 12 araç</div>
+      </div>
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span style="font-weight:600;color:var(--text1)">🍽️ Maraş Döner & Kebap</span>
+          <span class="badge green">Aktif</span>
+        </div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">Restoran · 2022 · 4 çalışan</div>
+      </div>
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span style="font-weight:600;color:var(--text1)">🔧 Yılmaz Oto Servis</span>
+          <span class="badge" style="background:var(--card2);color:var(--text3);font-size:9px">Pasif</span>
+        </div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">Oto Tamir · 2018-2024 · Devredildi</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Posta Adresleri</div>
+    <div style="display:flex;flex-direction:column;gap:4px" id="cvAdresler">
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;align-items:center;gap:6px"><span class="material-icons" style="font-size:14px;color:var(--green)">home</span><span style="font-weight:600;color:var(--text1)">Ev</span></div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">Caferağa Mah. Dr. Esat Işık Cad. No:15, Kadıköy/İstanbul 34710</div>
+      </div>
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;align-items:center;gap:6px"><span class="material-icons" style="font-size:14px;color:var(--blue)">work</span><span style="font-weight:600;color:var(--text1)">İş</span></div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">Mecidiyeköy Mah. Büyükdere Cad. No:100, Şişli/İstanbul 34387</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Referanslar</div>
+    <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px;margin-bottom:4px">
+      <div style="font-weight:600;color:var(--text1)">Mehmet Demir</div>
+      <div style="font-size:10px;color:var(--text3)">İstanbul Taksiciler Odası Başkanı</div>
+    </div>
+    <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+      <div style="font-weight:600;color:var(--text1)">Ali Kaya</div>
+      <div style="font-size:10px;color:var(--text3)">Kadıköy Belediyesi Ulaşım Müdürü</div>
+    </div>
+  </div>
+</div>
+
+<!-- DRAWER -->
+<div class="drawer-overlay" id="overlay" onclick="toggleDrawer()"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-header">
+    <button class="back-btn" id="drawerBackBtn" onclick="drawerBack()" style="display:none"><span class="material-icons">arrow_back</span></button>
+    <h2 id="drawerTitle">Ayarlar</h2>
+    <button class="close-btn" onclick="toggleDrawer()"><span class="material-icons">close</span></button>
+  </div>
+  <div class="drawer-pages" id="drawerPages">
+    <!-- ANA MENÜ -->
+    <div class="drawer-page active" id="pageMain">
+      <div class="d-item" onclick="drawerPage('profil')"><span class="material-icons">person</span>Profil Bilgileri<span class="material-icons" style="margin-left:auto">chevron_right</span></div>
+      <div class="d-item" onclick="drawerPage('kimlik')"><span class="material-icons">badge</span>Kimlik Onayı<span class="di-badge">Mavi Tik</span><span class="material-icons" style="margin-left:auto">chevron_right</span></div>
+      <div class="d-item" onclick="drawerPage('eposta')"><span class="material-icons">mail</span>E-posta Adresleri<span class="material-icons" style="margin-left:auto">chevron_right</span></div>
+      <div class="d-item" onclick="drawerPage('telefon')"><span class="material-icons">phone</span>Telefon Numaraları<span class="material-icons" style="margin-left:auto">chevron_right</span></div>
+      <div class="d-item" onclick="drawerPage('sosyal')"><span class="material-icons">alternate_email</span>Sosyal Medya<span class="material-icons" style="margin-left:auto">chevron_right</span></div>
+      <div class="d-item" onclick="drawerPage('meslek')"><span class="material-icons">work</span>Meslek / Uzmanlık<span class="material-icons" style="margin-left:auto">chevron_right</span></div>
+      <div class="d-item" onclick="drawerPage('adres')"><span class="material-icons">location_on</span>Posta Adresleri<span class="material-icons" style="margin-left:auto">chevron_right</span></div>
+      <div class="d-item" onclick="drawerPage('hesaplar')"><span class="material-icons">account_balance_wallet</span>Hesaplar<span class="material-icons" style="margin-left:auto">chevron_right</span></div>
+      <div class="d-item" onclick="drawerPage('mulklar')"><span class="material-icons">garage</span>Mülkler<span class="material-icons" style="margin-left:auto">chevron_right</span></div>
+      <div class="d-item" onclick="drawerPage('isletmeler')"><span class="material-icons">business</span>İşletmeler<span class="material-icons" style="margin-left:auto">chevron_right</span></div>
+      <div class="d-item" onclick="drawerPage('gizlilik')"><span class="material-icons">lock</span>Gizlilik Ayarları<span class="material-icons" style="margin-left:auto">chevron_right</span></div>
+      <div class="d-item" onclick="drawerPage('arkadaslar')"><span class="material-icons">people</span>Arkadaşlar<span class="material-icons" style="margin-left:auto">chevron_right</span></div>
+      <div class="d-item d-red" onclick="toggleDrawer();if(confirm('Çıkış yapılsın mı?'))alert('Çıkış yapıldı')" style="margin-top:16px;border-top:1px solid var(--border);padding-top:16px"><span class="material-icons" style="color:var(--red)">logout</span>Çıkış Yap</div>
+    </div>
+    <div class="drawer-page" id="pageprofil">
+      <div class="drawer-page-header">
+        <button class="back-btn" onclick="drawerBack()"><span class="material-icons">arrow_back</span></button>
+        <h3>Profil Bilgileri</h3>
+      </div>
+      <div class="drawer-page-scroll">
+        <div style="text-align:center;margin-bottom:8px">
+          <label style="cursor:pointer;display:inline-block;position:relative">
+            <div style="width:60px;height:60px;border-radius:50%;background:var(--card2);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;margin:0 auto;overflow:hidden">
+              <span class="material-icons" style="font-size:32px;color:var(--text3)" id="drawerAvatarIkon">person</span>
+              <img id="drawerAvatarImg" style="display:none;width:100%;height:100%;object-fit:cover">
+            </div>
+            <div style="position:absolute;bottom:-2px;right:-2px;width:20px;height:20px;border-radius:50%;background:var(--text1);display:flex;align-items:center;justify-content:center"><span class="material-icons" style="font-size:12px;color:#fff">camera_alt</span></div>
+            <input type="file" accept="image/*" style="display:none" id="drawerFotoInput" onchange="drawerFotoYukle(this)">
+          </label>
+          <div class="note" style="margin-top:2px;font-size:9px">Fotoğraf yüklemek için tıklayın</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;padding:6px 8px;background:var(--card2);border-radius:var(--radius);margin-bottom:6px;font-size:10px">
+          <span class="material-icons" style="font-size:14px;color:var(--text3)">badge</span>
+          <span style="flex:1"><span style="color:var(--text3)">Kullanıcı No:</span> <span style="font-weight:600;color:var(--text1);letter-spacing:1px">🇹🇷 TR·344·02·0000000000000042</span></span>
+          <span style="color:var(--text4);font-size:8px">Sistem</span>
+        </div>
+        <div class="input" style="padding:7px 10px;font-size:11px;margin-bottom:3px"><span class="material-icons" style="font-size:16px">person</span><input type="text" value="Ahmet Yılmaz" style="font-size:11px"></div>
+        <div class="input" style="padding:7px 10px;font-size:11px;margin-bottom:3px"><span class="material-icons" style="font-size:16px">badge</span><input type="text" value="Durak Sahibi / Şoför" style="font-size:11px"></div>
+        <div class="input" style="padding:7px 10px;font-size:11px;margin-bottom:3px"><span class="material-icons" style="font-size:16px">phone</span><input type="text" value="+90 532 123 45 67" style="font-size:11px"></div>
+        <div class="input" style="padding:7px 10px;font-size:11px;margin-bottom:3px"><span class="material-icons" style="font-size:16px">location_on</span><input type="text" value="Kadıköy, İstanbul" style="font-size:11px"></div>
+        <div style="display:flex;gap:4px"><div class="input" style="padding:7px 10px;font-size:11px;margin-bottom:3px;flex:1"><span class="material-icons" style="font-size:16px">map</span><input type="text" value="İstanbul" style="font-size:11px"></div><div class="input" style="padding:7px 10px;font-size:11px;margin-bottom:3px;flex:1"><span class="material-icons" style="font-size:16px">work</span><input type="text" value="Kadıköy Merkez Durak" style="font-size:11px"></div></div>
+        <div style="display:flex;gap:4px"><div class="input" style="padding:7px 10px;font-size:11px;margin-bottom:3px;flex:1"><span class="material-icons" style="font-size:16px">cake</span><input type="text" value="15.03.1990" style="font-size:11px"></div><div class="input" style="padding:7px 10px;font-size:11px;margin-bottom:3px;flex:1"><span class="material-icons" style="font-size:16px">flag</span><input type="text" value="Kahramanmaraş" style="font-size:11px"></div></div>
+        <div style="display:flex;gap:4px;margin-bottom:6px">
+          <label style="display:flex;align-items:center;gap:4px;padding:7px 10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px;flex:1;cursor:pointer;background:var(--card)">
+            <span class="material-icons" style="font-size:16px;color:var(--text3)">wc</span>
+            <select id="drawerCinsiyet" style="border:none;outline:none;font-size:11px;font-family:'Inter',sans-serif;color:var(--text1);background:transparent;flex:1;cursor:pointer">
+              <option value="Erkek">Erkek (02)</option>
+              <option value="Kadın">Kadın (01)</option>
+              <option value="İşletme">İşletme (00)</option>
+            </select>
+          </label>
+        </div>
+        <button class="btn btn-sm" style="padding:7px;font-size:11px" onclick="alert('Profil güncellendi')">Profili Güncelle</button>
+      </div>
+    </div>
+    <div class="drawer-page" id="pagekimlik">
+      <div class="drawer-page-header">
+        <button class="back-btn" onclick="drawerBack()"><span class="material-icons">arrow_back</span></button>
+        <h3>Kimlik Onayı</h3>
+      </div>
+      <div class="drawer-page-scroll">
+        <div id="kimlikDrawerContent" style="padding:0 16px 12px">
+          <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--blue);border-radius:var(--radius);font-size:10px;background:#dbeafe;margin-bottom:4px">
+            <span class="material-icons" style="font-size:14px;color:var(--blue)">verified</span>
+            <span style="flex:1"><span style="font-weight:500;color:var(--text1)">Kimlik Doğrulandı</span><br><span class="note">T.C. Kimlik Kartı ile onaylandı</span></span>
+            <span class="badge blue" style="font-size:8px">Onaylı</span>
+          </div>
+          <div style="padding:8px;font-size:9px;color:var(--text4);background:var(--card2);border-radius:var(--radius);margin-bottom:4px">
+            Mavi tik, kimliği doğrulanmış kullanıcılara <b style="color:var(--text1)">ücretsiz</b> verilir ve sistemde iş yapma hakkı tanır.
+          </div>
+          <div style="padding:8px;border:1px dashed var(--border);border-radius:var(--radius);font-size:9px;color:var(--text3);text-align:center;cursor:pointer" onclick="document.getElementById('drawerEvrakUpload').click()">
+            <span class="material-icons" style="font-size:16px;display:block;color:var(--text4)">badge</span>
+            Resmi Evrak Yükle (T.C. Kimlik / Pasaport)
+            <input type="file" accept="image/*,.pdf" style="display:none" id="drawerEvrakUpload" onchange="alert('Evrak yüklendi. Admin onayı bekleniyor.')">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="drawer-page" id="pageeposta">
+      <div class="drawer-page-header">
+        <button class="back-btn" onclick="drawerBack()"><span class="material-icons">arrow_back</span></button>
+        <h3>E-posta Adresleri</h3>
+      </div>
+      <div class="drawer-page-scroll">
+        <div id="epostaDrawerContent" style="padding:0 16px 12px">
+          <div style="display:flex;flex-direction:column;gap:4px" id="drawerEpostaListe">
+            <div style="padding:8px;border:1px solid var(--blue);border-radius:var(--radius);font-size:10px;background:#f0f7ff">
+              <div style="display:flex;align-items:center;gap:6px">
+                <span class="material-icons" style="font-size:14px;color:var(--blue)">verified</span>
+                <span style="flex:1;font-weight:600;color:var(--text1)">ahmet@example.com</span>
+                <span class="badge blue" style="font-size:7px">Birincil</span>
+              </div>
+              <div style="display:flex;gap:4px;margin-top:4px;flex-wrap:wrap">
+                <span style="color:var(--text4);font-size:8px;flex:1">Sistem kaydı · Silinemez</span>
+                <span class="gizlilikBadge" style="background:var(--text1);color:#fff;font-size:7px;padding:1px 6px;border-radius:6px;cursor:pointer" onclick="gizlilikSec(this,'epostaBirincil')">🌍 Herkes</span>
+                <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'epostaBirincil')">👥 Arkadaşlar</span>
+                <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'epostaBirincil')">🔒 Kimse</span>
+              </div>
+            </div>
+          </div>
+          <div class="label" style="margin-top:6px;font-size:9px">Ek E-posta Adresleri</div>
+          <div style="display:flex;flex-direction:column;gap:4px" id="drawerEkEpostaListe">
+          </div>
+          <div class="label" style="margin-top:6px;font-size:9px">Yeni E-posta Ekle</div>
+          <div class="input" style="padding:7px 10px;font-size:11px;margin-bottom:3px"><span class="material-icons" style="font-size:16px">mail</span><input type="text" id="drawerYeniEposta" placeholder="ornek@site.com" style="font-size:10px"></div>
+          <div style="display:flex;gap:3px;margin-bottom:4px;flex-wrap:wrap">
+            <span class="badge" style="background:var(--text1);color:#fff;font-size:8px;cursor:pointer" onclick="drawerEtiketSec(this)">Kişisel</span>
+            <span class="badge" style="background:var(--card2);color:var(--text3);font-size:8px;cursor:pointer" onclick="drawerEtiketSec(this)">İş</span>
+            <span class="badge" style="background:var(--card2);color:var(--text3);font-size:8px;cursor:pointer" onclick="drawerEtiketSec(this)">Öğrenci</span>
+          </div>
+          <button class="btn btn-sm" style="padding:7px;font-size:10px" onclick="drawerEpostaEkle()">E-posta Ekle</button>
+        </div>
+      </div>
+    </div>
+    <div class="drawer-page" id="pagetelefon">
+      <div class="drawer-page-header">
+        <button class="back-btn" onclick="drawerBack()"><span class="material-icons">arrow_back</span></button>
+        <h3>Telefon Numaraları</h3>
+      </div>
+      <div class="drawer-page-scroll">
+        <div id="telefonDrawerContent" style="padding:0 16px 12px">
+          <div style="display:flex;flex-direction:column;gap:4px" id="drawerTelListe">
+            <div style="padding:8px;border:1px solid var(--blue);border-radius:var(--radius);font-size:10px;background:#f0f7ff">
+              <div style="display:flex;align-items:center;gap:6px">
+                <span class="material-icons" style="font-size:14px;color:var(--blue)">verified</span>
+                <span style="flex:1;font-weight:600;color:var(--text1)">+90 532 123 45 67</span>
+                <span class="badge blue" style="font-size:7px">Birincil</span>
+              </div>
+              <div style="display:flex;gap:4px;margin-top:4px;flex-wrap:wrap">
+                <span style="color:var(--text4);font-size:8px;flex:1">Sistem kaydı · Silinemez</span>
+                <span class="gizlilikBadge" style="background:var(--text1);color:#fff;font-size:7px;padding:1px 6px;border-radius:6px;cursor:pointer" onclick="gizlilikSec(this,'telBirincil')">🌍 Herkes</span>
+                <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'telBirincil')">👥 Arkadaşlar</span>
+                <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'telBirincil')">🔒 Kimse</span>
+              </div>
+            </div>
+          </div>
+          <div class="label" style="margin-top:6px;font-size:9px">Ek Numaralar</div>
+          <div style="display:flex;flex-direction:column;gap:4px" id="drawerEkTelListe">
+            <div style="display:flex;align-items:center;gap:6px;padding:7px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px">
+              <span class="material-icons" style="font-size:14px;color:var(--text3)">phone</span>
+              <span style="flex:1;font-weight:500;color:var(--text1)">+90 216 555 44 33</span>
+              <span style="font-size:8px;color:var(--text4)">İş</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'ekTel')">🌍 Herkes</span>
+              <span class="gizlilikBadge" style="background:var(--text1);color:#fff;font-size:7px;padding:1px 6px;border-radius:6px;cursor:pointer" onclick="gizlilikSec(this,'ekTel')">👥 Arkadaşlar</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'ekTel')">🔒 Kimse</span>
+              <span class="material-icons" style="font-size:12px;color:var(--text4);cursor:pointer;flex-shrink:0" onclick="this.closest('div').remove()">close</span>
+            </div>
+          </div>
+          <div class="label" style="margin-top:6px;font-size:9px">Yeni Numara Ekle</div>
+          <div class="input" style="padding:7px 10px;font-size:11px;margin-bottom:3px"><span class="material-icons" style="font-size:16px">phone</span><input type="text" id="drawerYeniTel" placeholder="+90 ___ ___ __ __" style="font-size:10px"></div>
+          <div style="display:flex;gap:3px;margin-bottom:4px;flex-wrap:wrap">
+            <span class="badge" style="background:var(--text1);color:#fff;font-size:8px;cursor:pointer" onclick="drawerEtiketSec(this)">Kişisel</span>
+            <span class="badge" style="background:var(--card2);color:var(--text3);font-size:8px;cursor:pointer" onclick="drawerEtiketSec(this)">İş</span>
+            <span class="badge" style="background:var(--card2);color:var(--text3);font-size:8px;cursor:pointer" onclick="drawerEtiketSec(this)">Ev</span>
+            <span class="badge" style="background:var(--card2);color:var(--text3);font-size:8px;cursor:pointer" onclick="drawerEtiketSec(this)">Acil</span>
+          </div>
+          <button class="btn btn-sm" style="padding:7px;font-size:10px" onclick="drawerTelEkle()">Numara Ekle</button>
+        </div>
+      </div>
+    </div>
+    <div class="drawer-page" id="pagesosyal">
+      <div class="drawer-page-header">
+        <button class="back-btn" onclick="drawerBack()"><span class="material-icons">arrow_back</span></button>
+        <h3>Sosyal Medya</h3>
+      </div>
+      <div class="drawer-page-scroll">
+        <div id="sosyalDrawerContent" style="padding:0 16px 12px">
+          <div style="display:flex;flex-direction:column;gap:4px" id="drawerSmListe">
+            <div style="padding:8px;border:1px solid var(--blue);border-radius:var(--radius);font-size:10px;background:#f0f7ff">
+              <div style="display:flex;align-items:center;gap:6px">
+                <span class="material-icons" style="font-size:14px;color:var(--blue)">verified</span>
+                <span style="font-weight:500;color:var(--text1)">Instagram</span>
+                <span style="font-size:9px;color:var(--text3);margin-left:auto">@ahmetyilmaz</span>
+                <span class="badge blue" style="font-size:7px">Birincil</span>
+              </div>
+              <div style="display:flex;gap:4px;margin-top:4px;flex-wrap:wrap">
+                <span style="color:var(--text4);font-size:8px;flex:1">Sistem kaydı · Silinemez</span>
+                <span class="gizlilikBadge" style="background:var(--text1);color:#fff;font-size:7px;padding:1px 6px;border-radius:6px;cursor:pointer" onclick="gizlilikSec(this,'smBirincil')">🌍 Herkes</span>
+                <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'smBirincil')">👥 Arkadaşlar</span>
+                <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'smBirincil')">🔒 Kimse</span>
+              </div>
+            </div>
+          </div>
+          <div class="label" style="margin-top:6px;font-size:9px">Ek Hesaplar</div>
+          <div style="display:flex;flex-direction:column;gap:4px" id="drawerEkSmListe">
+          </div>
+          <div class="label" style="margin-top:6px;font-size:9px">Yeni Hesap Ekle</div>
+          <div class="input" style="padding:7px 10px;font-size:11px;margin-bottom:3px"><span class="material-icons" style="font-size:16px">alternate_email</span><input type="text" id="drawerYeniSm" placeholder="Kullanıcı adı veya URL" style="font-size:10px"></div>
+          <div style="display:flex;gap:3px;margin-bottom:4px;flex-wrap:wrap">
+            <span class="badge" style="background:var(--text1);color:#fff;font-size:8px;cursor:pointer" onclick="drawerEtiketSec(this)">Instagram</span>
+            <span class="badge" style="background:var(--card2);color:var(--text3);font-size:8px;cursor:pointer" onclick="drawerEtiketSec(this)">Facebook</span>
+            <span class="badge" style="background:var(--card2);color:var(--text3);font-size:8px;cursor:pointer" onclick="drawerEtiketSec(this)">Twitter</span>
+            <span class="badge" style="background:var(--card2);color:var(--text3);font-size:8px;cursor:pointer" onclick="drawerEtiketSec(this)">YouTube</span>
+            <span class="badge" style="background:var(--card2);color:var(--text3);font-size:8px;cursor:pointer" onclick="drawerEtiketSec(this)">LinkedIn</span>
+          </div>
+          <button class="btn btn-sm" style="padding:7px;font-size:10px" onclick="drawerSmEkle()">Hesap Ekle</button>
+        </div>
+      </div>
+    </div>
+    <div class="drawer-page" id="pagemeslek">
+      <div class="drawer-page-header">
+        <button class="back-btn" onclick="drawerBack()"><span class="material-icons">arrow_back</span></button>
+        <h3>Meslek / Uzmanlık</h3>
+      </div>
+      <div class="drawer-page-scroll">
+        <div id="meslekDrawerContent" style="padding:0 16px 12px">
+          <div style="display:flex;flex-direction:column;gap:4px" id="drawerMeslekListe">
+            <div style="padding:8px;border:1px solid var(--blue);border-radius:var(--radius);font-size:10px;background:#f0f7ff">
+              <div style="display:flex;align-items:center;gap:6px">
+                <span class="material-icons" style="font-size:14px;color:var(--blue)">verified</span>
+                <span style="flex:1;font-weight:600;color:var(--text1)">Taksi Şoförü</span>
+                <span class="badge blue" style="font-size:7px">Birincil</span>
+              </div>
+              <div style="display:flex;gap:4px;margin-top:4px;flex-wrap:wrap">
+                <span style="color:var(--text4);font-size:8px;flex:1">Sistem kaydı · Silinemez</span>
+                <span class="gizlilikBadge" style="background:var(--text1);color:#fff;font-size:7px;padding:1px 6px;border-radius:6px;cursor:pointer" onclick="gizlilikSec(this,'meslekBirincil')">🌍 Herkes</span>
+                <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'meslekBirincil')">👥 Arkadaşlar</span>
+                <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'meslekBirincil')">🔒 Kimse</span>
+              </div>
+            </div>
+          </div>
+          <div class="label" style="margin-top:6px;font-size:9px">Ek Meslekler</div>
+          <div style="display:flex;flex-direction:column;gap:4px" id="drawerEkMeslekListe">
+            <div style="display:flex;align-items:center;gap:6px;padding:7px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px">
+              <span class="material-icons" style="font-size:14px;color:var(--text3)">work</span>
+              <span style="flex:1;font-weight:500;color:var(--text1)">Durak İşletmecisi</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--text1);color:#fff" onclick="gizlilikSec(this,'ekMeslek')">🌍 Herkes</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'ekMeslek')">👥 Arkadaşlar</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'ekMeslek')">🔒 Kimse</span>
+              <span class="material-icons" style="font-size:12px;color:var(--text4);cursor:pointer;flex-shrink:0" onclick="this.closest('div').remove()">close</span>
+            </div>
+          </div>
+          <div style="display:flex;gap:3px;flex-wrap:wrap;margin:4px 0">
+            <span class="badge" style="cursor:pointer;background:var(--card2);color:var(--text3);font-size:8px;padding:2px 6px" onclick="drawerMeslekEkle('Taksi Şoförü')">Taksi Şoförü</span>
+            <span class="badge" style="cursor:pointer;background:var(--card2);color:var(--text3);font-size:8px;padding:2px 6px" onclick="drawerMeslekEkle('Durak İşletmecisi')">Durak İşletmecisi</span>
+            <span class="badge" style="cursor:pointer;background:var(--card2);color:var(--text3);font-size:8px;padding:2px 6px" onclick="drawerMeslekEkle('Oda Yöneticisi')">Oda Yöneticisi</span>
+            <span class="badge" style="cursor:pointer;background:var(--card2);color:var(--text3);font-size:8px;padding:2px 6px" onclick="drawerMeslekEkle('Minibüs Şoförü')">Minibüs Şoförü</span>
+            <span class="badge" style="cursor:pointer;background:var(--card2);color:var(--text3);font-size:8px;padding:2px 6px" onclick="drawerMeslekEkle('Kurye')">Kurye</span>
+            <span class="badge" style="cursor:pointer;background:var(--card2);color:var(--text3);font-size:8px;padding:2px 6px" onclick="drawerMeslekEkle('Filozof Sürücü')">Filozof Sürücü</span>
+          </div>
+          <div class="input" style="padding:7px 10px;font-size:11px;margin:4px 0"><span class="material-icons" style="font-size:16px">add</span><input type="text" id="drawerYeniMeslek" placeholder="Farklı meslek ekle" style="font-size:10px"></div>
+          <button class="btn btn-sm" style="padding:7px;font-size:10px" onclick="drawerYeniMeslekEkle()">Ekle</button>
+        </div>
+      </div>
+    </div>
+    <div class="drawer-page" id="pageadres">
+      <div class="drawer-page-header">
+        <button class="back-btn" onclick="drawerBack()"><span class="material-icons">arrow_back</span></button>
+        <h3>Posta Adresleri</h3>
+      </div>
+      <div class="drawer-page-scroll">
+        <div id="adresDrawerContent" style="padding:0 16px 12px">
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <div style="padding:8px;border:1px solid var(--blue);border-radius:var(--radius);font-size:10px;background:#f0f7ff">
+              <div style="display:flex;align-items:center;gap:6px">
+                <span class="material-icons" style="font-size:14px;color:var(--blue)">verified</span>
+                <span style="font-weight:500;color:var(--text1)">Ev</span>
+                <span class="badge blue" style="font-size:7px;margin-left:auto">Birincil</span>
+              </div>
+              <div style="font-size:9px;color:var(--text3);margin:2px 0">Caferağa Mah. Dr. Esat Işık Cad. No:15, Kadıköy/İstanbul 34710</div>
+              <div style="display:flex;gap:4px;margin-top:4px;flex-wrap:wrap">
+                <span style="color:var(--text4);font-size:8px;flex:1">Sistem kaydı · Silinemez</span>
+                <span class="gizlilikBadge" style="background:var(--text1);color:#fff;font-size:7px;padding:1px 6px;border-radius:6px;cursor:pointer" onclick="gizlilikSec(this,'adresBirincil')">🌍 Herkes</span>
+                <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'adresBirincil')">👥 Arkadaşlar</span>
+                <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'adresBirincil')">🔒 Kimse</span>
+              </div>
+            </div>
+          </div>
+          <div class="label" style="margin-top:6px;font-size:9px">Ek Adresler</div>
+          <div style="display:flex;flex-direction:column;gap:4px" id="ekAdresListe">
+            <div style="display:flex;align-items:center;gap:6px;padding:7px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px">
+              <span class="material-icons" style="font-size:14px;color:var(--blue)">work</span>
+              <span style="flex:1"><span style="font-weight:500;color:var(--text1)">İş</span><br><span style="font-size:9px;color:var(--text3)">Mecidiyeköy Mah. Büyükdere Cad. No:100, Şişli/İstanbul 34387</span></span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--text1);color:#fff" onclick="gizlilikSec(this,'ekAdres')">🌍 Herkes</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'ekAdres')">👥 Arkadaşlar</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'ekAdres')">🔒 Kimse</span>
+              <span class="material-icons" style="font-size:12px;color:var(--text4);cursor:pointer;flex-shrink:0" onclick="this.closest('div').remove()">close</span>
+            </div>
+          </div>
+          <div class="label" style="margin-top:6px;font-size:9px">Yeni Adres Ekle</div>
+          <div style="display:flex;gap:3px;margin-bottom:4px;flex-wrap:wrap">
+            <span class="badge" style="background:var(--text1);color:#fff;font-size:8px;cursor:pointer" onclick="adresEtiketSec(this)">Ev</span>
+            <span class="badge" style="background:var(--card2);color:var(--text3);font-size:8px;cursor:pointer" onclick="adresEtiketSec(this)">İş</span>
+            <span class="badge" style="background:var(--card2);color:var(--text3);font-size:8px;cursor:pointer" onclick="adresEtiketSec(this)">Yazlık</span>
+            <span class="badge" style="background:var(--card2);color:var(--text3);font-size:8px;cursor:pointer" onclick="adresEtiketSec(this)">Okul</span>
+            <span class="badge" style="background:var(--card2);color:var(--text3);font-size:8px;cursor:pointer" onclick="adresEtiketSec(this)">Aile</span>
+            <span class="badge" style="background:var(--card2);color:var(--text3);font-size:8px;cursor:pointer" onclick="adresEtiketSec(this)">Fatura</span>
+            <span class="badge" style="background:var(--card2);color:var(--text3);font-size:8px;cursor:pointer" onclick="adresEtiketSec(this)">Şube</span>
+            <span class="badge" style="background:var(--card2);color:var(--text3);font-size:8px;cursor:pointer" onclick="adresEtiketSec(this)">Diğer</span>
+          </div>
+          <div class="input" style="padding:7px 10px;font-size:11px;margin-bottom:3px"><span class="material-icons" style="font-size:16px">local_offer</span><input type="text" id="yeniAdresEtiket" placeholder="Etiket (Ev, İş...)" style="font-size:10px"></div>
+          <div class="input" style="padding:7px 10px;font-size:11px;margin-bottom:3px"><span class="material-icons" style="font-size:16px">location_on</span><input type="text" id="yeniAdresSatir" placeholder="Adres satırı" style="font-size:10px"></div>
+          <div style="display:flex;gap:4px">
+            <div class="input" style="padding:7px 10px;font-size:11px;margin-bottom:3px;flex:1"><span class="material-icons" style="font-size:16px">map</span><input type="text" id="yeniAdresIlce" placeholder="İlçe" style="font-size:10px"></div>
+            <div class="input" style="padding:7px 10px;font-size:11px;margin-bottom:3px;flex:1"><span class="material-icons" style="font-size:16px">flag</span><input type="text" id="yeniAdresSehir" placeholder="Şehir" style="font-size:10px"></div>
+          </div>
+          <div class="input" style="padding:7px 10px;font-size:11px;margin-bottom:3px"><span class="material-icons" style="font-size:16px">pin</span><input type="text" id="yeniAdresPosta" placeholder="Posta kodu" style="font-size:10px"></div>
+          <button class="btn btn-sm" style="padding:7px;font-size:10px" onclick="adresEkle()">Adres Ekle</button>
+        </div>
+      </div>
+    </div>
+    <!-- HESAPLAR -->
+    <div class="drawer-page" id="pagehesaplar">
+      <div class="drawer-page-header">
+        <button class="back-btn" onclick="drawerBack()"><span class="material-icons">arrow_back</span></button>
+        <h3>Hesaplar</h3>
+      </div>
+      <div class="drawer-page-scroll">
+        <div id="hesaplarDrawerContent" style="padding:0 16px 12px">
+          <div style="display:flex;flex-direction:column;gap:4px" id="hesaplarListe">
+            <div style="padding:8px;border:1px solid var(--blue);border-radius:var(--radius);font-size:10px;background:#f0f7ff">
+              <div style="display:flex;align-items:center;gap:6px">
+                <span class="material-icons" style="font-size:16px;color:var(--blue)">account_balance</span>
+                <span style="flex:1;font-weight:500;color:var(--text1)">Türkiye İş Bankası</span>
+                <span class="badge blue" style="font-size:7px">Birincil</span>
+              </div>
+              <div style="font-size:9px;color:var(--text3);margin:2px 0">TR12 0006 4000 0011 2345 6789 · TL Vadesiz</div>
+              <div style="display:flex;gap:4px;margin-top:4px;flex-wrap:wrap">
+                <span style="color:var(--text4);font-size:8px;flex:1">Sistem kaydı · Silinemez</span>
+                <span class="gizlilikBadge" style="background:var(--text1);color:#fff;font-size:7px;padding:1px 6px;border-radius:6px;cursor:pointer" onclick="gizlilikSec(this,'hesapBirincil')">🌍 Herkes</span>
+                <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'hesapBirincil')">👥 Arkadaşlar</span>
+                <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'hesapBirincil')">🔒 Kimse</span>
+              </div>
+            </div>
+          </div>
+          <div class="label" style="margin-top:6px;font-size:9px">Ek Hesaplar</div>
+          <div style="display:flex;flex-direction:column;gap:4px" id="ekHesaplarListe">
+            <div style="display:flex;align-items:center;gap:6px;padding:7px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px">
+              <span class="material-icons" style="font-size:14px;color:var(--blue)">paypal</span>
+              <span style="flex:1"><span style="font-weight:500;color:var(--text1)">PayPal</span><br><span style="font-size:9px;color:var(--text3)">ahmet.yilmaz@paypal.com</span></span>
+              <span class="badge blue" style="font-size:8px">PayPal</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--text1);color:#fff" onclick="gizlilikSec(this,'ekHesap')">🌍 Herkes</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'ekHesap')">👥 Arkadaşlar</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'ekHesap')">🔒 Kimse</span>
+              <span class="material-icons" style="font-size:12px;color:var(--text4);cursor:pointer;flex-shrink:0" onclick="this.closest('div').remove()">close</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;padding:7px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px">
+              <span class="material-icons" style="font-size:14px;color:var(--orange)">currency_bitcoin</span>
+              <span style="flex:1"><span style="font-weight:500;color:var(--text1)">Troy Hesabı</span><br><span style="font-size:9px;color:var(--text3)">0x742d...c5c9f1 · USDT/ETH</span></span>
+              <span class="badge yellow" style="font-size:8px">Kripto</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'ekHesap')">🌍 Herkes</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'ekHesap')">👥 Arkadaşlar</span>
+              <span class="gizlilikBadge" style="background:var(--text1);color:#fff;font-size:7px;padding:1px 6px;border-radius:6px;cursor:pointer" onclick="gizlilikSec(this,'ekHesap')">🔒 Kimse</span>
+              <span class="material-icons" style="font-size:12px;color:var(--text4);cursor:pointer;flex-shrink:0" onclick="this.closest('div').remove()">close</span>
+            </div>
+          </div>
+          <div class="label" style="margin-top:6px;font-size:9px">Yeni Hesap Ekle</div>
+          <select id="hesapTur" style="width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px;font-family:'Inter',sans-serif;color:var(--text1);background:var(--card);margin-bottom:4px">
+            <option value="Banka">🏦 Banka</option>
+            <option value="PayPal">💳 PayPal</option>
+            <option value="Kripto">₿ Kripto (Troy/USDT)</option>
+            <option value="WesternUnion">🏧 Western Union</option>
+            <option value="MoneyGram">🏧 MoneyGram</option>
+            <option value="Papara">📱 Papara</option>
+            <option value="Diğer">📌 Diğer</option>
+          </select>
+          <div class="input" style="padding:8px 10px;font-size:12px;margin-bottom:4px"><span class="material-icons" style="font-size:16px">badge</span><input type="text" id="hesapAd" placeholder="Hesap adı (örn. İş Bankası)" style="font-size:11px"></div>
+          <div class="input" style="padding:8px 10px;font-size:12px;margin-bottom:4px"><span class="material-icons" style="font-size:16px">pin</span><input type="text" id="hesapNo" placeholder="Hesap numarası / IBAN / cüzdan adresi" style="font-size:11px"></div>
+          <div class="input" style="padding:8px 10px;font-size:12px;margin-bottom:4px"><span class="material-icons" style="font-size:16px">person</span><input type="text" id="hesapSahip" placeholder="Hesap sahibi (opsiyonel)" style="font-size:11px"></div>
+          <button class="btn btn-sm" style="padding:8px;font-size:11px" onclick="hesapEkle()">Hesap Ekle</button>
+        </div>
+      </div>
+    </div>
+    <div class="drawer-page" id="pagemulklar">
+      <div class="drawer-page-header">
+        <button class="back-btn" onclick="drawerBack()"><span class="material-icons">arrow_back</span></button>
+        <h3>Mülkler</h3>
+      </div>
+      <div class="drawer-page-scroll">
+        <div id="mulklarDrawerContent" style="padding:0 16px 12px">
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <div style="padding:8px;border:1px solid var(--blue);border-radius:var(--radius);font-size:10px;background:#f0f7ff">
+              <div style="display:flex;align-items:center;gap:6px">
+                <span class="material-icons" style="font-size:14px;color:var(--orange)">two_wheeler</span>
+                <span style="flex:1;font-weight:600;color:var(--text1)">Honda CBR 650R</span>
+                <span class="badge blue" style="font-size:7px">Birincil</span>
+              </div>
+              <div style="font-size:9px;color:var(--text3);margin:2px 0">34 FFT 789 · 2022 · 15.000 km</div>
+              <div style="display:flex;gap:4px;margin-top:4px;flex-wrap:wrap">
+                <span style="color:var(--text4);font-size:8px;flex:1">Sistem kaydı · Silinemez</span>
+                <span class="gizlilikBadge" style="background:var(--text1);color:#fff;font-size:7px;padding:1px 6px;border-radius:6px;cursor:pointer" onclick="gizlilikSec(this,'mulkBirincil')">🌍 Herkes</span>
+                <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'mulkBirincil')">👥 Arkadaşlar</span>
+                <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'mulkBirincil')">🔒 Kimse</span>
+              </div>
+            </div>
+          </div>
+          <div class="label" style="margin-top:6px;font-size:9px">Ek Mülkler</div>
+          <div style="display:flex;flex-direction:column;gap:4px" id="ekMulklarListe">
+            <div style="display:flex;align-items:center;gap:6px;padding:7px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px">
+              <span class="material-icons" style="font-size:14px;color:var(--orange)">directions_car</span>
+              <span style="flex:1"><span style="font-weight:500;color:var(--text1)">2019 Volkswagen Passat</span><br><span style="font-size:9px;color:var(--text3)">34 ABC 123 · 120.000 km · Benzin</span></span>
+              <span class="badge yellow" style="font-size:8px">Satılık</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--text1);color:#fff" onclick="gizlilikSec(this,'ekMulk')">🌍 Herkes</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'ekMulk')">👥 Arkadaşlar</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'ekMulk')">🔒 Kimse</span>
+              <span class="material-icons" style="font-size:12px;color:var(--text4);cursor:pointer;flex-shrink:0" onclick="this.closest('div').remove()">close</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;padding:7px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px">
+              <span class="material-icons" style="font-size:14px;color:var(--blue)">apartment</span>
+              <span style="flex:1"><span style="font-weight:500;color:var(--text1)">Kadıköy 3+1 Daire</span><br><span style="font-size:9px;color:var(--text3)">Caferağa Mah. · 120 m² · 4. kat</span></span>
+              <span class="badge green" style="font-size:8px">Kirada</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'ekMulk')">🌍 Herkes</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'ekMulk')">👥 Arkadaşlar</span>
+              <span class="gizlilikBadge" style="background:var(--text1);color:#fff;font-size:7px;padding:1px 6px;border-radius:6px;cursor:pointer" onclick="gizlilikSec(this,'ekMulk')">🔒 Kimse</span>
+              <span class="material-icons" style="font-size:12px;color:var(--text4);cursor:pointer;flex-shrink:0" onclick="this.closest('div').remove()">close</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;padding:7px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px">
+              <span class="material-icons" style="font-size:14px;color:var(--green)">forest</span>
+              <span style="flex:1"><span style="font-weight:500;color:var(--text1)">Kahramanmaraş Bağ Evi</span><br><span style="font-size:9px;color:var(--text3)">10 dönüm · Organik üzüm bağı</span></span>
+              <span class="badge gray" style="font-size:8px">Muhafaza</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'ekMulk')">🌍 Herkes</span>
+              <span class="gizlilikBadge" style="background:var(--text1);color:#fff;font-size:7px;padding:1px 6px;border-radius:6px;cursor:pointer" onclick="gizlilikSec(this,'ekMulk')">👥 Arkadaşlar</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'ekMulk')">🔒 Kimse</span>
+              <span class="material-icons" style="font-size:12px;color:var(--text4);cursor:pointer;flex-shrink:0" onclick="this.closest('div').remove()">close</span>
+            </div>
+          </div>
+          <div class="label" style="margin-top:6px;font-size:9px">Yeni Mülk Ekle</div>
+          <div class="input" style="padding:8px 10px;font-size:12px;margin-bottom:4px"><span class="material-icons" style="font-size:16px">edit</span><input type="text" id="mulklarBaslik" placeholder="Başlık (örn. 2019 Passat)" style="font-size:11px"></div>
+          <div class="input" style="padding:8px 10px;font-size:12px;margin-bottom:4px"><span class="material-icons" style="font-size:16px">description</span><input type="text" id="mulklarDetay" placeholder="Detay (plaka, km, konum vs.)" style="font-size:11px"></div>
+          <div style="display:flex;gap:6px;align-items:center;margin:4px 0 6px;font-size:11px">
+            <span style="color:var(--text3);font-size:10px">Durum:</span>
+            <span class="badge" style="background:var(--text1);color:#fff;font-size:9px;cursor:pointer" onclick="mulkturSec(this,'normal')" id="mulkturNormal">Normal</span>
+            <span class="badge" style="background:var(--card2);color:var(--text3);font-size:9px;cursor:pointer" onclick="mulkturSec(this,'satilik')">Satılık</span>
+            <span class="badge" style="background:var(--card2);color:var(--text3);font-size:9px;cursor:pointer" onclick="mulkturSec(this,'kirada')">Kirada</span>
+          </div>
+          <button class="btn btn-sm" style="padding:8px;font-size:11px" onclick="mulklarEkle()">Mülk Ekle</button>
+        </div>
+      </div>
+    </div>
+    <div class="drawer-page" id="pageisletmeler">
+      <div class="drawer-page-header">
+        <button class="back-btn" onclick="drawerBack()"><span class="material-icons">arrow_back</span></button>
+        <h3>İşletmeler</h3>
+      </div>
+      <div class="drawer-page-scroll">
+        <div id="isletmelerDrawerContent" style="padding:0 16px 12px">
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <div style="padding:8px;border:1px solid var(--blue);border-radius:var(--radius);font-size:10px;background:#f0f7ff">
+              <div style="display:flex;align-items:center;gap:6px">
+                <span class="material-icons" style="font-size:14px;color:var(--blue)">local_taxi</span>
+                <span style="flex:1;font-weight:600;color:var(--text1)">Kadıköy Merkez Taksi Durağı</span>
+                <span class="badge blue" style="font-size:7px">Birincil</span>
+              </div>
+              <div style="font-size:9px;color:var(--text3);margin:2px 0">Taksi Durağı · 2015 · 12 araç</div>
+              <div style="display:flex;gap:4px;margin-top:4px;flex-wrap:wrap">
+                <span style="color:var(--text4);font-size:8px;flex:1">Sistem kaydı · Silinemez</span>
+                <span class="gizlilikBadge" style="background:var(--text1);color:#fff;font-size:7px;padding:1px 6px;border-radius:6px;cursor:pointer" onclick="gizlilikSec(this,'isletmeBirincil')">🌍 Herkes</span>
+                <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'isletmeBirincil')">👥 Arkadaşlar</span>
+                <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'isletmeBirincil')">🔒 Kimse</span>
+              </div>
+            </div>
+          </div>
+          <div class="label" style="margin-top:6px;font-size:9px">Ek İşletmeler</div>
+          <div style="display:flex;flex-direction:column;gap:4px" id="ekIsletmelerListe">
+            <div style="display:flex;align-items:center;gap:6px;padding:7px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px">
+              <span class="material-icons" style="font-size:14px;color:var(--orange)">restaurant</span>
+              <span style="flex:1"><span style="font-weight:500;color:var(--text1)">Maraş Döner & Kebap</span><br><span style="font-size:9px;color:var(--text3)">Restoran · 2022 · 4 çalışan</span></span>
+              <span class="badge green" style="font-size:8px">Aktif</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--text1);color:#fff" onclick="gizlilikSec(this,'ekIsletme')">🌍 Herkes</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'ekIsletme')">👥 Arkadaşlar</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'ekIsletme')">🔒 Kimse</span>
+              <span class="material-icons" style="font-size:12px;color:var(--text4);cursor:pointer;flex-shrink:0" onclick="this.closest('div').remove()">close</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;padding:7px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px">
+              <span class="material-icons" style="font-size:14px;color:var(--text3)">build</span>
+              <span style="flex:1"><span style="font-weight:500;color:var(--text1)">Yılmaz Oto Servis</span><br><span style="font-size:9px;color:var(--text3)">Oto Tamir · 2018-2024 · Devredildi</span></span>
+              <span class="badge gray" style="font-size:8px">Pasif</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'ekIsletme')">🌍 Herkes</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'ekIsletme')">👥 Arkadaşlar</span>
+              <span class="gizlilikBadge" style="background:var(--text1);color:#fff;font-size:7px;padding:1px 6px;border-radius:6px;cursor:pointer" onclick="gizlilikSec(this,'ekIsletme')">🔒 Kimse</span>
+              <span class="material-icons" style="font-size:12px;color:var(--text4);cursor:pointer;flex-shrink:0" onclick="this.closest('div').remove()">close</span>
+            </div>
+          </div>
+          <div class="label" style="margin-top:6px;font-size:9px">Yeni İşletme Ekle</div>
+          <div style="position:relative">
+            <input list="tumIsletmeler" id="isletmeTur" style="width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px;font-family:'Inter',sans-serif;color:var(--text1);background:var(--card);margin-bottom:4px" placeholder="İşletme türünü yazın (ör: Restoran, Okul, Fabrika...)">
+            <datalist id="tumIsletmeler">
+              <option value="Taksi Durağı"><option value="Restoran"><option value="Kafe"><option value="Bar"><option value="Dönerci"><option value="Kebapçı"><option value="Lokanta"><option value="Pastane"><option value="Fırın"><option value="Market"><option value="Bakkaliye"><option value="Manav"><option value="Kasap"><option value="Balıkçı">
+              <option value="Mağaza"><option value="Butik"><option value="Giyim"><option value="Ayakkabı"><option value="Elektronik"><option value="Mobilya"><option value="Züccaciye">
+              <option value="Dükkan"><option value="Büfe"><option value="Berber"><option value="Kuaför"><option value="Güzellik Salonu"><option value="Spor Salonu">
+              <option value="Otel"><option value="Motel"><option value="Pansiyon"><option value="Turizm"><option value="Seyahat Acentası">
+              <option value="Okul"><option value="Kreş"><option value="Anaokulu"><option value="Dershane"><option value="Kurs"><option value="Sürücü Kursu"><option value="Özel Okul"><option value="Üniversite">
+              <option value="Fabrika"><option value="Atölye"><option value="İmalathane"><option value="Sanayi Tesisi"><option value="Üretim Tesisi"><option value="Fason Üretim">
+              <option value="Şirket"><option value="Limited Şirket"><option value="Anonim Şirket"><option value="A.Ş."><option value="Ltd. Şti."><option value="Kooperatif"><option value="Vakıf"><option value="Dernek">
+              <option value="E-ticaret"><option value="Web Sitesi"><option value="Yazılım Şirketi"><option value="Teknoloji Şirketi"><option value="Oyun Geliştirme">
+              <option value="Oto Servis"><option value="Oto Galeri"><option value="Akaryakıt İstasyonu"><option value="Lastikçi"><option value="Oto Yıkama">
+              <option value="Hastane"><option value="Klinik"><option value="Muayenehane"><option value="Eczane"><option value="Psikolog"><option value="Diyetisyen">
+              <option value="Muhasebe Ofisi"><option value="Hukuk Bürosu"><option value="Mimarlık"><option value="Mühendislik"><option value="Danışmanlık">
+              <option value="Çiftlik"><option value="Mandıra"><option value="Sera"><option value="Tavuk Çiftliği"><option value="Arıcılık">
+              <option value="Kargo"><option value="Nakliyat"><option value="Lojistik"><option value="Depolama">
+              <option value="İnşaat"><option value="Müteahhit"><option value="Emlak Ofisi"><option value="Gayrimenkul">
+              <option value="Reklam"><option value="Matbaa"><option value="Tasarım"><option value="Prodüksiyon">
+              <option value="Kuyumcu"><option value="Döviz Bürosu"><option value="Finans"><option value="Sigorta"><option value="Bankacılık">
+              <option value="Temizlik Şirketi"><option value="Güvenlik"><option value="Özel Güvenlik"><option value="Bahçe Bakım"><option value="Peyzaj">
+              <option value="Kahve Dükkanı"><option value="Çay Bahçesi"><option value="Kıraathane"><option value="Oyun Salonu"><option value="Bilardo Salonu"><option value="Lunapark">
+              <option value="Fotoğrafçı"><option value="Eğlence"><option value="Organizasyon"><option value="Düğün Salonu"><option value="Lojistik">
+              <option value="Diğer İşletme">
+            </datalist>
+          </div>
+          <div class="input" style="padding:8px 10px;font-size:12px;margin-bottom:4px"><span class="material-icons" style="font-size:16px">badge</span><input type="text" id="isletmeAd" placeholder="İşletme adı (örn. Kadıköy Merkez Durak)" style="font-size:11px"></div>
+          <div class="input" style="padding:8px 10px;font-size:12px;margin-bottom:4px"><span class="material-icons" style="font-size:16px">description</span><input type="text" id="isletmeDetay" placeholder="Detay (sektör, yıl, çalışan sayısı vs.)" style="font-size:11px"></div>
+          <div style="display:flex;gap:6px;align-items:center;margin:4px 0 6px;font-size:11px">
+            <span style="color:var(--text3);font-size:10px">Durum:</span>
+            <span class="badge" style="background:var(--text1);color:#fff;font-size:9px;cursor:pointer" onclick="isletmeDurumSec(this,'aktif')" id="isletmeDurumNormal">Aktif</span>
+            <span class="badge" style="background:var(--card2);color:var(--text3);font-size:9px;cursor:pointer" onclick="isletmeDurumSec(this,'pasif')">Pasif</span>
+            <span class="badge" style="background:var(--card2);color:var(--text3);font-size:9px;cursor:pointer" onclick="isletmeDurumSec(this,'devredildi')">Devredildi</span>
+            <span class="badge" style="background:var(--card2);color:var(--text3);font-size:9px;cursor:pointer" onclick="isletmeDurumSec(this,'satildi')">Satıldı</span>
+          </div>
+          <button class="btn btn-sm" style="padding:8px;font-size:11px" onclick="isletmeEkle()">İşletme Ekle</button>
+        </div>
+      </div>
+    </div>
+    <div class="drawer-page" id="pagegizlilik">
+      <div class="drawer-page-header">
+        <button class="back-btn" onclick="drawerBack()"><span class="material-icons">arrow_back</span></button>
+        <h3>Gizlilik Ayarları</h3>
+      </div>
+      <div class="drawer-page-scroll">
+        <div id="gizlilikDrawerContent" style="padding:0 16px 12px">
+          <div class="label" style="margin-top:4px;font-size:9px">Bilgilerimi kimler görebilir?</div>
+          <div id="gizlilikListe">
+            <div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--border);font-size:10px">
+              <span style="flex:1;color:var(--text1);font-weight:500">Doğum Tarihi</span>
+              <span class="gizlilikBadge" style="background:var(--card2);color:var(--text3);font-size:8px;padding:2px 8px;border-radius:8px;cursor:pointer" onclick="gizlilikSec(this,'dogum')">Herkes</span>
+              <span class="gizlilikBadge" style="background:var(--text1);color:#fff;font-size:8px;padding:2px 8px;border-radius:8px;cursor:pointer" onclick="gizlilikSec(this,'dogum')">Arkadaşlar</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:8px;padding:2px 8px;border-radius:8px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'dogum')">Kimse</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--border);font-size:10px">
+              <span style="flex:1;color:var(--text1);font-weight:500">Adres</span>
+              <span class="gizlilikBadge" style="background:var(--card2);color:var(--text3);font-size:8px;padding:2px 8px;border-radius:8px;cursor:pointer" onclick="gizlilikSec(this,'adres')">Herkes</span>
+              <span class="gizlilikBadge" style="background:var(--card2);color:var(--text3);font-size:8px;padding:2px 8px;border-radius:8px;cursor:pointer" onclick="gizlilikSec(this,'adres')">Arkadaşlar</span>
+              <span class="gizlilikBadge" style="background:var(--text1);color:#fff;font-size:8px;padding:2px 8px;border-radius:8px;cursor:pointer" onclick="gizlilikSec(this,'adres')">Kimse</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--border);font-size:10px">
+              <span style="flex:1;color:var(--text1);font-weight:500">Mülkler</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:8px;padding:2px 8px;border-radius:8px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'mulklar')">Herkes</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:8px;padding:2px 8px;border-radius:8px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'mulklar')">Arkadaşlar</span>
+              <span class="gizlilikBadge" style="background:var(--text1);color:#fff;font-size:8px;padding:2px 8px;border-radius:8px;cursor:pointer" onclick="gizlilikSec(this,'mulklar')">Kimse</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:6px 0;font-size:10px">
+              <span style="flex:1;color:var(--text1);font-weight:500">İşletmeler</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:8px;padding:2px 8px;border-radius:8px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'isletmeler')">Herkes</span>
+              <span class="gizlilikBadge" style="background:var(--text1);color:#fff;font-size:8px;padding:2px 8px;border-radius:8px;cursor:pointer" onclick="gizlilikSec(this,'isletmeler')">Arkadaşlar</span>
+              <span class="gizlilikBadge" style="cursor:pointer;font-size:8px;padding:2px 8px;border-radius:8px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,'isletmeler')">Kimse</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="drawer-page" id="pagearkadaslar">
+      <div class="drawer-page-header">
+        <button class="back-btn" onclick="drawerBack()"><span class="material-icons">arrow_back</span></button>
+        <h3>Arkadaşlar</h3>
+      </div>
+      <div class="drawer-page-scroll">
+        <div id="arkadaslarDrawerContent" style="padding:0 16px 12px">
+          <div style="display:flex;flex-direction:column;gap:4px" id="arkadasListe">
+            <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px">
+              <div style="width:28px;height:28px;border-radius:50%;background:var(--card2);display:flex;align-items:center;justify-content:center;overflow:hidden"><span class="material-icons" style="font-size:16px;color:var(--text3)">person</span></div>
+              <span style="flex:1;font-weight:500;color:var(--text1)">Mehmet Demir</span>
+              <span style="font-size:8px;color:var(--text3)">🇹🇷 344·02·0000123</span>
+              <span class="badge green" style="font-size:8px">Arkadaş</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px">
+              <div style="width:28px;height:28px;border-radius:50%;background:var(--card2);display:flex;align-items:center;justify-content:center;overflow:hidden"><span class="material-icons" style="font-size:16px;color:var(--text3)">person</span></div>
+              <span style="flex:1;font-weight:500;color:var(--text1)">Ali Kaya</span>
+              <span style="font-size:8px;color:var(--text3)">🇹🇷 344·01·0000567</span>
+              <span class="badge green" style="font-size:8px">Arkadaş</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px">
+              <div style="width:28px;height:28px;border-radius:50%;background:var(--card2);display:flex;align-items:center;justify-content:center;overflow:hidden"><span class="material-icons" style="font-size:16px;color:var(--text3)">person</span></div>
+              <span style="flex:1;font-weight:500;color:var(--text1)">Ayşe Yıldız</span>
+              <span style="font-size:8px;color:var(--text3)">🇹🇷 344·01·0000890</span>
+              <span class="badge" style="background:var(--card2);color:var(--text3);font-size:8px">Bekliyor</span>
+            </div>
+          </div>
+          <div class="label" style="margin-top:6px;font-size:9px">Arkadaş Ekle</div>
+          <div class="input" style="padding:7px 10px;font-size:11px;margin-bottom:4px"><span class="material-icons" style="font-size:16px">search</span><input type="text" placeholder="Kullanıcı no veya isim ara" style="font-size:10px"></div>
+          <button class="btn btn-sm" style="padding:7px;font-size:10px" onclick="alert('İstek gönderildi')">Kullanıcı Bul</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function closeAllDrawers(){
+  document.getElementById('drawer').classList.remove('open');
+  document.getElementById('overlay').classList.remove('open');
+  drawerBack()
+}
+function toggleDrawer(){
+  var d=document.getElementById('drawer');
+  var ov=document.getElementById('overlay');
+  if(d.classList.contains('open')){
+    d.classList.remove('open');
+    ov.classList.remove('open')
+  }else{
+    d.classList.add('open');
+    ov.classList.add('open');
+    drawerBack()
+  }
+}
+function drawerPage(id){
+  document.getElementById('drawerPages').querySelectorAll('.drawer-page.active').forEach(function(p){p.classList.remove('active')});
+  var t=document.getElementById('page'+id);
+  if(t)t.classList.add('active');
+  document.getElementById('drawerBackBtn').style.display='flex'
+}
+function drawerBack(){
+  document.getElementById('drawerPages').querySelectorAll('.drawer-page.active').forEach(function(p){p.classList.remove('active')});
+  document.getElementById('pageMain').classList.add('active');
+  document.getElementById('drawerBackBtn').style.display='none'
+}
+function paylas(){
+  var no='🇹🇷 TR·344·02·0000000000000042';
+  if(navigator.share){navigator.share({title:'Kullanıcı Numaram',text:no})}
+  else{prompt('Kullanıcı numaranızı kopyalayın:',no)}
+}
+function copynumber(){
+  var no='TR·344·02·0000000000000042';
+  if(navigator.clipboard){navigator.clipboard.writeText(no).then(function(){alert('Kopyalandı: '+no)})}
+  else{prompt('Kopyalamak için seçin:',no)}
+}
+function drawerFotoYukle(input){
+  if(input.files&&input.files[0]){
+    var r=new FileReader();
+    r.onload=function(e){
+      ['drawer','cv'].forEach(function(p){
+        var img=document.getElementById(p+'AvatarImg');
+        var ikon=document.getElementById(p+'AvatarIkon');
+        if(img){img.src=e.target.result;img.style.display='block'}
+        if(ikon)ikon.style.display='none'
+      })
+    };
+    r.readAsDataURL(input.files[0])
+  }
+}
+function drawerEtiketSec(el){
+  var p=el.parentNode;
+  p.querySelectorAll('.badge').forEach(function(b){b.style.background='var(--card2)';b.style.color='var(--text3)'});
+  el.style.background='var(--text1)';el.style.color='#fff'
+}
+function drawerEpostaEkle(){
+  var v=document.getElementById('drawerYeniEposta').value.trim();
+  if(!v){alert('E-posta girin');return}
+  var etiket=document.querySelector('#epostaDrawerContent .badge[style*="var(--text1)"]');
+  var lbl=etiket?etiket.textContent:'Kişisel';
+  var d=document.createElement('div');
+  d.style.cssText='display:flex;align-items:center;gap:6px;padding:7px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px';
+  d.innerHTML='<span class="material-icons" style="font-size:14px;color:var(--text3)">mail</span>'
+    +'<span style="flex:1;font-weight:500;color:var(--text1)">'+v+'</span>'
+    +'<span style="font-size:8px;color:var(--text4)">'+lbl+'</span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--text1);color:#fff" onclick="gizlilikSec(this,\'ekEposta\')">🌍 Herkes</span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,\'ekEposta\')">👥 Arkadaşlar</span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,\'ekEposta\')">🔒 Kimse</span>'
+    +'<span class="material-icons" style="font-size:12px;color:var(--text4);cursor:pointer;flex-shrink:0" onclick="this.closest(\'div\').remove()">close</span>';
+  document.getElementById('drawerEkEpostaListe').appendChild(d);
+  document.getElementById('drawerYeniEposta').value=''
+}
+function drawerTelEkle(){
+  var v=document.getElementById('drawerYeniTel').value.trim();
+  if(!v){alert('Numara girin');return}
+  var etiket=document.querySelector('#telefonDrawerContent .badge[style*="var(--text1)"]');
+  var lbl=etiket?etiket.textContent:'Kişisel';
+  var d=document.createElement('div');
+  d.style.cssText='display:flex;align-items:center;gap:6px;padding:7px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px';
+  d.innerHTML='<span class="material-icons" style="font-size:14px;color:var(--text3)">phone</span>'
+    +'<span style="flex:1;font-weight:500;color:var(--text1)">'+v+'</span>'
+    +'<span style="font-size:8px;color:var(--text4)">'+lbl+'</span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--text1);color:#fff" onclick="gizlilikSec(this,\'ekTel\')">🌍 Herkes</span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,\'ekTel\')">👥 Arkadaşlar</span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,\'ekTel\')">🔒 Kimse</span>'
+    +'<span class="material-icons" style="font-size:12px;color:var(--text4);cursor:pointer;flex-shrink:0" onclick="this.closest(\'div\').remove()">close</span>';
+  document.getElementById('drawerEkTelListe').appendChild(d);
+  document.getElementById('drawerYeniTel').value=''
+}
+function drawerSmEkle(){
+  var v=document.getElementById('drawerYeniSm').value.trim();
+  if(!v){alert('Kullanıcı adı girin');return}
+  var aktif=document.querySelector('#sosyalDrawerContent .badge[style*="var(--text1)"]');
+  var platform=aktif?aktif.textContent:'Instagram';
+  var d=document.createElement('div');
+  d.style.cssText='display:flex;align-items:center;gap:6px;padding:7px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px';
+  d.innerHTML='<span class="material-icons" style="font-size:14px;color:var(--blue)">alternate_email</span>'
+    +'<span style="font-weight:500;color:var(--text1)">'+platform+'</span>'
+    +'<span style="font-size:9px;color:var(--text3);margin-left:auto">'+v+'</span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--text1);color:#fff" onclick="gizlilikSec(this,\'ekSm\')">🌍 Herkes</span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,\'ekSm\')">👥 Arkadaşlar</span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,\'ekSm\')">🔒 Kimse</span>'
+    +'<span class="material-icons" style="font-size:12px;color:var(--text4);cursor:pointer;flex-shrink:0" onclick="this.closest(\'div\').remove()">close</span>';
+  document.getElementById('drawerEkSmListe').appendChild(d);
+  document.getElementById('drawerYeniSm').value=''
+}
+function drawerMeslekEkle(ad){
+  var liste=document.getElementById('drawerEkMeslekListe');
+  for(var i=0;i<liste.children.length;i++){if(liste.children[i].querySelector('span:nth-child(2)')&&liste.children[i].querySelector('span:nth-child(2)').textContent.trim()===ad){alert('Zaten ekli');return}}
+  var d=document.createElement('div');
+  d.style.cssText='display:flex;align-items:center;gap:6px;padding:7px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px';
+  d.innerHTML='<span class="material-icons" style="font-size:14px;color:var(--text3)">work</span>'
+    +'<span style="flex:1;font-weight:500;color:var(--text1)">'+ad+'</span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--text1);color:#fff" onclick="gizlilikSec(this,\'ekMeslek\')">🌍 Herkes</span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,\'ekMeslek\')">👥 Arkadaşlar</span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,\'ekMeslek\')">🔒 Kimse</span>'
+    +'<span class="material-icons" style="font-size:12px;color:var(--text4);cursor:pointer;flex-shrink:0" onclick="this.closest(\'div\').remove()">close</span>';
+  liste.appendChild(d)
+}
+function drawerYeniMeslekEkle(){
+  var v=document.getElementById('drawerYeniMeslek').value.trim();
+  if(!v){alert('Meslek adı girin');return}
+  drawerMeslekEkle(v);
+  document.getElementById('drawerYeniMeslek').value=''
+}
+function adresEtiketSec(el){
+  var p=el.parentNode;
+  p.querySelectorAll('.badge').forEach(function(b){b.style.background='var(--card2)';b.style.color='var(--text3)'});
+  el.style.background='var(--text1)';el.style.color='#fff';
+  document.getElementById('yeniAdresEtiket').value=el.textContent
+}
+function adresEkle(){
+  var etiket=document.getElementById('yeniAdresEtiket').value.trim();
+  var satir=document.getElementById('yeniAdresSatir').value.trim();
+  var ilce=document.getElementById('yeniAdresIlce').value.trim();
+  var sehir=document.getElementById('yeniAdresSehir').value.trim();
+  var posta=document.getElementById('yeniAdresPosta').value.trim();
+  if(!etiket&&!satir){alert('Adres bilgisi girin');return}
+  var tamAdres=satir+(ilce||sehir?', ':'')+(ilce?ilce+(sehir?'/':'')+'':'')+sehir+(posta?' '+posta:'');
+  var iconMap={Ev:'home',İş:'work',Yazlık:'beach_access',Okul:'school',Aile:'people',Fatura:'receipt',Şube:'business',Diğer:'location_on'};
+  var icon=iconMap[etiket]||'location_on';
+  var list=document.getElementById('ekAdresListe');
+  var d=document.createElement('div');
+  d.style.cssText='display:flex;align-items:center;gap:6px;padding:7px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px';
+  d.innerHTML='<span class="material-icons" style="font-size:14px;color:var(--blue)">'+icon+'</span>'
+    +'<span style="flex:1"><span style="font-weight:500;color:var(--text1)">'+(etiket||'Adres')+'</span><br><span style="font-size:9px;color:var(--text3)">'+tamAdres+'</span></span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--text1);color:#fff" onclick="gizlilikSec(this,\'ekAdres\')">🌍 Herkes</span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,\'ekAdres\')">👥 Arkadaşlar</span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,\'ekAdres\')">🔒 Kimse</span>'
+    +'<span class="material-icons" style="font-size:12px;color:var(--text4);cursor:pointer;flex-shrink:0" onclick="this.closest(\'div\').remove()">close</span>';
+  list.appendChild(d);
+  document.getElementById('yeniAdresEtiket').value='';document.getElementById('yeniAdresSatir').value='';
+  document.getElementById('yeniAdresIlce').value='';document.getElementById('yeniAdresSehir').value='';document.getElementById('yeniAdresPosta').value=''
+}
+/* HESAPLAR */
+function hesapEkle(){
+  var tur=document.getElementById('hesapTur').value;
+  var ad=document.getElementById('hesapAd').value.trim();
+  var no=document.getElementById('hesapNo').value.trim();
+  var sahip=document.getElementById('hesapSahip').value.trim();
+  if(!ad){alert('Hesap adı girin');return}
+  if(!no){alert('Hesap numarası girin');return}
+  var iconMap={Banka:'account_balance',PayPal:'paypal',Kripto:'currency_bitcoin',WesternUnion:'local_atm',MoneyGram:'local_atm',Papara:'phone_android',Diğer:'credit_card'};
+  var icon=iconMap[tur]||'credit_card';
+  var list=document.getElementById('ekHesaplarListe');
+  var d=document.createElement('div');
+  d.style.cssText='display:flex;align-items:center;gap:6px;padding:7px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px';
+  d.innerHTML='<span class="material-icons" style="font-size:14px;color:var(--blue)">'+icon+'</span>'
+    +'<span style="flex:1"><span style="font-weight:500;color:var(--text1)">'+ad+'</span><br><span style="font-size:9px;color:var(--text3)">'+no+(sahip?' · '+sahip:'')+'</span></span>'
+    +'<span class="badge blue" style="font-size:8px">'+tur+'</span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--text1);color:#fff" onclick="gizlilikSec(this,\'ekHesap\')">🌍 Herkes</span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,\'ekHesap\')">👥 Arkadaşlar</span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,\'ekHesap\')">🔒 Kimse</span>'
+    +'<span class="material-icons" style="font-size:12px;color:var(--text4);cursor:pointer;flex-shrink:0" onclick="this.closest(\'div\').remove()">close</span>';
+  list.appendChild(d);
+  document.getElementById('hesapAd').value='';
+  document.getElementById('hesapNo').value='';
+  document.getElementById('hesapSahip').value=''
+}
+/* MÜLKLER */
+function toggleMulklar(){
+  var c=document.getElementById('mulklarDrawerContent');
+  var a=document.getElementById('mulklarArrow');
+  if(c.style.display==='none'||!c.style.display){c.style.display='block';if(a)a.style.transform='rotate(180deg)'}
+  else{c.style.display='none';if(a)a.style.transform='rotate(0deg)'}
+}
+var mulkDurum='normal';
+function mulkturSec(el,d){
+  mulkDurum=d;
+  var p=el.parentNode;
+  p.querySelectorAll('.badge').forEach(function(b){b.style.background='var(--card2)';b.style.color='var(--text3)'});
+  el.style.background='var(--text1)';el.style.color='#fff'
+}
+function mulklarEkle(){
+  var tur=document.getElementById('mulktur').value.trim();
+  var baslik=document.getElementById('mulklarBaslik').value.trim();
+  var detay=document.getElementById('mulklarDetay').value.trim();
+  if(!tur){alert('Mülk türü yazın');return}
+  if(!baslik){alert('Başlık girin');return}
+  function iconBul(t){
+    var k=t.toLowerCase();
+    if(/\b(uçak|jet|helikopter|drone|planör|balon)\b/i.test(k)) return 'flight';
+    if(/\b(gemi|yat|tekne|bot|katamaran|yelkenli|feribot|kruvaziyer|denizaltı|jet.ski)\b/i.test(k)) return 'directions_boat';
+    if(/\b(motosiklet|scooter|chopper|cross|enduro|quad|atv)\b/i.test(k)) return 'two_wheeler';
+    if(/\b(bisiklet|pedal)\b/i.test(k)) return 'pedal_bike';
+    if(/\b(skuter|segway|elektrikli.skuter)\b/i.test(k)) return 'electric_scooter';
+    if(/\b(kamyon|tır|çekici|tanker|konteyner|dor.se|römork|kamyonet)\b/i.test(k)) return 'local_shipping';
+    if(/\b(iş.makinesi|ekskavatör|kepçe|buldozer|forklift|vinç)\b/i.test(k)) return 'construction';
+    if(/\b(traktör|biçerdöver|tarım)\b/i.test(k)) return 'agriculture';
+    if(/\b(karavan|mobil.ev)\b/i.test(k)) return 'rv_hookup';
+    if(/\b(araba|otomobil|sedan|suv|crossover|spor|ferrari|porsche|bmw|mercedes)\b/i.test(k)) return 'directions_car';
+    if(/\b(ev|müstakil|daire|villa|yalı|köşk|konak|malikane|şato|saray|rezidans)\b/i.test(k)) return 'home';
+    if(/\b(arsa|tarla|bağ|bahçe|zeytin|çiftlik)\b/i.test(k)) return 'terrain';
+    if(/\b(dükkan|mağaza|butik|market|restoran|kafe|bar)\b/i.test(k)) return 'store';
+    if(/\b(ofis|büro|plaza|coworking)\b/i.test(k)) return 'business';
+    if(/\b(depo|antrepo|lojistik|soğuk.hava)\b/i.test(k)) return 'warehouse';
+    if(/\b(fabrika|atölye|imalathane|sanayi|üretim)\b/i.test(k)) return 'factory';
+    if(/\b(otopark|garaj)\b/i.test(k)) return 'local_parking';
+    if(/\b(otel|motel|pansiyon|tatil)\b/i.test(k)) return 'hotel';
+    if(/\b(okul|dershane|kreş|üniversite)\b/i.test(k)) return 'school';
+    if(/\b(hastane|klinik|muayenehane|eczane)\b/i.test(k)) return 'local_hospital';
+    if(/\b(sinema|tiyatro|müze|galeri)\b/i.test(k)) return 'theater_comedy';
+    if(/\b(spor|stadyum|havuz)\b/i.test(k)) return 'sports_soccer';
+    if(/\b(altın|gümüş|platin|pırlanta|elmas|mücevher|ziynet|değerli.taş)\b/i.test(k)) return 'diamond';
+    if(/\b(kripto|bitcoin|ethereum|usdt)\b/i.test(k)) return 'currency_bitcoin';
+    if(/\b(hisse|tahvil|bono|fon|repo|döviz|euro|dolar|pound|para)\b/i.test(k)) return 'payments';
+    if(/\b(koleksiyon|sanat|tablo|heykel|antika)\b/i.test(k)) return 'museum';
+    if(/\b(patent|telif|marka|domain|website|blog|youtube)\b/i.test(k)) return 'copyright';
+    if(/\b(hayvan|büyükbaş|küçükbaş|at|köpek|kedi)\b/i.test(k)) return 'pets';
+    if(/\b(sera)\b/i.test(k)) return 'grass';
+    if(/\b(köprü)\b/i.test(k)) return 'alt_route';
+    if(/\b(akaryakıt|istasyon)\b/i.test(k)) return 'local_gas_station';
+    return 'category'
+  }
+  var icon=iconBul(tur);
+  var durumLabel='',durumBadge='';
+  if(mulkDurum==='satilik'){durumLabel='Satılık';durumBadge='yellow'}
+  else if(mulkDurum==='kirada'){durumLabel='Kirada';durumBadge='green'}
+  var list=document.getElementById('ekMulklarListe');
+  if(!list)return;
+  var d=document.createElement('div');
+  d.style.cssText='display:flex;align-items:center;gap:6px;padding:7px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px';
+  d.innerHTML='<span class="material-icons" style="font-size:14px;color:var(--orange)">'+icon+'</span>'
+    +'<span style="flex:1"><span style="font-weight:500;color:var(--text1)">'+baslik+'</span><br><span style="font-size:9px;color:var(--text3)">'+tur+(detay?' · '+detay:'')+'</span></span>'
+    +(durumLabel?'<span class="badge '+durumBadge+'" style="font-size:8px">'+durumLabel+'</span>':'')
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--text1);color:#fff" onclick="gizlilikSec(this,\'ekMulk\')">🌍 Herkes</span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,\'ekMulk\')">👥 Arkadaşlar</span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,\'ekMulk\')">🔒 Kimse</span>'
+    +'<span class="material-icons" style="font-size:12px;color:var(--text4);cursor:pointer;flex-shrink:0" onclick="this.closest(\'div\').remove()">close</span>';
+  list.appendChild(d);
+  document.getElementById('mulktur').value='';document.getElementById('mulklarBaslik').value='';document.getElementById('mulklarDetay').value=''
+}
+/* İŞLETMELER */
+function toggleIsletmeler(){
+  var c=document.getElementById('isletmelerDrawerContent');
+  var a=document.getElementById('isletmelerArrow');
+  if(c.style.display==='none'||!c.style.display){c.style.display='block';if(a)a.style.transform='rotate(180deg)'}
+  else{c.style.display='none';if(a)a.style.transform='rotate(0deg)'}
+}
+var isletmeDurum='aktif';
+function isletmeDurumSec(el,d){
+  isletmeDurum=d;
+  var p=el.parentNode;
+  p.querySelectorAll('.badge').forEach(function(b){b.style.background='var(--card2)';b.style.color='var(--text3)'});
+  el.style.background='var(--text1)';el.style.color='#fff'
+}
+function isletmeEkle(){
+  var tur=document.getElementById('isletmeTur').value.trim();
+  var ad=document.getElementById('isletmeAd').value.trim();
+  var detay=document.getElementById('isletmeDetay').value.trim();
+  if(!tur){alert('İşletme türü yazın');return}
+  if(!ad){alert('İşletme adı girin');return}
+  function isletmeIcon(t){
+    var k=t.toLowerCase();
+    if(/\b(taksi|durak)\b/i.test(k)) return 'local_taxi';
+    if(/\b(restoran|kebap|döner|lokanta|fırın|pastane|kafe|bar|meyhane)\b/i.test(k)) return 'restaurant';
+    if(/\b(okul|kreş|anaokulu|dershane|kurs|üniversite)\b/i.test(k)) return 'school';
+    if(/\b(fabrika|imalathane|atölye|sanayi|üretim)\b/i.test(k)) return 'factory';
+    if(/\b(hastane|klinik|muayenehane|eczane)\b/i.test(k)) return 'local_hospital';
+    if(/\b(şirket|limited|anonim|a\.ş\.|muhasebe|hukuk|danışmanlık|mimarlık|mühendislik)\b/i.test(k)) return 'business';
+    if(/\b(mağaza|butik|giyim|market|bakkaliye|dükkan)\b/i.test(k)) return 'store';
+    if(/\b(otel|motel|pansiyon|turizm)\b/i.test(k)) return 'hotel';
+    if(/\b(çiftlik|mandıra|sera|arıcılık)\b/i.test(k)) return 'agriculture';
+    if(/\b(oto|servis|galeri|lastik|yıkama)\b/i.test(k)) return 'build';
+    if(/\b(inşaat|müteahhit|emlak|gayrimenkul)\b/i.test(k)) return 'construction';
+    if(/\b(kuyumcu|döviz|finans|sigorta)\b/i.test(k)) return 'payments';
+    if(/\b(kargo|nakliyat|lojistik)\b/i.test(k)) return 'local_shipping';
+    if(/\b(berber|kuaför|güzellik|spor)\b/i.test(k)) return 'handyman';
+    if(/\b(reklam|matbaa|tasarım|fotoğraf)\b/i.test(k)) return 'palette';
+    if(/\b(e.ticaret|web|yazılım|teknoloji|oyun)\b/i.test(k)) return 'computer';
+    if(/\b(akaryakıt|istasyon)\b/i.test(k)) return 'local_gas_station';
+    if(/\b(kahve|çay|kıraathane|oyun)\b/i.test(k)) return 'sports_esports';
+    if(/\b(temizlik|güvenlik)\b/i.test(k)) return 'security';
+    return 'business'
+  }
+  var icon=isletmeIcon(tur);
+  var durumMap={aktif:'green',pasif:'gray',devredildi:'',satildi:'yellow'};
+  var durumBadge=durumMap[isletmeDurum]||'';
+  var durumLabel=isletmeDurum.charAt(0).toUpperCase()+isletmeDurum.slice(1);
+  var list=document.getElementById('ekIsletmelerListe');
+  if(!list)return;
+  var d=document.createElement('div');
+  d.style.cssText='display:flex;align-items:center;gap:6px;padding:7px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px';
+  d.innerHTML='<span class="material-icons" style="font-size:14px;color:var(--blue)">'+icon+'</span>'
+    +'<span style="flex:1"><span style="font-weight:500;color:var(--text1)">'+ad+'</span><br><span style="font-size:9px;color:var(--text3)">'+tur+(detay?' · '+detay:'')+'</span></span>'
+    +'<span class="badge '+(durumBadge||'gray')+'" style="font-size:8px">'+durumLabel+'</span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--text1);color:#fff" onclick="gizlilikSec(this,\'ekIsletme\')">🌍 Herkes</span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,\'ekIsletme\')">👥 Arkadaşlar</span>'
+    +'<span class="gizlilikBadge" style="cursor:pointer;font-size:7px;padding:1px 6px;border-radius:6px;background:var(--card2);color:var(--text3)" onclick="gizlilikSec(this,\'ekIsletme\')">🔒 Kimse</span>'
+    +'<span class="material-icons" style="font-size:12px;color:var(--text4);cursor:pointer;flex-shrink:0" onclick="this.closest(\'div\').remove()">close</span>';
+  list.appendChild(d);
+  document.getElementById('isletmeTur').value='';document.getElementById('isletmeAd').value='';document.getElementById('isletmeDetay').value=''
+}
+function gizlilikSec(el,tur){
+  var p=el.parentNode;
+  p.querySelectorAll('.gizlilikBadge').forEach(function(b){b.style.background='var(--card2)';b.style.color='var(--text3)'});
+  el.style.background='var(--text1)';el.style.color='#fff';
+  var txt={Herkes:'🌍 Herkes',Arkadaşlar:'👥 Arkadaşlar',Kimse:'🔒 Kimse'};
+  console.log(tur+' → '+el.textContent)
+}
+</script>
+</body>
+</html>

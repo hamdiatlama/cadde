@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS vehicle_model_features CASCADE;
+DROP TABLE IF EXISTS features CASCADE;
+DROP TABLE IF EXISTS feature_groups CASCADE;
+DROP TABLE IF EXISTS vehicle_model_years CASCADE;
+DROP TABLE IF EXISTS vehicle_category_models CASCADE;
+DROP TABLE IF EXISTS vehicle_model_body_types CASCADE;
+DROP TABLE IF EXISTS vehicle_models CASCADE;
+DROP TABLE IF EXISTS vehicle_brands CASCADE;
+DROP TABLE IF EXISTS body_types CASCADE;
+DROP TABLE IF EXISTS vehicle_segments CASCADE;
+DROP TABLE IF EXISTS vehicle_categories CASCADE;

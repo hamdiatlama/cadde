@@ -1,0 +1,62 @@
+{
+  "marka": "Hidromek",
+  "modeller": [
+    {
+      "model": "H88",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "H102",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "H135",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "H220",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "H350",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "HMK 140",
+      "kasa_tipleri": [
+        "Kazıcı Yükleyici"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "HMK 200",
+      "kasa_tipleri": [
+        "Kazıcı Yükleyici"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "S185",
+      "kasa_tipleri": [
+        "Silindir"
+      ],
+      "uretim_baslangic": 2017
+    }
+  ],
+  "kaynak": "manuel"
+}

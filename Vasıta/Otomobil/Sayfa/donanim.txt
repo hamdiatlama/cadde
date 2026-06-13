@@ -1,0 +1,150 @@
+[Güvenlik]
+ABS
+AEBS
+BAS
+Çocuk Kilidi
+Distronic
+ESP / VSG
+Gece Görüş Sistemi
+Hava Yastığı (Sürücü)
+Hava Yastığı (Yolcu)
+Immobilizer
+Isofix
+Kör Nokta Uyarı Sistemi
+Merkezi Kilit
+Şerit Takip Sistemi
+Yokuş Kalkış Desteği
+Yorgunluk Tespit Sistemi
+Zırhlı Araç
+Lastik Basınç Sensörü
+Trafik İşareti Tanıma
+Aktif Park Asistanı
+Yokuş İniş Kontrolü
+Çekiş Kontrolü
+
+[İç Donanım]
+Adaptive Cruise Control
+Anahtarsız Giriş ve Çalıştırma
+Deri Koltuk
+Elektrikli Camlar
+Fonksiyonel Direksiyon
+Geri Görüş Kamerası
+Head-up Display
+Hız Sabitleme Sistemi
+Hidrolik Direksiyon
+Isıtmalı Direksiyon
+Klima
+Koltuklar (Elektrikli)
+Koltuklar (Hafızalı)
+Koltuklar (Isıtmalı)
+Koltuklar (Soğutmalı)
+Kumaş Koltuk
+Otm.Kararan Dikiz Aynası
+Ön Görüş Kamerası
+Ön Koltuk Kol Dayaması
+Soğutmalı Torpido
+Start / Stop
+Üçüncü Sıra Koltuklar
+Yol Bilgisayarı
+Kablosuz Şarj
+Dijital Gösterge Paneli
+Ambiyans Aydınlatması
+Navigasyon
+Ses Sistemi (Marka)
+360° Kamera
+
+[Dış Donanım]
+Ayakla Açılan Bagaj Kapağı
+Hardtop
+Far (Adaptif)
+Aynalar (Elektrikli)
+Aynalar (Isıtmalı)
+Aynalar (Hafızalı)
+Park Sensörü (Arka)
+Park Sensörü (Ön)
+Park Asistanı
+Sunroof
+Akıllı Bagaj Kapağı
+Panoramik Cam Tavan
+Römork Çeki Demiri
+LED Far
+Matrix LED Far
+Ksenon Far
+Sis Farı
+Gündüz LED Farları
+Karartma Cam
+Tavan Rayları
+Jant Boyutu
+
+[Multimedya]
+Android Auto
+Apple CarPlay
+Bluetooth
+USB / AUX
+Navigasyon
+Dijital Radyo (DAB+)
+Ses Sistemi (Marka)
+Ekran Boyutu
+Wi-Fi Hotspot
+Sesli Kontrol
+
+[Performans & Motor]
+0-100 Hızlanma
+Maksimum Hız
+Tork (Nm)
+Silindir Sayısı
+CO2 Emisyonu
+
+[Ölçüler & Ağırlık]
+Uzunluk
+Genişlik
+Yükseklik
+Boş Ağırlık
+Bagaj Hacmi
+Yakıt Deposu
+
+[Lastik & Jant]
+Lastik Boyutu
+Jant Boyutu
+Jant Malzemesi
+
+[Bakım & Geçmiş]
+Tramer Kaydı
+Sahip Sayısı
+Yetkili Servis Bakımlı
+Anahtar Sayısı
+İlk Tescil Tarihi
+
+[Sürüş Destek Sistemleri]
+Uzun Far Asistanı
+Çapraz Trafik Uyarısı
+Otomatik Uzun Far
+Şerit Takip Asistanı
+Akıllı Hız Sabitleyici
+Çarpışma Önleyici Sistem
+Yaya Algılama
+Sürücü Yorgunluk Tespiti
+
+[İklimlendirme]
+Dijital Klima
+Bölgesel Klima (2 Bölge)
+Bölgesel Klima (3 Bölge)
+Bölgesel Klima (4 Bölge)
+Arka Koltuk Kliması
+Isıtmalı Koltuklar
+Soğutmalı Koltuklar
+
+[İç Renk & Malzeme]
+İç Renk
+Koltuk Malzemesi
+Döşeme Rengi
+Ön Panel Malzemesi
+
+[Araç Geçmişi & Belgeler]
+Fatura (Var / Yok)
+Yurt Dışı Gelme / İthal
+Filodan Çıkma
+Anahtar Tipi (Anahtarlı / Akıllı)
+Garanti Belgesi
+Orijinal Kilometre
+Kasko Değeri

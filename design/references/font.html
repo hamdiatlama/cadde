@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Font - Inter</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#f9fafb;color:#111;padding:30px;max-width:none}
+h1{font-size:28px;font-weight:700;margin-bottom:4px}
+.sub{font-size:14px;color:#6b7280;margin-bottom:28px}
+h2{font-size:14px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin:24px 0 12px}
+.row{display:flex;gap:20px;flex-wrap:wrap}
+.col{flex:1;min-width:260px}
+.box{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:20px;margin-bottom:12px}
+.box .label{font-size:11px;color:#9ca3af;margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
+.preview-thin{font-weight:300;font-size:24px}
+.preview-regular{font-weight:400;font-size:24px}
+.preview-medium{font-weight:500;font-size:24px}
+.preview-semibold{font-weight:600;font-size:24px}
+.preview-bold{font-weight:700;font-size:24px}
+.preview-extrabold{font-weight:800;font-size:24px}
+.specimen{display:flex;flex-direction:column;gap:4px;padding:8px 0}
+.specimen .s-row{display:flex;align-items:center;gap:16px;border-bottom:1px solid #f3f4f6;padding:6px 0}
+.specimen .s-row:last-child{border:none}
+.specimen .s-label{font-size:11px;color:#6b7280;min-width:80px;text-transform:uppercase}
+.specimen .s-preview{flex:1;font-size:15px}
+.code-block{background:#111;color:#fff;border-radius:8px;padding:16px;font-family:monospace;font-size:13px;line-height:1.8;overflow-x:auto;margin-top:8px}
+.code-block .cm{color:#6b7280}
+.code-block .kw{color:#22c55e}
+.code-block .str{color:#fbbf24}
+.code-block .tag{color:#60a5fa}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:8px 0}
+td{padding:10px 0;border-bottom:1px solid #f3f4f6;vertical-align:top}
+td:first-child{font-family:'Inter',sans-serif;width:180px}
+td:nth-child(2){color:#6b7280}
+</style>
+</head>
+<body>
+
+<h1>Inter</h1>
+<p class="sub">Türkçe uyumlu • Mobil öncelikli • Tasarımın tek fontu</p>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px">
+  <div class="box">
+    <div class="label">ExtraLight 300</div>
+    <div class="preview-thin" style="font-weight:300">Merhaba, nereye gitmek istersiniz?</div>
+  </div>
+  <div class="box">
+    <div class="label">Regular 400</div>
+    <div class="preview-regular">Merhaba, nereye gitmek istersiniz?</div>
+  </div>
+  <div class="box">
+    <div class="label">Medium 500</div>
+    <div class="preview-medium">Merhaba, nereye gitmek istersiniz?</div>
+  </div>
+  <div class="box">
+    <div class="label">SemiBold 600</div>
+    <div class="preview-semibold">Merhaba, nereye gitmek istersiniz?</div>
+  </div>
+  <div class="box">
+    <div class="label">Bold 700</div>
+    <div class="preview-bold">Merhaba, nereye gitmek istersiniz?</div>
+  </div>
+  <div class="box">
+    <div class="label">ExtraBold 800</div>
+    <div class="preview-extrabold">Merhaba, nereye gitmek istersiniz?</div>
+  </div>
+</div>
+
+<h2>Türkçe Karakter Testi</h2>
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:20px;font-size:18px;line-height:2;margin-bottom:24px">
+  <div><strong>Büyük:</strong> ABCÇDEFGĞHİIJKLMNOÖPRSŞTUÜVYZ</div>
+  <div><strong>Küçük:</strong> abcçdefgğhiıjklmnoöprsştuüvyz</div>
+  <div><strong>Karma:</strong> İstanbul • Şişli • Çankaya • Iğdır • Ödemiş • Üsküdar</div>
+  <div><strong>Sayı:</strong> 0123456789 • ₺124,00 • +90 532 123 45 67</div>
+</div>
+
+<h2>Kullanım Şeması</h2>
+<table>
+  <tr><td style="font-weight:700;font-size:22px">Başlık</td><td>SemiBold 22px • #111111 • letter-spacing: -0.5px</td></tr>
+  <tr><td style="font-weight:600;font-size:17px">Alt Başlık</td><td>SemiBold 17px • #111111</td></tr>
+  <tr><td style="font-weight:500;font-size:15px">Kart Başlık</td><td>Medium 15px • #111111</td></tr>
+  <tr><td style="font-weight:400;font-size:14px">Gövde</td><td>Regular 14px • #374151</td></tr>
+  <tr><td style="font-weight:400;font-size:13px">Küçük Yazı</td><td>Regular 13px • #6b7280</td></tr>
+  <tr><td style="font-weight:400;font-size:12px">Label</td><td>Regular 12px • #6b7280</td></tr>
+  <tr><td style="font-weight:600;font-size:14px">Buton</td><td>SemiBold 14px • #fff (siyah butonda)</td></tr>
+  <tr><td style="font-weight:700;font-size:24px">Fiyat</td><td>Bold 24px • #111111</td></tr>
+</table>
+
+<h2>CSS Kullanımı</h2>
+<div class="code-block">
+<span class="cm">&lt;!-- HTML head'e ekle --&gt;</span><br>
+<span class="tag">&lt;link</span> href=<span class="str">"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"</span> rel=<span class="str">"stylesheet"</span><span class="tag">&gt;</span><br><br>
+<span class="cm">/* CSS */</span><br>
+<span class="kw">body</span> { font-family: <span class="str">'Inter'</span>, sans-serif; }<br>
+<span class="kw">h1</span> { font-weight: <span class="str">600</span>; font-size: <span class="str">22px</span>; letter-spacing: <span class="str">-0.5px</span>; }<br>
+<span class="kw">.fiyat</span> { font-weight: <span class="str">700</span>; font-size: <span class="str">24px</span>; }
+</div>
+
+<p style="margin-top:24px;font-size:13px;color:#9ca3af">📁 design/references/font.html</p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+Fiyat
+İlan Başlığı
+Konum
+Marka
+Model
+Yıl
+Araç Durumu
+KM / Saat
+Motor Gücü (BG)
+Motor Hacmi (cc)
+Vites
+Çekiş (2WD/4WD)
+Renk
+Garanti
+Plaka / Uyruk
+Kimden
+Takas
+Araç Tipi (ATV/UTV/Quad)
+Yolcu Sayısı
+Kabin / Açık
+Lastik Ebadı
+Fren Sistemi
+Süspansiyon
+Klima (UTV)
+Krediye Uygun
+Video Linki
+İlan Açıklaması
+VIN / Şasi No
+Pazarlık / İndirim

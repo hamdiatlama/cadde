@@ -1,0 +1,62 @@
+{
+  "marka": "DJI",
+  "modeller": [
+    {
+      "model": "Mavic 3 Pro",
+      "kasa_tipleri": [
+        "Drone"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "Mavic 3 Classic",
+      "kasa_tipleri": [
+        "Drone"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Air 3",
+      "kasa_tipleri": [
+        "Drone"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "Mini 4 Pro",
+      "kasa_tipleri": [
+        "Drone"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "Mini 3 Pro",
+      "kasa_tipleri": [
+        "Drone"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Avata 2",
+      "kasa_tipleri": [
+        "Drone (FPV)"
+      ],
+      "uretim_baslangic": 2024
+    },
+    {
+      "model": "Inspire 3",
+      "kasa_tipleri": [
+        "Drone"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "Matrice 350 RTK",
+      "kasa_tipleri": [
+        "Drone (Endüstriyel)"
+      ],
+      "uretim_baslangic": 2023
+    }
+  ],
+  "kaynak": "manuel"
+}

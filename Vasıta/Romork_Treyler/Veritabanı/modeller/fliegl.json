@@ -1,0 +1,48 @@
+{
+  "marka": "Fliegl",
+  "modeller": [
+    {
+      "model": "ASW 271",
+      "kasa_tipleri": [
+        "Tarım Römorku"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "ASS 260",
+      "kasa_tipleri": [
+        "Tarım Römorku"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Tandem",
+      "kasa_tipleri": [
+        "Tarım Römorku"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Tridem",
+      "kasa_tipleri": [
+        "Tarım Römorku"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Container",
+      "kasa_tipleri": [
+        "Konteyner"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Flatbed",
+      "kasa_tipleri": [
+        "Platform"
+      ],
+      "uretim_baslangic": 2017
+    }
+  ],
+  "kaynak": "manuel"
+}

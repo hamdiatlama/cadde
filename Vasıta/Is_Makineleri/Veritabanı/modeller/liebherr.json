@@ -1,0 +1,76 @@
+{
+  "marka": "Liebherr",
+  "modeller": [
+    {
+      "model": "R914",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "R920",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "R925",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "R950",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "R960",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "R980 SME",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "L524",
+      "kasa_tipleri": [
+        "Yükleyici"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "L550",
+      "kasa_tipleri": [
+        "Yükleyici"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "L580",
+      "kasa_tipleri": [
+        "Yükleyici"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "PR736",
+      "kasa_tipleri": [
+        "Dozer"
+      ],
+      "uretim_baslangic": 2017
+    }
+  ],
+  "kaynak": "manuel"
+}

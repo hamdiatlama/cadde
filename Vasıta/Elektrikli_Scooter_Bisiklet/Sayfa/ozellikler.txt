@@ -1,0 +1,30 @@
+Fiyat
+İlan Başlığı
+Konum
+Marka
+Model
+Yıl
+Araç Durumu
+KM
+Motor Gücü (Watt)
+Motor Tipi (Hub/Mid)
+Batarya Kapasitesi (Ah)
+Batarya Voltajı (V)
+Menzil (km)
+Maksimum Hız (km/s)
+Şarj Süresi (saat)
+Batarya Türü (Lityum/Kurşun Asit)
+Ağırlık (kg)
+Renk
+Garanti
+Kimden
+Katlanabilir
+Fren Sistemi
+Süspansiyon
+Vites Sayısı
+LED Far
+Bluetooth / Uygulama
+Krediye Uygun
+İlan Açıklaması
+Şasi No
+Pazarlık / İndirim

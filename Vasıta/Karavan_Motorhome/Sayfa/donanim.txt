@@ -1,0 +1,22 @@
+[Yaşam Alanı]
+
+[Mutfak]
+
+[Banyo & Tuvalet]
+
+[Isıtma & Soğutma]
+
+[Elektrik & Enerji]
+
+[Su & Atık Sistemleri]
+
+[Multimedya]
+
+[Dış Donanım]
+
+[Güvenlik]
+
+[Motor & Şasi]
+
+[Bakım & Geçmiş]
+

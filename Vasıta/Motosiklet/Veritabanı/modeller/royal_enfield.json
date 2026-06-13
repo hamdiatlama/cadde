@@ -1,0 +1,76 @@
+{
+  "marka": "Royal Enfield",
+  "modeller": [
+    {
+      "model": "Hunter 350",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Classic 350",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Bullet 350",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Meteor 350",
+      "kasa_tipleri": [
+        "Cruiser"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Super Meteor 650",
+      "kasa_tipleri": [
+        "Cruiser"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Interceptor 650",
+      "kasa_tipleri": [
+        "Klasik Naked"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Continental GT 650",
+      "kasa_tipleri": [
+        "Klasik Sport"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Himalayan 450",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "Scram 411",
+      "kasa_tipleri": [
+        "Scrambler"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Shotgun 650",
+      "kasa_tipleri": [
+        "Cruiser"
+      ],
+      "uretim_baslangic": 2023
+    }
+  ],
+  "kaynak": "manuel"
+}

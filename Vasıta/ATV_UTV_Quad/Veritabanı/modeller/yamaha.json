@@ -1,0 +1,62 @@
+{
+  "marka": "Yamaha",
+  "modeller": [
+    {
+      "model": "Raptor 700",
+      "kasa_tipleri": [
+        "ATV"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "YFZ450R",
+      "kasa_tipleri": [
+        "ATV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Kodiak 700",
+      "kasa_tipleri": [
+        "ATV"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Grizzly 700",
+      "kasa_tipleri": [
+        "ATV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Grizzly 90",
+      "kasa_tipleri": [
+        "ATV"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Viking 700",
+      "kasa_tipleri": [
+        "UTV"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Wolverine X4",
+      "kasa_tipleri": [
+        "UTV"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "YXZ1000R",
+      "kasa_tipleri": [
+        "UTV"
+      ],
+      "uretim_baslangic": 2016
+    }
+  ],
+  "kaynak": "manuel"
+}

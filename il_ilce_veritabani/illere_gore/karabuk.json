@@ -1,0 +1,25 @@
+{
+  "il_id": 78,
+  "il": "Karabük",
+  "plaka": "78",
+  "ilceler": [
+    {
+      "ilce": "Eflani"
+    },
+    {
+      "ilce": "Eskipazar"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Ovacık"
+    },
+    {
+      "ilce": "Safranbolu"
+    },
+    {
+      "ilce": "Yenice"
+    }
+  ]
+}

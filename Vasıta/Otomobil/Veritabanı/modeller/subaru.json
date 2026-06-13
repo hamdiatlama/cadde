@@ -1,0 +1,89 @@
+{
+  "marka": "Subaru",
+  "modeller": [
+    {
+      "model": "Impreza",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Sedan",
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "WRX",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Legacy",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Sedan",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2010,
+      "uretim_bitis": 2020
+    },
+    {
+      "model": "Outback",
+      "segment": "J",
+      "kasa_tipleri": [
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Forester",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "Crosstrek / XV",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Solterra",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "BRZ",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Levorg",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Ascent",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2018
+    }
+  ],
+  "kaynak": "manuel"
+}

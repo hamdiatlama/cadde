@@ -1,0 +1,25 @@
+{
+  "il_id": 64,
+  "il": "Uşak",
+  "plaka": "64",
+  "ilceler": [
+    {
+      "ilce": "Banaz"
+    },
+    {
+      "ilce": "Eşme"
+    },
+    {
+      "ilce": "Karahallı"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Sivaslı"
+    },
+    {
+      "ilce": "Ulubey"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "il_id": 34,
+  "il": "İstanbul",
+  "plaka": "34",
+  "ilceler": [
+    {
+      "ilce": "Adalar"
+    },
+    {
+      "ilce": "Arnavutköy"
+    },
+    {
+      "ilce": "Ataşehir"
+    },
+    {
+      "ilce": "Avcılar"
+    },
+    {
+      "ilce": "Bahçelievler"
+    },
+    {
+      "ilce": "Bakırköy"
+    },
+    {
+      "ilce": "Bayrampaşa"
+    },
+    {
+      "ilce": "Bağcılar"
+    },
+    {
+      "ilce": "Başakşehir"
+    },
+    {
+      "ilce": "Beykoz"
+    },
+    {
+      "ilce": "Beylikdüzü"
+    },
+    {
+      "ilce": "Beyoğlu"
+    },
+    {
+      "ilce": "Beşiktaş"
+    },
+    {
+      "ilce": "Büyükçekmece"
+    },
+    {
+      "ilce": "Esenler"
+    },
+    {
+      "ilce": "Esenyurt"
+    },
+    {
+      "ilce": "Eyüpsultan"
+    },
+    {
+      "ilce": "Fatih"
+    },
+    {
+      "ilce": "Gaziosmanpaşa"
+    },
+    {
+      "ilce": "Güngören"
+    },
+    {
+      "ilce": "Kadıköy"
+    },
+    {
+      "ilce": "Kartal"
+    },
+    {
+      "ilce": "Kağıthane"
+    },
+    {
+      "ilce": "Küçükçekmece"
+    },
+    {
+      "ilce": "Maltepe"
+    },
+    {
+      "ilce": "Pendik"
+    },
+    {
+      "ilce": "Sancaktepe"
+    },
+    {
+      "ilce": "Sarıyer"
+    },
+    {
+      "ilce": "Silivri"
+    },
+    {
+      "ilce": "Sultanbeyli"
+    },
+    {
+      "ilce": "Sultangazi"
+    },
+    {
+      "ilce": "Tuzla"
+    },
+    {
+      "ilce": "Zeytinburnu"
+    },
+    {
+      "ilce": "Çatalca"
+    },
+    {
+      "ilce": "Çekmeköy"
+    },
+    {
+      "ilce": "Ümraniye"
+    },
+    {
+      "ilce": "Üsküdar"
+    },
+    {
+      "ilce": "Şile"
+    },
+    {
+      "ilce": "Şişli"
+    }
+  ]
+}

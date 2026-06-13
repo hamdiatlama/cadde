@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.db
+.env
+venv/
+node_modules/
+.next/
+dist/
+build/
+*.egg-info/
+.pytest_cache/
+_minimal_test*
+_check_syntax.py

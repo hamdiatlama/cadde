@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ category.emoji }} {{ category.name }}{% endblock %}
+{% block content %}
+<a href="/" class="back">← Ana Sayfa</a>
+<h1 class="page-title">{{ category.emoji }} {{ category.name }}</h1>
+<p class="result-count">{{ professions|length }} meslek listeleniyor</p>
+<ul class="prof-list">
+    {% for p in professions %}
+    <li>{{ p.name }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

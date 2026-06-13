@@ -1,0 +1,148 @@
+{
+  "marka": "Honda",
+  "modeller": [
+    {
+      "model": "Civic",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Sedan",
+        "Hatchback"
+      ],
+      "uretim_baslangic": 1972
+    },
+    {
+      "model": "Accord",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 1976
+    },
+    {
+      "model": "CR-V",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 1995
+    },
+    {
+      "model": "HR-V",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Jazz / Fit",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2001
+    },
+    {
+      "model": "City",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2008
+    },
+    {
+      "model": "Insight",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "e:Ny1",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "Prologue",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2024
+    },
+    {
+      "model": "CR-Z",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2010,
+      "uretim_bitis": 2016
+    },
+    {
+      "model": "S2000",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Cabrio"
+      ],
+      "uretim_baslangic": 1999,
+      "uretim_bitis": 2009
+    },
+    {
+      "model": "NSX",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2016,
+      "uretim_bitis": 2022
+    },
+    {
+      "model": "e",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2020,
+      "uretim_bitis": 2024
+    },
+    {
+      "model": "Legend",
+      "segment": "F",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 1985,
+      "uretim_bitis": 2012
+    },
+    {
+      "model": "Pilot",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2002
+    },
+    {
+      "model": "Ridgeline",
+      "segment": "P",
+      "kasa_tipleri": [
+        "Pick-up"
+      ],
+      "uretim_baslangic": 2005
+    },
+    {
+      "model": "Odyssey",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 1994
+    }
+  ],
+  "kaynak": "manuel"
+}

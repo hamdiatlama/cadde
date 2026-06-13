@@ -1,0 +1,31 @@
+{
+  "il_id": 11,
+  "il": "Bilecik",
+  "plaka": "11",
+  "ilceler": [
+    {
+      "ilce": "Bozüyük"
+    },
+    {
+      "ilce": "Gölpazarı"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Osmaneli"
+    },
+    {
+      "ilce": "Pazaryeri"
+    },
+    {
+      "ilce": "Söğüt"
+    },
+    {
+      "ilce": "Yenipazar"
+    },
+    {
+      "ilce": "İnhisar"
+    }
+  ]
+}

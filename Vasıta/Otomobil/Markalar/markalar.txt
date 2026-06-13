@@ -1,0 +1,660 @@
+=== DÜNYA ARABA MARKALARI ===
+(Ülkelere göre aktif markalar)
+
+[Türkiye]
+- Anadol
+- Devrim
+- Etox
+- Özaltin
+- Temsa
+- Tofaş
+- TOGG
+
+[Almanya]
+- 9ff
+- ABT Sportsline
+- Audi
+- Alpina
+- AMG
+- Artega
+- BMW
+- BMW M
+- Brabus
+- CityEl
+- Ford-Werke
+- Gemballa
+- Isdera
+- Lotec
+- Magirus
+- MAN
+- Maybach
+- Melkus
+- Mercedes-Benz
+- Opel
+- Porsche
+- Ruf
+- Smart
+- TechArt
+- Volkswagen
+- Wiesmann
+
+[ABD]
+- Alpha Motor Corporation
+- AM General
+- Anteros
+- Arcimoto
+- Aurica
+- Bollinger Motors
+- Bremach
+- Buick
+- Callaway
+- Cadillac
+- Chevrolet
+- Chrysler
+- Czinger
+- DeLorean Motor Company
+- Dodge
+- Drako Motors
+- Elio Motors
+- Equus Automotive
+- E-Z-GO
+- Falcon
+- Faraday
+- Freightliner
+- Ford
+- General Motors
+- GMC
+- Hennessey
+- Harley-Davidson
+- Jeep
+- Kenworth
+- Karma
+- Lincoln
+- Lucid
+- Lyons
+- Mack
+- Nu Ride Inc. (Lordstown)
+- Panoz
+- Peterbilt
+- Polaris
+- Racefab
+- RAESR
+- Ram Trucks
+- Rezvani
+- Rivian
+- Rossion
+- Saleen
+- Scuderia Cameron Glickenhaus
+- Shelby American
+- SSC
+- Stellantis
+- Tesla
+- Trion Supercars
+- Western Star
+- Zimmer
+
+[Arjantin]
+- Zanella
+
+[Avustralya]
+- Bolwell
+- Borland Racing Developments
+- Bufori
+- Bullet
+- Devaux
+- Elfin Cars
+- Finch Restorations
+- Joss Developments
+- Minetti Sports Cars
+- Nota
+- Puma Clubman
+- Python
+- Spartan Motor Company
+- Stohr Cars
+
+[Avusturya]
+- KTM
+- Magna Steyr
+- ÖAF
+- Puch
+- Steyr Motors GmbH
+- Rosenbauer
+- Tushek & Spigel Supercars
+
+[Azerbaycan]
+- Ganja Auto Plant
+- Nakhchivan Automobile Plant
+
+[Bangladeş]
+- Uttara
+- Walton Motors
+
+[Beyaz Rusya]
+- BelGee
+- Minsk Automobile Plant
+
+[Belçika]
+- Edran
+- Gillet
+
+[Brezilya]
+- Agrale
+- Marcopolo
+- Mascarello
+- Neobus
+- Obvio!
+- Tecnologia Automotiva Catarinense
+
+[Bulgaristan]
+- Litex Motors
+- SIN Cars
+
+[Cezayir]
+- (liste bulunamadı)
+
+[Çek Cumhuriyeti]
+- Avia
+- Jawa
+- Kaipan
+- Karosa
+- MTX / Metalex
+- MW Motors
+- Praga
+- Škoda
+- Tatra
+
+[Çin]
+- Aiways
+- BAIC Group (Arcfox, Beijing, Beijing Off-road, Foton, Stelato)
+- Beijing Automobile Works
+- BYD (Denza, Yangwang, Fangchengbao, Linghui)
+- Chang'an Motors (Avatr Technology, Changan, Changan Nevo, Deepal)
+- Chery (Chery New Energy, Exeed, iCar, Jetour, Jaecoo, Omoda, Luxeed, Soueast)
+- Dongfeng (Dongfeng Fengshen, Dongfeng Nammi, M-Hero, Venucia, Voyah)
+- FAW (Bestune, Haima Automobile, Hongqi, Huali)
+- Geely (Geely Auto, Geely Galaxy, Zeekr, Lynk & Co, Shanghai Maple Guorun)
+- Great Wall Motors (Haval, Ora, Tank, Wey)
+- GAC Group (Aion, Hyptec, Everus, Trumpchi)
+- Human Horizons
+- Jinbei
+- Hwanghai
+- JAC Motors
+- Maextro
+- Jiangling (JMC, Yusheng, Landwind)
+- Jonway
+- King Long
+- Leapmotor
+- Li Auto
+- Lifan (Huayang)
+- Nanjing Golden Dragon Bus
+- Nio (Onvo, Firefly)
+- SAIC Motor (Baojun, IM Motors, SAIC, Maxus, MG Motor, Yuejin, Roewe, Rising Auto, Wuling)
+- Seres (AITO, DFSK, Fengon)
+- Shaanxi Automobile Group
+- Sichuan Tengzhong
+- Techrules
+- Xinkai
+- XPeng
+- Yema Auto
+- Yutong
+- ZX Auto
+- Xiaomi Auto
+
+[Danimarka]
+- PVP Karting
+- Zenvo Automotive
+
+[Dominik Cumhuriyeti]
+- (liste bulunamadı)
+
+[Ekvador]
+- (liste bulunamadı)
+
+[Endonezya]
+- Esemka
+- Pindad
+
+[Estonya]
+- (liste bulunamadı)
+
+[Etiyopya]
+- (liste bulunamadı)
+
+[Fas]
+- Laraki
+
+[Filipinler]
+- (liste bulunamadı)
+
+[Finlandiya]
+- (liste bulunamadı)
+
+[Fransa]
+- Aixam
+- Alpine
+- Bolloré
+- Bugatti
+- Chatenet
+- Citroën
+- Delage
+- De la Chapelle
+- DS
+- Ligier
+- Microcar
+- Peugeot
+- PGO
+- Renault
+- Renault Trucks
+
+[Gana]
+- Kantanka
+
+[Güney Afrika]
+- Birkin
+- Perana
+- Puma
+- Shaka
+- Superformance
+- Uri International Vehicle & Equipment Marketing
+
+[Güney Kore]
+- GM Korea
+- CT&T
+- Genesis
+- Hyundai
+- Kia
+- Renault Samsung
+- Ssangyong
+
+[Gürcistan]
+- (liste bulunamadı)
+
+[Hindistan]
+- Ashok Leyland
+- Bajaj Auto
+- Eicher Motors
+- Force Motors
+- Mahindra & Mahindra Limited
+- Maruti Suzuki
+- Tata Motors
+
+[Hırvatistan]
+- Đuro Đaković
+- DOK-ING
+- Rimac
+
+[Hollanda]
+- Donkervoort
+- Van Doorne's Automobiel Fabrieken
+- Savage Rivale
+- Spyker
+- Vencer
+
+[Irak]
+- (liste bulunamadı)
+
+[İngiltere]
+- AC Cars
+- Arash
+- Ariel
+- Arrival
+- Aston Martin
+- BAC (Briggs Automotive Company)
+- Bentley
+- Caterham Cars
+- David Brown
+- Ginetta
+- Gordon Murray Automotive
+- Ineos Automotive
+- Jaguar
+- Lagonda
+- Land Rover
+- Lister
+- LEVC
+- Lotus
+- Mini
+- McLaren
+- Morgan
+- Noble
+- Radical
+- Rolls-Royce
+- TVR
+- Vauxhall
+
+[İran]
+- Iran Khodro
+- Pars Khodro
+- SAIPA
+
+[İrlanda]
+- (liste bulunamadı)
+
+[İspanya]
+- Aspid
+- Comarth
+- Cupra
+- Gerard Farre
+- GTA Motor
+- Hurtan
+- SEAT
+- Spania GTA
+- Tramontana
+- Tauro Sport Auto
+- UROVESA
+
+[İsveç]
+- Volvo Cars
+- Koenigsegg
+- Polestar
+- Scania
+
+[İsviçre]
+- Micro
+- Rinspeed
+
+[İtalya]
+- Abarth
+- Alfa Romeo
+- Casalini
+- Cizeta
+- De Tomaso
+- DR
+- Fiat
+- Ferrari
+- F&M
+- Giannini
+- Giottiline
+- Grecav
+- Italdesign
+- Iveco
+- Lamborghini
+- Lancia
+- Maserati
+- Mazzanti
+- Pagani
+- Piaggio
+- Pininfarina
+- Qvale
+- Spada Vetture Sport
+
+[Japonya]
+- Toyota
+- Lexus
+- GR
+- Century
+- Nissan
+- GT-R
+- Nismo
+- Infiniti
+- Honda
+- Acura
+- Afeela
+- Mitsubishi
+- Subaru
+- STI
+- Mazda
+- Suzuki
+- Daihatsu
+- Mitsuoka
+- Takeoka Auto Craft
+- Aspark
+- Isuzu
+- Hino Motors
+- Mitsubishi Fuso
+- UD Trucks
+- J-Bus
+- Yamaha Motor
+- Kawasaki Motors
+
+[Kamboçya]
+- (liste bulunamadı)
+
+[Kanada]
+- Campagna
+- Canadian Electric Vehicles
+- Edison Motors
+- Fiat Chrysler Canada
+- Ford Canada
+- General Motors Canada
+- CAMI
+- GreenPower
+- Girardin Minibus
+- Honda Canada
+- HTT Automobile
+- Lion Bus
+- New Flyer
+- Nova Bus
+- Prevost
+- TAV
+- Timmis
+- Toyota Canada
+- Vicinity Motor Corp.
+
+[Kenya]
+- Mobius
+
+[Kolombiya]
+- (liste bulunamadı)
+
+[Kuzey Kore]
+- Pyeonghwa Motors
+- Sungri Motors
+
+[Küba]
+- (liste bulunamadı)
+
+[Macaristan]
+- Credo
+- Rába
+
+[Madagaskar]
+- (liste bulunamadı)
+
+[Malezya]
+- Bufori
+- Proton
+- Perodua
+- TD2000
+- Inokom
+- Naza
+- Hicom
+
+[Meksika]
+- Dina
+- Mastretta
+- VAM
+- Zacua
+
+[Mısır]
+- Speranza
+
+[Monako]
+- Venturi
+
+[Moğolistan]
+- (liste bulunamadı)
+
+[Namibya]
+- (liste bulunamadı)
+
+[Nepal]
+- (liste bulunamadı)
+
+[Nijerya]
+- Innoson Vehicle Manufacturing
+
+[Norveç]
+- Kongsberg
+- Koenigsegg
+
+[Özbekistan]
+- SamKochAvto
+- UzAuto Motors
+
+[Pakistan]
+- Atlas Honda
+- Honda Atlas Cars Pakistan
+- FAW Pakistan
+- Ghandhara Nissan
+- Ghandhara Industries
+- Heavy Industries Taxila
+- Hinopak
+- Master
+- Millat Tractors
+- Pak Suzuki
+- Indus Motors Company
+- Yamaha Motor Pakistan
+- Sazgar
+- Hyundai Nishat Motors
+- Kia Lucky Motors
+- United Auto Industries
+- Prince DFSK
+- MG JW Automobile
+
+[Polonya]
+- Ferrari Polski
+
+[Portekiz]
+- (liste bulunamadı)
+
+[Romanya]
+- Dacia
+- Ford Romania
+
+[Rusya]
+- Aurus Motors
+- GAZ
+- Lada
+- Moskvich
+- KamAZ
+- UAZ
+- Sollers
+- BelAZ
+
+[Sırbistan]
+- FAP
+- FCA Srbija
+- Zastava TERVO
+
+[Slovakya]
+- K-1 Engineering
+- Troliga Bus
+
+[Slovenya]
+- Revoz
+
+[Suudi Arabistan]
+- Ceer Motors
+
+[Şili]
+- (liste bulunamadı)
+
+[Tayland]
+- Thai Rung
+
+[Tayvan]
+- CMC
+- Luxgen
+- Yue Long / Yulon / YLN
+
+[Tunus]
+- Bako Motors
+- Industries Mécaniques Maghrébines
+- Wallyscar
+
+[Uganda]
+- Kiira
+
+[Ukrayna]
+- KrAZ
+
+[Uruguay]
+- Effa Motors
+
+[Venezuela]
+- (liste bulunamadı)
+
+[Vietnam]
+- ChienThang
+- THACO
+- VinFast
+
+[Yemen]
+- (liste bulunamadı)
+
+[Yeni Zelanda]
+- Almac
+- Alternative Cars
+- Chevron
+- Fraser
+- Hulme
+- Leitch
+- Saker
+
+[Yunanistan]
+- ELVO
+- Kioleides
+- Keraboss
+- Korres
+- Namco
+- Replicar Hellas
+
+[Zambiya]
+- (liste bulunamadı)
+
+[Zimbabve]
+- (liste bulunamadı)
+
+[BAE]
+- Devel Motors
+- W Motors
+
+=== GRUP BAZINDA ÖNEMLİ MARKALAR ===
+
+Volkswagen Group:
+- Volkswagen, Audi, SEAT, Cupra, Škoda, Porsche, Bentley, Lamborghini, Bugatti, Ducati, MAN, Scania
+
+Stellantis Group:
+- Abarth, Alfa Romeo, Chrysler, Citroën, Dodge, DS, Fiat, Jeep, Lancia, Maserati, Opel, Peugeot, Ram, Vauxhall
+
+Toyota Group:
+- Toyota, Lexus, Daihatsu, Hino
+
+Honda Group:
+- Honda, Acura
+
+Nissan Group:
+- Nissan, Infiniti, Mitsubishi
+
+Hyundai Group:
+- Hyundai, Kia, Genesis
+
+BMW Group:
+- BMW, Mini, Rolls-Royce
+
+Mercedes-Benz Group:
+- Mercedes-Benz, Maybach, Smart, AMG
+
+Ford Group:
+- Ford, Lincoln
+
+GM Group:
+- Chevrolet, Buick, GMC, Cadillac
+
+Geely Group:
+- Geely, Volvo, Polestar, Lynk & Co, Zeekr, Lotus, LEVC, Smart (hisse)
+
+SAIC Group:
+- MG, Roewe, Maxus, IM Motors
+
+Renault-Nissan-Mitsubishi:
+- Renault, Nissan, Mitsubishi, Dacia, Alpine, Infiniti
+
+Tata Group:
+- Tata Motors, Jaguar, Land Rover
+
+BYD Group:
+- BYD, Denza, Yangwang, Fangchengbao
+
+BAIC Group:
+- BAIC, Arcfox, Beijing Off-road, Foton

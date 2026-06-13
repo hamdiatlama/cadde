@@ -1,0 +1,30 @@
+Fiyat
+İlan Başlığı
+Konum
+Marka / Tersane
+Model
+Yıl
+Araç Durumu
+Tekne Tipi (Sürat/Yelkenli/Yat)
+Boy (m)
+Motor Sayısı
+Motor Gücü (BG)
+Yakıt Tipi
+Maksimum Hız (knot)
+Yolcu Kapasitesi
+Kabin Sayısı
+Tuvalet / Duş
+Mutfak
+Bayrak / Tescil
+Kimden
+Takas
+Malzeme (Fiberglass/Ahşap/AL)
+Ruhsat Durumu
+Seyir Ekipmanı
+Balıkçılık Ekipmanı
+Güverte Ekipmanı
+Elektrik Sistemi
+Video Linki
+İlan Açıklaması
+Krediye Uygun
+Pazarlık / İndirim

@@ -1,0 +1,41 @@
+{
+  "marka": "Specialized",
+  "modeller": [
+    {
+      "model": "Turbo Vado 3.0",
+      "kasa_tipleri": [
+        "e-Bisiklet"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Turbo Creo 2",
+      "kasa_tipleri": [
+        "e-Bisiklet"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Turbo Levo",
+      "kasa_tipleri": [
+        "e-Bisiklet"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Turbo Como 4.0",
+      "kasa_tipleri": [
+        "e-Bisiklet"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Turbo Tero X",
+      "kasa_tipleri": [
+        "e-Bisiklet"
+      ],
+      "uretim_baslangic": 2023
+    }
+  ],
+  "kaynak": "manuel"
+}

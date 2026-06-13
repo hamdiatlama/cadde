@@ -1,0 +1,175 @@
+=== ARAÇ TİPLERİ SINIFLANDIRMASI ===
+
+[Otomobil / Binek Araçlar]
+- Hatchback (3 Kapı)
+- Hatchback (5 Kapı)
+- Sedan
+- Station Wagon / Estate
+- Coupe
+- Cabrio / Convertible
+- Roadster
+- Fastback
+- Liftback
+- Hardtop
+- Targa
+- Shooting Brake
+
+[SUV & Crossover]
+- Mini SUV (B segment)
+- Kompakt SUV (C segment)
+- Orta SUV (D segment)
+- Büyük SUV (E/F segment)
+- Coupe SUV
+- Crossover
+- Off-Road / Arazi Aracı
+- 4x4
+- Pick-up SUV (SUV kasalı)
+
+[MPV / Çok Amaçlı Taşıyıcılar]
+- Küçük MPV
+- Kompakt MPV
+- Büyük MPV
+- Lüks MPV
+- Minivan
+
+[Ticari Araçlar - Hafif]
+- Kamyonet (Panelvan)
+- Kamyonet (Çift Kabin)
+- Pick-up (Tam Kabin)
+- Pick-up (Tek Kabin)
+- Pick-up (Kabinli Şase)
+- Minibüs (12-16 kişi)
+- Midibüs (17-25 kişi)
+- Van / Panelvan
+- Kombi Van
+- Karavan / Campervan
+
+[Ticari Araçlar - Ağır]
+- Kamyon (Hafif)
+- Kamyon (Orta)
+- Kamyon (Ağır)
+- Kamyon (Çekici)
+- Dorseli Tır
+- Tanker
+- Damperli Kamyon
+- Soğutuculu Kamyon
+- Platform / Lowbed
+
+[Otobüs]
+- Şehir İçi Otobüs
+- Şehirlerarası Otobüs
+- Tur Otobüsü
+- Midibüs (17-25 kişi)
+- Minibüs (12-16 kişi)
+- Okul Servisi
+- Personel Servisi
+- Elektrikli Otobüs
+- Çift Katlı Otobüs
+
+[Traktör & Tarım Araçları]
+- Çiftçi Traktörü
+- Bahçe Traktörü
+- Paletli Traktör
+- Bahçe / Çim Traktörü
+- Biçerdöver
+- Harman Makinesi
+- Römork (Tarım)
+- Pulluk / Ekipman
+
+[İş Makineleri]
+- Ekskavatör
+- Beko Loder / Kepçe
+- Dozer
+- Greyder
+- Silindir
+- Yükleyici / Loader
+- Forklift
+- Vinç / Mobil Vinç
+- Beton Mikseri
+- Beton Pompası
+- Sondaj Makinesi
+- Asfalt Serici / Finisher
+- Teleskopik Yükleyici
+- Kompakt Yükleyici
+- Mini Ekskavatör
+
+[Motosiklet & Motorsikletler]
+- Scooter
+- Moped / Mobed
+- Naked / Street
+- Sport / Super Sport
+- Touring / Gezi
+- Cruiser / Chopper
+- Enduro / Cross
+- Adventure
+- Cafe Racer
+- Scrambler
+- Elektrikli Motosiklet
+- Üç Tekerlekli (Trike)
+- ATV / Quad
+- Side-by-Side (UTV)
+
+[Elektrikli Mikro Mobilite]
+- Elektrikli Bisiklet (E-Bike)
+- Elektrikli Scooter
+- Hoverboard
+- Segway
+- Elektrikli Tek Teker
+
+[Deniz Araçları]
+- Sürat Teknesi
+- Yelkenli
+- Motor Yat
+- Gulet
+- Lastik Bot
+- Şişme Bot
+- Jet Ski
+- Deniz Motoru
+
+[Özel Amaçlı Araçlar]
+- Ambulans
+- İtfaiye Aracı
+- Polis Aracı
+- Zırhlı Araç
+- Askeri Araç
+- Cenaze Aracı
+- Paraşütçü Aracı
+- Engelli Aracı
+- Golf Aracı
+- Havaalanı Aracı (Apron)
+- Kar Aracı (Snowmobile)
+
+[Hafif Ticari (LCV)]
+- Panelvan (Küçük)
+- Panelvan (Orta)
+- Panelvan (Büyük)
+- Kombi (Yolcu + Yük)
+- Camping / Caravan
+- Soğutmalı Panelvan
+- Perdeli / Tenteli Kamyonet
+- Damperli Kamyonet
+- Çekici Kamyonet
+
+[Römork & Treyler]
+- Otomobil / Binek Römorku
+- Motosiklet Römorku
+- Tekne Römorku
+- Yataklı Römork / Karavan
+- Yük Römorku
+- Soğutmalı Dorse
+- Tenteli Dorse
+- Açık Dorse
+- Konteyner Taşıyıcı
+- Hayvan Taşıma Römorku
+
+[Segment Bazlı Sınıflandırma]
+- A Segmenti (Mini / Şehir Otomobili)
+- B Segmenti (Küçük Sınıf)
+- C Segmenti (Kompakt / Orta Altı)
+- D Segmenti (Orta Sınıf)
+- E Segmenti (Üst Orta Sınıf)
+- F Segmenti (Lüks Sınıf)
+- J Segmenti (SUV / Crossover)
+- S Segmenti (Spor Otomobil)
+- M Segmenti (MPV / Çok Amaçlı)
+- P Segmenti (Pick-up)

@@ -1,0 +1,73 @@
+{
+  "marka": "Buick",
+  "modeller": [
+    {
+      "model": "Encore",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "Encore GX",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Envision",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Enclave",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2007
+    },
+    {
+      "model": "LaCrosse",
+      "segment": "E",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2016,
+      "uretim_bitis": 2019
+    },
+    {
+      "model": "Regal",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Sedan",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2017,
+      "uretim_bitis": 2020
+    },
+    {
+      "model": "GL8",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Electra",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2024
+    }
+  ],
+  "kaynak": "manuel"
+}

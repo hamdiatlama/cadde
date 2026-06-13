@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Alt Menu - Masaustu Referans</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f9fafb;--card:#fff;--card2:#f3f4f6;--border:#e5e7eb;--text1:#111;--text2:#374151;--text3:#6b7280;--text4:#9ca3af;--radius:4px}
+body{font-family:'Inter',sans-serif;background:var(--bg);min-height:100vh;display:flex;flex-direction:column}
+
+/* Ust bar - hamburger SAGDA */
+.topbar{display:flex;align-items:center;gap:12px;padding:10px 20px;border-bottom:1px solid var(--border);background:var(--card);flex-shrink:0}
+.topbar .tb-title{font-size:16px;font-weight:600;color:var(--text1)}
+.topbar .tb-spacer{flex:1}
+.topbar .menu-btn{width:38px;height:38px;display:flex;align-items:center;justify-content:center;border:none;background:none;color:var(--text1);cursor:pointer;border-radius:var(--radius);font-size:24px}
+.topbar .menu-btn:active{background:var(--card2)}
+
+/* Ana icerik */
+.main-content{flex:1;display:flex;flex-direction:column;overflow:hidden}
+
+/* Harita alani */
+.map-area{flex:1;background:var(--card2);display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--text3);gap:4px}
+.map-area .material-icons{font-size:64px;color:var(--text4)}
+
+/* Arama */
+.search-wrap{position:relative;width:100%}
+.search-overlay{position:absolute;top:-48px;left:50%;transform:translateX(-50%);width:min(600px,90%);background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:12px 16px;display:flex;align-items:center;gap:10px}
+.search-overlay .material-icons{font-size:20px;color:var(--text3)}
+.search-overlay span{font-size:14px;color:var(--text4);flex:1}
+
+/* ALT KISIM - telefon goruntusu */
+.phone-bottom{margin:0 auto;width:390px;flex-shrink:0;border-top:1px solid var(--border);background:var(--card)}
+
+/* Hizmet kartlari */
+.bs-card{padding:16px}
+.bs-card .bs-title{font-size:13px;font-weight:600;color:var(--text1);margin-bottom:10px}
+.service-row{display:flex;gap:8px}
+.service-card{flex:1;text-align:center;padding:12px 4px;border:1px solid var(--border);border-radius:var(--radius)}
+.service-card .material-icons{font-size:28px;color:var(--text3);display:block}
+.service-card .sc-label{font-size:11px;color:var(--text2);margin-top:4px;font-weight:500}
+
+/* ALT MENU - telefon alt cubugu */
+.phone-nav{display:flex;border-top:1px solid var(--border);background:var(--card)}
+.phone-nav .bn-item{flex:1;text-align:center;padding:6px 0 8px;cursor:pointer}
+.phone-nav .bn-item .material-icons{font-size:22px;color:var(--text4);display:block}
+.phone-nav .bn-item .bn-label{font-size:10px;color:var(--text4);margin-top:1px}
+.phone-nav .bn-item.aktif .material-icons{color:var(--text1)}
+.phone-nav .bn-item.aktif .bn-label{color:var(--text1);font-weight:500}
+
+/* SAG DRAWER */
+.drawer-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.3);z-index:99;display:none;opacity:0;transition:opacity .2s}
+.drawer-overlay.open{display:block;opacity:1}
+.drawer{position:fixed;top:0;right:-390px;width:390px;height:100vh;background:var(--card);border-left:1px solid var(--border);z-index:100;transition:right .25s;display:flex;flex-direction:column}
+.drawer.open{right:0}
+.drawer-header{display:flex;align-items:center;gap:8px;padding:14px 20px;border-bottom:1px solid var(--border);flex-shrink:0}
+.drawer-header .close-btn{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:none;background:none;color:var(--text1);cursor:pointer;border-radius:var(--radius);font-size:22px}
+.drawer-header .close-btn:active{background:var(--card2)}
+.drawer-header h2{font-size:16px;font-weight:600;flex:1;color:var(--text1)}
+.drawer-scroll{flex:1;overflow-y:auto;padding:8px 0}
+.d-item{display:flex;align-items:center;gap:14px;padding:14px 20px;cursor:pointer;color:var(--text1)}
+.d-item:active{background:var(--card2)}
+.d-item .material-icons{font-size:22px;color:var(--text3);width:22px}
+.d-item .li-label{font-size:14px;font-weight:500;flex:1}
+.d-item.aktif{background:var(--card2);border-right:3px solid var(--text1)}
+.d-item.aktif .material-icons{color:var(--text1)}
+
+@media(max-width:480px){
+  .search-overlay{width:calc(100% - 24px);top:-44px;left:50%}
+  .phone-bottom{width:100%}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="tb-title">Ana Sayfa</div>
+  <div class="tb-spacer"></div>
+  <button class="menu-btn" onclick="toggleDrawer()"><span class="material-icons">menu</span></button>
+</div>
+
+<div class="main-content">
+  <div class="map-area">
+    <span class="material-icons">map</span>
+    <span style="font-size:14px">Harita alani</span>
+  </div>
+  <div class="search-wrap">
+    <div class="search-overlay">
+      <span class="material-icons">search</span>
+      <span>Nereye gitmek istiyorsunuz?</span>
+    </div>
+  </div>
+</div>
+
+<!-- ALT KISIM: telefon goruntusunde -->
+<div class="phone-bottom">
+  <div class="bs-card">
+    <div class="bs-title">Hizmetler</div>
+    <div class="service-row">
+      <div class="service-card"><span class="material-icons">directions_car</span><div class="sc-label">Taksi</div></div>
+      <div class="service-card"><span class="material-icons">restaurant</span><div class="sc-label">Yemek</div></div>
+      <div class="service-card"><span class="material-icons">local_florist</span><div class="sc-label">Çiçek</div></div>
+    </div>
+  </div>
+  <div class="phone-nav">
+    <div class="bn-item aktif"><span class="material-icons">home</span><div class="bn-label">Ana Sayfa</div></div>
+    <div class="bn-item"><span class="material-icons">search</span><div class="bn-label">Arama</div></div>
+    <div class="bn-item"><span class="material-icons">more_horiz</span><div class="bn-label">—</div></div>
+    <div class="bn-item"><span class="material-icons">person</span><div class="bn-label">Profil</div></div>
+  </div>
+</div>
+
+<div class="drawer-overlay" id="overlay" onclick="toggleDrawer()"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-header">
+    <span style="flex:1"></span>
+    <h2>Menü</h2>
+    <button class="close-btn" onclick="toggleDrawer()"><span class="material-icons">close</span></button>
+  </div>
+  <div class="drawer-scroll">
+    <div class="d-item aktif"><span class="material-icons">home</span><div class="li-label">Ana Sayfa</div></div>
+    <div class="d-item"><span class="material-icons">search</span><div class="li-label">Arama</div></div>
+    <div class="d-item"><span class="material-icons">more_horiz</span><div class="li-label">—</div></div>
+    <div class="d-item"><span class="material-icons">person</span><div class="li-label">Profil</div></div>
+  </div>
+</div>
+
+<script>
+function toggleDrawer(){
+  document.getElementById('drawer').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('open');
+}
+</script>
+</body>
+</html>

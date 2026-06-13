@@ -1,0 +1,36 @@
+Fiyat
+İlan Başlığı
+Konum
+Marka / Şasi
+Model
+Yıl
+Araç Durumu
+KM
+Yakıt Tipi
+Motor Gücü
+Motor Hacmi
+Vites
+Çekiş
+Renk
+Garanti
+Plaka / Uyruk
+Kimden
+Takas
+Karavan Tipi (Çekme Karavan/Motorhome/Kamyonet Karavan)
+Boy (m)
+Uyku Kapasitesi
+Tuvalet / Duş
+Mutfak
+Isıtma / Klima
+Su Deposu (lt)
+Atık Su Deposu (lt)
+Elektrik Sistemi (12V/220V/Güneş Paneli)
+Jeneratör
+Markiz / Tente
+Krediye Uygun
+Sigorta Durumu
+Video Linki
+İlan Açıklaması
+VIN / Şasi No
+Pazarlık / İndirim
+İlk Tescil Tarihi

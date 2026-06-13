@@ -1,0 +1,55 @@
+{
+  "marka": "Fiat",
+  "modeller": [
+    {
+      "model": "Doblo Panelvan",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2010
+    },
+    {
+      "model": "Doblo Combi",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2010
+    },
+    {
+      "model": "Fiorino Panelvan",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2007
+    },
+    {
+      "model": "Fiorino Combi",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2007
+    },
+    {
+      "model": "Ducato Panelvan",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2006
+    },
+    {
+      "model": "Ducato Minibus",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2006
+    },
+    {
+      "model": "500L",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2012
+    }
+  ],
+  "kaynak": "manuel"
+}

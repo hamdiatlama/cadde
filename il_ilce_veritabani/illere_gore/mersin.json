@@ -1,0 +1,46 @@
+{
+  "il_id": 33,
+  "il": "Mersin",
+  "plaka": "33",
+  "ilceler": [
+    {
+      "ilce": "Akdeniz"
+    },
+    {
+      "ilce": "Anamur"
+    },
+    {
+      "ilce": "Aydıncık"
+    },
+    {
+      "ilce": "Bozyazı"
+    },
+    {
+      "ilce": "Erdemli"
+    },
+    {
+      "ilce": "Gülnar"
+    },
+    {
+      "ilce": "Mezitli"
+    },
+    {
+      "ilce": "Mut"
+    },
+    {
+      "ilce": "Silifke"
+    },
+    {
+      "ilce": "Tarsus"
+    },
+    {
+      "ilce": "Toroslar"
+    },
+    {
+      "ilce": "Yenişehir"
+    },
+    {
+      "ilce": "Çamlıyayla"
+    }
+  ]
+}

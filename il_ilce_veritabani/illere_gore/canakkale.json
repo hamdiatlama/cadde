@@ -1,0 +1,43 @@
+{
+  "il_id": 17,
+  "il": "Çanakkale",
+  "plaka": "17",
+  "ilceler": [
+    {
+      "ilce": "Ayvacık"
+    },
+    {
+      "ilce": "Bayramiç"
+    },
+    {
+      "ilce": "Biga"
+    },
+    {
+      "ilce": "Bozcaada"
+    },
+    {
+      "ilce": "Eceabat"
+    },
+    {
+      "ilce": "Ezine"
+    },
+    {
+      "ilce": "Gelibolu"
+    },
+    {
+      "ilce": "Gökçeada"
+    },
+    {
+      "ilce": "Lapseki"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Yenice"
+    },
+    {
+      "ilce": "Çan"
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+version: "3.9"
+
+x-shared-env: &shared-env
+  DATABASE_URL: postgresql+asyncpg://webplatform:webplatform@postgres:5432/webplatform
+  SECRET_KEY: ${SECRET_KEY:-dev-secret-key-change-in-production}
+  REDIS_URL: redis://redis:6379/0
+  NATS_URL: nats://nats:4222
+  MINIO_ENDPOINT: minio:9000
+  MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY:-minioadmin}
+  MINIO_SECRET_KEY: ${MINIO_SECRET_KEY:-minioadmin}
+  MEILISEARCH_URL: http://meilisearch:7700
+  MEILISEARCH_API_KEY: ${MEILISEARCH_API_KEY:-master-key}
+  OSRM_URL: http://osrm:5000
+
+x-go-env: &go-env
+  DATABASE_URL: postgres://webplatform:webplatform@postgres:5432/webplatform?sslmode=disable
+  JWT_SECRET: ${SECRET_KEY:-dev-secret-key-change-in-production}
+  REDIS_URL: redis://redis:6379/0
+  NATS_URL: nats://nats:4222
+  MINIO_ENDPOINT: minio:9000
+  MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY:-minioadmin}
+  MINIO_SECRET_KEY: ${MINIO_SECRET_KEY:-minioadmin}
+  MINIO_BUCKET: uploads
+  MEILISEARCH_URL: http://meilisearch:7700
+  MEILISEARCH_KEY: ${MEILISEARCH_API_KEY:-master-key}
+  OSRM_URL: http://osrm:5000
+
+services:
+  postgres:
+    image: postgis/postgis:16-3.4
+    container_name: wp-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: webplatform
+      POSTGRES_USER: webplatform
+      POSTGRES_PASSWORD: webplatform
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ../veritabani/migrations:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U webplatform"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: wp-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  minio:
+    image: minio/minio:latest
+    container_name: wp-minio
+    restart: unless-stopped
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ACCESS_KEY:-minioadmin}
+      MINIO_ROOT_PASSWORD: ${MINIO_SECRET_KEY:-minioadmin}
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - miniodata:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  meilisearch:
+    image: getmeili/meilisearch:v1.12
+    container_name: wp-meilisearch
+    restart: unless-stopped
+    environment:
+      MEILI_MASTER_KEY: ${MEILISEARCH_API_KEY:-master-key}
+      MEILI_NO_ANALYTICS: "true"
+    ports:
+      - "7700:7700"
+    volumes:
+      - meilidata:/meili_data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7700/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  nats:
+    image: nats:2.10-alpine
+    container_name: wp-nats
+    restart: unless-stopped
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+    command: -js -m 8222
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8222/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  osrm:
+    image: osrm/osrm-backend:v5.27
+    container_name: wp-osrm
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    volumes:
+      - osrmdata:/data
+    command: >
+      sh -c "
+      if [ ! -f /data/turkey.osm.pbf ]; then
+        wget -q -O /data/turkey.osm.pbf https://download.geofabrik.de/europe/turkey-latest.osm.pbf
+        osrm-extract -p /opt/car.lua /data/turkey.osm.pbf
+        osrm-contract /data/turkey.osrm
+      fi
+      osrm-routed --algorithm mld /data/turkey.osrm
+      "
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 300s
+
+  backend:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: wp-backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      <<: *shared-env
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+      meilisearch:
+        condition: service_healthy
+      nats:
+        condition: service_healthy
+    volumes:
+      - ..:/app
+    command: uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
+
+  backend-go:
+    build:
+      context: ../go
+      dockerfile: Dockerfile
+    container_name: wp-backend-go
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      <<: *go-env
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    profiles:
+      - go
+
+  frontend:
+    build:
+      context: ../frontend-app
+      dockerfile: ../docker/Dockerfile.frontend
+    container_name: wp-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:
+  redisdata:
+  miniodata:
+  meilidata:
+  osrmdata:

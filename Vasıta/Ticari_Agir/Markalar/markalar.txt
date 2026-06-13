@@ -1,0 +1,133 @@
+=== Ticari Ağır MARKALARI ===
+
+=== TICARI ARAÇ MARKALARI ===
+(Yük ve yolcu taşımacılığı markaları)
+
+[Almanya]
+- MAN
+- Mercedes-Benz
+- Mercedes-Benz Trucks
+- Setra
+- Neoplan
+- Volkswagen Commercial Vehicles
+
+[ABD]
+- Freightliner
+- Kenworth
+- Peterbilt
+- Western Star
+- Mack
+- International
+- Blue Bird
+- Thomas Built Buses
+- Ford Trucks (Ford F-Series)
+
+[Çin]
+- Foton
+- King Long
+- Yutong
+- Zhongtong
+- BYD (otobüs)
+- Golden Dragon
+- Sunlong Bus
+- Maxus (SAIC)
+- JMC (Jiangling)
+- Shacman (Shaanxi)
+
+[Fransa]
+- Renault Trucks
+- Irisbus (Iveco Bus)
+
+[İngiltere]
+- Dennis Eagle
+- Alexander Dennis
+- Wrightbus
+- Leyland Trucks (DAF)
+
+[İsveç]
+- Scania
+- Volvo Trucks
+- Volvo Buses
+
+[İtalya]
+- Iveco
+- Iveco Bus
+- Astra
+
+[Japonya]
+- Isuzu
+- Hino
+- Mitsubishi Fuso
+- UD Trucks
+- Nissan Diesel
+
+[Güney Kore]
+- Hyundai Trucks & Buses
+- Daewoo Bus (Zyle Daewoo)
+- Kia Trucks & Buses
+
+[Türkiye]
+- BMC
+- TEMSA
+- Otokar
+- Karsan
+- Mercedes-Benz Türk (otobüs/kamyon)
+- Ford Otosan
+- Güleryüz
+- Akia
+
+[Rusya]
+- KamAZ
+- GAZ
+- PAZ (Pavlovsky Avtobus)
+- LiAZ
+
+[Çek Cumhuriyeti]
+- Tatra
+- Avia
+- Karosa
+
+[Polonya]
+- Solaris
+- Autosan
+
+[Finlandiya]
+- Sisu Auto
+
+[Romanya]
+- Roman
+
+[Brezilya]
+- Marcopolo
+- Neobus
+- Agrale
+- Busscar
+
+[Hindistan]
+- Ashok Leyland
+- Tata Motors (ticari)
+- Mahindra & Mahindra (ticari)
+- Force Motors
+- Eicher Motors
+- Swaraj Mazda (SML Isuzu)
+
+[Macaristan]
+- Ikarus
+- Rába
+
+[Belarus]
+- MAZ
+- BelAZ
+
+[Güney Afrika]
+- Busmark
+
+[İspanya]
+- Irizar
+- Castrosua
+- Sunsundegui
+- Beulas
+
+[İran]
+- Iran Khodro Diesel
+- Khawar Diesel

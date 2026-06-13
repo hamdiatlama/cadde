@@ -1,0 +1,73 @@
+{
+  "marka": "Infiniti",
+  "modeller": [
+    {
+      "model": "Q50",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "Q60",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "QX50",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "QX55",
+      "segment": "J",
+      "kasa_tipleri": [
+        "Coupe",
+        "SUV"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "QX60",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "QX80",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2024
+    },
+    {
+      "model": "Q70",
+      "segment": "E",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2014,
+      "uretim_bitis": 2019
+    },
+    {
+      "model": "QX30",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2016,
+      "uretim_bitis": 2019
+    }
+  ],
+  "kaynak": "manuel"
+}

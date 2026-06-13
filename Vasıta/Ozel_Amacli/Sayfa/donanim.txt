@@ -1,0 +1,14 @@
+[Güvenlik]
+
+[Özel Donanım]
+
+[Medikal Ekipman]
+
+[İletişim Sistemi]
+
+[Motor & Performans]
+
+[Bakım & Geçmiş]
+
+[Dış Donanım]
+

@@ -1,0 +1,41 @@
+{
+  "marka": "FNSS",
+  "modeller": [
+    {
+      "model": "ACV-15",
+      "kasa_tipleri": [
+        "ZMA (Zırhlı Muharebe)"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Kaplan-10",
+      "kasa_tipleri": [
+        "Zırhlı"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Kaplan-20",
+      "kasa_tipleri": [
+        "Zırhlı"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Pars 8x8",
+      "kasa_tipleri": [
+        "Zırhlı"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Kunduz",
+      "kasa_tipleri": [
+        "ZMA"
+      ],
+      "uretim_baslangic": 2016
+    }
+  ],
+  "kaynak": "manuel"
+}

@@ -1,0 +1,5770 @@
+[
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Fatih",
+    "semt": "Aksaray",
+    "slug": "aksaray"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Fatih",
+    "semt": "Alemdar",
+    "slug": "alemdar"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Fatih",
+    "semt": "Balat",
+    "slug": "balat"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Fatih",
+    "semt": "Çarşamba",
+    "slug": "carsamba"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Fatih",
+    "semt": "Eminönü",
+    "slug": "eminonu"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Fatih",
+    "semt": "Fener",
+    "slug": "fener"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Fatih",
+    "semt": "Haliç",
+    "slug": "halic"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Fatih",
+    "semt": "Kadırga",
+    "slug": "kadirga"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Fatih",
+    "semt": "Kocamustafapaşa",
+    "slug": "kocamustafapasa"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Fatih",
+    "semt": "Kumkapı",
+    "slug": "kumkapi"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Fatih",
+    "semt": "Laleli",
+    "slug": "laleli"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Fatih",
+    "semt": "Saraçhane",
+    "slug": "sarachane"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Fatih",
+    "semt": "Sultanahmet",
+    "slug": "sultanahmet"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Fatih",
+    "semt": "Tahtakale",
+    "slug": "tahtakale"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Fatih",
+    "semt": "Topkapı",
+    "slug": "topkapi"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Fatih",
+    "semt": "Vatan",
+    "slug": "vatan"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Fatih",
+    "semt": "Yedikule",
+    "slug": "yedikule"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Fatih",
+    "semt": "Zeyrek",
+    "slug": "zeyrek"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kadıköy",
+    "semt": "Bostancı",
+    "slug": "bostanci"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kadıköy",
+    "semt": "Caferağa",
+    "slug": "caferaga"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kadıköy",
+    "semt": "Caddebostan",
+    "slug": "caddebostan"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kadıköy",
+    "semt": "Eğitim",
+    "slug": "egitim"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kadıköy",
+    "semt": "Fenerbahçe",
+    "slug": "fenerbahce"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kadıköy",
+    "semt": "Fikirtepe",
+    "slug": "fikirtepe"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kadıköy",
+    "semt": "Göztepe",
+    "slug": "goztepe"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kadıköy",
+    "semt": "Hasanpaşa",
+    "slug": "hasanpasa"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kadıköy",
+    "semt": "Koşuyolu",
+    "slug": "kosuyolu"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kadıköy",
+    "semt": "Küçükyalı",
+    "slug": "kucukyali"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kadıköy",
+    "semt": "Merdivenköy",
+    "slug": "merdivenkoy"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kadıköy",
+    "semt": "Moda",
+    "slug": "moda"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kadıköy",
+    "semt": "Osmanağa",
+    "slug": "osmanaga"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kadıköy",
+    "semt": "Rasimpaşa",
+    "slug": "rasimpasa"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kadıköy",
+    "semt": "Sahrayıcedit",
+    "slug": "sahrayicedit"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kadıköy",
+    "semt": "Suadiye",
+    "slug": "suadiye"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kadıköy",
+    "semt": "Zühtüpaşa",
+    "slug": "zuhtupasa"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beşiktaş",
+    "semt": "Abbasağa",
+    "slug": "abbasaga"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beşiktaş",
+    "semt": "Akaretler",
+    "slug": "akaretler"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beşiktaş",
+    "semt": "Arnavutköy",
+    "slug": "arnavutkoy"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beşiktaş",
+    "semt": "Bebek",
+    "slug": "bebek"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beşiktaş",
+    "semt": "Dikilitaş",
+    "slug": "dikilitas"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beşiktaş",
+    "semt": "Etiler",
+    "slug": "etiler"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beşiktaş",
+    "semt": "Gayrettepe",
+    "slug": "gayrettepe"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beşiktaş",
+    "semt": "Konaklar",
+    "slug": "konaklar"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beşiktaş",
+    "semt": "Kuruçeşme",
+    "slug": "kurucesme"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beşiktaş",
+    "semt": "Levent",
+    "slug": "levent"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beşiktaş",
+    "semt": "Levazım",
+    "slug": "levazim"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beşiktaş",
+    "semt": "Ortaköy",
+    "slug": "ortakoy"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beşiktaş",
+    "semt": "Rumelihisarı",
+    "slug": "rumelihisari"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beşiktaş",
+    "semt": "Türkali",
+    "slug": "turkali"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beşiktaş",
+    "semt": "Ulus",
+    "slug": "ulus"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beşiktaş",
+    "semt": "Vişnezade",
+    "slug": "visnezade"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beşiktaş",
+    "semt": "Yıldız",
+    "slug": "yildiz"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Şişli",
+    "semt": "Bomonti",
+    "slug": "bomonti"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Şişli",
+    "semt": "Çağlayan",
+    "slug": "caglayan"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Şişli",
+    "semt": "Cumhuriyet",
+    "slug": "cumhuriyet"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Şişli",
+    "semt": "Duatepe",
+    "slug": "duatepe"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Şişli",
+    "semt": "Esentepe",
+    "slug": "esentepe"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Şişli",
+    "semt": "Fulya",
+    "slug": "fulya"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Şişli",
+    "semt": "Gülbağ",
+    "slug": "gulbag"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Şişli",
+    "semt": "Halaskargazi",
+    "slug": "halaskargazi"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Şişli",
+    "semt": "Harbiye",
+    "slug": "harbiye"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Şişli",
+    "semt": "Kuştepe",
+    "slug": "kustepe"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Şişli",
+    "semt": "Mecidiyeköy",
+    "slug": "mecidiyekoy"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Şişli",
+    "semt": "Merkez",
+    "slug": "merkez"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Şişli",
+    "semt": "Nişantaşı",
+    "slug": "nisantasi"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Şişli",
+    "semt": "Okmeydanı",
+    "slug": "okmeydani"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Şişli",
+    "semt": "Pangaltı",
+    "slug": "pangalti"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Şişli",
+    "semt": "Teşvikiye",
+    "slug": "tesvikiye"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Üsküdar",
+    "semt": "Acıbadem",
+    "slug": "acibadem"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Üsküdar",
+    "semt": "Altunizade",
+    "slug": "altunizade"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Üsküdar",
+    "semt": "Bağlarbaşı",
+    "slug": "baglarbasi"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Üsküdar",
+    "semt": "Beylerbeyi",
+    "slug": "beylerbeyi"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Üsküdar",
+    "semt": "Bulgurlu",
+    "slug": "bulgurlu"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Üsküdar",
+    "semt": "Burhaniye",
+    "slug": "burhaniye"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Üsküdar",
+    "semt": "Çengelköy",
+    "slug": "cengelkoy"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Üsküdar",
+    "semt": "Ferah",
+    "slug": "ferah"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Üsküdar",
+    "semt": "Güzeltepe",
+    "slug": "guzeltepe"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Üsküdar",
+    "semt": "İcadiye",
+    "slug": "i̇cadiye"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Üsküdar",
+    "semt": "Kandilli",
+    "slug": "kandilli"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Üsküdar",
+    "semt": "Kısıklı",
+    "slug": "kisikli"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Üsküdar",
+    "semt": "Küçüksu",
+    "slug": "kucuksu"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Üsküdar",
+    "semt": "Kuleli",
+    "slug": "kuleli"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Üsküdar",
+    "semt": "Kuzguncuk",
+    "slug": "kuzguncuk"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Üsküdar",
+    "semt": "Muratreis",
+    "slug": "muratreis"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Üsküdar",
+    "semt": "Salacak",
+    "slug": "salacak"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Üsküdar",
+    "semt": "Sultantepe",
+    "slug": "sultantepe"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Üsküdar",
+    "semt": "Ünalan",
+    "slug": "unalan"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Üsküdar",
+    "semt": "Valide-i Atik",
+    "slug": "valide-i-atik"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Üsküdar",
+    "semt": "Zeynep Kamil",
+    "slug": "zeynep-kamil"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beyoğlu",
+    "semt": "Asmalımescit",
+    "slug": "asmalimescit"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beyoğlu",
+    "semt": "Ayvansaray",
+    "slug": "ayvansaray"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beyoğlu",
+    "semt": "Balıkpazarı",
+    "slug": "balikpazari"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beyoğlu",
+    "semt": "Bülbül",
+    "slug": "bulbul"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beyoğlu",
+    "semt": "Cihangir",
+    "slug": "cihangir"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beyoğlu",
+    "semt": "Çukurcuma",
+    "slug": "cukurcuma"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beyoğlu",
+    "semt": "Fındıklı",
+    "slug": "findikli"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beyoğlu",
+    "semt": "Galata",
+    "slug": "galata"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beyoğlu",
+    "semt": "Gümüşsuyu",
+    "slug": "gumussuyu"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beyoğlu",
+    "semt": "Hacıahmet",
+    "slug": "haciahmet"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beyoğlu",
+    "semt": "İstiklal",
+    "slug": "i̇stiklal"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beyoğlu",
+    "semt": "Kalyoncu",
+    "slug": "kalyoncu"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beyoğlu",
+    "semt": "Kasımpaşa",
+    "slug": "kasimpasa"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beyoğlu",
+    "semt": "Kuledibi",
+    "slug": "kuledibi"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beyoğlu",
+    "semt": "Küçük Piyale",
+    "slug": "kucuk-piyale"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beyoğlu",
+    "semt": "Okmeydanı",
+    "slug": "okmeydani"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beyoğlu",
+    "semt": "Piyalepaşa",
+    "slug": "piyalepasa"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beyoğlu",
+    "semt": "Sütlüce",
+    "slug": "sutluce"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beyoğlu",
+    "semt": "Taksim",
+    "slug": "taksim"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beyoğlu",
+    "semt": "Tarlabaşı",
+    "slug": "tarlabasi"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Beyoğlu",
+    "semt": "Tepebaşı",
+    "slug": "tepebasi"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Maltepe",
+    "semt": "Aydınevler",
+    "slug": "aydinevler"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Maltepe",
+    "semt": "Bağlarbaşı",
+    "slug": "baglarbasi"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Maltepe",
+    "semt": "Cevizli",
+    "slug": "cevizli"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Maltepe",
+    "semt": "Çınar",
+    "slug": "cinar"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Maltepe",
+    "semt": "Esenkent",
+    "slug": "esenkent"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Maltepe",
+    "semt": "Feyzullah",
+    "slug": "feyzullah"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Maltepe",
+    "semt": "Fındıklı",
+    "slug": "findikli"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Maltepe",
+    "semt": "Girne",
+    "slug": "girne"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Maltepe",
+    "semt": "Gülensu",
+    "slug": "gulensu"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Maltepe",
+    "semt": "Gülsuyu",
+    "slug": "gulsuyu"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Maltepe",
+    "semt": "İdealtepe",
+    "slug": "i̇dealtepe"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Maltepe",
+    "semt": "Küçükyalı",
+    "slug": "kucukyali"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Maltepe",
+    "semt": "Maltepe",
+    "slug": "maltepe"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Maltepe",
+    "semt": "Rızapaşa",
+    "slug": "rizapasa"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Maltepe",
+    "semt": "Yalı",
+    "slug": "yali"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Maltepe",
+    "semt": "Zümrütevler",
+    "slug": "zumrutevler"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kartal",
+    "semt": "Atalar",
+    "slug": "atalar"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kartal",
+    "semt": "Cevizli",
+    "slug": "cevizli"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kartal",
+    "semt": "Cumhuriyet",
+    "slug": "cumhuriyet"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kartal",
+    "semt": "Çavuşoğlu",
+    "slug": "cavusoglu"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kartal",
+    "semt": "Esentepe",
+    "slug": "esentepe"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kartal",
+    "semt": "Gümüşpınar",
+    "slug": "gumuspinar"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kartal",
+    "semt": "Hürriyet",
+    "slug": "hurriyet"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kartal",
+    "semt": "Karlıktepe",
+    "slug": "karliktepe"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kartal",
+    "semt": "Kordonboyu",
+    "slug": "kordonboyu"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kartal",
+    "semt": "Orhantepe",
+    "slug": "orhantepe"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kartal",
+    "semt": "Petrol İş",
+    "slug": "petrol-i̇s"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kartal",
+    "semt": "Soğanlık",
+    "slug": "soganlik"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kartal",
+    "semt": "Topselvi",
+    "slug": "topselvi"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kartal",
+    "semt": "Uğur Mumcu",
+    "slug": "ugur-mumcu"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kartal",
+    "semt": "Yakacık",
+    "slug": "yakacik"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Kartal",
+    "semt": "Yalı",
+    "slug": "yali"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Pendik",
+    "semt": "Ahmet Yesevi",
+    "slug": "ahmet-yesevi"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Pendik",
+    "semt": "Bahçelievler",
+    "slug": "bahcelievler"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Pendik",
+    "semt": "Batı",
+    "slug": "bati"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Pendik",
+    "semt": "Çamçeşme",
+    "slug": "camcesme"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Pendik",
+    "semt": "Çınardere",
+    "slug": "cinardere"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Pendik",
+    "semt": "Doğu",
+    "slug": "dogu"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Pendik",
+    "semt": "Dumlupınar",
+    "slug": "dumlupinar"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Pendik",
+    "semt": "Ertuğrulgazi",
+    "slug": "ertugrulgazi"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Pendik",
+    "semt": "Güllübağlar",
+    "slug": "gullubaglar"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Pendik",
+    "semt": "Harmantepe",
+    "slug": "harmantepe"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Pendik",
+    "semt": "Kaynarca",
+    "slug": "kaynarca"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Pendik",
+    "semt": "Kurtköy",
+    "slug": "kurtkoy"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Pendik",
+    "semt": "Orhangazi",
+    "slug": "orhangazi"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Pendik",
+    "semt": "Orta",
+    "slug": "orta"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Pendik",
+    "semt": "Ramazanoğlu",
+    "slug": "ramazanoglu"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Pendik",
+    "semt": "Sanayi",
+    "slug": "sanayi"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Pendik",
+    "semt": "Sapanbağları",
+    "slug": "sapanbaglari"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Pendik",
+    "semt": "Sümer",
+    "slug": "sumer"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Pendik",
+    "semt": "Velibaba",
+    "slug": "velibaba"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Pendik",
+    "semt": "Yeni",
+    "slug": "yeni"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Pendik",
+    "semt": "Yeşilbağlar",
+    "slug": "yesilbaglar"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Bağcılar",
+    "semt": "Bağcılar",
+    "slug": "bagcilar"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Bağcılar",
+    "semt": "Çiftehavuzlar",
+    "slug": "ciftehavuzlar"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Bağcılar",
+    "semt": "Demirkapı",
+    "slug": "demirkapi"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Bağcılar",
+    "semt": "Evren",
+    "slug": "evren"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Bağcılar",
+    "semt": "Fatih",
+    "slug": "fatih"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Bağcılar",
+    "semt": "Fevzi Çakmak",
+    "slug": "fevzi-cakmak"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Bağcılar",
+    "semt": "Göztepe",
+    "slug": "goztepe"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Bağcılar",
+    "semt": "Güneşli",
+    "slug": "gunesli"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Bağcılar",
+    "semt": "Hürriyet",
+    "slug": "hurriyet"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Bağcılar",
+    "semt": "İnönü",
+    "slug": "i̇nonu"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Bağcılar",
+    "semt": "Kazım Karabekir",
+    "slug": "kazim-karabekir"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Bağcılar",
+    "semt": "Kemalpaşa",
+    "slug": "kemalpasa"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Bağcılar",
+    "semt": "Kirazlı",
+    "slug": "kirazli"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Bağcılar",
+    "semt": "Mahmutbey",
+    "slug": "mahmutbey"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Bağcılar",
+    "semt": "Merkez",
+    "slug": "merkez"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Bağcılar",
+    "semt": "Sancaktepe",
+    "slug": "sancaktepe"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Bağcılar",
+    "semt": "Yavuz Selim",
+    "slug": "yavuz-selim"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Bağcılar",
+    "semt": "Yenimahalle",
+    "slug": "yenimahalle"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Küçükçekmece",
+    "semt": "Atakent",
+    "slug": "atakent"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Küçükçekmece",
+    "semt": "Atatürk",
+    "slug": "ataturk"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Küçükçekmece",
+    "semt": "Cennet",
+    "slug": "cennet"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Küçükçekmece",
+    "semt": "Cumhuriyet",
+    "slug": "cumhuriyet"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Küçükçekmece",
+    "semt": "Fatih",
+    "slug": "fatih"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Küçükçekmece",
+    "semt": "Fevzi Çakmak",
+    "slug": "fevzi-cakmak"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Küçükçekmece",
+    "semt": "Gültepe",
+    "slug": "gultepe"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Küçükçekmece",
+    "semt": "Halkalı",
+    "slug": "halkali"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Küçükçekmece",
+    "semt": "İnönü",
+    "slug": "i̇nonu"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Küçükçekmece",
+    "semt": "İstasyon",
+    "slug": "i̇stasyon"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Küçükçekmece",
+    "semt": "Kanarya",
+    "slug": "kanarya"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Küçükçekmece",
+    "semt": "Kartaltepe",
+    "slug": "kartaltepe"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Küçükçekmece",
+    "semt": "Kemalpaşa",
+    "slug": "kemalpasa"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Küçükçekmece",
+    "semt": "Mehmet Akif",
+    "slug": "mehmet-akif"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Küçükçekmece",
+    "semt": "Söğütlüçeşme",
+    "slug": "sogutlucesme"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Küçükçekmece",
+    "semt": "Sultanmurat",
+    "slug": "sultanmurat"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Küçükçekmece",
+    "semt": "Tevfikbey",
+    "slug": "tevfikbey"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Küçükçekmece",
+    "semt": "Yarımburgaz",
+    "slug": "yarimburgaz"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Küçükçekmece",
+    "semt": "Yeni Mahalle",
+    "slug": "yeni-mahalle"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Esenler",
+    "semt": "Birlik",
+    "slug": "birlik"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Esenler",
+    "semt": "Çiftehavuzlar",
+    "slug": "ciftehavuzlar"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Esenler",
+    "semt": "Davutpaşa",
+    "slug": "davutpasa"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Esenler",
+    "semt": "Fatih",
+    "slug": "fatih"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Esenler",
+    "semt": "Fevzi Çakmak",
+    "slug": "fevzi-cakmak"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Esenler",
+    "semt": "Güneşli",
+    "slug": "gunesli"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Esenler",
+    "semt": "Havaalanı",
+    "slug": "havaalani"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Esenler",
+    "semt": "Kazım Karabekir",
+    "slug": "kazim-karabekir"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Esenler",
+    "semt": "Kemer",
+    "slug": "kemer"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Esenler",
+    "semt": "Menderes",
+    "slug": "menderes"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Esenler",
+    "semt": "Mimarsinan",
+    "slug": "mimarsinan"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Esenler",
+    "semt": "Namık Kemal",
+    "slug": "namik-kemal"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Esenler",
+    "semt": "Oruçreis",
+    "slug": "orucreis"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Esenler",
+    "semt": "Tuna",
+    "slug": "tuna"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Esenler",
+    "semt": "Turgutreis",
+    "slug": "turgutreis"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Esenler",
+    "semt": "Yavuz Selim",
+    "slug": "yavuz-selim"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Adem Yavuz",
+    "slug": "adem-yavuz"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Altınşehir",
+    "slug": "altinsehir"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Armağanevler",
+    "slug": "armaganevler"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Aşağı Dudullu",
+    "slug": "asagi-dudullu"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Atakent",
+    "slug": "atakent"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Atatürk",
+    "slug": "ataturk"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Cemil Meriç",
+    "slug": "cemil-meric"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Çakmak",
+    "slug": "cakmak"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Çamlık",
+    "slug": "camlik"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Dudullu",
+    "slug": "dudullu"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Dumlupınar",
+    "slug": "dumlupinar"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Elmalıkent",
+    "slug": "elmalikent"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Esenkent",
+    "slug": "esenkent"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Esentepe",
+    "slug": "esentepe"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Fatih",
+    "slug": "fatih"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Fevzi Çakmak",
+    "slug": "fevzi-cakmak"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Haldun Alagaş",
+    "slug": "haldun-alagas"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Hekimbaşı",
+    "slug": "hekimbasi"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "İhsaniye",
+    "slug": "i̇hsaniye"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "İnkılap",
+    "slug": "i̇nkilap"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "İstiklal",
+    "slug": "i̇stiklal"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Kâzım Karabekir",
+    "slug": "kâzim-karabekir"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Madenler",
+    "slug": "madenler"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Mehmet Akif",
+    "slug": "mehmet-akif"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Moralar",
+    "slug": "moralar"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Namık Kemal",
+    "slug": "namik-kemal"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Parseller",
+    "slug": "parseller"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Saray",
+    "slug": "saray"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Site",
+    "slug": "site"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Tatlısu",
+    "slug": "tatlisu"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Tepeüstü",
+    "slug": "tepeustu"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Yamanevler",
+    "slug": "yamanevler"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Ümraniye",
+    "semt": "Yenişehir",
+    "slug": "yenisehir"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Ayazağa",
+    "slug": "ayazaga"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Bahçeköy",
+    "slug": "bahcekoy"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Baltalimanı",
+    "slug": "baltalimani"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Büyükdere",
+    "slug": "buyukdere"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Çayırbaşı",
+    "slug": "cayirbasi"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Darüşşafaka",
+    "slug": "darussafaka"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Demirciköy",
+    "slug": "demircikoy"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Emirgan",
+    "slug": "emirgan"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Ferahevler",
+    "slug": "ferahevler"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Garipçe",
+    "slug": "garipce"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Gümüşdere",
+    "slug": "gumusdere"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Huzur",
+    "slug": "huzur"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "İstinye",
+    "slug": "i̇stinye"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Kazım Karabekir",
+    "slug": "kazim-karabekir"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Kireçburnu",
+    "slug": "kirecburnu"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Kısırkaya",
+    "slug": "kisirkaya"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Maden",
+    "slug": "maden"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Maslak",
+    "slug": "maslak"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Pınar",
+    "slug": "pinar"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Poligon",
+    "slug": "poligon"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Reşitpaşa",
+    "slug": "resitpasa"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Rumelifeneri",
+    "slug": "rumelifeneri"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Rumelihisarı",
+    "slug": "rumelihisari"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Sarıyer",
+    "slug": "sariyer"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Tarabya",
+    "slug": "tarabya"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Yenimahalle",
+    "slug": "yenimahalle"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Sarıyer",
+    "semt": "Yeniköy",
+    "slug": "yenikoy"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Avcılar",
+    "semt": "Ambarlı",
+    "slug": "ambarli"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Avcılar",
+    "semt": "Cihangir",
+    "slug": "cihangir"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Avcılar",
+    "semt": "Denizköşkler",
+    "slug": "denizkoskler"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Avcılar",
+    "semt": "Firuzköy",
+    "slug": "firuzkoy"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Avcılar",
+    "semt": "Gümüşpala",
+    "slug": "gumuspala"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Avcılar",
+    "semt": "Merkez",
+    "slug": "merkez"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Avcılar",
+    "semt": "Mustafa Kemal Paşa",
+    "slug": "mustafa-kemal-pasa"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Avcılar",
+    "semt": "Tahtakale",
+    "slug": "tahtakale"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Avcılar",
+    "semt": "Üniversite",
+    "slug": "universite"
+  },
+  {
+    "il_id": 34,
+    "il": "İstanbul",
+    "plaka": "34",
+    "ilce": "Avcılar",
+    "semt": "Yeşilkent",
+    "slug": "yesilkent"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Ahlatlıbel",
+    "slug": "ahlatlibel"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Aile",
+    "slug": "aile"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Alacaatlı",
+    "slug": "alacaatli"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Aşağı Ayrancı",
+    "slug": "asagi-ayranci"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Aşağı Öveçler",
+    "slug": "asagi-ovecler"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Aşıkpaşa",
+    "slug": "asikpasa"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Aydınlar",
+    "slug": "aydinlar"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Ayrancı",
+    "slug": "ayranci"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Aziziye",
+    "slug": "aziziye"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Bakanlıklar",
+    "slug": "bakanliklar"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Balımağara",
+    "slug": "balimagara"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Barbaros",
+    "slug": "barbaros"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Beşevler",
+    "slug": "besevler"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Bilkent",
+    "slug": "bilkent"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Cebeci",
+    "slug": "cebeci"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Çayyolu",
+    "slug": "cayyolu"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Çiğdem",
+    "slug": "cigdem"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Dikmen",
+    "slug": "dikmen"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Emeğiyenimahalle",
+    "slug": "emegiyenimahalle"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Emek",
+    "slug": "emek"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Eryaman",
+    "slug": "eryaman"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Gaziosmanpaşa",
+    "slug": "gaziosmanpasa"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Gökçek",
+    "slug": "gokcek"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Güvenevler",
+    "slug": "guvenevler"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Harbiye",
+    "slug": "harbiye"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Havuzbaşı",
+    "slug": "havuzbasi"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Hilal",
+    "slug": "hilal"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "İncesu",
+    "slug": "i̇ncesu"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "İşçi Blokları",
+    "slug": "i̇sci-bloklari"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Karakusunlar",
+    "slug": "karakusunlar"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Kavaklıdere",
+    "slug": "kavaklidere"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Keklikpınarı",
+    "slug": "keklikpinari"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Kırkkonaklar",
+    "slug": "kirkkonaklar"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Kızılay",
+    "slug": "kizilay"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Kocatepe",
+    "slug": "kocatepe"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Konutkent",
+    "slug": "konutkent"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Küçükesat",
+    "slug": "kucukesat"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Maltepe",
+    "slug": "maltepe"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Mebusevleri",
+    "slug": "mebusevleri"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Mimar Sinan",
+    "slug": "mimar-sinan"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Mutlukent",
+    "slug": "mutlukent"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Namık Kemal",
+    "slug": "namik-kemal"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Oran",
+    "slug": "oran"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Öveçler",
+    "slug": "ovecler"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Remzi Oğuz Arık",
+    "slug": "remzi-oguz-arik"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Saimekadın",
+    "slug": "saimekadin"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Sancar",
+    "slug": "sancar"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Sögütözü",
+    "slug": "sogutozu"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Sokullu",
+    "slug": "sokullu"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Tandoğan",
+    "slug": "tandogan"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Topraklık",
+    "slug": "topraklik"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Üniversiteler",
+    "slug": "universiteler"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Yıldızevler",
+    "slug": "yildizevler"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Yukarı Ayrancı",
+    "slug": "yukari-ayranci"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Yukarı Bahçelievler",
+    "slug": "yukari-bahcelievler"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Yukarı Dikmen",
+    "slug": "yukari-dikmen"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Yüzüncüyıl",
+    "slug": "yuzuncuyil"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Çankaya",
+    "semt": "Zafertepe",
+    "slug": "zafertepe"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Akşemsettin",
+    "slug": "aksemsettin"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Andaç",
+    "slug": "andac"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Atapark",
+    "slug": "atapark"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Ayvalı",
+    "slug": "ayvali"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Basınevleri",
+    "slug": "basinevleri"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Çaldıran",
+    "slug": "caldiran"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Çiçekli",
+    "slug": "cicekli"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Esertepe",
+    "slug": "esertepe"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Etlik",
+    "slug": "etlik"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Güçlükaya",
+    "slug": "guclukaya"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Gümüşdere",
+    "slug": "gumusdere"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Güzelyurt",
+    "slug": "guzelyurt"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Hasköy",
+    "slug": "haskoy"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "İncirli",
+    "slug": "i̇ncirli"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Kalaba",
+    "slug": "kalaba"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Kavacık",
+    "slug": "kavacik"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Kuyubaşı",
+    "slug": "kuyubasi"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Pınarbaşı",
+    "slug": "pinarbasi"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Sanatoryum",
+    "slug": "sanatoryum"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Şefkat",
+    "slug": "sefkat"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Şenlik",
+    "slug": "senlik"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Tepebaşı",
+    "slug": "tepebasi"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Ufuktepe",
+    "slug": "ufuktepe"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Yakacık",
+    "slug": "yakacik"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Keçiören",
+    "semt": "Yayla",
+    "slug": "yayla"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Anadolu",
+    "slug": "anadolu"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Ata",
+    "slug": "ata"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Aziziye",
+    "slug": "aziziye"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Batıkent",
+    "slug": "batikent"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Beştepe",
+    "slug": "bestepe"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Boğaziçi",
+    "slug": "bogazici"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Çamlıca",
+    "slug": "camlica"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Demetevler",
+    "slug": "demetevler"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Elvankent",
+    "slug": "elvankent"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Eryaman",
+    "slug": "eryaman"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Gayret",
+    "slug": "gayret"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Göztepe",
+    "slug": "goztepe"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Gülbağı",
+    "slug": "gulbagi"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Güventepe",
+    "slug": "guventepe"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "İlkyerleşim",
+    "slug": "i̇lkyerlesim"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "İnönü",
+    "slug": "i̇nonu"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "İstasyon",
+    "slug": "i̇stasyon"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Karşıyaka",
+    "slug": "karsiyaka"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Kavaklı",
+    "slug": "kavakli"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Karakusunlar",
+    "slug": "karakusunlar"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Kentkoop",
+    "slug": "kentkoop"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Mehmet Akif Ersoy",
+    "slug": "mehmet-akif-ersoy"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Mete Kutalmış",
+    "slug": "mete-kutalmis"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Mimar Sinan",
+    "slug": "mimar-sinan"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Mutlu",
+    "slug": "mutlu"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Ostim",
+    "slug": "ostim"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Pamuklar",
+    "slug": "pamuklar"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Ragıp Tüzün",
+    "slug": "ragip-tuzun"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Şentepe",
+    "slug": "sentepe"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Turgut Özal",
+    "slug": "turgut-ozal"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Uğur Mumcu",
+    "slug": "ugur-mumcu"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Yeni Batı",
+    "slug": "yeni-bati"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Yenişehir",
+    "slug": "yenisehir"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Yeşilevler",
+    "slug": "yesilevler"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Yurtçu",
+    "slug": "yurtcu"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Yenimahalle",
+    "semt": "Yücetepe",
+    "slug": "yucetepe"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Akköprü",
+    "slug": "akkopru"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Altınpark",
+    "slug": "altinpark"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Aydıncık",
+    "slug": "aydincik"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Beşikkaya",
+    "slug": "besikkaya"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Çamlık",
+    "slug": "camlik"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Dışkapı",
+    "slug": "diskapi"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Doğantepe",
+    "slug": "dogantepe"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Doğu",
+    "slug": "dogu"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Feridun Çelik",
+    "slug": "feridun-celik"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Gülpınar",
+    "slug": "gulpinar"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Güneşevler",
+    "slug": "gunesevler"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Hacı Bayram",
+    "slug": "haci-bayram"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Hıdırlıktepe",
+    "slug": "hidirliktepe"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "İskitler",
+    "slug": "i̇skitler"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Karacaören",
+    "slug": "karacaoren"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Karapürçek",
+    "slug": "karapurcek"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Kavaklı",
+    "slug": "kavakli"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Kazım Karabekir",
+    "slug": "kazim-karabekir"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Köyler",
+    "slug": "koyler"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Önder",
+    "slug": "onder"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Sakarya",
+    "slug": "sakarya"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Samanpazarı",
+    "slug": "samanpazari"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Sıhhiye",
+    "slug": "sihhiye"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Solmaz",
+    "slug": "solmaz"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Seyranbağları",
+    "slug": "seyranbaglari"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Telsizler",
+    "slug": "telsizler"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Ulubey",
+    "slug": "ulubey"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Ulus",
+    "slug": "ulus"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Yıldırım Beyazıt",
+    "slug": "yildirim-beyazit"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Altındağ",
+    "semt": "Ziraat",
+    "slug": "ziraat"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Abidinpaşa",
+    "slug": "abidinpasa"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Akdere",
+    "slug": "akdere"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Aktepe",
+    "slug": "aktepe"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Altıağaç",
+    "slug": "altiagac"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Başak",
+    "slug": "basak"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Battalgazi",
+    "slug": "battalgazi"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Bilir",
+    "slug": "bilir"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Boztepe",
+    "slug": "boztepe"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Cebeci",
+    "slug": "cebeci"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Çiğiltepe",
+    "slug": "cigiltepe"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Demirlibahçe",
+    "slug": "demirlibahce"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Derbent",
+    "slug": "derbent"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Dostlar",
+    "slug": "dostlar"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Durali Alıç",
+    "slug": "durali-alic"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Dutluk",
+    "slug": "dutluk"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Ege",
+    "slug": "ege"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Ekin",
+    "slug": "ekin"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Fahri Korutürk",
+    "slug": "fahri-koruturk"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "General Zeki Doğan",
+    "slug": "general-zeki-dogan"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Gökçeyurt",
+    "slug": "gokceyurt"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Gülden",
+    "slug": "gulden"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Harman",
+    "slug": "harman"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Hüseyin Gazi",
+    "slug": "huseyin-gazi"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Karaağaç",
+    "slug": "karaagac"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Kartaltepe",
+    "slug": "kartaltepe"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Kayaş",
+    "slug": "kayas"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Kazım Orbay",
+    "slug": "kazim-orbay"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Kutlu",
+    "slug": "kutlu"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Küçükkayaş",
+    "slug": "kucukkayas"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Lalahan",
+    "slug": "lalahan"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Misket",
+    "slug": "misket"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Müderrisler",
+    "slug": "muderrisler"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Orgeneral Vecihi Akın",
+    "slug": "orgeneral-vecihi-akin"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Pekin",
+    "slug": "pekin"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Saimekadın",
+    "slug": "saimekadin"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Şafaktepe",
+    "slug": "safaktepe"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Şahapgürler",
+    "slug": "sahapgurler"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Şehit Cengiz",
+    "slug": "sehit-cengiz"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Şehit Hüseyin Aslan",
+    "slug": "sehit-huseyin-aslan"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Siteler",
+    "slug": "siteler"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Şura",
+    "slug": "sura"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Tuzluçayır",
+    "slug": "tuzlucayir"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Üreğil",
+    "slug": "uregil"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Yapracık",
+    "slug": "yapracik"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Yenimahalle",
+    "slug": "yenimahalle"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Yeşil Bayır",
+    "slug": "yesil-bayir"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Yeşiltepe",
+    "slug": "yesiltepe"
+  },
+  {
+    "il_id": 6,
+    "il": "Ankara",
+    "plaka": "06",
+    "ilce": "Mamak",
+    "semt": "Yukarı İmamoğlu",
+    "slug": "yukari-i̇mamoglu"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Konak",
+    "semt": "Alsancak",
+    "slug": "alsancak"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Konak",
+    "semt": "Balçova",
+    "slug": "balcova"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Konak",
+    "semt": "Basmane",
+    "slug": "basmane"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Konak",
+    "semt": "Çankaya",
+    "slug": "cankaya"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Konak",
+    "semt": "Eşrefpaşa",
+    "slug": "esrefpasa"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Konak",
+    "semt": "Göztepe",
+    "slug": "goztepe"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Konak",
+    "semt": "Güzelyalı",
+    "slug": "guzelyali"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Konak",
+    "semt": "Hatay",
+    "slug": "hatay"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Konak",
+    "semt": "Kahramanlar",
+    "slug": "kahramanlar"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Konak",
+    "semt": "Kalkış",
+    "slug": "kalkis"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Konak",
+    "semt": "Karantina",
+    "slug": "karantina"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Konak",
+    "semt": "Karataş",
+    "slug": "karatas"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Konak",
+    "semt": "Konak",
+    "slug": "konak"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Konak",
+    "semt": "Kubilay",
+    "slug": "kubilay"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Konak",
+    "semt": "Kültür",
+    "slug": "kultur"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Konak",
+    "semt": "Mersinli",
+    "slug": "mersinli"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Konak",
+    "semt": "Montrö",
+    "slug": "montro"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Konak",
+    "semt": "Pasaport",
+    "slug": "pasaport"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Konak",
+    "semt": "Selimiye",
+    "slug": "selimiye"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Konak",
+    "semt": "Umurbey",
+    "slug": "umurbey"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Konak",
+    "semt": "Yenişehir",
+    "slug": "yenisehir"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Konak",
+    "semt": "Yeşildere",
+    "slug": "yesildere"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Alaybey",
+    "slug": "alaybey"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Atakent",
+    "slug": "atakent"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Ataköy",
+    "slug": "atakoy"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Bahriye Üçok",
+    "slug": "bahriye-ucok"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Bostanlı",
+    "slug": "bostanli"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Cumhuriyet",
+    "slug": "cumhuriyet"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Çarşı",
+    "slug": "carsi"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Çiğli",
+    "slug": "cigli"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Demirköprü",
+    "slug": "demirkopru"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Donanmacı",
+    "slug": "donanmaci"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Fikri Altay",
+    "slug": "fikri-altay"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Goncalar",
+    "slug": "goncalar"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "İmbatlı",
+    "slug": "i̇mbatli"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "İnönü",
+    "slug": "i̇nonu"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Kalebodur",
+    "slug": "kalebodur"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Köşk",
+    "slug": "kosk"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Mavişehir",
+    "slug": "mavisehir"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Mustafa Kemal",
+    "slug": "mustafa-kemal"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Nergiz",
+    "slug": "nergiz"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Örnekköy",
+    "slug": "ornekkoy"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Sancaklı",
+    "slug": "sancakli"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Semikler",
+    "slug": "semikler"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Suna",
+    "slug": "suna"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Şemikler",
+    "slug": "semikler"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Tuna",
+    "slug": "tuna"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Yalı",
+    "slug": "yali"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Yamanlar",
+    "slug": "yamanlar"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Karşıyaka",
+    "semt": "Zübeyde Hanım",
+    "slug": "zubeyde-hanim"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Altındağ",
+    "slug": "altindag"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Atatürk",
+    "slug": "ataturk"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Barbaros",
+    "slug": "barbaros"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Beşyol",
+    "slug": "besyol"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Birlik",
+    "slug": "birlik"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Çamdibi",
+    "slug": "camdibi"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Çamkule",
+    "slug": "camkule"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Çiçekli",
+    "slug": "cicekli"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Doğanlar",
+    "slug": "doganlar"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Egemenlik",
+    "slug": "egemenlik"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Ege Mahallesi",
+    "slug": "ege-mahallesi"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Ergene",
+    "slug": "ergene"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Evka 3",
+    "slug": "evka-3"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Evka 4",
+    "slug": "evka-4"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Gazi Osman Paşa",
+    "slug": "gazi-osman-pasa"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Gökdere",
+    "slug": "gokdere"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Gürpınar",
+    "slug": "gurpinar"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Işıklar",
+    "slug": "isiklar"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Kazımdirik",
+    "slug": "kazimdirik"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Kemalpaşa",
+    "slug": "kemalpasa"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Kızılay",
+    "slug": "kizilay"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Koşukavak",
+    "slug": "kosukavak"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Merkez",
+    "slug": "merkez"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Mevlana",
+    "slug": "mevlana"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Mimar Sinan",
+    "slug": "mimar-sinan"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Naldöken",
+    "slug": "naldoken"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Pınarbaşı",
+    "slug": "pinarbasi"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Rafet Paşa",
+    "slug": "rafet-pasa"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Sarnıç",
+    "slug": "sarnic"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Serintepe",
+    "slug": "serintepe"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Tuna",
+    "slug": "tuna"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Uğur Mumcu",
+    "slug": "ugur-mumcu"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Yeşilova",
+    "slug": "yesilova"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Yıldırım Beyazıt",
+    "slug": "yildirim-beyazit"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Bornova",
+    "semt": "Zafer",
+    "slug": "zafer"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Adatepe",
+    "slug": "adatepe"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Akıncılar",
+    "slug": "akincilar"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Atatürk",
+    "slug": "ataturk"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Baran",
+    "slug": "baran"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Buca Koop",
+    "slug": "buca-koop"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Çamlık",
+    "slug": "camlik"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Çamlıkule",
+    "slug": "camlikule"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Cumhuriyet",
+    "slug": "cumhuriyet"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Doğu",
+    "slug": "dogu"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Dumlupınar",
+    "slug": "dumlupinar"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Efeler",
+    "slug": "efeler"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Fırat",
+    "slug": "firat"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Gazi",
+    "slug": "gazi"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Göksu",
+    "slug": "goksu"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Güven",
+    "slug": "guven"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Hacıbayramlar",
+    "slug": "hacibayramlar"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Halkapınar",
+    "slug": "halkapinar"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "İnkılap",
+    "slug": "i̇nkilap"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "İsmet İnönü",
+    "slug": "i̇smet-i̇nonu"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Karaburun",
+    "slug": "karaburun"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Karanfil",
+    "slug": "karanfil"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Kaynaklar",
+    "slug": "kaynaklar"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Kırıklar",
+    "slug": "kiriklar"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Kızılçullu",
+    "slug": "kizilcullu"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Kuruçeşme",
+    "slug": "kurucesme"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Lale",
+    "slug": "lale"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Menderes",
+    "slug": "menderes"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Mimar Sinan",
+    "slug": "mimar-sinan"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Mustafa Kemal",
+    "slug": "mustafa-kemal"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Oğuzhan",
+    "slug": "oguzhan"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Pınarbaşı",
+    "slug": "pinarbasi"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Sebze Hali",
+    "slug": "sebze-hali"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Şirinyer",
+    "slug": "sirinyer"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Ufuk",
+    "slug": "ufuk"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Vali Rahmi Bey",
+    "slug": "vali-rahmi-bey"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Yenigün",
+    "slug": "yenigun"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Buca",
+    "semt": "Yıldız",
+    "slug": "yildiz"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Çiğli",
+    "semt": "Ataşehir",
+    "slug": "atasehir"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Çiğli",
+    "semt": "Atatürk",
+    "slug": "ataturk"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Çiğli",
+    "semt": "Çiğli",
+    "slug": "cigli"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Çiğli",
+    "semt": "Egekent",
+    "slug": "egekent"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Çiğli",
+    "semt": "Evka 2",
+    "slug": "evka-2"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Çiğli",
+    "semt": "Güzeltepe",
+    "slug": "guzeltepe"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Çiğli",
+    "semt": "Harmandalı",
+    "slug": "harmandali"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Çiğli",
+    "semt": "İnönü",
+    "slug": "i̇nonu"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Çiğli",
+    "semt": "Kaklıç",
+    "slug": "kaklic"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Çiğli",
+    "semt": "Köyiçi",
+    "slug": "koyici"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Çiğli",
+    "semt": "Küçük Çiğli",
+    "slug": "kucuk-cigli"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Çiğli",
+    "semt": "Maltepe",
+    "slug": "maltepe"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Çiğli",
+    "semt": "Sasallı",
+    "slug": "sasalli"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Çiğli",
+    "semt": "Şirintepe",
+    "slug": "sirintepe"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Çiğli",
+    "semt": "Yahya Kemal",
+    "slug": "yahya-kemal"
+  },
+  {
+    "il_id": 35,
+    "il": "İzmir",
+    "plaka": "35",
+    "ilce": "Çiğli",
+    "semt": "Yeni Mahalle",
+    "slug": "yeni-mahalle"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Ataevler",
+    "slug": "ataevler"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Bağlarbaşı",
+    "slug": "baglarbasi"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Barış",
+    "slug": "baris"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Beşevler",
+    "slug": "besevler"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Çalı",
+    "slug": "cali"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Çamlıca",
+    "slug": "camlica"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Dumlupınar",
+    "slug": "dumlupinar"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Ertuğrul",
+    "slug": "ertugrul"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Esentepe",
+    "slug": "esentepe"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Fethiye",
+    "slug": "fethiye"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Görükle",
+    "slug": "gorukle"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "İhsaniye",
+    "slug": "i̇hsaniye"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "İzmir",
+    "slug": "i̇zmir"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Karaman",
+    "slug": "karaman"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Konak",
+    "slug": "konak"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Kültür",
+    "slug": "kultur"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Küçükbalıklı",
+    "slug": "kucukbalikli"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Maksem",
+    "slug": "maksem"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Mimar Sinan",
+    "slug": "mimar-sinan"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Nilüfer",
+    "slug": "nilufer"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Odunluk",
+    "slug": "odunluk"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Özlüce",
+    "slug": "ozluce"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Süleyman Orhan",
+    "slug": "suleyman-orhan"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Üçevler",
+    "slug": "ucevler"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Nilüfer",
+    "semt": "Yüzüncüyıl",
+    "slug": "yuzuncuyil"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Adalet",
+    "slug": "adalet"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Ahmet Yesevi",
+    "slug": "ahmet-yesevi"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Akkay",
+    "slug": "akkay"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Akpınar",
+    "slug": "akpinar"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Alemdar",
+    "slug": "alemdar"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Altınova",
+    "slug": "altinova"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Anaç",
+    "slug": "anac"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Arabayatağı",
+    "slug": "arabayatagi"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Atıcılar",
+    "slug": "aticilar"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Çarşı",
+    "slug": "carsi"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Demirtaş",
+    "slug": "demirtas"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Dikkaldırım",
+    "slug": "dikkaldirim"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Elmasbahçeler",
+    "slug": "elmasbahceler"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Emek",
+    "slug": "emek"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Ertuğrulgazi",
+    "slug": "ertugrulgazi"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Gaziakdemir",
+    "slug": "gaziakdemir"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Hacı İlyas",
+    "slug": "haci-i̇lyas"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Hacı Sevim",
+    "slug": "haci-sevim"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Hamitler",
+    "slug": "hamitler"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Hürriyet",
+    "slug": "hurriyet"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "İnkaya",
+    "slug": "i̇nkaya"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Kanal",
+    "slug": "kanal"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Karaman",
+    "slug": "karaman"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Kiremitçi",
+    "slug": "kiremitci"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Kükürtlü",
+    "slug": "kukurtlu"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Maksem",
+    "slug": "maksem"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Mollaarap",
+    "slug": "mollaarap"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Ovaakça",
+    "slug": "ovaakca"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Panayır",
+    "slug": "panayir"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Reşatpaşa",
+    "slug": "resatpasa"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Santral Garaj",
+    "slug": "santral-garaj"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Seçköy",
+    "slug": "seckoy"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Selimiye",
+    "slug": "selimiye"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Sıracevizler",
+    "slug": "siracevizler"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Süleyman Çelebi",
+    "slug": "suleyman-celebi"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Şahin",
+    "slug": "sahin"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Şehabettinpaşa",
+    "slug": "sehabettinpasa"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Tayakadın",
+    "slug": "tayakadin"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Tuzpazarı",
+    "slug": "tuzpazari"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Yiğitler",
+    "slug": "yigitler"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Osmangazi",
+    "semt": "Zafer",
+    "slug": "zafer"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Akkavak",
+    "slug": "akkavak"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Arapzade",
+    "slug": "arapzade"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Asmalı",
+    "slug": "asmali"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Bakır",
+    "slug": "bakir"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Çınar",
+    "slug": "cinar"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Çınardibi",
+    "slug": "cinardibi"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Davutdede",
+    "slug": "davutdede"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Değirmenönü",
+    "slug": "degirmenonu"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Eğitim",
+    "slug": "egitim"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Emirsultan",
+    "slug": "emirsultan"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Eşeyenilme",
+    "slug": "eseyenilme"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Gedik",
+    "slug": "gedik"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Gülbahçe",
+    "slug": "gulbahce"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Hacivat",
+    "slug": "hacivat"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Karamazak",
+    "slug": "karamazak"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Kazım Karabekir",
+    "slug": "kazim-karabekir"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Kocabay",
+    "slug": "kocabay"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Kurtoğlu",
+    "slug": "kurtoglu"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Mimarsinan",
+    "slug": "mimarsinan"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Nalbantoğlu",
+    "slug": "nalbantoglu"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Orhangazi",
+    "slug": "orhangazi"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Otosansit",
+    "slug": "otosansit"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Piremir",
+    "slug": "piremir"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Samanköy",
+    "slug": "samankoy"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Selçukbey",
+    "slug": "selcukbey"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Sıracevizler",
+    "slug": "siracevizler"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Sözandı",
+    "slug": "sozandi"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Şeyh Edebali",
+    "slug": "seyh-edebali"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Teferrüç",
+    "slug": "teferruc"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Ulus",
+    "slug": "ulus"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Vilayet",
+    "slug": "vilayet"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Yavuz Selim",
+    "slug": "yavuz-selim"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Yenimahalle",
+    "slug": "yenimahalle"
+  },
+  {
+    "il_id": 16,
+    "il": "Bursa",
+    "plaka": "16",
+    "ilce": "Yıldırım",
+    "semt": "Yıldırım",
+    "slug": "yildirim"
+  }
+]

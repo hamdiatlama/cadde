@@ -1,0 +1,113 @@
+{
+  "marka": "Harley-Davidson",
+  "modeller": [
+    {
+      "model": "Street Glide",
+      "kasa_tipleri": [
+        "Touring"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Road Glide",
+      "kasa_tipleri": [
+        "Touring"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Road King",
+      "kasa_tipleri": [
+        "Touring"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Electra Glide",
+      "kasa_tipleri": [
+        "Touring"
+      ],
+      "uretim_baslangic": 2014,
+      "uretim_bitis": 2022
+    },
+    {
+      "model": "Ultra Limited",
+      "kasa_tipleri": [
+        "Touring"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Fat Boy 114",
+      "kasa_tipleri": [
+        "Cruiser"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Heritage Classic 114",
+      "kasa_tipleri": [
+        "Cruiser"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Low Rider S",
+      "kasa_tipleri": [
+        "Cruiser"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Street Bob 114",
+      "kasa_tipleri": [
+        "Cruiser"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Iron 883",
+      "kasa_tipleri": [
+        "Cruiser"
+      ],
+      "uretim_baslangic": 2009,
+      "uretim_bitis": 2022
+    },
+    {
+      "model": "Forty-Eight",
+      "kasa_tipleri": [
+        "Cruiser"
+      ],
+      "uretim_baslangic": 2010
+    },
+    {
+      "model": "Sportster S",
+      "kasa_tipleri": [
+        "Cruiser"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Nightster",
+      "kasa_tipleri": [
+        "Cruiser"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Pan America 1250",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "LiveWire S2 Del Mar",
+      "kasa_tipleri": [
+        "Elektrikli"
+      ],
+      "uretim_baslangic": 2023
+    }
+  ],
+  "kaynak": "manuel"
+}

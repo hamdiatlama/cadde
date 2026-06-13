@@ -1,0 +1,29 @@
+=== İş Makineleri SABIT DEGERLER ===
+
+[Araç Durumu]
+- (deger listesi eklenecek)
+
+[Kimden]
+- (deger listesi eklenecek)
+
+[Renk]
+- (deger listesi eklenecek)
+
+[Garanti Durumu]
+- (deger listesi eklenecek)
+
+[Plaka / Uyruk]
+- (deger listesi eklenecek)
+
+[Döviz Cinsi]
+- (deger listesi eklenecek)
+
+[Makine Tipi]
+- (deger listesi eklenecek)
+
+[Yürüyüş Sistemi]
+- (deger listesi eklenecek)
+
+[Kabin Tipi]
+- (deger listesi eklenecek)
+

@@ -1,0 +1,52 @@
+{
+  "il_id": 31,
+  "il": "Hatay",
+  "plaka": "31",
+  "ilceler": [
+    {
+      "ilce": "Altınözü"
+    },
+    {
+      "ilce": "Antakya"
+    },
+    {
+      "ilce": "Arsuz"
+    },
+    {
+      "ilce": "Belen"
+    },
+    {
+      "ilce": "Defne"
+    },
+    {
+      "ilce": "Dörtyol"
+    },
+    {
+      "ilce": "Erzin"
+    },
+    {
+      "ilce": "Hassa"
+    },
+    {
+      "ilce": "Kumlu"
+    },
+    {
+      "ilce": "Kırıkhan"
+    },
+    {
+      "ilce": "Payas"
+    },
+    {
+      "ilce": "Reyhanlı"
+    },
+    {
+      "ilce": "Samandağ"
+    },
+    {
+      "ilce": "Yayladağı"
+    },
+    {
+      "ilce": "İskenderun"
+    }
+  ]
+}

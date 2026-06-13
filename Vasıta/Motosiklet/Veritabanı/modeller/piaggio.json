@@ -1,0 +1,90 @@
+{
+  "marka": "Piaggio",
+  "modeller": [
+    {
+      "model": "Vespa Primavera 125",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "Vespa Primavera 150",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "Vespa Sprint 150",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Vespa GTS 300",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Vespa GTV 300",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Vespa Elettrica",
+      "kasa_tipleri": [
+        "Elektrikli Scooter"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Piaggio Liberty 125",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "Piaggio Liberty 150",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "Piaggio Beverly 300",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Piaggio BV 400",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Piaggio MP3 300",
+      "kasa_tipleri": [
+        "Trike Scooter"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "Piaggio MP3 500",
+      "kasa_tipleri": [
+        "Trike Scooter"
+      ],
+      "uretim_baslangic": 2013
+    }
+  ],
+  "kaynak": "manuel"
+}

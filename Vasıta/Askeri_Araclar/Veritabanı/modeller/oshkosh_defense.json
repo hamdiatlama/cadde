@@ -1,0 +1,42 @@
+{
+  "marka": "Oshkosh Defense",
+  "modeller": [
+    {
+      "model": "JLTV",
+      "kasa_tipleri": [
+        "Zırhlı"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "L-ATV",
+      "kasa_tipleri": [
+        "Zırhlı"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "M-ATV",
+      "kasa_tipleri": [
+        "Zırhlı"
+      ],
+      "uretim_baslangic": 2012,
+      "uretim_bitis": 2020
+    },
+    {
+      "model": "MTVR MK23",
+      "kasa_tipleri": [
+        "Askeri Kamyon"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "HEMTT M977",
+      "kasa_tipleri": [
+        "Askeri Kamyon"
+      ],
+      "uretim_baslangic": 2013
+    }
+  ],
+  "kaynak": "manuel"
+}

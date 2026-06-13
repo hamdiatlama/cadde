@@ -1,0 +1,34 @@
+{
+  "il_id": 8,
+  "il": "Artvin",
+  "plaka": "08",
+  "ilceler": [
+    {
+      "ilce": "Ardanuç"
+    },
+    {
+      "ilce": "Arhavi"
+    },
+    {
+      "ilce": "Borçka"
+    },
+    {
+      "ilce": "Hopa"
+    },
+    {
+      "ilce": "Kemalpaşa"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Murgul"
+    },
+    {
+      "ilce": "Yusufeli"
+    },
+    {
+      "ilce": "Şavşat"
+    }
+  ]
+}

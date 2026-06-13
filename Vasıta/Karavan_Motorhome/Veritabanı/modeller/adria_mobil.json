@@ -1,0 +1,48 @@
+{
+  "marka": "Adria Mobil",
+  "modeller": [
+    {
+      "model": "Matrix 670 SL",
+      "kasa_tipleri": [
+        "Motorhome"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Supreme 680 SL",
+      "kasa_tipleri": [
+        "Motorhome"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Compact SP 420",
+      "kasa_tipleri": [
+        "Motorhome"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Action 361 LT",
+      "kasa_tipleri": [
+        "Çekme Karavan"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Altea 542 DT",
+      "kasa_tipleri": [
+        "Çekme Karavan"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Sonik 410 SL",
+      "kasa_tipleri": [
+        "Çekme Karavan"
+      ],
+      "uretim_baslangic": 2019
+    }
+  ],
+  "kaynak": "manuel"
+}

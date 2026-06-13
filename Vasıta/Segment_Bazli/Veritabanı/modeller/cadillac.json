@@ -1,0 +1,100 @@
+{
+  "marka": "Cadillac",
+  "modeller": [
+    {
+      "model": "CT4",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "CT5",
+      "segment": "E",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "XT4",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "XT5",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "XT6",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Escalade",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Lyriq",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Celestiq",
+      "segment": "F",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "ELR",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2013,
+      "uretim_bitis": 2016
+    },
+    {
+      "model": "ATS",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Sedan",
+        "Coupe"
+      ],
+      "uretim_baslangic": 2012,
+      "uretim_bitis": 2019
+    },
+    {
+      "model": "CTS",
+      "segment": "E",
+      "kasa_tipleri": [
+        "Sedan",
+        "Coupe",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2014,
+      "uretim_bitis": 2019
+    }
+  ],
+  "kaynak": "manuel"
+}

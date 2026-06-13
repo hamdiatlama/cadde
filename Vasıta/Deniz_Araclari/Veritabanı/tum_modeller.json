@@ -1,0 +1,961 @@
+[
+  {
+    "marka": "Azimut",
+    "modeller": [
+      {
+        "model": "Magellano 25 Metri",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2022
+      },
+      {
+        "model": "Magellano 66",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "Azimut 50",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2020
+      },
+      {
+        "model": "Azimut 60",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Azimut 68",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2017
+      },
+      {
+        "model": "Azimut 78",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "Fly 62",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "Fly 72",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2022
+      },
+      {
+        "model": "S7",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2020
+      },
+      {
+        "model": "S10",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2023
+      },
+      {
+        "model": "Verve 48",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2018
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Bavaria",
+    "modeller": [
+      {
+        "model": "C38",
+        "kasa_tipleri": [
+          "Yelkenli"
+        ],
+        "uretim_baslangic": 2020
+      },
+      {
+        "model": "C42",
+        "kasa_tipleri": [
+          "Yelkenli"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "C45",
+        "kasa_tipleri": [
+          "Yelkenli"
+        ],
+        "uretim_baslangic": 2017
+      },
+      {
+        "model": "C50",
+        "kasa_tipleri": [
+          "Yelkenli"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "Cruiser 34",
+        "kasa_tipleri": [
+          "Yelkenli"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "Cruiser 46",
+        "kasa_tipleri": [
+          "Yelkenli"
+        ],
+        "uretim_baslangic": 2020
+      },
+      {
+        "model": "SR33",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "SR41",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "R40 Fly",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2020
+      },
+      {
+        "model": "Virtess 420 Fly",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2018
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Beneteau",
+    "modeller": [
+      {
+        "model": "Oceanis 30.1",
+        "kasa_tipleri": [
+          "Yelkenli"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Oceanis 40.1",
+        "kasa_tipleri": [
+          "Yelkenli"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Oceanis 46.1",
+        "kasa_tipleri": [
+          "Yelkenli"
+        ],
+        "uretim_baslangic": 2017
+      },
+      {
+        "model": "Oceanis 51.1",
+        "kasa_tipleri": [
+          "Yelkenli"
+        ],
+        "uretim_baslangic": 2017
+      },
+      {
+        "model": "First 27",
+        "kasa_tipleri": [
+          "Yelkenli"
+        ],
+        "uretim_baslangic": 2022
+      },
+      {
+        "model": "First 36",
+        "kasa_tipleri": [
+          "Yelkenli"
+        ],
+        "uretim_baslangic": 2023
+      },
+      {
+        "model": "Antares 9",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2020
+      },
+      {
+        "model": "Antares 11",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Gran Turismo 32",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "Gran Turismo 45",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2016
+      },
+      {
+        "model": "Swift Trawler 30",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "Swift Trawler 48",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2023
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Boston Whaler",
+    "modeller": [
+      {
+        "model": "150 Super Sport",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "190 Montauk",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "230 Vantage",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2020
+      },
+      {
+        "model": "280 Dauntless",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "320 Vantage",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "405 Conquest",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2020
+      },
+      {
+        "model": "420 Outrage",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2019
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Ferretti",
+    "modeller": [
+      {
+        "model": "Ferretti Yachts 500",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "Ferretti Yachts 550",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2017
+      },
+      {
+        "model": "Ferretti Yachts 670",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Ferretti Yachts 720",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "Ferretti Yachts 850",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "Ferretti Yachts 920",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2016
+      },
+      {
+        "model": "Infynito 80",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2022
+      },
+      {
+        "model": "Riva 130 Bellissima",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2020
+      },
+      {
+        "model": "Riva 90 Argo",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "Riva Aquarama",
+        "kasa_tipleri": [
+          "Klasik Tekne"
+        ],
+        "uretim_baslangic": 2010
+      },
+      {
+        "model": "Pershing 5X",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Pershing 8X",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "Pershing 140",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2018
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Fountaine Pajot",
+    "modeller": [
+      {
+        "model": "Isla 40",
+        "kasa_tipleri": [
+          "Katamaran"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Saba 50",
+        "kasa_tipleri": [
+          "Katamaran"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "Alegria 67",
+        "kasa_tipleri": [
+          "Katamaran"
+        ],
+        "uretim_baslangic": 2017
+      },
+      {
+        "model": "Samana 59",
+        "kasa_tipleri": [
+          "Katamaran"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "MY 37",
+        "kasa_tipleri": [
+          "Motor Katamaran"
+        ],
+        "uretim_baslangic": 2020
+      },
+      {
+        "model": "MY 44",
+        "kasa_tipleri": [
+          "Motor Katamaran"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "MY 60",
+        "kasa_tipleri": [
+          "Motor Katamaran"
+        ],
+        "uretim_baslangic": 2019
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Jeanneau",
+    "modeller": [
+      {
+        "model": "Sun Odyssey 380",
+        "kasa_tipleri": [
+          "Yelkenli"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Sun Odyssey 440",
+        "kasa_tipleri": [
+          "Yelkenli"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Sun Odyssey 490",
+        "kasa_tipleri": [
+          "Yelkenli"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "Sun Fast 3300",
+        "kasa_tipleri": [
+          "Yelkenli"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Sun Fast 3600",
+        "kasa_tipleri": [
+          "Yelkenli"
+        ],
+        "uretim_baslangic": 2022
+      },
+      {
+        "model": "Leader 10.5",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2020
+      },
+      {
+        "model": "Leader 12.5",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2022
+      },
+      {
+        "model": "Merry Fisher 795",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2020
+      },
+      {
+        "model": "Merry Fisher 1095",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2022
+      },
+      {
+        "model": "NC 37",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "DB/37",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2022
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Lagoon",
+    "modeller": [
+      {
+        "model": "Lagoon 40",
+        "kasa_tipleri": [
+          "Katamaran"
+        ],
+        "uretim_baslangic": 2017
+      },
+      {
+        "model": "Lagoon 42",
+        "kasa_tipleri": [
+          "Katamaran"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Lagoon 46",
+        "kasa_tipleri": [
+          "Katamaran"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "Lagoon 50",
+        "kasa_tipleri": [
+          "Katamaran"
+        ],
+        "uretim_baslangic": 2017
+      },
+      {
+        "model": "Lagoon 55",
+        "kasa_tipleri": [
+          "Katamaran"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Lagoon 620",
+        "kasa_tipleri": [
+          "Katamaran"
+        ],
+        "uretim_baslangic": 2012
+      },
+      {
+        "model": "Seventy 8",
+        "kasa_tipleri": [
+          "Katamaran"
+        ],
+        "uretim_baslangic": 2020
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "MasterCraft",
+    "modeller": [
+      {
+        "model": "NXT 20",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2020
+      },
+      {
+        "model": "NXT 24",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "XT 22",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "XStar",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2020
+      },
+      {
+        "model": "X30",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "X80",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2017
+      },
+      {
+        "model": "NXT 22",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2019
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Princess",
+    "modeller": [
+      {
+        "model": "V40",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "V50",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "V65",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2017
+      },
+      {
+        "model": "Y72",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2020
+      },
+      {
+        "model": "Y80",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "Y85",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "X95",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "F55",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2021
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Sea Ray",
+    "modeller": [
+      {
+        "model": "SPX 210",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "SPX 260",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2020
+      },
+      {
+        "model": "SPX 310",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "SDX 250",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2020
+      },
+      {
+        "model": "Sundancer 320",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "Sundancer 370",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "SLX 400",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2020
+      },
+      {
+        "model": "SLX 350",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "L 650",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2022
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Sirena Marine",
+    "modeller": [
+      {
+        "model": "Sirena 48",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "Sirena 58",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2017
+      },
+      {
+        "model": "Sirena 68",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Sirena 88",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "Dufour 360",
+        "kasa_tipleri": [
+          "Yelkenli"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Dufour 390",
+        "kasa_tipleri": [
+          "Yelkenli"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "Dufour 470",
+        "kasa_tipleri": [
+          "Yelkenli"
+        ],
+        "uretim_baslangic": 2020
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Sunseeker",
+    "modeller": [
+      {
+        "model": "65 Sport Yacht",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "75 Sport Yacht",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "90 Ocean",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "100 Ocean",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2018
+      },
+      {
+        "model": "116 Yacht",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Predator 50",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "Predator 65",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Manhattan 68",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "Manhattan 55",
+        "kasa_tipleri": [
+          "Motor Yat"
+        ],
+        "uretim_baslangic": 2020
+      }
+    ],
+    "kaynak": "manuel"
+  },
+  {
+    "marka": "Yamaha Boats",
+    "modeller": [
+      {
+        "model": "190 FSH",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2019
+      },
+      {
+        "model": "222 FSH",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "252 X",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2022
+      },
+      {
+        "model": "AR 250",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2021
+      },
+      {
+        "model": "SR 230",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2023
+      },
+      {
+        "model": "SDX 210",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2020
+      },
+      {
+        "model": "275 SD",
+        "kasa_tipleri": [
+          "Sürat Teknesi"
+        ],
+        "uretim_baslangic": 2022
+      }
+    ],
+    "kaynak": "manuel"
+  }
+]

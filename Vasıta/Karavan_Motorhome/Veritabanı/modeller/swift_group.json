@@ -1,0 +1,27 @@
+{
+  "marka": "Swift Group",
+  "modeller": [
+    {
+      "model": "Escape 664",
+      "kasa_tipleri": [
+        "Motorhome"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Segnova",
+      "kasa_tipleri": [
+        "Motorhome"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Challenger 570",
+      "kasa_tipleri": [
+        "Çekme Karavan"
+      ],
+      "uretim_baslangic": 2017
+    }
+  ],
+  "kaynak": "manuel"
+}

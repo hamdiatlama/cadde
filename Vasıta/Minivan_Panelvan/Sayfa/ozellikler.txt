@@ -1,0 +1,41 @@
+Fiyat
+İlan Başlığı
+Konum
+Marka
+Seri
+Model
+Yıl
+Yakıt Tipi
+Vites
+Araç Durumu
+KM
+Motor Gücü
+Motor Hacmi
+Çekiş
+Renk
+LPG
+Garanti
+Plaka / Uyruk
+Kimden
+Takas
+Donanım Paketi
+Koltuk Sayısı
+Kapı Sayısı
+Araç Tipi (Minivan/Panelvan/Kombi)
+Yük Hacmi (m³)
+Azami Yük (kg)
+Kasa Boyu (cm)
+Koltuk Düzeni (2+3+2/2+2+3/3+3)
+Yolcu Kapasitesi
+Arka Klima
+Çekme Kapasitesi (kg)
+Son Bakım Tarihi
+Muayene Tarihi
+Video Linki
+İlan Açıklaması
+VIN / Şasi No
+Emisyon Sınıfı
+Krediye Uygun
+Sigorta Durumu
+Pazarlık / İndirim
+İlk Tescil Tarihi

@@ -1,0 +1,31 @@
+{
+  "il_id": 81,
+  "il": "Düzce",
+  "plaka": "81",
+  "ilceler": [
+    {
+      "ilce": "Akçakoca"
+    },
+    {
+      "ilce": "Cumayeri"
+    },
+    {
+      "ilce": "Gölyaka"
+    },
+    {
+      "ilce": "Gümüşova"
+    },
+    {
+      "ilce": "Kaynaşlı"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Yığılca"
+    },
+    {
+      "ilce": "Çilimli"
+    }
+  ]
+}

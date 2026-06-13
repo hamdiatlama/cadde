@@ -1,0 +1,69 @@
+{
+  "marka": "Indian Motorcycle",
+  "modeller": [
+    {
+      "model": "Scout Bobber",
+      "kasa_tipleri": [
+        "Cruiser"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Scout Sixty",
+      "kasa_tipleri": [
+        "Cruiser"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Chief Dark Horse",
+      "kasa_tipleri": [
+        "Cruiser"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Chief Bobber",
+      "kasa_tipleri": [
+        "Cruiser"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Springfield",
+      "kasa_tipleri": [
+        "Touring"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Challenger",
+      "kasa_tipleri": [
+        "Touring"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Roadmaster Elite",
+      "kasa_tipleri": [
+        "Touring"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "FTR 1200",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "FTR R Carbon",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2021
+    }
+  ],
+  "kaynak": "manuel"
+}

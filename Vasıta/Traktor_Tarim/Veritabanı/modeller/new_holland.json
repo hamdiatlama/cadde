@@ -1,0 +1,69 @@
+{
+  "marka": "New Holland",
+  "modeller": [
+    {
+      "model": "T4 Serisi",
+      "kasa_tipleri": [
+        "Kompakt Traktör"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "T5 Serisi",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "T6 Serisi",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "T7 Serisi",
+      "kasa_tipleri": [
+        "Büyük Traktör"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "T8 Serisi",
+      "kasa_tipleri": [
+        "Büyük Traktör"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "T9 Serisi",
+      "kasa_tipleri": [
+        "Çok Büyük Traktör"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Workmaster",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Boomer 50",
+      "kasa_tipleri": [
+        "Kompakt Traktör"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "TT4 Serisi",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2018
+    }
+  ],
+  "kaynak": "manuel"
+}

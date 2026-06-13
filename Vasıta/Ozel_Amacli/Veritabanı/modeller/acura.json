@@ -1,0 +1,64 @@
+{
+  "marka": "Acura",
+  "modeller": [
+    {
+      "model": "Integra",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "TLX",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "RLX",
+      "segment": "E",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2013,
+      "uretim_bitis": 2020
+    },
+    {
+      "model": "RDX",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "MDX",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "ZDX",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2024
+    },
+    {
+      "model": "NSX",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2016,
+      "uretim_bitis": 2022
+    }
+  ],
+  "kaynak": "manuel"
+}

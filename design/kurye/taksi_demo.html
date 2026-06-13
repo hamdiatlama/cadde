@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Taksi - Tam Sistem Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f9fafb;--card:#fff;--card2:#f3f4f6;--border:#e5e7eb;--text1:#111;--text2:#374151;--text3:#6b7280;--text4:#9ca3af;--radius:4px;--green:#059669;--red:#dc2626;--blue:#2563eb;--orange:#d97706}
+body{font-family:'Inter',sans-serif;background:var(--bg);min-height:100vh;display:flex;flex-direction:column}
+.topbar{display:flex;align-items:center;gap:12px;padding:10px 20px;border-bottom:1px solid var(--border);background:var(--card);flex-shrink:0}
+.topbar .tb-badge{font-size:11px;color:var(--text3);font-weight:500;background:var(--card2);padding:2px 8px;border-radius:var(--radius)}
+.topbar .tb-title{font-size:16px;font-weight:600;color:var(--text1)}
+.topbar .tb-spacer{flex:1}
+.topbar .menu-btn{width:38px;height:38px;display:flex;align-items:center;justify-content:center;border:none;background:none;color:var(--text1);cursor:pointer;border-radius:var(--radius);font-size:24px}
+.topbar .menu-btn:active{background:var(--card2)}
+.main-content{flex:1;display:flex;flex-direction:column;overflow:hidden;position:relative}
+.map-area{flex:1;background:var(--card2);display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--text3);gap:4px}
+.map-area .material-icons{font-size:64px;color:var(--text4)}
+.map-overlay{position:absolute;top:0;left:0;right:0;padding:12px 20px}
+.map-overlay .search-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);z-index:10}
+.search-box .sb-input{display:flex;align-items:center;gap:10px;padding:12px 16px}
+.search-box .sb-input input{flex:1;border:none;outline:none;font-size:14px;font-family:'Inter',sans-serif;color:var(--text1);background:transparent}
+.search-box .sb-input input::placeholder{color:var(--text4)}
+.search-box .sb-input .sb-clear{display:none;font-size:18px;color:var(--text4);cursor:pointer}
+.search-results{display:none;border-top:1px solid var(--border);padding:6px 0}
+.search-results.open{display:block}
+.sr-item{display:flex;align-items:center;gap:12px;padding:10px 16px;cursor:pointer}
+.sr-item:active{background:var(--card2)}
+.sr-item .sr-icon{width:32px;height:32px;border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;background:var(--card2)}
+.sr-item .sr-label{font-size:13px;font-weight:500;color:var(--text1);flex:1}
+.phone-bottom{margin:0 auto;width:390px;flex-shrink:0;border-top:1px solid var(--border);background:var(--card)}
+.phone-nav{display:flex;border-top:1px solid var(--border);background:var(--card)}
+.phone-nav .bn-item{flex:1;text-align:center;padding:6px 0 8px;cursor:pointer}
+.phone-nav .bn-item .material-icons{font-size:22px;color:var(--text4);display:block}
+.phone-nav .bn-item .bn-label{font-size:10px;color:var(--text4);margin-top:1px}
+.phone-nav .bn-item.aktif .material-icons{color:var(--text1)}
+.phone-nav .bn-item.aktif .bn-label{color:var(--text1);font-weight:500}
+.service-panel{display:none;margin:0 auto;width:390px;flex-shrink:0;border-top:1px solid var(--border);background:var(--card)}
+.service-panel.open{display:block}
+.sp-section{padding:16px}
+.sp-section+.sp-section{border-top:1px solid var(--border)}
+.sp-label{font-size:10px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.sp-location{display:flex;align-items:flex-start;gap:12px}
+.sp-location .sp-line{display:flex;flex-direction:column;align-items:center;gap:2px;padding-top:3px}
+.sp-location .sp-line .c1,.sp-location .sp-line .c2{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.sp-location .sp-line .c1{background:var(--green)}
+.sp-location .sp-line .c2{background:var(--red)}
+.sp-location .sp-line .line{width:1px;flex:1;background:var(--border);min-height:20px}
+.sp-location .sp-addr{flex:1;display:flex;flex-direction:column;gap:10px}
+.sp-location .sp-addr .sa-item{display:flex;flex-direction:column}
+.sp-location .sp-addr .sa-item .sa-title{font-size:13px;font-weight:500;color:var(--text1)}
+.sp-location .sp-addr .sa-item .sa-sub{font-size:11px;color:var(--text3)}
+.sp-row{display:flex;gap:8px}
+.sp-option{flex:1;text-align:center;padding:12px 4px;border:1px solid var(--border);border-radius:var(--radius);cursor:pointer}
+.sp-option .material-icons{font-size:26px;color:var(--text3);display:block}
+.sp-option .so-title{font-size:12px;font-weight:500;color:var(--text1)}
+.sp-option .so-price{font-size:11px;color:var(--text3)}
+.sp-option.secili{border-color:var(--text1);background:var(--card2)}
+.sp-option.secili .material-icons{color:var(--text1)}
+.sp-btn{width:100%;padding:12px;border:none;background:var(--text1);color:var(--bg);font-size:14px;font-weight:600;border-radius:var(--radius);cursor:pointer;font-family:'Inter',sans-serif}
+.sp-btn:active{opacity:.8}
+.sp-btn-out{background:var(--card);color:var(--text1);border:1px solid var(--border);margin-top:6px}
+.sp-btn-sm{font-size:12px;padding:8px}
+.sp-input{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:6px}
+.sp-input .material-icons{font-size:18px;color:var(--text3)}
+.sp-input input{flex:1;border:none;outline:none;font-size:13px;font-family:'Inter',sans-serif;color:var(--text1);background:transparent}
+.sp-input input::placeholder{color:var(--text4)}
+.sp-input span{font-size:12px;color:var(--text3)}
+.sp-detail{display:flex;flex-direction:column;gap:8px}
+.sp-detail .sd-row{display:flex;gap:8px}
+.sp-detail .sd-row .sd-field{flex:1}
+.sp-detail .sd-row .sd-field .sd-label{font-size:10px;color:var(--text3);margin-bottom:2px}
+.sp-check{display:flex;align-items:center;gap:8px;padding:4px 0;cursor:pointer}
+.sp-check .material-icons{font-size:18px;color:var(--text4)}
+.sp-check.secili .material-icons{color:var(--text1)}
+.sp-check .sc-label{font-size:12px;color:var(--text1)}
+.sp-check .sc-desc{font-size:10px;color:var(--text4);margin-left:auto}
+.sp-badge{display:inline-flex;align-items:center;gap:4px;font-size:10px;padding:2px 8px;border-radius:8px;font-weight:600}
+.sp-badge.green{background:#ecfdf5;color:var(--green)}
+.sp-badge.gray{background:var(--card2);color:var(--text3)}
+.sp-badge.blue{background:#dbeafe;color:var(--blue)}
+.sp-badge.red{background:#fef2f2;color:var(--red)}
+.delivery-option{display:flex;align-items:center;gap:10px;padding:10px;border:1px solid var(--border);border-radius:var(--radius);cursor:pointer;margin-bottom:4px}
+.delivery-option.secili{border-color:var(--text1);background:var(--card2)}
+.delivery-option .do-icon{width:32px;height:32px;border-radius:var(--radius);background:var(--card2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--text3)}
+.delivery-option .do-info{flex:1}
+.delivery-option .do-info .do-title{font-size:12px;font-weight:500;color:var(--text1)}
+.delivery-option .do-info .do-sub{font-size:10px;color:var(--text4)}
+.delivery-option .do-check{font-size:18px;color:var(--text4)}
+.delivery-option.secili .do-check{color:var(--text1)}
+.drawer-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.3);z-index:99;display:none}
+.drawer-overlay.open{display:block}
+.drawer{position:fixed;top:0;right:-390px;width:390px;height:100vh;background:var(--card);border-left:1px solid var(--border);z-index:100;transition:right .25s;display:flex;flex-direction:column}
+.drawer.open{right:0}
+.drawer-header{display:flex;align-items:center;gap:8px;padding:14px 20px;border-bottom:1px solid var(--border);flex-shrink:0}
+.drawer-header .close-btn{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:none;background:none;color:var(--text1);cursor:pointer;border-radius:var(--radius);font-size:22px}
+.drawer-header h2{font-size:16px;font-weight:600;flex:1;color:var(--text1)}
+.drawer-scroll{flex:1;overflow-y:auto;padding:8px 0}
+.d-item{display:flex;align-items:center;gap:14px;padding:14px 20px;cursor:pointer;color:var(--text1)}
+.d-item:active{background:var(--card2)}
+.d-item .material-icons{font-size:22px;color:var(--text3);width:22px}
+.d-item .li-label{font-size:14px;font-weight:500;flex:1}
+.d-item .di-badge{font-size:10px;background:var(--red);color:#fff;padding:1px 6px;border-radius:8px;font-weight:600}
+.d-item .di-num{font-size:12px;color:var(--text4)}
+.d-item.d-green .material-icons,.d-item.d-green .li-label{color:var(--green)}
+.d-item.d-orange .material-icons,.d-item.d-orange .li-label{color:var(--orange)}
+@media(max-width:480px){
+  .map-overlay{padding:12px}
+  .phone-bottom{width:100%}
+  .service-panel{width:100%}
+  .drawer{width:100%;right:-100%}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="tb-badge">Yolcu</span>
+  <div class="tb-title">Taksi Sistemi</div>
+  <div class="tb-spacer"></div>
+  <button class="menu-btn" onclick="sosAcil()" title="Acil Durum" style="color:var(--red)"><span class="material-icons">warning</span></button>
+  <button class="menu-btn" onclick="toggleDrawer()"><span class="material-icons">menu</span></button>
+</div>
+
+<div class="main-content">
+  <div class="map-area">
+    <div style="text-align:center;color:var(--text3)">
+      <span class="material-icons" style="font-size:64px;display:block;margin-bottom:8px;color:var(--text4)">map</span>
+      <span style="font-size:14px">Taksi harita takip alani</span>
+    </div>
+  </div>
+  <div class="map-overlay">
+    <div class="search-box">
+      <div class="sb-input">
+        <span class="material-icons">search</span>
+        <input type="text" id="searchInput" placeholder="Taksi çağır, şoför, yolculuk ara..." oninput="searchChange(this.value)" autocomplete="off">
+        <span class="material-icons sb-clear" id="clearBtn" onclick="clearSearch()">close</span>
+      </div>
+      <div class="search-results" id="searchResults">
+        <div class="sr-item" onclick="openPanel('cagriPanel')"><div class="sr-icon"><span class="material-icons">local_taxi</span></div><div class="sr-label">Taksi Çağır</div></div>
+        <div class="sr-item" onclick="openPanel('soforOlPanel')"><div class="sr-icon"><span class="material-icons" style="color:var(--green)">person_add</span></div><div class="sr-label">Şoför Ol</div></div>
+        <div class="sr-item" onclick="openPanel('raporPanel')"><div class="sr-icon"><span class="material-icons">bar_chart</span></div><div class="sr-label">Raporlar</div></div>
+        <div class="sr-item" onclick="openPanel('bildirimPanel')"><div class="sr-icon"><span class="material-icons">notifications</span></div><div class="sr-label">Bildirimler</div></div>
+        <div class="sr-item" onclick="openPanel('odemePanel')"><div class="sr-icon"><span class="material-icons">payments</span></div><div class="sr-label">Ödemeler</div></div>
+        <div class="sr-item" onclick="openPanel('soforOdemePanel')"><div class="sr-icon"><span class="material-icons">account_balance_wallet</span></div><div class="sr-label">Ödeme Alma Yöntemi</div></div>
+        <div class="sr-item" onclick="openPanel('platformGelirPanel')"><div class="sr-icon"><span class="material-icons">account_balance</span></div><div class="sr-label">Gelir Modeli & Komisyon</div></div>
+        <div class="sr-item" onclick="openPanel('canliPanel')"><div class="sr-icon"><span class="material-icons">gps_fixed</span></div><div class="sr-label">Canlı Harita</div></div>
+        <div class="sr-item" onclick="openPanel('puanPanel')"><div class="sr-icon"><span class="material-icons">star</span></div><div class="sr-label">Değerlendirme</div></div>
+        <div class="sr-item" onclick="openPanel('kampanyaPanel')"><div class="sr-icon"><span class="material-icons">local_offer</span></div><div class="sr-label">Kampanyalar</div></div>
+        <div class="sr-item" onclick="openPanel('adresPanel')"><div class="sr-icon"><span class="material-icons">location_on</span></div><div class="sr-label">Adreslerim</div></div>
+        <div class="sr-item" onclick="openPanel('cezaPanel')"><div class="sr-icon"><span class="material-icons">gavel</span></div><div class="sr-label">Ceza & İhlal</div></div>
+        <div class="sr-item" onclick="openPanel('hesapPanel')"><div class="sr-icon"><span class="material-icons">verified</span></div><div class="sr-label">Hesap Durumu</div></div>
+        <div class="sr-item" onclick="openPanel('sigortaPanel')"><div class="sr-icon"><span class="material-icons">health_and_safety</span></div><div class="sr-label">Sigorta & Kaza</div></div>
+        <div class="sr-item" onclick="openPanel('gorevPanel')"><div class="sr-icon"><span class="material-icons">assignment</span></div><div class="sr-label">Şoför Görevlerim</div></div>
+        <div class="sr-item" onclick="openPanel('iptalPanel')"><div class="sr-icon"><span class="material-icons">cancel</span></div><div class="sr-label">İptal & İade</div></div>
+        <div class="sr-item" onclick="openPanel('sohbetPanel')"><div class="sr-icon"><span class="material-icons">chat</span></div><div class="sr-label">Canlı Destek</div></div>
+        <div class="sr-item" onclick="openPanel('adminPanel')"><div class="sr-icon"><span class="material-icons">admin_panel_settings</span></div><div class="sr-label">Yönetici Paneli</div></div>
+        <div class="sr-item" onclick="openPanel('podPanel')"><div class="sr-icon"><span class="material-icons">camera_alt</span></div><div class="sr-label">Yolculuk Kanıtı</div></div>
+        <div class="sr-item" onclick="openPanel('mobilPanel')"><div class="sr-icon"><span class="material-icons">phone_android</span></div><div class="sr-label">Şoför Mobil</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="phone-bottom" id="mainBottom">
+  <div class="phone-nav">
+    <div class="bn-item aktif"><span class="material-icons">home</span><div class="bn-label">Ana Sayfa</div></div>
+    <div class="bn-item"><span class="material-icons">search</span><div class="bn-label">Arama</div></div>
+    <div class="bn-item"><span class="material-icons">more_horiz</span><div class="bn-label">—</div></div>
+    <div class="bn-item"><span class="material-icons">person</span><div class="bn-label">Profil</div></div>
+  </div>
+</div>
+
+<!-- TAKSI CAGIR -->
+<div class="service-panel" id="cagriPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Taksi Çağır</div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-location">
+      <div class="sp-line"><div class="c1"></div><div class="line"></div><div class="c2"></div></div>
+      <div class="sp-addr">
+        <div class="sa-item"><div class="sa-title">Atatürk Cad. No:42, Kadıköy</div><div class="sa-sub">Alınacak nokta</div></div>
+        <div class="sa-item"><div class="sa-title">Varış noktasını gir</div><div class="sa-sub">Gidilecek adres</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Araç Türü</div>
+    <div class="sp-row">
+      <div class="sp-option secili" onclick="aracSec(this,'sedan')"><span class="material-icons">directions_car</span><div class="so-title">Sedan</div><div class="so-price">₺12/km</div></div>
+      <div class="sp-option" onclick="aracSec(this,'hatchback')"><span class="material-icons">directions_car</span><div class="so-title">Hatchback</div><div class="so-price">₺10/km</div></div>
+      <div class="sp-option" onclick="aracSec(this,'minivan')"><span class="material-icons">airport_shuttle</span><div class="so-title">Minivan</div><div class="so-price">₺16/km</div></div>
+      <div class="sp-option" onclick="aracSec(this,'vip')"><span class="material-icons">star</span><div class="so-title">VIP</div><div class="so-price">₺22/km</div></div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Ücret Tahmini</div>
+    <div style="display:flex;flex-direction:column;gap:3px;margin-bottom:6px">
+      <div style="display:flex;justify-content:space-between;padding:3px 0;font-size:10px">
+        <span style="color:var(--text3)">Açılış ücreti</span><span style="color:var(--text1)">₺12,00</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:3px 0;font-size:10px">
+        <span style="color:var(--text3)">Mesafe (6,2 km × ₺12,00)</span><span style="color:var(--text1)">+₺74,40</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:3px 0;font-size:10px">
+        <span style="color:var(--text3)">Bekleme süresi (4 dk × ₺2,50)</span><span style="color:var(--text1)">+₺10,00</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:6px 0;font-size:11px;border-top:1px solid var(--border)">
+        <span style="font-weight:600;color:var(--text1)">Tahmini ücret</span><span style="font-weight:700;color:var(--text1)" id="cagriTotal">₺96,40</span>
+      </div>
+    </div>
+    <div style="display:flex;gap:4px;margin-bottom:6px">
+      <div style="flex:1;text-align:center;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:9px"><span style="color:var(--text3)">Talep artışı</span><div style="font-size:11px;font-weight:600;color:var(--orange)">x1.2</div></div>
+      <div style="flex:1;text-align:center;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:9px"><span style="color:var(--text3)">Trafik</span><div style="font-size:11px;font-weight:600;color:var(--blue)">+4 dk</div></div>
+      <div style="flex:1;text-align:center;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:9px"><span style="color:var(--text3)">Tahmini süre</span><div style="font-size:11px;font-weight:600;color:var(--text1)">18 dk</div></div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Ödeme Yöntemi</div>
+    <div class="delivery-option cagri-odeme secili" onclick="cagriOdemeSec(this)"><div class="do-icon" style="background:linear-gradient(135deg,#1a1f71,#1a1f71);color:#fff;border-color:#1a1f71"><span style="font-size:12px;font-weight:700">MC</span></div><div class="do-info"><div class="do-title">Kredi Kartı</div><div class="do-sub">Mastercard • 4976 **** 1234</div></div><span class="material-icons do-check">radio_button_checked</span></div>
+    <div class="delivery-option cagri-odeme" onclick="cagriOdemeSec(this)"><div class="do-icon" style="background:var(--card2);border-color:var(--border);color:var(--text1)"><span class="material-icons" style="font-size:18px">account_balance_wallet</span></div><div class="do-info"><div class="do-title">Cüzdan Bakiyesi</div><div class="do-sub">₺2.847,50 • Anında ödeme</div></div><span class="material-icons do-check">radio_button_unchecked</span></div>
+    <div class="delivery-option cagri-odeme" onclick="cagriOdemeSec(this)"><div class="do-icon" style="background:#fef3c7;color:#92400e;border-color:#fde68a"><span class="material-icons" style="font-size:18px">payments</span></div><div class="do-info"><div class="do-title">Nakit</div><div class="do-sub">Sürücüye nakit öde</div></div><span class="material-icons do-check">radio_button_unchecked</span></div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-check secili"><span class="material-icons">check_box</span><div class="sc-label">Bebek koltuğu</div></div>
+    <div class="sp-check"><span class="material-icons">check_box_outline_blank</span><div class="sc-label">Evcil hayvan</div></div>
+  </div>
+  <div class="sp-section">
+    <button class="sp-btn" onclick="taksiCagir()">Taksi Çağır</button>
+  </div>
+</div>
+
+<!-- SOFOR OL -->
+<div class="service-panel" id="soforOlPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Şoför Ol</div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Araç Türü</div>
+    <div class="sp-row">
+      <div class="sp-option secili" style="flex:0 0 calc(50% - 4px);padding:10px 2px" onclick="soforAracSec(this)"><span class="material-icons">directions_car</span><div class="so-title">Sedan</div><div class="so-price">4 kişilik</div></div>
+      <div class="sp-option" style="flex:0 0 calc(50% - 4px);padding:10px 2px" onclick="soforAracSec(this)"><span class="material-icons">directions_car</span><div class="so-title">Hatchback</div><div class="so-price">4 kişilik</div></div>
+      <div class="sp-option" style="flex:0 0 calc(50% - 4px);padding:10px 2px;margin-top:4px" onclick="soforAracSec(this)"><span class="material-icons">airport_shuttle</span><div class="so-title">Minivan</div><div class="so-price">7 kişilik</div></div>
+      <div class="sp-option" style="flex:0 0 calc(50% - 4px);padding:10px 2px;margin-top:4px" onclick="soforAracSec(this)"><span class="material-icons">star</span><div class="so-title">VIP</div><div class="so-price">Lüks araç</div></div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Araç Bilgileri</div>
+    <div class="sp-input"><span class="material-icons">badge</span><input type="text" value="2022 Renault Megane"></div>
+    <div class="sp-input"><span class="material-icons">tag</span><input type="text" value="34 ABC 1234"></div>
+    <div class="sp-input"><span class="material-icons">palette</span><input type="text" value="Beyaz"></div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Hesap Türü</div>
+    <div class="delivery-option secili"><div class="do-icon"><span class="material-icons">person</span></div><div class="do-info"><div class="do-title">Bireysel Şoför</div><div class="do-sub">Kendi aracınla çalış</div></div><span class="material-icons do-check">radio_button_checked</span></div>
+    <div class="delivery-option"><div class="do-icon"><span class="material-icons">business</span></div><div class="do-info"><div class="do-title">Filo Sahibi</div><div class="do-sub">Birden fazla araç yönet</div></div><span class="material-icons do-check">radio_button_unchecked</span></div>
+  </div>
+  <div class="sp-section">
+    <div style="display:flex;gap:8px;margin-bottom:6px">
+      <div style="flex:1;font-size:10px;color:var(--text3);padding:6px;border:1px solid var(--border);border-radius:var(--radius);text-align:center">
+        <span style="font-size:16px;font-weight:700;color:var(--text1);display:block">₺12/km</span>Sedan ücreti
+      </div>
+      <div style="flex:1;font-size:10px;color:var(--text3);padding:6px;border:1px solid var(--border);border-radius:var(--radius);text-align:center">
+        <span style="font-size:16px;font-weight:700;color:var(--text1);display:block">%78</span>Sana kalan
+      </div>
+      <div style="flex:1;font-size:10px;color:var(--text3);padding:6px;border:1px solid var(--border);border-radius:var(--radius);text-align:center">
+        <span style="font-size:16px;font-weight:700;color:var(--text1);display:block">%22</span>Platform
+      </div>
+    </div>
+    <button class="sp-btn" onclick="goHome()">Başvuruyu Gönder</button>
+  </div>
+</div>
+
+<!-- RAPORLAR -->
+<div class="service-panel" id="raporPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Raporlar</div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Bu Hafta</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:12px">
+      <div style="text-align:center;padding:10px;border:1px solid var(--border);border-radius:var(--radius)"><div style="font-size:18px;font-weight:700;color:var(--text1)">18</div><div style="font-size:10px;color:var(--text3)">Yolculuk</div></div>
+      <div style="text-align:center;padding:10px;border:1px solid var(--border);border-radius:var(--radius)"><div style="font-size:18px;font-weight:700;color:var(--text1)">₺1.840</div><div style="font-size:10px;color:var(--text3)">Kazanç</div></div>
+      <div style="text-align:center;padding:10px;border:1px solid var(--border);border-radius:var(--radius)"><div style="font-size:18px;font-weight:700;color:var(--text1)">4.9</div><div style="font-size:10px;color:var(--text3)">Puan</div></div>
+    </div>
+    <div class="sp-label">Bugünkü Yolculuklar</div>
+    <div style="display:flex;flex-direction:column;gap:4px">
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <span class="material-icons" style="font-size:16px;color:var(--green)">check_circle</span>
+        <span style="flex:1">Kadıköy → Maltepe</span><span style="color:var(--text3)">₺96 • 10:30</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <span class="material-icons" style="font-size:16px;color:var(--green)">check_circle</span>
+        <span style="flex:1">Kadıköy → Üsküdar</span><span style="color:var(--text3)">₺72 • 11:45</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <span class="material-icons" style="font-size:16px;color:var(--blue)">local_taxi</span>
+        <span style="flex:1">Kadıköy → Beşiktaş</span><span style="color:var(--text3)">₺134 • 14:00</span>
+      </div>
+    </div>
+  </div>
+  <div class="sp-section" style="text-align:center">
+    <span class="sp-badge gray" style="cursor:pointer" onclick="goHome()">Geri</span>
+  </div>
+</div>
+
+<!-- BILDIRIMLER -->
+<div class="service-panel" id="bildirimPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Bildirimler</div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label" style="display:flex;gap:8px;align-items:center">
+      <span style="cursor:pointer;color:var(--text1);font-size:11px;text-transform:none;letter-spacing:0" onclick="bildirimTab('bildirim')" id="btBildirim">Bildirimler</span>
+      <span style="cursor:pointer;color:var(--text4);font-size:11px;text-transform:none;letter-spacing:0" onclick="bildirimTab('sms')" id="btSms">SMS</span>
+      <span style="cursor:pointer;color:var(--text4);font-size:11px;text-transform:none;letter-spacing:0" onclick="bildirimTab('whatsapp')" id="btWhatsapp">WhatsApp</span>
+      <span style="cursor:pointer;color:var(--text4);font-size:11px;text-transform:none;letter-spacing:0" onclick="bildirimTab('ayarlar')" id="btAyarlar">Ayarlar</span>
+    </div>
+  </div>
+  <div id="bildirimIcerik" style="display:block">
+    <div class="sp-section" style="display:flex;flex-direction:column;gap:8px;border-top:none">
+      <div style="display:flex;gap:10px;padding:10px;border:1px solid var(--border);border-radius:var(--radius);background:#ecfdf5">
+        <span class="material-icons" style="font-size:20px;color:var(--green)">check_circle</span>
+        <div style="flex:1"><div style="font-size:12px;font-weight:500;color:var(--text1)">Yolculuk Tamamlandı</div><div style="font-size:10px;color:var(--text3)">Kadıköy → Maltepe • 2 dk önce</div></div>
+      </div>
+      <div style="display:flex;gap:10px;padding:10px;border:1px solid var(--border);border-radius:var(--radius)">
+        <span class="material-icons" style="font-size:20px;color:var(--blue)">notifications</span>
+        <div style="flex:1"><div style="font-size:12px;font-weight:500;color:var(--text1)">Şoför Atandı</div><div style="font-size:10px;color:var(--text3)">Ahmet bey yola çıktı • 3 dk içinde</div></div>
+      </div>
+      <div style="display:flex;gap:10px;padding:10px;border:1px solid var(--border);border-radius:var(--radius)">
+        <span class="material-icons" style="font-size:20px;color:#d97706">payment</span>
+        <div style="flex:1"><div style="font-size:12px;font-weight:500;color:var(--text1)">Ödeme Alındı</div><div style="font-size:10px;color:var(--text3)">₺96 hesabına yatırıldı • 1 saat önce</div></div>
+      </div>
+    </div>
+  </div>
+  <div id="smsIcerik" style="display:none">
+    <div class="sp-section" style="border-top:none;display:flex;flex-direction:column;gap:8px">
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;justify-content:space-between"><span style="font-weight:600;color:var(--text1)">Şoför Yolda</span><span style="font-size:10px;color:var(--text4)">2 dk önce</span></div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">Şoför Ahmet yola çıktı • Tahmini varış: 3 dk</div>
+        <span class="sp-badge" style="background:#dbeafe;color:var(--blue);font-size:9px">SMS gönderildi: +90 532 *** 1234</span>
+      </div>
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;justify-content:space-between"><span style="font-weight:600;color:var(--text1)">Yolculuk Hatırlatma</span><span style="font-size:10px;color:var(--text4)">1 saat önce</span></div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">Yarın 10:00'da havaalanı yolculuğunuz var</div>
+        <span class="sp-badge" style="background:#dbeafe;color:var(--blue);font-size:9px">SMS gönderildi: +90 532 *** 5678</span>
+      </div>
+    </div>
+  </div>
+  <div id="whatsappIcerik" style="display:none">
+    <div class="sp-section" style="border-top:none;display:flex;flex-direction:column;gap:8px">
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;justify-content:space-between"><span style="font-weight:600;color:var(--text1)">Şoför Konumu 🚕</span><span style="font-size:10px;color:var(--text4)">10 dk önce</span></div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">Şoförünüz Ahmet canlı konum: wa.me/90532***1234</div>
+        <span class="sp-badge" style="background:#ecfdf5;color:var(--green);font-size:9px">WhatsApp bildirimi iletildi</span>
+      </div>
+    </div>
+  </div>
+  <div id="ayarlarIcerik" style="display:none">
+    <div class="sp-section" style="border-top:none">
+      <div class="sp-label">Bildirim Kanal Tercihleri</div>
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <div class="sp-check secili"><span class="material-icons">check_box</span><div class="sc-label">Push Bildirim</div><div class="sc-desc">Aktif</div></div>
+        <div class="sp-check secili"><span class="material-icons">check_box</span><div class="sc-label">SMS</div><div class="sc-desc">Aktif</div></div>
+        <div class="sp-check"><span class="material-icons">check_box_outline_blank</span><div class="sc-label">WhatsApp</div><div class="sc-desc">Bağlan</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ODEMELER -->
+<div class="service-panel" id="odemePanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Ödemeler</div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Rolünüz</div>
+    <div class="sp-row">
+      <div class="sp-option secili" onclick="odemeRolSec(this,'yolcu')"><span class="material-icons">person</span><div class="so-title">Yolcu</div><div class="so-price">Ödeme yapıyorum</div></div>
+      <div class="sp-option" onclick="odemeRolSec(this,'sofor')"><span class="material-icons" style="color:var(--green)">local_taxi</span><div class="so-title">Şoför</div><div class="so-price">Hakediş alıyorum</div></div>
+      <div class="sp-option" onclick="odemeRolSec(this,'filo')"><span class="material-icons">business</span><div class="so-title">Filo</div><div class="so-price">Araç işletiyorum</div></div>
+    </div>
+  </div>
+  <div id="odemeYolcu" style="display:block">
+    <div class="sp-section">
+      <div class="sp-label">Yolculuk Geçmişi</div>
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius)">
+          <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:600;color:var(--text1)"><span>Kadıköy → Maltepe</span><span style="color:var(--green)">-₺96,40</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--text3);margin-top:2px"><span>Sedan • 6,2 km • 18 dk</span><span class="sp-badge green">Tamamlandı</span></div>
+          <div style="font-size:9px;color:var(--text4);margin-top:4px">Kredi Kartı • 09 Haz 14:30</div>
+        </div>
+        <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius)">
+          <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:600;color:var(--text1)"><span>Kadıköy → Üsküdar</span><span style="color:var(--green)">-₺72,00</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--text3);margin-top:2px"><span>Hatchback • 4,5 km • 14 dk</span><span class="sp-badge green">Tamamlandı</span></div>
+          <div style="font-size:9px;color:var(--text4);margin-top:4px">Cüzdan • 08 Haz 11:45</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="odemeSofor" style="display:none">
+    <div class="sp-section" style="text-align:center">
+      <div style="font-size:28px;font-weight:700;color:var(--text1)">₺2.340</div>
+      <div style="font-size:12px;color:var(--text3)">Güncel kazanç bakiyesi</div>
+      <div style="display:flex;gap:8px;margin-top:10px;justify-content:center">
+        <button class="sp-btn sp-btn-sm" style="width:auto;padding:8px 20px">Para Çek</button>
+        <button class="sp-btn sp-btn-sm sp-btn-out" style="width:auto;padding:8px 20px;margin-top:0" onclick="openPanel('soforOdemePanel')">Ödeme Yöntemi</button>
+      </div>
+    </div>
+    <div class="sp-section">
+      <div class="sp-label">Bekleyen Hakedişler</div>
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:4px">
+        <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:600"><span style="color:var(--text1)">Kadıköy → Beşiktaş</span><span style="color:var(--green)">+₺104,52</span></div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">VIP • 8,4 km • ₺22/km • %78 kurye payı</div>
+      </div>
+    </div>
+  </div>
+  <div id="odemeFilo" style="display:none">
+    <div class="sp-section">
+      <div style="padding:12px;border:1px solid var(--border);border-radius:var(--radius)">
+        <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:600;color:var(--text1);margin-bottom:4px"><span>Bu Ay Toplam</span><span style="color:var(--green)">+₺22.400</span></div>
+        <div style="font-size:11px;color:var(--text3)">4 araç • 89 yolculuk • Platform: -₺4.928 (%22)</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SOFOR ODEME YONTEMI -->
+<div class="service-panel" id="soforOdemePanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="openPanel('odemePanel')">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Ödeme Alma Yöntemi</div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="delivery-option secili" onclick="soforOdemeAlmaSec(this)"><div class="do-icon" style="background:#dbeafe;color:#1e40af;border-color:#93c5fd"><span class="material-icons" style="font-size:18px">account_balance</span></div><div class="do-info"><div class="do-title">Banka Havalesi</div><div class="do-sub">İş Bankası • TR12 0006 **** 5678 • 1-3 iş günü</div></div><span class="material-icons do-check">radio_button_checked</span></div>
+    <div class="delivery-option" onclick="soforOdemeAlmaSec(this)"><div class="do-icon" style="background:#ecfdf5;color:var(--green);border-color:var(--green)"><span class="material-icons" style="font-size:18px">account_balance_wallet</span></div><div class="do-info"><div class="do-title">Platform Cüzdanında Tut</div><div class="do-sub">Anında harcamak için cüzdanda beklet</div></div><span class="material-icons do-check">radio_button_unchecked</span></div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Otomatik Ödeme Eşiği</div>
+    <div style="display:flex;align-items:center;gap:8px;padding:10px;border:1px solid var(--border);border-radius:var(--radius);cursor:pointer">
+      <span class="material-icons" style="font-size:18px;color:var(--text3)">autorenew</span>
+      <span style="flex:1;font-size:12px;color:var(--text1)">Bakiye ₺500'ü geçince otomatik çek</span>
+      <span class="material-icons" style="color:var(--green);font-size:18px">toggle_on</span>
+    </div>
+  </div>
+</div>
+
+<!-- PLATFORM GELIR MODELI -->
+<div class="service-panel" id="platformGelirPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Gelir Modeli & Komisyon</div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Platform Gelir Akışı</div>
+    <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px">
+      <div style="display:flex;align-items:center;gap:10px;padding:10px;border:1px solid var(--border);border-radius:var(--radius)">
+        <div style="width:36px;height:36px;background:#ecfdf5;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:var(--green);font-size:18px"><span class="material-icons">local_taxi</span></div>
+        <div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text1)">Yolcu Komisyonu</div><div style="font-size:10px;color:var(--text3)">Her yolculuktan %22 • Örn: ₺100 → ₺22</div></div>
+        <span class="sp-badge green">%22</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:10px;border:1px solid var(--border);border-radius:var(--radius)">
+        <div style="width:36px;height:36px;background:#fffbeb;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:#92400e;font-size:18px"><span class="material-icons">trending_up</span></div>
+        <div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text1)">Talep Artışı (Surge)</div><div style="font-size:10px;color:var(--text3)">Yoğun saatlerde x1.2-x2.0 çarpan</div></div>
+        <span class="sp-badge" style="background:#fffbeb;color:#92400e">x1.2-2.0</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:10px;border:1px solid var(--border);border-radius:var(--radius)">
+        <div style="width:36px;height:36px;background:#dbeafe;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:18px"><span class="material-icons">business_center</span></div>
+        <div style="flex:1"><div style="font-size:12px;font-weight:600;color:var(--text1)">Filo Abonelik</div><div style="font-size:10px;color:var(--text3)">Filo sahiplerinden aylık ₺499/araç sabit ücret</div></div>
+        <span class="sp-badge blue">₺499/ay</span>
+      </div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Şoför Ödeme Yapısı</div>
+    <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius)">
+      <div style="font-size:12px;font-weight:600;color:var(--text1);margin-bottom:4px">Bireysel Şoför</div>
+      <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--text3);margin-bottom:2px"><span>KM başı ücret</span><span>₺10-22 (araç türüne göre)</span></div>
+      <div style="display:justify-content:space-between;font-size:10px;color:var(--text3);margin-bottom:2px"><span>Platform komisyonu</span><span>%22</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--text3);margin-bottom:2px"><span>Şoföre kalan</span><span>%78</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- CANLI HARITA -->
+<div class="service-panel" id="canliPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Canlı Harita</div>
+    </div>
+    <div id="haritaContainer" style="height:220px;border-radius:var(--radius);border:1px solid var(--border);z-index:1"></div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Aktif Taksiler</div>
+    <div style="display:flex;flex-direction:column;gap:4px">
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="width:8px;height:8px;border-radius:50%;background:var(--green)"></div>
+        <span style="font-weight:500;color:var(--text1);width:60px">Ahmet</span>
+        <span style="flex:1;color:var(--text3)">Sedan • Kadıköy</span>
+        <span class="sp-badge green">Müsait</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="width:8px;height:8px;border-radius:50%;background:#f59e0b"></div>
+        <span style="font-weight:500;color:var(--text1);width:60px">Mehmet</span>
+        <span style="flex:1;color:var(--text3)">Hatchback • Maltepe</span>
+        <span class="sp-badge" style="background:#fef3c7;color:#92400e">Yolculukta</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="width:8px;height:8px;border-radius:50%;background:var(--green)"></div>
+        <span style="font-weight:500;color:var(--text1);width:60px">Ali</span>
+        <span style="flex:1;color:var(--text3)">Minivan • Üsküdar</span>
+        <span class="sp-badge green">Müsait</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PUAN / DEGERLENDIRME -->
+<div class="service-panel" id="puanPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Değerlendirme</div>
+    </div>
+  </div>
+  <div class="sp-section" style="text-align:center;padding:16px">
+    <div style="font-size:36px;font-weight:700;color:var(--text1)">4.9</div>
+    <div style="font-size:20px;color:#d97706;margin:4px 0">★★★★★</div>
+    <div style="font-size:12px;color:var(--text3)">18 yolculuk • 15 değerlendirme</div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Son Yorumlar</div>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <div style="padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;justify-content:space-between"><span style="font-weight:500;color:var(--text1)">Ali Rıza</span><span style="color:#d97706">★★★★★</span></div>
+        <div style="color:var(--text3);margin-top:2px">Çok temiz araç ve nazik şoför</div>
+      </div>
+      <div style="padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;justify-content:space-between"><span style="font-weight:500;color:var(--text1)">Zeynep K.</span><span style="color:#d97706">★★★★☆</span></div>
+        <div style="color:var(--text3);margin-top:2px">Zamanında geldi, teşekkürler</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- KAMPANYALAR -->
+<div class="service-panel" id="kampanyaPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Kampanyalar</div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div style="padding:12px;border:1px solid var(--orange);border-radius:var(--radius);background:#fffbeb;margin-bottom:8px">
+      <div style="display:flex;align-items:center;gap:8px"><span class="material-icons" style="font-size:20px;color:var(--orange)">local_offer</span><div style="flex:1"><div style="font-size:13px;font-weight:600;color:var(--text1)">İlk Yolculuğuna %50 İndirim</div><div style="font-size:10px;color:var(--text3)">Yeni kullanıcılara özel • Kod: ILK50</div></div></div>
+      <div style="display:flex;gap:4px;margin-top:6px"><span class="sp-badge green">Aktif</span><span class="sp-badge gray">Son: 30 Haz</span></div>
+    </div>
+    <div style="padding:12px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:8px">
+      <div style="display:flex;align-items:center;gap:8px"><span class="material-icons" style="font-size:20px;color:var(--blue)">card_giftcard</span><div style="flex:1"><div style="font-size:13px;font-weight:600;color:var(--text1)">Hafta Sonu 3. Yolculuk Bedava</div><div style="font-size:10px;color:var(--text3)">Her cumartesi 3. yolculuğun ₺50'ye kadar bizden</div></div></div>
+      <span class="sp-badge green">Aktif</span>
+    </div>
+    <div style="padding:12px;border:1px solid var(--border);border-radius:var(--radius);opacity:.6">
+      <div style="display:flex;align-items:center;gap:8px"><span class="material-icons" style="font-size:20px;color:var(--text4)">local_offer</span><div style="flex:1"><div style="font-size:13px;font-weight:600;color:var(--text1)">Arkadaşını Davet Et</div><div style="font-size:10px;color:var(--text3)">Her davette ₺30 kazan • Kod: DAVET30</div></div></div>
+      <span class="sp-badge gray">Süresi doldu</span>
+    </div>
+  </div>
+</div>
+
+<!-- ADRESLER -->
+<div class="service-panel" id="adresPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Adreslerim</div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Sık Kullanılan Adresler</div>
+    <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:8px">
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);cursor:pointer">
+        <div style="display:flex;align-items:center;gap:8px"><span class="material-icons" style="font-size:16px;color:var(--green)">home</span><div style="flex:1"><div style="font-size:12px;font-weight:500;color:var(--text1)">Ev</div><div style="font-size:10px;color:var(--text3)">Atatürk Cad. No:42, Kadıköy</div></div><span class="material-icons" style="font-size:16px;color:var(--text4)">edit</span></div>
+      </div>
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);cursor:pointer">
+        <div style="display:flex;align-items:center;gap:8px"><span class="material-icons" style="font-size:16px;color:var(--blue)">work</span><div style="flex:1"><div style="font-size:12px;font-weight:500;color:var(--text1)">İş</div><div style="font-size:10px;color:var(--text3)">Bağdat Cad. No:120, Maltepe</div></div><span class="material-icons" style="font-size:16px;color:var(--text4)">edit</span></div>
+      </div>
+    </div>
+    <button class="sp-btn sp-btn-out sp-btn-sm">+ Yeni Adres Ekle</button>
+  </div>
+</div>
+
+<!-- CEZA / IHAL -->
+<div class="service-panel" id="cezaPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Ceza & İhlal</div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:12px;padding:12px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:8px">
+      <div style="text-align:center"><div style="font-size:28px;font-weight:700;color:var(--green)">8</div><div style="font-size:10px;color:var(--text3)">Ceza puanı</div></div>
+      <div style="flex:1"><div style="height:6px;background:var(--card2);border-radius:3px;overflow:hidden"><div style="width:8%;height:100%;background:var(--green);border-radius:3px"></div></div><div style="font-size:9px;color:var(--text3);margin-top:2px">100 puanda hesap askıya alınır</div></div>
+    </div>
+    <div class="sp-label">Aktif İhlaller</div>
+    <div style="padding:8px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:4px">
+      <div style="display:flex;justify-content:space-between;font-size:11px"><span style="color:var(--text1)">Geç varış</span><span style="color:var(--orange);font-weight:600">+5 puan</span></div>
+      <div style="font-size:10px;color:var(--text3)">#TX-2024-003 • 8 dk gecikme • İtiraz edilebilir</div>
+    </div>
+    <div style="padding:8px;border:1px solid var(--border);border-radius:var(--radius)">
+      <div style="display:flex;justify-content:space-between;font-size:11px"><span style="color:var(--text1)">Rota ihlali</span><span style="color:var(--orange);font-weight:600">+3 puan</span></div>
+      <div style="font-size:10px;color:var(--text3)">Farklı rota kullanıldı • İtiraz hakkı: 3 gün</div>
+    </div>
+  </div>
+</div>
+
+<!-- HESAP DURUMU -->
+<div class="service-panel" id="hesapPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Hesap Durumu</div>
+    </div>
+  </div>
+  <div class="sp-section" style="text-align:center;padding:20px">
+    <div style="width:64px;height:64px;border-radius:50%;background:#ecfdf5;display:flex;align-items:center;justify-content:center;margin:0 auto 8px"><span class="material-icons" style="font-size:32px;color:var(--green)">verified</span></div>
+    <div style="font-size:18px;font-weight:700;color:var(--text1)">Hesabın Aktif</div>
+    <div style="font-size:11px;color:var(--text3)">Bireysel yolcu • 18 yolculuk</div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Doğrulama Seviyesi</div>
+    <div style="display:flex;flex-direction:column;gap:4px">
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px"><span class="material-icons" style="font-size:16px;color:var(--green)">check_circle</span><span style="flex:1;color:var(--text1)">TC Kimlik Doğrulama</span><span class="sp-badge green">Onaylı</span></div>
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px"><span class="material-icons" style="font-size:16px;color:var(--green)">check_circle</span><span style="flex:1;color:var(--text1)">Ehliyet Doğrulama</span><span class="sp-badge green">Onaylı</span></div>
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px"><span class="material-icons" style="font-size:16px;color:var(--green)">check_circle</span><span style="flex:1;color:var(--text1)">Telefon Doğrulama</span><span class="sp-badge green">Onaylı</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- SIGORTA -->
+<div class="service-panel" id="sigortaPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Sigorta & Kaza</div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Sigorta Kapsamı</div>
+    <div style="display:flex;flex-direction:column;gap:4px">
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius)">
+        <div style="display:flex;justify-content:space-between;font-size:11px"><span style="font-weight:600;color:var(--text1)">Yolcu Güvence</span><span class="sp-badge green">Aktif</span></div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">Yolculuk başı ₺50.000 kaza teminatı • Ücretsiz</div>
+      </div>
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius)">
+        <div style="display:flex;justify-content:space-between;font-size:11px"><span style="font-weight:600;color:var(--text1)">Araç Kasko</span><span style="font-size:11px;color:var(--green);font-weight:600">Aktif</span></div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">Kaza anında araç hasarı karşılanır • Aylık ₺189</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SOFOR GOREV PANELI -->
+<div class="service-panel" id="gorevPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Şoför Görevlerim</div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label" style="display:flex;gap:8px">
+      <span style="cursor:pointer;color:var(--text1)" onclick="gorevTab('uygun')" id="gtUygun">Uygun Yolculuklar</span>
+      <span style="cursor:pointer;color:var(--text4)" onclick="gorevTab('aktif')" id="gtAktif">Aktif Yolculuğum</span>
+      <span style="cursor:pointer;color:var(--text4)" onclick="gorevTab('gecmis')" id="gtGecmis">Geçmiş</span>
+    </div>
+  </div>
+  <div id="gorevUygun">
+    <div class="sp-section" style="display:flex;flex-direction:column;gap:4px">
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius)">
+        <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:600"><span style="color:var(--text1)">Kadıköy → Maltepe</span><span style="color:var(--green)">₺96</span></div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">Sedan • 6,2 km • 18 dk</div>
+        <div style="display:flex;gap:4px;margin-top:6px"><button class="sp-btn sp-btn-sm" style="padding:6px;font-size:11px;flex:1" onclick="gorevKabul(this)">Kabul Et</button><button class="sp-btn sp-btn-sm sp-btn-out" style="padding:6px;font-size:11px;flex:1;margin-top:0">Reddet</button></div>
+      </div>
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius)">
+        <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:600"><span style="color:var(--text1)">Üsküdar → Beşiktaş</span><span style="color:var(--green)">₺134</span></div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">VIP • 8,4 km • 24 dk</div>
+        <div style="display:flex;gap:4px;margin-top:6px"><button class="sp-btn sp-btn-sm" style="padding:6px;font-size:11px;flex:1" onclick="gorevKabul(this)">Kabul Et</button><button class="sp-btn sp-btn-sm sp-btn-out" style="padding:6px;font-size:11px;flex:1;margin-top:0">Reddet</button></div>
+      </div>
+    </div>
+  </div>
+  <div id="gorevAktif" style="display:none">
+    <div class="sp-section">
+      <div style="padding:12px;border:1px solid var(--orange);border-radius:var(--radius);background:#fffbeb">
+        <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:600"><span style="color:var(--text1)">Kadıköy → Maltepe</span><span class="sp-badge" style="background:#fef3c7;color:#92400e">Yolda</span></div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">#TX-2024-003 • Sedan • 6,2 km</div>
+        <div style="display:flex;gap:4px;margin-top:8px">
+          <button class="sp-btn sp-btn-sm" style="padding:6px;font-size:10px;flex:1;background:var(--blue)" onclick="gorevDurum('vardim')">Varışta</button>
+          <button class="sp-btn sp-btn-sm" style="padding:6px;font-size:10px;flex:1;background:var(--green)" onclick="gorevDurum('tamamlandi')">Tamamlandı</button>
+          <button class="sp-btn sp-btn-sm sp-btn-out" style="padding:6px;font-size:10px;flex:1;margin-top:0;color:var(--red);border-color:var(--red)" onclick="gorevDurum('iptal')">İptal</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="gorevGecmis" style="display:none">
+    <div class="sp-section" style="display:flex;flex-direction:column;gap:4px">
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border-bottom:1px solid var(--border);font-size:10px"><span class="material-icons" style="font-size:14px;color:var(--green)">check_circle</span><span style="flex:1;color:var(--text1)">Kadıköy → Maltepe</span><span style="color:var(--text3)">₺74,88</span><span class="sp-badge green">Tamam</span></div>
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border-bottom:1px solid var(--border);font-size:10px"><span class="material-icons" style="font-size:14px;color:var(--green)">check_circle</span><span style="flex:1;color:var(--text1)">Kadıköy → Üsküdar</span><span style="color:var(--text3)">₺56,16</span><span class="sp-badge green">Tamam</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- IPTAL / IADE -->
+<div class="service-panel" id="iptalPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">İptal & İade</div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Aktif Yolculuklar</div>
+    <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:4px">
+      <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:600"><span style="color:var(--text1)">Kadıköy → Beşiktaş</span><span class="sp-badge blue">Yolda</span></div>
+      <div style="font-size:10px;color:var(--text3);margin-top:2px">#TX-2024-003 • ₺134 • Kredi Kartı</div>
+      <div style="display:flex;gap:4px;margin-top:6px"><button class="sp-btn sp-btn-sm sp-btn-out" style="padding:6px;font-size:10px;flex:1;margin-top:0;color:var(--red);border-color:var(--red)" onclick="iptalGoster(this)">İptal Et</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- CANLI DESTEK -->
+<div class="service-panel" id="sohbetPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1);flex:1">Canlı Destek</div>
+      <span class="material-icons" style="font-size:18px;color:var(--red);cursor:pointer" onclick="sosAcil()" title="Acil Durum">warning</span>
+    </div>
+  </div>
+  <div id="sohbetMesajlar" style="flex:1;overflow-y:auto;padding:12px 16px;display:flex;flex-direction:column;gap:8px;min-height:200px;max-height:260px;border-bottom:1px solid var(--border)">
+    <div style="align-self:flex-start;background:var(--card2);padding:8px 12px;border-radius:12px 12px 12px 4px;font-size:11px;max-width:80%"><div style="font-weight:600;color:var(--text1);font-size:10px">Destek Ekibi</div><span style="color:var(--text2)">Merhaba, nasıl yardımcı olabilirim?</span></div>
+    <div style="align-self:flex-end;background:var(--text1);padding:8px 12px;border-radius:12px 12px 4px 12px;font-size:11px;max-width:80%"><span style="color:var(--bg)">Taksi çağırdım ama gelmedi</span></div>
+    <div style="align-self:flex-start;background:var(--card2);padding:8px 12px;border-radius:12px 12px 12px 4px;font-size:11px;max-width:80%"><div style="font-weight:600;color:var(--text1);font-size:10px">Destek Ekibi</div><span style="color:var(--text2)">Hemen kontrol ediyorum, lütfen bekleyin...</span></div>
+  </div>
+  <div style="display:flex;gap:8px;padding:10px 16px">
+    <input type="text" id="sohbetInput" placeholder="Mesaj yaz..." style="flex:1;padding:8px 12px;border:1px solid var(--border);border-radius:20px;outline:none;font-size:12px;font-family:Inter;background:var(--card2);color:var(--text1)" onkeydown="if(event.key==='Enter')sohbetGonder()">
+    <button style="width:36px;height:36px;border:none;background:var(--text1);border-radius:50%;color:var(--bg);cursor:pointer;display:flex;align-items:center;justify-content:center" onclick="sohbetGonder()"><span class="material-icons" style="font-size:18px">send</span></button>
+  </div>
+</div>
+
+<!-- YONETICI PANELI -->
+<div class="service-panel" id="adminPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Yönetici Paneli</div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label" style="display:flex;gap:8px">
+      <span style="cursor:pointer;color:var(--text1)" onclick="adminTab('soforler')" id="atSoforler">Şoförler</span>
+      <span style="cursor:pointer;color:var(--text4)" onclick="adminTab('yolculuklar')" id="atYolculuklar">Yolculuklar</span>
+      <span style="cursor:pointer;color:var(--text4)" onclick="adminTab('ihtilaflar')" id="atIhtilaflar">İhtilaflar</span>
+      <span style="cursor:pointer;color:var(--text4)" onclick="adminTab('otomatik')" id="atOtomatik">Atama</span>
+    </div>
+  </div>
+  <div id="adminSoforler">
+    <div class="sp-section" style="display:flex;flex-direction:column;gap:4px">
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <span style="font-weight:500;color:var(--text1);flex:1">Ahmet Y. (Sedan)</span><span class="sp-badge green">Aktif</span><span style="font-size:10px;color:var(--text3)">18 yolculuk</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <span style="font-weight:500;color:var(--text1);flex:1">Mehmet D. (Hatchback)</span><span class="sp-badge" style="background:#fef3c7;color:#92400e">Onay Bekliyor</span><span style="font-size:10px;color:var(--text3)">Başvuru: 2 gün önce</span>
+      </div>
+    </div>
+  </div>
+  <div id="adminYolculuklar" style="display:none">
+    <div class="sp-section" style="display:flex;flex-direction:column;gap:4px">
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px">
+        <span style="font-weight:500;color:var(--text1);flex:1">#TX-2024-003</span><span style="color:var(--text3)">Kadıköy→Maltepe</span><span class="sp-badge blue">Yolda</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);font-size:10px">
+        <span style="font-weight:500;color:var(--text1);flex:1">#TX-2024-002</span><span style="color:var(--text3)">Kadıköy→Üsküdar</span><span class="sp-badge green">Tamam</span>
+      </div>
+    </div>
+  </div>
+  <div id="adminIhtilaflar" style="display:none">
+    <div class="sp-section">
+      <div style="padding:10px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px">
+        <div style="display:flex;justify-content:space-between"><span style="color:var(--text1);font-weight:500">#TX-2024-003 • Rota ihlali</span><span class="sp-badge" style="background:#fef3c7;color:#92400e">Açık</span></div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">Yolcu: farklı rota • Şoför: trafik vardı</div>
+        <div style="display:flex;gap:4px;margin-top:6px"><button class="sp-btn sp-btn-sm" style="padding:4px;font-size:10px;flex:1">Şoför Lehinde Çöz</button><button class="sp-btn sp-btn-sm sp-btn-out" style="padding:4px;font-size:10px;flex:1;margin-top:0">Yolcu Lehinde Çöz</button></div>
+      </div>
+    </div>
+  </div>
+  <div id="adminOtomatik" style="display:none">
+    <div class="sp-section">
+      <div style="display:flex;align-items:center;gap:8px;padding:8px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:6px">
+        <span class="material-icons" style="font-size:18px;color:var(--green)">smart_toy</span>
+        <span style="flex:1;font-size:12px;color:var(--text1)">Otomatik Şoför Atama</span>
+        <span class="material-icons" style="font-size:22px;color:var(--green);cursor:pointer" onclick="this.textContent=this.textContent==='toggle_on'?'toggle_off':'toggle_on';this.style.color=this.textContent==='toggle_on'?'var(--green)':'var(--text4)'">toggle_on</span>
+      </div>
+      <div style="font-size:10px;color:var(--text3);margin-bottom:8px;line-height:1.5">Yolculara en yakın müsait şoför otomatik atanır. Mesafe, puan ve araç uygunluğu dikkate alınır.</div>
+      <div class="sp-label">Atama Kriterleri</div>
+      <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:6px">
+        <div style="display:flex;justify-content:space-between;padding:6px 0;font-size:10px;border-bottom:1px solid var(--border)"><span style="color:var(--text3)">Mesafe önceliği</span><span style="font-weight:600;color:var(--text1)">En yakın şoför</span></div>
+        <div style="display:flex;justify-content:space-between;padding:6px 0;font-size:10px;border-bottom:1px solid var(--border)"><span style="color:var(--text3)">Maksimum atama yarıçapı</span><span style="font-weight:600;color:var(--text1)">3 km</span></div>
+        <div style="display:flex;justify-content:space-between;padding:6px 0;font-size:10px"><span style="color:var(--text3)">Şoför puanı alt sınırı</span><span style="font-weight:600;color:var(--text1)">4.2</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- YOLCULUK KANITI (POD) -->
+<div class="service-panel" id="podPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Yolculuk Kanıtı</div>
+    </div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Varış Fotoğrafı</div>
+    <div style="padding:20px;border:2px dashed var(--border);border-radius:var(--radius);text-align:center;cursor:pointer;background:var(--card2);margin-bottom:8px" onclick="document.getElementById('podFotoInput').click()">
+      <span class="material-icons" style="font-size:36px;color:var(--text4);display:block">camera_alt</span>
+      <span style="font-size:11px;color:var(--text3)">Fotoğraf çek veya yükle</span>
+      <input type="file" id="podFotoInput" accept="image/*" capture="environment" style="display:none" onchange="podFotoYukle(this)">
+    </div>
+    <div id="podFotoPreview" style="display:none"><img id="podFotoImg" style="width:100%;border-radius:var(--radius);border:1px solid var(--border)"></div>
+  </div>
+  <div class="sp-section">
+    <div class="sp-label">Yolculuk Notu</div>
+    <div class="sp-input"><span class="material-icons">notes</span><input type="text" id="podNot" placeholder="Yolculuk notu (isteğe bağlı)"></div>
+  </div>
+  <div class="sp-section">
+    <button class="sp-btn" onclick="podGonder()">Yolculuğu Tamamla</button>
+  </div>
+</div>
+
+<!-- SOFOR MOBIL -->
+<div class="service-panel" id="mobilPanel">
+  <div class="sp-section">
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="material-icons" style="font-size:20px;color:var(--text4);cursor:pointer" onclick="goHome()">arrow_back</span>
+      <div style="font-size:14px;font-weight:600;color:var(--text1)">Şoför Mobil</div>
+      <span class="material-icons" style="font-size:18px;color:var(--green);cursor:pointer" onclick="mobilOnline()" id="mobilStatusIcon">power_settings_new</span>
+    </div>
+  </div>
+  <div style="background:var(--text1);color:var(--bg);padding:20px 16px;text-align:center">
+    <div style="font-size:12px;opacity:.7">Şoför Panosu</div>
+    <div style="font-size:32px;font-weight:700" id="mobilBakiye">₺2.340</div>
+    <div style="font-size:11px;opacity:.7">Güncel kazanç bakiyesi</div>
+    <div style="display:flex;gap:12px;justify-content:center;margin-top:12px">
+      <div style="text-align:center"><div style="font-size:20px;font-weight:700" id="mobilYolculukBugun">6</div><div style="font-size:9px;opacity:.7">Bugün</div></div>
+      <div style="text-align:center"><div style="font-size:20px;font-weight:700" id="mobilSaat">4,2</div><div style="font-size:9px;opacity:.7">Saat</div></div>
+      <div style="text-align:center"><div style="font-size:20px;font-weight:700" id="mobilPuan">4.9</div><div style="font-size:9px;opacity:.7">Puan</div></div>
+    </div>
+    <div style="margin-top:12px;display:flex;gap:8px;justify-content:center">
+      <span id="mobilDurumBadge" class="sp-badge" style="background:var(--green);color:#fff;font-size:10px">Çevrimiçi</span>
+      <span class="sp-badge" style="background:var(--orange);color:#fff;font-size:10px">Talep Artışı x1.2</span>
+    </div>
+  </div>
+  <div class="sp-section" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;padding:10px 16px">
+    <div style="text-align:center;padding:10px;border:1px solid var(--border);border-radius:var(--radius);cursor:pointer;background:var(--card2)" onclick="openPanel('gorevPanel')"><span class="material-icons" style="font-size:20px;color:var(--green);display:block">assignment</span><div style="font-size:9px;color:var(--text3);margin-top:2px">Görevler</div></div>
+    <div style="text-align:center;padding:10px;border:1px solid var(--border);border-radius:var(--radius);cursor:pointer;background:var(--card2)" onclick="openPanel('podPanel')"><span class="material-icons" style="font-size:20px;color:var(--blue);display:block">camera_alt</span><div style="font-size:9px;color:var(--text3);margin-top:2px">Fotoğraf</div></div>
+    <div style="text-align:center;padding:10px;border:1px solid var(--border);border-radius:var(--radius);cursor:pointer;background:var(--card2)" onclick="openPanel('sohbetPanel')"><span class="material-icons" style="font-size:20px;color:var(--orange);display:block">chat</span><div style="font-size:9px;color:var(--text3);margin-top:2px">Destek</div></div>
+  </div>
+  <div class="sp-section" style="padding:10px 16px">
+    <div class="sp-label">Aktif Yolculuk</div>
+    <div style="padding:10px;border:1px solid var(--orange);border-radius:var(--radius);background:#fffbeb;font-size:11px">
+      <div style="display:flex;justify-content:space-between"><span style="font-weight:600;color:var(--text1)">Kadıköy → Maltepe</span><span style="color:var(--orange)">6,2 km</span></div>
+      <div style="display:flex;gap:8px;margin-top:6px;font-size:10px;color:var(--text3)"><span>🚗 Sedan</span><span>⏱ 18 dk</span><span>💰 ₺96</span></div>
+      <div style="display:flex;gap:4px;margin-top:8px">
+        <button class="sp-btn sp-btn-sm" style="padding:6px;font-size:10px;flex:1">Yola Çıktım</button>
+        <button class="sp-btn sp-btn-sm sp-btn-out" style="padding:6px;font-size:10px;flex:1;margin-top:0" onclick="openPanel('podPanel')">Varışta</button>
+      </div>
+    </div>
+  </div>
+  <div class="sp-section" style="font-size:9px;color:var(--text4);text-align:center;padding:6px 16px">
+    <span style="cursor:pointer" onclick="mobilOnline()" id="mobilOnlineText">Çevrimiçi • Yeni yolcu al</span>
+  </div>
+</div>
+
+<div class="drawer-overlay" id="overlay" onclick="toggleDrawer()"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-header"><span style="flex:1"></span><h2>Taksi Sistemi</h2><button class="close-btn" onclick="toggleDrawer()"><span class="material-icons">close</span></button></div>
+  <div class="drawer-scroll">
+    <div class="d-item" onclick="toggleDrawer();cls();document.getElementById('mainBottom').style.display='block'"><span class="material-icons">home</span><div class="li-label">Ana Sayfa</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('cagriPanel')"><span class="material-icons">local_taxi</span><div class="li-label">Taksi Çağır</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('soforOlPanel')"><span class="material-icons" style="color:var(--green)">person_add</span><div class="li-label" style="color:var(--green);font-weight:600">Şoför Ol</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('odemePanel')"><span class="material-icons">payments</span><div class="li-label">Ödemeler</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('soforOdemePanel')"><span class="material-icons">account_balance_wallet</span><div class="li-label">Ödeme Alma Yöntemi</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('raporPanel')"><span class="material-icons">bar_chart</span><div class="li-label">Raporlar</div><div class="di-num">Haftalık</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('bildirimPanel')"><span class="material-icons">notifications</span><div class="li-label">Bildirimler</div><span class="di-badge">3</span></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('kampanyaPanel')"><span class="material-icons">local_offer</span><div class="li-label">Kampanyalar</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('gorevPanel')" style="border-top:1px solid var(--border);margin-top:8px;padding-top:14px"><span class="material-icons">receipt_long</span><div class="li-label">Geçmiş Yolculuklar</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('canliPanel')"><span class="material-icons">gps_fixed</span><div class="li-label">Canlı Harita</div><span class="di-num">3 taksi</span></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('puanPanel')"><span class="material-icons">star</span><div class="li-label">Değerlendirme</div><div class="di-num">4.9</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('platformGelirPanel')"><span class="material-icons">account_balance</span><div class="li-label">Gelir Modeli & Komisyon</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('adresPanel')"><span class="material-icons">location_on</span><div class="li-label">Adreslerim</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('cezaPanel')"><span class="material-icons">gavel</span><div class="li-label">Ceza & İhlal</div><span class="di-badge">2</span></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('hesapPanel')"><span class="material-icons">verified</span><div class="li-label">Hesap Durumu</div><div class="di-num">Aktif</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('sigortaPanel')"><span class="material-icons">health_and_safety</span><div class="li-label">Sigorta & Kaza</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('iptalPanel')"><span class="material-icons">cancel</span><div class="li-label">İptal & İade</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('sohbetPanel')"><span class="material-icons">chat</span><div class="li-label">Canlı Destek</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('podPanel')"><span class="material-icons">camera_alt</span><div class="li-label">Yolculuk Kanıtı</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('mobilPanel')"><span class="material-icons">phone_android</span><div class="li-label">Şoför Mobil</div></div>
+    <div class="d-item" onclick="toggleDrawer();openPanel('adminPanel')"><span class="material-icons">admin_panel_settings</span><div class="li-label">Yönetici Paneli</div></div>
+    <div class="d-item"><span class="material-icons">settings</span><div class="li-label">Ayarlar</div></div>
+  </div>
+</div>
+
+<script>
+function toggleDrawer(){document.getElementById('drawer').classList.toggle('open');document.getElementById('overlay').classList.toggle('open')}
+function searchChange(v){
+  var r=document.getElementById('searchResults');var c=document.getElementById('clearBtn');
+  if(v.length>0){r.classList.add('open');c.style.display='block';
+    var q=v.toLowerCase();
+    if(q==='taksi'||q==='çağır'||q==='cagir'){clearSearch();openPanel('cagriPanel');return}
+    if(q==='şoför'||q==='sofor'||q==='sofor ol'||q==='şoför ol'||q==='başvuru'){clearSearch();openPanel('soforOlPanel');return}
+    if(q==='rapor'||q==='raporlar'||q==='istatistik'){clearSearch();openPanel('raporPanel');return}
+    if(q==='bildirim'||q==='bildirimler'){clearSearch();openPanel('bildirimPanel');return}
+    if(q==='ödeme'||q==='ödemeler'){clearSearch();openPanel('odemePanel');return}
+    if(q==='ödeme yöntemi'||q==='odeme yontemi'||q==='hakediş'||q==='hakedis'||q==='havale'||q==='para çek'){clearSearch();openPanel('soforOdemePanel');return}
+    if(q==='harita'||q==='canlı'||q==='canlı harita'||q==='konum'){clearSearch();openPanel('canliPanel');return}
+    if(q==='gelir'||q==='gelir modeli'||q==='komisyon'){clearSearch();openPanel('platformGelirPanel');return}
+    if(q==='puan'||q==='değerlendirme'||q==='yorum'||q==='star'){clearSearch();openPanel('puanPanel');return}
+    if(q==='kampanya'||q==='indirim'||q==='kupon'||q==='promosyon'){clearSearch();openPanel('kampanyaPanel');return}
+    if(q==='adres'||q==='adreslerim'){clearSearch();openPanel('adresPanel');return}
+    if(q==='ceza'||q==='ihlal'){clearSearch();openPanel('cezaPanel');return}
+    if(q==='hesap'||q==='hesap durumu'){clearSearch();openPanel('hesapPanel');return}
+    if(q==='sigorta'||q==='kaza'){clearSearch();openPanel('sigortaPanel');return}
+    if(q==='görev'||q==='görevler'||q==='gorev'){clearSearch();openPanel('gorevPanel');return}
+    if(q==='iptal'||q==='iade'){clearSearch();openPanel('iptalPanel');return}
+    if(q==='sohbet'||q==='destek'||q==='yardım'||q==='chat'){clearSearch();openPanel('sohbetPanel');return}
+    if(q==='admin'||q==='yönetici'||q==='yonetici'){clearSearch();openPanel('adminPanel');return}
+    if(q==='pod'||q==='kanıt'||q==='kanit'||q==='yolculuk kanıtı'||q==='fotoğraf'){clearSearch();openPanel('podPanel');return}
+    if(q==='mobil'||q==='şoför mobil'||q==='sofor mobil'||q==='telefon'){clearSearch();openPanel('mobilPanel');return}
+    if(q==='sms'||q==='whatsapp'||q==='wp'||q==='kanal'){clearSearch();openPanel('bildirimPanel');return}
+  }else{r.classList.remove('open');c.style.display='none'}
+}
+function clearSearch(){document.getElementById('searchInput').value='';document.getElementById('searchResults').classList.remove('open');document.getElementById('clearBtn').style.display='none'}
+function openPanel(id){
+  cls();clearSearch();
+  document.getElementById('mainBottom').style.display='none';
+  var el=document.getElementById(id);if(el)el.classList.add('open');
+  if(id==='canliPanel')setTimeout(function(){haritaBaslat()},50);
+}
+function cls(){document.querySelectorAll('.service-panel.open').forEach(function(p){p.classList.remove('open')})}
+function goHome(){cls();document.getElementById('mainBottom').style.display='block'}
+function cagriOdemeSec(el){document.querySelectorAll('#cagriPanel .cagri-odeme.secili').forEach(function(e){e.classList.remove('secili')});el.classList.add('secili')}
+function aracSec(el,tip){
+  document.querySelectorAll('#cagriPanel .sp-row .sp-option.secili').forEach(function(e){e.classList.remove('secili')});el.classList.add('secili');
+  var f=tip==='sedan'?'₺96,40':tip==='hatchback'?'₺74,50':tip==='minivan'?'₺119,20':'₺156,40';
+  document.getElementById('cagriTotal').textContent=f
+}
+function soforAracSec(el){document.querySelectorAll('#soforOlPanel .sp-option.secili').forEach(function(e){e.classList.remove('secili')});el.classList.add('secili')}
+function odemeRolSec(el,rol){
+  document.querySelectorAll('#odemePanel .sp-option.secili').forEach(function(e){e.classList.remove('secili')});el.classList.add('secili');
+  document.getElementById('odemeYolcu').style.display=rol==='yolcu'?'block':'none';
+  document.getElementById('odemeSofor').style.display=rol==='sofor'?'block':'none';
+  document.getElementById('odemeFilo').style.display=rol==='filo'?'block':'none'
+}
+function soforOdemeAlmaSec(el){document.querySelectorAll('#soforOdemePanel .delivery-option.secili').forEach(function(e){e.classList.remove('secili')});el.classList.add('secili')}
+function taksiCagir(){alert('Taksi çağrılıyor...\n\nEn yakın şoför yönlendiriliyor (Demo)')}
+var haritaInit=false;
+function haritaBaslat(){
+  if(haritaInit)return;
+  var container=document.getElementById('haritaContainer');
+  if(!container||container._leaflet_id)return;
+  var map=L.map('haritaContainer').setView([40.9902,29.0270],13);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'}).addTo(map);
+  L.marker([40.9902,29.0270]).addTo(map).bindPopup('Ahmet • Müsait');
+  L.marker([40.9760,29.0600]).addTo(map).bindPopup('Mehmet • Yolculukta');
+  L.marker([40.9650,29.0400]).addTo(map).bindPopup('Ali • Müsait');
+  setTimeout(function(){map.invalidateSize()},100);
+  haritaInit=true;
+}
+function gorevTab(tab){
+  document.getElementById('gorevUygun').style.display=tab==='uygun'?'block':'none';
+  document.getElementById('gorevAktif').style.display=tab==='aktif'?'block':'none';
+  document.getElementById('gorevGecmis').style.display=tab==='gecmis'?'block':'none';
+  ['gtUygun','gtAktif','gtGecmis'].forEach(function(id){
+    var el=document.getElementById(id);
+    if(el)el.style.color=id==='gt'+tab.charAt(0).toUpperCase()+tab.slice(1)?'var(--text1)':'var(--text4)'
+  })
+}
+function gorevKabul(el){el.textContent='Kabul Edildi ✓';el.style.background='var(--green)';el.style.borderColor='var(--green)';el.style.color='#fff';el.parentNode.querySelector('.sp-btn-out').style.display='none'}
+function gorevDurum(durum){
+  var aktif=document.querySelector('#gorevAktif .sp-section:first-child');
+  if(!aktif)return;
+  var badge=aktif.querySelector('.sp-badge');
+  if(durum==='vardim'){badge.textContent='Varışta';badge.className='sp-badge blue'}
+  else if(durum==='tamamlandi'){badge.textContent='Tamamlandı ✓';badge.className='sp-badge green';aktif.querySelector('.sp-btn').style.display='none';aktif.querySelectorAll('.sp-btn')[1].style.display='none';aktif.querySelector('.sp-btn-out').style.display='none';aktif.style.borderColor='var(--green)'}
+  else if(durum==='iptal'){badge.textContent='İptal Edildi';badge.className='sp-badge red';aktif.style.borderColor='var(--red)';aktif.style.background='#fef2f2'}
+}
+function iptalGoster(el){var d=el.nextElementSibling;if(d)d.style.display=d.style.display==='none'?'block':'none'}
+function sohbetGonder(){
+  var input=document.getElementById('sohbetInput');var msg=input.value.trim();
+  if(!msg)return;
+  var container=document.getElementById('sohbetMesajlar');
+  var div=document.createElement('div');
+  div.style.cssText='align-self:flex-end;background:var(--text1);padding:8px 12px;border-radius:12px 12px 4px 12px;font-size:11px;max-width:80%';
+  div.innerHTML='<span style="color:var(--bg)">'+msg.replace(/</g,'&lt;')+'</span>';
+  container.appendChild(div);container.scrollTop=container.scrollHeight;
+  input.value='';
+  setTimeout(function(){
+    var reply=document.createElement('div');
+    reply.style.cssText='align-self:flex-start;background:var(--card2);padding:8px 12px;border-radius:12px 12px 12px 4px;font-size:11px;max-width:80%';
+    var autoReplies=['Hemen kontrol ediyorum','En kısa sürede yardımcı olacağız','Şoförünüz yola çıktı','Anlaşıldı, teşekkürler'];
+    reply.innerHTML='<div style="font-weight:600;color:var(--text1);font-size:10px">Destek Ekibi</div><span style="color:var(--text2)">'+autoReplies[Math.floor(Math.random()*autoReplies.length)]+'</span>';
+    container.appendChild(reply);container.scrollTop=container.scrollHeight
+  },1200)
+}
+function sosAcil(){
+  if(confirm('Acil durum bildirimi gönderilecek. Güvenlik ekibi sizi arayacak. Onaylıyor musunuz?')){
+    var c=document.getElementById('sohbetMesajlar');
+    if(!c)return;
+    var div=document.createElement('div');
+    div.style.cssText='align-self:center;background:#fef2f2;border:1px solid var(--red);padding:10px 16px;border-radius:var(--radius);font-size:11px;text-align:center;max-width:90%;color:var(--red)';
+    div.innerHTML='<b>🚨 ACİL DURUM BİLDİRİLDİ</b><br><span style="color:var(--text3);font-size:10px">Konumunuz paylaşıldı • 0212 444 0 444 • Ekip yönlendirildi</span>';
+    c.appendChild(div);c.scrollTop=c.scrollHeight
+  }
+}
+function adminTab(tab){
+  document.getElementById('adminSoforler').style.display=tab==='soforler'?'block':'none';
+  document.getElementById('adminYolculuklar').style.display=tab==='yolculuklar'?'block':'none';
+  document.getElementById('adminIhtilaflar').style.display=tab==='ihtilaflar'?'block':'none';
+  document.getElementById('adminOtomatik').style.display=tab==='otomatik'?'block':'none';
+  ['atSoforler','atYolculuklar','atIhtilaflar','atOtomatik'].forEach(function(id){
+    var el=document.getElementById(id);
+    if(el)el.style.color=id==='at'+tab.charAt(0).toUpperCase()+tab.slice(1)?'var(--text1)':'var(--text4)'
+  })
+}
+function bildirimTab(tab){
+  ['bildirimIcerik','smsIcerik','whatsappIcerik','ayarlarIcerik'].forEach(function(id){var el=document.getElementById(id);if(el)el.style.display='none'});
+  document.getElementById(tab+'Icerik').style.display='block';
+  ['btBildirim','btSms','btWhatsapp','btAyarlar'].forEach(function(id){
+    var el=document.getElementById(id);
+    if(el)el.style.color=id==='bt'+tab.charAt(0).toUpperCase()+tab.slice(1)?'var(--text1)':'var(--text4)'
+  })
+}
+var sigCanvas=null,sigCtx=null,sigDrawing=false;
+window.addEventListener('load',function(){
+  sigCanvas=document.getElementById('signatureCanvas');
+  if(!sigCanvas)return;
+  sigCtx=sigCanvas.getContext('2d');
+  sigCanvas.addEventListener('mousedown',function(e){sigDrawing=true;sigCtx.beginPath();var r=sigCanvas.getBoundingClientRect();sigCtx.moveTo(e.clientX-r.left,e.clientY-r.top)});
+  sigCanvas.addEventListener('mousemove',function(e){if(!sigDrawing)return;var r=sigCanvas.getBoundingClientRect();sigCtx.lineTo(e.clientX-r.left,e.clientY-r.top);sigCtx.stroke()});
+  sigCanvas.addEventListener('mouseup',function(){sigDrawing=false});
+  sigCanvas.addEventListener('mouseleave',function(){sigDrawing=false});
+  sigCanvas.addEventListener('touchstart',function(e){e.preventDefault();var t=e.touches[0];sigDrawing=true;sigCtx.beginPath();var r=sigCanvas.getBoundingClientRect();sigCtx.moveTo(t.clientX-r.left,t.clientY-r.top)});
+  sigCanvas.addEventListener('touchmove',function(e){e.preventDefault();if(!sigDrawing)return;var t=e.touches[0],r=sigCanvas.getBoundingClientRect();sigCtx.lineTo(t.clientX-r.left,t.clientY-r.top);sigCtx.stroke()});
+  sigCanvas.addEventListener('touchend',function(e){e.preventDefault();sigDrawing=false});
+})
+function sigClear(){if(sigCtx)sigCtx.clearRect(0,0,sigCanvas.width,sigCanvas.height)}
+function sigOrnek(){
+  sigClear();
+  if(!sigCtx)return;
+  var c=sigCtx;
+  c.beginPath();c.moveTo(50,90);c.lineTo(80,40);c.lineTo(120,50);c.lineTo(90,95);c.lineTo(130,60);c.lineTo(160,45);c.lineTo(200,55);c.lineTo(170,85);c.lineTo(210,40);c.lineTo(240,65);c.lineTo(270,50);c.stroke();
+  c.beginPath();c.moveTo(55,95);c.lineTo(55,105);c.stroke();
+  c.beginPath();c.moveTo(120,55);c.lineTo(120,105);c.stroke();
+  c.beginPath();c.moveTo(200,60);c.lineTo(200,102);c.stroke();
+}
+function podFotoYukle(input){
+  if(input.files&&input.files[0]){
+    var reader=new FileReader();
+    reader.onload=function(e){document.getElementById('podFotoImg').src=e.target.result;document.getElementById('podFotoPreview').style.display='block'};
+    reader.readAsDataURL(input.files[0])
+  }
+}
+function podGonder(){
+  var not=document.getElementById('podNot');
+  var mesaj='Yolculuk Tamamlandı ✓';
+  if(not&&not.value.trim())mesaj+=' • Not: '+not.value.trim();
+  var fotoPreview=document.getElementById('podFotoPreview');
+  if(fotoPreview.style.display==='block')mesaj+=' • Fotoğraf: Eklendi';
+  alert(mesaj+'\n\nYolculuk başarıyla tamamlandı (Demo)');
+  if(not)not.value='';document.getElementById('podFotoPreview').style.display='none'
+}
+function mobilOnline(){
+  var icon=document.getElementById('mobilStatusIcon');
+  var badge=document.getElementById('mobilDurumBadge');
+  var text=document.getElementById('mobilOnlineText');
+  if(icon.style.color==='var(--green)'||icon.style.color==='rgb(5, 150, 105)'){
+    icon.style.color='var(--text4)';badge.textContent='Çevrimdışı';badge.style.background='var(--text4)';text.textContent='Çevrimdışı • Yeni yolcu alınmaz'
+  }else{
+    icon.style.color='var(--green)';badge.textContent='Çevrimiçi';badge.style.background='var(--green)';text.textContent='Çevrimiçi • Yeni yolcu al'
+  }
+}
+</script>
+</body>
+</html>

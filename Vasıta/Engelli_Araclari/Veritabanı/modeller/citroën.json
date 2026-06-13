@@ -1,0 +1,193 @@
+{
+  "marka": "Citroën",
+  "modeller": [
+    {
+      "model": "C1",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "C3",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2002
+    },
+    {
+      "model": "C3 Aircross",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "C4",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Hatchback",
+        "Coupe"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "C4 X",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Sedan",
+        "Coupe"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "C5 Aircross",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "C5 X",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "C6",
+      "segment": "E",
+      "kasa_tipleri": [
+        "Sedan"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "e-C3",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "e-C4",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Berlingo",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV",
+        "Van"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "SpaceTourer",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Jumpy",
+      "segment": "V",
+      "kasa_tipleri": [
+        "Van"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Jumper",
+      "segment": "V",
+      "kasa_tipleri": [
+        "Van"
+      ],
+      "uretim_baslangic": 2006
+    },
+    {
+      "model": "Ami",
+      "segment": "A",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "DS 3",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Hatchback",
+        "SUV"
+      ],
+      "uretim_baslangic": 2010,
+      "uretim_bitis": 2019
+    },
+    {
+      "model": "DS 4",
+      "segment": "C",
+      "kasa_tipleri": [
+        "Hatchback"
+      ],
+      "uretim_baslangic": 2011,
+      "uretim_bitis": 2018
+    },
+    {
+      "model": "DS 7",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2017,
+      "uretim_bitis": 2019
+    },
+    {
+      "model": "C3 Picasso",
+      "segment": "B",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2008,
+      "uretim_bitis": 2017
+    },
+    {
+      "model": "C4 Picasso",
+      "segment": "C",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2013,
+      "uretim_bitis": 2020
+    },
+    {
+      "model": "Grand C4 Picasso",
+      "segment": "C",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 2013,
+      "uretim_bitis": 2020
+    },
+    {
+      "model": "Xsara Picasso",
+      "segment": "C",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": 1999,
+      "uretim_bitis": 2012
+    }
+  ],
+  "kaynak": "manuel"
+}

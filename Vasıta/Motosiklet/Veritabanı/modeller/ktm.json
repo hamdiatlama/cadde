@@ -1,0 +1,118 @@
+{
+  "marka": "KTM",
+  "modeller": [
+    {
+      "model": "1290 Super Duke R",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "1290 Super Adventure S",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "1290 Super Adventure R",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "890 Duke R",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "890 Adventure R",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "790 Duke",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "390 Duke",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "390 Adventure",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "250 Duke",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "125 Duke",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "RC 390",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "RC 125",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "450 SMR",
+      "kasa_tipleri": [
+        "Supermoto"
+      ],
+      "uretim_baslangic": 2024
+    },
+    {
+      "model": "250 EXC-F",
+      "kasa_tipleri": [
+        "Enduro"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "350 EXC-F",
+      "kasa_tipleri": [
+        "Enduro"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "450 EXC-F",
+      "kasa_tipleri": [
+        "Enduro"
+      ],
+      "uretim_baslangic": 2012
+    }
+  ],
+  "kaynak": "manuel"
+}

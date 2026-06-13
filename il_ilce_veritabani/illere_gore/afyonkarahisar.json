@@ -1,0 +1,61 @@
+{
+  "il_id": 3,
+  "il": "Afyonkarahisar",
+  "plaka": "03",
+  "ilceler": [
+    {
+      "ilce": "Bayat"
+    },
+    {
+      "ilce": "Başmakçı"
+    },
+    {
+      "ilce": "Bolvadin"
+    },
+    {
+      "ilce": "Dazkırı"
+    },
+    {
+      "ilce": "Dinar"
+    },
+    {
+      "ilce": "Emirdağ"
+    },
+    {
+      "ilce": "Evciler"
+    },
+    {
+      "ilce": "Hocalar"
+    },
+    {
+      "ilce": "Kızılören"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Sandıklı"
+    },
+    {
+      "ilce": "Sinanpaşa"
+    },
+    {
+      "ilce": "Sultandağı"
+    },
+    {
+      "ilce": "Çay"
+    },
+    {
+      "ilce": "Çobanlar"
+    },
+    {
+      "ilce": "İhsaniye"
+    },
+    {
+      "ilce": "İscehisar"
+    },
+    {
+      "ilce": "Şuhut"
+    }
+  ]
+}

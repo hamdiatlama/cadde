@@ -1,0 +1,69 @@
+{
+  "marka": "Doosan",
+  "modeller": [
+    {
+      "model": "DX225",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "DX300",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "DX380",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "DX530",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "DL420",
+      "kasa_tipleri": [
+        "Yükleyici"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "DL550",
+      "kasa_tipleri": [
+        "Yükleyici"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Bobcat E50",
+      "kasa_tipleri": [
+        "Mini Ekskavatör"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Bobcat S70",
+      "kasa_tipleri": [
+        "Mini Yükleyici"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Bobcat T770",
+      "kasa_tipleri": [
+        "Mini Yükleyici"
+      ],
+      "uretim_baslangic": 2017
+    }
+  ],
+  "kaynak": "manuel"
+}

@@ -1,0 +1,62 @@
+{
+  "marka": "Chevrolet (Klasik)",
+  "modeller": [
+    {
+      "model": "Bel Air",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1950,
+      "uretim_bitis": 1975
+    },
+    {
+      "model": "Camaro (1967-1969)",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1967,
+      "uretim_bitis": 1969
+    },
+    {
+      "model": "Impala (1960s)",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1960,
+      "uretim_bitis": 1969
+    },
+    {
+      "model": "Chevelle SS",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1964,
+      "uretim_bitis": 1973
+    },
+    {
+      "model": "Corvette C1",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1953,
+      "uretim_bitis": 1962
+    },
+    {
+      "model": "Corvette C2",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1963,
+      "uretim_bitis": 1967
+    },
+    {
+      "model": "Corvette C3",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1968,
+      "uretim_bitis": 1982
+    }
+  ],
+  "kaynak": "manuel"
+}

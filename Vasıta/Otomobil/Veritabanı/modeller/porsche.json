@@ -1,0 +1,87 @@
+{
+  "marka": "Porsche",
+  "modeller": [
+    {
+      "model": "718",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe",
+        "Cabrio"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "911",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe",
+        "Cabrio",
+        "Targa"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Taycan",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Sedan",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Panamera",
+      "segment": "F",
+      "kasa_tipleri": [
+        "Sedan",
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Macan",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Cayenne",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV",
+        "Coupe"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Cayenne Coupe",
+      "segment": "J",
+      "kasa_tipleri": [
+        "Coupe",
+        "SUV"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Carrera GT",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2003,
+      "uretim_bitis": 2006
+    },
+    {
+      "model": "918 Spyder",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 2013,
+      "uretim_bitis": 2015
+    }
+  ],
+  "kaynak": "manuel"
+}

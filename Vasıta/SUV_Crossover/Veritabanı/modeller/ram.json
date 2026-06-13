@@ -1,0 +1,46 @@
+{
+  "marka": "Ram",
+  "modeller": [
+    {
+      "model": "1500",
+      "segment": "P",
+      "kasa_tipleri": [
+        "Pick-up"
+      ],
+      "uretim_baslangic": 2009
+    },
+    {
+      "model": "2500",
+      "segment": "P",
+      "kasa_tipleri": [
+        "Pick-up"
+      ],
+      "uretim_baslangic": 2010
+    },
+    {
+      "model": "3500",
+      "segment": "P",
+      "kasa_tipleri": [
+        "Pick-up"
+      ],
+      "uretim_baslangic": 2010
+    },
+    {
+      "model": "ProMaster",
+      "segment": "V",
+      "kasa_tipleri": [
+        "Van"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "ProMaster City",
+      "segment": "V",
+      "kasa_tipleri": [
+        "Van"
+      ],
+      "uretim_baslangic": 2015
+    }
+  ],
+  "kaynak": "manuel"
+}

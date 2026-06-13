@@ -1,0 +1,44 @@
+Fiyat (en önemli eksik - satış sayfası için olmazsa olmaz)
+Döviz Cinsi (TL / USD / EUR)
+İlan Başlığı (arama sonuçlarında gösterilir)
+Konum
+İlan No
+İlan Tarihi
+Marka
+Seri
+Model
+Yıl
+Yakıt Tipi
+Vites
+Araç Durumu
+KM
+Kasa Tipi
+Motor Gücü
+Motor Hacmi
+Çekiş
+Renk
+LPG (Var / Yok - letgo, arabam'da standart filtre)
+Boya / Değişen (Türkiye'de 2. el için çok önemli)
+Garanti
+Ağır Hasar Kayıtlı
+Plaka / Uyruk
+Kimden
+Takas
+Donanım Paketi (Sport, Premium, Design, Quattro vs.)
+Koltuk Sayısı
+Kapı Sayısı
+Ortalama Yakıt Tüketimi
+Yakıt Tüketimi (Şehir İçi)
+Yakıt Tüketimi (Şehir Dışı)
+Son Bakım Tarihi
+Muayene Tarihi
+Ekspertiz Raporu (Var / Yok)
+Video Linki (isteğe bağlı)
+İlan Açıklaması (detaylı metin)
+VIN / Şasi No
+Emisyon Sınıfı (Euro 5 / 6 / 6d)
+Krediye Uygun
+Sigorta Durumu
+Pazarlık / İndirim
+İlk Tescil Tarihi
+Yıllık MTV

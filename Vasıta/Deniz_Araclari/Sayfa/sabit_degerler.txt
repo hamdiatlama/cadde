@@ -1,0 +1,29 @@
+=== Deniz Araçları SABIT DEGERLER ===
+
+[Araç Durumu]
+- (deger listesi eklenecek)
+
+[Kimden]
+- (deger listesi eklenecek)
+
+[Renk]
+- (deger listesi eklenecek)
+
+[Döviz Cinsi]
+- (deger listesi eklenecek)
+
+[Tekne Tipi]
+- (deger listesi eklenecek)
+
+[Malzeme]
+- (deger listesi eklenecek)
+
+[Yakıt Tipi]
+- (deger listesi eklenecek)
+
+[Motor Tipi (İçten/Dıştan/Yarı dıştan)]
+- (deger listesi eklenecek)
+
+[Ruhsat Durumu]
+- (deger listesi eklenecek)
+

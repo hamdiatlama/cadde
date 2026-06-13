@@ -1,0 +1,46 @@
+{
+  "il_id": 32,
+  "il": "Isparta",
+  "plaka": "32",
+  "ilceler": [
+    {
+      "ilce": "Aksu"
+    },
+    {
+      "ilce": "Atabey"
+    },
+    {
+      "ilce": "Eğirdir"
+    },
+    {
+      "ilce": "Gelendost"
+    },
+    {
+      "ilce": "Gönen"
+    },
+    {
+      "ilce": "Keçiborlu"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Senirkent"
+    },
+    {
+      "ilce": "Sütçüler"
+    },
+    {
+      "ilce": "Uluborlu"
+    },
+    {
+      "ilce": "Yalvaç"
+    },
+    {
+      "ilce": "Yenişarbademli"
+    },
+    {
+      "ilce": "Şarkikaraağaç"
+    }
+  ]
+}

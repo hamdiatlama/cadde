@@ -1,0 +1,55 @@
+{
+  "marka": "Sany",
+  "modeller": [
+    {
+      "model": "SY215",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "SY335",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "SY485",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "SY550H",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "SMT98A",
+      "kasa_tipleri": [
+        "Silindir"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "SR150",
+      "kasa_tipleri": [
+        "Dozer"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "STG170",
+      "kasa_tipleri": [
+        "Greyder"
+      ],
+      "uretim_baslangic": 2020
+    }
+  ],
+  "kaynak": "manuel"
+}

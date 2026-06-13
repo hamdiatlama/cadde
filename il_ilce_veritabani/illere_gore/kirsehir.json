@@ -1,0 +1,28 @@
+{
+  "il_id": 40,
+  "il": "Kırşehir",
+  "plaka": "40",
+  "ilceler": [
+    {
+      "ilce": "Akpınar"
+    },
+    {
+      "ilce": "Akçakent"
+    },
+    {
+      "ilce": "Boztepe"
+    },
+    {
+      "ilce": "Kaman"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Mucur"
+    },
+    {
+      "ilce": "Çiçekdağı"
+    }
+  ]
+}

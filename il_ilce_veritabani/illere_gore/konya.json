@@ -1,0 +1,100 @@
+{
+  "il_id": 42,
+  "il": "Konya",
+  "plaka": "42",
+  "ilceler": [
+    {
+      "ilce": "Ahırlı"
+    },
+    {
+      "ilce": "Akören"
+    },
+    {
+      "ilce": "Akşehir"
+    },
+    {
+      "ilce": "Altınekin"
+    },
+    {
+      "ilce": "Beyşehir"
+    },
+    {
+      "ilce": "Bozkır"
+    },
+    {
+      "ilce": "Cihanbeyli"
+    },
+    {
+      "ilce": "Derbent"
+    },
+    {
+      "ilce": "Derebucak"
+    },
+    {
+      "ilce": "Doğanhisar"
+    },
+    {
+      "ilce": "Emirgazi"
+    },
+    {
+      "ilce": "Ereğli"
+    },
+    {
+      "ilce": "Güneysınır"
+    },
+    {
+      "ilce": "Hadim"
+    },
+    {
+      "ilce": "Halkapınar"
+    },
+    {
+      "ilce": "Hüyük"
+    },
+    {
+      "ilce": "Ilgın"
+    },
+    {
+      "ilce": "Kadınhanı"
+    },
+    {
+      "ilce": "Karapınar"
+    },
+    {
+      "ilce": "Karatay"
+    },
+    {
+      "ilce": "Kulu"
+    },
+    {
+      "ilce": "Meram"
+    },
+    {
+      "ilce": "Sarayönü"
+    },
+    {
+      "ilce": "Selçuklu"
+    },
+    {
+      "ilce": "Seydişehir"
+    },
+    {
+      "ilce": "Taşkent"
+    },
+    {
+      "ilce": "Tuzlukçu"
+    },
+    {
+      "ilce": "Yalıhüyük"
+    },
+    {
+      "ilce": "Yunak"
+    },
+    {
+      "ilce": "Çeltik"
+    },
+    {
+      "ilce": "Çumra"
+    }
+  ]
+}

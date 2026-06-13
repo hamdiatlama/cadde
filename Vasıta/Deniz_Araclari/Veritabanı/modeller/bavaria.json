@@ -1,0 +1,76 @@
+{
+  "marka": "Bavaria",
+  "modeller": [
+    {
+      "model": "C38",
+      "kasa_tipleri": [
+        "Yelkenli"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "C42",
+      "kasa_tipleri": [
+        "Yelkenli"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "C45",
+      "kasa_tipleri": [
+        "Yelkenli"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "C50",
+      "kasa_tipleri": [
+        "Yelkenli"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Cruiser 34",
+      "kasa_tipleri": [
+        "Yelkenli"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Cruiser 46",
+      "kasa_tipleri": [
+        "Yelkenli"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "SR33",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "SR41",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "R40 Fly",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Virtess 420 Fly",
+      "kasa_tipleri": [
+        "Sürat Teknesi"
+      ],
+      "uretim_baslangic": 2018
+    }
+  ],
+  "kaynak": "manuel"
+}

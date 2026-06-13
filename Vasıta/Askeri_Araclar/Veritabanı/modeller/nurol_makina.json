@@ -1,0 +1,27 @@
+{
+  "marka": "Nurol Makina",
+  "modeller": [
+    {
+      "model": "Ejder Yalçın",
+      "kasa_tipleri": [
+        "Zırhlı"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Ejder TOMA",
+      "kasa_tipleri": [
+        "Zırhlı (Toplumsal Olay)"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Ejder Kama",
+      "kasa_tipleri": [
+        "Zırhlı"
+      ],
+      "uretim_baslangic": 2020
+    }
+  ],
+  "kaynak": "manuel"
+}

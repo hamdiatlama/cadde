@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Tasarim Tarzi</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#fff;color:#111;padding:30px;max-width:860px;margin:0 auto}
+h1{font-size:28px;font-weight:700;margin-bottom:4px}
+.sub{font-size:14px;color:#6b7280;margin-bottom:28px}
+
+.style-card{background:#f9fafb;border-radius:20px;padding:24px;margin-bottom:16px;border:1px solid #f3f4f6}
+.style-card h2{font-size:16px;font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.style-card p{font-size:13px;color:#6b7280;line-height:1.6;margin-bottom:14px}
+.style-card .demo{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+
+/* Demo elementler */
+.btn-demo{padding:10px 22px;border-radius:14px;border:none;font-family:'Inter',sans-serif;font-size:14px;font-weight:600;cursor:default;transition:.15s}
+.btn-demo.primary{background:#10b981;color:#fff;box-shadow:0 2px 8px rgba(16,185,129,.3)}
+.btn-demo.primary:active{transform:scale(.97)}
+.btn-demo.outline{background:transparent;border:1.5px solid #e5e7eb;color:#374151}
+.btn-demo.small{padding:6px 14px;font-size:12px;border-radius:10px}
+
+.card-demo{width:160px;background:#fff;border-radius:16px;padding:14px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.card-demo .cd-title{font-size:13px;font-weight:600;margin-bottom:4px}
+.card-demo .cd-sub{font-size:11px;color:#6b7280}
+.card-demo .cd-price{font-size:18px;font-weight:700;color:#10b981;margin-top:6px}
+
+.shadow-demo{display:flex;gap:20px;flex-wrap:wrap}
+.shadow-item{width:100px;height:60px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;color:#6b7280;text-align:center}
+.shadow-item.s1{box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.shadow-item.s2{box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.shadow-item.s3{box-shadow:0 8px 24px rgba(0,0,0,.1)}
+.shadow-item.s4{box-shadow:0 12px 40px rgba(0,0,0,.14)}
+
+.radius-demo{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end}
+.radius-item{width:60px;height:40px;background:#e5e7eb;display:flex;align-items:center;justify-content:center;font-size:10px;color:#374151;font-weight:500}
+.radius-item.r1{border-radius:4px}
+.radius-item.r2{border-radius:8px}
+.radius-item.r3{border-radius:12px}
+.radius-item.r4{border-radius:16px}
+.radius-item.r5{border-radius:20px}
+.radius-item.r6{border-radius:999px;width:80px}
+
+.input-demo{display:flex;flex-direction:column;gap:8px;width:100%;max-width:280px}
+.input-demo input{padding:4px 14px;height:44px;border-radius:12px;border:1.5px solid #e5e7eb;font-family:'Inter',sans-serif;font-size:14px;outline:none;transition:.15s}
+.input-demo input:focus{border-color:#10b981;box-shadow:0 0 0 3px rgba(16,185,129,.12)}
+
+.tab-demo{display:flex;gap:4px;background:#f3f4f6;padding:4px;border-radius:12px}
+.tab-demo .t-item{padding:8px 18px;border-radius:10px;font-size:13px;font-weight:500;cursor:default}
+.tab-demo .t-item.active{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.06);color:#111}
+.tab-demo .t-item:not(.active){color:#6b7280}
+
+.bottom-nav-demo{display:flex;background:#fff;border-top:1px solid #f3f4f6;padding:6px 0 10px;border-radius:0 0 20px 20px;width:100%;max-width:320px}
+.bn-item{flex:1;text-align:center;font-size:10px;color:#9ca3af}
+.bn-item.active{color:#10b981;font-weight:600}
+
+.badge-demo{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;padding:3px 10px;border-radius:999px}
+.badge-demo.green{background:#f0fdf4;color:#059669}
+.badge-demo.red{background:#fef2f2;color:#dc2626}
+.badge-demo.yellow{background:#fffbeb;color:#d97706}
+.badge-demo.blue{background:#eff6ff;color:#2563eb}
+
+.avatar-demo{width:44px;height:44px;border-radius:50%;background:#10b981;color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700}
+.avatar-demo.sm{width:32px;height:32px;font-size:13px}
+.avatar-demo.lg{width:56px;height:56px;font-size:24px}
+
+.chip-demo{display:inline-flex;align-items:center;gap:4px;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:500;background:#f3f4f6;color:#374151;border:1px solid #e5e7eb}
+.chip-demo.active{background:#f0fdf4;border-color:#10b981;color:#059669}
+
+.sheet-handle{width:42px;height:4px;background:#e5e7eb;border-radius:4px;margin:0 auto 12px}
+
+.divider{height:1px;background:#f3f4f6;margin:14px 0}
+
+.tag{display:inline-block;font-size:11px;background:#f3f4f6;padding:2px 10px;border-radius:10px;font-weight:400;color:#6b7280;margin-left:6px}
+</style>
+</head>
+<body>
+<h1>🎨 Tasarım Tarzı — Minimalist Gri</h1>
+<p class="sub">Inter + Material Icons + İnce çizgiler, hafif radius (4px), sade</p>
+
+<div class="style-card">
+  <h2>🟣 Köşe Yuvarlaklığı <span class="tag">Border Radius: 4px</span></h2>
+  <p>Çok hafif radius. 4px standart. Sert köşe değil ama neredeyse düz. Minimalist çizgi.</p>
+  <table style="width:100%;font-size:13px;border-collapse:collapse;margin-bottom:12px">
+    <tr><td style="padding:6px 0;border-bottom:1px solid #e5e7eb;width:120px">Buton</td><td style="padding:6px 0;border-bottom:1px solid #e5e7eb">4px</td></tr>
+    <tr><td style="padding:6px 0;border-bottom:1px solid #e5e7eb">Kart</td><td style="padding:6px 0;border-bottom:1px solid #e5e7eb">4px</td></tr>
+    <tr><td style="padding:6px 0;border-bottom:1px solid #e5e7eb">Input</td><td style="padding:6px 0;border-bottom:1px solid #e5e7eb">4px</td></tr>
+    <tr><td style="padding:6px 0;border-bottom:1px solid #e5e7eb">Chip</td><td style="padding:6px 0;border-bottom:1px solid #e5e7eb">4px</td></tr>
+    <tr><td style="padding:6px 0;border-bottom:1px solid #e5e7eb">Avatar</td><td style="padding:6px 0;border-bottom:1px solid #e5e7eb">50% (daire)</td></tr>
+    <tr><td style="padding:6px 0">Bottom Sheet</td><td style="padding:6px 0">8px (üst köşeler)</td></tr>
+  </table>
+  <div class="radius-demo">
+    <div class="radius-item" style="background:#e5e7eb;border-radius:2px;width:50px">2px</div>
+    <div class="radius-item" style="background:#111;color:#fff;border-radius:4px;width:50px">4px</div>
+    <div class="radius-item" style="border-radius:6px;width:50px">6px</div>
+    <div class="radius-item" style="border-radius:8px;width:50px">8px</div>
+  </div>
+</div>
+
+<div class="style-card">
+  <h2>🌓 Çizgiler <span class="tag">İnce • 1px</span></h2>
+  <p>Gölge yok. Tüm ayrıştırmalar ince border (1px solid #e5e7eb) ile. Minimalist.</p>
+  <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+    <div style="background:#fff;border:1px solid #e5e7eb;border-radius:4px;padding:12px;font-size:13px;color:#374151;width:140px">
+      <div style="font-weight:600;font-size:12px;color:#111;margin-bottom:4px">1px border</div>
+      <div style="font-size:11px;color:#6b7280">ince çizgi</div>
+    </div>
+    <div style="border:1px solid #e5e7eb;border-radius:4px;padding:6px 10px;font-size:12px;color:#374151">Chip</div>
+    <div style="background:#f3f4f6;border:1px solid #e5e7eb;border-radius:4px;padding:6px 10px;font-size:12px;color:#374151">İkincil</div>
+    <div style="height:32px;border-right:1px solid #e5e7eb"></div>
+    <div style="border-bottom:1px solid #e5e7eb;width:60px;padding-bottom:4px;font-size:12px;color:#6b7280;text-align:center">Çizgi</div>
+  </div>
+  <div style="margin-top:12px;font-size:12px;color:#6b7280">Gölge KULLANILMAYACAK. Tüm ayrıştırma border ile.</div>
+</div>
+
+<div class="style-card">
+  <h2>🔤 Buton Stili</h2>
+  <p>4px radius, ince border (1px). Sade, minimal.</p>
+  <div class="demo">
+    <button class="btn-demo primary" style="background:#111;border-radius:4px;box-shadow:none;padding:10px 20px">Taksi Çağır</button>
+    <button class="btn-demo outline" style="border-radius:4px;border:1px solid #e5e7eb;color:#374151;padding:10px 20px">İptal</button>
+    <button class="btn-demo small primary" style="background:transparent;color:#374151;border-radius:4px;border:1px solid #e5e7eb">Konum Seç</button>
+  </div>
+</div>
+
+<div class="style-card">
+  <h2>🃏 Kart Stili</h2>
+  <p>Beyaz zemin, 4px radius, ince border (1px solid #e5e7eb). Sade.</p>
+  <div class="demo">
+    <div class="card-demo" style="border-radius:4px;border:1px solid #e5e7eb;box-shadow:none;padding:12px;width:150px">
+      <div class="cd-title" style="font-size:12px">Kadıköy → Taksim</div>
+      <div class="cd-sub" style="font-size:11px">6.2 km • 18 dk</div>
+      <div class="cd-price" style="color:#111;font-size:20px">₺124</div>
+    </div>
+    <div class="card-demo" style="border-radius:4px;border:1px solid #e5e7eb;box-shadow:none;padding:12px;width:150px">
+      <div class="cd-title" style="font-size:12px">Ahmet Yılmaz</div>
+      <div class="cd-sub" style="font-size:11px">34 TKS 123 • 4.9</div>
+      <div class="cd-price" style="font-size:12px;font-weight:500;color:#6b7280">3 dk içinde gelir</div>
+    </div>
+  </div>
+</div>
+
+<div class="style-card">
+  <h2>📝 Input Stili</h2>
+  <p>Yüksek 44px, 8px radius, border #e5e7eb. Focus'ta border #111. Glow yok.</p>
+  <div class="input-demo">
+    <input type="text" placeholder="Adres ara..." value="Kadıköy" style="border-radius:8px">
+    <input type="text" placeholder="Nereye gidiyorsunuz?" style="border-color:#111;border-radius:8px;box-shadow:none">
+  </div>
+</div>
+
+<div class="style-card">
+  <h2>📑 Tab / Segment</h2>
+  <p>Gri zemin, aktif olan siyah (#111), diğerleri gri (#6b7280).</p>
+  <div class="tab-demo" style="border-radius:8px">
+    <div class="t-item active" style="border-radius:6px;color:#111;font-weight:600">Taksi</div>
+    <div class="t-item" style="color:#6b7280">Yemek</div>
+    <div class="t-item" style="color:#6b7280">Çiçek</div>
+  </div>
+</div>
+
+<div class="style-card">
+  <h2>⬇️ Bottom Sheet</h2>
+  <p>Alttan açılan panel. Üst köşeler 12px radius. Gri border (#e5e7eb).</p>
+  <div style="border-top:1px solid #e5e7eb;padding:14px 0 0">
+    <div style="font-size:14px;font-weight:600;margin-bottom:4px;color:#111">Nereye gitmek istiyorsunuz?</div>
+    <div style="font-size:12px;color:#6b7280;margin-bottom:12px">Kadıköy, İstanbul • 6.2 km</div>
+    <button class="btn-demo primary" style="width:100%;background:#111;border-radius:8px;box-shadow:none">Taksi Çağır</button>
+  </div>
+</div>
+
+<div class="style-card">
+  <h2>🏷️ Badge & Chip</h2>
+  <p>8px radius, gri tonlarında, border ile çerçeveli.</p>
+  <div class="demo">
+    <span class="badge-demo" style="background:#f3f4f6;color:#374151;border-radius:8px;border:1px solid #e5e7eb">Tamamlandı</span>
+    <span class="badge-demo" style="background:#f3f4f6;color:#6b7280;border-radius:8px;border:1px solid #e5e7eb">Bekliyor</span>
+    <span class="badge-demo" style="background:#fef2f2;color:#dc2626;border-radius:8px;border:1px solid #fecaca">İptal</span>
+    <span class="chip-demo" style="border-radius:8px;border:1px solid #e5e7eb">📍 Kadıköy</span>
+    <span class="chip-demo active" style="border-radius:8px;background:#111;color:#fff;border-color:#111">📍 Taksim</span>
+  </div>
+</div>
+
+<div class="style-card">
+  <h2>👤 Avatar</h2>
+  <p>Yuvarlak, gri arkaplan (#e5e7eb), siyah baş harf (#111). Sürücü/müşteri fotoğrafı yoksa kullanılır.</p>
+  <div class="demo">
+    <div class="avatar-demo sm" style="background:#e5e7eb;color:#111">A</div>
+    <div class="avatar-demo" style="background:#e5e7eb;color:#111">A</div>
+    <div class="avatar-demo lg" style="background:#e5e7eb;color:#111">A</div>
+    <div class="avatar-demo" style="background:#f3f4f6;color:#111;border:1px solid #e5e7eb">M</div>
+    <div class="avatar-demo" style="background:#f3f4f6;color:#111;border:1px solid #e5e7eb">Z</div>
+  </div>
+</div>
+
+<div class="style-card">
+  <h2>📱 Bottom Navigation</h2>
+  <p>Alt navigasyon çubuğu. Aktif olan siyah (#111), diğerleri gri (#9ca3af). Üst çizgi #e5e7eb.</p>
+  <div class="bottom-nav-demo" style="border-top:1px solid #e5e7eb">
+    <div class="bn-item active" style="color:#111;font-weight:600">🏠<br>Ana Sayfa</div>
+    <div class="bn-item" style="color:#9ca3af">📋<br>Yolculuklar</div>
+    <div class="bn-item" style="color:#9ca3af">👤<br>Profil</div>
+    <div class="bn-item" style="color:#9ca3af">⚙️<br>Ayarlar</div>
+  </div>
+</div>
+
+<div class="style-card">
+  <h2>📐 Animasyon Tarzı</h2>
+  <p>Minimal. Sadece gerekli yerlerde. Gösterişli animasyon yok.</p>
+  <table style="width:100%;font-size:13px;border-collapse:collapse">
+    <tr><td style="padding:6px 0;border-bottom:1px solid #e5e7eb;width:140px">Buton basma</td><td style="padding:6px 0;border-bottom:1px solid #e5e7eb">opacity .8 • 0.1s</td></tr>
+    <tr><td style="padding:6px 0;border-bottom:1px solid #e5e7eb">Sayfa geçişi</td><td style="padding:6px 0;border-bottom:1px solid #e5e7eb">fadeIn 0.2s</td></tr>
+    <tr><td style="padding:6px 0">Yükleniyor</td><td style="padding:6px 0">pulse 1s infinite</td></tr>
+  </table>
+</div>
+
+<div class="style-card">
+  <h2>📐 Ölçü Sistemi</h2>
+  <p>Tüm boşluklar 4px tabanlı. Mobil parmak hedefi minimum 44px.</p>
+  <table style="width:100%;font-size:13px;border-collapse:collapse">
+    <tr><td style="padding:6px 0;border-bottom:1px solid #e5e7eb;width:140px">Sayfa padding</td><td style="padding:6px 0;border-bottom:1px solid #e5e7eb">16px</td></tr>
+    <tr><td style="padding:6px 0;border-bottom:1px solid #e5e7eb">Kart padding</td><td style="padding:6px 0;border-bottom:1px solid #e5e7eb">14px</td></tr>
+    <tr><td style="padding:6px 0;border-bottom:1px solid #e5e7eb">Buton padding</td><td style="padding:6px 0;border-bottom:1px solid #e5e7eb">12px 22px (y:12 h:44)</td></tr>
+    <tr><td style="padding:6px 0;border-bottom:1px solid #e5e7eb">Input height</td><td style="padding:6px 0;border-bottom:1px solid #e5e7eb">44px</td></tr>
+    <tr><td style="padding:6px 0;border-bottom:1px solid #e5e7eb">Icon boyutu</td><td style="padding:6px 0;border-bottom:1px solid #e5e7eb">24px</td></tr>
+    <tr><td style="padding:6px 0">Border radius</td><td style="padding:6px 0">8px (standart)</td></tr>
+  </table>
+</div>
+
+<p style="margin-top:24px;font-size:13px;color:#9ca3af">📁 design/references/tasarim_tarzi.html</p>
+</body>
+</html>

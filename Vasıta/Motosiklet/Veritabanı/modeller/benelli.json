@@ -1,0 +1,55 @@
+{
+  "marka": "Benelli",
+  "modeller": [
+    {
+      "model": "Leoncino 500",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Leoncino 800",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "TRK 502",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "TRK 702",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "302R",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "502C",
+      "kasa_tipleri": [
+        "Cruiser"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Imperiale 400",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 2017
+    }
+  ],
+  "kaynak": "manuel"
+}

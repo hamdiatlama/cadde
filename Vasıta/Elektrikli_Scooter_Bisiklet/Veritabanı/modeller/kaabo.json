@@ -1,0 +1,41 @@
+{
+  "marka": "Kaabo",
+  "modeller": [
+    {
+      "model": "Wolf King GT",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Mantis 10 Pro",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Mantis 8",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Skywalker 8S",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Wolf Warrior X",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2022
+    }
+  ],
+  "kaynak": "manuel"
+}

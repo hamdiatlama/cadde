@@ -1,0 +1,31 @@
+Fiyat
+İlan Başlığı
+Konum
+Marka / Üretici
+Model
+Yıl
+Araç Durumu
+KM
+Motor Gücü (BG)
+Motor Hacmi
+Yakıt Tipi
+Vites
+Çekiş (4x4/6x6/8x8)
+Renk
+Plaka / Uyruk
+Kimden
+Araç Tipi (Zırhlı/Askeri Kamyon/Arazi/Cip/Amfibi)
+Zırh Seviyesi (B1-B7/STANAG)
+Koltuk Sayısı
+Maksimum Hız
+Boş Ağırlık (ton)
+Silah Sistemi / Taşıma?
+Gözetleme & Keşif Ekipmanı
+İletişim Sistemi
+Ruhsat / Belge Durumu
+Restorasyon Durumu
+Garanti
+Video Linki
+İlan Açıklaması
+VIN / Şasi No
+Pazarlık / İndirim

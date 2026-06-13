@@ -1,0 +1,31 @@
+{
+  "il_id": 12,
+  "il": "Bingöl",
+  "plaka": "12",
+  "ilceler": [
+    {
+      "ilce": "Adaklı"
+    },
+    {
+      "ilce": "Genç"
+    },
+    {
+      "ilce": "Karlıova"
+    },
+    {
+      "ilce": "Kiğı"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Solhan"
+    },
+    {
+      "ilce": "Yayladere"
+    },
+    {
+      "ilce": "Yedisu"
+    }
+  ]
+}

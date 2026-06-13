@@ -1,0 +1,62 @@
+{
+  "marka": "Citroën",
+  "modeller": [
+    {
+      "model": "Berlingo Panelvan",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Berlingo Combi",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Jumpy Panelvan",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Jumpy Combi",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Jumper Panelvan",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2006
+    },
+    {
+      "model": "Jumper Minibus",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2006
+    },
+    {
+      "model": "SpaceTourer",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Grand C4 Picasso",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2013
+    }
+  ],
+  "kaynak": "manuel"
+}

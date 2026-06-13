@@ -1,0 +1,61 @@
+=== Askeri Araçlar MARKALARI ===
+
+[Türkiye]
+- BMC (Askeri)
+- FNSS
+- Otokar (Askeri)
+- Nurol Makina
+- TUSAŞ (TAI)
+- Baykar Teknoloji
+- Katmerciler
+- Hidromek (Askeri)
+- ASELSAN (Sistem)
+- MKEK
+- Roketsan (platform)
+- Koluman
+- Erdemli
+
+[ABD]
+- General Dynamics (GDLS)
+- BAE Systems Platforms
+- Oshkosh Defense
+- AM General
+- Textron Systems
+- Navistar Defense
+- Mack Defense
+
+[Avrupa]
+- Rheinmetall
+- KNDS (KMW+Nexter)
+- Krauss-Maffei Wegmann
+- BAE Systems (İngiltere)
+- IVECO Defense
+- GDELS
+- Steyr Daimler Puch
+- Panhard
+- Renault Trucks Defense
+
+[Rusya]
+- UralVagonZavod (UVZ)
+- KamAZ (Askeri)
+- GAZ (Askeri)
+- ZIL
+- Arzamaz
+- Kurganmashzavod
+
+[Çin]
+- NORINCO
+- China North Industries
+- Shaanxi
+- Dongfeng Military
+- BAW (Beijing Automotive Works)
+
+[Diğer]
+- IAI (İsrail)
+- Plasan (İsrail)
+- Elbit Systems
+- Mahindra Defense (Hindistan)
+- Ashok Leyland Defense
+- BEML (Hindistan)
+- Hyundai Rotem (Güney Kore)
+

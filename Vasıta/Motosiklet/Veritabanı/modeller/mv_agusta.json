@@ -1,0 +1,56 @@
+{
+  "marka": "MV Agusta",
+  "modeller": [
+    {
+      "model": "F4 RC",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2016,
+      "uretim_bitis": 2018
+    },
+    {
+      "model": "Brutale 1000 RR",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Dragster 800 RR",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "F3 800 RC",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Superveloce 800",
+      "kasa_tipleri": [
+        "Naked Klasik"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Turismo Veloce 800",
+      "kasa_tipleri": [
+        "Sport Turizm"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Lucky Explorer 5.5",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2023
+    }
+  ],
+  "kaynak": "manuel"
+}

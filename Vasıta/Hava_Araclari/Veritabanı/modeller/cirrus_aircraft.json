@@ -1,0 +1,34 @@
+{
+  "marka": "Cirrus Aircraft",
+  "modeller": [
+    {
+      "model": "SR20",
+      "kasa_tipleri": [
+        "Uçak"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "SR22",
+      "kasa_tipleri": [
+        "Uçak"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "SR22T",
+      "kasa_tipleri": [
+        "Uçak"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "SF50 Vision Jet",
+      "kasa_tipleri": [
+        "Uçak (Jet)"
+      ],
+      "uretim_baslangic": 2018
+    }
+  ],
+  "kaynak": "manuel"
+}

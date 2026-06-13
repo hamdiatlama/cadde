@@ -1,0 +1,33 @@
+Fiyat
+İlan Başlığı
+Konum
+Marka
+Model
+Yıl
+Araç Durumu
+KM
+Motor Hacmi (cc)
+Motor Gücü (BG)
+Silindir Sayısı
+Soğutma Tipi (Hava/Sıvı/Yağ)
+Vites Tipi
+Çekiş (2WD/Chain/Shaft)
+Renk
+Garanti
+Plaka / Uyruk
+Kimden
+Takas
+Motosiklet Tipi (Scooter/Sport/Touring)
+Kabin
+Çanta / Bagaj
+Yolcu Koltuğu
+ABS
+Son Bakım Tarihi
+Video Linki
+İlan Açıklaması
+VIN / Şasi No
+Krediye Uygun
+Sigorta Durumu
+Pazarlık / İndirim
+İlk Tescil Tarihi
+Egzoz Tipi

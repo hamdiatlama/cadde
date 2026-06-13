@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Galeri - Araç Satış Sistemi</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;outline:none}
+:root{--bg:#f9fafb;--card:#fff;--card2:#f3f4f6;--border:#e5e7eb;--text1:#111;--text2:#374151;--text3:#6b7280;--text4:#9ca3af;--radius:4px;--green:#059669;--red:#dc2626;--blue:#2563eb;--orange:#d97706;--purple:#7c3aed;--pink:#ec4899}
+body{font-family:'Inter',sans-serif;background:var(--bg);min-height:100vh;display:flex;flex-direction:column}
+.topbar{display:flex;align-items:center;gap:12px;padding:10px 20px;border-bottom:1px solid var(--border);background:var(--card);flex-shrink:0}
+.topbar .tb-badge{font-size:11px;color:var(--text3);font-weight:500;background:var(--card2);padding:2px 8px;border-radius:var(--radius)}
+.topbar .tb-title{font-size:16px;font-weight:600;color:var(--text1)}
+.topbar .tb-spacer{flex:1}
+.topbar .menu-btn{width:38px;height:38px;display:flex;align-items:center;justify-content:center;border:none;background:none;color:var(--text1);cursor:pointer;border-radius:var(--radius);font-size:24px}
+.main-content{flex:1;display:flex;flex-direction:column;overflow:hidden;overflow-y:auto;position:relative}
+.map-area{flex:1;background:var(--card2);display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--text3);gap:4px;padding:20px}
+.map-area .material-icons{font-size:64px;color:var(--text4)}
+.phone-bottom{margin:0 auto;width:390px;flex-shrink:0;border-top:1px solid var(--border);background:var(--card)}
+.phone-nav{display:flex;border-top:1px solid var(--border);background:var(--card)}
+.phone-nav .bn-item{flex:1;text-align:center;padding:6px 0 8px;cursor:pointer}
+.phone-nav .bn-item .material-icons{font-size:22px;color:var(--text4);display:block}
+.phone-nav .bn-item .bn-label{font-size:10px;color:var(--text4);margin-top:1px}
+.phone-nav .bn-item.aktif .material-icons{color:var(--text1)}
+.phone-nav .bn-item.aktif .bn-label{color:var(--text1);font-weight:500}
+.service-panel{position:fixed;top:0;right:-390px;width:390px;height:100vh;background:var(--card);border-left:1px solid var(--border);z-index:90;transition:right .25s;display:flex;flex-direction:column}
+.service-panel.open{right:0}
+.service-panel-scroll{flex:1;overflow-y:auto}
+.sp-section{padding:16px}
+.sp-section+.sp-section{border-top:1px solid var(--border)}
+.sp-label{font-size:10px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.sp-input{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:6px;background:var(--card)}
+.sp-input .material-icons{font-size:18px;color:var(--text3)}
+.sp-input input,.sp-input select,.sp-input textarea{flex:1;border:none;outline:none;font-size:13px;font-family:'Inter',sans-serif;color:var(--text1);background:transparent}
+.sp-input input::placeholder{color:var(--text4)}
+.sp-input select{appearance:none;cursor:pointer}
+.sp-input textarea{resize:vertical;min-height:60px}
+.sp-btn{width:100%;padding:12px;border:none;background:var(--text1);color:var(--bg);font-size:14px;font-weight:600;border-radius:var(--radius);cursor:pointer;font-family:'Inter',sans-serif}
+.sp-btn:active{opacity:.8}
+.sp-btn-out{background:var(--card);color:var(--text1);border:1px solid var(--border);margin-top:6px}
+.sp-btn-sm{font-size:12px;padding:8px;width:auto}
+.sp-btn-green{background:var(--green);color:#fff}
+.sp-btn-red{background:var(--red);color:#fff}
+.sp-btn-purple{background:var(--purple);color:#fff}
+.sp-btn-blue{background:var(--blue);color:#fff}
+.sp-btn-pink{background:var(--pink);color:#fff}
+.sp-row{display:flex;gap:8px}
+.sp-option{flex:1;text-align:center;padding:12px 4px;border:1px solid var(--border);border-radius:var(--radius);cursor:pointer}
+.sp-option .material-icons{font-size:26px;color:var(--text3);display:block}
+.sp-option .so-title{font-size:12px;font-weight:500;color:var(--text1)}
+.sp-option.secili{border-color:var(--text1);background:var(--card2)}
+.sp-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.sp-tag{font-size:11px;padding:4px 10px;border:1px solid var(--border);border-radius:var(--radius);cursor:pointer;color:var(--text3)}
+.sp-tag:active{background:var(--card2)}
+.sp-tag.secili{background:var(--text1);color:var(--bg);border-color:var(--text1)}
+.sp-badge{display:inline-block;padding:1px 6px;border-radius:10px;font-size:9px;font-weight:500;color:#fff}
+.sp-item{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);cursor:pointer}
+.sp-item:last-child{border:none}
+.sp-item:active{background:var(--card2);margin:0 -16px;padding:10px 16px}
+.sp-item .si-icon{width:36px;height:36px;border-radius:var(--radius);background:var(--card2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--text3);flex-shrink:0}
+.sp-item .si-icon img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius)}
+.sp-item .si-info{flex:1}
+.sp-item .si-info .si-title{font-size:13px;font-weight:500;color:var(--text1)}
+.sp-item .si-info .si-sub{font-size:10px;color:var(--text4);margin-top:1px}
+.sp-item .si-right{font-size:12px;font-weight:600;color:var(--text1);text-align:right}
+.sp-item .si-right .si-badge{font-size:9px;font-weight:400;color:var(--text4);display:block}
+.drawer-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.3);z-index:99;display:none}
+.drawer-overlay.open{display:block}
+.drawer{position:fixed;top:0;right:-390px;width:390px;height:100vh;background:var(--card);border-left:1px solid var(--border);z-index:100;transition:right .25s;display:flex;flex-direction:column}
+.drawer.open{right:0}
+.drawer-header{display:flex;align-items:center;gap:8px;padding:14px 20px;border-bottom:1px solid var(--border);flex-shrink:0}
+.drawer-header .close-btn{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:none;background:none;color:var(--text1);cursor:pointer;border-radius:var(--radius);font-size:22px}
+.drawer-header h2{font-size:16px;font-weight:600;flex:1;color:var(--text1)}
+.drawer-scroll{flex:1;overflow-y:auto;padding:8px 0}
+.d-item{display:flex;align-items:center;gap:14px;padding:14px 20px;cursor:pointer;color:var(--text1)}
+.d-item:active{background:var(--card2)}
+.d-item .material-icons{font-size:22px;color:var(--text3);width:22px}
+.d-item .li-label{font-size:14px;font-weight:500;flex:1}
+.d-item .li-badge{font-size:9px;padding:1px 6px;border-radius:8px;background:var(--red);color:#fff}
+.d-divider{height:1px;background:var(--border);margin:6px 20px}
+.d-header{font-size:10px;font-weight:600;color:var(--text4);text-transform:uppercase;letter-spacing:1px;padding:10px 20px 4px}
+.mb-8{margin-bottom:8px}
+.mt-8{margin-top:8px}
+.flex{display:flex;gap:8px;align-items:center}
+.flex-wrap{flex-wrap:wrap}
+.text-sm{font-size:11px}
+.text-xs{font-size:10px}
+.text-3{color:var(--text3)}
+.text-4{color:var(--text4)}
+.arac-karti{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;cursor:pointer;transition:.15s}
+.arac-karti:active{opacity:.8}
+.arac-karti .ak-img{width:100%;height:160px;background:var(--card2);display:flex;align-items:center;justify-content:center;color:var(--text4);font-size:48px;overflow:hidden}
+.arac-karti .ak-img img{width:100%;height:100%;object-fit:cover}
+.arac-karti .ak-body{padding:10px 12px}
+.arac-karti .ak-title{font-size:14px;font-weight:600;color:var(--text1)}
+.arac-karti .ak-sub{font-size:10px;color:var(--text4);margin:2px 0 4px}
+.arac-karti .ak-price{font-size:15px;font-weight:700;color:var(--blue)}
+.arac-karti .ak-meta{display:flex;gap:12px;margin-top:6px;font-size:10px;color:var(--text3)}
+.arac-karti .ak-meta span{display:flex;align-items:center;gap:3px}
+.ilan-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:16px}
+.istatistik-kutu{padding:16px 20px;text-align:center;background:var(--card);border:1px solid var(--border);border-radius:var(--radius)}
+.istatistik-kutu .ik-val{font-size:28px;font-weight:700;color:var(--text1)}
+.istatistik-kutu .ik-label{font-size:10px;color:var(--text4);margin-top:2px}
+@media(max-width:480px){
+  .phone-bottom{width:100%}
+  .service-panel{width:100%;right:-100%}
+  .drawer{width:100%;right:-100%}
+  .ilan-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="tb-badge">Galeri</span>
+  <div class="tb-title" id="tbKullaniciAd">Galeri Bul</div>
+  <div class="tb-spacer"></div>
+  <button class="menu-btn" id="tbGirisBtn" onclick="girisPaneli()" style="display:none"><span class="material-icons" id="tbGirisIkon">login</span></button>
+  <button class="menu-btn" id="tbKullaniciBtn" onclick="toggleDrawer()"><span class="material-icons" id="tbKullaniciIkon">account_circle</span></button>
+</div>
+
+<div class="main-content">
+  <!-- Ana liste -->
+  <div id="mainPanel">
+    <div class="map-area" id="hosgeldinPanel">
+      <span class="material-icons">directions_car</span>
+      <div style="font-size:18px;font-weight:600;color:var(--text1);margin-top:8px">Galeri Bul</div>
+      <div style="font-size:12px;color:var(--text4);text-align:center;max-width:280px">Türkiye'nin en büyük galeri ve araç satış platformu. Bireysel galericiler, şirketini kur, araçlarını satışa çıkar.</div>
+      <div class="flex" style="margin-top:16px;gap:10px;flex-wrap:wrap;justify-content:center">
+        <button class="sp-btn sp-btn-sm" style="width:auto" onclick="openService('aracEkle')"><span class="material-icons" style="font-size:16px">add_circle</span> Araç Ekle</button>
+        <button class="sp-btn sp-btn-sm sp-btn-out" style="width:auto" onclick="openService('galeriPanel')"><span class="material-icons" style="font-size:16px">store</span> Galerim</button>
+        <button class="sp-btn sp-btn-sm sp-btn-out" style="width:auto" onclick="openService('kategoriler')"><span class="material-icons" style="font-size:16px">category</span> Kategoriler</button>
+      </div>
+    </div>
+    <div class="ilan-grid" id="aracListesi"></div>
+  </div>
+</div>
+
+<div class="phone-bottom">
+  <div class="phone-nav">
+    <div class="bn-item" onclick="openService('arama')"><span class="material-icons">search</span><span class="bn-label">Ara</span></div>
+    <div class="bn-item" onclick="openService('kategoriler')"><span class="material-icons">category</span><span class="bn-label">Kategoriler</span></div>
+    <div class="bn-item" onclick="openService('galeriPanel')"><span class="material-icons">store</span><span class="bn-label">Galerim</span></div>
+    <div class="bn-item" onclick="openService('favoriler')"><span class="material-icons">favorite</span><span class="bn-label">Favoriler</span></div>
+    <div class="bn-item" onclick="openService('daha')"><span class="material-icons">more_horiz</span><span class="bn-label">Daha</span></div>
+  </div>
+</div>
+
+<!-- ===== SERVICE PANELS ===== -->
+
+<!-- Arama -->
+<div class="service-panel" id="panelArama">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="flex" style="margin-bottom:12px">
+        <button class="menu-btn" onclick="closeService('arama')" style="margin:-10px 0 -10px -10px"><span class="material-icons">arrow_back</span></button>
+        <div style="font-size:16px;font-weight:600;flex:1">Araç Ara</div>
+      </div>
+      <div class="sp-input"><span class="material-icons">search</span><input id="aramaInput" placeholder="Marka, model, ilan no..." oninput="aramaYap()"></div>
+      <div class="sp-label">Fiyat Aralığı</div>
+      <div class="sp-row">
+        <div class="sp-input"><input id="fiyatMin" type="number" placeholder="Min TL" onchange="aramaYap()"></div>
+        <div class="sp-input"><input id="fiyatMax" type="number" placeholder="Max TL" onchange="aramaYap()"></div>
+      </div>
+      <div class="sp-label">Kategori</div>
+      <div class="sp-tags" id="kategoriFiltre"></div>
+      <div class="sp-label">Yıl</div>
+      <div class="sp-row">
+        <div class="sp-input"><input id="yilMin" type="number" placeholder="Min" onchange="aramaYap()"></div>
+        <div class="sp-input"><input id="yilMax" type="number" placeholder="Max" onchange="aramaYap()"></div>
+      </div>
+      <div class="sp-label">KM</div>
+      <div class="sp-row">
+        <div class="sp-input"><input id="kmMin" type="number" placeholder="Min KM" onchange="aramaYap()"></div>
+        <div class="sp-input"><input id="kmMax" type="number" placeholder="Max KM" onchange="aramaYap()"></div>
+      </div>
+      <div class="sp-label">İlan Durumu</div>
+      <div class="sp-tags" id="ilanDurumFiltre"></div>
+      <button class="sp-btn" onclick="aramaYap()">Ara</button>
+    </div>
+    <div class="sp-section" id="aramaSonuc"><div class="text-4 text-sm">Arama yapmak için yukarıdaki alanları kullanın.</div></div>
+  </div>
+</div>
+
+<!-- Kategoriler -->
+<div class="service-panel" id="panelKategoriler">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="flex" style="margin-bottom:12px">
+        <button class="menu-btn" onclick="closeService('kategoriler')" style="margin:-10px 0 -10px -10px"><span class="material-icons">arrow_back</span></button>
+        <div style="font-size:16px;font-weight:600;flex:1">Araç Kategorileri</div>
+      </div>
+      <div id="kategoriListesi"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Galerim / Galeri Paneli -->
+<div class="service-panel" id="panelGaleriPanel">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="flex" style="margin-bottom:12px">
+        <button class="menu-btn" onclick="closeService('galeriPanel')" style="margin:-10px 0 -10px -10px"><span class="material-icons">arrow_back</span></button>
+        <div style="font-size:16px;font-weight:600;flex:1">Galerim</div>
+      </div>
+    </div>
+    <div class="sp-section">
+      <div class="istatistik-kutu" style="margin-bottom:10px">
+        <div class="ik-val" id="galeriAracSayi">0</div>
+        <div class="ik-label">Toplam Araç</div>
+      </div>
+      <div class="sp-row" style="margin-bottom:10px">
+        <div class="istatistik-kutu" style="flex:1">
+          <div class="ik-val" id="galeriSatista">0</div>
+          <div class="ik-label">Satışta</div>
+        </div>
+        <div class="istatistik-kutu" style="flex:1">
+          <div class="ik-val" id="galeriSatildi">0</div>
+          <div class="ik-label">Satıldı</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:10px" id="galeriDurumIstat"></div>
+      <button class="sp-btn sp-btn-green" onclick="openService('aracEkle')"><span class="material-icons" style="font-size:16px">add_circle</span> Yeni Araç Ekle</button>
+      <div style="margin-top:12px"><div class="sp-label">İlanlarım</div><div id="galeriAracListem"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Favoriler -->
+<div class="service-panel" id="panelFavoriler">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="flex" style="margin-bottom:12px">
+        <button class="menu-btn" onclick="closeService('favoriler')" style="margin:-10px 0 -10px -10px"><span class="material-icons">arrow_back</span></button>
+        <div style="font-size:16px;font-weight:600;flex:1">Favori Araçlar</div>
+      </div>
+      <div id="favoriListesi"><div class="text-4 text-sm">Henüz favori aracınız yok.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Araç Ekle -->
+<div class="service-panel" id="panelAracEkle">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="flex" style="margin-bottom:12px">
+        <button class="menu-btn" onclick="closeService('aracEkle')" style="margin:-10px 0 -10px -10px"><span class="material-icons">arrow_back</span></button>
+        <div style="font-size:16px;font-weight:600;flex:1">Araç Ekle</div>
+      </div>
+      <div class="sp-label">Araç Cinsi *</div>
+      <div class="sp-tags" id="ekleAracCinsi">
+        <span class="sp-tag secili" data-cins="Binek" onclick="aracCinsiSec(this)">Binek</span>
+        <span class="sp-tag" data-cins="SUV" onclick="aracCinsiSec(this)">SUV</span>
+        <span class="sp-tag" data-cins="Kamyonet" onclick="aracCinsiSec(this)">Kamyonet</span>
+        <span class="sp-tag" data-cins="Kamyon" onclick="aracCinsiSec(this)">Kamyon</span>
+        <span class="sp-tag" data-cins="Motosiklet" onclick="aracCinsiSec(this)">Motosiklet</span>
+        <span class="sp-tag" data-cins="Coupe" onclick="aracCinsiSec(this)">Coupe</span>
+        <span class="sp-tag" data-cins="MPV" onclick="aracCinsiSec(this)">MPV</span>
+        <span class="sp-tag" data-cins="Otobüs" onclick="aracCinsiSec(this)">Otobüs</span>
+        <span class="sp-tag" data-cins="Traktör" onclick="aracCinsiSec(this)">Traktör</span>
+        <span class="sp-tag" data-cins="Karavan" onclick="aracCinsiSec(this)">Karavan</span>
+        <span class="sp-tag" data-cins="Özel" onclick="aracCinsiSec(this)">Özel</span>
+        <span class="sp-tag" data-cins="Deniz" onclick="aracCinsiSec(this)">Deniz</span>
+        <span class="sp-tag" data-cins="Diğer" onclick="aracCinsiSec(this)">Diğer</span>
+      </div>
+      <div class="sp-label">Kategori *</div>
+      <div class="sp-input"><span class="material-icons">category</span><select id="ekleAnaKategori" onchange="altKategoriDoldur()"><option value="">Önce araç cinsi seçin</option></select></div>
+      <div class="sp-label">Kasa Tipi *</div>
+      <div class="sp-input"><span class="material-icons">subdirectory_arrow_right</span><select id="ekleAltKategori"><option value="">Önce kategori seçin</option></select></div>
+      <div class="sp-label">Marka *</div>
+      <div class="sp-input"><span class="material-icons">badge</span><input id="ekleMarka" placeholder="Örn: BMW, Mercedes, Ford"></div>
+      <div class="sp-label">Model *</div>
+      <div class="sp-input"><span class="material-icons">drive_eta</span><input id="ekleModel" placeholder="Örn: 320i, Passat, Focus"></div>
+      <div class="sp-label">Yıl *</div>
+      <div class="sp-input"><span class="material-icons">calendar_today</span><input id="ekleYil" type="number" placeholder="2024"></div>
+      <div class="sp-label">KM</div>
+      <div class="sp-input"><span class="material-icons">speed</span><input id="ekleKm" type="number" placeholder="0"></div>
+      <div class="sp-label">Fiyat (TL) *</div>
+      <div class="sp-input"><span class="material-icons">payments</span><input id="ekleFiyat" type="number" placeholder="0"></div>
+      <div class="sp-label">Vites</div>
+      <div class="sp-input"><span class="material-icons">settings</span><select id="ekleVites"><option value="Manuel">Manuel</option><option value="Otomatik">Otomatik</option><option value="Yarı Otomatik">Yarı Otomatik</option></select></div>
+      <div class="sp-label">Yakıt</div>
+      <div class="sp-input"><span class="material-icons">local_gas_station</span><select id="ekleYakit"><option value="Benzin">Benzin</option><option value="Dizel">Dizel</option><option value="LPG">LPG</option><option value="Hibrit">Hibrit</option><option value="Elektrik">Elektrik</option><option value="Benzin+LPG">Benzin+LPG</option></select></div>
+      <div class="sp-label">Renk</div>
+      <div class="sp-input"><span class="material-icons">palette</span><input id="ekleRenk" placeholder="Örn: Siyah, Beyaz, Kırmızı"></div>
+      <div class="sp-label">Açıklama</div>
+      <div class="sp-input"><span class="material-icons">description</span><textarea id="ekleAciklama" placeholder="Araç hakkında detaylı bilgi..." rows="3"></textarea></div>
+      <div class="sp-label">İlan Durumu *</div>
+      <div class="sp-tags" id="ekleIlanDurum">
+        <span class="sp-tag secili" data-durum="Normal" onclick="ilanDurumSec(this)">Normal Sürülebilir</span>
+        <span class="sp-tag" data-durum="Trafikten Çekilmiş" onclick="ilanDurumSec(this)">Trafikten Çekilmiş</span>
+        <span class="sp-tag" data-durum="Hurda" onclick="ilanDurumSec(this)">Hurda</span>
+        <span class="sp-tag" data-durum="Kazalı" onclick="ilanDurumSec(this)">Kazalı</span>
+      </div>
+      <div class="sp-label">Fotoğraf (URL)</div>
+      <div class="sp-input"><span class="material-icons">image</span><input id="ekleFoto" placeholder="https://..."></div>
+      <div style="display:flex;gap:8px;margin-top:4px">
+        <button class="sp-btn sp-btn-green" onclick="aracKaydet()"><span class="material-icons" style="font-size:16px">save</span> Kaydet</button>
+        <button class="sp-btn sp-btn-out" onclick="closeService('aracEkle')">İptal</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Araç Detay -->
+<div class="service-panel" id="panelAracDetay">
+  <div class="service-panel-scroll">
+    <div class="sp-section" id="aracDetayIcerik"></div>
+  </div>
+</div>
+
+<!-- Ekspertiz Raporu -->
+<div class="service-panel" id="panelEkspertiz">
+  <div class="service-panel-scroll">
+    <div class="sp-section" id="ekspertizIcerik"></div>
+  </div>
+</div>
+
+<!-- Ekspertiz Firması -->
+<div class="service-panel" id="panelEkspertizFirma">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="flex" style="margin-bottom:12px">
+        <button class="menu-btn" onclick="closeService('ekspertizFirma')" style="margin:-10px 0 -10px -10px"><span class="material-icons">arrow_back</span></button>
+        <div style="font-size:16px;font-weight:600;flex:1">Ekspertiz Firması</div>
+      </div>
+      <div id="ekspertizFirmaIcerik"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Ekspertiz Rapor Ekle -->
+<div class="service-panel" id="panelEkspertizRaporEkle">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="flex" style="margin-bottom:12px">
+        <button class="menu-btn" onclick="closeService('ekspertizRaporEkle')" style="margin:-10px 0 -10px -10px"><span class="material-icons">arrow_back</span></button>
+        <div style="font-size:16px;font-weight:600;flex:1">Ekspertiz Raporu Ekle</div>
+      </div>
+      <div id="ekspertizRaporForm"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Galeri Profili -->
+<div class="service-panel" id="panelGaleriProfil">
+  <div class="service-panel-scroll">
+    <div class="sp-section" id="galeriProfilIcerik"></div>
+  </div>
+</div>
+
+<!-- Daha -->
+<div class="service-panel" id="panelDaha">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="flex" style="margin-bottom:12px">
+        <button class="menu-btn" onclick="closeService('daha')" style="margin:-10px 0 -10px -10px"><span class="material-icons">arrow_back</span></button>
+        <div style="font-size:16px;font-weight:600;flex:1">Daha Fazla</div>
+      </div>
+      <div class="sp-item" onclick="openService('galeriPanel')"><div class="si-icon"><span class="material-icons">store</span></div><div class="si-info"><div class="si-title">Galerim</div><div class="si-sub">Araçlarımı ve istatistiklerimi gör</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="openService('kategoriler')"><div class="si-icon"><span class="material-icons">category</span></div><div class="si-info"><div class="si-title">Kategoriler</div><div class="si-sub">Tüm araç kategorileri</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="openService('favoriler')"><div class="si-icon"><span class="material-icons">favorite</span></div><div class="si-info"><div class="si-title">Favorilerim</div><div class="si-sub">Favori araçlarım</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+      <div class="sp-item" onclick="openService('galeriAyarlar')"><div class="si-icon"><span class="material-icons">settings</span></div><div class="si-info"><div class="si-title">Galeri Ayarları</div><div class="si-sub">Şirket bilgileri, profil düzenleme</div></div><span class="material-icons" style="color:var(--text4)">chevron_right</span></div>
+    </div>
+    <div class="sp-section">
+      <div class="d-header">Diğer Sistemler</div>
+      <div class="sp-item" onclick="window.open('../../bilet/bilet_demo.html','_blank')"><div class="si-icon"><span class="material-icons">confirmation_number</span></div><div class="si-info"><div class="si-title">Bilet Sat</div><div class="si-sub">Etkinlik bilet sistemi</div></div><span class="material-icons" style="color:var(--text4)">open_in_new</span></div>
+      <div class="sp-item" onclick="window.open('../../bina/bina_demo.html','_blank')"><div class="si-icon"><span class="material-icons">apartment</span></div><div class="si-info"><div class="si-title">Bina Yönetim</div><div class="si-sub">Bina ve apartman yönetimi</div></div><span class="material-icons" style="color:var(--text4)">open_in_new</span></div>
+      <div class="sp-item" onclick="window.open('../../yemek/yemek_demo.html','_blank')"><div class="si-icon"><span class="material-icons">restaurant</span></div><div class="si-info"><div class="si-title">Yemek</div><div class="si-sub">Yemek sipariş sistemi</div></div><span class="material-icons" style="color:var(--text4)">open_in_new</span></div>
+      <div class="sp-item" onclick="window.open('../../kurye/durak_demo.html','_blank')"><div class="si-icon"><span class="material-icons">local_shipping</span></div><div class="si-info"><div class="si-title">Kurye / Taksi</div><div class="si-sub">Dağıtım ve taksi platformu</div></div><span class="material-icons" style="color:var(--text4)">open_in_new</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Galeri Ayarlar -->
+<div class="service-panel" id="panelGaleriAyarlar">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="flex" style="margin-bottom:12px">
+        <button class="menu-btn" onclick="closeService('galeriAyarlar')" style="margin:-10px 0 -10px -10px"><span class="material-icons">arrow_back</span></button>
+        <div style="font-size:16px;font-weight:600;flex:1">Galeri Ayarları</div>
+      </div>
+      <div class="sp-label">Galeri Adı</div>
+      <div class="sp-input"><span class="material-icons">store</span><input id="ayarlarAd" placeholder="Galeri adı"></div>
+      <div class="sp-label">Şehir</div>
+      <div class="sp-input"><span class="material-icons">location_city</span><input id="ayarlarSehir" placeholder="İstanbul"></div>
+      <div class="sp-label">İlçe</div>
+      <div class="sp-input"><span class="material-icons">map</span><input id="ayarlarIlce" placeholder="Kadıköy"></div>
+      <div class="sp-label">Telefon</div>
+      <div class="sp-input"><span class="material-icons">phone</span><input id="ayarlarTel" placeholder="0555 555 5555"></div>
+      <div class="sp-label">E-posta</div>
+      <div class="sp-input"><span class="material-icons">email</span><input id="ayarlarEmail" placeholder="galeri@ornek.com"></div>
+      <div class="sp-label">Açıklama</div>
+      <div class="sp-input"><span class="material-icons">description</span><textarea id="ayarlarAciklama" placeholder="Galeriniz hakkında..." rows="3"></textarea></div>
+      <button class="sp-btn" onclick="galeriAyarlarKaydet()">Kaydet</button>
+    </div>
+  </div>
+</div>
+
+<!-- Giris Paneli -->
+<div class="service-panel" id="panelGiris">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="flex" style="margin-bottom:16px">
+        <button class="menu-btn" onclick="closeService('giris')" style="margin:-10px 0 -10px -10px"><span class="material-icons">arrow_back</span></button>
+        <div style="font-size:16px;font-weight:600;flex:1">Giriş Yap</div>
+      </div>
+      <div id="girisIcerik"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Hesabim Paneli -->
+<div class="service-panel" id="panelHesabim">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="flex" style="margin-bottom:12px">
+        <button class="menu-btn" onclick="closeService('hesabim')" style="margin:-10px 0 -10px -10px"><span class="material-icons">arrow_back</span></button>
+        <div style="font-size:16px;font-weight:600;flex:1">Hesabım</div>
+      </div>
+      <div id="hesabimIcerik"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Araclarim Paneli (Birey) -->
+<div class="service-panel" id="panelAraclarim">
+  <div class="service-panel-scroll">
+    <div class="sp-section">
+      <div class="flex" style="margin-bottom:12px">
+        <button class="menu-btn" onclick="closeService('araclarim')" style="margin:-10px 0 -10px -10px"><span class="material-icons">arrow_back</span></button>
+        <div style="font-size:16px;font-weight:600;flex:1">Araçlarım</div>
+      </div>
+      <div id="araclarimIcerik"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== DRAWER ===== -->
+<div class="drawer-overlay" id="drawerOverlay" onclick="toggleDrawer()"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-header">
+    <button class="close-btn" onclick="toggleDrawer()"><span class="material-icons">close</span></button>
+    <h2>Galeri Bul</h2>
+  </div>
+  <div class="drawer-scroll">
+    <div class="d-header" id="drawerOturumHeader">Oturum</div>
+    <div class="d-item" id="drawerGirisItem" onclick="toggleDrawer();girisPaneli()"><span class="material-icons">login</span><span class="li-label">Giriş Yap</span></div>
+    <div class="d-item" id="drawerHesabimItem" style="display:none" onclick="toggleDrawer();hesabimPanel()"><span class="material-icons">account_circle</span><span class="li-label">Hesabım</span></div>
+    <div class="d-item" id="drawerCikisItem" style="display:none" onclick="toggleDrawer();cikisYap()"><span class="material-icons">logout</span><span class="li-label">Çıkış Yap</span></div>
+    <div class="d-divider"></div>
+    <div class="d-header">Araçlar</div>
+    <div class="d-item" id="drawerAracEkle" onclick="toggleDrawer();openService('aracEkle')"><span class="material-icons">add_circle</span><span class="li-label">Araç Ekle</span></div>
+    <div class="d-item" onclick="toggleDrawer();openService('kategoriler')"><span class="material-icons">category</span><span class="li-label">Kategoriler</span></div>
+    <div class="d-item" onclick="toggleDrawer();openService('favoriler')"><span class="material-icons">favorite</span><span class="li-label">Favorilerim</span></div>
+    <div class="d-item" id="drawerAraclarim" style="display:none" onclick="toggleDrawer();araclarimPanel()"><span class="material-icons">garage</span><span class="li-label">Araçlarım</span></div>
+    <div class="d-item" id="drawerYetkililer" style="display:none" onclick="toggleDrawer();yetkiliAraclarPanel()"><span class="material-icons">handshake</span><span class="li-label">Yetkilendirilen Araçlar</span></div>
+    <div class="d-divider"></div>
+    <div class="d-header">Keşfet</div>
+    <div class="d-item" onclick="toggleDrawer();openService('arama')"><span class="material-icons">search</span><span class="li-label">Araç Ara</span></div>
+    <div class="d-item" onclick="toggleDrawer();kategoriGoster('Binek')"><span class="material-icons">directions_car</span><span class="li-label">Binek</span></div>
+    <div class="d-item" onclick="toggleDrawer();kategoriGoster('SUV & Crossover')"><span class="material-icons">landscape</span><span class="li-label">SUV & Crossover</span></div>
+    <div class="d-item" onclick="toggleDrawer();kategoriGoster('Kamyonet (Hafif Ticari)')"><span class="material-icons">local_shipping</span><span class="li-label">Kamyonet</span></div>
+    <div class="d-item" onclick="toggleDrawer();kategoriGoster('Kamyon (Ağır Ticari)')"><span class="material-icons">truck</span><span class="li-label">Kamyon</span></div>
+    <div class="d-item" onclick="toggleDrawer();kategoriGoster('Motosiklet')"><span class="material-icons">motorcycle</span><span class="li-label">Motosiklet</span></div>
+    <div class="d-divider"></div>
+    <div class="d-header">Ekspertiz</div>
+    <div class="d-item" onclick="toggleDrawer();ekspertizFirmaPanel()"><span class="material-icons">assignment</span><span class="li-label">Ekspertiz Firması Girişi</span></div>
+    <div class="d-divider"></div>
+    <div class="d-header">Diğer Platformlar</div>
+    <div class="d-item" onclick="window.open('../../bilet/bilet_demo.html','_blank')"><span class="material-icons">confirmation_number</span><span class="li-label">Bilet Sat</span></div>
+    <div class="d-item" onclick="window.open('../../bina/bina_demo.html','_blank')"><span class="material-icons">apartment</span><span class="li-label">Bina Yönetim</span></div>
+    <div class="d-item" onclick="window.open('../../yemek/yemek_demo.html','_blank')"><span class="material-icons">restaurant</span><span class="li-label">Yemek</span></div>
+    <div class="d-item" onclick="window.open('../../kurye/durak_demo.html','_blank')"><span class="material-icons">local_shipping</span><span class="li-label">Kurye / Taksi</span></div>
+  </div>
+</div>
+
+<script>
+// ===== VERI YAPISI =====
+let galeriAraclar = [];
+let favoriler = [];
+let sonrakiId = 100;
+let ekspertizFirma = null;
+let girisYapmisKullanici = null;
+
+const ILAN_DURUMLARI = ['Normal','Trafikten Çekilmiş','Hurda','Kazalı'];
+const ILAN_DURUM_RENK = { 'Normal':'var(--green)', 'Trafikten Çekilmiş':'var(--orange)', 'Hurda':'var(--red)', 'Kazalı':'var(--pink)' };
+const ILAN_DURUM_IKON = { 'Normal':'check_circle', 'Trafikten Çekilmiş':'report_problem', 'Hurda':'delete', 'Kazalı':'warning' };
+const ILAN_UCRETI = 250;
+const ILAN_SURESI_GUN = 30;
+
+const EKSPERTIZ_FIRMALARI = [
+  { id:1, ad:'TÜV Türk Ekspertiz', eposta:'tuv@ekspertiz.com', tel:'0850 555 0101', renk:'#2563eb' },
+  { id:2, ad:'DOD Ekspertiz', eposta:'dod@ekspertiz.com', tel:'0850 555 0102', renk:'#dc2626' },
+  { id:3, ad:'Oto Kontrol Ekspertiz', eposta:'otokontrol@ekspertiz.com', tel:'0850 555 0103', renk:'#059669' },
+  { id:4, ad:'Araç Test Merkezi', eposta:'atm@ekspertiz.com', tel:'0850 555 0104', renk:'#7c3aed' }
+];
+
+const KULLANICILAR = [
+  { id:1, ad:'Ali Yılmaz', rol:'birey', eposta:'ali@mail.com', sehir:'İstanbul', ilanBaslik:'Bireysel Araç Sahibi', bakiye:2000 },
+  { id:2, ad:'Ayşe Demir', rol:'birey', eposta:'ayse@mail.com', sehir:'Ankara', ilanBaslik:'Bireysel Araç Sahibi', bakiye:1500 },
+  { id:3, ad:'Mehmet Kaya', rol:'birey', eposta:'mehmet@mail.com', sehir:'İzmir', ilanBaslik:'Bireysel Araç Sahibi', bakiye:3000 },
+  { id:4, ad:'Ahmet Şahin', rol:'galerici', eposta:'ahmet@galeri.com', sehir:'İstanbul', ilanBaslik:'Oto Galeri Şahin', bakiye:5000 },
+  { id:5, ad:'Fatma Yıldız', rol:'galerici', eposta:'fatma@galeri.com', sehir:'Ankara', ilanBaslik:'Yıldız Oto Galeri', bakiye:7500 },
+  { id:6, ad:'Can Öztürk', rol:'galerici', eposta:'can@galeri.com', sehir:'İzmir', ilanBaslik:'Ege Oto Galeri', bakiye:4000 },
+  { id:7, ad:'Admin', rol:'admin', eposta:'admin@galeri.com', sehir:'İstanbul', ilanBaslik:'Sistem Yöneticisi', bakiye:0 }
+];
+
+const MARKALAR = [
+  // ===== AVRUPA BINEK =====
+  'Abarth','Alfa Romeo','Alpina','Alpine','Aston Martin','Audi','Bentley','BMW','Bugatti','Caterham','Citroen','Cupra','Dacia','DS Automobiles','Ferrari','Fiat','Ford','Ineos','Jaguar','Lamborghini','Lancia','Land Rover','Lotus','Maserati','McLaren','Mercedes-Benz','MG','Mini','Morgan','Opel','Pagani','Peugeot','Porsche','Renault','Rimac','Rolls-Royce','Saab','Seat','Skoda','Smart','Tesla','Vauxhall','Volkswagen','Volvo',
+  // ===== ASYA BINEK =====
+  'Acura','BYD','Chery','Daihatsu','Genesis','Honda','Hyundai','Infiniti','Isuzu','Jaecoo','Kia','Lexus','Mazda','Mitsubishi','Nissan','Omoda','Proton','SsangYong','Subaru','Suzuki','Tata','Togg','Toyota',
+  // ===== ÇIN BINEK =====
+  'Aiways','BAIC','Baojun','Bestune','Brilliance','Changan','Deepal','Denza','DFSK','Dongfeng','FAW','Foday','Forthing','Foton','GAC','Geely','GWM','Haima','Haval','Hongqi','JAC','Jetour','Leapmotor','Lepas','Livan','Luxeed','Maxus','Neta','Nio','Ora','Rising Auto','Roewe','Seres','Skywell','Stelato','SWM','Voyah','Wuling','Xiaomi','Xpeng','Yangwang','Zeekr','Zotye',
+  // ===== AMERIKA BINEK =====
+  'Buick','Cadillac','Chevrolet','Chrysler','Dodge','GMC','Hummer','Jeep','Lincoln','RAM','Rivian','Tesla',
+  // ===== TICARI ARAÇ =====
+  'Ashok Leyland','BMC','Citroen Ticari','DAF','Fiat Professional','Ford Ticari','Ford Trucks','Freightliner','Hino','Isuzu Ticari','Iveco','Kamaz','Karsan','Kenworth','MAN','Mercedes-Benz Ticari','Mitsubishi Fuso','Opel Ticari','Otokar','Peterbilt','Peugeot Ticari','Renault Ticari','Renault Trucks','Scania','Temsa','Toyota Ticari','UD Trucks','Volkswagen Ticari','Volvo Trucks',
+  // ===== MOTOSIKLET =====
+  'Aprilia','Bajaj','Benelli','Beta','BMW Motorrad','Cagiva','CFMoto','Derbi','Ducati','Energica','GasGas','Gilera','Harley-Davidson','Hero','Honda Motor','Husqvarna','Indian Motorcycle','Italjet','Kawasaki','KTM','Kymco','LiveWire','Lambretta','Malaguti','Mondial','Moto Guzzi','MV Agusta','Piaggio','RKS','Royal Enfield','Sherco','Sym','Suzuki Motor','TM Racing','Triumph','TVS','Ural','Vespa','Victory','Yamaha','Zero Motorcycles','Zontes','Zongshen',
+  // ===== TRAKTÖR & IS MAKINESI =====
+  'Agria','Amazone','Antonio Carraro','Başak','BCS','Bobcat','Case IH','Caterpillar','Challenger','Claas','CnH Industrial','Deutz-Fahr','Doosan','Erkunt','Fendt','Ford Tractor','Goldoni','Hattat','Hema','Hitachi','Holder','Hyundai CE','Iseki','JCB','John Deere','Kobelco','Komatsu','Kramer','Krone','Kubota','Kuhn','Landini','Liebherr','Lindner','LiuGong','LS Mtron','Mahindra','Manitou','Massey Ferguson','McCormick','Merlo','New Holland','Pottinger','SAME','Sany','SDLG','Steyr','TürkTraktör','TYM','Üniversal','Valtra','Volvo CE','Weidemann','XCMG','Yanmar','Zetor'
+];
+
+const ARAC_CINSLERI = ['Binek','SUV & Crossover','Coupe & Cabrio','MPV / Minivan','Kamyonet (Hafif Ticari)','Kamyon (Ağır Ticari)','Minibüs & Otobüs','Motosiklet','Traktör & İş Makinesi','Karavan & Mobil Yaşam','Özel Amaçlı','Deniz Aracı','Diğer'];
+
+const KATEGORILER = {
+  'Binek': { icon:'directions_car', cins:'Binek', altlar:['Sedan','Hatchback','Station Wagon'] },
+  'SUV & Crossover': { icon:'landscape', cins:'SUV', altlar:['SUV (Arazi/4x4)','Crossover','Compact SUV'] },
+  'Coupe & Cabrio': { icon:'auto_awesome', cins:'Coupe', altlar:['Coupe','Cabrio (Üstü Açılır)','Roadster','GT Spor'] },
+  'MPV / Minivan': { icon:'airport_shuttle', cins:'MPV', altlar:['MPV (Çok Amaçlı)','Minivan','Family Van'] },
+  'Kamyonet (Hafif Ticari)': { icon:'local_shipping', cins:'Kamyonet', altlar:['Kamyonet','Panelvan','Pick-up','Van','Campervan'] },
+  'Kamyon (Ağır Ticari)': { icon:'truck', cins:'Kamyon', altlar:['Kamyon','Çekici (TIR)','Dorse (Römork)','Tanker','Damperli','Konteyner Taşıyıcı'] },
+  'Minibüs & Otobüs': { icon:'airport_shuttle', cins:'Otobüs', altlar:['Minibüs','Midibüs','Otobüs (Şehir İçi)','Otobüs (Şehirlerarası)','Turizm Otobüsü','Okul Servisi'] },
+  'Motosiklet': { icon:'motorcycle', cins:'Motosiklet', altlar:['Scooter','Cadde (Street)','Enduro (Arazi)','Cruiser','Chopper','Touring (Gezi)','Racing (Yarış)','ATV (Quad)','Moped','Elektrikli Motosiklet'] },
+  'Traktör & İş Makinesi': { icon:'hardware', cins:'Traktör', altlar:['Traktör','Biçerdöver','Hasat Makinası','Ekskavatör (Paletli)','Ekskavatör (Tekerlekli)','Beko Loder','Loder','Dozer','Greyder','Silindir','Forklift','Mobil Vinç','Platform (Yükseltici)','Çapa Makinası','Tarım Römorku','Kepçe'] },
+  'Karavan & Mobil Yaşam': { icon:'campervan', cins:'Karavan', altlar:['Karavan (Çekme)','Motorhome (Mobil)','Seferber Aracı','Kamp Aracı'] },
+  'Özel Amaçlı': { icon:'local_police', cins:'Özel', altlar:['Ambulans','İtfaiye','Cenaze Aracı','Para Nakil Aracı','Çekici (Kurtarıcı)','Güvenlik Aracı'] },
+  'Deniz Aracı': { icon:'sailing', cins:'Deniz', altlar:['Tekne','Yat','Sürat Teknesi','Bot'] },
+  'Diğer': { icon:'more_horiz', cins:'Diğer', altlar:['Golf Arabası','Kar Paletli Araç','Hafif Römork','Ağır Römork','Elektrikli Scooter','Elektrikli Bisiklet','Platform'] }
+};
+
+// ===== TEMEL FONKSIYONLAR =====
+function toggleDrawer() {
+  document.getElementById('drawerOverlay').classList.toggle('open');
+  document.getElementById('drawer').classList.toggle('open');
+}
+
+function openService(id) {
+  document.querySelectorAll('.service-panel').forEach(p=>p.classList.remove('open'));
+  const p=document.getElementById('panel'+id.charAt(0).toUpperCase()+id.slice(1));
+  if(p) p.classList.add('open');
+  else console.log('Panel bulunamadı:',id);
+}
+
+function closeService(id) {
+  const p=document.getElementById('panel'+id.charAt(0).toUpperCase()+id.slice(1));
+  if(p) p.classList.remove('open');
+}
+
+function navClick(id) {
+  closeService('arama');closeService('kategoriler');closeService('galeriPanel');
+  closeService('favoriler');closeService('aracEkle');closeService('aracDetay');
+  closeService('galeriProfil');closeService('galeriAyarlar');closeService('daha');
+  if(id==='arama') openService('arama');
+  else if(id==='kategoriler') openService('kategoriler');
+  else if(id==='galeriPanel') openService('galeriPanel');
+  else if(id==='favoriler') openService('favoriler');
+  else if(id==='daha') openService('daha');
+}
+
+// ===== DEMO VERI =====
+function demoVeri() {
+  const markalar = MARKALAR;
+  const modeller = ['Egea','Clio','Megane','Passat','Golf','Corolla','C-HR','Focus','Fiesta','320i','C200','A4','Q5','Astra','Corsa','308','2008','C3','C5','Octavia','Superb','Leon','Ibiza','Sandero','Duster','Sportage','Tucson','i20','i30','X3','X5','C180','E200','GLC','A180','Q3','Cooper','Countryman','Cayenne','Qashqai','Juke','CX-5','Mazda3','Swift','Vitara','Outlander','Wrangler','Evoque','XC40','S60','Egea Cross','T10X','Tiggo 8','Seal U','Atto 3','Model Y','Kangoo','Doblo','Transit','Crafter','Daily','Sprinter','Amarok','Hilux'];
+  const yakitlar = ['Benzin','Dizel','LPG','Hibrit','Elektrik','Benzin+LPG'];
+  const vitest = ['Manuel','Otomatik','Yarı Otomatik'];
+  const renkler = ['Siyah','Beyaz','Gri','Mavi','Kırmızı','Yeşil','Turuncu','Gümüş','Bordo','Bej'];
+  const katAna = Object.keys(KATEGORILER);
+
+  for(let i=0;i<42;i++){
+    const anakat = katAna[Math.floor(Math.random()*katAna.length)];
+    const kat = KATEGORILER[anakat];
+    const altlar = kat.altlar;
+    const aracCinsi = kat.cins;
+    const marka = markalar[Math.floor(Math.random()*markalar.length)];
+    const model = modeller[Math.floor(Math.random()*modeller.length)];
+    const yil = 2010+Math.floor(Math.random()*15);
+    const km = yil < 2015 ? 100000+Math.floor(Math.random()*300000) : Math.floor(Math.random()*200000);
+    const fiyat = aracCinsi==='Kamyon'||aracCinsi==='Traktör'||aracCinsi==='İş Makinesi' ? 200000+Math.floor(Math.random()*4800000) : aracCinsi==='Motosiklet' ? 15000+Math.floor(Math.random()*485000) : aracCinsi==='Deniz' ? 100000+Math.floor(Math.random()*4900000) : 50000+Math.floor(Math.random()*4950000);
+    const yakit = aracCinsi==='Motosiklet' ? 'Benzin' : aracCinsi==='Deniz' ? 'Dizel' : yakitlar[Math.floor(Math.random()*yakitlar.length)];
+    const vites = aracCinsi==='Motosiklet' ? 'Manuel' : vitest[Math.floor(Math.random()*vitest.length)];
+    const renk = renkler[Math.floor(Math.random()*renkler.length)];
+    const fotoNum = (i%42)+1;
+    const ilanDurumu = ILAN_DURUMLARI[Math.floor(Math.random()*ILAN_DURUMLARI.length)];
+    const puan = ilanDurumu==='Normal' ? 70+Math.floor(Math.random()*30) : ilanDurumu==='Kazalı' ? 30+Math.floor(Math.random()*30) : ilanDurumu==='Trafikten Çekilmiş' ? 20+Math.floor(Math.random()*35) : 5+Math.floor(Math.random()*25);
+    const durumNot = puan>80?'İyi':puan>55?'Orta':'Kötü';
+
+    // Rastgele sahip (1-3 birey) ve opsiyonel yetkili galerici (4-6)
+    const sahipId = (i%3)+1;
+    const yetkiliId = i%2===0 ? undefined : 4+(i%3); // Bazı araçlara galerici yetkisi
+
+    function rNot() { return ['Temiz','Sorunsuz','Bakımlı','Değişen yok','Boyasız','Orijinal','Az kullanılmış','Yenilenmiş','Hafif aşınma var','Değişimli','Onarımlı','Müdahale görmüş','Pert kayıtlı'][Math.floor(Math.random()*13)]; }
+    function rNot2() { return ['Motor ve şanzıman sağlıklı','Rutin bakımları yapılmış','Periyodik bakım güncel','Küçük çaplı hasar kaydı var','Boyada lokal taş izi','İç mekan temiz ve düzenli','Tril yakıt tüketimi normal','Süspansiyon sistemi sağlam','Fren diskleri değişmeli','Klima soğutma performansı iyi'][Math.floor(Math.random()*10)]; }
+
+    const sahip = KULLANICILAR.find(u=>u.id===sahipId) || KULLANICILAR[0];
+    const yetkili = yetkiliId ? KULLANICILAR.find(u=>u.id===yetkiliId) : null;
+
+    galeriAraclar.push({
+      id: sonrakiId++,
+      sahipId, yetkiliGaleriId: yetkiliId,
+      anakat, aracCinsi, altKat: altlar[Math.floor(Math.random()*altlar.length)],
+      marka, model, yil, km, fiyat, yakit, vites, renk, ilanDurumu,
+      aciklama: `${yil} model ${marka} ${model}, ${km} km, ${yakit}, ${vites} vites. ${ilanDurumu==='Kazalı'?'Kazalı, boya değişimli.':ilanDurumu==='Hurda'?'Hurda, pert kaydı var.':ilanDurumu==='Trafikten Çekilmiş'?'Trafikten çekilmiş, muayene yok.':'Bakımlı, temiz, boyasız.'}`,
+      foto: `https://picsum.photos/seed/arac${fotoNum}/400/250`,
+      tarih: `${new Date().toLocaleDateString('tr-TR')}`,
+      durum: 'satista',
+      galeriAd: sahip.ilanBaslik,
+      galeriSehir: sahip.sehir,
+      galeriTel: '0555 555 5555',
+      ilanAktif: Math.random()>0.15,
+      ilanBaslangic: ilanDurumu==='Normal' ? new Date(Date.now()-Math.floor(Math.random()*25)*86400000).toISOString() : new Date(2024,0,1).toISOString(),
+      ilanBitis: ilanDurumu==='Normal' ? new Date(Date.now()+(ILAN_SURESI_GUN-Math.floor(Math.random()*25))*86400000).toISOString() : new Date(2024,1,1).toISOString(),
+      ekspertiz: {
+        var: Math.random()>0.2,
+        kaynak: Math.random()>0.5 ? 'firma' : 'pdf',
+        pdf: { adi: `ekspertiz_raporu_${sonrakiId}.pdf`, boyut: `${(Math.random()*3+0.5).toFixed(1)} MB`, tarih: `${new Date().toLocaleDateString('tr-TR')}` },
+        firma: { id: (i%4)+1, ad: EKSPERTIZ_FIRMALARI[(i%4)].ad, ekspertizci: ['Ahmet Yılmaz','Mehmet Demir','Ayşe Kaya','Fatma Şahin'][i%4] },
+        raporNo: `EXP-${2024000+sonrakiId}`,
+        tarih: `${new Date().toLocaleDateString('tr-TR')}`,
+        genelPuan: puan,
+        boyaDegisimOrani: puan>80 ? Math.floor(Math.random()*10) : puan>55 ? Math.floor(Math.random()*30)+10 : Math.floor(Math.random()*50)+30,
+        degisenParca: Math.floor(Math.random()*(puan>80?3:puan>55?8:15)),
+        pertDurum: puan<25,
+        kaporta: [
+          { bolge:'Ön Tampon', durum: puan>70?'İyi':'Orta', not: rNot(), boya: Math.floor(Math.random()*200)+50 },
+          { bolge:'Arka Tampon', durum: puan>70?'İyi':'Orta', not: rNot(), boya: Math.floor(Math.random()*200)+50 },
+          { bolge:'Sağ Ön Çamurluk', durum: puan>75?'İyi':puan>50?'Orta':'Kötü', not: rNot(), boya: Math.floor(Math.random()*250)+50 },
+          { bolge:'Sol Ön Çamurluk', durum: puan>75?'İyi':puan>50?'Orta':'Kötü', not: rNot(), boya: Math.floor(Math.random()*250)+50 },
+          { bolge:'Sağ Arka Çamurluk', durum: puan>75?'İyi':puan>50?'Orta':'Kötü', not: rNot(), boya: Math.floor(Math.random()*250)+50 },
+          { bolge:'Sol Arka Çamurluk', durum: puan>75?'İyi':puan>50?'Orta':'Kötü', not: rNot(), boya: Math.floor(Math.random()*250)+50 },
+          { bolge:'Sağ Ön Kapı', durum: puan>75?'İyi':puan>50?'Orta':'Kötü', not: rNot(), boya: Math.floor(Math.random()*200)+50 },
+          { bolge:'Sol Ön Kapı', durum: puan>75?'İyi':puan>50?'Orta':'Kötü', not: rNot(), boya: Math.floor(Math.random()*200)+50 },
+          { bolge:'Sağ Arka Kapı', durum: puan>75?'İyi':puan>50?'Orta':'Kötü', not: rNot(), boya: Math.floor(Math.random()*200)+50 },
+          { bolge:'Sol Arka Kapı', durum: puan>75?'İyi':puan>50?'Orta':'Kötü', not: rNot(), boya: Math.floor(Math.random()*200)+50 },
+          { bolge:'Ön Kaput', durum: puan>75?'İyi':puan>50?'Orta':'Kötü', not: rNot(), boya: Math.floor(Math.random()*250)+50 },
+          { bolge:'Arka Kaput/Bagaj', durum: puan>75?'İyi':puan>50?'Orta':'Kötü', not: rNot(), boya: Math.floor(Math.random()*200)+50 },
+          { bolge:'Tavan', durum: puan>80?'İyi':'Orta', not: rNot(), boya: Math.floor(Math.random()*150)+50 }
+        ],
+        mekanik: {
+          motor: { durum: durumNot, not: rNot2(), olcum: `${(Math.random()*2+0.5).toFixed(1)}L yağ` },
+          sanziman: { durum: durumNot, not: rNot2() },
+          debriyaj: { durum: puan>70?'İyi':'Orta', not: puan>70?'Sağlam':'Biraz sert' },
+          turbo: { durum: puan>65?'İyi':'Orta', not: rNot2() },
+          sogutma: { durum: 'İyi', not: 'Soğutma sistemi çalışıyor' },
+          yagKacagi: puan<50
+        },
+        altTakim: {
+          frenOn: { durum: puan>70?'İyi':'Orta', not: puan>70?'Diskler sağlam':'Diskler değişmeli' },
+          frenArka: { durum: puan>70?'İyi':'Orta', not: rNot2() },
+          amortisorOn: { durum: durumNot, not: rNot2() },
+          amortisorArka: { durum: durumNot, not: rNot2() },
+          rotBaslari: { durum: puan>75?'İyi':'Orta', not: puan>75?'Sağlam':'Hafiz boşluk var' }
+        },
+        icMekan: {
+          koltukOn: { durum: puan>75?'İyi':'Orta', not: puan>75?'Temiz':'Aşınma var' },
+          koltukArka: { durum: 'İyi', not: 'Az kullanılmış' },
+          direksiyon: { durum: puan>70?'İyi':'Orta', not: rNot() },
+          panel: { durum: 'İyi', not: 'Çizik yok' },
+          multimedya: { durum: puan>65?'İyi':'Orta', not: rNot2() },
+          klima: { durum: puan>60?'İyi':'Orta', not: puan>60?'Soğutuyor':'Bakım gerekli' }
+        },
+        lastik: [
+          { poz:'Sol Ön', marka:['Michelin','Bridgestone','Continental','Goodyear'][Math.floor(Math.random()*4)], derinlik:2+Math.floor(Math.random()*6) },
+          { poz:'Sağ Ön', marka:['Michelin','Bridgestone','Continental','Goodyear'][Math.floor(Math.random()*4)], derinlik:2+Math.floor(Math.random()*6) },
+          { poz:'Sol Arka', marka:['Michelin','Bridgestone','Continental','Goodyear'][Math.floor(Math.random()*4)], derinlik:2+Math.floor(Math.random()*6) },
+          { poz:'Sağ Arka', marka:['Michelin','Bridgestone','Continental','Goodyear'][Math.floor(Math.random()*4)], derinlik:2+Math.floor(Math.random()*6) }
+        ],
+        jant: { durum: puan>70?'İyi':'Orta', not: puan>70?'Çizik yok':'Hafif sürtme var' },
+        elektronik: {
+          far: { durum: 'İyi', not: 'Çalışıyor' },
+          klima: { durum: puan>60?'İyi':'Orta', not: rNot2() },
+          sensor: { durum: puan>70?'İyi':'Orta', not: rNot2() },
+          havaYastigi: rNot(),
+          kamera: { durum: puan>75?'İyi':'Orta', not: rNot2() }
+        },
+        sasi: { durum: puan>80?'Düzgün':puan>50?'Hafif eğrilik var':'Çarpılmış', not: rNot(), catlak: puan<40, kaynak: puan<50 },
+        testSurusu: {
+          motor: puan>70?'Düzgün çalışıyor':'Rölantide dalgalanma var',
+          vites: puan>70?'Geçişler yumuşak':'Sert geçişler',
+          fren: puan>70?'Etkili frenaj':'Fren mesafesi uzun',
+          direksiyon: puan>70?'Düzgün':'Hafif sağa çekiyor',
+          genel: puan>70?'Sürüş konforlu':'Test sürüşü önerilir'
+        },
+        genelNot: puan>80?'Araç genel olarak iyi durumda, alıcıya önerilir.':puan>55?'Orta halli bir araç, eksikleri giderilmeli.':'Araç kötü durumda, detaylı kontrol şart.'
+      }
+    });
+  }
+}
+
+// ===== LISTELEME =====
+function aracListele(liste, containerId) {
+  const con = document.getElementById(containerId);
+  if(!con) return;
+  if(!liste||!liste.length){ con.innerHTML='<div class="text-4 text-sm" style="padding:0 16px">Henüz araç bulunmuyor.</div>'; return; }
+  con.innerHTML = liste.map(a=>`
+    <div class="arac-karti" onclick="aracDetayGoster(${a.id})">
+      <div class="ak-img" style="position:relative">${a.foto ? `<img src="${a.foto}" onerror="this.outerHTML='<span class=\\'material-icons\\' style=\\'font-size:48px\\'>directions_car</span>'" loading="lazy">` : `<span class="material-icons" style="font-size:48px">directions_car</span>`}
+        ${!a.ilanAktif ? '<span style="position:absolute;top:8px;left:8px;background:rgba(0,0,0,0.6);color:#fff;font-size:10px;padding:2px 8px;border-radius:var(--radius)">Pasif</span>' : ''}
+      </div>
+      <div class="ak-body">
+        <div class="ak-title">${a.marka} ${a.model}</div>
+        <div class="ak-sub">${a.yil} • ${a.km.toLocaleString('tr-TR')} km • ${a.yakit} • ${a.vites}</div>
+        <div class="ak-price">${a.fiyat.toLocaleString('tr-TR')} TL</div>
+        <div class="ak-meta">
+          <span><span class="material-icons" style="font-size:12px">location_on</span>${a.galeriSehir||'İstanbul'}</span>
+          <span><span class="material-icons" style="font-size:12px">calendar_today</span>${a.tarih||'-'}</span>
+          ${a.durum==='satildi' ? '<span style="color:var(--red)">● Satıldı</span>' : a.ilanAktif ? `<span style="color:${ILAN_DURUM_RENK[a.ilanDurumu]||'var(--green)'}">● ${a.ilanDurumu||'Normal'}</span>` : '<span style="color:var(--text4)">● Pasif</span>'}
+        </div>
+        <div class="text-xs text-4" style="margin-top:4px;line-height:1.3">${a.aciklama ? a.aciklama.substring(0,60)+(a.aciklama.length>60?'...':'') : 'Açıklama yok'}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function anaListele() {
+  const satistaki = galeriAraclar.filter(a=>a.durum==='satista' && a.ilanAktif===true);
+  aracListele(satistaki, 'aracListesi');
+  galeriIstatistik();
+}
+
+function galeriIstatistik() {
+  const toplam = galeriAraclar.length;
+  const satista = galeriAraclar.filter(a=>a.durum==='satista'&&a.ilanAktif===true).length;
+  const satildi = galeriAraclar.filter(a=>a.durum==='satildi').length;
+  document.getElementById('galeriAracSayi').textContent = toplam;
+  document.getElementById('galeriSatista').textContent = satista;
+  document.getElementById('galeriSatildi').textContent = satildi;
+  const durumCounts = {};
+  ILAN_DURUMLARI.forEach(d=>durumCounts[d]=galeriAraclar.filter(a=>a.ilanDurumu===d).length);
+  document.getElementById('galeriDurumIstat').innerHTML = ILAN_DURUMLARI.map(d=>
+    `<span style="display:inline-flex;align-items:center;gap:4px;font-size:10px;color:var(--text3);background:var(--card2);padding:3px 8px;border-radius:var(--radius)"><span style="width:8px;height:8px;border-radius:50%;background:${ILAN_DURUM_RENK[d]}"></span>${d}: ${durumCounts[d]}</span>`
+  ).join('');
+  galeriAracListem();
+}
+
+function galeriAracListem() {
+  const liste = galeriAraclar.filter(a=>true);
+  const con = document.getElementById('galeriAracListem');
+  if(!liste.length){ con.innerHTML='<div class="text-4 text-sm">Henüz araç eklenmemiş.</div>'; return; }
+  con.innerHTML = liste.map(a=>`
+    <div class="sp-item" onclick="aracDetayGoster(${a.id})">
+      <div class="si-icon"><span class="material-icons">${a.durum==='satildi'?'check_circle':(ILAN_DURUM_IKON[a.ilanDurumu]||'directions_car')}</span></div>
+      <div class="si-info"><div class="si-title">${a.marka} ${a.model} (${a.yil}) <span style="font-size:10px;color:${a.ilanAktif?'var(--green)':'var(--text4)'}">${a.ilanAktif?'Yayında':'Pasif'}</span></div><div class="si-sub">${a.fiyat.toLocaleString('tr-TR')} TL • ${a.km.toLocaleString('tr-TR')} km • ${a.ilanDurumu||'Normal'}</div></div>
+      <div class="si-right">${a.durum==='satildi' ? '<span style="color:var(--red)">Satıldı</span>' : `<span style="color:${ILAN_DURUM_RENK[a.ilanDurumu]||'var(--green)'}">${a.ilanDurumu||'Normal'}</span>`}</div>
+    </div>
+  `).join('');
+}
+
+// ===== KATEGORI GORUNTULEME =====
+function kategorileriGoster() {
+  const con = document.getElementById('kategoriListesi');
+  const katlar = Object.entries(KATEGORILER);
+  con.innerHTML = katlar.map(([ad,val])=>`
+    <div class="sp-section" style="cursor:pointer;padding:12px 16px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:8px" onclick="kategoriGoster('${ad}')">
+      <div class="flex">
+        <span class="material-icons" style="font-size:28px;color:var(--text3)">${val.icon}</span>
+        <div><div style="font-weight:600;font-size:14px">${ad}</div><div class="text-4 text-xs">${val.altlar.length} alt kategori</div></div>
+        <span class="material-icons" style="margin-left:auto;color:var(--text4)">chevron_right</span>
+      </div>
+    </div>
+  `).join('');
+}
+
+function kategoriGoster(ad) {
+  const kat = KATEGORILER[ad];
+  if(!kat) return;
+  const araclar = galeriAraclar.filter(a=>a.anakat===ad&&a.durum==='satista'&&a.ilanAktif===true);
+  let html = `<div class="sp-section">
+    <div class="flex" style="margin-bottom:12px">
+      <button class="menu-btn" onclick="closeService('kategoriler');openService('kategoriler')" style="margin:-10px 0 -10px -10px"><span class="material-icons">arrow_back</span></button>
+      <div style="font-size:16px;font-weight:600;flex:1"><span class="material-icons" style="font-size:20px;vertical-align:middle">${kat.icon}</span> ${ad}</div>
+      <span class="text-4 text-sm">${araclar.length} araç</span>
+    </div>
+    <div class="sp-tags">${kat.altlar.map(a=>`<span class="sp-tag" onclick="altKategoriFiltre('${ad}','${a}')">${a}</span>`).join('')}</div>
+  </div>`;
+  if(araclar.length){
+    html += `<div class="sp-section"><div class="ilan-grid" style="padding:0">${araclar.map(a=>`
+      <div class="arac-karti" onclick="aracDetayGoster(${a.id})">
+        <div class="ak-img">${a.foto?`<img src="${a.foto}" onerror="this.outerHTML='<span class=\\'material-icons\\' style=\\'font-size:48px\\'>directions_car</span>'">`:`<span class="material-icons" style="font-size:48px">directions_car</span>`}</div>
+        <div class="ak-body">
+          <div class="ak-title">${a.marka} ${a.model}</div>
+          <div class="ak-sub">${a.yil} • ${a.km.toLocaleString('tr-TR')} km</div>
+          <div class="ak-price">${a.fiyat.toLocaleString('tr-TR')} TL</div>
+        </div>
+      </div>
+    `).join('')}</div></div>`;
+  } else {
+    html += `<div class="sp-section"><div class="text-4 text-sm">Bu kategoride henüz araç bulunmuyor.</div></div>`;
+  }
+  const con = document.getElementById('panelKategoriler').querySelector('.service-panel-scroll');
+  con.innerHTML = html;
+  // Also show panel
+  openService('kategoriler');
+}
+
+function altKategoriFiltre(anakat, altkat) {
+  const araclar = galeriAraclar.filter(a=>a.anakat===anakat&&a.altKat===altkat&&a.durum==='satista');
+  let html = `<div class="sp-section">
+    <div class="flex" style="margin-bottom:12px">
+      <button class="menu-btn" onclick="kategoriGoster('${anakat}')" style="margin:-10px 0 -10px -10px"><span class="material-icons">arrow_back</span></button>
+      <div style="font-size:16px;font-weight:600;flex:1">${altkat}</div>
+      <span class="text-4 text-sm">${araclar.length} araç</span>
+    </div>
+  </div>`;
+  if(araclar.length){
+    html += `<div class="sp-section"><div class="ilan-grid" style="padding:0">${araclar.map(a=>`
+      <div class="arac-karti" onclick="aracDetayGoster(${a.id})">
+        <div class="ak-img">${a.foto?`<img src="${a.foto}" onerror="this.outerHTML='<span class=\\'material-icons\\' style=\\'font-size:48px\\'>directions_car</span>'">`:`<span class="material-icons" style="font-size:48px">directions_car</span>`}</div>
+        <div class="ak-body">
+          <div class="ak-title">${a.marka} ${a.model}</div>
+          <div class="ak-sub">${a.yil} • ${a.km.toLocaleString('tr-TR')} km</div>
+          <div class="ak-price">${a.fiyat.toLocaleString('tr-TR')} TL</div>
+        </div>
+      </div>
+    `).join('')}</div></div>`;
+  }
+  const con = document.getElementById('panelKategoriler').querySelector('.service-panel-scroll');
+  con.innerHTML = html;
+}
+
+// ===== ARAMA =====
+function ilanDurumSec(el) {
+  document.querySelectorAll('#ekleIlanDurum .sp-tag').forEach(t=>t.classList.remove('secili'));
+  el.classList.add('secili');
+}
+
+function aracCinsiSec(el) {
+  document.querySelectorAll('#ekleAracCinsi .sp-tag').forEach(t=>t.classList.remove('secili'));
+  el.classList.add('secili');
+  anaKategoriDoldur(el.dataset.cins);
+}
+
+function ilanDurumFiltreOlustur() {
+  const con = document.getElementById('ilanDurumFiltre');
+  if(!con) return;
+  con.innerHTML = `<span class="sp-tag secili" data-durum="" onclick="ilanDurumFiltreSec(this)">Tümü</span>` +
+    ILAN_DURUMLARI.map(d=>`<span class="sp-tag" data-durum="${d}" onclick="ilanDurumFiltreSec(this)">${d}</span>`).join('');
+}
+
+function ilanDurumFiltreSec(el) {
+  document.querySelectorAll('#ilanDurumFiltre .sp-tag').forEach(t=>t.classList.remove('secili'));
+  el.classList.add('secili');
+  aramaYap();
+}
+
+function kategoriFiltreOlustur() {
+  const con = document.getElementById('kategoriFiltre');
+  if(!con) return;
+  const katlar = Object.keys(KATEGORILER);
+  con.innerHTML = `<span class="sp-tag secili" data-kat="" onclick="kategoriFiltreSec(this)">Tümü</span>` +
+    katlar.map(k=>`<span class="sp-tag" data-kat="${k}" onclick="kategoriFiltreSec(this)">${k}</span>`).join('');
+}
+
+function kategoriFiltreSec(el) {
+  document.querySelectorAll('#kategoriFiltre .sp-tag').forEach(t=>t.classList.remove('secili'));
+  el.classList.add('secili');
+  aramaYap();
+}
+
+function aramaYap() {
+  const q = (document.getElementById('aramaInput')?.value||'').toLowerCase();
+  const fMin = parseFloat(document.getElementById('fiyatMin')?.value)||0;
+  const fMax = parseFloat(document.getElementById('fiyatMax')?.value)||Infinity;
+  const yMin = parseInt(document.getElementById('yilMin')?.value)||0;
+  const yMax = parseInt(document.getElementById('yilMax')?.value)||Infinity;
+  const kMin = parseInt(document.getElementById('kmMin')?.value)||0;
+  const kMax = parseInt(document.getElementById('kmMax')?.value)||Infinity;
+  const secKat = document.querySelector('#kategoriFiltre .secili')?.dataset?.kat||'';
+  const secDurum = document.querySelector('#ilanDurumFiltre .secili')?.dataset?.durum||'';
+
+  let sonuc = galeriAraclar.filter(a=>a.durum==='satista'&&a.ilanAktif===true);
+  if(q) sonuc = sonuc.filter(a=>a.marka.toLowerCase().includes(q)||a.model.toLowerCase().includes(q)||a.aciklama.toLowerCase().includes(q)||String(a.id).includes(q));
+  if(fMin) sonuc = sonuc.filter(a=>a.fiyat>=fMin);
+  if(fMax!==Infinity) sonuc = sonuc.filter(a=>a.fiyat<=fMax);
+  if(yMin) sonuc = sonuc.filter(a=>a.yil>=yMin);
+  if(yMax!==Infinity) sonuc = sonuc.filter(a=>a.yil<=yMax);
+  if(kMin) sonuc = sonuc.filter(a=>a.km>=kMin);
+  if(kMax!==Infinity) sonuc = sonuc.filter(a=>a.km<=kMax);
+  if(secKat) sonuc = sonuc.filter(a=>a.anakat===secKat);
+  if(secDurum) sonuc = sonuc.filter(a=>a.ilanDurumu===secDurum);
+
+  const con = document.getElementById('aramaSonuc');
+  if(!sonuc.length){ con.innerHTML='<div class="sp-section"><div class="text-4 text-sm">Sonuç bulunamadı.</div></div>'; return; }
+  con.innerHTML = `<div class="sp-section"><div class="ilan-grid" style="padding:0">${sonuc.map(a=>`
+    <div class="arac-karti" onclick="aracDetayGoster(${a.id})">
+      <div class="ak-img">${a.foto?`<img src="${a.foto}" onerror="this.outerHTML='<span class=\\'material-icons\\' style=\\'font-size:48px\\'>directions_car</span>'">`:`<span class="material-icons" style="font-size:48px">directions_car</span>`}</div>
+      <div class="ak-body">
+        <div class="ak-title">${a.marka} ${a.model} (${a.yil})</div>
+        <div class="ak-sub">${a.km.toLocaleString('tr-TR')} km • ${a.yakit}</div>
+        <div class="ak-price">${a.fiyat.toLocaleString('tr-TR')} TL</div>
+      </div>
+    </div>
+  `).join('')}</div></div>`;
+}
+
+// ===== ARAC DETAY =====
+function aracDetayGoster(id) {
+  const a = galeriAraclar.find(x=>x.id===id);
+  if(!a) return;
+  const fav = favoriler.includes(id);
+  const html = `
+    <div class="flex" style="margin-bottom:12px">
+      <button class="menu-btn" onclick="closeService('aracDetay');document.getElementById('aracDetayIcerik').innerHTML=''" style="margin:-10px 0 -10px -10px"><span class="material-icons">arrow_back</span></button>
+      <div style="font-size:16px;font-weight:600;flex:1">${a.marka} ${a.model}</div>
+    </div>
+    <div style="width:100%;height:200px;background:var(--card2);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:12px">
+      ${a.foto?`<img src="${a.foto}" style="width:100%;height:100%;object-fit:cover" onerror="this.outerHTML='<span class=\\'material-icons\\' style=\\'font-size:64px;color:var(--text4)\\'>directions_car</span>'">`:`<span class="material-icons" style="font-size:64px;color:var(--text4)">directions_car</span>`}
+    </div>
+    <div style="margin-bottom:12px">
+      <div style="font-size:22px;font-weight:700;color:var(--blue)">${a.fiyat.toLocaleString('tr-TR')} TL</div>
+      <div class="text-xs text-4" style="margin-top:2px">İlan No: #${a.id} • ${a.tarih}</div>
+      <div style="margin-top:6px;display:flex;gap:6px;align-items:center">
+        <span class="material-icons" style="font-size:16px;color:${ILAN_DURUM_RENK[a.ilanDurumu]||'var(--green)'}">${ILAN_DURUM_IKON[a.ilanDurumu]||'check_circle'}</span>
+        <span style="font-size:13px;font-weight:600;color:${ILAN_DURUM_RENK[a.ilanDurumu]||'var(--green)'}">${a.ilanDurumu||'Normal'} Araç</span>
+        ${a.ilanAktif ? `<span style="font-size:11px;color:var(--green);background:rgba(5,150,105,0.1);padding:2px 8px;border-radius:var(--radius)">● Yayında</span>` : `<span style="font-size:11px;color:var(--text4);background:var(--card2);padding:2px 8px;border-radius:var(--radius)">Pasif İlan</span>`}
+        ${a.durum==='satildi'?'<span style="font-size:11px;color:var(--red);background:var(--card2);padding:2px 8px;border-radius:var(--radius)">● Satıldı</span>':''}
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px">
+      ${[
+        ['directions_car','Marka',a.marka],
+        ['drive_eta','Model',a.model],
+        ['calendar_today','Yıl',String(a.yil)],
+        ['speed','KM',a.km.toLocaleString('tr-TR')],
+        ['local_gas_station','Yakıt',a.yakit],
+        ['settings','Vites',a.vites],
+        ['palette','Renk',a.renk],
+        ['category','Araç Cinsi',a.aracCinsi||a.anakat],
+        ['subdirectory_arrow_right','Kasa Tipi',a.altKat],
+        [ILAN_DURUM_IKON[a.ilanDurumu]||'info','İlan Durumu',a.ilanDurumu||'Normal']
+      ].map(([ic,lb,val])=>`<div style="background:var(--card2);border-radius:var(--radius);padding:8px 10px"><div class="text-xs text-4">${lb}</div><div class="flex" style="gap:4px;margin-top:2px"><span class="material-icons" style="font-size:14px;color:var(--text3)">${ic}</span><span style="font-size:13px;font-weight:500">${val}</span></div></div>`).join('')}
+    </div>
+    <div style="background:var(--card2);border-radius:var(--radius);padding:10px 12px;margin-bottom:12px">
+      <div class="text-xs text-4">Açıklama</div>
+      <div style="font-size:12px;color:var(--text2);margin-top:4px">${a.aciklama}</div>
+    </div>
+    <div style="background:var(--card2);border-radius:var(--radius);padding:10px 12px;margin-bottom:12px">
+      <div class="text-xs text-4">Satıcı</div>
+      <div class="flex" style="margin-top:4px;cursor:pointer" onclick="closeService('aracDetay');galeriProfilGoster()">
+        <span class="material-icons" style="font-size:20px;color:var(--text3)">store</span>
+        <div><div style="font-size:13px;font-weight:500">${a.galeriAd||'Vural Galeri'}</div><div class="text-xs text-4">${a.galeriSehir||'İstanbul'} • ${a.galeriTel||'0555 555 5555'}</div></div>
+        <span class="material-icons" style="margin-left:auto;color:var(--text4)">chevron_right</span>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px">
+      <button class="sp-btn ${fav?'sp-btn-red':'sp-btn-out'}" onclick="favoriToggle(${a.id})" style="width:auto;flex:1">
+        <span class="material-icons" style="font-size:16px">${fav?'favorite':'favorite_border'}</span> ${fav?'Favorilerden Çıkar':'Favorilere Ekle'}
+      </button>
+      ${a.durum!=='satildi'?`<button class="sp-btn sp-btn-green" onclick="aracSatildi(${a.id})" style="width:auto;flex:1"><span class="material-icons" style="font-size:16px">sell</span> Satıldı İşaretle</button>`:''}
+    </div>
+  `;
+  document.getElementById('aracDetayIcerik').innerHTML = html;
+  openService('aracDetay');
+}
+
+// ===== FAVORI =====
+function favoriToggle(id) {
+  const ix = favoriler.indexOf(id);
+  if(ix>-1) favoriler.splice(ix,1);
+  else favoriler.push(id);
+  favorileriListele();
+  aracDetayGoster(id);
+}
+
+function favorileriListele() {
+  const con = document.getElementById('favoriListesi');
+  if(!favoriler.length){ con.innerHTML='<div class="text-4 text-sm">Henüz favori aracınız yok.</div>'; return; }
+  const araclar = galeriAraclar.filter(a=>favoriler.includes(a.id));
+  con.innerHTML = `<div class="ilan-grid" style="padding:0">${araclar.map(a=>`
+    <div class="arac-karti" onclick="aracDetayGoster(${a.id})">
+      <div class="ak-img">${a.foto?`<img src="${a.foto}" onerror="this.outerHTML='<span class=\\'material-icons\\' style=\\'font-size:48px\\'>directions_car</span>'">`:`<span class="material-icons" style="font-size:48px">directions_car</span>`}</div>
+      <div class="ak-body">
+        <div class="ak-title">${a.marka} ${a.model}</div>
+        <div class="ak-sub">${a.yil} • ${a.km.toLocaleString('tr-TR')} km</div>
+        <div class="ak-price">${a.fiyat.toLocaleString('tr-TR')} TL</div>
+      </div>
+    </div>
+  `).join('')}</div>`;
+}
+
+// ===== ARAC EKLE =====
+function anaKategoriDoldur(cinsFiltre) {
+  const sel = document.getElementById('ekleAnaKategori');
+  if(!sel) return;
+  let katlar = Object.entries(KATEGORILER);
+  if(cinsFiltre) katlar = katlar.filter(([_,v])=>v.cins===cinsFiltre);
+  sel.innerHTML = '<option value="">Seçiniz</option>' +
+    katlar.map(([k])=>`<option value="${k}">${k}</option>`).join('');
+  altKategoriDoldur();
+}
+
+function altKategoriDoldur() {
+  const anakat = document.getElementById('ekleAnaKategori')?.value;
+  const sel = document.getElementById('ekleAltKategori');
+  if(!sel) return;
+  if(!anakat||!KATEGORILER[anakat]){ sel.innerHTML='<option value="">Önce ana kategori seçin</option>'; return; }
+  sel.innerHTML = '<option value="">Alt kategori seçin</option>' +
+    KATEGORILER[anakat].altlar.map(a=>`<option value="${a}">${a}</option>`).join('');
+}
+
+function aracKaydet() {
+  const anakat = document.getElementById('ekleAnaKategori')?.value;
+  const altKat = document.getElementById('ekleAltKategori')?.value;
+  const marka = document.getElementById('ekleMarka')?.value.trim();
+  const model = document.getElementById('ekleModel')?.value.trim();
+  const yil = parseInt(document.getElementById('ekleYil')?.value);
+  const km = parseInt(document.getElementById('ekleKm')?.value)||0;
+  const fiyat = parseFloat(document.getElementById('ekleFiyat')?.value);
+  const yakit = document.getElementById('ekleYakit')?.value;
+  const vites = document.getElementById('ekleVites')?.value;
+  const renk = document.getElementById('ekleRenk')?.value.trim()||'Belirtilmemiş';
+  const aciklama = document.getElementById('ekleAciklama')?.value.trim()||'';
+  const foto = document.getElementById('ekleFoto')?.value.trim()||'';
+  const ilanDurumu = document.querySelector('#ekleIlanDurum .secili')?.dataset?.durum||'Normal';
+  const aracCinsi = document.querySelector('#ekleAracCinsi .secili')?.dataset?.cins||'Binek';
+
+  if(!anakat||!altKat||!marka||!model||!yil||!fiyat){ alert('Lütfen zorunlu alanları (*) doldurun.'); return; }
+  if(yil<1900||yil>2030){ alert('Geçerli bir yıl girin.'); return; }
+  if(fiyat<1000){ alert('Geçerli bir fiyat girin.'); return; }
+
+  const yeni = {
+    id: sonrakiId++,
+    sahipId: girisYapmisKullanici ? girisYapmisKullanici.id : 1,
+    yetkiliGaleriId: undefined,
+    anakat, aracCinsi, altKat, marka, model, yil, km, fiyat, yakit, vites, renk, ilanDurumu,
+    aciklama: aciklama||`${yil} model ${marka} ${model}, ${km} km, ${yakit}, ${vites} vites.`,
+    foto,
+    tarih: new Date().toLocaleDateString('tr-TR'),
+    durum: 'satista',
+    galeriAd: galeriBilgi.ad,
+    galeriSehir: galeriBilgi.sehir,
+    galeriTel: galeriBilgi.tel,
+    ilanAktif: false,
+    ilanBaslangic: null,
+    ilanBitis: null
+  };
+  galeriAraclar.push(yeni);
+  alert(`Araç başarıyla eklendi! (İlan No: #${yeni.id})`);
+  closeService('aracEkle');
+  // Formu sıfırla
+  ['ekleAnaKategori','ekleAltKategori','ekleMarka','ekleModel','ekleYil','ekleKm','ekleFiyat','ekleRenk','ekleAciklama','ekleFoto'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el) el.value='';
+  });
+  anaListele();
+}
+
+function aracSatildi(id) {
+  const a = galeriAraclar.find(x=>x.id===id);
+  if(!a) return;
+  if(!confirm(`#${id} nolu ilanı "Satıldı" olarak işaretlemek istediğinize emin misiniz?`)) return;
+  a.durum = 'satildi';
+  anaListele();
+  aracDetayGoster(id);
+}
+
+// ===== GALERI PROFIL =====
+function galeriProfilGoster() {
+  const html = `
+    <div class="flex" style="margin-bottom:12px">
+      <button class="menu-btn" onclick="closeService('galeriProfil')" style="margin:-10px 0 -10px -10px"><span class="material-icons">arrow_back</span></button>
+      <div style="font-size:16px;font-weight:600;flex:1">${galeriBilgi.ad}</div>
+    </div>
+    <div style="text-align:center;padding:20px 0">
+      <span class="material-icons" style="font-size:72px;color:var(--text3);background:var(--card2);padding:20px;border-radius:50%">storefront</span>
+      <div style="font-size:20px;font-weight:600;margin-top:10px">${galeriBilgi.ad}</div>
+      <div class="text-4 text-sm">${galeriBilgi.ilce}, ${galeriBilgi.sehir}</div>
+      <div class="flex" style="justify-content:center;margin-top:8px;gap:16px">
+        <span class="text-sm flex"><span class="material-icons" style="font-size:14px">phone</span>${galeriBilgi.tel}</span>
+        <span class="text-sm flex"><span class="material-icons" style="font-size:14px">email</span>${galeriBilgi.email}</span>
+      </div>
+      <div class="text-sm text-3" style="margin-top:8px">${galeriBilgi.aciklama}</div>
+    </div>
+    <div class="sp-label">Araçlarımız</div>
+    <div id="galeriProfilAraclar"></div>
+  `;
+  document.getElementById('galeriProfilIcerik').innerHTML = html;
+  const araclar = galeriAraclar.filter(a=>a.durum==='satista');
+  aracListele(araclar,'galeriProfilAraclar');
+  openService('galeriProfil');
+}
+
+// ===== GALERI AYARLAR =====
+function galeriAyarlariDoldur() {
+  document.getElementById('ayarlarAd').value = galeriBilgi.ad;
+  document.getElementById('ayarlarSehir').value = galeriBilgi.sehir;
+  document.getElementById('ayarlarIlce').value = galeriBilgi.ilce;
+  document.getElementById('ayarlarTel').value = galeriBilgi.tel;
+  document.getElementById('ayarlarEmail').value = galeriBilgi.email;
+  document.getElementById('ayarlarAciklama').value = galeriBilgi.aciklama;
+}
+
+function galeriAyarlarKaydet() {
+  galeriBilgi.ad = document.getElementById('ayarlarAd').value.trim()||'Galerim';
+  galeriBilgi.sehir = document.getElementById('ayarlarSehir').value.trim()||'İstanbul';
+  galeriBilgi.ilce = document.getElementById('ayarlarIlce').value.trim()||'Merkez';
+  galeriBilgi.tel = document.getElementById('ayarlarTel').value.trim()||'0555 555 5555';
+  galeriBilgi.email = document.getElementById('ayarlarEmail').value.trim()||'info@galeri.com';
+  galeriBilgi.aciklama = document.getElementById('ayarlarAciklama').value.trim()||'';
+  alert('Galeri bilgileri güncellendi!');
+}
+
+// ===== EKSPERTIZ SISTEMI =====
+function ekspertizFirmaPanel() {
+  if(ekspertizFirma) { ekspertizFirmaPanelIc(); return; }
+  const html = `
+    <div style="text-align:center;padding:10px 0 20px">
+      <span class="material-icons" style="font-size:64px;color:var(--text3)">assignment</span>
+      <div style="font-size:16px;font-weight:600;margin:8px 0 4px">Ekspertiz Firması Girişi</div>
+      <div class="text-sm text-4">Sisteme kayıtlı bir firmayla giriş yaparak araçlara ekspertiz raporu düzenleyebilirsiniz.</div>
+    </div>
+    <div class="sp-section">
+      <div class="sp-label">Firma Seç</div>
+      ${EKSPERTIZ_FIRMALARI.map(f=>`
+        <div class="sp-item" onclick="ekspertizFirmaGiris(${f.id})">
+          <div class="si-icon"><span class="material-icons" style="color:${f.renk}">engineering</span></div>
+          <div class="si-info"><div class="si-title">${f.ad}</div><div class="si-sub">${f.eposta} • ${f.tel}</div></div>
+          <span class="sp-btn sp-btn-sm" style="width:auto">Giriş</span>
+        </div>
+      `).join('')}
+    </div>
+  `;
+  document.getElementById('ekspertizFirmaIcerik').innerHTML = html;
+  openService('ekspertizFirma');
+}
+
+function ekspertizFirmaGiris(id) {
+  const f = EKSPERTIZ_FIRMALARI.find(x=>x.id===id);
+  if(!f) return;
+  ekspertizFirma = f;
+  ekspertizFirmaPanelIc();
+}
+
+function ekspertizFirmaCikis() {
+  ekspertizFirma = null;
+  closeService('ekspertizFirma');
+  ekspertizFirmaPanel();
+}
+
+function ekspertizFirmaPanelIc() {
+  if(!ekspertizFirma) { ekspertizFirmaPanel(); return; }
+  const raporlu = galeriAraclar.filter(a=>a.ekspertiz.var);
+  const raporsuz = galeriAraclar.filter(a=>!a.ekspertiz.var);
+  const html = `
+    <div class="flex" style="margin-bottom:12px">
+      <span class="material-icons" style="font-size:28px;color:${ekspertizFirma.renk}">engineering</span>
+      <div style="flex:1"><div style="font-weight:600">${ekspertizFirma.ad}</div><div class="text-xs text-4">${ekspertizFirma.eposta}</div></div>
+      <button class="sp-btn sp-btn-sm sp-btn-out" onclick="ekspertizFirmaCikis()">Çıkış</button>
+    </div>
+    <div class="sp-row" style="margin-bottom:12px">
+      <div class="istatistik-kutu" style="flex:1"><div class="ik-val">${galeriAraclar.length}</div><div class="ik-label">Toplam Araç</div></div>
+      <div class="istatistik-kutu" style="flex:1"><div class="ik-val">${raporlu.length}</div><div class="ik-label">Raporlu</div></div>
+      <div class="istatistik-kutu" style="flex:1"><div class="ik-val">${raporsuz.length}</div><div class="ik-label">Raporsuz</div></div>
+    </div>
+    <div class="sp-label">Rapor Bekleyen Araçlar</div>
+    ${raporsuz.length ? raporsuz.map(a=>`
+      <div class="sp-item" onclick="ekspertizRaporEkleForm(${a.id})">
+        <div class="si-icon"><span class="material-icons" style="color:var(--orange)">pending</span></div>
+        <div class="si-info"><div class="si-title">${a.marka} ${a.model} (${a.yil})</div><div class="si-sub">#${a.id} • ${a.km.toLocaleString('tr-TR')} km</div></div>
+        <button class="sp-btn sp-btn-sm sp-btn-green" style="width:auto">Rapor Ekle</button>
+      </div>
+    `).join('') : '<div class="text-4 text-sm">Tüm araçlarda rapor var.</div>'}
+    <div class="sp-label" style="margin-top:12px">Raporlanan Araçlar</div>
+    ${raporlu.length ? raporlu.slice(0,10).map(a=>`
+      <div class="sp-item" onclick="ekspertizRaporGoruntule(${a.id})">
+        <div class="si-icon"><span class="material-icons" style="color:var(--green)">assignment_turned_in</span></div>
+        <div class="si-info"><div class="si-title">${a.marka} ${a.model}</div><div class="si-sub">#${a.id} • Puan: ${a.ekspertiz.genelPuan}/100</div></div>
+        <span class="material-icons" style="color:var(--text4)">chevron_right</span>
+      </div>
+    `).join('') : ''}
+  `;
+  document.getElementById('ekspertizFirmaIcerik').innerHTML = html;
+  openService('ekspertizFirma');
+}
+
+function ekspertizRaporEkleForm(id) {
+  const a = galeriAraclar.find(x=>x.id===id);
+  if(!a) return;
+  if(!ekspertizFirma) { ekspertizFirmaPanel(); return; }
+  const html = `
+    <div class="sp-section">
+      <div class="flex" style="margin-bottom:8px">
+        <span class="material-icons" style="color:${ekspertizFirma.renk}">engineering</span>
+        <div style="flex:1;font-size:13px;font-weight:500">${ekspertizFirma.ad} • ${a.marka} ${a.model} #${a.id}</div>
+      </div>
+      <div class="sp-label">Rapor No</div>
+      <div class="sp-input"><span class="material-icons">tag</span><input id="expRaporNo" placeholder="EXP-2024XXXX"></div>
+      <div class="sp-label">Genel Puan (0-100)</div>
+      <div class="sp-input"><span class="material-icons">star</span><input id="expPuan" type="number" min="0" max="100" value="75"></div>
+      <div class="sp-label">Boya Değişim Oranı (%)</div>
+      <div class="sp-input"><span class="material-icons">format_paint</span><input id="expBoya" type="number" min="0" max="100" value="10"></div>
+      <div class="sp-label">Değişen Parça Sayısı</div>
+      <div class="sp-input"><span class="material-icons">build</span><input id="expDegisen" type="number" min="0" value="0"></div>
+      <div class="sp-label">Pert Durumu</div>
+      <div class="flex" style="gap:8px">
+        <button class="sp-btn sp-btn-sm sp-btn-out" style="flex:1" onclick="expPertSec(this,false)" id="expPertH">Hayır</button>
+        <button class="sp-btn sp-btn-sm sp-btn-red" style="flex:1" onclick="expPertSec(this,true)" id="expPertE">Evet</button>
+      </div>
+      <div class="sp-label" style="margin-top:8px">Motor</div>
+      <div class="sp-row">
+        <select class="sp-input" id="expMotorDurum" style="flex:1;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius);font-size:13px;font-family:'Inter',sans-serif"><option>İyi</option><option>Orta</option><option>Kötü</option></select>
+      </div>
+      <div class="sp-input"><span class="material-icons">notes</span><textarea id="expMotorNot" placeholder="Motor notu..." rows="2"></textarea></div>
+      <div class="sp-label">Şanzıman</div>
+      <div class="sp-row">
+        <select class="sp-input" id="expSanzimanDurum" style="flex:1;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius);font-size:13px;font-family:'Inter',sans-serif"><option>İyi</option><option>Orta</option><option>Kötü</option></select>
+      </div>
+      <div class="sp-input"><span class="material-icons">notes</span><textarea id="expSanzimanNot" placeholder="Şanzıman notu..." rows="2"></textarea></div>
+      <div class="sp-label">Kaporta / Dış Aksan</div>
+      ${['Ön Tampon','Arka Tampon','Sağ Ön Çamurluk','Sol Ön Çamurluk','Ön Kaput','Tavan'].map(b=>`
+        <div class="flex" style="margin-bottom:4px;gap:4px">
+          <span class="text-xs text-3" style="width:120px">${b}</span>
+          <select class="expKaporta" style="flex:1;padding:6px 8px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px;font-family:'Inter',sans-serif"><option>İyi</option><option>Orta</option><option>Kötü</option></select>
+          <input class="expBoya" type="number" placeholder="μ" style="width:60px;padding:6px 8px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px;font-family:'Inter',sans-serif" value="${Math.floor(Math.random()*150)+80}">
+        </div>
+      `).join('')}
+      <div class="sp-label">İç Mekan</div>
+      <div class="sp-row">
+        <select class="sp-input" id="expIcDurum" style="flex:1;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius);font-size:13px;font-family:'Inter',sans-serif"><option>İyi</option><option>Orta</option><option>Kötü</option></select>
+      </div>
+      <div class="sp-label">Test Sürüşü Notu</div>
+      <div class="sp-input"><span class="material-icons">directions_car</span><textarea id="expTest" placeholder="Test sürüşü izlenimleri..." rows="2">Motor düzgün çalışıyor, vites geçişleri yumuşak.</textarea></div>
+      <div class="sp-label">Genel Not / Kanaat</div>
+      <div class="sp-input"><span class="material-icons">description</span><textarea id="expGenelNot" placeholder="Genel değerlendirme..." rows="3"></textarea></div>
+      <div class="sp-label">PDF Yükle (opsiyonel)</div>
+      <div class="sp-input"><span class="material-icons">upload_file</span><input type="file" id="expPdf" accept=".pdf" style="font-size:12px"></div>
+      <div style="display:flex;gap:8px;margin-top:12px">
+        <button class="sp-btn sp-btn-green" onclick="ekspertizRaporKaydet(${id})" style="flex:1">Raporu Kaydet</button>
+        <button class="sp-btn sp-btn-out" onclick="closeService('ekspertizRaporEkle')" style="flex:0">İptal</button>
+      </div>
+    </div>
+  `;
+  document.getElementById('ekspertizRaporForm').innerHTML = html;
+  openService('ekspertizRaporEkle');
+}
+
+let expPertDurum = false;
+function expPertSec(el, val) {
+  expPertDurum = val;
+  document.querySelectorAll('#ekspertizRaporForm .sp-btn-red, #ekspertizRaporForm .sp-btn-out').forEach(b=>b.classList.remove('sp-btn-red','sp-btn-out'));
+  if(val) { el.classList.remove('sp-btn-out'); el.classList.add('sp-btn-red'); }
+  else { el.classList.remove('sp-btn-red'); el.classList.add('sp-btn-out'); }
+}
+
+function ekspertizRaporKaydet(id) {
+  const a = galeriAraclar.find(x=>x.id===id);
+  if(!a||!ekspertizFirma) return;
+  const raporNo = document.getElementById('expRaporNo')?.value.trim()||`EXP-${2024000+id}`;
+  const puan = parseInt(document.getElementById('expPuan')?.value)||50;
+  const boya = parseInt(document.getElementById('expBoya')?.value)||0;
+  const degisen = parseInt(document.getElementById('expDegisen')?.value)||0;
+  const motorDurum = document.getElementById('expMotorDurum')?.value||'İyi';
+  const motorNot = document.getElementById('expMotorNot')?.value.trim()||'';
+  const sanzimanDurum = document.getElementById('expSanzimanDurum')?.value||'İyi';
+  const sanzimanNot = document.getElementById('expSanzimanNot')?.value.trim()||'';
+  const icDurum = document.getElementById('expIcDurum')?.value||'İyi';
+  const test = document.getElementById('expTest')?.value.trim()||'';
+  const genelNot = document.getElementById('expGenelNot')?.value.trim()||'';
+  const pdfFile = document.getElementById('expPdf')?.files?.[0];
+  const pdfAdi = pdfFile ? pdfFile.name : '';
+  const pdfBoyut = pdfFile ? `${(pdfFile.size/1024/1024).toFixed(1)} MB` : '';
+
+  const kaportaVeri = [];
+  document.querySelectorAll('.expKaporta').forEach((sel,i)=>{
+    const bolgeler = ['Ön Tampon','Arka Tampon','Sağ Ön Çamurluk','Sol Ön Çamurluk','Ön Kaput','Tavan'];
+    const boyaInput = document.querySelectorAll('.expBoya')[i];
+    kaportaVeri.push({ bolge: bolgeler[i], durum: sel.value, boya: parseInt(boyaInput?.value)||100 });
+  });
+
+  a.ekspertiz = {
+    var: true,
+    kaynak: 'firma',
+    pdf: pdfAdi ? { adi: pdfAdi, boyut: pdfBoyut, tarih: new Date().toLocaleDateString('tr-TR') } : null,
+    firma: { id: ekspertizFirma.id, ad: ekspertizFirma.ad, ekspertizci: 'Yetkili Ekspertizci' },
+    raporNo, tarih: new Date().toLocaleDateString('tr-TR'),
+    genelPuan: puan, boyaDegisimOrani: boya, degisenParca: degisen, pertDurum: expPertDurum,
+    kaporta: kaportaVeri,
+    mekanik: {
+      motor: { durum: motorDurum, not: motorNot },
+      sanziman: { durum: sanzimanDurum, not: sanzimanNot },
+      debriyaj: { durum: 'İyi', not: '' }, turbo: { durum: 'İyi', not: '' },
+      sogutma: { durum: 'İyi', not: '' }, yagKacagi: false
+    },
+    altTakim: { frenOn: { durum:'İyi',not:'' }, frenArka: { durum:'İyi',not:'' }, amortisorOn: { durum:'İyi',not:'' }, rotBaslari: { durum:'İyi',not:'' } },
+    icMekan: { koltukOn: { durum: icDurum, not: '' }, panel: { durum: icDurum, not: '' }, multimedya: { durum: 'İyi', not: '' }, klima: { durum: 'İyi', not: '' } },
+    lastik: [
+      { poz:'Sol Ön', marka:'Michelin', derinlik:5 }, { poz:'Sağ Ön', marka:'Michelin', derinlik:5 },
+      { poz:'Sol Arka', marka:'Michelin', derinlik:5 }, { poz:'Sağ Arka', marka:'Michelin', derinlik:5 }
+    ],
+    jant: { durum:'İyi', not:'' },
+    elektronik: { far: { durum:'İyi',not:'' }, klima:{ durum:'İyi',not:'' }, sensor:{ durum:'İyi',not:'' }, havaYastigi:'Mevcut', kamera:{ durum:'İyi',not:'' } },
+    sasi: { durum: 'Düzgün', not: '', catlak: false, kaynak: false },
+    testSurusu: { motor: test, vites: test, fren: '', direksiyon: '', genel: test },
+    genelNot
+  };
+  alert(`Ekspertiz raporu başarıyla kaydedildi!\nRapor No: ${raporNo}\nPuan: ${puan}/100`);
+  closeService('ekspertizRaporEkle');
+  ekspertizFirmaPanelIc();
+}
+
+function ekspertizRaporGoruntule(id) {
+  const a = galeriAraclar.find(x=>x.id===id);
+  if(!a||!a.ekspertiz||!a.ekspertiz.var) {
+    document.getElementById('ekspertizIcerik').innerHTML = '<div class="text-4 text-sm">Bu araç için ekspertiz raporu bulunmuyor.</div>';
+    openService('ekspertiz'); return;
+  }
+  const e = a.ekspertiz;
+  const renk = e.genelPuan>80 ? 'var(--green)' : e.genelPuan>55 ? 'var(--orange)' : 'var(--red)';
+  const yildiz = e.genelPuan>80 ? '★ ★ ★ ★ ★' : e.genelPuan>60 ? '★ ★ ★ ★' : e.genelPuan>40 ? '★ ★ ★' : e.genelPuan>20 ? '★ ★' : '★';
+
+  const html = `
+    <div class="flex" style="margin-bottom:12px">
+      <button class="menu-btn" onclick="closeService('ekspertiz')" style="margin:-10px 0 -10px -10px"><span class="material-icons">arrow_back</span></button>
+      <div style="font-size:16px;font-weight:600;flex:1">Ekspertiz Raporu</div>
+    </div>
+    <div style="text-align:center;padding:16px 0;background:var(--card2);border-radius:var(--radius);margin-bottom:12px">
+      <div style="font-size:42px;font-weight:700;color:${renk}">${e.genelPuan}</div>
+      <div style="font-size:14px;color:${renk}">${yildiz}</div>
+      <div style="font-size:12px;color:var(--text4);margin-top:4px">${e.genelPuan>80?'Çok İyi':e.genelPuan>55?'Orta':'Kötü'}</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:12px">
+      <div style="background:var(--card2);border-radius:var(--radius);padding:8px 10px"><div class="text-xs text-4">Rapor No</div><div style="font-size:12px;font-weight:500">${e.raporNo||'-'}</div></div>
+      <div style="background:var(--card2);border-radius:var(--radius);padding:8px 10px"><div class="text-xs text-4">Tarih</div><div style="font-size:12px;font-weight:500">${e.tarih||'-'}</div></div>
+      <div style="background:var(--card2);border-radius:var(--radius);padding:8px 10px"><div class="text-xs text-4">Araç</div><div style="font-size:12px;font-weight:500">${a.marka} ${a.model} (${a.yil})</div></div>
+      <div style="background:var(--card2);border-radius:var(--radius);padding:8px 10px"><div class="text-xs text-4">KM</div><div style="font-size:12px;font-weight:500">${a.km.toLocaleString('tr-TR')}</div></div>
+      <div style="background:var(--card2);border-radius:var(--radius);padding:8px 10px"><div class="text-xs text-4">Boya Değişim</div><div style="font-size:12px;font-weight:500">%${e.boyaDegisimOrani||0}</div></div>
+      <div style="background:var(--card2);border-radius:var(--radius);padding:8px 10px"><div class="text-xs text-4">Değişen Parça</div><div style="font-size:12px;font-weight:500">${e.degisenParca||0} adet</div></div>
+      ${e.pertDurum ? '<div style="background:var(--red);color:#fff;border-radius:var(--radius);padding:8px 10px;grid-column:1/-1;text-align:center;font-size:12px;font-weight:600">⚠ PERT KAYITLI ARAÇ</div>' : ''}
+    </div>
+    ${e.firma ? `<div class="flex" style="background:var(--card2);border-radius:var(--radius);padding:10px 12px;margin-bottom:12px"><span class="material-icons" style="color:var(--blue)">engineering</span><div><div style="font-size:13px;font-weight:500">${e.firma.ad}</div><div class="text-xs text-4">${e.firma.ekspertizci||'Ekspertizci'}</div></div></div>` : ''}
+    ${e.pdf ? `<div class="flex" style="background:var(--card2);border-radius:var(--radius);padding:10px 12px;margin-bottom:12px"><span class="material-icons" style="color:var(--red)">picture_as_pdf</span><div><div style="font-size:13px;font-weight:500">${e.pdf.adi}</div><div class="text-xs text-4">${e.pdf.boyut} • ${e.pdf.tarih}</div></div><span class="material-icons" style="margin-left:auto;color:var(--blue);cursor:pointer" onclick="alert('PDF simülasyon: ${e.pdf.adi} indiriliyor...')">download</span></div>` : ''}
+    ${e.kaporta&&e.kaporta.length ? `<div class="sp-label">Kaporta / Boya Kalınlık Ölçüm</div><div style="margin-bottom:12px">${e.kaporta.map(k=>`
+      <div class="flex" style="background:var(--card2);border-radius:var(--radius);padding:6px 10px;margin-bottom:4px">
+        <span style="font-size:11px;flex:1">${k.bolge}</span>
+        <span style="font-size:11px;font-weight:500;color:${k.durum==='İyi'?'var(--green)':k.durum==='Orta'?'var(--orange)':'var(--red)'}">${k.durum}</span>
+        <span class="text-xs text-4" style="margin-left:8px">${k.boya||'-'}μ</span>
+      </div>
+    `).join('')}</div>` : ''}
+    ${e.mekanik ? `<div class="sp-label">Mekanik</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:12px">
+      ${[['motor','Motor'],['sanziman','Şanzıman'],['debriyaj','Debriyaj'],['turbo','Turbo']].map(([k,lb])=>{
+        if(!e.mekanik[k]) return '';
+        return `<div style="background:var(--card2);border-radius:var(--radius);padding:8px 10px"><div class="text-xs text-4">${lb}</div><div style="font-size:12px;font-weight:500;color:${e.mekanik[k].durum==='İyi'?'var(--green)':'var(--orange)'}">${e.mekanik[k].durum}</div><div class="text-xs text-4">${e.mekanik[k].not||''}</div></div>`;
+      }).join('')}
+    </div>` : ''}
+    ${e.testSurusu&&e.testSurusu.motor ? `<div class="sp-label">Test Sürüşü</div><div style="background:var(--card2);border-radius:var(--radius);padding:10px 12px;margin-bottom:12px;font-size:12px">${e.testSurusu.motor||e.testSurusu.genel||e.testSurusu||''}</div>` : ''}
+    ${e.genelNot ? `<div class="sp-label">Genel Kanaat</div><div style="background:var(--card2);border-radius:var(--radius);padding:10px 12px;margin-bottom:12px;font-size:12px;color:var(--text2)">${e.genelNot}</div>` : ''}
+  `;
+  document.getElementById('ekspertizIcerik').innerHTML = html;
+  openService('ekspertiz');
+}
+
+// ===== KULLANICI SISTEMI =====
+function girisPaneli() {
+  const secili = girisYapmisKullanici;
+  const html = `
+    <div style="margin-bottom:16px;font-size:13px;color:var(--text3)">Hesap seçerek giriş yapın (demo):</div>
+    ${KULLANICILAR.map(u => `
+      <div class="sp-item" onclick="girisYap(${u.id})" style="${secili?.id===u.id?'background:var(--card2);border-radius:var(--radius);':''}">
+        <div class="si-icon"><span class="material-icons">${u.rol==='galerici'?'storefront':'person'}</span></div>
+        <div class="si-info"><div class="si-title">${u.ad}</div><div class="si-sub">${u.rol==='galerici'?u.ilanBaslik:(u.rol==='admin'?'Sistem Yöneticisi':'Bireysel Kullanıcı')} • ${u.sehir}</div></div>
+        ${secili?.id===u.id ? '<span class="material-icons" style="color:var(--green)">check_circle</span>' : ''}
+      </div>
+    `).join('')}
+  `;
+  document.getElementById('girisIcerik').innerHTML = html;
+  openService('giris');
+}
+
+function girisYap(id) {
+  const u = KULLANICILAR.find(x=>x.id===id);
+  if(!u) return;
+  girisYapmisKullanici = u;
+  document.getElementById('tbKullaniciAd').textContent = u.rol==='galerici'?u.ilanBaslik:u.ad;
+  document.getElementById('tbKullaniciIkon').textContent = u.rol==='galerici'?'storefront':'person';
+  document.getElementById('tbGirisBtn').style.display = 'none';
+  document.getElementById('drawerGirisItem').style.display = 'none';
+  document.getElementById('drawerHesabimItem').style.display = 'block';
+  document.getElementById('drawerCikisItem').style.display = 'block';
+  document.getElementById('drawerAraclarim').style.display = 'block';
+  document.getElementById('drawerYetkililer').style.display = u.rol==='galerici'?'block':'none';
+  closeService('giris');
+  hesabimPanel();
+}
+
+function cikisYap() {
+  girisYapmisKullanici = null;
+  document.getElementById('tbKullaniciAd').textContent = 'Galeri Bul';
+  document.getElementById('tbKullaniciIkon').textContent = 'account_circle';
+  document.getElementById('tbGirisBtn').style.display = 'block';
+  document.getElementById('drawerGirisItem').style.display = 'block';
+  document.getElementById('drawerHesabimItem').style.display = 'none';
+  document.getElementById('drawerCikisItem').style.display = 'none';
+  document.getElementById('drawerAraclarim').style.display = 'none';
+  document.getElementById('drawerYetkililer').style.display = 'none';
+  toggleDrawer();
+  anaListele();
+}
+
+function hesabimPanel() {
+  const u = girisYapmisKullanici;
+  if(!u) { girisPaneli(); return; }
+  const araclarim = galeriAraclar.filter(a=>a.sahipId===u.id);
+  const aktifIlan = araclarim.filter(a=>a.ilanAktif).length;
+  const html = `
+    <div style="text-align:center;padding:16px 0;background:var(--card2);border-radius:var(--radius);margin-bottom:12px">
+      <span class="material-icons" style="font-size:48px;color:var(--text3);background:var(--card);padding:12px;border-radius:50%">${u.rol==='galerici'?'storefront':'person'}</span>
+      <div style="font-size:18px;font-weight:600;margin-top:8px">${u.ad}</div>
+      <div class="text-sm text-4">${u.rol==='galerici'?u.ilanBaslik:(u.rol==='admin'?'Sistem Yöneticisi':'Bireysel Kullanıcı')} • ${u.sehir}</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px">
+      <div style="background:var(--card2);border-radius:var(--radius);padding:12px;text-align:center">
+        <div style="font-size:22px;font-weight:700">${araclarim.length}</div>
+        <div class="text-xs text-4">Aracım</div>
+      </div>
+      <div style="background:var(--card2);border-radius:var(--radius);padding:12px;text-align:center">
+        <div style="font-size:22px;font-weight:700">${aktifIlan}</div>
+        <div class="text-xs text-4">Aktif İlan</div>
+      </div>
+      <div style="background:var(--card2);border-radius:var(--radius);padding:12px;text-align:center">
+        <div style="font-size:18px;font-weight:700;color:var(--green)">₺${(u.bakiye||0).toLocaleString('tr-TR')}</div>
+        <div class="text-xs text-4">Bakiye</div>
+      </div>
+    </div>
+    <div class="sp-input" style="margin-bottom:6px"><span class="material-icons">account_balance_wallet</span><input id="bakiyeEkleInput" type="number" value="500" min="0" step="100" style="font-weight:600"></div>
+    <button class="sp-btn sp-btn-green" onclick="bakiyeYukle()">Bakiye Yükle</button>
+    ${u.rol==='birey' ? `<button class="sp-btn sp-btn sp-btn-out" style="margin-top:8px" onclick="alert('Galeri Kurma özelliği yakında eklenecek!')">Galeri Kur</button>` : ''}
+  `;
+  document.getElementById('hesabimIcerik').innerHTML = html;
+  openService('hesabim');
+}
+
+function bakiyeYukle() {
+  const u = girisYapmisKullanici;
+  if(!u) return;
+  const miktar = parseInt(document.getElementById('bakiyeEkleInput')?.value)||0;
+  if(miktar<1) { alert('Geçerli bir tutar girin.'); return; }
+  u.bakiye = (u.bakiye||0)+miktar;
+  hesabimPanel();
+}
+
+function araclarimPanel() {
+  const u = girisYapmisKullanici;
+  if(!u) { girisPaneli(); return; }
+  const araclarim = galeriAraclar.filter(a=>a.sahipId===u.id);
+  const html = `
+    <div class="flex" style="margin-bottom:8px">
+      <span style="font-size:13px;font-weight:500">${araclarim.length} araç</span>
+      <span class="text-xs text-4" style="margin-left:auto">İlan: ₺${ILAN_UCRETI}/30 gün</span>
+    </div>
+    ${araclarim.length===0 ? '<div class="text-sm text-4" style="padding:20px 0;text-align:center">Henüz aracınız bulunmuyor.</div>' :
+      araclarim.map(a=>`
+        <div class="sp-item" onclick="aracDetayGoster(${a.id})">
+          <div class="si-icon"><img src="${a.foto}" alt=""></div>
+          <div class="si-info">
+            <div class="si-title">${a.marka} ${a.model} <span style="font-size:11px;color:var(--text4)">${a.yil}</span></div>
+            <div class="si-sub">${a.km.toLocaleString('tr-TR')} km • ${a.yakit} • ${a.vites}</div>
+          </div>
+          <div class="si-right">
+            ₺${a.fiyat.toLocaleString('tr-TR')}
+            <span class="si-badge" style="color:${a.ilanAktif?'var(--green)':'var(--red)'}">${a.ilanAktif?'Yayında':'Pasif'}</span>
+          </div>
+        </div>
+        <div class="flex" style="gap:6px;margin-bottom:8px">
+          ${a.ilanAktif
+            ? `<button class="sp-btn" style="font-size:11px;padding:8px;background:var(--red);flex:1" onclick="event.stopPropagation();ilandanCikar(${a.id})">İlandan Çıkar</button>`
+            : `<button class="sp-btn" style="font-size:11px;padding:8px;background:var(--green);flex:1" onclick="event.stopPropagation();ilanVer(${a.id})">İlana Koy (₺${ILAN_UCRETI})</button>`
+          }
+          <button class="sp-btn sp-btn-out" style="font-size:11px;padding:8px;flex:1" onclick="event.stopPropagation();aracDetayGoster(${a.id})">Detay</button>
+        </div>
+      `).join('')
+    }
+  `;
+  document.getElementById('araclarimIcerik').innerHTML = html;
+  openService('araclarim');
+}
+
+function yetkiliAraclarPanel() {
+  const u = girisYapmisKullanici;
+  if(!u) { girisPaneli(); return; }
+  const yetkiliAraclar = galeriAraclar.filter(a=>a.yetkiliGaleriId===u.id);
+  const html = `
+    <div style="font-size:13px;color:var(--text3);margin-bottom:12px">Size satış izni verilen araçlar:</div>
+    ${yetkiliAraclar.length===0 ? '<div class="text-sm text-4" style="padding:20px 0;text-align:center">Henüz yetkilendirilen araç yok.</div>' :
+      yetkiliAraclar.map(a=>`
+        <div class="sp-item" onclick="aracDetayGoster(${a.id})">
+          <div class="si-icon"><img src="${a.foto}" alt=""></div>
+          <div class="si-info">
+            <div class="si-title">${a.marka} ${a.model} <span style="font-size:11px;color:var(--text4)">${a.yil}</span></div>
+            <div class="si-sub">Sahip: ${KULLANICILAR.find(u=>u.id===a.sahipId)?.ad||'Bilinmiyor'}</div>
+          </div>
+          <div class="si-right" style="color:${a.ilanAktif?'var(--green)':'var(--text4)'}">
+            ₺${a.fiyat.toLocaleString('tr-TR')}
+            <span class="si-badge">${a.ilanAktif?'Yayında':'Pasif'}</span>
+          </div>
+        </div>
+        <div class="flex" style="gap:6px;margin-bottom:8px">
+          ${a.ilanAktif
+            ? `<button class="sp-btn" style="font-size:11px;padding:8px;background:var(--red);flex:1" onclick="event.stopPropagation();ilandanCikar(${a.id})">İlandan Çıkar</button>`
+            : `<button class="sp-btn" style="font-size:11px;padding:8px;background:var(--green);flex:1" onclick="event.stopPropagation();ilanVer(${a.id})">İlana Koy (₺${ILAN_UCRETI})</button>`
+          }
+          <button class="sp-btn sp-btn-out" style="font-size:11px;padding:8px;flex:1" onclick="event.stopPropagation();aracDetayGoster(${a.id})">Detay</button>
+        </div>
+      `).join('')
+    }
+  `;
+  document.getElementById('araclarimIcerik').innerHTML = html;
+  openService('araclarim');
+}
+
+function ilanVer(id) {
+  const a = galeriAraclar.find(x=>x.id===id);
+  if(!a) return;
+  const u = girisYapmisKullanici;
+  if(!u) { alert('Giriş yapmalısınız!'); return; }
+  if(!a.sahipId) { alert('Bu aracın sahibi bulunamadı.'); return; }
+  const sahip = KULLANICILAR.find(k=>k.id===a.sahipId);
+  if(!sahip) { alert('Sahip bilgisi bulunamadı.'); return; }
+  if((sahip.bakiye||0) < ILAN_UCRETI) {
+    alert(`Yetersiz bakiye! İlan ücreti: ₺${ILAN_UCRETI}\nMevcut bakiye: ₺${(sahip.bakiye||0).toLocaleString('tr-TR')}\nLütfen bakiye yükleyin.`);
+    return;
+  }
+  sahip.bakiye -= ILAN_UCRETI;
+  a.ilanAktif = true;
+  a.ilanBaslangic = new Date().toISOString();
+  const bitis = new Date();
+  bitis.setDate(bitis.getDate()+ILAN_SURESI_GUN);
+  a.ilanBitis = bitis.toISOString();
+  araclarimPanel();
+  anaListele();
+}
+
+function ilandanCikar(id) {
+  const a = galeriAraclar.find(x=>x.id===id);
+  if(!a) return;
+  a.ilanAktif = false;
+  a.ilanBaslangic = null;
+  a.ilanBitis = null;
+  araclarimPanel();
+  anaListele();
+}
+
+// ===== INIT =====
+function init() {
+  demoVeri();
+  // Süresi dolan ilanları pasifleştir
+  const simdi = new Date();
+  galeriAraclar.forEach(a => {
+    if(a.ilanAktif && a.ilanBitis) {
+      if(new Date(a.ilanBitis) < simdi) {
+        a.ilanAktif = false;
+      }
+    }
+  });
+  anaKategoriDoldur('Binek');
+  kategorileriGoster();
+  kategoriFiltreOlustur();
+  ilanDurumFiltreOlustur();
+  favorileriListele();
+  galeriAyarlariDoldur();
+  anaListele();
+  document.getElementById('tbGirisBtn').style.display = 'block';
+}
+
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>

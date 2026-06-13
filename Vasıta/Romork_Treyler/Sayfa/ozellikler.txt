@@ -1,0 +1,24 @@
+Fiyat
+İlan Başlığı
+Konum
+Marka
+Model
+Yıl
+Araç Durumu
+Römork Tipi (Araba/Motorsiklet/Tekne)
+Azami Yük (kg)
+Boş Ağırlık (kg)
+Toplam Ağırlık (kg)
+İç Boyut (cm)
+Fren Sistemi
+Süspansiyon
+Lastik Ebadı
+Aks Sayısı
+Tente / Kapak
+Garanti
+Plaka / Uyruk
+Kimden
+Video Linki
+İlan Açıklaması
+Krediye Uygun
+Pazarlık / İndirim

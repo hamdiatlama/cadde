@@ -1,0 +1,491 @@
+{
+  "marka": "Volvo",
+  "modeller": [
+    {
+      "model": "1927–1929",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1929–1937",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1930–1937",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1935–1938",
+      "segment": "F",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1936–1945",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1938–1958",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1944–1966",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1946–1950",
+      "segment": "F",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1953–1969",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1956–1957",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1956–1970",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1961–1973",
+      "segment": "S",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1966–1974",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1968–1975",
+      "segment": "F",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1974–1993",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1975–1980",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1976–1991",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1977–1983",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1982–1992",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1986–1995",
+      "segment": "C",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1986–1991",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1987–1997",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1990–1996",
+      "segment": "D",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1991–1997",
+      "segment": "D",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1995–2004",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "1996–2000",
+      "segment": "D",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "1996–1998",
+      "segment": "E",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 19
+    },
+    {
+      "model": "1996–2005",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Coupe",
+        "Cabrio"
+      ],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "1998–2006",
+      "segment": "D",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 19,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "2000–2009",
+      "segment": "C",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "2000–2007",
+      "segment": "D",
+      "kasa_tipleri": [
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 20,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "2003–2014",
+      "segment": "D",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 20,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "2003–2012",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "2004–2012",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "2006–2013",
+      "segment": "C",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "2006–2016",
+      "segment": "E",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "2007–2016",
+      "segment": "E",
+      "kasa_tipleri": [
+        "Station Wagon"
+      ],
+      "uretim_baslangic": 20,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "2008–2017",
+      "segment": "C",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 20,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "2010–2018",
+      "segment": "C",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "2012–2019",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "2014–2016",
+      "segment": "D",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 20,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "2014–",
+      "segment": "D",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2016–",
+      "segment": "D",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2016–2025",
+      "segment": "D",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "2017–",
+      "segment": "C",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2018–2024",
+      "segment": "C",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": 20
+    },
+    {
+      "model": "2018–",
+      "segment": "C",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2019–",
+      "segment": "B",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2021–",
+      "segment": "B",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2023–",
+      "segment": "B",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2024–",
+      "segment": "D",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2025–",
+      "segment": "E",
+      "kasa_tipleri": [],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2026–",
+      "segment": "C",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1920s[edit]",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1930s[edit]",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1940s[edit]",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1950s[edit]",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1960s[edit]",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1970s[edit]",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1980s[edit]",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "1990s[edit]",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2000s[edit]",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2010s[edit]",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "2020s[edit]",
+      "segment": "B",
+      "kasa_tipleri": [],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    }
+  ],
+  "kaynak": "https://en.wikipedia.org/wiki/List_of_Volvo_vehicles"
+}

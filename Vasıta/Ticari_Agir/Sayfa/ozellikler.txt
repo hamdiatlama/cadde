@@ -1,0 +1,40 @@
+Fiyat
+İlan Başlığı
+Konum
+Marka
+Seri
+Model
+Yıl
+Yakıt Tipi
+Vites
+Araç Durumu
+KM
+Kasa Tipi (Çekici/Kamyon/Dorse)
+Motor Gücü
+Motor Hacmi
+Çekiş (4x2/6x2/6x4/8x4)
+Renk
+Garanti
+Plaka / Uyruk
+Kimden
+Takas
+Azami Çeki Ağırlığı (ton)
+Boş Ağırlık (ton)
+Dingil Sayısı
+Yakıt Deposu (litre)
+Lastik Sayısı
+Lastik Ebadı
+Fren Sistemi
+Süspansiyon
+Vites Kutusu Tipi
+Son Bakım Tarihi
+Muayene Tarihi
+Video Linki
+İlan Açıklaması
+VIN / Şasi No
+Emisyon Sınıfı
+Krediye Uygun
+Sigorta Durumu
+Pazarlık / İndirim
+İlk Tescil Tarihi
+Fatura Türü

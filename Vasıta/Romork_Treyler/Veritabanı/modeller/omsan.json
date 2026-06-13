@@ -1,0 +1,48 @@
+{
+  "marka": "OMSAN",
+  "modeller": [
+    {
+      "model": "Perdeli Dorse",
+      "kasa_tipleri": [
+        "Perde Treyler"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Kapalı Dorse",
+      "kasa_tipleri": [
+        "Kapalı Treyler"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Platform Dorse",
+      "kasa_tipleri": [
+        "Platform"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Tenteli Dorse",
+      "kasa_tipleri": [
+        "Perde Treyler"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Soğutmalı Dorse",
+      "kasa_tipleri": [
+        "Soğutmalı Treyler"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Lowbed",
+      "kasa_tipleri": [
+        "Düşük Yataklı"
+      ],
+      "uretim_baslangic": 2018
+    }
+  ],
+  "kaynak": "manuel"
+}

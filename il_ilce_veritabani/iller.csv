@@ -1,0 +1,82 @@
+﻿id,ad,plaka,telefon_kodu,bolge,nufus,slug
+1,Adana,01,322,Akdeniz,2.27,adana
+2,Adıyaman,02,416,Güneydoğu,0.63,adiyaman
+3,Afyonkarahisar,03,272,Ege,0.75,afyonkarahisar
+4,Ağrı,04,472,Doğu,0.52,agri
+5,Amasya,05,358,Karadeniz,0.34,amasya
+6,Ankara,06,312,İç Anadolu,5.8,ankara
+7,Antalya,07,242,Akdeniz,2.69,antalya
+8,Artvin,08,466,Karadeniz,0.17,artvin
+9,Aydın,09,256,Ege,1.15,aydin
+10,Balıkesir,10,266,Marmara,1.27,balikesir
+11,Bilecik,11,228,Marmara,0.22,bilecik
+12,Bingöl,12,426,Doğu,0.29,bingol
+13,Bitlis,13,434,Doğu,0.35,bitlis
+14,Bolu,14,374,Karadeniz,0.32,bolu
+15,Burdur,15,248,Akdeniz,0.27,burdur
+16,Bursa,16,224,Marmara,3.15,bursa
+17,Çanakkale,17,286,Marmara,0.56,canakkale
+18,Çankırı,18,376,İç Anadolu,0.2,cankiri
+19,Çorum,19,364,Karadeniz,0.53,corum
+20,Denizli,20,258,Ege,1.06,denizli
+21,Diyarbakır,21,412,Güneydoğu,1.82,diyarbakir
+22,Edirne,22,284,Marmara,0.42,edirne
+23,Elazığ,23,424,Doğu,0.6,elazig
+24,Erzincan,24,446,Doğu,0.24,erzincan
+25,Erzurum,25,442,Doğu,0.75,erzurum
+26,Eskişehir,26,222,İç Anadolu,0.91,eskisehir
+27,Gaziantep,27,342,Güneydoğu,2.15,gaziantep
+28,Giresun,28,454,Karadeniz,0.46,giresun
+29,Gümüşhane,29,456,Karadeniz,0.15,gumushane
+30,Hakkari,30,438,Doğu,0.28,hakkari
+31,Hatay,31,326,Akdeniz,1.69,hatay
+32,Isparta,32,246,Akdeniz,0.45,isparta
+33,Mersin,33,324,Akdeniz,1.93,mersin
+34,İstanbul,34,212/216,Marmara,15.66,i̇stanbul
+35,İzmir,35,232,Ege,4.48,i̇zmir
+36,Kars,36,474,Doğu,0.28,kars
+37,Kastamonu,37,366,Karadeniz,0.38,kastamonu
+38,Kayseri,38,352,İç Anadolu,1.44,kayseri
+39,Kırklareli,39,288,Marmara,0.37,kirklareli
+40,Kırşehir,40,386,İç Anadolu,0.24,kirsehir
+41,Kocaeli,41,262,Marmara,2.06,kocaeli
+42,Konya,42,332,İç Anadolu,2.3,konya
+43,Kütahya,43,274,Ege,0.58,kutahya
+44,Malatya,44,422,Doğu,0.81,malatya
+45,Manisa,45,236,Ege,1.46,manisa
+46,Kahramanmaraş,46,344,Akdeniz,1.19,kahramanmaras
+47,Mardin,47,482,Güneydoğu,0.87,mardin
+48,Muğla,48,252,Ege,1.07,mugla
+49,Muş,49,436,Doğu,0.4,mus
+50,Nevşehir,50,384,İç Anadolu,0.31,nevsehir
+51,Niğde,51,388,İç Anadolu,0.37,nigde
+52,Ordu,52,452,Karadeniz,0.77,ordu
+53,Rize,53,464,Karadeniz,0.35,rize
+54,Sakarya,54,264,Marmara,1.08,sakarya
+55,Samsun,55,362,Karadeniz,1.38,samsun
+56,Siirt,56,484,Güneydoğu,0.34,siirt
+57,Sinop,57,368,Karadeniz,0.22,sinop
+58,Sivas,58,346,İç Anadolu,0.64,sivas
+59,Tekirdağ,59,282,Marmara,1.17,tekirdag
+60,Tokat,60,356,Karadeniz,0.61,tokat
+61,Trabzon,61,462,Karadeniz,0.82,trabzon
+62,Tunceli,62,428,Doğu,0.08,tunceli
+63,Şanlıurfa,63,414,Güneydoğu,2.21,sanliurfa
+64,Uşak,64,276,Ege,0.38,usak
+65,Van,65,432,Doğu,1.15,van
+66,Yozgat,66,354,İç Anadolu,0.42,yozgat
+67,Zonguldak,67,372,Karadeniz,0.59,zonguldak
+68,Aksaray,68,382,İç Anadolu,0.43,aksaray
+69,Bayburt,69,458,Karadeniz,0.09,bayburt
+70,Karaman,70,338,İç Anadolu,0.26,karaman
+71,Kırıkkale,71,318,İç Anadolu,0.28,kirikkale
+72,Batman,72,488,Güneydoğu,0.63,batman
+73,Şırnak,73,486,Güneydoğu,0.56,sirnak
+74,Bartın,74,378,Karadeniz,0.2,bartin
+75,Ardahan,75,478,Doğu,0.1,ardahan
+76,Iğdır,76,476,Doğu,0.2,igdir
+77,Yalova,77,226,Marmara,0.3,yalova
+78,Karabük,78,370,Karadeniz,0.25,karabuk
+79,Kilis,79,348,Güneydoğu,0.15,kilis
+80,Osmaniye,80,328,Akdeniz,0.56,osmaniye
+81,Düzce,81,380,Karadeniz,0.4,duzce

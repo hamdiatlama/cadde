@@ -1,0 +1,54 @@
+{
+  "marka": "İtalyan Klasikleri",
+  "modeller": [
+    {
+      "model": "Alfa Romeo Giulia (105)",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1962,
+      "uretim_bitis": 1977
+    },
+    {
+      "model": "Alfa Romeo Spider",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1966,
+      "uretim_bitis": 1994
+    },
+    {
+      "model": "Lancia Stratos",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1973,
+      "uretim_bitis": 1978
+    },
+    {
+      "model": "Lancia Delta Integrale",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1986,
+      "uretim_bitis": 1994
+    },
+    {
+      "model": "Maserati Ghibli (Klasik)",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1967,
+      "uretim_bitis": 1973
+    },
+    {
+      "model": "Maserati Bora",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1971,
+      "uretim_bitis": 1978
+    }
+  ],
+  "kaynak": "manuel"
+}

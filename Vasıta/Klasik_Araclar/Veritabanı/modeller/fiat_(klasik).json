@@ -1,0 +1,54 @@
+{
+  "marka": "Fiat (Klasik)",
+  "modeller": [
+    {
+      "model": "124 Spider",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1966,
+      "uretim_bitis": 1985
+    },
+    {
+      "model": "500 (Nuova)",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1957,
+      "uretim_bitis": 1975
+    },
+    {
+      "model": "131 Abarth",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1974,
+      "uretim_bitis": 1980
+    },
+    {
+      "model": "Dino Spider",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1966,
+      "uretim_bitis": 1973
+    },
+    {
+      "model": "X1/9",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1972,
+      "uretim_bitis": 1988
+    },
+    {
+      "model": "Topolino",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1936,
+      "uretim_bitis": 1955
+    }
+  ],
+  "kaynak": "manuel"
+}

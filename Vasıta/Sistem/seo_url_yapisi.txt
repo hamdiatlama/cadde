@@ -1,0 +1,155 @@
+=== SEO & URL YAPISI ===
+
+────────────────────────────────────────
+URL ŞEMASI (Dostu URL / Slug)
+────────────────────────────────────────
+
+GENEL FORMAT:
+  /{tip_slugu}/{ilan_slugu}-{ilan_id}
+
+ÖRNEKLER:
+  /otomobil/mercedes-benz-c180-2020-12345
+  /suv-crossover/bmw-x5-2021-67890
+  /motosiklet/honda-cbr1000rr-2023-11111
+  /ticari-hafif/ford-transit-2019-22222
+
+────────────────────────────────────────
+KATEGORİ / TİP URL'LERİ
+────────────────────────────────────────
+
+  /otomobil
+  /suv-crossover
+  /mpv
+  /ticari-hafif
+  /ticari-agir
+  /otobus
+  /traktor-tarim
+  /is-makineleri
+  /motosiklet
+  /deniz-araclari
+  /ozel-amacli
+  /hafif-ticari-lcv
+  /romork-treyler
+  /segment-bazli
+
+FİLTRELİ LİSTELEME:
+  /otomobil?marka=bmw&model=3-serisi&yil_min=2020
+  /motosiklet?marka=honda&tip=sport&motor_cc_min=600
+
+────────────────────────────────────────
+İLAN SLUG OLUŞTURMA
+────────────────────────────────────────
+
+Format: {marka}-{model}-{yil}-{renk}-{il}
+
+Kurallar:
+  - Maksimum 70 karakter
+  - Sadece a-z, 0-9, "-" karakterleri
+  - Türkçe karakterler dönüşür: ü→u, ğ→g, ş→s, ç→c, ö→o, ı→i
+  - Birden fazla tire tek tireye dönüşür
+  - Baştaki/sondaki tireler silinir
+  - ID her zaman son parametre olarak eklenir
+
+Örnek:
+  İlan: BMW 3 Serisi 320i M Sport (2020, Bursa)
+  Slug: bmw-3-serisi-320i-m-sport-2020-bursa-54321
+  URL:  /otomobil/bmw-3-serisi-320i-m-sport-2020-bursa-54321
+
+────────────────────────────────────────
+META ETİKETLERİ (tipe özel)
+────────────────────────────────────────
+
+HER İLAN İÇİN:
+
+title:
+  {Marka} {Model} {Yıl} - {İl}/{İlçe}
+  Maksimum: 60 karakter
+  Örnek: "BMW 3 Serisi 2020 - Bursa/Nilüfer"
+
+description:
+  {Marka} {Model} {Yıl} model {Yakıt} {Vites} araç {Fiyat} TL
+  Maksimum: 160 karakter
+  Örnek: "BMW 3 Serisi 320i 2020 model Benzin Otomatik araç 1.250.000 TL.
+          42.000 km, Boyasız, Takas yok. Bursa Nilüfer'de satılık."
+
+keywords:
+  {marka}, {model}, {yil}, {tip_adi}, satılık, ikinci el, {il}, {fiyat}
+
+OG (Open Graph):
+  og:title          → title ile aynı
+  og:description    → description ile aynı
+  og:image          → ilanın 1. fotoğrafı (1200x630)
+  og:url            → ilanın canonical URL'si
+  og:type           → website
+  og:site_name      → site adı
+
+Twitter Card:
+  twitter:card      → summary_large_image
+  twitter:title     → title ile aynı
+  twitter:image     → 1. fotoğraf
+
+STRUCTURED DATA (JSON-LD / Schema.org):
+
+Product:
+  "@context": "https://schema.org"
+  "@type": "Product" | "Vehicle" | "Car" | "Motorcycle" | "Boat"
+  name: {Marka} {Model} {Yıl}
+  description: {description}
+  image: [fotoğraf URL'leri]
+  brand: {Marka}
+  model: {Model}
+  vehicleModelDate: {Yıl}
+  offers: {
+    "@type": "Offer"
+    price: {Fiyat}
+    priceCurrency: {Döviz}
+    availability: "https://schema.org/InStock" | "https://schema.org/SoldOut"
+    itemCondition: "https://schema.org/UsedCondition" | "https://schema.org/NewCondition"
+  }
+
+────────────────────────────────────────
+CANONICAL & HREFLANG
+────────────────────────────────────────
+
+- Her ilan sayfasında canonical URL bulunur
+- Çoklu dil desteği varsa hreflang etiketleri eklenir:
+  <link rel="alternate" hreflang="tr" href="..." />
+  <link rel="alternate" hreflang="en" href="..." />
+  <link rel="alternate" hreflang="ar" href="..." />
+
+────────────────────────────────────────
+ROBOTS & SİTEMAP
+────────────────────────────────────────
+
+robots.txt:
+  - Allow: /
+  - Disallow: /hesabim/
+  - Disallow: /admin/
+  - Disallow: /mesajlar/
+  - Sitemap: https://siteadi.com/sitemap.xml
+
+Sitemap:
+  - Ana sitemap: her tip için ayrı alt sitemap
+    /sitemap-otomobil.xml
+    /sitemap-motosiklet.xml
+    ...
+  - Her sitemap maksimum 50.000 URL veya 50 MB
+  - Dinamik (cache ile yenilenir, günde 1 kez)
+
+────────────────────────────────────────
+PAGINATION
+────────────────────────────────────────
+
+  /otomobil?sayfa=2
+  Rel=next / prev etiketleri kullanılır
+  Maksimum 500 sayfa (50.000 sonuç) indexlenir
+  Diğer sayfalar noindex ile işaretlenir
+
+────────────────────────────────────────
+404 / 301 YÖNETİMİ
+────────────────────────────────────────
+
+- Silinen ilanlar → 301 ile benzer ilan listesine yönlendir
+- Süresi dolan ilanlar → 410 Gone
+- Taşınan URL'ler → 301 redirect (eski → yeni)
+- Özel 404 sayfası: "Aradığınız ilan bulunamadı" + benzer ilanlar

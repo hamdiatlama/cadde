@@ -1,0 +1,146 @@
+{
+  "marka": "Caterpillar",
+  "modeller": [
+    {
+      "model": "320",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "320 GC",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "323",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "330",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "336",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "395",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "D6",
+      "kasa_tipleri": [
+        "Dozer"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "D8",
+      "kasa_tipleri": [
+        "Dozer"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "D11",
+      "kasa_tipleri": [
+        "Dozer"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "950 GC",
+      "kasa_tipleri": [
+        "Yükleyici"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "966",
+      "kasa_tipleri": [
+        "Yükleyici"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "980",
+      "kasa_tipleri": [
+        "Yükleyici"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "MH3022",
+      "kasa_tipleri": [
+        "Malzeme Elleçleme"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "CS78B",
+      "kasa_tipleri": [
+        "Silindir"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "CB10",
+      "kasa_tipleri": [
+        "Silindir"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "725",
+      "kasa_tipleri": [
+        "Damperli Kamyon"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "770G",
+      "kasa_tipleri": [
+        "Damperli Kamyon"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "793",
+      "kasa_tipleri": [
+        "Maden Kamyonu"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "M315D2",
+      "kasa_tipleri": [
+        "Mini Ekskavatör"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "303.5E",
+      "kasa_tipleri": [
+        "Mini Ekskavatör"
+      ],
+      "uretim_baslangic": 2016
+    }
+  ],
+  "kaynak": "manuel"
+}

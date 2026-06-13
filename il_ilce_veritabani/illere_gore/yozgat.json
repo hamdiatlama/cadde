@@ -1,0 +1,49 @@
+{
+  "il_id": 66,
+  "il": "Yozgat",
+  "plaka": "66",
+  "ilceler": [
+    {
+      "ilce": "Akdağmadeni"
+    },
+    {
+      "ilce": "Aydıncık"
+    },
+    {
+      "ilce": "Boğazlıyan"
+    },
+    {
+      "ilce": "Kadışehri"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Saraykent"
+    },
+    {
+      "ilce": "Sarıkaya"
+    },
+    {
+      "ilce": "Sorgun"
+    },
+    {
+      "ilce": "Yenifakılı"
+    },
+    {
+      "ilce": "Yerköy"
+    },
+    {
+      "ilce": "Çandır"
+    },
+    {
+      "ilce": "Çayıralan"
+    },
+    {
+      "ilce": "Çekerek"
+    },
+    {
+      "ilce": "Şefaatli"
+    }
+  ]
+}

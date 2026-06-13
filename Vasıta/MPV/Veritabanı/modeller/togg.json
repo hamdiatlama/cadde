@@ -1,0 +1,52 @@
+{
+  "marka": "Togg",
+  "modeller": [
+    {
+      "model": "Togg T10X",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Togg T10F",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Sedan",
+        "Fastback"
+      ],
+      "uretim_baslangic": 20,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Togg T8CX",
+      "segment": "B",
+      "kasa_tipleri": [
+        "Coupe"
+      ],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Togg T8X",
+      "segment": "J",
+      "kasa_tipleri": [
+        "SUV"
+      ],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    },
+    {
+      "model": "Togg 10V",
+      "segment": "M",
+      "kasa_tipleri": [
+        "MPV"
+      ],
+      "uretim_baslangic": null,
+      "uretim_bitis": null
+    }
+  ],
+  "kaynak": "https://en.wikipedia.org/wiki/Togg"
+}

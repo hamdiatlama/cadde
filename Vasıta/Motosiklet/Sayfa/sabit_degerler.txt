@@ -1,0 +1,32 @@
+=== Motosiklet SABIT DEGERLER ===
+
+[Araç Durumu]
+- (deger listesi eklenecek)
+
+[Kimden]
+- (deger listesi eklenecek)
+
+[Renk]
+- (deger listesi eklenecek)
+
+[Garanti Durumu]
+- (deger listesi eklenecek)
+
+[Plaka / Uyruk]
+- (deger listesi eklenecek)
+
+[Döviz Cinsi]
+- (deger listesi eklenecek)
+
+[Motosiklet Tipi]
+- (deger listesi eklenecek)
+
+[Soğutma Tipi]
+- (deger listesi eklenecek)
+
+[Vites Tipi]
+- (deger listesi eklenecek)
+
+[ABS Durumu]
+- (deger listesi eklenecek)
+

@@ -1,0 +1,48 @@
+{
+  "marka": "Hymer",
+  "modeller": [
+    {
+      "model": "ML-T 580",
+      "kasa_tipleri": [
+        "Motorhome"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "B-Class SL 540",
+      "kasa_tipleri": [
+        "Motorhome"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Exsis-i 480",
+      "kasa_tipleri": [
+        "Motorhome"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Grand Canyon S 820",
+      "kasa_tipleri": [
+        "Motorhome"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "VisionVenture",
+      "kasa_tipleri": [
+        "Motorhome"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Mercedes Marco Polo",
+      "kasa_tipleri": [
+        "Kamyonet Karavan"
+      ],
+      "uretim_baslangic": 2015
+    }
+  ],
+  "kaynak": "manuel"
+}

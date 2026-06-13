@@ -1,0 +1,48 @@
+{
+  "marka": "XCMG",
+  "modeller": [
+    {
+      "model": "XE215C",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "XE335C",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "XE470C",
+      "kasa_tipleri": [
+        "Ekskavatör"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "ZL50GN",
+      "kasa_tipleri": [
+        "Yükleyici"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "GR1803",
+      "kasa_tipleri": [
+        "Greyder"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "XS182J",
+      "kasa_tipleri": [
+        "Silindir"
+      ],
+      "uretim_baslangic": 2017
+    }
+  ],
+  "kaynak": "manuel"
+}

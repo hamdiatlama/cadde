@@ -1,0 +1,31 @@
+Fiyat
+İlan Başlığı
+Konum
+Marka
+Model
+Yıl
+Araç Durumu (Restore Edildi/Orijinal/Proje)
+KM
+Motor Gücü
+Motor Hacmi
+Vites
+Çekiş
+Renk
+Orijinal Boya
+Kimden
+Takas
+Kasa Tipi
+Koltuk Sayısı
+Kapı Sayısı
+Restorasyon Durumu
+Orijinal Parça Oranı (%)
+Belge Durumu (Ruhsat/Proje)
+Klasik Otomobil Federasyon Kaydı
+Sigorta Durumu
+Son Bakım Tarihi
+Ekspertiz Raporu
+Video Linki
+İlan Açıklaması
+VIN / Şasi No
+Araç Geçmişi
+Pazarlık / İndirim

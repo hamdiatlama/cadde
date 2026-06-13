@@ -1,0 +1,211 @@
+=== SABİT DEĞER LİSTELERİ ===
+(İlan sitesinde kullanılacak enum/select değerleri)
+
+[Yakıt Tipi]
+- Benzin
+- Dizel
+- Elektrik
+- Hibrit
+- Benzin + LPG
+- Plug-in Hibrit
+- Hidrojen
+
+[Vites Tipi]
+- Manuel
+- Otomatik (Tork Konvertörlü)
+- Otomatik (DSG / Çift Kavrama)
+- Otomatik (CVT)
+- Otomatik (Multitronic)
+- Yarı Otomatik
+- Tiptronic
+- AMT
+
+[Kasa Tipi]
+- Sedan
+- Hatchback (3 Kapı)
+- Hatchback (5 Kapı)
+- Station Wagon
+- Coupe
+- Cabrio
+- SUV
+- Crossover
+- MPV
+- Pick-up
+- Van
+- Fastback
+- Liftback
+- Hardtop
+
+[Çekiş Tipi]
+- Önden Çekiş
+- Arkadan İtiş
+- 4WD (Sürekli)
+- 4WD (Seçilebilir)
+- AWD (Otomatik)
+
+[Araç Durumu]
+- İkinci El
+- Sıfır
+- Sıfır Ayarlı
+- Test Aracı
+
+[Kimden]
+- Sahibinden
+- Galeriden
+- Yetkili Bayiden
+
+[Renk]
+- Beyaz
+- Siyah
+- Gri
+- Gümüş
+- Kırmızı
+- Mavi
+- Lacivert
+- Yeşil
+- Bordo
+- Kahverengi
+- Bej / Kreme
+- Turuncu
+- Sarı
+- Mor
+- Füme
+- Şampanya
+- Altın
+- Gri (Metalik)
+- Mavi (Metalik)
+
+[Garanti Durumu]
+- Yok
+- Var (Yetkili Servis)
+- Var (Özel Servis)
+- Garanti Süreli (ay olarak)
+
+[Plaka / Uyruk]
+- Türkiye (TR) Plakalı
+- Yabancı Plaka
+- Mavi (MA) Plakalı
+
+[Döviz Cinsi]
+- TL
+- USD
+- EUR
+- GBP
+
+[Emisyon Sınıfı]
+- Euro 3
+- Euro 4
+- Euro 5
+- Euro 5b
+- Euro 6
+- Euro 6b
+- Euro 6c
+- Euro 6d
+- Euro 6e
+- Euro 7
+
+[İlan Durumu]
+- Taslak
+- Onay Bekliyor
+- Yayında
+- Yayında (Öne Çıkan)
+- Süresi Doldu
+- İptal Edildi
+- Satıldı
+
+[Yıllık MTV Dilimleri]
+- 1-3 Yaş
+- 4-6 Yaş
+- 7-11 Yaş
+- 12-15 Yaş
+- 16+ Yaş
+
+[LPG Durumu]
+- Yok
+- Var (Sıralı)
+- Var (Enjeksiyonlu)
+- Var (LPG li)
+- Sonradan Takma
+
+[Ekspertiz Raporu]
+- Yok
+- Var (Yetkili Ekspertiz)
+- Var (Özel Ekspertiz)
+- Var (Online Rapor)
+
+[Krediye Uygunluk]
+- Uygun
+- Değil
+- Banka Kredisine Uygun
+- Kasko Değerine Uygun
+
+[Takas Durumu]
+- Yok
+- Var (Araçla Takas)
+- Var (Nakit + Takas)
+
+[Donanım Paketi (Genel)]
+- Base / Standart
+- Comfort / Konfor
+- Style / Tasarım
+- Sport / Spor
+- Premium / Lüks
+- Executive / İşletme
+- Launch Edition / Çıkış Paketi
+- Sınırlı Seri / Special Edition
+- Full Paket
+
+[Koltuk Sayısı]
+- 2
+- 4
+- 5
+- 6
+- 7
+- 8
+- 9
+
+[Kapı Sayısı]
+- 2
+- 3
+- 4
+- 5
+
+[İlan Türü]
+- Bireysel
+- Kurumsal (Galeri)
+- Yetkili Bayi
+
+[Pazarlık Durumu]
+- Pazarlıklı
+- Pazarlıksız
+- İndirim Yapılabilir
+
+[Sigorta Durumu]
+- Yok
+- Zorunlu Trafik Sigortası Var
+- Kasko Var
+- Tam Sigortalı
+
+[Sahip Sayısı]
+- 1 (İlk Sahibinden)
+- 2
+- 3+
+- Belirtilmemiş
+
+[Aksesuarlar / Ekstralar]
+- Orijinal Bagaj Havuzu
+- Orijinal Paspas Seti
+- Kar Lastiği
+- Yaz Lastiği
+- 2. Anahtar
+- Navigasyon SD Kartı
+- İlk Yardım Çantası
+- Reflektör
+- Stepne
+- Tamir Takımı
+- Kış Paketi
+- Çeki Halatı
+- Kablosuz Şarj (sonradan)
+- Cam Filmi
+- Boya Koruma Kaplama
+- Altın Korumalık / Rampa

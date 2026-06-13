@@ -1,0 +1,174 @@
+{
+  "marka": "Kawasaki",
+  "modeller": [
+    {
+      "model": "Ninja H2",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Ninja H2R",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Ninja ZX-10R",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Ninja ZX-6R",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2013
+    },
+    {
+      "model": "Ninja 650",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "Ninja 400",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Ninja 125",
+      "kasa_tipleri": [
+        "Sport"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Z H2",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Z900",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Z650",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Z400",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Z125 Pro",
+      "kasa_tipleri": [
+        "Mini"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Versys 1000",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Versys 650",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Versys-X 300",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "KX450",
+      "kasa_tipleri": [
+        "Motokros"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "KX250",
+      "kasa_tipleri": [
+        "Motokros"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "KX85",
+      "kasa_tipleri": [
+        "Motokros"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "KLX300R",
+      "kasa_tipleri": [
+        "Enduro"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "KLX140R",
+      "kasa_tipleri": [
+        "Enduro"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "W800",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Z900RS",
+      "kasa_tipleri": [
+        "Klasik Naked"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Eliminator 500",
+      "kasa_tipleri": [
+        "Cruiser"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "Vulcan S",
+      "kasa_tipleri": [
+        "Cruiser"
+      ],
+      "uretim_baslangic": 2015
+    }
+  ],
+  "kaynak": "manuel"
+}

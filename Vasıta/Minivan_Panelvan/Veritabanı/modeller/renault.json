@@ -1,0 +1,55 @@
+{
+  "marka": "Renault",
+  "modeller": [
+    {
+      "model": "Trafic Panelvan",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Trafic Passenger",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Kangoo Panelvan",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Master Panelvan",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2010
+    },
+    {
+      "model": "Master Minibus",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2010
+    },
+    {
+      "model": "Espace",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Scenic",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2016
+    }
+  ],
+  "kaynak": "manuel"
+}

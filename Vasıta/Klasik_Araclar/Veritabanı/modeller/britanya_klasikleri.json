@@ -1,0 +1,78 @@
+{
+  "marka": "Britanya Klasikleri",
+  "modeller": [
+    {
+      "model": "Aston Martin DB5",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1963,
+      "uretim_bitis": 1965
+    },
+    {
+      "model": "Aston Martin DB6",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1965,
+      "uretim_bitis": 1970
+    },
+    {
+      "model": "Bentley Continental S1",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1955,
+      "uretim_bitis": 1959
+    },
+    {
+      "model": "Bentley Mulsanne (Klasik)",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1980,
+      "uretim_bitis": 1992
+    },
+    {
+      "model": "Rolls-Royce Silver Cloud",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1955,
+      "uretim_bitis": 1966
+    },
+    {
+      "model": "Rolls-Royce Silver Shadow",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1965,
+      "uretim_bitis": 1980
+    },
+    {
+      "model": "MG B",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1962,
+      "uretim_bitis": 1980
+    },
+    {
+      "model": "Triumph TR6",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1969,
+      "uretim_bitis": 1976
+    },
+    {
+      "model": "Triumph Spitfire",
+      "kasa_tipleri": [
+        "Klasik"
+      ],
+      "uretim_baslangic": 1962,
+      "uretim_bitis": 1980
+    }
+  ],
+  "kaynak": "manuel"
+}

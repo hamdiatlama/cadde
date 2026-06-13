@@ -1,0 +1,2 @@
+-- Extensions cannot be dropped if objects depend on them
+-- This file is a placeholder; extensions are managed separately

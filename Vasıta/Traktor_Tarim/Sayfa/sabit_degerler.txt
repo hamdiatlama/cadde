@@ -1,0 +1,29 @@
+=== Traktör & Tarım SABIT DEGERLER ===
+
+[Araç Durumu]
+- (deger listesi eklenecek)
+
+[Kimden]
+- (deger listesi eklenecek)
+
+[Renk]
+- (deger listesi eklenecek)
+
+[Garanti Durumu]
+- (deger listesi eklenecek)
+
+[Plaka / Uyruk]
+- (deger listesi eklenecek)
+
+[Döviz Cinsi]
+- (deger listesi eklenecek)
+
+[Çekiş Tipi]
+- (deger listesi eklenecek)
+
+[Şanzıman Tipi]
+- (deger listesi eklenecek)
+
+[Kabin Tipi]
+- (deger listesi eklenecek)
+

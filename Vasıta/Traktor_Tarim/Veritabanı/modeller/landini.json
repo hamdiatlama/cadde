@@ -1,0 +1,48 @@
+{
+  "marka": "Landini",
+  "modeller": [
+    {
+      "model": "Rex 4",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Rex 3",
+      "kasa_tipleri": [
+        "Kompakt Traktör"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Rex F",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Rex 4 GT",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Powerfarm",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Legend",
+      "kasa_tipleri": [
+        "Büyük Traktör"
+      ],
+      "uretim_baslangic": 2021
+    }
+  ],
+  "kaynak": "manuel"
+}

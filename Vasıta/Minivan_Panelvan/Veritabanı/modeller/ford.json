@@ -1,0 +1,55 @@
+{
+  "marka": "Ford",
+  "modeller": [
+    {
+      "model": "Tourneo Custom",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "Tourneo Courier",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Transit Custom Kombi",
+      "kasa_tipleri": [
+        "Minivan"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "Transit Custom Panelvan",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "Transit Panelvan",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Transit Courier Panelvan",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "E-Transit",
+      "kasa_tipleri": [
+        "Panelvan"
+      ],
+      "uretim_baslangic": 2022
+    }
+  ],
+  "kaynak": "manuel"
+}

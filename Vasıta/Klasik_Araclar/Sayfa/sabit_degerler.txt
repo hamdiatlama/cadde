@@ -1,0 +1,26 @@
+=== Klasik Araçlar SABIT DEGERLER ===
+
+[Araç Durumu (Orijinal/Restore/Proje)]
+- (deger listesi eklenecek)
+
+[Vites Tipi]
+- (deger listesi eklenecek)
+
+[Kimden]
+- (deger listesi eklenecek)
+
+[Renk]
+- (deger listesi eklenecek)
+
+[Döviz Cinsi]
+- (deger listesi eklenecek)
+
+[Kasa Tipi]
+- (deger listesi eklenecek)
+
+[Belge Durumu]
+- (deger listesi eklenecek)
+
+[Restorasyon Seviyesi]
+- (deger listesi eklenecek)
+

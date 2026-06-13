@@ -1,0 +1,62 @@
+{
+  "marka": "Husqvarna Motorcycles",
+  "modeller": [
+    {
+      "model": "Vitpilen 401",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Vitpilen 250",
+      "kasa_tipleri": [
+        "Naked"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Svartpilen 401",
+      "kasa_tipleri": [
+        "Scrambler"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Svartpilen 250",
+      "kasa_tipleri": [
+        "Scrambler"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Norden 901",
+      "kasa_tipleri": [
+        "Adventure"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "TE 300i",
+      "kasa_tipleri": [
+        "Enduro"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "FE 350",
+      "kasa_tipleri": [
+        "Enduro"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "FC 450",
+      "kasa_tipleri": [
+        "Motokros"
+      ],
+      "uretim_baslangic": 2017
+    }
+  ],
+  "kaynak": "manuel"
+}

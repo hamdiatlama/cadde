@@ -1,0 +1,55 @@
+{
+  "marka": "DAF",
+  "modeller": [
+    {
+      "model": "LF Serisi",
+      "kasa_tipleri": [
+        "Orta Kamyon"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "CF Serisi",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "XF Serisi",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "XG Serisi",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "XG+ Serisi",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "XD Serisi",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "LF Electric",
+      "kasa_tipleri": [
+        "Elektrikli Orta Kamyon"
+      ],
+      "uretim_baslangic": 2021
+    }
+  ],
+  "kaynak": "manuel"
+}

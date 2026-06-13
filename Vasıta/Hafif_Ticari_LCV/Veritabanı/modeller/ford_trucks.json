@@ -1,0 +1,62 @@
+{
+  "marka": "Ford Trucks",
+  "modeller": [
+    {
+      "model": "F-MAX",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "F-LINE",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2023
+    },
+    {
+      "model": "Cargo 1832",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Cargo 1843",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Transit Custom",
+      "kasa_tipleri": [
+        "Hafif Ticari"
+      ],
+      "uretim_baslangic": 2012
+    },
+    {
+      "model": "Transit Courier",
+      "kasa_tipleri": [
+        "Hafif Ticari"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Transit",
+      "kasa_tipleri": [
+        "Hafif Ticari"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Tourneo Custom",
+      "kasa_tipleri": [
+        "Hafif Ticari"
+      ],
+      "uretim_baslangic": 2012
+    }
+  ],
+  "kaynak": "manuel"
+}

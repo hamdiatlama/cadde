@@ -1,0 +1,41 @@
+{
+  "marka": "Giant",
+  "modeller": [
+    {
+      "model": "Explore E+ 2",
+      "kasa_tipleri": [
+        "e-Bisiklet"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "FastRoad E+ EX",
+      "kasa_tipleri": [
+        "e-Bisiklet"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Trance X E+ Elite",
+      "kasa_tipleri": [
+        "e-Bisiklet"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "Talon E+",
+      "kasa_tipleri": [
+        "e-Bisiklet"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Liv Amiti E+",
+      "kasa_tipleri": [
+        "e-Bisiklet"
+      ],
+      "uretim_baslangic": 2020
+    }
+  ],
+  "kaynak": "manuel"
+}

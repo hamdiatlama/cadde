@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Taksi - Müşteri</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,sans-serif}
+body{background:#f8f9fa;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:10px}
+/* Honor X8: 1080x2400 -> 390x844 mantigi */
+.phone{width:390px;height:844px;background:#fff;border-radius:38px;overflow:hidden;position:relative;box-shadow:0 0 0 3px #e5e7eb,0 20px 60px rgba(0,0,0,.15)}
+.notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:152px;height:28px;background:#111;border-radius:0 0 18px 18px;z-index:100}
+.status-bar{display:flex;justify-content:space-between;padding:10px 20px 6px;font-size:12px;font-weight:600;background:#fff;z-index:99;position:relative}
+/* Harita */
+#map{height:100%;width:100%;position:absolute;top:0;left:0;z-index:0}
+.map-overlay{position:absolute;top:0;left:0;right:0;bottom:0;z-index:1;pointer-events:none}
+.map-overlay>*{pointer-events:auto}
+/* Ust arama cubugu */
+.top-bar{position:absolute;top:44px;left:16px;right:16px;z-index:10}
+.loc-search{background:#fff;border-radius:16px;padding:6px 16px;box-shadow:0 4px 20px rgba(0,0,0,.12);display:flex;align-items:center;gap:12px;cursor:pointer;transition:.2s}
+.loc-search:active{transform:scale(.97)}
+.loc-search .material-icons{color:#6b7280;font-size:22px}
+.loc-search .loc-text{flex:1}
+.loc-search .loc-text .where{font-size:16px;font-weight:600;color:#111}
+.loc-search .loc-text .to{font-size:13px;color:#9ca3af;margin-top:2px}
+.loc-search .mic-btn{background:#10b981;color:#fff;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;transition:.2s}
+.loc-search .mic-btn:active{transform:scale(.9)}
+/* Alt panel */
+.bottom-sheet{position:absolute;bottom:0;left:0;right:0;background:#fff;border-radius:24px 24px 0 0;z-index:10;padding:14px 20px 28px;box-shadow:0 -4px 30px rgba(0,0,0,.08);transition:transform .3s;max-height:60vh;overflow-y:auto}
+.handle{width:42px;height:4px;background:#e5e7eb;border-radius:4px;margin:0 auto 12px}
+/* Ana ekran - servis secimi */
+.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:6px}
+.service-card{background:#f9fafb;border-radius:16px;padding:14px;text-align:center;border:1.5px solid transparent;cursor:pointer;transition:.2s}
+.service-card:active{transform:scale(.96)}
+.service-card.active{border-color:#10b981;background:#f0fdf4}
+.service-card .material-icons{font-size:32px;color:#10b981}
+.service-card .s-name{font-size:14px;font-weight:600;color:#111;margin-top:4px}
+.service-card .s-price{font-size:12px;color:#6b7280;margin-top:2px}
+.service-card .s-time{font-size:11px;color:#9ca3af}
+/* Fiyat detay */
+.price-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid #f3f4f6}
+.price-row:last-child{border:none}
+.price-row .pr-label{display:flex;align-items:center;gap:8px;font-size:14px;color:#374151}
+.price-row .pr-label .material-icons{font-size:20px;color:#9ca3af}
+.price-row .pr-val{font-size:16px;font-weight:600;color:#111}
+.price-row .pr-total{font-size:24px;font-weight:700;color:#10b981}
+/* Buton */
+.btn-call{background:#10b981;color:#fff;border:none;border-radius:16px;padding:16px;font-size:17px;font-weight:600;width:100%;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px}
+.btn-call:active{transform:scale(.97)}
+.btn-call:disabled{background:#d1d5db;color:#9ca3af;cursor:default}
+.btn-danger{background:#ef4444;color:#fff;border:none;border-radius:16px;padding:16px;font-size:17px;font-weight:600;width:100%;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px}
+.btn-danger:active{transform:scale(.97)}
+/* Surucu bekleniyor */
+.waiting{text-align:center;padding:6px 0}
+.waiting .car-icon{font-size:48px;animation:bounce 1s infinite}
+.waiting .w-text{font-size:16px;font-weight:600;color:#111;margin-top:6px}
+.waiting .w-sub{font-size:13px;color:#6b7280;margin-top:2px}
+.waiting .w-dots{font-size:24px;color:#10b981;animation:pulse 1.2s infinite;margin-top:4px}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+/* Surucu bilgi */
+.driver-card{background:#f9fafb;border-radius:16px;padding:14px;display:flex;align-items:center;gap:12px;margin:6px 0}
+.driver-card .d-avatar{width:48px;height:48px;border-radius:50%;background:#10b981;color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700}
+.driver-card .d-info{flex:1}
+.driver-card .d-info .d-name{font-size:15px;font-weight:600;color:#111}
+.driver-card .d-info .d-car{font-size:13px;color:#6b7280}
+.driver-card .d-info .d-rating{font-size:12px;color:#f59e0b}
+.driver-card .d-actions{display:flex;gap:6px}
+.driver-card .d-actions button{width:40px;height:40px;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s}
+.driver-card .d-actions button:active{transform:scale(.9)}
+.driver-card .d-actions .call-btn{background:#e8f5e9;color:#10b981}
+.driver-card .d-actions .msg-btn{background:#e3f2fd;color:#3b82f6}
+/* Active trip */
+.trip-status{display:flex;align-items:center;gap:10px;padding:10px 0}
+.trip-status .ts-icon{width:36px;height:36px;border-radius:50%;background:#f0fdf4;color:#10b981;display:flex;align-items:center;justify-content:center}
+.trip-status .ts-info{flex:1}
+.trip-status .ts-info .ts-main{font-size:15px;font-weight:600;color:#111}
+.trip-status .ts-info .ts-sub{font-size:13px;color:#6b7280}
+/* Adres girisi animasyonu */
+.address-inputs{display:none;margin-bottom:8px}
+.address-row{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;cursor:pointer;transition:.1s}
+.address-row:active{background:#f3f4f6}
+.address-row .dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.address-row .dot.g{background:#10b981}
+.address-row .dot.r{background:#ef4444}
+.address-row .adr-text{flex:1}
+.address-row .adr-text .adr-label{font-size:14px;font-weight:500;color:#111}
+.address-row .adr-text .adr-sub{font-size:12px;color:#9ca3af}
+.address-conn{width:2px;height:12px;background:#e5e7eb;margin-left:14px}
+/* Hizli secenekler */
+.quick-options{display:flex;gap:8px;padding:6px 0}
+.q-chip{display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:20px;font-size:12px;font-weight:500;cursor:pointer;transition:.15s;border:1.5px solid #e5e7eb;background:#fff;color:#374151}
+.q-chip:active{background:#f3f4f6}
+.q-chip .material-icons{font-size:16px;color:#6b7280}
+/* Bottom nav */
+.bottom-nav{position:absolute;bottom:0;left:0;right:0;display:flex;background:#fff;border-top:1px solid #f3f4f6;z-index:11;display:none}
+.nav-item{flex:1;text-align:center;padding:6px 0 10px;cursor:pointer;transition:.15s}
+.nav-item .material-icons{font-size:24px;color:#9ca3af}
+.nav-item.active .material-icons{color:#10b981}
+.nav-item .nav-label{font-size:11px;color:#9ca3af;margin-top:2px}
+.nav-item.active .nav-label{color:#10b981;font-weight:500}
+/* Adres arama modal */
+.modal{display:none;position:absolute;top:0;left:0;right:0;bottom:0;background:#fff;z-index:50;flex-direction:column}
+.modal.show{display:flex}
+.modal-header{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid #f3f4f6}
+.modal-header input{flex:1;border:none;font-size:16px;outline:none;padding:8px 0}
+.modal-header input::placeholder{color:#9ca3af}
+.modal-body{flex:1;overflow-y:auto;padding:8px 0}
+.modal-body .suggestion{display:flex;align-items:center;gap:12px;padding:14px 20px;cursor:pointer;transition:.1s}
+.modal-body .suggestion:active{background:#f3f4f6}
+.modal-body .suggestion .s-icon{width:40px;height:40px;border-radius:50%;background:#f3f4f6;display:flex;align-items:center;justify-content:center;color:#6b7280}
+.modal-body .suggestion .s-info{flex:1}
+.modal-body .suggestion .s-info .s-name{font-size:14px;font-weight:500;color:#111}
+.modal-body .suggestion .s-info .s-addr{font-size:12px;color:#9ca3af}
+/* Yardimci */
+.hidden{display:none!important}
+.fade-in{animation:fadeIn .3s}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+<div class="phone" id="phone">
+  <div class="notch"></div>
+  <div class="status-bar"><span>9:41</span><span>🔋 94%</span></div>
+
+  <!-- Harita -->
+  <div id="map"></div>
+
+  <!-- Ust arama cubugu -->
+  <div class="top-bar">
+    <div class="loc-search" onclick="acModal()">
+      <span class="material-icons">search</span>
+      <div class="loc-text">
+        <div class="where" id="gidilecekYer">Nereye gitmek istiyorsunuz?</div>
+        <div class="to" id="bulundugunYer">Kadıköy, İstanbul</div>
+      </div>
+      <button class="mic-btn" onclick="event.stopPropagation()"><span class="material-icons">mic</span></button>
+    </div>
+  </div>
+
+  <!-- Alt panel -->
+  <div class="bottom-sheet" id="bottomSheet">
+    <div class="handle"></div>
+
+    <!-- Ana ekran -->
+    <div id="homeScreen">
+      <div class="home-grid">
+        <div class="service-card active" onclick="sec('economy')">
+          <span class="material-icons">directions_car</span>
+          <div class="s-name">Economy</div>
+          <div class="s-price">~₺124</div>
+          <div class="s-time">3 dk</div>
+        </div>
+        <div class="service-card" onclick="sec('comfort')">
+          <span class="material-icons">car_rental</span>
+          <div class="s-name">Comfort</div>
+          <div class="s-price">~₺189</div>
+          <div class="s-time">5 dk</div>
+        </div>
+        <div class="service-card" onclick="sec('premium')">
+          <span class="material-icons">airport_shuttle</span>
+          <div class="s-name">Premium</div>
+          <div class="s-price">~₺295</div>
+          <div class="s-time">7 dk</div>
+        </div>
+        <div class="service-card" onclick="sec('taxi')">
+          <span class="material-icons">local_taxi</span>
+          <div class="s-name">Taksi</div>
+          <div class="s-price">Taksimetre</div>
+          <div class="s-time">2 dk</div>
+        </div>
+      </div>
+      <div class="price-row"><div class="pr-label"><span class="material-icons">straighten</span>Mesafe</div><div class="pr-val">6.2 km</div></div>
+      <div class="price-row"><div class="pr-label"><span class="material-icons">schedule</span>Tahmini süre</div><div class="pr-val">18 dk</div></div>
+      <div class="price-row"><div class="pr-label"><span class="material-icons">payments</span>Ödeme</div><div class="pr-val" style="display:flex;align-items:center;gap:6px"><span class="material-icons" style="font-size:18px;color:#6b7280">credit_card</span> Kart</div></div>
+      <div class="price-row" style="border:none;padding-bottom:0"><div class="pr-label"><span class="material-icons">price_change</span>Toplam</div><div class="pr-total">₺124</div></div>
+      <button class="btn-call" onclick="taksiCagir()"><span class="material-icons">local_taxi</span> Taksi Çağır</button>
+    </div>
+
+    <!-- Surucu araniyor -->
+    <div id="waitingScreen" class="hidden">
+      <div class="waiting">
+        <div class="car-icon">🚕</div>
+        <div class="w-text">Sürücü aranıyor</div>
+        <div class="w-sub">Yakınınızdaki sürücüler taranıyor</div>
+        <div class="w-dots">● ● ●</div>
+      </div>
+      <button class="btn-danger" onclick="iptal()"><span class="material-icons">close</span> İptal Et</button>
+    </div>
+
+    <!-- Surucu bulundu -->
+    <div id="foundScreen" class="hidden">
+      <div class="driver-card">
+        <div class="d-avatar">A</div>
+        <div class="d-info">
+          <div class="d-name">Ahmet Yılmaz</div>
+          <div class="d-car">34 TKS 123 • Toyota Corolla</div>
+          <div class="d-rating"><span class="material-icons" style="font-size:14px;vertical-align:middle">star</span> 4.9 (128 yolculuk)</div>
+        </div>
+        <div class="d-actions">
+          <button class="call-btn" onclick="alert('Arani Yor: 0555 xxx xx xx')"><span class="material-icons">call</span></button>
+          <button class="msg-btn" onclick="alert('Mesaj kutusu acilir')"><span class="material-icons">chat</span></button>
+        </div>
+      </div>
+      <div class="price-row"><div class="pr-label"><span class="material-icons">straighten</span>Mesafe</div><div class="pr-val">6.2 km</div></div>
+      <div class="price-row"><div class="pr-label"><span class="material-icons">schedule</span>Tahmini süre</div><div class="pr-val">18 dk</div></div>
+      <div class="price-row"><div class="pr-label"><span class="material-icons">shield</span>Güvenli ödeme</div><div class="pr-val" style="color:#10b981"><span class="material-icons" style="font-size:18px;vertical-align:middle">verified</span> Kart</div></div>
+      <div class="price-row" style="border:none;padding-bottom:0"><div class="pr-label"><span class="material-icons">price_change</span>Toplam</div><div class="pr-total">₺124</div></div>
+      <button class="btn-call" onclick="yolculugaBasla()"><span class="material-icons">check</span> Yolculuğu Başlat</button>
+    </div>
+
+    <!-- Yolculuk devam -->
+    <div id="tripScreen" class="hidden">
+      <div class="trip-status">
+        <div class="ts-icon"><span class="material-icons">navigation</span></div>
+        <div class="ts-info">
+          <div class="ts-main" id="tripDurum">Sürücü geliyor</div>
+          <div class="ts-sub" id="tripDetay">3 dakika içinde varır</div>
+        </div>
+      </div>
+      <div class="driver-card" style="margin:0">
+        <div class="d-avatar">A</div>
+        <div class="d-info">
+          <div class="d-name">Ahmet Yılmaz</div>
+          <div class="d-car">34 TKS 123</div>
+        </div>
+        <div class="d-actions">
+          <button class="call-btn" onclick="alert('Arani Yor: 0555 xxx xx xx')"><span class="material-icons">call</span></button>
+        </div>
+      </div>
+      <button class="btn-danger" onclick="yolculuguBitir()"><span class="material-icons">flag</span> Yolculuğu Bitir</button>
+    </div>
+  </div>
+
+  <!-- Adres arama modal -->
+  <div class="modal" id="addressModal">
+    <div class="modal-header">
+      <span class="material-icons" style="cursor:pointer;color:#6b7280" onclick="kapatModal()">arrow_back</span>
+      <input type="text" id="aramaInput" placeholder="Adres ara..." autofocus oninput="ara(this.value)">
+    </div>
+    <div class="modal-body" id="aramaSonuc">
+      <div class="suggestion" onclick="adresSec('Kadıköy','40.9909','29.0269')">
+        <div class="s-icon"><span class="material-icons">location_on</span></div>
+        <div class="s-info"><div class="s-name">Kadıköy</div><div class="s-addr">İstanbul, Türkiye</div></div>
+      </div>
+      <div class="suggestion" onclick="adresSec('Taksim','41.0369','28.9856')">
+        <div class="s-icon"><span class="material-icons">location_on</span></div>
+        <div class="s-info"><div class="s-name">Taksim</div><div class="s-addr">Beyoğlu, İstanbul</div></div>
+      </div>
+      <div class="suggestion" onclick="adresSec('Beşiktaş','41.0784','29.0087')">
+        <div class="s-icon"><span class="material-icons">location_on</span></div>
+        <div class="s-info"><div class="s-name">Beşiktaş</div><div class="s-addr">İstanbul, Türkiye</div></div>
+      </div>
+      <div class="suggestion" onclick="adresSec('Levent','41.0744','29.0153')">
+        <div class="s-icon"><span class="material-icons">location_on</span></div>
+        <div class="s-info"><div class="s-name">Levent</div><div class="s-addr">Beşiktaş, İstanbul</div></div>
+      </div>
+      <div class="suggestion" onclick="adresSec('Üsküdar','41.0234','29.0128')">
+        <div class="s-icon"><span class="material-icons">location_on</span></div>
+        <div class="s-info"><div class="s-name">Üsküdar</div><div class="s-addr">İstanbul, Türkiye</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// === HARITA ===
+let map = L.map('map', {zoomControl:false, attributionControl:false, dragging:true}).setView([41.0082,28.9784], 12);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:19}).addTo(map);
+
+let pickupMarker = null, destMarker = null;
+let pickupLat=40.9909, pickupLng=29.0269, destLat=41.0369, destLng=28.9856;
+let selectedService = 'economy';
+let simInterval = null;
+
+// Baslangic markerlari
+function markerlariGuncelle(){
+  if(pickupMarker) map.removeLayer(pickupMarker);
+  if(destMarker) map.removeLayer(destMarker);
+  let pIcon = L.divIcon({html:'<div style="background:#10b981;width:14px;height:14px;border-radius:50%;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.2)"></div>',className:'',iconSize:[14,14],iconAnchor:[7,7]});
+  let dIcon = L.divIcon({html:'<span style="font-size:20px">📍</span>',className:'',iconSize:[20,30],iconAnchor:[10,30]});
+  pickupMarker = L.marker([pickupLat,pickupLng],{icon:pIcon}).addTo(map);
+  destMarker = L.marker([destLat,destLng],{icon:dIcon}).addTo(map);
+  map.fitBounds([[pickupLat,pickupLng],[destLat,destLng]],{padding:[120,60],maxZoom:13});
+}
+markerlariGuncelle();
+
+// Rastgele taksiler
+let taksiler = [];
+function taksileriGoster(){
+  taksiler.forEach(t => map.removeLayer(t));
+  taksiler = [];
+  let c = map.getCenter();
+  for(let i=0;i<15;i++){
+    let icon = L.divIcon({html:'🚕',className:'',iconSize:[20,20],iconAnchor:[10,10]});
+    let m = L.marker([c.lat+(Math.random()-.5)*0.08,c.lng+(Math.random()-.5)*0.08],{icon,zIndexOffset:0}).addTo(map);
+    taksiler.push(m);
+  }
+}
+taksileriGoster();
+setInterval(taksileriGoster,10000);
+
+// === EKRAN GECISLERI ===
+function showScreen(id){
+  ['homeScreen','waitingScreen','foundScreen','tripScreen'].forEach(s => document.getElementById(s).classList.add('hidden'));
+  document.getElementById(id).classList.remove('hidden');
+}
+
+function sec(tip){
+  selectedService = tip;
+  document.querySelectorAll('.service-card').forEach(c => c.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+}
+
+function taksiCagir(){
+  showScreen('waitingScreen');
+  let t = document.querySelector('.bottom-sheet');
+  t.style.transform = 'translateY(0)';
+  setTimeout(() => {
+    showScreen('foundScreen');
+  }, 3000);
+}
+
+function iptal(){
+  if(simInterval) clearInterval(simInterval);
+  showScreen('homeScreen');
+}
+
+function yolculugaBasla(){
+  showScreen('tripScreen');
+  document.getElementById('tripDurum').textContent = 'Sürücü geliyor';
+  document.getElementById('tripDetay').textContent = '3 dakika içinde varır';
+  // Simulasyon
+  mesajGoster('✅ Yolculuk başladı');
+}
+
+function yolculuguBitir(){
+  if(simInterval) clearInterval(simInterval);
+  document.getElementById('tripDurum').textContent = '✅ Varıldı';
+  document.getElementById('tripDetay').textContent = 'Yolculuk tamamlandı. İyi günler!';
+  let btn = document.querySelector('#tripScreen .btn-danger');
+  btn.textContent = '🏁 Yeni Yolculuk';
+  btn.onclick = function(){
+    showScreen('homeScreen');
+    document.querySelector('.bottom-sheet').style.transform = 'translateY(0)';
+    markerlariGuncelle();
+  };
+}
+
+function mesajGoster(m){
+  let el = document.createElement('div');
+  el.style.cssText = 'position:fixed;top:80px;left:50%;transform:translateX(-50%);background:#111;color:#fff;padding:10px 20px;border-radius:12px;font-size:13px;z-index:99;animation:fadeIn .3s';
+  el.textContent = m;
+  document.getElementById('phone').appendChild(el);
+  setTimeout(() => el.remove(), 2500);
+}
+
+// === ADRES MODAL ===
+let adresTipi = 'gidilecek';
+
+function acModal(){
+  document.getElementById('addressModal').classList.add('show');
+  document.getElementById('aramaInput').value = '';
+  document.getElementById('aramaSonuc').style.display = 'block';
+  setTimeout(() => document.getElementById('aramaInput').focus(), 100);
+}
+
+function kapatModal(){
+  document.getElementById('addressModal').classList.remove('show');
+}
+
+function adresSec(ad, lat, lng){
+  document.getElementById('gidilecekYer').textContent = ad;
+  destLat = parseFloat(lat);
+  destLng = parseFloat(lng);
+  kapatModal();
+  markerlariGuncelle();
+}
+
+function ara(val){
+  if(!val.trim()){
+    document.getElementById('aramaSonuc').style.display = 'block';
+    return;
+  }
+  // Basit filtre
+  document.querySelectorAll('#aramaSonuc .suggestion').forEach(s => {
+    let txt = s.textContent.toLowerCase();
+    s.style.display = txt.includes(val.toLowerCase()) ? 'flex' : 'none';
+  });
+}
+
+// Alt panel surukleme
+let startY=0, currentY=0, dragging=false;
+let sheet = document.querySelector('.bottom-sheet');
+sheet.addEventListener('touchstart', e => {
+  if(e.touches[0].clientY < window.innerHeight*0.3) return;
+  startY = e.touches[0].clientY;
+  dragging = true;
+});
+sheet.addEventListener('touchmove', e => {
+  if(!dragging) return;
+  currentY = e.touches[0].clientY;
+  let diff = currentY - startY;
+  if(diff > 0) sheet.style.transform = 'translateY(' + diff + 'px)';
+});
+sheet.addEventListener('touchend', () => {
+  dragging = false;
+  if(currentY - startY > 100){
+    sheet.style.transform = 'translateY(calc(100% - 120px))';
+  } else {
+    sheet.style.transform = 'translateY(0)';
+  }
+});
+</script>
+</body>
+</html>

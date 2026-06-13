@@ -1,0 +1,16 @@
+[Motor & Güç Grubu]
+
+[Pervane & Rotor]
+
+[Avionik & Navigasyon]
+
+[Kabin & Koltuk]
+
+[Yakıt Sistemi]
+
+[Muhabere Sistemi]
+
+[Bakım & Log]
+
+[Kamera & Yük Taşıma (Drone)]
+

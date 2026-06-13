@@ -1,0 +1,31 @@
+{
+  "il_id": 36,
+  "il": "Kars",
+  "plaka": "36",
+  "ilceler": [
+    {
+      "ilce": "Akyaka"
+    },
+    {
+      "ilce": "Arpaçay"
+    },
+    {
+      "ilce": "Digor"
+    },
+    {
+      "ilce": "Kağızman"
+    },
+    {
+      "ilce": "Merkez"
+    },
+    {
+      "ilce": "Sarıkamış"
+    },
+    {
+      "ilce": "Selim"
+    },
+    {
+      "ilce": "Susuz"
+    }
+  ]
+}

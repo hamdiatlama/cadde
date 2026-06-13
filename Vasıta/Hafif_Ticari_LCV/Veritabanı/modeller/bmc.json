@@ -1,0 +1,63 @@
+{
+  "marka": "BMC",
+  "modeller": [
+    {
+      "model": "Megastar",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Tugra",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Profesyonel",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2013,
+      "uretim_bitis": 2020
+    },
+    {
+      "model": "Levend",
+      "kasa_tipleri": [
+        "Ağır Kamyon"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "415",
+      "kasa_tipleri": [
+        "Orta Kamyon"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "BMC Otobüs 220",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "BMC Otobüs 280",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "BMC Midibus 180",
+      "kasa_tipleri": [
+        "Otobüs"
+      ],
+      "uretim_baslangic": 2018
+    }
+  ],
+  "kaynak": "manuel"
+}

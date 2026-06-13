@@ -1,0 +1,48 @@
+{
+  "marka": "Knaus",
+  "modeller": [
+    {
+      "model": "Boxdrive 660",
+      "kasa_tipleri": [
+        "Motorhome"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Puech",
+      "kasa_tipleri": [
+        "Motorhome"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "Tourer 700",
+      "kasa_tipleri": [
+        "Motorhome"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Sport 400",
+      "kasa_tipleri": [
+        "Çekme Karavan"
+      ],
+      "uretim_baslangic": 2017
+    },
+    {
+      "model": "Südwind 450",
+      "kasa_tipleri": [
+        "Çekme Karavan"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "Tabbert",
+      "kasa_tipleri": [
+        "Çekme Karavan"
+      ],
+      "uretim_baslangic": 2016
+    }
+  ],
+  "kaynak": "manuel"
+}

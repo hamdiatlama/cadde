@@ -1,0 +1,41 @@
+{
+  "marka": "Segway (Ninebot)",
+  "modeller": [
+    {
+      "model": "Ninebot KickScooter MAX G30",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Ninebot KickScooter F40",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "Ninebot KickScooter D38",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "GT2",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2022
+    },
+    {
+      "model": "PNT",
+      "kasa_tipleri": [
+        "Scooter"
+      ],
+      "uretim_baslangic": 2023
+    }
+  ],
+  "kaynak": "manuel"
+}

@@ -1,0 +1,62 @@
+{
+  "marka": "Kubota",
+  "modeller": [
+    {
+      "model": "M8 Serisi",
+      "kasa_tipleri": [
+        "Büyük Traktör"
+      ],
+      "uretim_baslangic": 2021
+    },
+    {
+      "model": "M7 Serisi",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "M6 Serisi",
+      "kasa_tipleri": [
+        "Orta Traktör"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "M5 Serisi",
+      "kasa_tipleri": [
+        "Kompakt Traktör"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "L Serisi",
+      "kasa_tipleri": [
+        "Kompakt Traktör"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "B Serisi",
+      "kasa_tipleri": [
+        "Kompakt Traktör"
+      ],
+      "uretim_baslangic": 2018
+    },
+    {
+      "model": "BX Serisi",
+      "kasa_tipleri": [
+        "Bahçe Traktörü"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "ZD Serisi",
+      "kasa_tipleri": [
+        "Çim Biçme"
+      ],
+      "uretim_baslangic": 2017
+    }
+  ],
+  "kaynak": "manuel"
+}

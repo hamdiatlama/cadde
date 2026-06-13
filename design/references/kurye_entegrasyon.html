@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Kurye Sistemi - Entegrasyon Yapısı</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f9fafb;--card:#fff;--card2:#f3f4f6;--border:#e5e7eb;--text1:#111;--text2:#374151;--text3:#6b7280;--text4:#9ca3af;--radius:4px;--green:#059669;--blue:#2563eb;--orange:#d97706}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text1);padding:40px;max-width:900px;margin:0 auto}
+h1{font-size:24px;font-weight:700;margin-bottom:4px}
+h1 span{font-weight:400;color:var(--text3)}
+.sub{font-size:14px;color:var(--text3);margin-bottom:32px}
+h2{font-size:18px;font-weight:600;margin:28px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+h3{font-size:14px;font-weight:600;margin:16px 0 8px;color:var(--text2)}
+.flow{display:flex;flex-direction:column;gap:20px}
+.card{border:1px solid var(--border);border-radius:var(--radius);padding:20px;background:var(--card)}
+.card .card-title{font-size:15px;font-weight:600;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.card .card-title .material-icons{font-size:20px}
+.card .card-desc{font-size:12px;color:var(--text3);margin-bottom:12px}
+.steps{display:flex;flex-direction:column;gap:6px}
+.step{display:flex;align-items:flex-start;gap:10px;padding:8px 12px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px}
+.step .s-num{width:22px;height:22px;border-radius:50%;background:var(--text1);color:var(--bg);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;margin-top:1px}
+.step .s-text{flex:1;color:var(--text2)}
+.step .s-text strong{color:var(--text1)}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.opt-card{border:1px solid var(--border);border-radius:var(--radius);padding:14px;cursor:default}
+.opt-card .oc-icon{width:36px;height:36px;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;margin-bottom:8px;font-size:20px}
+.opt-card .oc-title{font-size:13px;font-weight:600;margin-bottom:2px}
+.opt-card .oc-desc{font-size:11px;color:var(--text3)}
+.opt-card.opt1{border-color:var(--blue)}.opt-card.opt1 .oc-icon{background:#dbeafe;color:var(--blue)}
+.opt-card.opt2{border-color:var(--green)}.opt-card.opt2 .oc-icon{background:#d1fae5;color:var(--green)}
+.opt-card.opt3{border-color:var(--orange)}.opt-card.opt3 .oc-icon{background:#fef3c7;color:var(--orange)}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:8px;font-weight:600}
+.tag.blue{background:#dbeafe;color:var(--blue)}
+.tag.green{background:#d1fae5;color:var(--green)}
+.tag.orange{background:#fef3c7;color:var(--orange)}
+.tag.gray{background:var(--card2);color:var(--text3)}
+ul{list-style:none;padding:0}
+ul li{font-size:12px;color:var(--text2);padding:4px 0;display:flex;align-items:center;gap:6px}
+ul li .material-icons{font-size:16px;color:var(--text3)}
+.example{border:1px dashed var(--border);border-radius:var(--radius);padding:14px;margin:8px 0;background:var(--card2)}
+.example .ex-title{font-size:12px;font-weight:600;margin-bottom:6px;color:var(--text1)}
+.example .ex-text{font-size:11px;color:var(--text3);line-height:1.5}
+</style>
+</head>
+<body>
+
+<h1>Kurye Sistemi <span>Entegrasyon Yapısı</span></h1>
+<div class="sub">Bir firmanın (çiçekçi, yemek, market vb.) ürün teslimatı için kurye sistemine entegre olma yöntemleri</div>
+
+<!-- GIRIS -->
+<div class="card">
+  <div class="card-title"><span class="material-icons">account_balance</span> Genel Yapı</div>
+  <div class="card-desc">Her firma önce <strong>bireysel hesap</strong> açar. Ardından kurumsal hesaba geçer veya doğrudan kurye sistemini kurar. Firma ürünlerini teslim etmek için <strong>3 seçenekten</strong> birini kullanır.</div>
+</div>
+
+<!-- 3 SECENEK -->
+<h2>3 Teslimat Seçeneği</h2>
+<div class="grid-3">
+  <div class="opt-card opt1">
+    <div class="oc-icon"><span class="material-icons">build</span></div>
+    <div class="oc-title">Kendi Kurye Sistemini Kur</div>
+    <div class="oc-desc">Firma kendi kurye filosunu oluşturur, kuryelerini tanımlar, araçlarını kaydeder</div>
+    <div style="margin-top:8px"><span class="tag blue">Kurulum gerekli</span></div>
+  </div>
+  <div class="opt-card opt2">
+    <div class="oc-icon"><span class="material-icons">handshake</span></div>
+    <div class="oc-title">Bireysel Kuryelerle Anlaş</div>
+    <div class="oc-desc">Platformdaki bağımsız kuryelerle çalış, iş başına anlaş</div>
+    <div style="margin-top:8px"><span class="tag green">Komisyonlu</span></div>
+  </div>
+  <div class="opt-card opt3">
+    <div class="oc-icon"><span class="material-icons">business</span></div>
+    <div class="oc-title">Kurye Şirketiyle Anlaş</div>
+    <div class="oc-desc">Profesyonel bir kurye firmasıyla sözleşme yap, tüm teslimatı onlar yönetsin</div>
+    <div style="margin-top:8px"><span class="tag orange">Sözleşmeli</span></div>
+  </div>
+</div>
+
+<!-- SECENEK 1 DETAY -->
+<h2><span class="tag blue" style="font-size:14px;margin-right:6px;vertical-align:middle">1</span> Kendi Kurye Sistemini Kur</h2>
+<div class="flow">
+  <div class="card">
+    <div class="card-title"><span class="material-icons">looks_one</span> Bireysel Hesap Aç</div>
+    <div class="card-desc">Firma sahibi önce bireysel hesap açar</div>
+    <div class="steps">
+      <div class="step"><div class="s-num">1</div><div class="s-text">Bireysel hesaba giriş yap</div></div>
+      <div class="step"><div class="s-num">2</div><div class="s-text">Profil menüsünden <strong>"Kurumsal Hesap Oluştur"</strong> seçeneğine tıkla</div></div>
+      <div class="step"><div class="s-num">3</div><div class="s-text">İşletme türünü seç: <strong>Çiçekçi, Restoran, Market, vb.</strong></div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="material-icons">looks_two</span> İşletme Profilini Oluştur</div>
+    <div class="card-desc">Firma bilgilerini gir, hizmet bölgesini belirle</div>
+    <ul>
+      <li><span class="material-icons">check</span> Firma adı, vergi no, adres</li>
+      <li><span class="material-icons">check</span> Hizmet bölgesi (şehir, ilçe, mahalle)</li>
+      <li><span class="material-icons">check</span> Çalışma saatleri</li>
+      <li><span class="material-icons">check</span> Ödeme bilgileri (banka hesabı)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="material-icons">looks_3</span> Kurye Sistemini Tanımla</div>
+    <div class="card-desc">İşletme içinde kurye modülünü aktifleştir</div>
+    <div class="steps">
+      <div class="step"><div class="s-num">1</div><div class="s-text">İşletme panelinde <strong>"Kurye Sistemi"</strong> modülünü aç</div></div>
+      <div class="step"><div class="s-num">2</div><div class="s-text">Teslimat bölgesi ve ücret tarifesini belirle</div></div>
+      <div class="step"><div class="s-num">3</div><div class="s-text"><strong>Kurye ekle:</strong> Kurye adı, araç türü (yürüyerek/bisiklet/scooter/motor/araba), plaka, hız limiti, menzil</div></div>
+      <div class="step"><div class="s-num">4</div><div class="s-text">Kuryenin çalışma takvimini tanımla</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="material-icons">looks_4</span> Kurye Araç ve Hız Tanımlama</div>
+    <div class="card-desc">Her kurye için araç bilgisi ve sistem hız limiti zorunludur</div>
+    <div class="example">
+      <div class="ex-title">Örnek: Çiçekçi Kurye Tanımlama</div>
+      <div class="ex-text">
+        Kurye Adı: Ahmet Yılmaz<br>
+        Araç Türü: Motor → Sistem tanımlı hız limiti: <strong>50 km/s</strong>, menzil: <strong>20 km</strong><br>
+        Plaka: 34 KRY 001<br>
+        Çalışma Bölgesi: Kadıköy, Maltepe<br>
+        Durum: Müsait
+      </div>
+    </div>
+    <ul>
+      <li><span class="material-icons">check</span> Sistem her araç türü için <strong>şehir içi hız limitini</strong> otomatik atar</li>
+      <li><span class="material-icons">check</span> Hız limiti ve menzil <strong>tahmini teslimat süresi</strong> hesaplamada kullanılır</li>
+      <li><span class="material-icons">check</span> Menzil dışı siparişler kuryeye atanmaz</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="material-icons">looks_5</span> Entegrasyon Tamam</div>
+    <div class="card-desc">Kurye sistemi işletmeye bağlandı. Sipariş geldiğinde otomatik kurye atanır.</div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+      <span class="tag green">Sipariş → Kurye Atama</span>
+      <span class="tag green">Gerçek Zamanlı Takip</span>
+      <span class="tag green">Teslimat Onayı</span>
+      <span class="tag green">Kurye Performans Raporu</span>
+    </div>
+  </div>
+</div>
+
+<!-- SECENEK 2 DETAY -->
+<h2><span class="tag green" style="font-size:14px;margin-right:6px;vertical-align:middle">2</span> Bireysel Kuryelerle Anlaş</h2>
+<div class="card">
+  <div class="card-title"><span class="material-icons">handshake</span> Platform Üzerinden Eşleşme</div>
+  <div class="card-desc">Firma kendi kurye sistemi kurmaz, platformdaki bağımsız kuryelerle çalışır</div>
+  <div class="steps">
+    <div class="step"><div class="s-num">1</div><div class="s-text">Firma panelden <strong>"Kurye Bul"</strong> seçeneğini açar</div></div>
+    <div class="step"><div class="s-num">2</div><div class="s-text">Bölgesindeki <strong>müsait bireysel kuryeleri</strong> listeler</div></div>
+    <div class="step"><div class="s-num">3</div><div class="s-text">Kurye ile <strong>anlaşma yapar</strong> (komisyon oranı, çalışma saatleri)</div></div>
+    <div class="step"><div class="s-num">4</div><div class="s-text">Sipariş geldiğinde <strong>anlaşmalı kuryeye bildirim</strong> gider</div></div>
+    <div class="step"><div class="s-num">5</div><div class="s-text">Kurye kabul ederse teslimat başlar, <strong>reddederse başka kurye aranır</strong></div></div>
+  </div>
+  <div style="margin-top:12px">
+    <span class="tag green">Esnek</span>
+    <span class="tag green">Komisyon bazlı</span>
+    <span class="tag gray">Kurye bağımsız çalışır</span>
+  </div>
+</div>
+
+<!-- SECENEK 3 DETAY -->
+<h2><span class="tag orange" style="font-size:14px;margin-right:6px;vertical-align:middle">3</span> Kurye Şirketiyle Anlaş</h2>
+<div class="card">
+  <div class="card-title"><span class="material-icons">business</span> Profesyonel Kurye Firması</div>
+  <div class="card-desc">Firma, bir kurye işletmesiyle sözleşme yapar. Tüm teslimat sürecini kurye firması yönetir.</div>
+  <div class="steps">
+    <div class="step"><div class="s-num">1</div><div class="s-text">Firma panelden <strong>"Kurye Firmaları"</strong> bölümünü açar</div></div>
+    <div class="step"><div class="s-num">2</div><div class="s-text">Bölgesindeki <strong>kurye işletmelerini</strong> listeler (puan, fiyat, kapasite)</div></div>
+    <div class="step"><div class="s-num">3</div><div class="s-text"><strong>Sözleşme yapar</strong> (sabit ücret / gönderi başı / aylık)</div></div>
+    <div class="step"><div class="s-num">4</div><div class="s-text">Kurye firması kendi filosundan <strong>uygun kuryeyi atar</strong></div></div>
+    <div class="step"><div class="s-num">5</div><div class="s-text">Teslimat tamamlanır, <strong>fatura kurye firmasından gelir</strong></div></div>
+  </div>
+  <div style="margin-top:12px">
+    <span class="tag orange">Profesyonel</span>
+    <span class="tag orange">Sözleşmeli</span>
+    <span class="tag orange">Garantili hizmet</span>
+    <span class="tag gray">Kurye firması sorumlu</span>
+  </div>
+</div>
+
+<!-- GERCEK HAYAT ORNEKLERI -->
+<h2>Gerçek Hayat Örnekleri</h2>
+<div class="grid-3">
+  <div class="opt-card opt1" style="border-style:solid">
+    <div style="font-size:20px;margin-bottom:6px">💐</div>
+    <div class="oc-title">Çiçekçi</div>
+    <div class="oc-desc" style="margin-top:6px">
+      <strong>Seçenek 1:</strong> Kendi kuryesini işe alır, motor tanımlar<br>
+      <strong>Seçenek 2:</strong> Bireysel kuryelerle anlaşır<br>
+      <strong>Seçenek 3:</strong> Kurye firmasına devreder
+    </div>
+  </div>
+  <div class="opt-card opt2" style="border-style:solid">
+    <div style="font-size:20px;margin-bottom:6px">🍕</div>
+    <div class="oc-title">Restoran</div>
+    <div class="oc-desc" style="margin-top:6px">
+      <strong>Seçenek 1:</strong> Kendi moto kuryelerini kurar<br>
+      <strong>Seçenek 2:</strong> Bisiklet kuryelerle anlaşır<br>
+      <strong>Seçenek 3:</strong> Motor Kurye A.Ş ile çalışır
+    </div>
+  </div>
+  <div class="opt-card opt3" style="border-style:solid">
+    <div style="font-size:20px;margin-bottom:6px">📦</div>
+    <div class="oc-title">Market</div>
+    <div class="oc-desc" style="margin-top:6px">
+      <strong>Seçenek 1:</strong> Araba filosu kurar<br>
+      <strong>Seçenek 2:</strong> Yürüyerek kuryelerle anlaşır<br>
+      <strong>Seçenek 3:</strong> Ulusal kurye firmasıyla anlaşır
+    </div>
+  </div>
+</div>
+
+<!-- KARSILASTIRMA -->
+<h2>3 Seçenek Karşılaştırması</h2>
+<div class="card" style="overflow-x:auto">
+  <table style="width:100%;border-collapse:collapse;font-size:12px;text-align:left">
+    <tr style="border-bottom:1px solid var(--border)">
+      <th style="padding:8px 10px;font-weight:600;color:var(--text1)">Özellik</th>
+      <th style="padding:8px 10px;font-weight:600;color:var(--blue)">Kendi Sistemi</th>
+      <th style="padding:8px 10px;font-weight:600;color:var(--green)">Bireysel Kurye</th>
+      <th style="padding:8px 10px;font-weight:600;color:var(--orange)">Kurye Firması</th>
+    </tr>
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:6px 10px;color:var(--text2)">Kurulum Maliyeti</td>
+      <td style="padding:6px 10px;color:var(--text2)">Yüksek (araç, ekipman)</td>
+      <td style="padding:6px 10px;color:var(--text2)">Düşük (komisyon)</td>
+      <td style="padding:6px 10px;color:var(--text2)">Orta (sözleşme)</td>
+    </tr>
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:6px 10px;color:var(--text2)">Kontrol</td>
+      <td style="padding:6px 10px;color:var(--text2)">Tam kontrol</td>
+      <td style="padding:6px 10px;color:var(--text2)">Kısmi</td>
+      <td style="padding:6px 10px;color:var(--text2)">Az</td>
+    </tr>
+    <tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:6px 10px;color:var(--text2)">Ölçeklenebilirlik</td>
+      <td style="padding:6px 10px;color:var(--text2)">Kurye ekledikçe büyür</td>
+      <td style="padding:6px 10px;color:var(--text2)">Esnek</td>
+      <td style="padding:6px 10px;color:var(--text2)">Çok yüksek</td>
+    </tr>
+    <tr>
+      <td style="padding:6px 10px;color:var(--text2)">Kimin için uygun</td>
+      <td style="padding:6px 10px;color:var(--text2)">Büyük işletmeler</td>
+      <td style="padding:6px 10px;color:var(--text2)">Küçük işletmeler</td>
+      <td style="padding:6px 10px;color:var(--text2)">Her ölçek</td>
+    </tr>
+  </table>
+</div>
+
+<!-- VERI YAPISI -->
+<h2>Sistem Veri Yapısı</h2>
+<div class="card">
+  <div class="card-title"><span class="material-icons">storage</span> Kurye Kayıt Verileri</div>
+  <div class="card-desc">Her kurye için sistemde tutulması gereken zorunlu alanlar</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+    <div style="padding:8px;border:1px solid var(--border);border-radius:var(--radius)">
+      <div style="font-size:11px;font-weight:600;color:var(--text1)">Kurye Bilgisi</div>
+      <ul style="margin-top:4px">
+        <li><span class="material-icons">person</span> İsim / Soyisim</li>
+        <li><span class="material-icons">phone</span> Telefon</li>
+        <li><span class="material-icons">badge</span> TC Kimlik</li>
+      </ul>
+    </div>
+    <div style="padding:8px;border:1px solid var(--border);border-radius:var(--radius)">
+      <div style="font-size:11px;font-weight:600;color:var(--text1)">Araç Bilgisi</div>
+      <ul style="margin-top:4px">
+        <li><span class="material-icons">directions_bike</span> Araç Türü</li>
+        <li><span class="material-icons">tag</span> Plaka / Seri No</li>
+        <li><span class="material-icons">palette</span> Marka / Model / Renk</li>
+      </ul>
+    </div>
+    <div style="padding:8px;border:1px solid var(--border);border-radius:var(--radius)">
+      <div style="font-size:11px;font-weight:600;color:var(--text1)">Sistem Tanımları</div>
+      <ul style="margin-top:4px">
+        <li><span class="material-icons">speed</span> Hız Limiti (km/s)</li>
+        <li><span class="material-icons">map</span> Maksimum Menzil (km)</li>
+        <li><span class="material-icons">schedule</span> Çalışma Takvimi</li>
+      </ul>
+    </div>
+    <div style="padding:8px;border:1px solid var(--border);border-radius:var(--radius)">
+      <div style="font-size:11px;font-weight:600;color:var(--text1)">Durum</div>
+      <ul style="margin-top:4px">
+        <li><span class="material-icons">check_circle</span> Müsait / Teslimatta</li>
+        <li><span class="material-icons">star</span> Puan / Performans</li>
+        <li><span class="material-icons">verified</span> Doğrulama Durumu</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

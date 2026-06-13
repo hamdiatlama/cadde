@@ -1,0 +1,48 @@
+{
+  "marka": "BMC (Askeri)",
+  "modeller": [
+    {
+      "model": "Amazon (4x4)",
+      "kasa_tipleri": [
+        "Askeri Cip"
+      ],
+      "uretim_baslangic": 2015
+    },
+    {
+      "model": "Kirpi",
+      "kasa_tipleri": [
+        "Zırhlı"
+      ],
+      "uretim_baslangic": 2014
+    },
+    {
+      "model": "Afyon",
+      "kasa_tipleri": [
+        "Zırhlı"
+      ],
+      "uretim_baslangic": 2016
+    },
+    {
+      "model": "Kıraç",
+      "kasa_tipleri": [
+        "Zırhlı"
+      ],
+      "uretim_baslangic": 2019
+    },
+    {
+      "model": "Altuğ 8x8",
+      "kasa_tipleri": [
+        "Askeri Kamyon"
+      ],
+      "uretim_baslangic": 2020
+    },
+    {
+      "model": "380-26",
+      "kasa_tipleri": [
+        "Askeri Kamyon"
+      ],
+      "uretim_baslangic": 2018
+    }
+  ],
+  "kaynak": "manuel"
+}

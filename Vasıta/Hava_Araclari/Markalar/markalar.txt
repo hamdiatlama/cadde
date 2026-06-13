@@ -1,0 +1,69 @@
+=== Hava Araçları MARKALARI ===
+
+[Uçak (Genel Havacılık)]
+- Cessna (Textron)
+- Piper Aircraft
+- Beechcraft (Textron)
+- Cirrus Aircraft
+- Diamond Aircraft
+- Mooney
+- Diamond
+- Aero Commander
+- Socata (Daher)
+- Embraer (Executive)
+- Bombardier (Global)
+- Gulfstream
+- Dassault Falcon
+- Cessna Citation
+- Piaggio Aerospace
+- Extra Aircraft
+- Sportcruiser
+- Tecnam
+- Evektor
+- Flight Design
+
+[Helikopter]
+- Robinson Helicopter
+- Bell Helicopter
+- Airbus Helicopters
+- Leonardo
+- Sikorsky
+- MD Helicopters
+- Enstrom Helicopter
+- Hughes Helicopters
+
+[Ultralight / Mikro]
+- Pipistrel
+- Aeroprakt
+- Flight Design
+- Rans
+- ICON Aircraft
+- Quicksilver
+- Bristell
+- Evektor
+- Sling Aircraft
+- Zenith Aircraft
+
+[Drone / İHA]
+- DJI
+- Autel Robotics
+- Skydio
+- Parrot
+- Yuneec
+- PowerVision
+- Freefly Systems
+- Wingtra
+- senseFly
+- Baykar Teknoloji
+- TUSAŞ (TAI)
+- Vestel Savunma
+- Lentatek
+
+[Türkiye]
+- Baykar Teknoloji
+- TUSAŞ (TAI)
+- Türk Hava Kurumu (THK)
+- Kaan Havacılık
+- Akıncı Teknoloji
+- Altınay Teknoloji
+

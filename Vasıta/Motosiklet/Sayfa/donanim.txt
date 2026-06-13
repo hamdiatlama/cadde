@@ -1,0 +1,18 @@
+[Güvenlik]
+
+[Sürüş Donanımı]
+
+[Multimedya]
+
+[Motor & Şanzıman]
+
+[Süspansiyon & Fren]
+
+[Lastik & Jant]
+
+[Bakım & Geçmiş]
+
+[Aksesuar & Ekipman]
+
+[Kılıf & Koruma]
+
