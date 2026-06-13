@@ -1,8 +1,18 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function Home() {
   const router = useRouter();
+  const [query, setQuery] = useState("");
+
+  function handleSearch() {
+    if (query.trim()) {
+      router.push(`/search?q=${encodeURIComponent(query)}`);
+    } else {
+      router.push("/search");
+    }
+  }
 
   return (
     <main style={{fontFamily:"'Space Grotesk',sans-serif",background:"#EEF4FF",minHeight:"100vh",color:"#1A2B4A"}}>
@@ -54,12 +64,19 @@ export default function Home() {
           <div style={{fontSize:11,fontWeight:600,color:"#8FAAC8",textTransform:"uppercase",letterSpacing:1.2}}>{"Hızlı arama"}</div>
           <div style={{display:"flex",alignItems:"center",background:"#fff",border:"1.5px solid #D6E4FA",borderRadius:8,overflow:"hidden"}}>
             <i className="ti ti-search" style={{padding:"0 12px",color:"#8FAAC8",fontSize:18}}/>
-            <input type="text" placeholder="Ne arıyorsunuz?" style={{flex:1,border:"none",outline:"none",background:"transparent",fontFamily:"inherit",fontSize:14,color:"#1A2B4A",padding:"12px 0"}}/>
+            <input
+              type="text"
+              placeholder="Ne arıyorsunuz?"
+              value={query}
+              onChange={e=>setQuery(e.target.value)}
+              onKeyDown={e=>e.key==="Enter"&&handleSearch()}
+              style={{flex:1,border:"none",outline:"none",background:"transparent",fontFamily:"inherit",fontSize:14,color:"#1A2B4A",padding:"12px 0"}}
+            />
             <div style={{width:1,height:28,background:"#D6E4FA"}}/>
             <span style={{display:"flex",alignItems:"center",gap:4,padding:"0 12px",fontSize:12,color:"#4A7FD4",fontWeight:600,cursor:"pointer",whiteSpace:"nowrap"}}>
               <i className="ti ti-map-pin" style={{fontSize:14}}/> {"Kahramanmaraş"}
             </span>
-            <button style={{padding:"12px 20px",background:"#4A7FD4",color:"#fff",border:"none",fontFamily:"inherit",fontSize:13,fontWeight:600,cursor:"pointer"}}>Ara</button>
+            <button onClick={handleSearch} style={{padding:"12px 20px",background:"#4A7FD4",color:"#fff",border:"none",fontFamily:"inherit",fontSize:13,fontWeight:600,cursor:"pointer"}}>Ara</button>
           </div>
           <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
             {[
@@ -70,7 +87,7 @@ export default function Home() {
               {icon:"ti-bed",l:"Otel"},
               {icon:"ti-briefcase",l:"Proje"}
             ].map(t=>(
-              <span key={t.l} className="qtag" style={{display:"inline-flex",alignItems:"center",gap:5,padding:"6px 12px",background:"#fff",border:"1px solid #D6E4FA",borderRadius:20,fontSize:12,color:"#5A7499",cursor:"pointer",fontWeight:500,transition:"all .15s"}}>
+              <span key={t.l} onClick={()=>router.push(`/search?q=${t.l}`)} className="qtag" style={{display:"inline-flex",alignItems:"center",gap:5,padding:"6px 12px",background:"#fff",border:"1px solid #D6E4FA",borderRadius:20,fontSize:12,color:"#5A7499",cursor:"pointer",fontWeight:500,transition:"all .15s"}}>
                 <i className={`ti ${t.icon}`} style={{fontSize:14,color:"#4A7FD4"}}/> {t.l}
               </span>
             ))}
@@ -82,7 +99,7 @@ export default function Home() {
       <div style={{padding:"28px 32px"}}>
         <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:16}}>
           <span style={{fontSize:12,fontWeight:700,color:"#5A7499",textTransform:"uppercase",letterSpacing:1.2}}>Kategoriler</span>
-          <span style={{fontSize:12,color:"#4A7FD4",cursor:"pointer",fontWeight:600}}>{"Tümünü gör →"}</span>
+          <span onClick={()=>router.push("/search")} style={{fontSize:12,color:"#4A7FD4",cursor:"pointer",fontWeight:600}}>{"Tümünü gör →"}</span>
         </div>
         <div style={{display:"grid",gridTemplateColumns:"repeat(6,1fr)",gap:8,marginBottom:32}}>
           {[
@@ -99,7 +116,7 @@ export default function Home() {
             {icon:"ti-school",n:"Eğitim",s:"Kurs, özel ders"},
             {icon:"ti-car-garage",n:"Araç Servis",s:"Bakım, tamir"},
           ].map(c=>(
-            <div key={c.n} className="cat-card" style={{background:"#fff",border:"1px solid #D6E4FA",borderRadius:8,padding:"18px 10px",textAlign:"center",cursor:"pointer",transition:"all .15s"}}>
+            <div key={c.n} onClick={()=>router.push(`/search?q=${c.n}`)} className="cat-card" style={{background:"#fff",border:"1px solid #D6E4FA",borderRadius:8,padding:"18px 10px",textAlign:"center",cursor:"pointer",transition:"all .15s"}}>
               <div className="cat-icon-wrap" style={{width:44,height:44,background:"#EEF4FF",borderRadius:10,display:"flex",alignItems:"center",justifyContent:"center",margin:"0 auto 10px",transition:"all .15s"}}>
                 <i className={`ti ${c.icon} cat-icon`} style={{fontSize:22,color:"#4A7FD4",transition:"all .15s"}}/>
               </div>
@@ -111,7 +128,7 @@ export default function Home() {
 
         <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:16}}>
           <span style={{fontSize:12,fontWeight:700,color:"#5A7499",textTransform:"uppercase",letterSpacing:1.2}}>{"Kahramanmaraş'ta öne çıkanlar"}</span>
-          <span style={{fontSize:12,color:"#4A7FD4",cursor:"pointer",fontWeight:600}}>{"Tümünü gör →"}</span>
+          <span onClick={()=>router.push("/search")} style={{fontSize:12,color:"#4A7FD4",cursor:"pointer",fontWeight:600}}>{"Tümünü gör →"}</span>
         </div>
         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>
           {[
