@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS property_inquiries CASCADE;
+DROP TABLE IF EXISTS favorite_listings CASCADE;
+DROP TABLE IF EXISTS property_appraisal_requests CASCADE;
+DROP TABLE IF EXISTS authorization_requests CASCADE;
+DROP TABLE IF EXISTS property_listing_features CASCADE;
+DROP TABLE IF EXISTS property_features CASCADE;
+DROP TABLE IF EXISTS property_photos CASCADE;
+DROP TABLE IF EXISTS property_listings CASCADE;
+DROP TABLE IF EXISTS contractor_reviews CASCADE;
+DROP TABLE IF EXISTS contractor_companies CASCADE;
+DROP TABLE IF EXISTS property_types CASCADE;
+DROP TABLE IF EXISTS property_categories CASCADE;
