@@ -54,6 +54,18 @@ async def add_message(
     await db.commit()
     return result
 
+@router.get("/admin/tickets", response_model=list[dict])
+async def list_all_tickets(
+    limit: int = 50, offset: int = 0,
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+):
+    svc = SupportService(db)
+    result = await svc.list_all_tickets(current_user.role, limit, offset)
+    if result is None:
+        raise HTTPException(status_code=403, detail="Admin only")
+    return result
+
 @router.put("/tickets/{ticket_id}/status", response_model=dict)
 async def update_ticket_status(
     ticket_id: int, status: str,

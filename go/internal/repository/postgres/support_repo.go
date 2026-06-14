@@ -116,6 +116,29 @@ func (r *SupportRepo) UpdateStatus(ctx context.Context, ticketID int, status str
 	return err
 }
 
+func (r *SupportRepo) ListAllTickets(ctx context.Context, limit, offset int) ([]*domain.SupportTicket, error) {
+	rows, err := r.pool.Query(ctx,
+		`SELECT id, user_id, order_id, subject, category, status, priority, created_at,
+		        updated_at, resolved_at
+		 FROM support_tickets
+		 ORDER BY COALESCE(updated_at, created_at) DESC LIMIT $1 OFFSET $2`, limit, offset)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	var tickets []*domain.SupportTicket
+	for rows.Next() {
+		t := &domain.SupportTicket{}
+		if err := rows.Scan(&t.ID, &t.UserID, &t.OrderID, &t.Subject, &t.Category,
+			&t.Status, &t.Priority, &t.CreatedAt, &t.UpdatedAt, &t.ResolvedAt); err != nil {
+			return nil, err
+		}
+		tickets = append(tickets, t)
+	}
+	return tickets, nil
+}
+
 func (r *SupportRepo) UpdateResolvedAt(ctx context.Context, ticketID int) error {
 	_, err := r.pool.Exec(ctx,
 		`UPDATE support_tickets SET resolved_at=$1, updated_at=$1 WHERE id=$2`,

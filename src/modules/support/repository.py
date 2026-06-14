@@ -39,7 +39,29 @@ class SupportRepository:
 
     async def get_messages(self, ticket_id: int):
         r = await self.db.execute(
-            select(TicketMessage).where(TicketMessage.ticket_id == ticket.id)
+            select(TicketMessage).where(TicketMessage.ticket_id == ticket_id)
             .order_by(TicketMessage.created_at.asc())
+        )
+        return r.scalars().all()
+
+    async def update_status(self, ticket_id: int, status: str):
+        await self.db.execute(
+            SupportTicket.__table__.update()
+            .where(SupportTicket.id == ticket_id)
+            .values(status=status, updated_at=func.now())
+        )
+
+    async def update_resolved_at(self, ticket_id: int):
+        await self.db.execute(
+            SupportTicket.__table__.update()
+            .where(SupportTicket.id == ticket_id)
+            .values(resolved_at=func.now(), updated_at=func.now())
+        )
+
+    async def list_all_tickets(self, limit: int = 50, offset: int = 0):
+        r = await self.db.execute(
+            select(SupportTicket)
+            .order_by(SupportTicket.updated_at.desc().nulls_last(), SupportTicket.created_at.desc())
+            .limit(limit).offset(offset)
         )
         return r.scalars().all()

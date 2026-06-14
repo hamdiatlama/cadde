@@ -196,7 +196,10 @@ func (h *SupportHandler) AddMessage(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if ticket.Status == "open" {
-		h.repo.UpdateStatus(r.Context(), ticketID, "in_progress")
+		if err := h.repo.UpdateStatus(r.Context(), ticketID, "in_progress"); err != nil {
+			http.Error(w, `{"error":"status update failed"}`, http.StatusInternalServerError)
+			return
+		}
 	}
 
 	writeJSON(w, http.StatusCreated, map[string]interface{}{
@@ -209,6 +212,59 @@ func (h *SupportHandler) AddMessage(w http.ResponseWriter, r *http.Request) {
 
 type updateStatusRequest struct {
 	Status string `json:"status"`
+}
+
+func (h *SupportHandler) ListAll(w http.ResponseWriter, r *http.Request) {
+	role, _ := r.Context().Value(middleware.UserRoleKey).(string)
+	if role != "admin" {
+		http.Error(w, `{"error":"admin only"}`, http.StatusForbidden)
+		return
+	}
+
+	limit := 50
+	offset := 0
+	if l := r.URL.Query().Get("limit"); l != "" {
+		if v, err := strconv.Atoi(l); err == nil && v > 0 {
+			limit = v
+		}
+	}
+	if o := r.URL.Query().Get("offset"); o != "" {
+		if v, err := strconv.Atoi(o); err == nil && v >= 0 {
+			offset = v
+		}
+	}
+
+	tickets, err := h.repo.ListAllTickets(r.Context(), limit, offset)
+	if err != nil {
+		http.Error(w, `{"error":"list tickets failed"}`, http.StatusInternalServerError)
+		return
+	}
+
+	result := make([]map[string]interface{}, 0, len(tickets))
+	for _, t := range tickets {
+		lastMsg, _ := h.repo.GetLastMessage(r.Context(), t.ID)
+		var preview string
+		if lastMsg != nil {
+			runes := []rune(lastMsg.Message)
+			if len(runes) > 100 {
+				preview = string(runes[:100])
+			} else {
+				preview = lastMsg.Message
+			}
+		}
+		result = append(result, map[string]interface{}{
+			"id":           t.ID,
+			"user_id":      t.UserID,
+			"subject":      t.Subject,
+			"category":     t.Category,
+			"status":       t.Status,
+			"priority":     t.Priority,
+			"order_id":     t.OrderID,
+			"last_message": preview,
+			"created_at":   t.CreatedAt,
+		})
+	}
+	writeJSON(w, http.StatusOK, result)
 }
 
 func (h *SupportHandler) UpdateStatus(w http.ResponseWriter, r *http.Request) {
@@ -239,7 +295,10 @@ func (h *SupportHandler) UpdateStatus(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if req.Status == "resolved" {
-		h.repo.UpdateResolvedAt(r.Context(), ticketID)
+		if err := h.repo.UpdateResolvedAt(r.Context(), ticketID); err != nil {
+			http.Error(w, `{"error":"resolved_at update failed"}`, http.StatusInternalServerError)
+			return
+		}
 	}
 
 	writeJSON(w, http.StatusOK, map[string]interface{}{

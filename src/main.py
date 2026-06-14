@@ -21,6 +21,10 @@ from src.modules.support.router import router as support_router
 from src.modules.account.address.router import router as address_router
 from src.modules.notification.router import router as notification_router
 from src.modules.store.router import router as search_router
+from src.modules.bina.router import router as bina_router
+from src.modules.event.router import router as event_router
+from src.modules.vehicle.router import router as vehicle_router
+from src.modules.expert.router import router as expert_router
 
 
 @asynccontextmanager
@@ -65,6 +69,10 @@ app.include_router(ride_router)
 app.include_router(cart_router)
 app.include_router(address_router)
 app.include_router(notification_router)
+app.include_router(bina_router)
+app.include_router(event_router)
+app.include_router(vehicle_router)
+app.include_router(expert_router)
 
 
 @app.get("/health")

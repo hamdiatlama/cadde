@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS expert_acceptance_criteria CASCADE;
+DROP TABLE IF EXISTS expert_mandatory_equipment CASCADE;
+DROP TABLE IF EXISTS expert_extra_equipment CASCADE;
+DROP TABLE IF EXISTS expert_chassis_checks CASCADE;
+DROP TABLE IF EXISTS expert_belt_checks CASCADE;
+DROP TABLE IF EXISTS expert_four_wheel_drive_checks CASCADE;
+DROP TABLE IF EXISTS expert_handbrake_tests CASCADE;
+DROP TABLE IF EXISTS expert_fluid_tests CASCADE;
+DROP TABLE IF EXISTS expert_emission_tests CASCADE;

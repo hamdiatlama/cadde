@@ -1,0 +1,10 @@
+ALTER TYPE event_category ADD VALUE IF NOT EXISTS 'komedi';
+ALTER TYPE event_category ADD VALUE IF NOT EXISTS 'cocuk';
+ALTER TYPE event_category ADD VALUE IF NOT EXISTS 'bale_opera';
+ALTER TYPE event_category ADD VALUE IF NOT EXISTS 'müze_sergi';
+ALTER TYPE event_category ADD VALUE IF NOT EXISTS 'espor';
+ALTER TYPE event_category ADD VALUE IF NOT EXISTS 'konferans';
+ALTER TYPE event_category ADD VALUE IF NOT EXISTS 'workshop';
+ALTER TYPE event_category ADD VALUE IF NOT EXISTS 'fuar_expo';
+ALTER TYPE event_category ADD VALUE IF NOT EXISTS 'gosteri';
+ALTER TYPE event_category ADD VALUE IF NOT EXISTS 'aile_parki';

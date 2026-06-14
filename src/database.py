@@ -35,6 +35,10 @@ async def init_db():
             from src.modules.support.models import SupportTicket, TicketMessage
             from src.modules.subscription.models import SubscriptionPlan, Subscription, SubscriptionDelivery
             from src.models.delivery import DeliveryPhoto
+            import src.modules.bina.models  # registers all 27 bina tables
+            import src.modules.event.models  # registers all 10 event tables
+            import src.modules.vehicle.models
+            import src.modules.expert.models
             await conn.run_sync(Base.metadata.create_all)
         else:
             await conn.execute(sa.text("CREATE EXTENSION IF NOT EXISTS postgis"))

@@ -77,13 +77,29 @@ class SupportService:
             "created_at": msg.created_at.isoformat() if msg.created_at else None,
         }
 
+    async def list_all_tickets(self, role: str, limit: int = 50, offset: int = 0):
+        if role != "admin":
+            return None
+        tickets = await self.repo.list_all_tickets(limit, offset)
+        result = []
+        for t in tickets:
+            last_msg = await self.repo.get_last_message(t.id)
+            result.append({
+                "id": t.id, "user_id": t.user_id, "subject": t.subject,
+                "category": t.category, "status": t.status, "priority": t.priority,
+                "order_id": t.order_id,
+                "last_message": last_msg.message[:100] if last_msg else None,
+                "created_at": t.created_at.isoformat() if t.created_at else None,
+            })
+        return result
+
     async def update_status(self, ticket_id: int, status: str, role: str):
         if role != "admin":
             return None
         ticket = await self.repo.get_ticket(ticket_id)
         if not ticket:
             return None
-        ticket.status = status
+        await self.repo.update_status(ticket_id, status)
         if status == "resolved":
-            ticket.resolved_at = datetime.now(timezone.utc)
-        return {"id": ticket.id, "status": ticket.status}
+            await self.repo.update_resolved_at(ticket_id)
+        return {"id": ticket.id, "status": status}
