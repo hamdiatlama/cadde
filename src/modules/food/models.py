@@ -110,8 +110,8 @@ class DeliveryZone(Base):
     is_active = Column(Boolean, default=True)
 
 
-class ChatMessage(Base):
-    __tablename__ = "chat_messages"
+class FoodChatMessage(Base):
+    __tablename__ = "food_chat_messages"
     id = Column(Integer, primary_key=True, index=True)
     order_id = Column(Integer, ForeignKey("orders.id"), nullable=False)
     sender_id = Column(Integer, ForeignKey("users.id"), nullable=False)

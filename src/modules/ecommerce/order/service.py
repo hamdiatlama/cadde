@@ -121,8 +121,43 @@ class OrderService:
             return None, "Order not found"
         if order.status != "pending_approval":
             return None, f"Cannot approve order in '{order.status}' status"
+
+        # Satıcı askıda mı kontrol et
+        from src.modules.cargo.service import CargoService
+        cargo_svc = CargoService(self.repo.db)
+        suspension = await cargo_svc.check_seller_suspension(seller.id)
+        if suspension and suspension.get("is_suspended"):
+            return None, f"Satışlarınız askıya alınmıştır: {suspension['message']}"
+
         order.status = "approved"
         order.approved_at = datetime.now(timezone.utc)
+
+        # Kargo gönderisi oluştur
+        try:
+            agreements = await cargo_svc.list_seller_agreements(seller.id)
+            if agreements:
+                pref = next((a for a in agreements if a.get("is_preferred")), agreements[0])
+                comp = await cargo_svc.get_company(pref["company_id"])
+                if comp:
+                    shipment_data = type("ShipmentData", (), {"model_dump": lambda self: {
+                        "company_id": comp.id,
+                        "sender_name": seller.company_name or seller.user_id,
+                        "sender_city": comp.city,
+                        "recipient_name": order.customer_name or f"User#{order.user_id}",
+                        "recipient_city": order.shipping_city or order.city or "",
+                        "recipient_address": order.shipping_address or order.address or "",
+                        "total_price": order.shipping_fee or order.cargo_fee or 0,
+                        "source_module": "ecommerce",
+                        "source_order_id": order.id,
+                        "piece_count": order.quantity or 1,
+                    }})()
+                    ship = await cargo_svc.create_shipment(shipment_data)
+                    if ship:
+                        order.tracking_no = ship.tracking_no
+                        await self.repo.db.flush()
+        except Exception:
+            pass
+
         await create_notification(self.repo.db, order.user_id, "order_approved",
             message=f"Siparis #{order.id} onaylandi - {order.total:.2f} TL",
             reference_type="order", reference_id=order.id)

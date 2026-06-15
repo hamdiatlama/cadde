@@ -1,0 +1,13 @@
+DROP TABLE IF EXISTS comparison_items;
+DROP TABLE IF EXISTS comparisons;
+DROP TABLE IF EXISTS ad_products;
+DROP TABLE IF EXISTS ad_campaigns;
+DROP TABLE IF EXISTS payouts;
+DROP TABLE IF EXISTS payout_batches;
+DROP TABLE IF EXISTS disputes;
+DROP TABLE IF EXISTS escrow_transactions;
+DROP TABLE IF EXISTS flash_sales;
+DROP TABLE IF EXISTS campaign_usage;
+DROP TABLE IF EXISTS campaigns;
+DROP TABLE IF EXISTS wishlist_items;
+DROP TABLE IF EXISTS wishlists;

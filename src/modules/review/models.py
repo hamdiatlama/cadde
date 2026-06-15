@@ -15,3 +15,12 @@ class Review(Base):
     photo_urls = Column(Text)
     is_approved = Column(Boolean, default=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+
+class ReviewMedia(Base):
+    __tablename__ = "review_media"
+    id = Column(Integer, primary_key=True, index=True)
+    review_id = Column(Integer, ForeignKey("reviews.id"), nullable=False)
+    media_type = Column(String(10))
+    url = Column(String(500))
+    created_at = Column(DateTime(timezone=True), server_default=func.now())

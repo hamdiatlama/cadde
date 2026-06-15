@@ -8,7 +8,7 @@ from src.models.order import Order
 from src.models.courier import Courier
 from src.modules.food.models import (
     Restaurant, RestaurantBranch, FoodMenuItem, MenuItemModifier,
-    DeliveryZone, ChatMessage, TemperatureCheck, HygieneReport,
+    DeliveryZone, FoodChatMessage, TemperatureCheck, HygieneReport,
     DriverReport, BatchDeliveryPrevention,
 )
 from src.modules.courier.models import CourierEarning, CourierShift
@@ -203,6 +203,7 @@ class MenuRepository:
     async def create_item(self, restaurant_id: int, data: dict) -> FoodMenuItem:
         item = FoodMenuItem(restaurant_id=restaurant_id, **data)
         self.db.add(item)
+        await self.db.flush()
         return item
 
     async def get_item_by_id(self, item_id: int) -> FoodMenuItem | None:
@@ -398,15 +399,15 @@ class ChatRepository:
         r = await self.db.execute(select(Order).where(Order.id == order_id))
         return r.scalar_one_or_none()
 
-    async def send_message(self, order_id: int, sender_id: int, receiver_role: str, message: str) -> ChatMessage:
-        msg = ChatMessage(order_id=order_id, sender_id=sender_id, receiver_role=receiver_role, message=message)
+    async def send_message(self, order_id: int, sender_id: int, receiver_role: str, message: str) -> FoodChatMessage:
+        msg = FoodChatMessage(order_id=order_id, sender_id=sender_id, receiver_role=receiver_role, message=message)
         self.db.add(msg)
         return msg
 
     async def get_messages(self, order_id: int) -> list[dict]:
         msgs = await self.db.execute(
-            select(ChatMessage).where(ChatMessage.order_id == order_id)
-            .order_by(ChatMessage.created_at.asc())
+            select(FoodChatMessage).where(FoodChatMessage.order_id == order_id)
+            .order_by(FoodChatMessage.created_at.asc())
         )
         return [{
             "id": m.id, "sender_id": m.sender_id,

@@ -114,6 +114,7 @@ async def seed():
             cuisine_type="Turk", opening_time="10:00", closing_time="23:00",
             min_order_amount=50, delivery_fee=24.90,
             free_delivery_min_amount=120, preparation_time_min=20,
+            verification_status="verified",
         )
         db.add(restaurant)
         await db.flush()
@@ -448,6 +449,152 @@ async def seed():
         ]
         db.add_all(packages)
 
+        # ── Food Suppliers ──
+        from src.modules.food_supplier.models import FoodSupplier, FoodSupplierProduct
+        supplier_user = User(
+            email="tedarikci@test.com", phone="555-5000",
+            password_hash=hash_password("123123"),
+            full_name="Ege Ciftligi", role="seller",
+        )
+        db.add(supplier_user)
+        await db.flush()
+
+        supplier1 = FoodSupplier(
+            user_id=supplier_user.id, company_name="Ege Organik Ciftlik",
+            slug="ege-organik-ciftlik", description="Ege bolgesinden organik meyve sebze",
+            supplier_type="producer", city="Izmir", district="Selcuk",
+            contact_phone="555-5001", is_organic_certified=True,
+            product_categories="meyve,sebze,zeytinyagi",
+            verification_status="verified", is_active=True,
+        )
+        db.add(supplier1)
+        await db.flush()
+
+        home_chef_user = User(
+            email="evinmutfagi@test.com", phone="555-6000",
+            password_hash=hash_password("123123"),
+            full_name="Ayse Teyze", role="seller",
+        )
+        db.add(home_chef_user)
+        await db.flush()
+
+        supplier2 = FoodSupplier(
+            user_id=home_chef_user.id, company_name="Ayse Teyze'nin Mutfagi",
+            slug="ayse-teyzenin-mutfagi",
+            description="Geleneksel ev yemekleri, borekler ve tatlilar",
+            supplier_type="home_chef", city="Ankara", district="Cankaya",
+            address="Karanfil Sokak No:15, Cankaya/Ankara",
+            contact_phone="555-6001",
+            kitchen_photos="https://cdn.example.com/ayse-mutfak1.jpg,https://cdn.example.com/ayse-mutfak2.jpg",
+            product_categories="ev yemekleri,ev borekleri,ev tatlilari",
+            verification_status="verified", is_active=True,
+        )
+        db.add(supplier2)
+        await db.flush()
+
+        supplier_products = [
+            FoodSupplierProduct(supplier_id=supplier1.id, name="Organik Domates", category="sebze", unit="kg", price_per_unit=25.0, is_organic=True),
+            FoodSupplierProduct(supplier_id=supplier1.id, name="Salkim Domates", category="sebze", unit="kg", price_per_unit=30.0, is_organic=True),
+            FoodSupplierProduct(supplier_id=supplier1.id, name="Naturel Zeytinyagi", category="zeytinyagi", unit="litre", price_per_unit=180.0, is_organic=True),
+            FoodSupplierProduct(supplier_id=supplier2.id, name="Ev Boregi", category="ev borekleri", unit="porsiyon", price_per_unit=55.0),
+            FoodSupplierProduct(supplier_id=supplier2.id, name="Islak Kek", category="ev tatlilari", unit="porsiyon", price_per_unit=35.0),
+            FoodSupplierProduct(supplier_id=supplier2.id, name="Taze Ekmek", category="ev ekmekleri", unit="adet", price_per_unit=20.0),
+        ]
+        db.add_all(supplier_products)
+
+        # --- Flower (Cicek) System Seed ---
+        from src.modules.cicek.models import FloristProfile, FlowerProduct
+
+        florist_user_id = seller_user.id
+        florist_profile = FloristProfile(
+            user_id=florist_user_id, shop_name="Ahmet'in Cicek Evi", slug="ahmetin-cicek-evi",
+            description="Taze cicekler, hizli teslimat",
+            city="Istanbul", district="Kadikoy",
+            address="Caferaga Mah. Sakiz Sok. No:12",
+            latitude=40.9900, longitude=29.0270,
+            preparation_time_min=30, delivery_radius_km=5.0,
+            min_order_amount=50, delivery_fee=24.90,
+            free_delivery_min_amount=120, verification_status="verified",
+            is_open=True, is_active=True,
+        )
+        db.add(florist_profile)
+        await db.flush()
+
+        flower_products = [
+            FlowerProduct(seller_type="florist", seller_id=florist_profile.id, name="Kırmızı Gül Buketi", category="buket", subcategory="buket", occasion="sevgililer", price=250, stock=30, flowers_json='[{"name":"Gul","color":"Kirmizi","count":12}]', meaning="Ask ve tutku", season="Yil boyu", lifespan_days=7, care_level="Orta", is_express_eligible=True),
+            FlowerProduct(seller_type="florist", seller_id=florist_profile.id, name="Beyaz Zambak", category="cicek", subcategory="cicek", occasion="taziye", price=180, stock=20, flowers_json='[{"name":"Zambak","color":"Beyaz","count":7}]', meaning="Masumiyet, saygi", season="Ilkbahar", lifespan_days=10, care_level="Kolay"),
+            FlowerProduct(seller_type="florist", seller_id=florist_profile.id, name="Papatya Buketi", category="buket", subcategory="buket", occasion="dogum-gunu", price=120, stock=40, flowers_json='[{"name":"Papatya","color":"Beyaz","count":20}]', meaning="Mutluluk, neşe", season="Yil boyu", lifespan_days=7, care_level="Kolay"),
+            FlowerProduct(seller_type="florist", seller_id=florist_profile.id, name="Orkide", category="saksi", subcategory="saksi", occasion="hediye", price=350, stock=10, flowers_json='[{"name":"Orkide","color":"Mor","count":1}]', meaning="Zarafet, asalet", season="Yil boyu", lifespan_days=45, care_level="Orta"),
+            FlowerProduct(seller_type="florist", seller_id=florist_profile.id, name="Gül + Papatya Karışım", category="buket", subcategory="buket", occasion="sevgililer", price=200, stock=15, flowers_json='[{"name":"Gul","color":"Kirmizi","count":6},{"name":"Papatya","color":"Beyaz","count":10}]', meaning="Sevgi ve mutluluk", season="Yil boyu", lifespan_days=7, care_level="Kolay", is_express_eligible=True),
+            FlowerProduct(seller_type="florist", seller_id=florist_profile.id, name="Lavanta Buketi", category="buket", subcategory="buket", occasion="hediye", price=90, stock=25, flowers_json='[{"name":"Lavanta","color":"Mor","count":15}]', meaning="Huzur", season="Yaz", lifespan_days=14, care_level="Kolay"),
+        ]
+        db.add_all(flower_products)
+
+        # --- Vehicle Listing Seed ---
+        from src.modules.vehicle.models import VehicleListing, VehicleGalleryCompany
+
+        v_listing = VehicleListing(
+            user_id=customer_user.id, title="2020 BMW 320d M Sport",
+            year=2020, price=850000, brand_id=1, model_id=1,
+            fuel_type="dizel", transmission="otomatik", mileage=85000,
+            color="Beyaz", city="Istanbul", condition="ikinci_el",
+            status="active", is_active=True,
+        )
+        db.add(v_listing)
+
+        v_gallery = VehicleGalleryCompany(
+            user_id=seller_user.id, company_name="Istanbul Oto Galeri",
+            slug="istanbul-oto-galeri", city="Istanbul",
+            phone="02121234567", is_active=True,
+        )
+        db.add(v_gallery)
+
+        # --- Kargo Firmaları ---
+        from src.modules.cargo.models import CargoCompany, CargoBranch, CargoPricingTier, CargoServiceArea
+
+        cargo_users = []
+        for i, (name, slug, city) in enumerate([
+            ("Yurtiçi Kargo", "yurtici-kargo", "Istanbul"),
+            ("Aras Kargo", "aras-kargo", "Istanbul"),
+            ("MNG Kargo", "mng-kargo", "Ankara"),
+            ("PTT Kargo", "ptt-kargo", "Ankara"),
+            ("Sürat Kargo", "surat-kargo", "Izmir"),
+            ("FedEx Türkiye", "fedex-turkiye", "Istanbul"),
+            ("UPS Türkiye", "ups-turkiye", "Istanbul"),
+        ]):
+            cu = User(email=f"cargo{i+1}@test.com", password=hashed, full_name=f"{name} Admin", role="seller", is_active=True)
+            db.add(cu)
+            await db.flush()
+            cargo_users.append(cu)
+            comp = CargoCompany(
+                user_id=cu.id, company_name=name, slug=slug, city=city,
+                phone=f"0212{1000000+i*1000}", email=f"info@{slug}.com",
+                api_key=f"api_key_{slug}", is_verified=True,
+                verification_status="verified", is_active=True,
+            )
+            db.add(comp)
+            await db.flush()
+            branch = CargoBranch(
+                company_id=comp.id, branch_name=f"{name} Merkez Şube",
+                branch_code=f"BR{i+1:03d}", city=city, district="Merkez",
+                address=f"{city} Merkez Şube Adresi", is_main_branch=True,
+            )
+            db.add(branch)
+            await db.flush()
+            pricing = CargoPricingTier(
+                company_id=comp.id, tier_name="Standart",
+                min_weight_kg=0, max_weight_kg=30,
+                min_volume_dm3=0, max_volume_dm3=100,
+                zone_type="sehirler_arasi", base_price=49.90,
+                price_per_kg=2.50, price_per_dm3=0.50,
+            )
+            db.add(pricing)
+            area = CargoServiceArea(
+                company_id=comp.id, city=city, is_available=True,
+                delivery_time_hours=24, pickup_available=True,
+            )
+            db.add(area)
+
         await db.commit()
         print("Seed complete!")
         print(f"  Seller: {seller_user.email} / 123123")
@@ -455,6 +602,10 @@ async def seed():
         print(f"  Courier: {courier_user.email} / 123123")
         print(f"  Admin: {admin_user.email} / 123123")
         print(f"  Food Seller: {food_seller.email} / 123")
+        print(f"  Supplier: {supplier_user.email} / 123123")
+        print(f"  Home Chef: {home_chef_user.email} / 123123")
+        print(f"  Florist: {seller_user.email} / 123123")
+        print(f"  Vehicle Listing: 2020 BMW 320d M Sport (850,000 TL)")
 
 
 if __name__ == "__main__":

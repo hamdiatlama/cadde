@@ -38,6 +38,10 @@ func NewRouter(cfg *config.Config, pool *pgxpool.Pool, cache *infra.Cache, osrm 
 	vehicleRepo := postgres.NewVehicleRepo(pool)
 	expertRepo := postgres.NewExpertRepo(pool)
 	realestateRepo := postgres.NewRealEstateRepo(pool)
+	foodSupplierRepo := postgres.NewFoodSupplierRepo(pool)
+	cicekRepo := postgres.NewCicekRepo(pool)
+	vehicleListingRepo := postgres.NewVehicleListingRepo(pool)
+	cargoRepo := postgres.NewCargoRepo(pool)
 
 	authH := handler.NewAuthHandler(userRepo, cfg.JWTSecret)
 	productH := handler.NewProductHandler(productRepo)
@@ -50,6 +54,10 @@ func NewRouter(cfg *config.Config, pool *pgxpool.Pool, cache *infra.Cache, osrm 
 	vehicleH := handler.NewVehicleHandler(vehicleRepo)
 	expertH := handler.NewExpertHandler(expertRepo)
 	realestateH := handler.NewRealEstateHandler(realestateRepo)
+	foodSupplierH := handler.NewFoodSupplierHandler(foodSupplierRepo)
+	cicekH := handler.NewCicekHandler(cicekRepo)
+	vehicleListingH := handler.NewVehicleListingHandler(vehicleListingRepo)
+	cargoH := handler.NewCargoHandler(cargoRepo)
 
 	r.Route("/api/v1", func(r chi.Router) {
 		r.Post("/auth/register", authH.Register)
@@ -97,6 +105,21 @@ func NewRouter(cfg *config.Config, pool *pgxpool.Pool, cache *infra.Cache, osrm 
 			r.Get("/food/menu/{rest_id}", foodH.GetMenu)
 			r.Get("/food/restaurants/{rest_id}/branches", foodH.ListBranches)
 			r.Get("/food/restaurants/{rest_id}/zones", foodH.ListZones)
+
+			// Food Suppliers / Traceability
+			r.Post("/food/suppliers", foodSupplierH.CreateSupplier)
+			r.Get("/food/suppliers", foodSupplierH.ListSuppliers)
+			r.Get("/food/suppliers/{supplier_id}", foodSupplierH.GetSupplier)
+			r.Get("/food/suppliers/page/{slug}", foodSupplierH.GetSupplierBySlug)
+			r.Post("/food/suppliers/{supplier_id}/products", foodSupplierH.CreateProduct)
+			r.Get("/food/suppliers/{supplier_id}/products", foodSupplierH.ListProducts)
+			r.Post("/food/restaurants/{rest_id}/suppliers", foodSupplierH.LinkSupplier)
+			r.Delete("/food/restaurants/{rest_id}/suppliers/{supplier_id}", foodSupplierH.UnlinkSupplier)
+			r.Get("/food/restaurants/{rest_id}/suppliers", foodSupplierH.ListRestaurantSuppliers)
+			r.Post("/food/menu/{item_id}/ingredients", foodSupplierH.CreateIngredient)
+			r.Delete("/food/ingredients/{ingredient_id}", foodSupplierH.DeleteIngredient)
+			r.Get("/food/menu/{item_id}/ingredients", foodSupplierH.ListIngredients)
+			r.Get("/food/trace/{item_id}", foodSupplierH.TraceMenuItem)
 
 			// Bina / Site Yonetimi
 			r.Post("/bina/site", binaH.CreateSite)
@@ -228,6 +251,20 @@ func NewRouter(cfg *config.Config, pool *pgxpool.Pool, cache *infra.Cache, osrm 
 			r.Get("/vehicles/features", vehicleH.ListFeatures)
 			r.Post("/vehicles/feature-groups", vehicleH.CreateFeatureGroup)
 			r.Post("/vehicles/features", vehicleH.CreateFeature)
+			// Vehicle listing routes
+			r.Post("/vehicles/listings", vehicleListingH.CreateListing)
+			r.Get("/vehicles/listings", vehicleListingH.SearchListings)
+			r.Get("/vehicles/listings/{id}", vehicleListingH.GetListing)
+			r.Put("/vehicles/listings/{id}", vehicleListingH.UpdateListing)
+			r.Post("/vehicles/galleries", vehicleListingH.CreateGallery)
+
+			// Cargo / Shipping
+			r.Post("/cargo/companies", cargoH.CreateCompany)
+			r.Get("/cargo/companies/me", cargoH.GetMyCompany)
+			r.Get("/cargo/companies", cargoH.ListCompanies)
+			r.Get("/cargo/companies/{id}", cargoH.GetCompany)
+			r.Post("/cargo/shipments", cargoH.CreateShipment)
+			r.Get("/cargo/shipments/tracking/{tracking_no}", cargoH.TrackShipment)
 
 			// Expert Inspection
 			r.Post("/expert/companies", expertH.CreateCompany)
@@ -351,7 +388,17 @@ func NewRouter(cfg *config.Config, pool *pgxpool.Pool, cache *infra.Cache, osrm 
 			r.Put("/realestate/documents/{doc_id}/verify", realestateH.VerifyDocument)
 			r.Put("/realestate/documents/{doc_id}/reject", realestateH.RejectDocument)
 			r.Get("/realestate/documents", realestateH.ListMyDocuments)
+			// Cicek (Flower) routes
+			r.Post("/cicek/florists", cicekH.CreateFlorist)
+			r.Get("/cicek/florists/me", cicekH.GetMyFlorist)
+			r.Get("/cicek/florists/{id}", cicekH.GetFlorist)
+			r.Put("/cicek/florists/{id}", cicekH.UpdateFlorist)
+			r.Post("/cicek/florists/{id}/toggle", cicekH.ToggleFlorist)
+			r.Post("/cicek/florists/{id}/products", cicekH.CreateProduct)
 		})
+
+		r.Get("/cicek/public/florists", cicekH.ListFlorists)
+		r.Get("/cicek/public/florists/{slug}", cicekH.GetFloristBySlug)
 	})
 
 	r.Get("/health", func(w http.ResponseWriter, r *http.Request) {

@@ -1,17 +1,23 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useState } = from "react";
+
+const Logo = ({ router }: { router: any }) => (
+  <div style={{display:"inline-flex",alignItems:"flex-start",lineHeight:1,cursor:"pointer"}} onClick={()=>router.push("/")}>
+    <span style={{fontSize:18,fontWeight:700,color:"#1A2B4A",letterSpacing:-0.8}}>cadd</span>
+    <div style={{position:"relative",display:"inline-block"}}>
+      <span style={{fontSize:18,fontWeight:700,color:"#1A2B4A",letterSpacing:-0.8}}>e</span>
+      <span style={{position:"absolute",top:-2,right:-7,fontSize:7,fontWeight:700,color:"#4A7FD4",letterSpacing:-0.2}}>cc</span>
+    </div>
+  </div>
+);
 
 export default function Home() {
   const router = useRouter();
   const [query, setQuery] = useState("");
 
   function handleSearch() {
-    if (query.trim()) {
-      router.push(`/search?q=${encodeURIComponent(query)}`);
-    } else {
-      router.push("/search");
-    }
+    router.push(`/search?q=${encodeURIComponent(query.trim() || "")}`);
   }
 
   return (
@@ -21,12 +27,7 @@ export default function Home() {
 
       {/* NAV */}
       <nav style={{height:56,background:"#fff",borderBottom:"1px solid #D6E4FA",display:"flex",alignItems:"center",padding:"0 32px"}}>
-        <div style={{display:"flex",alignItems:"center",gap:8,marginRight:40,cursor:"pointer"}} onClick={()=>router.push("/")}>
-          <div style={{width:28,height:28,background:"#4A7FD4",borderRadius:7,display:"flex",alignItems:"center",justifyContent:"center"}}>
-            <span style={{color:"#fff",fontSize:14,fontWeight:700}}>C</span>
-          </div>
-          <span style={{fontSize:18,fontWeight:700,color:"#1A2B4A",letterSpacing:-0.8}}>cadde</span>
-        </div>
+        <div style={{marginRight:40}}><Logo router={router}/></div>
         <div style={{display:"flex",gap:28,flex:1}}>
           {["Keşfet","İşletmeler","Kurumlar","Hakkında"].map(l=>(
             <span key={l} className="nav-link" style={{fontSize:13,color:"#5A7499",cursor:"pointer",fontWeight:500}}>{l}</span>
@@ -64,14 +65,7 @@ export default function Home() {
           <div style={{fontSize:11,fontWeight:600,color:"#8FAAC8",textTransform:"uppercase",letterSpacing:1.2}}>{"Hızlı arama"}</div>
           <div style={{display:"flex",alignItems:"center",background:"#fff",border:"1.5px solid #D6E4FA",borderRadius:8,overflow:"hidden"}}>
             <i className="ti ti-search" style={{padding:"0 12px",color:"#8FAAC8",fontSize:18}}/>
-            <input
-              type="text"
-              placeholder="Ne arıyorsunuz?"
-              value={query}
-              onChange={e=>setQuery(e.target.value)}
-              onKeyDown={e=>e.key==="Enter"&&handleSearch()}
-              style={{flex:1,border:"none",outline:"none",background:"transparent",fontFamily:"inherit",fontSize:14,color:"#1A2B4A",padding:"12px 0"}}
-            />
+            <input type="text" placeholder="Ne arıyorsunuz?" value={query} onChange={e=>setQuery(e.target.value)} onKeyDown={e=>e.key==="Enter"&&handleSearch()} style={{flex:1,border:"none",outline:"none",background:"transparent",fontFamily:"inherit",fontSize:14,color:"#1A2B4A",padding:"12px 0"}}/>
             <div style={{width:1,height:28,background:"#D6E4FA"}}/>
             <span style={{display:"flex",alignItems:"center",gap:4,padding:"0 12px",fontSize:12,color:"#4A7FD4",fontWeight:600,cursor:"pointer",whiteSpace:"nowrap"}}>
               <i className="ti ti-map-pin" style={{fontSize:14}}/> {"Kahramanmaraş"}
@@ -79,14 +73,7 @@ export default function Home() {
             <button onClick={handleSearch} style={{padding:"12px 20px",background:"#4A7FD4",color:"#fff",border:"none",fontFamily:"inherit",fontSize:13,fontWeight:600,cursor:"pointer"}}>Ara</button>
           </div>
           <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
-            {[
-              {icon:"ti-tools",l:"Usta"},
-              {icon:"ti-car",l:"Taksi"},
-              {icon:"ti-tools-kitchen-2",l:"Yemek"},
-              {icon:"ti-plant",l:"Çiftçi"},
-              {icon:"ti-bed",l:"Otel"},
-              {icon:"ti-briefcase",l:"Proje"}
-            ].map(t=>(
+            {[{icon:"ti-tools",l:"Usta"},{icon:"ti-car",l:"Taksi"},{icon:"ti-tools-kitchen-2",l:"Yemek"},{icon:"ti-plant",l:"Çiftçi"},{icon:"ti-bed",l:"Otel"},{icon:"ti-briefcase",l:"Proje"}].map(t=>(
               <span key={t.l} onClick={()=>router.push(`/search?q=${t.l}`)} className="qtag" style={{display:"inline-flex",alignItems:"center",gap:5,padding:"6px 12px",background:"#fff",border:"1px solid #D6E4FA",borderRadius:20,fontSize:12,color:"#5A7499",cursor:"pointer",fontWeight:500,transition:"all .15s"}}>
                 <i className={`ti ${t.icon}`} style={{fontSize:14,color:"#4A7FD4"}}/> {t.l}
               </span>
@@ -137,7 +124,7 @@ export default function Home() {
             {icon:"ti-bed",n:"Maraş Grand Otel",c:"Konaklama · Kahvaltı dahil",r:"4.8",d:"0.8 km",j:"312 konaklama"},
             {icon:"ti-car",n:"Ahmet Şoför",c:"Taksi · Şu an aktif",r:"4.6",d:"Anlık",j:"1.2K yolcu"},
           ].map(b=>(
-            <div key={b.n} className="biz-card" style={{background:"#fff",border:"1px solid #D6E4FA",borderRadius:8,padding:16,display:"flex",alignItems:"flex-start",gap:12,cursor:"pointer",transition:"border-color .15s"}}>
+            <div key={b.n} onClick={()=>router.push("/profile")} className="biz-card" style={{background:"#fff",border:"1px solid #D6E4FA",borderRadius:8,padding:16,display:"flex",alignItems:"flex-start",gap:12,cursor:"pointer",transition:"border-color .15s"}}>
               <div style={{width:44,height:44,borderRadius:8,background:"#EEF4FF",border:"1px solid #D6E4FA",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}}>
                 <i className={`ti ${b.icon}`} style={{fontSize:22,color:"#4A7FD4"}}/>
               </div>

@@ -1,4 +1,5 @@
 """NATS event bus (adapter pattern)."""
+import asyncio
 import json
 from typing import Callable, Awaitable, Optional
 
@@ -21,7 +22,10 @@ class EventBus:
 
     async def connect(self):
         if self._conn is None and nats:
-            self._conn = await nats.connect(self._url)
+            try:
+                self._conn = await asyncio.wait_for(nats.connect(self._url), timeout=2.0)
+            except Exception:
+                self._conn = None
 
     async def close(self):
         for sub in self._subscriptions:

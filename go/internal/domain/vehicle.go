@@ -89,3 +89,62 @@ type VehicleModelFeature struct {
 	FeatureID  int  `json:"feature_id"`
 	IsStandard bool `json:"is_standard"`
 }
+
+// --- Vehicle Listing System ---
+
+type VehicleListing struct {
+	ID                   int        `json:"id"`
+	UserID               int        `json:"user_id"`
+	Title                string     `json:"title"`
+	Description          *string    `json:"description,omitempty"`
+	BrandID              *int       `json:"brand_id,omitempty"`
+	ModelID              *int       `json:"model_id,omitempty"`
+	Year                 int        `json:"year"`
+	BodyTypeID           *int       `json:"body_type_id,omitempty"`
+	Mileage              *int       `json:"mileage,omitempty"`
+	FuelType             *string    `json:"fuel_type,omitempty"`
+	Transmission         *string    `json:"transmission,omitempty"`
+	Color                *string    `json:"color,omitempty"`
+	Condition            *string    `json:"condition,omitempty"`
+	City                 *string    `json:"city,omitempty"`
+	District             *string    `json:"district,omitempty"`
+	Price                float64    `json:"price"`
+	IsNegotiable         bool       `json:"is_negotiable"`
+	Status               string     `json:"status"`
+	IsFeatured           bool       `json:"is_featured"`
+	IsActive             bool       `json:"is_active"`
+	ViewCount            int        `json:"view_count"`
+	CreatedAt            time.Time  `json:"created_at"`
+}
+
+type VehicleGalleryCompany struct {
+	ID                 int        `json:"id"`
+	UserID             int        `json:"user_id"`
+	CompanyName        string     `json:"company_name"`
+	Slug               string     `json:"slug"`
+	City               *string    `json:"city,omitempty"`
+	District           *string    `json:"district,omitempty"`
+	Phone              *string    `json:"phone,omitempty"`
+	Description        *string    `json:"description,omitempty"`
+	IsVerified         bool       `json:"is_verified"`
+	VerificationStatus string     `json:"verification_status"`
+	Rating             float64    `json:"rating"`
+	IsActive           bool       `json:"is_active"`
+	CreatedAt          time.Time  `json:"created_at"`
+}
+
+type VehicleFavoriteListing struct {
+	ID        int       `json:"id"`
+	UserID    int       `json:"user_id"`
+	ListingID int       `json:"listing_id"`
+	CreatedAt time.Time `json:"created_at"`
+}
+
+type VehicleInquiry struct {
+	ID        int       `json:"id"`
+	ListingID int       `json:"listing_id"`
+	SenderID  int       `json:"sender_id"`
+	Message   string    `json:"message"`
+	IsRead    bool      `json:"is_read"`
+	CreatedAt time.Time `json:"created_at"`
+}

@@ -166,7 +166,7 @@ CREATE TABLE driver_reports (
 
 -- ---------- SIPARIS MESAJLARI (YEMEK) ----------
 
-CREATE TABLE chat_messages (
+CREATE TABLE food_chat_messages (
     id              SERIAL PRIMARY KEY,
     order_id        INT NOT NULL REFERENCES orders(id) ON DELETE CASCADE,
     sender_id       INT NOT NULL REFERENCES users(id),
@@ -176,7 +176,7 @@ CREATE TABLE chat_messages (
     created_at      TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
-CREATE INDEX idx_chat_order ON chat_messages(order_id);
+CREATE INDEX idx_food_chat_order ON food_chat_messages(order_id);
 
 -- ---------- DESTEK / TICKET ----------
 

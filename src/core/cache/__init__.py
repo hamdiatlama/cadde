@@ -1,4 +1,5 @@
 """Redis cache client wrapper (adapter pattern)."""
+import asyncio
 import json
 from typing import Optional, Any
 
@@ -19,7 +20,10 @@ class CacheClient:
 
     async def connect(self):
         if self._client is None and aioredis:
-            self._client = await aioredis.from_url(self._url, decode_responses=True)
+            try:
+                self._client = await asyncio.wait_for(aioredis.from_url(self._url, decode_responses=True), timeout=2.0)
+            except Exception:
+                self._client = None
 
     async def close(self):
         if self._client:

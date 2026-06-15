@@ -39,6 +39,7 @@ class Order(Base):
     approval_deadline = Column(DateTime(timezone=True))
     cancelled_at = Column(DateTime(timezone=True))
     cancel_reason = Column(Text)
+    tracking_no = Column(String(50))
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     updated_at = Column(DateTime(timezone=True), onupdate=func.now())
 

@@ -1,0 +1,45 @@
+-- Migration 000032: Rollback accommodation system
+
+DROP TABLE IF EXISTS guest_bans;
+DROP TABLE IF EXISTS location_registration_requests;
+DROP TABLE IF EXISTS complaint_actions;
+DROP TABLE IF EXISTS hotel_suspensions;
+DROP TABLE IF EXISTS property_documents;
+DROP TABLE IF EXISTS property_association_members;
+DROP TABLE IF EXISTS tourism_associations;
+DROP TABLE IF EXISTS safety_certificates;
+DROP TABLE IF EXISTS property_inspections;
+DROP TABLE IF EXISTS property_security_systems;
+DROP TABLE IF EXISTS fire_safety_systems;
+DROP TABLE IF EXISTS property_building_info;
+DROP TABLE IF EXISTS nearby_places;
+DROP TABLE IF EXISTS hotel_kitchen_reviews;
+DROP TABLE IF EXISTS in_room_dining_orders;
+DROP TABLE IF EXISTS hotel_menu_items;
+DROP TABLE IF EXISTS hotel_kitchens;
+DROP TABLE IF EXISTS property_fumigation_logs;
+DROP TABLE IF EXISTS housekeeping_logs;
+DROP TABLE IF EXISTS guest_preferences;
+DROP TABLE IF EXISTS complaint_resolutions;
+DROP TABLE IF EXISTS guest_complaints;
+DROP TABLE IF EXISTS accommodation_review_photos;
+DROP TABLE IF EXISTS accommodation_satisfaction_surveys;
+DROP TABLE IF EXISTS property_services;
+DROP TABLE IF EXISTS service_categories;
+
+ALTER TABLE hotels DROP COLUMN IF EXISTS property_type;
+ALTER TABLE hotels DROP COLUMN IF EXISTS listing_type;
+ALTER TABLE hotels DROP COLUMN IF EXISTS website;
+ALTER TABLE hotels DROP COLUMN IF EXISTS tax_id;
+ALTER TABLE hotels DROP COLUMN IF EXISTS company_name;
+ALTER TABLE hotels DROP COLUMN IF EXISTS company_description;
+ALTER TABLE hotels DROP COLUMN IF EXISTS house_rules;
+ALTER TABLE hotels DROP COLUMN IF EXISTS suspended_until;
+ALTER TABLE hotels DROP COLUMN IF EXISTS suspension_reason;
+ALTER TABLE hotels DROP COLUMN IF EXISTS original_location_id;
+ALTER TABLE hotels DROP COLUMN IF EXISTS requires_location_approval;
+ALTER TABLE hotels DROP COLUMN IF EXISTS location_approved_by;
+ALTER TABLE hotel_photos DROP COLUMN IF EXISTS category;
+ALTER TABLE hotel_photos DROP COLUMN IF EXISTS is_main;
+ALTER TABLE room_photos DROP COLUMN IF EXISTS caption;
+ALTER TABLE room_photos DROP COLUMN IF EXISTS category;

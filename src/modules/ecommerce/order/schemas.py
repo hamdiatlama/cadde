@@ -61,6 +61,7 @@ class OrderResponse(BaseModel):
     approval_deadline: Optional[datetime] = None
     cancelled_at: Optional[datetime] = None
     cancel_reason: Optional[str] = None
+    tracking_no: Optional[str] = None
     created_at: datetime
 
     model_config = {"from_attributes": True}

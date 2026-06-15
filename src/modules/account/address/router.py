@@ -74,3 +74,21 @@ async def set_default_address(
         raise HTTPException(status_code=404, detail="Address not found")
     await db.commit()
     return {"status": "set_default"}
+
+@router.get("/default", response_model=dict | None)
+async def get_default_address(
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+):
+    svc = AddressService(db)
+    addr = await svc.repo.get_default(current_user.id)
+    if not addr:
+        raise HTTPException(status_code=404, detail="No default address found")
+    return {
+        "id": addr.id, "label": addr.label, "full_name": addr.full_name,
+        "phone": addr.phone, "address_line": addr.address_line,
+        "city": addr.city, "district": addr.district,
+        "neighborhood": addr.neighborhood,
+        "latitude": addr.latitude, "longitude": addr.longitude,
+        "is_default": addr.is_default,
+    }

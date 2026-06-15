@@ -100,3 +100,102 @@ class VehicleModelFeature(Base):
     model_id: Mapped[int] = sa.Column(sa.Integer, sa.ForeignKey("vehicle_models.id"), primary_key=True)
     feature_id: Mapped[int] = sa.Column(sa.Integer, sa.ForeignKey("features.id"), primary_key=True)
     is_standard: Mapped[bool] = sa.Column(sa.Boolean, default=False)
+
+
+# --- Vehicle Listing System (Oto Galeri) ---
+
+class VehicleListing(Base):
+    __tablename__ = "vehicle_listings"
+
+    id: Mapped[int] = sa.Column(sa.Integer, primary_key=True, index=True)
+    seller_id: Mapped[int | None] = sa.Column(sa.Integer, sa.ForeignKey("sellers.id"))
+    user_id: Mapped[int | None] = sa.Column(sa.Integer, sa.ForeignKey("users.id"))
+    title: Mapped[str] = sa.Column(sa.String(255), nullable=False)
+    description: Mapped[str | None] = sa.Column(sa.Text)
+    brand_id: Mapped[int | None] = sa.Column(sa.Integer, sa.ForeignKey("vehicle_brands.id"))
+    model_id: Mapped[int | None] = sa.Column(sa.Integer, sa.ForeignKey("vehicle_models.id"))
+    year: Mapped[int] = sa.Column(sa.Integer, nullable=False)
+    body_type_id: Mapped[int | None] = sa.Column(sa.Integer, sa.ForeignKey("body_types.id"))
+    segment_code: Mapped[str | None] = sa.Column(sa.String(10))
+    mileage: Mapped[int | None] = sa.Column(sa.Integer)
+    mileage_unit: Mapped[str | None] = sa.Column(sa.String(10), default="km")
+    fuel_type: Mapped[str | None] = sa.Column(sa.String(30))
+    transmission: Mapped[str | None] = sa.Column(sa.String(30))
+    engine_displacement_cc: Mapped[int | None] = sa.Column(sa.Integer)
+    engine_power_hp: Mapped[int | None] = sa.Column(sa.Integer)
+    color: Mapped[str | None] = sa.Column(sa.String(50))
+    interior_color: Mapped[str | None] = sa.Column(sa.String(50))
+    condition: Mapped[str | None] = sa.Column(sa.String(20), default="ikinci_el")
+    warranty_months: Mapped[int | None] = sa.Column(sa.Integer)
+    city: Mapped[str | None] = sa.Column(sa.String(100))
+    district: Mapped[str | None] = sa.Column(sa.String(100))
+    latitude: Mapped[float | None] = sa.Column(sa.Float)
+    longitude: Mapped[float | None] = sa.Column(sa.Float)
+    price: Mapped[float] = sa.Column(sa.Float, nullable=False)
+    currency: Mapped[str | None] = sa.Column(sa.String(10), default="TRY")
+    is_negotiable: Mapped[bool] = sa.Column(sa.Boolean, default=True)
+    status: Mapped[str | None] = sa.Column(sa.String(20), default="draft")
+    is_featured: Mapped[bool] = sa.Column(sa.Boolean, default=False)
+    is_active: Mapped[bool] = sa.Column(sa.Boolean, default=True)
+    view_count: Mapped[int] = sa.Column(sa.Integer, default=0)
+    created_at: Mapped[sa.DateTime] = sa.Column(sa.DateTime(timezone=True), server_default=sa.func.now())
+    updated_at: Mapped[sa.DateTime] = sa.Column(sa.DateTime(timezone=True), server_default=sa.func.now())
+
+
+class VehicleListingPhoto(Base):
+    __tablename__ = "vehicle_listing_photos"
+
+    id: Mapped[int] = sa.Column(sa.Integer, primary_key=True, index=True)
+    listing_id: Mapped[int] = sa.Column(sa.Integer, sa.ForeignKey("vehicle_listings.id", ondelete="CASCADE"))
+    url: Mapped[str] = sa.Column(sa.String(500), nullable=False)
+    sort_order: Mapped[int] = sa.Column(sa.Integer, default=0)
+    is_cover: Mapped[bool] = sa.Column(sa.Boolean, default=False)
+    created_at: Mapped[sa.DateTime] = sa.Column(sa.DateTime(timezone=True), server_default=sa.func.now())
+
+
+class VehicleGalleryCompany(Base):
+    __tablename__ = "vehicle_gallery_companies"
+
+    id: Mapped[int] = sa.Column(sa.Integer, primary_key=True, index=True)
+    user_id: Mapped[int] = sa.Column(sa.Integer, sa.ForeignKey("users.id"), nullable=False)
+    company_name: Mapped[str] = sa.Column(sa.String(255), nullable=False)
+    slug: Mapped[str] = sa.Column(sa.String(255), unique=True, nullable=False)
+    tax_id: Mapped[str | None] = sa.Column(sa.String(50))
+    phone: Mapped[str | None] = sa.Column(sa.String(20))
+    email: Mapped[str | None] = sa.Column(sa.String(255))
+    city: Mapped[str | None] = sa.Column(sa.String(100))
+    district: Mapped[str | None] = sa.Column(sa.String(100))
+    address: Mapped[str | None] = sa.Column(sa.Text)
+    latitude: Mapped[float | None] = sa.Column(sa.Float)
+    longitude: Mapped[float | None] = sa.Column(sa.Float)
+    description: Mapped[str | None] = sa.Column(sa.Text)
+    logo_url: Mapped[str | None] = sa.Column(sa.String(500))
+    cover_url: Mapped[str | None] = sa.Column(sa.String(500))
+    is_verified: Mapped[bool] = sa.Column(sa.Boolean, default=False)
+    verification_status: Mapped[str | None] = sa.Column(sa.String(20), default="pending")
+    certificate_no: Mapped[str | None] = sa.Column(sa.String(100))
+    certificate_expiry: Mapped[sa.Date | None] = sa.Column(sa.Date)
+    rating: Mapped[float] = sa.Column(sa.Float, default=0)
+    review_count: Mapped[int] = sa.Column(sa.Integer, default=0)
+    is_active: Mapped[bool] = sa.Column(sa.Boolean, default=True)
+    created_at: Mapped[sa.DateTime] = sa.Column(sa.DateTime(timezone=True), server_default=sa.func.now())
+
+
+class VehicleFavoriteListing(Base):
+    __tablename__ = "vehicle_favorite_listings"
+
+    id: Mapped[int] = sa.Column(sa.Integer, primary_key=True, index=True)
+    user_id: Mapped[int] = sa.Column(sa.Integer, sa.ForeignKey("users.id"))
+    listing_id: Mapped[int] = sa.Column(sa.Integer, sa.ForeignKey("vehicle_listings.id", ondelete="CASCADE"))
+    created_at: Mapped[sa.DateTime] = sa.Column(sa.DateTime(timezone=True), server_default=sa.func.now())
+
+
+class VehicleInquiry(Base):
+    __tablename__ = "vehicle_inquiries"
+
+    id: Mapped[int] = sa.Column(sa.Integer, primary_key=True, index=True)
+    listing_id: Mapped[int] = sa.Column(sa.Integer, sa.ForeignKey("vehicle_listings.id", ondelete="CASCADE"))
+    sender_id: Mapped[int] = sa.Column(sa.Integer, sa.ForeignKey("users.id"))
+    message: Mapped[str] = sa.Column(sa.Text, nullable=False)
+    is_read: Mapped[bool] = sa.Column(sa.Boolean, default=False)
+    created_at: Mapped[sa.DateTime] = sa.Column(sa.DateTime(timezone=True), server_default=sa.func.now())

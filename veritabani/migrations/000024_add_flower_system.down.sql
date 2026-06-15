@@ -1,0 +1,13 @@
+DROP TABLE IF EXISTS delivery_time_logs;
+DROP TABLE IF EXISTS flower_ratings;
+DROP TABLE IF EXISTS florist_document_scores;
+DROP TABLE IF EXISTS freshness_chain;
+DROP TABLE IF EXISTS florist_cameras;
+DROP TABLE IF EXISTS florist_images;
+DROP TABLE IF EXISTS special_day_reminders;
+DROP TABLE IF EXISTS custom_order_designs;
+DROP TABLE IF EXISTS flower_products;
+DROP TABLE IF EXISTS material_supplier_profiles;
+DROP TABLE IF EXISTS flower_wholesaler_profiles;
+DROP TABLE IF EXISTS flower_producer_profiles;
+DROP TABLE IF EXISTS florist_profiles;

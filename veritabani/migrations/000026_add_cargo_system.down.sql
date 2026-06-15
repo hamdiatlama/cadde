@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS cargo_seller_suspensions;
+DROP TABLE IF EXISTS cargo_return_requests;
+DROP TABLE IF EXISTS cargo_delivery_surveys;
+DROP TABLE IF EXISTS cargo_product_shipping;
+DROP TABLE IF EXISTS cargo_seller_agreements;
+DROP TABLE IF EXISTS cargo_service_areas;
+DROP TABLE IF EXISTS cargo_pricing_tiers;
+DROP TABLE IF EXISTS cargo_tracking;
+DROP TABLE IF EXISTS cargo_shipments;
+DROP TABLE IF EXISTS cargo_couriers;
+DROP TABLE IF EXISTS cargo_branches;
+DROP TABLE IF EXISTS cargo_companies;
